@@ -28,7 +28,8 @@ This repository contains:
 
 1. a public research announcement;
 2. a preprint draft for the split graph case;
-3. an encrypted timestamped archive of the technical drafts for the chordal toolkit, the fractional chordal theorem, and the final rounding step.
+3. public technical drafts for the chordal toolkit, the fractional chordal theorem, and the final rounding step;
+4. the original encrypted timestamped archive of the technical drafts.
 
 The chordal manuscripts are currently technical drafts and remain subject to further formal verification, polishing, and peer review. This repository is intended to record priority and provide an auditable public milestone.
 
@@ -60,7 +61,7 @@ Role: establishes the split graph case and the sharp lower-bound construction K_
 
 ### Paper B - Local and Structural Reductions for Chordal Clique Partitions
 
-Status: encrypted technical draft.
+Status: public technical draft.
 
 Role: develops the local chordal toolkit used in the fractional theorem.
 
@@ -68,7 +69,7 @@ Contents: heavy-bag principle, local reductions, bounded-window certificates, pr
 
 ### Paper C - A Fractional Triangle Theorem for Chordal Graphs
 
-Status: encrypted technical draft.
+Status: public technical draft.
 
 Main announced result:
 
@@ -80,7 +81,7 @@ Role: provides the global chordal decomposition, boundary-debit realization, edg
 
 ### Paper D - Clique Partitions of Chordal Graphs
 
-Status: encrypted technical draft.
+Status: public technical draft.
 
 Main announced result:
 
@@ -90,9 +91,17 @@ cp(G) <= (1/6 + o(1)) n^2.
 
 Role: derives the clique partition theorem from Paper C using fractional-to-integral rounding and the split lower bound from Paper A.
 
-## Timestamped Sealed Archive
+## Public Drafts and Timestamped Sealed Archive
 
-The technical drafts for Papers B, C, and D are archived in encrypted form in:
+The current public technical drafts are available in:
+
+```text
+papers/paper_B_chordal_toolkit_technical_draft_v02.*
+papers/paper_C_fractional_chordal_technical_draft_v02.*
+papers/paper_D_chordal_clique_partition_technical_draft_v02.*
+```
+
+The original encrypted timestamped archive is retained in:
 
 ```text
 sealed/papers_B_C_D_technical_drafts_v02_encrypted.zip.enc
@@ -105,8 +114,6 @@ The SHA-256 hashes are recorded in:
 ```text
 manifest_sha256.txt
 ```
-
-The decryption key will be released after the corresponding manuscripts are publicly posted.
 
 ## Author
 
