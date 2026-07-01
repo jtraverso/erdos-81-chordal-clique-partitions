@@ -7,3 +7,12 @@ Files (all under `RequestProject/`):
 - `Sharpness.lean` — **Section 7 (Sharpness), in full** for the complete split graph `K_p ∨ \bar{K_q}` (`compSplit`): `compSplit_partition_lower` (every edge clique partition has ≥ `q·p − C(p,2)` parts, via the covering-clique counting argument), `compSplit_cliquePartitionNumber_lower` (`cp ≥ q·p − C(p,2)`), and `compSplit_sharp_lower` (for `q = 2p`, so `n = 3p`, one has `n² ≤ 6·cp(G)`, i.e. `cp(G) ≥ n²/6`), exhibiting a split graph that witnesses sharpness of the constant `1/6`.
 - `Main.lean` — imports everything and documents precisely what is and is not formalized.
 Scope note (also recorded in `Main.lean`): I proved the analytic heart of the paper (the Envelope Lemma), Lemma 1, and the complete matching lower bound / sharpness result. I did not formalize the *upper bound* half of Theorem 1 (`cp(G) ≤ (1/6+o(1))n²` for all split graphs). Its proof (Sections 2–6) reduces, via fractional triangle packing, to the Envelope Lemma but crucially invokes the Haxell–Rödl / Yuster theorem on the asymptotic equivalence of fractional and integral packings, which is not available in Mathlib; I therefore did not reprove that external input or the associated `o(n²)` reduction (doing so honestly would have required either reproving Yuster's theorem or assuming it — I avoided introducing any axiom). Everything actually stated is proved in full.
+
+
+This project was edited by [Aristotle](https://aristotle.harmonic.fun).
+To cite Aristotle:
+- Tag @Aristotle-Harmonic on GitHub PRs/issues
+- Add as co-author to commits:
+```
+Co-authored-by: Aristotle (Harmonic) <aristotle-harmonic@harmonic.fun>
+```
