@@ -61,15 +61,14 @@ sealed/
 
 ### Paper A - Clique Partitions of Split Graphs and the 1/6 Barrier
 
-Status: public preprint v0.3.
-
-Note: the Paper A PDF is not included in this PR because the available local PDF still carries the v0.2 title-page label and no LaTeX engine is available in this environment to recompile it.
+Status: public preprint v0.2. Paper A has not been modified in the v0.3 update cycle.
 
 Files:
 
 ```text
-paper_A/paper_A_split_graphs_preprint_v03.tex
-paper_A/paper_A_split_graphs_preprint_v03.md
+paper_A/paper_A_split_graphs_preprint_v02.tex
+paper_A/paper_A_split_graphs_preprint_v02.pdf
+paper_A/paper_A_split_graphs_preprint_v02.md
 paper_A/proof_roadmap_paper_A.md
 paper_A/dependency_ledger_paper_A.md
 ```

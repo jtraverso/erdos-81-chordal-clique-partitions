@@ -7,7 +7,7 @@ Independent researcher, Santiago, Chile
 [jtraverso@gmail.com](mailto:jtraverso@gmail.com)  
 [ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
 
-Preprint v0.3.  
+Preprint v0.2.  
 Paper A in the series on clique partitions in split and chordal graphs.
 
 </div>
