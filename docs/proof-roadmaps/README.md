@@ -32,6 +32,12 @@ Each paper may cite earlier papers only. Later papers may not be used as inputs 
 - `paper_C_calculation_ledger.md`  
   Step-by-step calculations used by Paper C.
 
+- paper_D_proof_roadmap.md  
+  Roadmap for the integral chordal clique-partition theorem.
+
+- paper_D_calculation_ledger.md  
+  Step-by-step calculation ledger used by Paper D.
+
 - `l4_certificate_usage.md`  
   Exact role of the \(L_4\) certificate and boundary-export logic.
 

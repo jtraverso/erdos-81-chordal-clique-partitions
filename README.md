@@ -127,9 +127,10 @@ Status: public preprint v0.3.
 Files:
 
 ```text
-paper_D/paper_D_integral_rounding_preprint_v03.tex
-paper_D/paper_D_integral_rounding_preprint_v03.pdf
+paper_D/paper_D_chordal_clique_partition_preprint_v03.tex
+paper_D/paper_D_chordal_clique_partition_preprint_v03.pdf
 paper_D/proof_roadmap_paper_D.md
+paper_D/calculation_ledger_paper_D.md
 paper_D/dependency_ledger_paper_D.md
 ```
 
