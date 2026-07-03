@@ -65,7 +65,13 @@ Earlier announcement files, sealed archives, and draft folders may remain in thi
 
 ## Lean Formalisation
 
-A Lean formalisation contribution is being tracked separately through pull request review.
+A Lean 4 / Mathlib formalisation of the Paper A split-graph component is included in:
+
+```text
+paper_A_split_graphs_preprint_v02/
+```
+
+This contribution was prepared by Jamal Agbanwa, with Aristotle, and contains the Lean project files under `RequestProject/`.
 
 ## Author
 
