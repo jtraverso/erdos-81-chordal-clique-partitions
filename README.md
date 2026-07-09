@@ -1,106 +1,87 @@
-# Erdos Problem #81 - Three-Paper Public Release
+# Erdős Problem #81 — Chordal Clique Partitions
 
-This repository records the public release package for Juan Pablo Traverso Gianini's announced resolution of Erdos Problem #81 on clique partitions of chordal graphs.
+Erdős Problem #81 asks whether the edge clique-partition number of every
+n-vertex chordal graph is at most `n^2/6 + O(n)`. **The problem remains open.**
 
-## Main Result
+This directory collects individually verified preprints and formal artifacts
+from an ongoing research program on the problem. Each release states its exact
+scope; **no single item here resolves Erdős #81.** Further findings related to
+the problem will be published here as they are completed and verified.
 
-The announced asymptotic theorem is
+Problem reference: https://www.erdosproblems.com/81
 
-```text
-max{cp(G): G chordal, |V(G)| = n} = (1/6 + o(1)) n^2.
-```
+## Published preprint
 
-The constant `1/6` is sharp.
-
-## Current Public Release
-
-The current release is organized in:
-
-```text
-public_release/
-```
-
-Direct links:
-
-- [Final announcement PDF](public_release/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.pdf)
-- [Final announcement Markdown](public_release/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.md)
-- [Paper I PDF](public_release/PAPER_I/01_MANUSCRIPT/PAPER_I_v1.1.pdf)
-- [Paper II PDF](public_release/PAPER_II/01_MANUSCRIPT/PAPER_II_v0.8.pdf)
-- [Paper III PDF](public_release/PAPER_III/01_MANUSCRIPT/PAPER_III_v1.0.4.pdf)
-
-It contains the final three-paper public package:
+**Paper I — *Affine Profile Reduction for Fractional Triangle Packings in Split
+Graphs.*** For every split graph `G`, it proves
 
 ```text
-public_release/
-  00_SERIES_DOCUMENTS/
-  PAPER_I/
-  PAPER_II/
-  PAPER_III/
-  THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.md
-  THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.tex
-  THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.pdf
+|E(G)| − 2·ν₃*(G) ≤ n²/6 + n,
 ```
 
-Each paper folder contains:
+by a finite, analytic argument (no asymptotic transfer theorem). The theorem is
+machine-verified in Lean 4 (Mathlib v4.28.0): sorry-free, with an axiom report
+reducing to Lean's three standard foundational axioms and no project-specific
+axiom.
 
-- manuscript sources and PDF;
-- public audit records;
-- reproducibility scripts and outputs;
-- integrity artifacts.
+- [Paper I — PDF (English)](preprints/PAPER_I/01_manuscript/PAPER_I_preprint_v1.0.pdf)
+- [Paper I — PDF (Spanish)](preprints/PAPER_I/01_manuscript/PAPER_I_preprint_v1.0_es.pdf)
+- [Full package (manuscript, ledger, reproducibility, integrity, Lean)](preprints/PAPER_I/)
+- [Lean 4 formalization](preprints/PAPER_I/05_formalization/lean/)
+- [Plain-language explainer (four levels)](preprints/PAPER_I/PaperI_explained_4_levels.html)
 
-The public-only integrity manifest is:
+## What Paper I proves — and what it does not
+
+| Statement | Status in Paper I |
+|---|---|
+| `\|E\| − 2·ν₃* ≤ n²/6 + n` for split graphs (fractional) | **Proved**, finite & analytic, Lean-verified |
+| Leading constant `1/6` | Matches the constant of Erdős #81 |
+| Integral clique-partition bound `cp(G) ≤ n²/6 + O(n)` | **Not** established here |
+| Asymptotic transfer `cp = (1/6+o(1))n²` for chordal graphs | **Not** established here |
+| A theorem for **all chordal** graphs (beyond split) | **Not** established here |
+| Erdős #81 itself | **Open** |
+
+## Formal verification
+
+Paper I's main theorem is checked in Lean 4. To reproduce, from
+`preprints/PAPER_I/05_formalization/lean/`:
+
+```bash
+lake exe cache get   # fetch the prebuilt Mathlib cache
+lake build           # exit 0 type-checks every theorem with no sorry
+```
+
+The recorded `#print axioms` output is in
+`preprints/PAPER_I/05_formalization/lean/gate_logs/`:
 
 ```text
-public_release/00_PUBLIC_INTEGRITY/
+PaperI.paperI_main depends on axioms: [propext, Classical.choice, Quot.sound]
 ```
 
-This integrity folder was generated only from the public release files. It intentionally does not include the private internal working record.
+## Scope and disclaimers
 
-The current announcement is mirrored separately for convenience in:
+- These are preprints and formalization artifacts; they are **not externally
+  peer-reviewed** and have not undergone specialist priority review.
+- Each item is deliberately scoped. Paper I concerns the finite fractional
+  bound for split graphs only.
 
-```text
-announcement/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.md
-announcement/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.tex
-announcement/THREE_PAPER_SERIES_ANNOUNCEMENT_FINAL.pdf
-```
+## Citation
 
-## Sealed Complete Package
-
-The complete author package, including internal working records, is archived only in encrypted form:
-
-```text
-sealed/THREE_PAPER_SERIES_COMPLETE_PACKAGE.zip.enc
-sealed/THREE_PAPER_SERIES_COMPLETE_PACKAGE.zip.enc.sha256
-```
-
-The plaintext complete package and encryption key are not stored in this repository.
-
-## Historical Materials
-
-Earlier sealed archives may remain in this repository for timestamp/history purposes. The current public release should be read from `public_release/`. Obsolete root-level draft paper and note folders have been removed to avoid confusion with the final public package.
-
-## Lean Formalisation
-
-A Lean 4 / Mathlib formalisation of the Paper A split-graph component is included in:
-
-```text
-paper_A_split_graphs_preprint_v02/
-```
-
-This contribution was prepared by Jamal Agbanwa, with Aristotle, and contains the Lean project files under `RequestProject/`.
-
-## Author
-
-Juan Pablo Traverso Gianini  
-Independent researcher  
-Santiago, Chile  
-Email: jtraverso@gmail.com  
-ORCID: https://orcid.org/0009-0003-6068-4096
+See `CITATION.cff`, `CITATION.bib`, and `CITATION.md` in this directory.
 
 ## License
 
-Documents, manuscripts, PDFs, LaTeX, Markdown files, and research announcements in this repository are licensed under:
+Documents and artifacts are licensed under Creative Commons
+Attribution-NonCommercial 4.0 International (CC BY-NC 4.0); see `LICENSE`.
+The Lean sources additionally depend on Mathlib, distributed under the Apache
+License 2.0.
 
-Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+## Integrity
 
-Any verification scripts or source code may be licensed separately where explicitly stated.
+A SHA-256 manifest for this directory is provided in `manifest_sha256.txt`.
+Sub-packages contain their own integrity manifests.
+
+## Author
+
+Juan Pablo Traverso Gianini — Independent researcher, Santiago, Chile
+ORCID: https://orcid.org/0009-0003-6068-4096 — jtraverso@gmail.com
