@@ -1,13 +1,18 @@
 {
   "release_id": "PAPER_I_PREPRINT_V1_0",
-  "generated_at": "2026-07-08",
+  "generated_at": "2026-07-10",
   "hash_algorithm": "SHA-256",
-  "scope_note": "Manifest excludes itself and SHA256SUMS.txt to avoid self-reference.",
+  "scope_note": "Manifest excludes itself and SHA256SUMS.txt.",
   "files": [
     {
+      "path": ".gitattributes",
+      "size_bytes": 73,
+      "sha256": "67db6f9a0c5beaee17701acd2031d3cbb89738b7bbc0960171ef3c566744cc04"
+    },
+    {
       "path": ".gitignore",
-      "size_bytes": 123,
-      "sha256": "b20274b5cce617bae80359fbeb23122c6ce5e5bc6ad6e6c450db85f2bebf9992"
+      "size_bytes": 179,
+      "sha256": "125af7be39dad44fa0d327f362f554870376df5e9c10ac6b3284761ce6a39213"
     },
     {
       "path": "01_manuscript/PAPER_I_preprint_v1.0.md",
@@ -140,9 +145,194 @@
       "sha256": "3710d6d9a35e961741307a3a61101d565bee9459e21554a0b281e61bea24770b"
     },
     {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/ENVIRONMENT.md",
+      "size_bytes": 2838,
+      "sha256": "45d4c111277bc308774efe4b5105c48f26a5e860abe071a9a4008a5216bcfef2"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/ENVIRONMENT.pdf",
+      "size_bytes": 5746,
+      "sha256": "f4a56faf7fcd2e1561936090a276ccf4126994d8d09ae7ffa9afbc4ed279aefc"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/FINAL_AUDIT_REPORT.md",
+      "size_bytes": 10066,
+      "sha256": "609a85cd899d5138c36ddfd755eb2173679fc31599ff0dc826443ef02fbf7226"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/FINAL_AUDIT_REPORT.pdf",
+      "size_bytes": 13648,
+      "sha256": "958a0823f003006974ec8518bb67b78d2aff1350e73e3039e4330509d777ab9a"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/README.md",
+      "size_bytes": 2801,
+      "sha256": "db20410f18e50e9603506f4c2ab07e72abe6e4711b074d48de318c80c54c33fe"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/README.pdf",
+      "size_bytes": 5577,
+      "sha256": "88e141446511a70c2d40e8c9bcc2c49ad573343bec06a568866d7ded445bb438"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/SHA256_MANIFEST.txt",
+      "size_bytes": 3796,
+      "sha256": "5f4104f8ea9c69346b2540159c4a7ff336264835bce6673b2ebf170e1c749090"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/_lib/package.py",
+      "size_bytes": 2825,
+      "sha256": "c4ec2b3acba0848186e9d5052f40cc9ff6c0dd493a17b37316def78cc13c315b"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/_lib/pdfgen.py",
+      "size_bytes": 5665,
+      "sha256": "4847888ee03a1ee4de06072cd001abdcc1a1f3e8099395f15c501f34ac2157d1"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/01_algebraic_identities/01_algebraic_identities.py",
+      "size_bytes": 4640,
+      "sha256": "762eaf6bc2c8b49046c761f4ffbcce76f834e7c3b42cfd357966737eb0189292"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/01_algebraic_identities/01_algebraic_identities.zip",
+      "size_bytes": 7926,
+      "sha256": "3559940ecb36712828473d4e02662ba413f63d954e60c15a959bea8b6582617b"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/01_algebraic_identities/01_algebraic_identities.zip.sha256",
+      "size_bytes": 94,
+      "sha256": "9ef89f92e63099b4e7a984f70093c2e781d3b5755decbcdd35f383acfedce3de"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/01_algebraic_identities/report.md",
+      "size_bytes": 2285,
+      "sha256": "171ca571acd22b85f478362bf1f7d2e6e8fe928d20e15bbd9e894592ca1f4004"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/01_algebraic_identities/report.pdf",
+      "size_bytes": 5324,
+      "sha256": "1b42e694590a97e9c92f9c1626d01719f5ca0772b1d8513a590e2b16163105d9"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/01_algebraic_identities/results.txt",
+      "size_bytes": 1476,
+      "sha256": "cab8ab114bf69510f29b0573b022ce96f6c774d5a0487c3f04912ac3adb4bbbd"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/02_orbit_lp_and_reduction/02_orbit_lp_and_reduction.py",
+      "size_bytes": 8321,
+      "sha256": "d6a6774e7771fc4535e600d648def190bf3e77c4feea694257dc29f9969df439"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/02_orbit_lp_and_reduction/02_orbit_lp_and_reduction.zip",
+      "size_bytes": 9403,
+      "sha256": "3c6d1062e29473b980e9bb22b114482738d06a25a048d55ab885c70c18e3d80c"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/02_orbit_lp_and_reduction/02_orbit_lp_and_reduction.zip.sha256",
+      "size_bytes": 96,
+      "sha256": "bd569aec31388f33eecb7bdc0010fc89e5d70dd9384f53874a7b3a787a670f91"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/02_orbit_lp_and_reduction/report.md",
+      "size_bytes": 2749,
+      "sha256": "8e1bbcae01afe30873c18a64bd72da5869cc1c8040e08a0dc738174f03deed39"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/02_orbit_lp_and_reduction/report.pdf",
+      "size_bytes": 5290,
+      "sha256": "af47e3805a02fd0dd47456374b07c1f8b8b5f9ddb6e939e6c80722db31a3f3f1"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/02_orbit_lp_and_reduction/results.txt",
+      "size_bytes": 1659,
+      "sha256": "37e025ea958491e3ab46bd42f1a74db028ec7f7b5decba902ffff5a891612f93"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/03_split_falsification/03_split_falsification.py",
+      "size_bytes": 6587,
+      "sha256": "ce4d4fd2eb645c63bca19b423c085cedaab40163abd59481ef6b65947288a822"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/03_split_falsification/03_split_falsification.zip",
+      "size_bytes": 8404,
+      "sha256": "19e04a36ad104beb4fa089e203cb22833885468812bf27e13b8bcddaa41f6bb0"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/03_split_falsification/03_split_falsification.zip.sha256",
+      "size_bytes": 93,
+      "sha256": "486b98f9481e2c7e59c5549352c547b843e5f79dfbc52e2577d3f4aa9b5e1541"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/03_split_falsification/report.md",
+      "size_bytes": 2260,
+      "sha256": "a13594882eb37d9926c63957bd70f08b10620fc197c282db394742fe6838a410"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/03_split_falsification/report.pdf",
+      "size_bytes": 4996,
+      "sha256": "d4a6a3c3368ff7028d1b35b419493931e613c82ca5dc0517eed623617d1cbfb0"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/03_split_falsification/results.txt",
+      "size_bytes": 1760,
+      "sha256": "5ffbae12e33d7ce718eae07f81783e14684d4a30c2b978c0e334b94f7834d64b"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/04_lean_certificate/04_lean_certificate.py",
+      "size_bytes": 7348,
+      "sha256": "e4065533d88c0daa58b199309ee0740465ce5a56c7b57ed6856843284a3bd808"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/04_lean_certificate/04_lean_certificate.zip",
+      "size_bytes": 17741,
+      "sha256": "05dc0ed88ad20ea17b7aa718a5df107effcd862c54f010235cc18b2f20bf35af"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/04_lean_certificate/04_lean_certificate.zip.sha256",
+      "size_bytes": 90,
+      "sha256": "ca7c1c41749b55d7d5cad36d48e50a8cf920fec08fd3de814f8bbda14c11d7c3"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/04_lean_certificate/independent_axioms_and_exit.txt",
+      "size_bytes": 5228,
+      "sha256": "79472f4165a7ac4b6a95a0555e3b0c95f6556c86e401aed3884149726776f843"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/04_lean_certificate/independent_build.log",
+      "size_bytes": 89611,
+      "sha256": "4fbc79cda38605ab75f2bb14edb041718580d3579ac9e4f231015fa86f3e3460"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/04_lean_certificate/independent_build.sh",
+      "size_bytes": 714,
+      "sha256": "0a250887a37f19f5dd7dd4da8937176ddd4cc65fc6adc8220b5ce78691bd7393"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/04_lean_certificate/report.md",
+      "size_bytes": 2507,
+      "sha256": "874edde394e8456e08caadd4c4043779f76fe252f8d4deb38bc06260c644a2c5"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/04_lean_certificate/report.pdf",
+      "size_bytes": 4921,
+      "sha256": "20d760356a4dd75ba241e59c90b6e0edc68bf7e5215606538cd423240bb1c3fa"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/PAPER_I_EXT_AUDIT_2026-07-10/scripts/04_lean_certificate/results.txt",
+      "size_bytes": 2015,
+      "sha256": "bdacdbb317acc86883415fc412d381ad8791dc8ed90a2972f41d5bbe78bb8808"
+    },
+    {
       "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/20_EVIDENCE/ERDOZ81-P1-FRAC-THM-01/audits/INDEPENDENT_AUDIT_RECORD_v1.0.pdf",
       "size_bytes": 12779,
       "sha256": "8595248d8a5b05df1d0c5ae6c52fc7f6fc76847a5c40a13307fdd5138e14524f"
+    },
+    {
+      "path": "02_validation/02_IA_ADVERSARIAL_AUDITS/README.md",
+      "size_bytes": 1053,
+      "sha256": "8e081ca315ce4f9495bef79079e7e06fddf543c82ba85d48c4df4a759042822c"
     },
     {
       "path": "02_validation/03_CERTIFICATES_AND_ADMISSIONS/20_EVIDENCE/ERDOZ81-P1-3ORBIT-01/admission/ADMISSION_RECORD_001.md",
@@ -276,8 +466,8 @@
     },
     {
       "path": "02_validation/MANIFEST.json",
-      "size_bytes": 11335,
-      "sha256": "1c6bff855ed76effe2ba9e842dc6fd82a4eb7e144eab4b673c18172acde24545"
+      "size_bytes": 21171,
+      "sha256": "9fe2a62dc7a6a613ff99bd3138b7c42e253d3517889e456fc1d26c7b5827b32f"
     },
     {
       "path": "02_validation/README.md",
@@ -286,13 +476,13 @@
     },
     {
       "path": "02_validation/SHA256SUMS.txt",
-      "size_bytes": 7554,
-      "sha256": "c06eba905052dbc9ce3f9f3d5dd404fdd1942d17eada2b5ca8419f73b549b8b6"
+      "size_bytes": 14775,
+      "sha256": "42bb6b778b057b7943b9a097ae934b99e04d6d1c2fa0ef952ce885007cc581f9"
     },
     {
       "path": "02_validation/VALIDATION_STATUS.md",
-      "size_bytes": 996,
-      "sha256": "f31e77aa6f39086f968bd7da3c6393a78195f73b078bc0673ea8cea9f2fb974a"
+      "size_bytes": 1546,
+      "sha256": "f67344c6ae2c2a327f139f1fd564a114c8717b3fa9466a38a5495c516cd66a63"
     },
     {
       "path": "03_reproducibility/BUILD.md",
@@ -366,8 +556,8 @@
     },
     {
       "path": "05_formalization/lean/WCDH_check.lean",
-      "size_bytes": 21318,
-      "sha256": "5b4be3c9a80a6d75999d2f660ed3e8e2005176e1adbb26fd7f3e924f6be9d31e"
+      "size_bytes": 20925,
+      "sha256": "026b3a975276bd0c8dcdf9edb4c56d2feabaa5d170115eb973c0a84942e76733"
     },
     {
       "path": "05_formalization/lean/gate_logs/FiniteLPDuality_compile.log",
@@ -416,18 +606,18 @@
     },
     {
       "path": "PaperI_explained_4_levels.html",
-      "size_bytes": 47660,
-      "sha256": "db57a2eceac0080e3d9d533b32f7f6b04cff6fe5edcd8305daa0cdad3091f071"
+      "size_bytes": 48077,
+      "sha256": "ab20baa734396477b7fc89258e24942de1b62f87e2341e807c1bea4b9d241801"
     },
     {
       "path": "README.md",
-      "size_bytes": 2097,
-      "sha256": "57e8f6edf900e0985449f44ac813118695efeed13990136e6e5ef83d9878066c"
+      "size_bytes": 2796,
+      "sha256": "51ba7a4f8f862f110cfa5969fd4a17373de1dcb5c680c2d1c6419dfd9d23949f"
     },
     {
       "path": "RELEASE_METADATA.yml",
-      "size_bytes": 817,
-      "sha256": "3504f2ac5fdf9d1a72bbad81beee9a5a968f99c84e4bdd8f13249f32e2f1ae16"
+      "size_bytes": 927,
+      "sha256": "32b3ad8f59b4f797fbb1eebd387354fec0c0ebd9ddfca2593e2231c314a55041"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -436,8 +626,8 @@
     },
     {
       "path": "TREE.txt",
-      "size_bytes": 829,
-      "sha256": "91e63d0d4ceedab00cf4238747f73131eae84fad53aed7a8c02ad23897d76677"
+      "size_bytes": 11106,
+      "sha256": "efc432654958a58eab0535a60d5f6e6ddc5ea29167e2ba1a6c6e0d4141b0718e"
     }
   ]
 }
