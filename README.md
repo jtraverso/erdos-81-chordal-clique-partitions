@@ -1,6 +1,6 @@
 # Erdős Problem #81 — Chordal Clique Partitions
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21273144.svg)](https://doi.org/10.5281/zenodo.21273144)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21273143.svg)](https://doi.org/10.5281/zenodo.21273143)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 Erdős Problem #81 asks whether the edge clique-partition number of every
@@ -129,7 +129,9 @@ theorem path has footprint:
 
 ## Citation
 
-Archived on Zenodo — DOI [10.5281/zenodo.21273144](https://doi.org/10.5281/zenodo.21273144).
+Archived on Zenodo — concept DOI [10.5281/zenodo.21273143](https://doi.org/10.5281/zenodo.21273143),
+which resolves to the latest deposited version. The current Papers I–III
+snapshot is [Zenodo v3](https://doi.org/10.5281/zenodo.22064657).
 See also `CITATION.cff`, `CITATION.bib`, and `CITATION.md` in this directory.
 
 ## License
