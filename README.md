@@ -72,16 +72,16 @@ all chordal graphs remains open.
 - [Lean 4 formalization](preprints/PAPER_III/05_formalization/lean_v1.4_freeze/)
 - [Plain-language explainer (four levels, rendered)](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_III/PaperIII_explained_4_levels.html)
 
-## What Paper I proves — and what it does not
+## What Papers I–III establish — and what remains open
 
-| Statement | Status in Paper I |
-|---|---|
-| `\|E\| − 2·ν₃* ≤ n²/6 + n` for split graphs (fractional) | **Proved**, finite & analytic, Lean-verified |
-| Leading constant `1/6` | Matches the constant of Erdős #81 |
-| Integral clique-partition bound `cp(G) ≤ n²/6 + O(n)` | **Not** established here |
-| Asymptotic transfer `cp = (1/6+o(1))n²` for chordal graphs | **Not** established here |
-| A theorem for **all chordal** graphs (beyond split) | **Not** established here |
-| Erdős #81 itself | **Open** |
+| Paper | Established result | Scope not claimed |
+|---|---|---|
+| **Paper I** | The finite fractional inequality `\|E(G)\| − 2·ν₃*(G) ≤ n²/6 + n` for split graphs | No integral clique-partition theorem and no theorem for all chordal graphs |
+| **Paper II** | The exact maximum `⌊(2n+1)²/24⌋` of `\|E(G)\| − 2·τ₃*(G)` over `n`-vertex chordal graphs, attained by a complete-split graph | No integral clique-partition theorem and no resolution of Erdős #81 |
+| **Paper III** | The integral bound `cp(G) ≤ n²/6 + O(n)` for split graphs, with sharp quadratic coefficient `1/6` | No theorem for all chordal graphs and no claim for the least uniform linear coefficient |
+
+Thus Paper III resolves Erdős #81 for split graphs at the conjectured quadratic
+scale, while the problem for all chordal graphs remains open.
 
 ## Formal verification
 
