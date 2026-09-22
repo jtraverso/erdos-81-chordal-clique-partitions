@@ -10,6 +10,10 @@ Problem #81 research program.
 - `PAPER_III/` — *Linear-Error Clique Partitions of Split Graphs via Structured
   Triangle Packing* (preprint v1.5; first formal public release; resolves the
   split-graph case at the `n²/6 + O(n)` scale).
+- `PAPER_IV/` — *Clique partitions of chordal graphs: mixed rounding and
+  construction in the critical regime* (**author draft**, revision v0.8;
+  bilingual manuscripts, frozen Lean sources and internal audit evidence;
+  independent final audit remains pending).
 
 Each preprint package uses the release structure:
 
@@ -27,3 +31,7 @@ and II retain their complete preceding public packages under
 `superseded/preprint_v1.0/`. Paper III had no preceding formal public release;
 its audited unpublished draft is retained and labelled as such. Intermediate
 internal drafts are not presented as public releases.
+
+Paper IV is explicitly a draft, not a final release. Only its active v0.8
+manuscripts are included; earlier local working versions and research
+downloads are excluded. The published histories of Papers I–III are retained.
