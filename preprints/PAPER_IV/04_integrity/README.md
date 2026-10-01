@@ -1,17 +1,25 @@
-# Integrity records
+# Integrity — Paper IV v1.22
 
-`PACKAGE_MANIFEST.sha256` binds every public file in this Paper IV package,
-except itself and its own checksum sidecar. Paths are relative to `PAPER_IV/`.
-`PACKAGE_MANIFEST.sha256.sha256` binds the manifest. Ignored caches, compiled
-Lean files and Python bytecode are not release artifacts.
+Publication identity is bound by RELEASE_MANIFEST.json and its SHA-256
+sidecar. [PUBLICATION_CHECKS.json](PUBLICATION_CHECKS.json) records the local
+packaging checks. The repository-wide manifest_sha256.txt is regenerated
+after the documentation is final; it excludes itself and Git metadata.
 
-`baseline/LEAN_CUT.json` independently binds every frozen source and the
-original ZIP. The extracted tree is byte-identical to that cut, not a newer
-working directory copied under an old audit name.
+The source manifest remains
+fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5.
+The current manuscripts are identical to audit target v1.22-r4. Neither
+frozen sources nor signed-off reports were edited to change their status.
 
-The manuscript hashes are also recorded in `SOURCE_TO_PUBLICATION.json`.
-The package uses status **draft** and preserves manuscript revision **v0.8**.
-No old local Paper IV version is an active publication artifact.
+[RELOCATION_MAP_v1.22.json](RELOCATION_MAP_v1.22.json) maps original paths to
+the publication layout, with hashes. This allows intermediate versions to
+live only inside audit inputs while preserving the original targets and
+report paths as historical evidence. The final current report remains at
+its original package-relative path.
 
-The manifest is generated only after the test results, logs and reports are
-final. A later edit invalidates the package manifest and must be resealed.
+The original public v0.8 was recovered from Git commit
+f783a792404a60983a7ef754d055fbe6c341188b, not from modified working files.
+Its historical manifest and files remain unchanged in superseded/draft_v0.8.
+
+No new commit, tag, publication date or Zenodo version DOI is asserted.
+See [release checklist](../RELEASE_CHECKLIST_v1.22.md) and
+[trust boundary](PROVENANCE_AND_TRUST.md).

@@ -1,22 +1,34 @@
-# Frozen Lean source — draft v0.8
+# Formalization selected for Paper IV v1.22
 
-`lean_draft_freeze/` contains exactly the 479 entries declared by
-`../04_integrity/baseline/LEAN_CUT.json`. No mathematical source was edited
-during publication preparation. The original source-only archive is retained
-as `LEAN_SOURCE_SNAPSHOT_v0.8.zip` with SHA-256:
+## Main immutable source
 
-```text
-4f6ba1b40ace1d926ae5fab7490c4bc0dc3f236dea28640de4cee0166da60afa
-```
+- [Tree](lean_piv-v12-fb459343d234/)
+- [Source ZIP](LEAN_SOURCE_piv-v12-fb459343d234.zip)
+- [Source manifest](../03_reproducibility/build_piv-v12-fb459343d234/SOURCE_MANIFEST.json)
 
-The archive also preserves its original evidence directory. The extracted
-tree and the archive therefore serve different practical roles: the tree is
-convenient to build; the unchanged archive establishes continuity with the
-reviewed v0.8 cut. Neither contains Mathlib binaries or a `.lake` cache.
+Identity: piv-v12-fb459343d234; 607 Lean modules, 615 manifest entries.
+Source ZIP SHA-256:
+cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6.
 
-See [reproduction instructions](../03_reproducibility/README.md) for commands,
-toolchain, public theorem contracts and the distinction between the default
-root, separate audit targets and supplementary library closures.
+The external build verified 607 modules, 19 explicit targets and 224 export
+checks. The final v1.22-r4 report revalidated that evidence by identity.
+PaperIV is the mathematical aggregate; tools/audit_publication.py is the
+serial auditing entry point. See [reproduction](../03_reproducibility/README.md).
 
-This is the sole active Paper IV freeze in the draft package. Exploratory
-return archives and earlier working trees remain outside the publication.
+## Separate bounded-gap annex
+
+- [Annex sources](lean_v1.0_gap_annex/)
+- [Annex ZIP](LEAN_BOUNDED_GAP_ANNEX_v1.0.zip)
+
+The historical filename v1.0 identifies this unchanged annex, not a competing
+Paper IV manuscript release. It contains 38 bounded-gap modules and uses a
+recorded 50-module closure. Its ZIP hash is
+2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d.
+
+No universal linear mixed gap follows from the conditional annex statements.
+Their assumptions remain visible in the source and manuscript.
+
+The old v0.8 source lives only in its superseded package. Other obsolete
+formal trees and caches are not included. Existing software licenses remain
+applicable. No dependency installation, theorem edit or build occurred
+during this publication packaging.

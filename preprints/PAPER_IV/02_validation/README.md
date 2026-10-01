@@ -1,41 +1,34 @@
-# Validation map — Paper IV draft
+# Paper IV — validation evidence
 
-The organization follows Papers I–III, but validation verdicts are specific
-to this package. Earlier papers' independent audit results are not inherited
-by Paper IV.
+## Final external result
 
-## Internal author-side checks
+The [v1.22-r4 consolidated report](02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.md)
+records **PASS for E0–E8, zero open corrective actions**, with NEW-05 closed.
+It includes the complete history and distinguishes newly executed checks
+from conclusions inherited and revalidated by identity. The final
+[summary](02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/SUMMARY.json)
+is the current verdict; original historical verdicts are not rewritten.
 
-`01_INTERNAL_AUDITS/run_draft_20260921/` contains the executable checks, their
-results and the final internal report. The same gate families are used as in
-the earlier release packages:
+## Internal audit
 
-| Gate | Evidence sought |
-|---|---|
-| G0 | Exact artifact identities and archive integrity |
-| G1 | Unchanged mathematical source and literal Lean excerpts |
-| G2 | Bounded integer-accounting regression checks; explicit mathematical-review limit |
-| G3 | Frozen source, complete local imports, pinned dependencies, escape-hatch scan |
-| G4 | Lake build, exact theorem contracts, axiom reports and constant cones |
-| G5 | Bilingual structural and mathematical parity |
-| G6 | Final TeX/PDF binding, clean compiler logs and preserved visual QA |
-| G8 | Curated publication, no credentials/cache/obsolete working versions |
+The [author-side internal report](01_INTERNAL_AUDITS/run_20260929_v1.2_fb459343d234_r1/10_REPORT/INTERNAL_AUDIT_FINAL_REPORT.md)
+is PASS_INTERNAL_AUTHOR_SIDE for its frozen v1.2 inputs. Its block/gate
+reports, scripts, results and ZIPs are retained. It is not relabelled as a
+fresh v1.22 audit. Subsequent manuscript changes were checked in the external
+editorial revalidation chain, ending with v1.22-r4.
 
-G7 (independent mathematical/novelty validation) is **not** relabelled PASS:
-it remains outside this author-side packaging audit. This is why the release
-is a draft. Bounded arithmetic tests are not universal proofs; the Lean
-theorem terms provide the formal evidence, subject to their declared trust
-boundary and the interpretation of the formal statements.
+## Scope and controls
 
-## Retained baseline reports
+The external build is the recorded v1.2 run on source identity
+piv-v12-fb459343d234: 607 main modules, 19 targets, 224 export checks and
+50 annex modules. No newer editorial cycle rebuilt it. Mathematical
+falsification checks are finite regression evidence, not proof premises.
+The supplemental log verifier remains mandatory; see
+[reproduction](../03_reproducibility/README.md).
 
-`01_INTERNAL_AUDITS/baseline_v0.8/` preserves earlier editorial reports and
-the proof ledger. These documents keep their historical paths and status
-language; they are evidence, not the current package navigation or build
-instructions. Current instructions are in the package README and
-`03_reproducibility/README.md`.
+Human peer review is a distinct future milestone, not an unmet condition
+of this completed audit. Same-family/session and shared-cache limitations
+remain declared. PASS is not authorization to publish.
 
-## External audit
-
-`02_IA_ADVERSARIAL_AUDITS/README.md` records the open independent-audit gate.
-No third-party PASS report is manufactured or inferred from author-side tests.
+Historical audit inputs were relocated, not edited. See
+[audit input map](02_IA_ADVERSARIAL_AUDITS/audit_inputs/README.md).

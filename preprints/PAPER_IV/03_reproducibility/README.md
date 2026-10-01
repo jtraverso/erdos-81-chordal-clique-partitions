@@ -1,93 +1,76 @@
-# Reproducing the Paper IV draft
+# Reproduction — Paper IV v1.22
 
-## Exact source cut
+## Identity and documentary checks (no Lean build)
 
-The immutable mathematical source is `../05_formalization/lean_draft_freeze/`.
-It is extracted byte-for-byte from the original `LEAN_SOURCE_SNAPSHOT_v0.8.zip`.
-`../04_integrity/baseline/LEAN_CUT.json` records all 479 entries: 474 Lean
-sources and five configuration/toolchain files. Test modules outside this
-directory are release checks, not changes to the mathematical freeze.
-
-The `lake-manifest.json` pins Mathlib and transitive Git dependencies to full
-commit hashes. `PaperIIIRelease` is a relative local package included in the
-freeze. Do not replace the manifest with newer dependencies when reproducing
-this cut.
-
-## Build and inspect the exported theorem
-
-With Python 3 and elan/Lake available, from the Paper IV package directory:
+Run from the Paper IV directory:
 
 ```text
-python 03_reproducibility/run_lean_checks.py
-python 03_reproducibility/refresh_supplement.py
-python 02_validation/01_INTERNAL_AUDITS/run_draft_20260921/check_release.py
+python 04_integrity/verify_publication.py
+python 03_reproducibility/verify_logs.py
 ```
 
-On a machine without dependencies, first run the following in
-`05_formalization/lean_draft_freeze`:
+The first verifies the publication manifest, exact audited manuscript hashes,
+frozen sources, historical ZIPs and their sidecars, and the relocation map.
+The second runs the **unchanged** supplemental log verifier against the
+1266 recorded logs. It fails on missing/extra/changed logs and detected errors
+or sorry declarations. It is mandatory because the older frozen runners'
+text scanner had a documented gap (X-28). Its PASS does not itself prove
+mathematical correctness.
+
+To restore the historical relative paths for an audit replay in an empty
+directory outside this repository:
 
 ```text
-lake exe cache get
+python 04_integrity/verify_publication.py --restore-audit-inputs C:/temporary/paper-iv-audit-replay
 ```
 
-This downloads the pinned Mathlib build cache; it is not a mathematical
-hypothesis. The supplied source ZIP contains no `.lake` cache.
+This copies mapped inputs; it never installs dependencies or starts Lean.
+Original absolute workstation paths in historical scripts remain provenance,
+not portable commands. Inspect a script's inputs before invoking it.
 
-The runner performs these steps in order and records every exit code and log
-hash:
+## Formal reproduction
 
-1. `lake build PaperIV PaperIV.Audit PaperIV.ConeAudit BoundedCliqueGap.AxiomCheck`;
-2. `lake env lean PaperIV/Audit.lean`;
-3. `lake env lean PaperIV/ConeAudit.lean`;
-4. `lake env lean` on `recorded_lean_audits/SupplementAudit.lean`;
-5. `lake env lean BoundedCliqueGap/AxiomCheck.lean`;
-6. `lake env lean` on `PublicContracts.lean`.
+Selected source: [lean_piv-v12-fb459343d234](../05_formalization/lean_piv-v12-fb459343d234/).
+Use a separate working copy, Lean 4.28.0 and the exact pinned dependency
+revisions in lake-manifest.json. Reuse an existing matching Mathlib/package
+cache; do not download a second installation on this workstation. If no
+matching cache is available, stop and configure it explicitly. Do not modify
+the published source freeze or its manifests.
 
-The runner checks every frozen source hash before and after execution.
-`PublicContracts.lean` imports the aggregate and explicitly types the
-all-orders additive theorem, the all-orders linear theorem and the sharp
-eventual theorem, without an extra analytic or LP premise. It also prints the
-theorem definitions and the partition, chordality and target definitions.
+The source's docs/PUBLICATION_AUDIT.md describes the serial entry point:
 
-Building an aggregate is not the same as running a separate audit target.
-The command above deliberately lists the roots. The supplementary and bounded
-library results have their own compatible audit closures; their counts are
-not added to the main theorem count as though all declarations were distinct.
+```text
+python tools/audit_publication.py
+```
 
-The supplementary refresh additionally builds
-`ThreeRegime.CompleteStateAllOrders` and `FarExploration.CleanupRigidVerdict`
-explicitly, then reruns their audit. This prevents inherited `.olean` files
-from being accepted without Lake validating that supplementary source closure.
-Its authoritative results are in `author_build_evidence/SUPPLEMENT_REFRESH.json`.
+Run it only from the configured working copy. It executes the 19 targets
+listed in FREEZE_SCOPE.json; importing a cached aggregate alone is not the
+same check. Maximum one heavy build at a time. After compilation, apply the
+supplemental scanner to the new logs with an explicit new inventory; do not
+use an inventory for older logs as if it verified a new run.
 
-## Nature of the included run
+The separate bounded-gap annex has its own source and recorded 50-module
+closure. It is not silently added to the main 607-module count.
 
-The author run uses copied project build artifacts and shared pinned package
-caches, followed by Lake's dependency validation and fresh audit commands.
-This avoids downloading another copy of Mathlib. It is **cache-assisted**, not
-a clean-room or independent build. The cache is excluded from Git and the
-source freeze. Warnings about unused section variables are retained, not
-silenced or reported as proof failures.
+## Evidence retained
 
-Re-running the scripts updates evidence files locally. Such a run is a new
-audit, not the original sealed evidence. Preserve the repository checkout or
-use a separate copy if you wish to compare runs.
+- build_piv-v12-fb459343d234: original source freeze and build provenance;
+- full_rebuild_v12_20260929_r2 and full_rebuild_v12_20260929_resume: fresh
+  author compilation segments around the reboot;
+- full_rebuild_v12_20260929_seal: consolidated evidence and ZIP;
+- build_gap_annex_20260927: historical annex evidence;
+- external run_v1.2_r1: the independent execution of the recorded main and
+  annex build, inherited by the final editorial audit.
 
-## Manuscripts
+The final external report distinguishes 461 axiom records from 314 printed
+axiom outputs and the 18 headline declarations; repeated records are not
+distinct theorems. Its final cycle ran no new build or kernel replay.
 
-The manuscript PDFs and TeX are unchanged reviewed v0.8 artifacts, not PDFs
-rebuilt from a different source. Logs are in `manuscript_build_logs/`; rendered
-QA and its PDF hash binding are in `manuscript_qa/es/` and `manuscript_qa/en/`.
-They contain 41 and 40 pages respectively. The differing page counts are
-typographical; equations, identifiers and numbered objects match.
+## Manuscript reproduction
 
-To compile either final TeX, keep its figure directory alongside it, use
-XeLaTeX (or Tectonic) and compile twice. The series-style templates are in
-`templates/`. No alteration of the mathematical Markdown is required.
-
-## Verification boundary
-
-Internal checks verify source integrity, emitted theorem contracts, allowed
-axiom sets, the recorded namespace veto and artifact consistency. They do not
-constitute a new line-by-line mathematical rederivation, a literature-priority
-review, or an independent source-provenance audit.
+The delivered ES/EN MD, TeX, PDF, figures and template are byte-identical to
+the approved r4 inputs. Compilation scripts, logs and final rendered QA are
+retained in the [r4 input backup](../02_validation/02_IA_ADVERSARIAL_AUDITS/audit_inputs/01_manuscript/v1.22_editorial_candidate_r4/).
+Use those tools in a separate working copy, adapting environment paths when
+necessary. Do not regenerate the release PDF merely to update a status line;
+that would create a new artifact requiring new checks.
