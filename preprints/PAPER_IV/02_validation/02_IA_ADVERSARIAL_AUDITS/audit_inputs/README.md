@@ -9,8 +9,11 @@ Original manuscript filenames and sealed ZIPs are retained. Original audit
 targets are not rewritten: their paths describe the workspace used at the
 time. The [relocation map](../../../04_integrity/RELOCATION_MAP_v1.22.json)
 identifies original and current relative paths and hashes for every copied
-artifact. The selected public manuscripts have a second identical copy at
-the current manuscript location.
+artifact. The exact published v1.22 package is also retained in
+[published_v1.22](published_v1.22/). The current v1.23 manuscript is an
+editorial revision, not a byte-identical copy of the audited v1.22 input.
+The relocation delta in `../../../04_integrity/RELOCATION_DELTA_v1.23.json`
+resolves the former active v1.22 paths without changing the historical map.
 
 For portable replay, the release verification tool can restore mapped
 artifacts to their original relative paths in a new, separate directory.

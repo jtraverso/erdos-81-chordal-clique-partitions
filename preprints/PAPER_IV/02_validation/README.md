@@ -1,5 +1,14 @@
 # Paper IV — validation evidence
 
+## Current editorial revision
+
+Version 1.23 changes administrative prose only. Its local semantic, bilingual,
+typesetting and navigation checks are recorded in
+[EDITORIAL_REPORT.md](03_EDITORIAL_CHECKS/v1.23/EDITORIAL_REPORT.md).
+These checks do not constitute a new external audit. The original report is
+also available as an [English translation](translations/v1.22_r4/FINAL_CONSOLIDATED_AUDIT_REPORT_en.md),
+clearly identified as an editorial translation rather than a new auditor statement.
+
 ## Final external result
 
 The [v1.22-r4 consolidated report](02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.md)

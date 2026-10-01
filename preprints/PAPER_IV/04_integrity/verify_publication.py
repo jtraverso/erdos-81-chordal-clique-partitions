@@ -20,13 +20,20 @@ def main():
     observed={x.relative_to(PAPER).as_posix() for x in PAPER.rglob('*') if x.is_file()}
     assert observed==expected,{'missing':sorted(expected-observed),'extra':sorted(observed-expected)}
     mapping=read(PAPER/'04_integrity/RELOCATION_MAP_v1.22.json')['files']
-    for e in mapping: assert sha(PAPER/e['published'])==e['sha256']
+    delta=read(PAPER/'04_integrity/RELOCATION_DELTA_v1.23.json')['paths']
+    for e in mapping: assert sha(PAPER/delta.get(e['published'],e['published']))==e['sha256']
     main=read(PAPER/'03_reproducibility/build_piv-v12-fb459343d234/SOURCE_MANIFEST.json')
     assert len(main)==615 and all(sha(PAPER/'05_formalization/lean_piv-v12-fb459343d234'/e['path'])==e['sha256'] for e in main)
     audits=PAPER/'02_validation/02_IA_ADVERSARIAL_AUDITS'
     summary=read(audits/'run_v1.22_r4/30_REPORT/SUMMARY.json')
     assert summary['overall_verdict']=='PASS' and not summary['open_actions']
-    for name,digest in summary['target']['six_sha256'].items(): assert sha(PAPER/'01_manuscript'/name)==digest
+    baseline=audits/'audit_inputs/published_v1.22/01_manuscript'
+    for name,digest in summary['target']['six_sha256'].items(): assert sha(baseline/name)==digest
+    editorial=read(PAPER/'02_validation/03_EDITORIAL_CHECKS/v1.23/SEMANTIC_CHECKS.json')
+    assert editorial['status']=='PASS' and not editorial['lean_executed']
+    for record in editorial['languages']:
+        for ext,digest in record['files'].items():
+            assert sha(PAPER/f"01_manuscript/PAPER_IV_preprint_v1.23_{record['language']}.{ext}")==digest
     zipped=0
     for sidecar in PAPER.rglob('*.zip.sha256'):
         z=sidecar.with_suffix(''); assert sha(z)==sidecar.read_text().split()[0]
@@ -41,6 +48,6 @@ def main():
             out=dest/rel
             if out.exists(): assert sha(out)==e['sha256']
             else:
-                out.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(PAPER/e['published'],out)
-    print(json.dumps({'status':'PASS','release_files':len(entries),'mapped_artifacts':len(mapping),'formal_entries':len(main),'zip_sidecars_and_crc':zipped,'external_verdict':summary['overall_verdict'],'lean_executed':False,'restored_to':str(args.restore_audit_inputs) if args.restore_audit_inputs else None},indent=2))
+                out.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(PAPER/delta.get(e['published'],e['published']),out)
+    print(json.dumps({'status':'PASS','release_files':len(entries),'mapped_artifacts':len(mapping),'formal_entries':len(main),'zip_sidecars_and_crc':zipped,'external_verdict_v122':summary['overall_verdict'],'editorial_v123':editorial['status'],'lean_executed':False,'restored_to':str(args.restore_audit_inputs) if args.restore_audit_inputs else None},indent=2))
 if __name__=='__main__': main()

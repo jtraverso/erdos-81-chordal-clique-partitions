@@ -1,24 +1,28 @@
-# Paper IV — preprint v1.22
+# Paper IV — preprint v1.23 (editorial revision)
 
 **Title:** *Clique partitions with rooted simplicial defect: quantitative stability and sharp eventual bounds*  
 **Author:** Juan Pablo Traverso Gianini  
-**Status:** audited author preprint selected for publication; local preparation, not yet pushed or deposited  
-**External adversarial audit:** PASS, E0–E8, zero open corrective actions (v1.22-r4, 1 October 2026)  
+**Status:** author-approved GitHub release; v1.22 is the audited predecessor  
+**External adversarial audit:** PASS for v1.22-r4, E0–E8, zero open corrective actions; no new external audit of v1.23  
 **Human peer review:** not performed; a separate future milestone
 
 ## Read the paper
 
-- [English PDF](01_manuscript/PAPER_IV_preprint_v1.22_en.pdf)
-- [Spanish PDF](01_manuscript/PAPER_IV_preprint_v1.22_es.pdf)
-- [English Markdown](01_manuscript/PAPER_IV_preprint_v1.22_en.md)
-- [Spanish Markdown](01_manuscript/PAPER_IV_preprint_v1.22_es.md)
-- [English TeX](01_manuscript/PAPER_IV_preprint_v1.22_en.tex)
-- [Spanish TeX](01_manuscript/PAPER_IV_preprint_v1.22_es.tex)
+- [English PDF](01_manuscript/PAPER_IV_preprint_v1.23_en.pdf)
+- [Spanish PDF](01_manuscript/PAPER_IV_preprint_v1.23_es.pdf)
+- [English Markdown](01_manuscript/PAPER_IV_preprint_v1.23_en.md)
+- [Spanish Markdown](01_manuscript/PAPER_IV_preprint_v1.23_es.md)
+- [English TeX](01_manuscript/PAPER_IV_preprint_v1.23_en.tex)
+- [Spanish TeX](01_manuscript/PAPER_IV_preprint_v1.23_es.tex)
+- [Explanation at four levels, EN/ES](PaperIV_explained_4_levels.html)
 
-These are byte-for-byte the six files approved as v1.22-r4. Their dated
-candidate-status passages are preserved as part of that audited identity.
-The final status is recorded here and in the consolidated report, not by
-silently rewriting the approved PDFs.
+Version 1.23 relocates administrative history out of the manuscript opening
+and shortens process descriptions; mathematical content and frozen Lean sources
+are unchanged. Its regenerated PDFs are new artifacts, not the six files audited
+as v1.22-r4. See the [changelog](CHANGELOG_v1.23.md) and
+[editorial checks](02_validation/03_EDITORIAL_CHECKS/v1.23/EDITORIAL_REPORT.md).
+The [exact v1.22 publication](02_validation/02_IA_ADVERSARIAL_AUDITS/audit_inputs/published_v1.22/)
+is retained as audit evidence, as is the public tag `paper-IV-v1.22`.
 
 ## Results and scope
 
@@ -36,8 +40,9 @@ global threshold, a universal linear mixed gap or priority for the extremal boun
 
 ## Audit evidence
 
-- [Consolidated final external report (MD)](02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.md)
-- [Consolidated final external report (PDF)](02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.pdf)
+- [Consolidated final external report — English translation](02_validation/translations/v1.22_r4/FINAL_CONSOLIDATED_AUDIT_REPORT_en.md)
+- [Unchanged Spanish original (MD)](02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.md)
+- [Unchanged Spanish original (PDF)](02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.pdf)
 - [Machine-readable final summary](02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/SUMMARY.json)
 - [Internal audit and continuity](02_validation/README.md)
 - [Publication checks](04_integrity/PUBLICATION_CHECKS.json)
@@ -57,7 +62,7 @@ criterion of this completed E0–E8 process.
 ## Package and history
 
 ```text
-01_manuscript/       Current v1.22 only: ES/EN sources, PDFs and figures
+01_manuscript/       Current v1.23 only: ES/EN sources, PDFs and figures
 02_validation/      Internal/external reports, evidence and historical audit inputs
 03_reproducibility/ Frozen build evidence and required supplemental log verifier
 04_integrity/       Release manifest, relocation map and verification results
@@ -73,12 +78,16 @@ resolves original paths without changing their contents.
 
 See [reproduction](03_reproducibility/README.md), [formal sources](05_formalization/README.md),
 [trust and provenance](04_integrity/PROVENANCE_AND_TRUST.md), and
-[release checklist](RELEASE_CHECKLIST_v1.22.md).
+[release checklist](RELEASE_CHECKLIST_v1.23.md).
 
 ## Citation and license
 
 The series concept DOI remains https://doi.org/10.5281/zenodo.21273143.
-No version DOI for the new four-paper deposit or release commit is assigned
-here. See [CITATION.cff](CITATION.cff). Written materials follow the series'
+The DOI supplied by the author for the new version is
+https://doi.org/10.5281/zenodo.23089131. Its public record was not yet
+available at the 1 October 2026 check; this does not assert a completed deposit.
+The published
+v1.22 tag points to `cfcd5cf57cadc8583a218caaa1476911efe6158a`.
+See [CITATION.cff](CITATION.cff). Written materials follow the series'
 CC BY-NC 4.0 license. Upstream software retains its notices and licenses;
 see [LICENSE.md](LICENSE.md).

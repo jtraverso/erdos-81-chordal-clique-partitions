@@ -1,7 +1,9 @@
 # Provenance and trust boundary
 
-This publication preparation changes location and navigation only. The six
-v1.22 manuscript artifacts equal the exact inputs approved in v1.22-r4.
+This revision changes administrative prose and navigation only. The six
+v1.22 manuscript artifacts retained in audit inputs equal the approved inputs.
+The v1.23 manuscripts are new editorial artifacts, with a recorded delta,
+regenerated PDFs and local checks, not a new external audit verdict.
 The selected Lean freeze and separate annex retain their original hashes.
 Historical audit reports and ZIPs remain unchanged, including prior
 INCONCLUSIVE/FAIL verdicts and corrections to the auditing process itself.

@@ -1,4 +1,4 @@
-# Reproduction — Paper IV v1.22
+# Reproduction — Paper IV v1.23
 
 ## Identity and documentary checks (no Lean build)
 
@@ -9,7 +9,7 @@ python 04_integrity/verify_publication.py
 python 03_reproducibility/verify_logs.py
 ```
 
-The first verifies the publication manifest, exact audited manuscript hashes,
+The first verifies the publication manifest, retained audited manuscript hashes,
 frozen sources, historical ZIPs and their sidecars, and the relocation map.
 The second runs the **unchanged** supplemental log verifier against the
 1266 recorded logs. It fails on missing/extra/changed logs and detected errors
@@ -68,9 +68,13 @@ distinct theorems. Its final cycle ran no new build or kernel replay.
 
 ## Manuscript reproduction
 
-The delivered ES/EN MD, TeX, PDF, figures and template are byte-identical to
-the approved r4 inputs. Compilation scripts, logs and final rendered QA are
-retained in the [r4 input backup](../02_validation/02_IA_ADVERSARIAL_AUDITS/audit_inputs/01_manuscript/v1.22_editorial_candidate_r4/).
-Use those tools in a separate working copy, adapting environment paths when
-necessary. Do not regenerate the release PDF merely to update a status line;
-that would create a new artifact requiring new checks.
+The v1.23 ES/EN manuscripts have an editorial-only delta from the approved r4
+inputs. Figures and template are unchanged. Scripts in `editorial_v1.23/`
+record preparation, cached local typesetting and checks; adapt executable paths
+explicitly before reproduction. No script installs TeX, Mathlib or another cache.
+The [v1.23 check record](../02_validation/03_EDITORIAL_CHECKS/v1.23/EDITORIAL_REPORT.md)
+binds the final TeX and PDFs to the verification. Any regeneration creates new
+artifacts whose hashes and rendered output must be checked again.
+The exact [v1.22 publication backup](../02_validation/02_IA_ADVERSARIAL_AUDITS/audit_inputs/published_v1.22/)
+and earlier [r4 input backup](../02_validation/02_IA_ADVERSARIAL_AUDITS/audit_inputs/01_manuscript/v1.22_editorial_candidate_r4/)
+remain separate from the current manuscripts.
