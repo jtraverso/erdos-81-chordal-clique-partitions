@@ -88,3 +88,6 @@ the public v0.8 draft is preserved as superseded.
 Documents follow CC BY-NC 4.0; see [LICENSE.md](LICENSE.md). Existing upstream
 software licenses remain applicable; packaging does not relicense Mathlib
 or separately licensed Lean Pool/Mathlib contributions.
+The original Paper III `Ax2` Lean sources are also available under Apache-2.0
+through the author's [specific source-code grant](LEAN_SOURCE_APACHE_2_0_GRANT.md);
+this exception does not change the license of the papers or audit artifacts.
