@@ -11,6 +11,20 @@ formal sources and verification evidence concerning
 - [Papers I–IV: bilingual explanations at different levels](index.html)
 - [HTML preview of the series](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/index.html)
 
+## arXiv endorsement
+
+I am preparing to submit this preprint series to arXiv (math.CO) and, as a first-time submitter, I
+need an endorsement. If you are an arXiv author eligible to endorse in math.CO, have looked at
+these papers, and found that they add value and are appropriate for the category, you can endorse
+me at https://arxiv.org/auth/endorse?x=N8V4R6 (endorsement code `N8V4R6`). An endorsement only confirms that the work is suitable for
+the subject area; it is not a review or an approval of its results. Thank you.
+
+*En español:* preparo el envío de esta serie de preprints a arXiv (math.CO) y, como es mi primer
+envío, necesito un endorsement. Si eres autor de arXiv habilitado para dar endorsement en math.CO,
+revisaste estos trabajos y te parece que aportan y son adecuados para la categoría, puedes dármelo
+en https://arxiv.org/auth/endorse?x=N8V4R6 (código `N8V4R6`). El endorsement solo confirma que el trabajo es adecuado para el área;
+no es una revisión ni una aprobación de sus resultados. ¡Gracias!
+
 ## Paper IV — v1.23 editorial revision
 
 **Clique partitions with rooted simplicial defect: quantitative stability and
