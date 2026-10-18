@@ -40,9 +40,10 @@
     }
   ],
   "zenodo": {
-    "collection_doi": "10.5281/zenodo.23458871",
+    "collection_doi": "10.5281/zenodo.23459196",
     "concept_doi": "10.5281/zenodo.21273143",
-    "record_id": 23458871,
-    "files": 24
+    "record_id": 23459196,
+    "files": 24,
+    "total_bytes": 5329765
   }
 }

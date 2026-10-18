@@ -103,7 +103,7 @@ Use [CITATION.md](CITATION.md), [CITATION.bib](CITATION.bib) or
 The existing [Papers I–III deposit](https://doi.org/10.5281/zenodo.22064657)
 does not include Paper IV. The published v1.22 is tagged `paper-IV-v1.22`,
 commit `cfcd5cf57cadc8583a218caaa1476911efe6158a`.
-The published collection [10.5281/zenodo.23458871](https://doi.org/10.5281/zenodo.23458871) contains 24 PDFs: the eight retained English and Spanish manuscripts of Papers I–IV, plus the sixteen manuscripts and formalization companions of V, VI and Notes I–II. The preceding I–IV snapshot remains [10.5281/zenodo.23089131](https://doi.org/10.5281/zenodo.23089131); the series concept DOI remains unchanged.
+The published collection [10.5281/zenodo.23459196](https://doi.org/10.5281/zenodo.23459196) contains 24 PDFs: the eight retained English and Spanish manuscripts of Papers I–IV, plus the sixteen manuscripts and formalization companions of V, VI and Notes I–II. The preceding I–IV snapshot remains [10.5281/zenodo.23089131](https://doi.org/10.5281/zenodo.23089131); the series concept DOI remains unchanged.
 
 The root `manifest_sha256.txt` covers the prepared repository except itself
 and Git metadata. Paper IV has its own manifest and verification procedure.
@@ -117,3 +117,5 @@ or separately licensed Lean Pool/Mathlib contributions.
 The original Paper III `Ax2` Lean sources are also available under Apache-2.0
 through the author's [specific source-code grant](LEAN_SOURCE_APACHE_2_0_GRANT.md);
 this exception does not change the license of the papers or audit artifacts.
+
+Zenodo provides the individual PDFs (24 files, 5.33 MB total); the full source and evidence packages are GitHub release assets. [Deposit verification and publication procedure](publication/zenodo/README.md).
