@@ -10,3 +10,5 @@ Papers I v1.3, II v1.2, III v1.5 and IV v1.23 are deposited at [10.5281/zenodo.2
 - Juan Pablo Traverso Gianini, *Exact stability for nearly extremal chordal clique partitions*, NOTE II, Preprint 1.0, 2026. [Package](series_notes/NOTE_II_CHORDAL_STABILITY/README.md).
 
 See [CITATION.bib](CITATION.bib) for individual bibliography entries. Earlier public versions and their audit evidence remain unchanged.
+
+The current collection, including all four Preprint 1.0 works and their companions, is [10.5281/zenodo.23458871](https://doi.org/10.5281/zenodo.23458871). This DOI identifies the collection; name the individual work when citing it.

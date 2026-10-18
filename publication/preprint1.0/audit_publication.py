@@ -31,6 +31,9 @@ def lean_code(s):
         out.append(s[i]);i+=1
     return ''.join(out)
 private=re.compile(r'C:(?:[/\\]+)Users(?:[/\\]+)jtraverso|Camara de Comercio de Santiago|CCS_NOTEBOOK',re.I)
+mojibake=re.compile(r'â€|Ã[\u0080-\u00bf]|Å‘|Â·')
+for name in ['README.md','CITATION.md','CITATION.cff','CITATION.bib','index.html','preprints/README.md','series_notes/README.md']:
+    check(not mojibake.search((ROOT/name).read_text(encoding='utf-8')), 'UTF-8 text '+name)
 for w in json.loads((ROOT/'PUBLICATION_INDEX.json').read_text(encoding='utf-8'))['works']:
     key=w['work'];p=ROOT/w['path']
     for needed in ['README.md','LICENSE','LICENSE.md','CITATION.cff','index.html']:
@@ -68,6 +71,8 @@ for w in json.loads((ROOT/'PUBLICATION_INDEX.json').read_text(encoding='utf-8'))
         try:s=f.read_text(encoding='utf-8-sig')
         except UnicodeError:continue
         if private.search(s):leaks.append(rel)
+        if f.suffix in ['.md','.tex','.html','.cff']:
+            check(not mojibake.search(s),key+' UTF-8 text '+rel)
         if f.suffix=='.lean':
             count['lean_files']+=1
             if re.search(r'\b(sorry|admit|axiom|native_decide)\b',lean_code(s)):escapes.append(rel)

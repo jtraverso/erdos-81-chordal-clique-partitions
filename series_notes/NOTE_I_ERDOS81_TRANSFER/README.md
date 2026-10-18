@@ -23,3 +23,7 @@ The separate Lean 4.35 project has its own endpoint and complete local-source au
 [Public validation evidence](02_validation/PUBLIC/README.md) and [supplementary exact-arithmetic checks](03_reproducibility/README.md) state their scope and bind the saved outputs. Written materials use [CC BY-NC 4.0](LICENSE); author-owned Lean/software uses Apache 2.0, with [full license](05_formalization/source/lean435/LICENSE), [notice](05_formalization/source/lean435/NOTICE) and [per-file ownership manifest](05_formalization/source/lean435/OWNERSHIP_AND_LICENSE.json). External dependencies retain their licenses.
 
 The source Paper IV is available in [the versioned Zenodo deposit](https://doi.org/10.5281/zenodo.23089131).
+
+## Deposited edition / Edición depositada
+
+[Zenodo collection / Colección Zenodo: 10.5281/zenodo.23458871](https://doi.org/10.5281/zenodo.23458871). The collection includes this manuscript and its formalization companion in both languages. La colección incluye este manuscrito y su complemento formal en ambos idiomas.

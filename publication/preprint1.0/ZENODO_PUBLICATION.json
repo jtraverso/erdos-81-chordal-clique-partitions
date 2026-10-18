@@ -1,0 +1,107 @@
+{
+  "status": "PUBLISHED_AND_PUBLICLY_VERIFIED",
+  "record_id": 23458871,
+  "doi": "10.5281/zenodo.23458871",
+  "concept_doi": "10.5281/zenodo.21273143",
+  "url": "https://zenodo.org/records/23458871",
+  "github_source_commit": "ceac3b4e9df8c4ab0d8688f68607504c4e7ec6b1",
+  "file_count": 24,
+  "files": [
+    {
+      "name": "CHORDAL_STABILITY_NOTE_v1.0_en.pdf",
+      "md5": "d31cc32bc7934a9e78fd564697aba08d"
+    },
+    {
+      "name": "CHORDAL_STABILITY_NOTE_v1.0_es.pdf",
+      "md5": "b12907fd8e54ef598889fa780e22f084"
+    },
+    {
+      "name": "ERDOS81_TRANSFER_NOTE_v1.0_en.pdf",
+      "md5": "39e24d8c1a32ee1a2d1514fc6147ec32"
+    },
+    {
+      "name": "ERDOS81_TRANSFER_NOTE_v1.0_es.pdf",
+      "md5": "0bd595749eafcbe9688f364fc834b9c4"
+    },
+    {
+      "name": "NOTE_II_FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "md5": "78ad261be9d34feacf16ef0bee95499a"
+    },
+    {
+      "name": "NOTE_II_FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "md5": "c6e8be3d44dadb773830bbcde28892da"
+    },
+    {
+      "name": "NOTE_I_FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "md5": "f52e873ad49a764330b21111ebfa2719"
+    },
+    {
+      "name": "NOTE_I_FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "md5": "66aecb9ec4db63c8eb96bc581af8f900"
+    },
+    {
+      "name": "PAPER_III_preprint_v1.5_en.pdf",
+      "md5": "415790db790cd1c3a821e5d0fb68d30b"
+    },
+    {
+      "name": "PAPER_III_preprint_v1.5_es.pdf",
+      "md5": "8bce74912854e721b6d59114c70e4fe8"
+    },
+    {
+      "name": "PAPER_II_preprint_v1.2_en.pdf",
+      "md5": "50638d0d97b1b5576622d3bc1d3ecd68"
+    },
+    {
+      "name": "PAPER_II_preprint_v1.2_es.pdf",
+      "md5": "9ea8114139012f8667d800eafef6ac4c"
+    },
+    {
+      "name": "PAPER_IV_preprint_v1.23_en.pdf",
+      "md5": "603a59bd8172bc92306ef6edfcc02575"
+    },
+    {
+      "name": "PAPER_IV_preprint_v1.23_es.pdf",
+      "md5": "9b17a246af879a8dd3076cac8be033ef"
+    },
+    {
+      "name": "PAPER_I_preprint_v1.3_en.pdf",
+      "md5": "8035b8429bd2915a680dc3d1fb62d232"
+    },
+    {
+      "name": "PAPER_I_preprint_v1.3_es.pdf",
+      "md5": "11ac7fd5a8980ee2ccae6400a09db32c"
+    },
+    {
+      "name": "PAPER_VI_FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "md5": "81f061e5fe11423049da080db8f1be15"
+    },
+    {
+      "name": "PAPER_VI_FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "md5": "2012373aba6a29498b0b42fe159dd8aa"
+    },
+    {
+      "name": "PAPER_VI_preprint_v1.0_en.pdf",
+      "md5": "6563de5d8565aa8688d5b2a5057b3d5a"
+    },
+    {
+      "name": "PAPER_VI_preprint_v1.0_es.pdf",
+      "md5": "f45c12ec3e12f45b29c4c180d90a6741"
+    },
+    {
+      "name": "PAPER_V_FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "md5": "53682a45dbc6aeeb0924dcc6413c3ee7"
+    },
+    {
+      "name": "PAPER_V_FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "md5": "06b3ffff033712ab6f62848b4185ff14"
+    },
+    {
+      "name": "PAPER_V_preprint_v1.0_en.pdf",
+      "md5": "d9723acca1e1d96b1336e02ff9577217"
+    },
+    {
+      "name": "PAPER_V_preprint_v1.0_es.pdf",
+      "md5": "666ef424ed1c441132eb64451bf532b9"
+    }
+  ]
+}

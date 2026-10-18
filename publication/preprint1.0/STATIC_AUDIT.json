@@ -9,6 +9,41 @@
   },
   "checks": [
     {
+      "check": "UTF-8 text README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "UTF-8 text CITATION.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "UTF-8 text CITATION.cff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "UTF-8 text CITATION.bib",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "UTF-8 text index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "UTF-8 text preprints/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "UTF-8 text series_notes/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "PAPER_V scaffold README.md",
       "passed": true,
       "detail": ""
@@ -155,6 +190,131 @@
     },
     {
       "check": "PAPER_V Apache source license",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text CITATION.cff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text LICENSE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 01_manuscript/PAPER_V_preprint_v1.0_en.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 01_manuscript/PAPER_V_preprint_v1.0_en.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 01_manuscript/PAPER_V_preprint_v1.0_es.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 01_manuscript/PAPER_V_preprint_v1.0_es.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 04_integrity/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 01_manuscript/figures_es/fig1_splitting_es.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 01_manuscript/figures_es/fig2_copy_es.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 01_manuscript/figures_es/fig3_clon2_oct_es.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 02_validation/PREPRINT_1_0/AUDIT_DISPOSITIONS.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 02_validation/PUBLICATION_1_0/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 03_reproducibility/counterexamples/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 03_reproducibility/SEAL/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 03_reproducibility/SEAL/current/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 03_reproducibility/SEAL/replay/REPLAY_REPORT.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 05_formalization/lean/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 05_formalization/lean/LICENSES/IV_LICENSE_NOTICE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V UTF-8 text 05_formalization/lean/LICENSES/NOTICE.md",
       "passed": true,
       "detail": ""
     },
@@ -334,6 +494,106 @@
       "detail": ""
     },
     {
+      "check": "PAPER_VI UTF-8 text CITATION.cff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text LICENSE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 01_manuscript/PAPER_VI_preprint_v1.0_en.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 01_manuscript/PAPER_VI_preprint_v1.0_en.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 01_manuscript/PAPER_VI_preprint_v1.0_es.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 01_manuscript/PAPER_VI_preprint_v1.0_es.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 03_reproducibility/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 04_integrity/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 02_validation/PUBLICATION_1_0/AUDIT2_DISPOSITIONS.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 02_validation/PUBLICATION_1_0/BIBLIOGRAPHIC_COMPARISON.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 02_validation/PUBLICATION_1_0/PDF_REPRODUCTION.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 02_validation/PUBLICATION_1_0/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 05_formalization/lean/NOTICE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI UTF-8 text 05_formalization/lean/REPRODUCE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "PAPER_VI no workstation paths",
       "passed": true,
       "detail": "[]"
@@ -509,6 +769,111 @@
       "detail": ""
     },
     {
+      "check": "NOTE_I UTF-8 text CITATION.cff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text LICENSE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 03_reproducibility/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 04_integrity/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 02_validation/PUBLIC/AUDIT_RESPONSE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 02_validation/PUBLIC/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 02_validation/PUBLICATION_1_0/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 05_formalization/source/AUTHORSHIP_NOTICE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 05_formalization/source/SOURCE_REPRODUCTION.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 05_formalization/source/LICENSES/IV_LICENSE_NOTICE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I UTF-8 text 05_formalization/source/LICENSES/NOTICE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "NOTE_I no workstation paths",
       "passed": true,
       "detail": "[]"
@@ -680,6 +1045,111 @@
     },
     {
       "check": "NOTE_II Apache source license",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text CITATION.cff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text LICENSE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 03_reproducibility/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 04_integrity/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 02_validation/PUBLIC/AUDIT_RESPONSE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 02_validation/PUBLIC/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 02_validation/PUBLICATION_1_0/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 05_formalization/source/AUTHORSHIP_NOTICE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 05_formalization/source/SOURCE_REPRODUCTION.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 05_formalization/source/LICENSES/NOTICE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II UTF-8 text 05_formalization/source/LICENSES/SERIES_LICENSE_NOTICE.md",
       "passed": true,
       "detail": ""
     },

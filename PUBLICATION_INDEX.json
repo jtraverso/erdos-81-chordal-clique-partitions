@@ -8,7 +8,8 @@
       "path": "preprints/PAPER_V",
       "title": "Colorability and Realizability Defects in Resource-Dominated Packing Relaxations",
       "main_stem": "PAPER_V_preprint_v1.0",
-      "companion_stem": "FORMALIZATION_COMPANION_v1.0"
+      "companion_stem": "FORMALIZATION_COMPANION_v1.0",
+      "collection_doi": "10.5281/zenodo.23458871"
     },
     {
       "work": "PAPER_VI",
@@ -16,7 +17,8 @@
       "path": "preprints/PAPER_VI",
       "title": "Optimal Clique Partitions under Local Perturbations",
       "main_stem": "PAPER_VI_preprint_v1.0",
-      "companion_stem": "FORMALIZATION_COMPANION_v1.0"
+      "companion_stem": "FORMALIZATION_COMPANION_v1.0",
+      "collection_doi": "10.5281/zenodo.23458871"
     },
     {
       "work": "NOTE_I",
@@ -24,7 +26,8 @@
       "path": "series_notes/NOTE_I_ERDOS81_TRANSFER",
       "title": "From realizability certificates to the Erdős 81 bound",
       "main_stem": "ERDOS81_TRANSFER_NOTE_v1.0",
-      "companion_stem": "FORMALIZATION_COMPANION_v1.0"
+      "companion_stem": "FORMALIZATION_COMPANION_v1.0",
+      "collection_doi": "10.5281/zenodo.23458871"
     },
     {
       "work": "NOTE_II",
@@ -32,7 +35,14 @@
       "path": "series_notes/NOTE_II_CHORDAL_STABILITY",
       "title": "Exact stability for nearly extremal chordal clique partitions",
       "main_stem": "CHORDAL_STABILITY_NOTE_v1.0",
-      "companion_stem": "FORMALIZATION_COMPANION_v1.0"
+      "companion_stem": "FORMALIZATION_COMPANION_v1.0",
+      "collection_doi": "10.5281/zenodo.23458871"
     }
-  ]
+  ],
+  "zenodo": {
+    "collection_doi": "10.5281/zenodo.23458871",
+    "concept_doi": "10.5281/zenodo.21273143",
+    "record_id": 23458871,
+    "files": 24
+  }
 }

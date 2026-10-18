@@ -32,3 +32,7 @@ El manuscrito es un preprint de autor. La revisión asistida por IA y los coment
 `05_formalization/`: source freeze, licenses and bilingual companion.
 
 Documents: CC BY-NC 4.0. Original author software in this release: Apache-2.0. Existing third-party notices and licenses remain applicable. See [LICENSE.md](LICENSE.md).
+
+## Deposited edition / Edición depositada
+
+[Zenodo collection / Colección Zenodo: 10.5281/zenodo.23458871](https://doi.org/10.5281/zenodo.23458871). The collection includes this manuscript and its formalization companion in both languages. La colección incluye este manuscrito y su complemento formal en ambos idiomas.

@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "public_commit": "ceac3b4e9df8c4ab0d8688f68607504c4e7ec6b1",
+  "pdfs": [
+    {
+      "path": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.pdf",
+      "sha256": "2a9fce5f7c83750daada99b906c142206b3e6b7c1bf88175d04b30db7d3f7a56",
+      "matches": true
+    },
+    {
+      "path": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "sha256": "139b86a12b73763628ebb1c9066fce34115020643e9703720316ff6dfcdded88",
+      "matches": true
+    },
+    {
+      "path": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.pdf",
+      "sha256": "edfbedd896e25cfbb6b87c55bc66b733ab2f416526857447724b8c2a20dfad7a",
+      "matches": true
+    },
+    {
+      "path": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "sha256": "80b4256d3b7b9a3ce42929371149bb40c2baf7f280da8b46e01a07aa05aa7f11",
+      "matches": true
+    },
+    {
+      "path": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.pdf",
+      "sha256": "b7e40eb47ce17efb22bba680fcf6bef98777a1802308819ff035398f48c3c740",
+      "matches": true
+    },
+    {
+      "path": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "sha256": "55e9828cc157b61e8f130ef7b65ec9261a1eb48fd2e0362337962e7a8b1ae47c",
+      "matches": true
+    },
+    {
+      "path": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.pdf",
+      "sha256": "a8349949005413de5f82bc5f7103ee9e3dfea2deaf8cecadbfc0c8e894379a45",
+      "matches": true
+    },
+    {
+      "path": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "sha256": "9cfa28610a438f9dcb16ab3ed2a191ce49042fb7d4fba7d9d74b95b3ceef7349",
+      "matches": true
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.pdf",
+      "sha256": "ee43e6fdc2c9d72c258af20a8e2b064dce015a65288c9dd76773bc0a54b2e919",
+      "matches": true
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "sha256": "585427c3ee7899d9fc9cc6a5d5fc68ccf8bfac8952a7c92d13ce6593a8120775",
+      "matches": true
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.pdf",
+      "sha256": "7ced575c385891ab8b4500152a72881ee27f58cfd2007eb86af88a591d135456",
+      "matches": true
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "sha256": "521956bf53a11edc21285d7b0ead9abc02e63d446a3476c66174b2d7caa794df",
+      "matches": true
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.pdf",
+      "sha256": "dc04832b7afc04ec8e81f1b351765e7a520dd0d483a67ad74e85e9828e7e2d4d",
+      "matches": true
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "sha256": "58dbce77cf9bf305e63360b7bfbbd53e7ad9c27c8337ca78d4d40f56aaa9c592",
+      "matches": true
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.pdf",
+      "sha256": "5925f0aadf9989e3199fdbd35f26bfeb5be74474d000507b48deff3a4db3fdf9",
+      "matches": true
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "sha256": "ca68c3c0b993efae5b8c53602becb11d09d54c414bf0a38f5942e69271de48dd",
+      "matches": true
+    }
+  ]
+}

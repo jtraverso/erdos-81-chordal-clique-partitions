@@ -4,31 +4,31 @@
   "pages": [
     {
       "path": "index.html",
-      "sha256": "7699d74568d6275b525a76bb0ab979fb46430dfd2807cd3aba091f734dc6815b",
+      "sha256": "3563115ad8fcb13966fc198134bc4b277188bd41ed4f8c2f93aeb9b12fe4528d",
       "structure_present": true,
       "broken_local_links": []
     },
     {
       "path": "preprints/PAPER_V/index.html",
-      "sha256": "875f1a493dd53260cff982344a2d55f0947eb0bf6b3972725ec9d243bf8c2766",
+      "sha256": "99e0a71210ef732c65b6b1e6071b885c508166c27b065b4b70509eae97c9d955",
       "structure_present": true,
       "broken_local_links": []
     },
     {
       "path": "preprints/PAPER_VI/index.html",
-      "sha256": "69cd78dbc837b53a7dfbe9daaf343735a686f9d586ec294daf0aa04038113dc7",
+      "sha256": "952fb1d85bd3edf834d4c3d83c3333039dcd75e55a4336a48a2cc99a384f9313",
       "structure_present": true,
       "broken_local_links": []
     },
     {
       "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
-      "sha256": "38b5df55ece5240018fcc4f5d9122067727f26cbb8b61df21ac7d44e4794b8a1",
+      "sha256": "52aa3c35e73adf504355084f8a1ca1fb3f9dad6083d32b2d384ba185c5ff4242",
       "structure_present": true,
       "broken_local_links": []
     },
     {
       "path": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
-      "sha256": "248b123aecb9782d3653ec769ff38930927e0d1fdc34f3fc611dce27ce320476",
+      "sha256": "70c67d3b3ee7193733942ba9bca763ea09e7ac16aa32212d59912d189c71f0c2",
       "structure_present": true,
       "broken_local_links": []
     }
