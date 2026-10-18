@@ -1,0 +1,49 @@
+{
+  "status": "CHECKED_FORMAL_SOURCE_FREEZE",
+  "archive": "05_formalization/formal_sources/PAPER_VI_Preprint1.0_LEAN435_FORMAL_SOURCE_FREEZE.zip",
+  "sha256": "c5c32a9d9315350d8e2683f0c58389824116bd1844f58f7b09ad78d7fe3b61bb",
+  "entries": 100,
+  "manifest_sha256": "dadae8b1162b0c3cc17df10bc2e4063467fcecf8fdce528aceb688082ad1bc21",
+  "validation": {
+    "status": "CHECKED_FORMAL_SOURCE_FREEZE",
+    "version": "Preprint 1.0",
+    "canonical_root": "PaperVIRelease",
+    "lean": "4.35.0",
+    "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+    "build": {
+      "command": "lake build PaperVIRelease",
+      "exit_code": 0,
+      "log": "BUILD_PUBLIC_1_0.portable.log",
+      "cache_used": true
+    },
+    "endpoint_check": {
+      "command": "lake env lean -j1 -s32768 EndpointGate.lean",
+      "exit_code": 0,
+      "log": "ENDPOINTS_PUBLIC_1_0.portable.log",
+      "queries": 32
+    },
+    "full_project_audit": {
+      "command": "lake env lean -j1 -s32768 FreezeFullAudit.lean",
+      "exit_code": 0,
+      "log": "FULL_AUDIT_PUBLIC_1_0.portable.log",
+      "local_declarations": 1836,
+      "local_modules": 79,
+      "visited_declarations": 3421,
+      "nonstandard_axioms": 0,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "active_escape_scan": {
+      "hits": [],
+      "comments_strings_masked": true
+    },
+    "root_sha256": "05de8cc26e4077d04e74d9a15c1373e40f8c66ed32590df90c617509bf44acee",
+    "source_closure_sha256": "1c121b7b8bf561acde97166ee7fe7c16b68d7dba771d601a0705633b396227a3",
+    "changes": "Added Apache-2.0 copyright/SPDX comments and package version 1.0.0; active Lean source identical to preserved baseline.",
+    "licenses": "Author-written code Apache-2.0; existing notices retained.",
+    "no_priority_or_peer_review_assertion": true
+  }
+}

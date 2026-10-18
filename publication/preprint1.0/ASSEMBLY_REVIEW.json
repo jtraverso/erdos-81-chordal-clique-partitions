@@ -1,0 +1,1694 @@
+{
+  "scope": "Static internal links, source-level presentation pages, document/software licenses and existing per-work manifests. No browser, PDF rendering, Lean or experiment builds.",
+  "checked_files": [
+    {
+      "path": "index.html",
+      "sha256": "7699d74568d6275b525a76bb0ab979fb46430dfd2807cd3aba091f734dc6815b"
+    },
+    {
+      "path": "LICENSE.md",
+      "sha256": "1d3a800488cc5d2fad94220a2078a08ca5026657a8a69fd6c99d409108f2042c"
+    },
+    {
+      "path": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.md",
+      "sha256": "b94189f78c5291af48625cb2aa9bdbd8b5e48199acb9ba06e476246b2f6183c2"
+    },
+    {
+      "path": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.tex",
+      "sha256": "bb225d1774e55929510175e4d246c1db1e84c052d9cbe991de2b0440aed93a97"
+    },
+    {
+      "path": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.md",
+      "sha256": "bbc913b78670f9425dfd01f30db32d7dc8988945cb3e4feee2ca74ef3f235a86"
+    },
+    {
+      "path": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.tex",
+      "sha256": "8416343ce0b9d23585568c435f34735a524c1497818306c53943566bab7d756d"
+    },
+    {
+      "path": "preprints/PAPER_V/02_validation/PUBLICATION_1_0/README.md",
+      "sha256": "71aae7a1e13a52e4acbb670ddeb3cec4cf2cec48dab9f6c84ff00a2d9ca334b5"
+    },
+    {
+      "path": "preprints/PAPER_V/03_reproducibility/counterexamples/README.md",
+      "sha256": "68b05cbd5ac4570e4a66118e57edeb97ff9cb8e76235c43802140508497d9005"
+    },
+    {
+      "path": "preprints/PAPER_V/03_reproducibility/SEAL/current/README.md",
+      "sha256": "545792f7f9f1683b6051321cc748c7b5a228b39e6c97b21a837cae93520198e1"
+    },
+    {
+      "path": "preprints/PAPER_V/03_reproducibility/SEAL/README.md",
+      "sha256": "12d5f045c847cf59ca2cf5ddbd5fb8fe37dba496c01c04c01183d75d684602f6"
+    },
+    {
+      "path": "preprints/PAPER_V/04_integrity/README.md",
+      "sha256": "94230084ef5edb3f30e0064fbd644db2e599820542d73b6a7fe089b1b26fbda4"
+    },
+    {
+      "path": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+      "sha256": "eafc4a4059e3a9cbba288fd570f325253d0dace3db6bf54f1572e15add231a32"
+    },
+    {
+      "path": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+      "sha256": "630f5c8d84b618e1d8e8b892aa9d6a71a0bc228cd4bbe339c3469fff409814a9"
+    },
+    {
+      "path": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+      "sha256": "e4270118ebee571e296619cb68338080a9f86bef39b8fd74a66d4a639759b60d"
+    },
+    {
+      "path": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+      "sha256": "a1a5bed54a10576331429fed124038687eea0fdd4fa2ea23f2d77bbbee386592"
+    },
+    {
+      "path": "preprints/PAPER_V/05_formalization/lean/README.md",
+      "sha256": "e5db0a04291984a5da54f25061b8753ffa8d8a3f0e67a2ffa633bee2b097b3b7"
+    },
+    {
+      "path": "preprints/PAPER_V/index.html",
+      "sha256": "875f1a493dd53260cff982344a2d55f0947eb0bf6b3972725ec9d243bf8c2766"
+    },
+    {
+      "path": "preprints/PAPER_V/LICENSE.md",
+      "sha256": "39665081ff6f747a75672bee448f51a97c9f929503335910ff44eb6e2e59909b"
+    },
+    {
+      "path": "preprints/PAPER_V/README.md",
+      "sha256": "750f51a185d3404cc8747898243b3de31db4912186fb116ac2c9ee2c5a4a7bf6"
+    },
+    {
+      "path": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.md",
+      "sha256": "86305a1141f80ee47ff9875015c62e61c0b0919e8aabcfc91c1db3c5f98f83b4"
+    },
+    {
+      "path": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.tex",
+      "sha256": "d602858df9a9713bf728a01f6d7ff7c641b4d47d678dcff1c2dcf2afca6b0335"
+    },
+    {
+      "path": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.md",
+      "sha256": "8f5e023ef9b14be0844d2b6435319c1df06715b5e34cad639be44d379db097f1"
+    },
+    {
+      "path": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.tex",
+      "sha256": "053fbf57b0d66f0df2c8ee240aece2420888c903452544a22d3a3b1c892c483a"
+    },
+    {
+      "path": "preprints/PAPER_VI/02_validation/PUBLICATION_1_0/README.md",
+      "sha256": "71aae7a1e13a52e4acbb670ddeb3cec4cf2cec48dab9f6c84ff00a2d9ca334b5"
+    },
+    {
+      "path": "preprints/PAPER_VI/03_reproducibility/README.md",
+      "sha256": "d3fb011e515c485672352d9b777dadc2e4a72ebb925547688112b3281e323e82"
+    },
+    {
+      "path": "preprints/PAPER_VI/04_integrity/README.md",
+      "sha256": "94230084ef5edb3f30e0064fbd644db2e599820542d73b6a7fe089b1b26fbda4"
+    },
+    {
+      "path": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+      "sha256": "42602f0b230d9a27690005577db4f3461085e3a0cd884851421149ff51013103"
+    },
+    {
+      "path": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+      "sha256": "bedd1a9a1f6444df805204d4bf437972438ef1b655dd28608b2e3f06297add34"
+    },
+    {
+      "path": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+      "sha256": "eb3412de434639f207f5a8156d3714ea5a81304b8f16967a9d933f121c061c13"
+    },
+    {
+      "path": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+      "sha256": "0ef4fa3870b7a804e544db56eb911380cfed40b1eb382240b4a584b46fa10e1a"
+    },
+    {
+      "path": "preprints/PAPER_VI/index.html",
+      "sha256": "69cd78dbc837b53a7dfbe9daaf343735a686f9d586ec294daf0aa04038113dc7"
+    },
+    {
+      "path": "preprints/PAPER_VI/LICENSE.md",
+      "sha256": "39665081ff6f747a75672bee448f51a97c9f929503335910ff44eb6e2e59909b"
+    },
+    {
+      "path": "preprints/PAPER_VI/README.md",
+      "sha256": "8c348cb1210e0240def144edb30a75bf47f658a9be0238a9ebb3bdf26e2b94b0"
+    },
+    {
+      "path": "preprints/README.md",
+      "sha256": "e07e1ea40ad0268604e8b57938e177ca21ae09ba7d60fc6170fb41e331e70106"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b12a0400530c19b4462af700c6edc34eb2594390ce71b8f4489c5b34e758976e"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.md",
+      "sha256": "10e1d7c750c55ff4edafae12a622beab0902fad3c5a8e740c0991ea62910f77c"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.tex",
+      "sha256": "46d71944182851078591d42e546727f1fc8fd43cb54efd8dd252637bb1d8cd67"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.md",
+      "sha256": "e30d8196a11d3f6a2060a9105d92de3ee7ff7019b2027b9b463112b3713849f4"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.tex",
+      "sha256": "69b21bf2f28819ddaf2f500136902f425b540e4ac7f0f4b3ce405a2ebf687449"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/02_validation/PUBLIC/README.md",
+      "sha256": "0964539f7d1dfd1bc31721e4a433e1d9444489962f5a08bf238409783fdfb100"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/02_validation/PUBLICATION_1_0/README.md",
+      "sha256": "71aae7a1e13a52e4acbb670ddeb3cec4cf2cec48dab9f6c84ff00a2d9ca334b5"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/03_reproducibility/README.md",
+      "sha256": "6885fd7e221a4714be6e84c13a8d76f58236f76ebdc8137ddc7d1277622bf5a3"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/04_integrity/README.md",
+      "sha256": "94230084ef5edb3f30e0064fbd644db2e599820542d73b6a7fe089b1b26fbda4"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+      "sha256": "527c349684e203163c23bcf65c9838a7b99f57689ee64bbce033e543bd9a6792"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+      "sha256": "7e085da69d8ec8a5d2899edcdeb4b9abb5d4a2269fe24122edf43167e5779866"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+      "sha256": "1f8929acb34c3b0023423291a57fcba87e3bfb3d0b35d5ea0947e73422985400"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+      "sha256": "c0d2aef826a6bdffc61cb16b7b3bebe3e48d4b99a64822b18d2633fa91b1fa81"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "sha256": "38b5df55ece5240018fcc4f5d9122067727f26cbb8b61df21ac7d44e4794b8a1"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/LICENSE.md",
+      "sha256": "f3acb676c04da240dea480ac307552fb908eeee9f0f46ef33a220bcdf35be7ed"
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "sha256": "3a206492590972bdb6fa8bf8b4d9bcfddf06afed623cf8c3b4db78cfe6e0efad"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.md",
+      "sha256": "5bc47e473946f3946014c4b5d578a44029e6ca53c55bed60554934aab063867b"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.tex",
+      "sha256": "e90942e6c4e8e3dcb72686f8c4dce28d4ebb5d52becfc94f9a2b1401859abf93"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.md",
+      "sha256": "b65bad59e13ece51571814c92dd22e3868415cd2e70db0bc1b7a7691def6169e"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.tex",
+      "sha256": "f0b5029066312b12b942c2e3fd858b95eee1a0f25a1facc8484621ecfd79a456"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/02_validation/PUBLIC/README.md",
+      "sha256": "0964539f7d1dfd1bc31721e4a433e1d9444489962f5a08bf238409783fdfb100"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/02_validation/PUBLICATION_1_0/README.md",
+      "sha256": "71aae7a1e13a52e4acbb670ddeb3cec4cf2cec48dab9f6c84ff00a2d9ca334b5"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/03_reproducibility/README.md",
+      "sha256": "6885fd7e221a4714be6e84c13a8d76f58236f76ebdc8137ddc7d1277622bf5a3"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/04_integrity/README.md",
+      "sha256": "94230084ef5edb3f30e0064fbd644db2e599820542d73b6a7fe089b1b26fbda4"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+      "sha256": "320bce1490dfc87c3eba2c5a5ca262d3d8dc0d44c8c6e68032ec2fba460ba05c"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+      "sha256": "5a8bcd2edfebbe750bde1a8723e2799cab5a22d39bcbdaca89a8c466e7a38501"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+      "sha256": "accf344b6849eca5f1199a6d03ac7e7c42501ef0c1c545032b726167ec2a70cd"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+      "sha256": "fd87f57495493031f86c3b601658c3b4db1c723044ae7832b0bf8ba161a54e28"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "sha256": "248b123aecb9782d3653ec769ff38930927e0d1fdc34f3fc611dce27ce320476"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/LICENSE.md",
+      "sha256": "f3acb676c04da240dea480ac307552fb908eeee9f0f46ef33a220bcdf35be7ed"
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "sha256": "953dc9617be62bda37127037d621f4bcbf5c587580640ae26f3bb257f5106f69"
+    },
+    {
+      "path": "series_notes/README.md",
+      "sha256": "ddbc8fefb291e0938b4dfc03663a26f2020bca4516a5d8e81f95eb7c04c10762"
+    }
+  ],
+  "links": [
+    {
+      "source": "index.html",
+      "link": "CITATION.md",
+      "exists": true,
+      "resolved": "CITATION.md"
+    },
+    {
+      "source": "index.html",
+      "link": "LICENSE.md",
+      "exists": true,
+      "resolved": "LICENSE.md"
+    },
+    {
+      "source": "index.html",
+      "link": "preprints/PAPER_I/PaperI_explained_4_levels.html",
+      "exists": true,
+      "resolved": "preprints/PAPER_I/PaperI_explained_4_levels.html"
+    },
+    {
+      "source": "index.html",
+      "link": "preprints/PAPER_I/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_I/README.md"
+    },
+    {
+      "source": "index.html",
+      "link": "preprints/PAPER_II/PaperII_explained_4_levels.html",
+      "exists": true,
+      "resolved": "preprints/PAPER_II/PaperII_explained_4_levels.html"
+    },
+    {
+      "source": "index.html",
+      "link": "preprints/PAPER_II/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_II/README.md"
+    },
+    {
+      "source": "index.html",
+      "link": "preprints/PAPER_III/PaperIII_explained_4_levels.html",
+      "exists": true,
+      "resolved": "preprints/PAPER_III/PaperIII_explained_4_levels.html"
+    },
+    {
+      "source": "index.html",
+      "link": "preprints/PAPER_III/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_III/README.md"
+    },
+    {
+      "source": "index.html",
+      "link": "preprints/PAPER_IV/PaperIV_explained_4_levels.html",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/PaperIV_explained_4_levels.html"
+    },
+    {
+      "source": "index.html",
+      "link": "preprints/PAPER_IV/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/README.md"
+    },
+    {
+      "source": "index.html",
+      "link": "preprints/PAPER_V/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/README.md"
+    },
+    {
+      "source": "index.html",
+      "link": "preprints/PAPER_V/index.html",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/index.html"
+    },
+    {
+      "source": "index.html",
+      "link": "preprints/PAPER_VI/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/README.md"
+    },
+    {
+      "source": "index.html",
+      "link": "preprints/PAPER_VI/index.html",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/index.html"
+    },
+    {
+      "source": "index.html",
+      "link": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md"
+    },
+    {
+      "source": "index.html",
+      "link": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html"
+    },
+    {
+      "source": "index.html",
+      "link": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md"
+    },
+    {
+      "source": "index.html",
+      "link": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html"
+    },
+    {
+      "source": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.md",
+      "link": "figures/fig1_splitting_en.png",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/figures/fig1_splitting_en.png"
+    },
+    {
+      "source": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.md",
+      "link": "figures/fig2_copy_en.png",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/figures/fig2_copy_en.png"
+    },
+    {
+      "source": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.md",
+      "link": "figures/fig3_clon2_oct_en.png",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/figures/fig3_clon2_oct_en.png"
+    },
+    {
+      "source": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V/05_formalization",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.tex",
+      "link": "figures/fig1_splitting_en.png",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/figures/fig1_splitting_en.png"
+    },
+    {
+      "source": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.tex",
+      "link": "figures/fig2_copy_en.png",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/figures/fig2_copy_en.png"
+    },
+    {
+      "source": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.tex",
+      "link": "figures/fig3_clon2_oct_en.png",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/figures/fig3_clon2_oct_en.png"
+    },
+    {
+      "source": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V/05_formalization",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.md",
+      "link": "figures_es/fig1_splitting_es.svg",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/figures_es/fig1_splitting_es.svg"
+    },
+    {
+      "source": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.md",
+      "link": "figures_es/fig2_copy_es.svg",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/figures_es/fig2_copy_es.svg"
+    },
+    {
+      "source": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.md",
+      "link": "figures_es/fig3_clon2_oct_es.svg",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/figures_es/fig3_clon2_oct_es.svg"
+    },
+    {
+      "source": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V/05_formalization",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V/05_formalization",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_V/02_validation/PUBLICATION_1_0/README.md",
+      "link": "../../../../publication/preprint1.0/REVIEW_RESPONSE.md",
+      "exists": true,
+      "resolved": "publication/preprint1.0/REVIEW_RESPONSE.md"
+    },
+    {
+      "source": "preprints/PAPER_V/03_reproducibility/SEAL/current/README.md",
+      "link": "../README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/03_reproducibility/SEAL/README.md"
+    },
+    {
+      "source": "preprints/PAPER_V/03_reproducibility/SEAL/README.md",
+      "link": "replay/CURRENT_RESULTS.csv",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/03_reproducibility/SEAL/replay/CURRENT_RESULTS.csv"
+    },
+    {
+      "source": "preprints/PAPER_V/03_reproducibility/SEAL/README.md",
+      "link": "replay/REPLAY_REPORT.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/03_reproducibility/SEAL/replay/REPLAY_REPORT.md"
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "link": "../../index.html",
+      "exists": true,
+      "resolved": "index.html"
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "link": "01_manuscript/PAPER_V_preprint_v1.0_en.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.md"
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "link": "01_manuscript/PAPER_V_preprint_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.pdf"
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "link": "01_manuscript/PAPER_V_preprint_v1.0_en.tex",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.tex"
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "link": "01_manuscript/PAPER_V_preprint_v1.0_es.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.md"
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "link": "01_manuscript/PAPER_V_preprint_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.pdf"
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "link": "01_manuscript/PAPER_V_preprint_v1.0_es.tex",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.tex"
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf"
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "link": "LICENSE.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/LICENSE.md"
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "link": "README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/README.md"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "01_manuscript/PAPER_V_preprint_v1.0_en.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.md"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "01_manuscript/PAPER_V_preprint_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.pdf"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "01_manuscript/PAPER_V_preprint_v1.0_en.tex",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.tex"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "01_manuscript/PAPER_V_preprint_v1.0_es.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.md"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "01_manuscript/PAPER_V_preprint_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.pdf"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "01_manuscript/PAPER_V_preprint_v1.0_es.tex",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.tex"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "02_validation/PUBLICATION_1_0/",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/02_validation/PUBLICATION_1_0"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "03_reproducibility/",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/03_reproducibility"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "04_integrity/",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/04_integrity"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "05_formalization/",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "LICENSE.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/LICENSE.md"
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "link": "index.html",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/index.html"
+    },
+    {
+      "source": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V",
+      "exists": true,
+      "resolved": "preprints/PAPER_V"
+    },
+    {
+      "source": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI/05_formalization",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V",
+      "exists": true,
+      "resolved": "preprints/PAPER_V"
+    },
+    {
+      "source": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI/05_formalization",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V",
+      "exists": true,
+      "resolved": "preprints/PAPER_V"
+    },
+    {
+      "source": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI/05_formalization",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V",
+      "exists": true,
+      "resolved": "preprints/PAPER_V"
+    },
+    {
+      "source": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI/05_formalization",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_VI/02_validation/PUBLICATION_1_0/README.md",
+      "link": "../../../../publication/preprint1.0/REVIEW_RESPONSE.md",
+      "exists": true,
+      "resolved": "publication/preprint1.0/REVIEW_RESPONSE.md"
+    },
+    {
+      "source": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI/05_formalization",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI/05_formalization",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI/05_formalization",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI/05_formalization",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_VI/index.html",
+      "link": "../../index.html",
+      "exists": true,
+      "resolved": "index.html"
+    },
+    {
+      "source": "preprints/PAPER_VI/index.html",
+      "link": "01_manuscript/PAPER_VI_preprint_v1.0_en.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.md"
+    },
+    {
+      "source": "preprints/PAPER_VI/index.html",
+      "link": "01_manuscript/PAPER_VI_preprint_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.pdf"
+    },
+    {
+      "source": "preprints/PAPER_VI/index.html",
+      "link": "01_manuscript/PAPER_VI_preprint_v1.0_en.tex",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.tex"
+    },
+    {
+      "source": "preprints/PAPER_VI/index.html",
+      "link": "01_manuscript/PAPER_VI_preprint_v1.0_es.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.md"
+    },
+    {
+      "source": "preprints/PAPER_VI/index.html",
+      "link": "01_manuscript/PAPER_VI_preprint_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.pdf"
+    },
+    {
+      "source": "preprints/PAPER_VI/index.html",
+      "link": "01_manuscript/PAPER_VI_preprint_v1.0_es.tex",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.tex"
+    },
+    {
+      "source": "preprints/PAPER_VI/index.html",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    {
+      "source": "preprints/PAPER_VI/index.html",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf"
+    },
+    {
+      "source": "preprints/PAPER_VI/index.html",
+      "link": "LICENSE.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/LICENSE.md"
+    },
+    {
+      "source": "preprints/PAPER_VI/index.html",
+      "link": "README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/README.md"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "01_manuscript/PAPER_VI_preprint_v1.0_en.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.md"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "01_manuscript/PAPER_VI_preprint_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.pdf"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "01_manuscript/PAPER_VI_preprint_v1.0_en.tex",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.tex"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "01_manuscript/PAPER_VI_preprint_v1.0_es.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.md"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "01_manuscript/PAPER_VI_preprint_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.pdf"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "01_manuscript/PAPER_VI_preprint_v1.0_es.tex",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.tex"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "02_validation/PUBLICATION_1_0/",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/02_validation/PUBLICATION_1_0"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "03_reproducibility/",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/03_reproducibility"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "04_integrity/",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/04_integrity"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "05_formalization/",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/05_formalization"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "LICENSE.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/LICENSE.md"
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "link": "index.html",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/index.html"
+    },
+    {
+      "source": "preprints/README.md",
+      "link": "../index.html",
+      "exists": true,
+      "resolved": "index.html"
+    },
+    {
+      "source": "preprints/README.md",
+      "link": "../series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md"
+    },
+    {
+      "source": "preprints/README.md",
+      "link": "../series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md"
+    },
+    {
+      "source": "preprints/README.md",
+      "link": "PAPER_I/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_I/README.md"
+    },
+    {
+      "source": "preprints/README.md",
+      "link": "PAPER_II/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_II/README.md"
+    },
+    {
+      "source": "preprints/README.md",
+      "link": "PAPER_III/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_III/README.md"
+    },
+    {
+      "source": "preprints/README.md",
+      "link": "PAPER_IV/CHANGELOG_v1.23.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/CHANGELOG_v1.23.md"
+    },
+    {
+      "source": "preprints/README.md",
+      "link": "PAPER_IV/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/README.md"
+    },
+    {
+      "source": "preprints/README.md",
+      "link": "PAPER_IV/superseded/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/superseded/README.md"
+    },
+    {
+      "source": "preprints/README.md",
+      "link": "PAPER_V/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/README.md"
+    },
+    {
+      "source": "preprints/README.md",
+      "link": "PAPER_VI/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/README.md"
+    },
+    {
+      "source": "README.md",
+      "link": "CITATION.bib",
+      "exists": true,
+      "resolved": "CITATION.bib"
+    },
+    {
+      "source": "README.md",
+      "link": "CITATION.cff",
+      "exists": true,
+      "resolved": "CITATION.cff"
+    },
+    {
+      "source": "README.md",
+      "link": "CITATION.md",
+      "exists": true,
+      "resolved": "CITATION.md"
+    },
+    {
+      "source": "README.md",
+      "link": "LEAN_SOURCE_APACHE_2_0_GRANT.md",
+      "exists": true,
+      "resolved": "LEAN_SOURCE_APACHE_2_0_GRANT.md"
+    },
+    {
+      "source": "README.md",
+      "link": "LICENSE.md",
+      "exists": true,
+      "resolved": "LICENSE.md"
+    },
+    {
+      "source": "README.md",
+      "link": "PUBLICATION_INDEX.json",
+      "exists": true,
+      "resolved": "PUBLICATION_INDEX.json"
+    },
+    {
+      "source": "README.md",
+      "link": "index.html",
+      "exists": true,
+      "resolved": "index.html"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_I/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_I/README.md"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_II/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_II/README.md"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_III/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_III/README.md"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_en.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_en.pdf"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_es.pdf",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_es.pdf"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_IV/02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.md"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_IV/02_validation/translations/v1.22_r4/FINAL_CONSOLIDATED_AUDIT_REPORT_en.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/02_validation/translations/v1.22_r4/FINAL_CONSOLIDATED_AUDIT_REPORT_en.md"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_IV/04_integrity/PUBLICATION_CHECKS.json",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/04_integrity/PUBLICATION_CHECKS.json"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_IV/05_formalization/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/05_formalization/README.md"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_IV/CHANGELOG_v1.23.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/CHANGELOG_v1.23.md"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_IV/PaperIV_explained_4_levels.html",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/PaperIV_explained_4_levels.html"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_IV/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/README.md"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_IV/superseded/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_IV/superseded/README.md"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_V/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_V/README.md"
+    },
+    {
+      "source": "README.md",
+      "link": "preprints/PAPER_VI/README.md",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI/README.md"
+    },
+    {
+      "source": "README.md",
+      "link": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md"
+    },
+    {
+      "source": "README.md",
+      "link": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V",
+      "exists": true,
+      "resolved": "preprints/PAPER_V"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V",
+      "exists": true,
+      "resolved": "preprints/PAPER_V"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V",
+      "exists": true,
+      "resolved": "preprints/PAPER_V"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V",
+      "exists": true,
+      "resolved": "preprints/PAPER_V"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/02_validation/PUBLICATION_1_0/README.md",
+      "link": "../../../../publication/preprint1.0/REVIEW_RESPONSE.md",
+      "exists": true,
+      "resolved": "publication/preprint1.0/REVIEW_RESPONSE.md"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "link": "../../index.html",
+      "exists": true,
+      "resolved": "index.html"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "link": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.md"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "link": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "link": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.tex",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.tex"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "link": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.md"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "link": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "link": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.tex",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.tex"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "link": "LICENSE.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/LICENSE.md"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "link": "README.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.md"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.tex",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.tex"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.md"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.tex",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.tex"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "02_validation/PUBLIC/README.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/02_validation/PUBLIC/README.md"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "03_reproducibility/README.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/03_reproducibility/README.md"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "05_formalization/formal_sources/NOTE_I_LEAN435_FINAL_SOURCE_v1.0.zip",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/formal_sources/NOTE_I_LEAN435_FINAL_SOURCE_v1.0.zip"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "05_formalization/source/FINAL_FORMAL_VALIDATION.json",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/source/FINAL_FORMAL_VALIDATION.json"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "05_formalization/source/SOURCE_REPRODUCTION.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/source/SOURCE_REPRODUCTION.md"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "05_formalization/source/lean435/LICENSE",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/source/lean435/LICENSE"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "05_formalization/source/lean435/NOTICE",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/source/lean435/NOTICE"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "05_formalization/source/lean435/OWNERSHIP_AND_LICENSE.json",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/source/lean435/OWNERSHIP_AND_LICENSE.json"
+    },
+    {
+      "source": "series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "link": "LICENSE",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER/LICENSE"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_I_ERDOS81_TRANSFER",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_I_ERDOS81_TRANSFER",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.md",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_I_ERDOS81_TRANSFER",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI",
+      "exists": true,
+      "resolved": "preprints/PAPER_VI"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.tex",
+      "link": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_I_ERDOS81_TRANSFER",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/02_validation/PUBLICATION_1_0/README.md",
+      "link": "../../../../publication/preprint1.0/REVIEW_RESPONSE.md",
+      "exists": true,
+      "resolved": "publication/preprint1.0/REVIEW_RESPONSE.md"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "link": "../../index.html",
+      "exists": true,
+      "resolved": "index.html"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "link": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.md"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "link": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "link": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.tex",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.tex"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "link": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.md"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "link": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "link": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.tex",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.tex"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "link": "LICENSE.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/LICENSE.md"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "link": "README.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.md"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.tex",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.tex"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.md"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.tex",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.tex"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "02_validation/PUBLIC/README.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/02_validation/PUBLIC/README.md"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "03_reproducibility/README.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/03_reproducibility/README.md"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "05_formalization/formal_sources/NOTE_II_LEAN435_FINAL_SOURCE_v1.0.zip",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/formal_sources/NOTE_II_LEAN435_FINAL_SOURCE_v1.0.zip"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "05_formalization/source/FINAL_FORMAL_VALIDATION.json",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/source/FINAL_FORMAL_VALIDATION.json"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "05_formalization/source/SOURCE_REPRODUCTION.md",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/source/SOURCE_REPRODUCTION.md"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "05_formalization/source/lean435/LICENSE",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/source/lean435/LICENSE"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "05_formalization/source/lean435/NOTICE",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/source/lean435/NOTICE"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "05_formalization/source/lean435/OWNERSHIP_AND_LICENSE.json",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/source/lean435/OWNERSHIP_AND_LICENSE.json"
+    },
+    {
+      "source": "series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "link": "LICENSE",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY/LICENSE"
+    },
+    {
+      "source": "series_notes/README.md",
+      "link": "NOTE_II_CHORDAL_STABILITY/",
+      "exists": true,
+      "resolved": "series_notes/NOTE_II_CHORDAL_STABILITY"
+    },
+    {
+      "source": "series_notes/README.md",
+      "link": "NOTE_I_ERDOS81_TRANSFER/",
+      "exists": true,
+      "resolved": "series_notes/NOTE_I_ERDOS81_TRANSFER"
+    }
+  ],
+  "missing_links": [],
+  "licenses": [
+    {
+      "work": "preprints/PAPER_V",
+      "document_license_exists": true,
+      "document_license_text": true,
+      "software_grant": true,
+      "full_apache_paths": [
+        "preprints/PAPER_V/05_formalization/lean/LICENSE"
+      ],
+      "formal_sources_pending": false,
+      "notice": "preprints/PAPER_V/05_formalization/lean/LICENSES/NOTICE.md"
+    },
+    {
+      "work": "preprints/PAPER_VI",
+      "document_license_exists": true,
+      "document_license_text": true,
+      "software_grant": true,
+      "full_apache_paths": [
+        "preprints/PAPER_VI/05_formalization/lean/LICENSE"
+      ],
+      "formal_sources_pending": false
+    },
+    {
+      "work": "series_notes/NOTE_I_ERDOS81_TRANSFER",
+      "document_license_exists": true,
+      "document_license_text": true,
+      "software_grant": true,
+      "full_apache_paths": [
+        "series_notes/NOTE_I_ERDOS81_TRANSFER/05_formalization/source/lean435/LICENSE"
+      ],
+      "formal_sources_pending": false,
+      "manual_interpretation": "Full Creative Commons Attribution-NonCommercial 4.0 name and Apache 2.0 grant read; notice in lean435 covers enumerated author-owned inherited sources."
+    },
+    {
+      "work": "series_notes/NOTE_II_CHORDAL_STABILITY",
+      "document_license_exists": true,
+      "document_license_text": true,
+      "software_grant": true,
+      "full_apache_paths": [
+        "series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization/source/lean435/LICENSE"
+      ],
+      "formal_sources_pending": false,
+      "manual_interpretation": "Full Creative Commons Attribution-NonCommercial 4.0 name and Apache 2.0 grant read; notice in lean435 covers enumerated author-owned inherited sources."
+    }
+  ],
+  "status": "PASS_STATIC_LINKS_LICENSES_COMPANION_DELTA",
+  "manifest_scope": "Previous snapshot retained for history only; final regenerated manifests intentionally not validated in this read-only step.",
+  "integrity_manifests_previous_snapshot": [
+    {
+      "work": "preprints/PAPER_V",
+      "exists": true,
+      "entries": 338,
+      "failed": []
+    },
+    {
+      "work": "preprints/PAPER_VI",
+      "exists": true,
+      "entries": 299,
+      "failed": []
+    },
+    {
+      "work": "series_notes/NOTE_I_ERDOS81_TRANSFER",
+      "exists": true,
+      "entries": 424,
+      "failed": []
+    },
+    {
+      "work": "series_notes/NOTE_II_CHORDAL_STABILITY",
+      "exists": true,
+      "entries": 441,
+      "failed": []
+    }
+  ],
+  "companion_v_delta": [
+    {
+      "file": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+      "current_sha256": "eafc4a4059e3a9cbba288fd570f325253d0dace3db6bf54f1572e15add231a32",
+      "previous_review_sha256": "b75f46f4c2e08ba887b24d9d3b1d61b6d52408a6473804bea299df090b376994",
+      "reversal_sha256": "b75f46f4c2e08ba887b24d9d3b1d61b6d52408a6473804bea299df090b376994",
+      "reversal_crlf_sha256": null,
+      "exact_previous_bytes_recovered": true,
+      "documented_substitutions": [
+        {
+          "current": "122 local modules",
+          "reviewed": "121 local modules"
+        },
+        {
+          "current": "2582 jobs",
+          "reviewed": "2581 jobs"
+        },
+        {
+          "current": "2838 declarations, 122 modules, 5547 visited",
+          "reviewed": "2832 declarations, 121 modules, 5541 visited"
+        },
+        {
+          "current": "10 gates; 403 type queries and 431 axiom queries",
+          "reviewed": "10 gates; 419 queries"
+        },
+        {
+          "current": "Main and supporting-interface correspondences",
+          "reviewed": "Main and retained-supplement correspondences"
+        },
+        {
+          "current": "The separate `02_validation/PREPRINT_1_0/` directory contains",
+          "reviewed": "The separate validation directory contains"
+        }
+      ]
+    },
+    {
+      "file": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+      "current_sha256": "e4270118ebee571e296619cb68338080a9f86bef39b8fd74a66d4a639759b60d",
+      "previous_review_sha256": "de385000ad75e429daf716d77b3bc23acb7d1901c4e12493f2f9035f43d8b1f3",
+      "reversal_sha256": "de385000ad75e429daf716d77b3bc23acb7d1901c4e12493f2f9035f43d8b1f3",
+      "reversal_crlf_sha256": null,
+      "exact_previous_bytes_recovered": true,
+      "documented_substitutions": [
+        {
+          "current": "122 módulos locales",
+          "reviewed": "121 módulos locales"
+        },
+        {
+          "current": "2582 tareas",
+          "reviewed": "2581 tareas"
+        },
+        {
+          "current": "2838 declaraciones, 122 módulos, 5547 visitadas",
+          "reviewed": "2832 declaraciones, 121 módulos, 5541 visitadas"
+        },
+        {
+          "current": "10 gates; 403 consultas de tipos y 431 consultas de axiomas",
+          "reviewed": "10 gates; 419 consultas"
+        },
+        {
+          "current": "Correspondencias principales y de interfaces auxiliares",
+          "reviewed": "Correspondencias principales y del suplemento"
+        },
+        {
+          "current": "El directorio separado `02_validation/PREPRINT_1_0/` contiene",
+          "reviewed": "El directorio separado de validación contiene"
+        }
+      ]
+    }
+  ],
+  "separate_publication_hygiene_issue": "Eight compiler logs with personal paths are being sanitized by the responsible agent; this status is outside the static-link/companion-scope PASS and must close before publication."
+}

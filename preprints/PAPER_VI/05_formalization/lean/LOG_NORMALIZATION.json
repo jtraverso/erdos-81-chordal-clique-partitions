@@ -1,0 +1,26 @@
+[
+  {
+    "original_log": "BUILD_PUBLIC_1_0.log",
+    "original_sha256": "8efb1a1cb922adb1fecf3cf9aa26aba96b7505bb18068a8bd9b9016e173f5902",
+    "portable_log": "BUILD_PUBLIC_1_0.portable.log",
+    "portable_sha256": "8efb1a1cb922adb1fecf3cf9aa26aba96b7505bb18068a8bd9b9016e173f5902",
+    "normalization": "UTF-8 text; machine-specific source-root prefix replaced with <SOURCE_ROOT>; no mathematical or status lines altered.",
+    "original_preserved_locally": true
+  },
+  {
+    "original_log": "ENDPOINTS_PUBLIC_1_0.log",
+    "original_sha256": "012a732cf593942de9f05ea382fb7c4aa97f35ee324d7093cb9ab362f0e2df9b",
+    "portable_log": "ENDPOINTS_PUBLIC_1_0.portable.log",
+    "portable_sha256": "012a732cf593942de9f05ea382fb7c4aa97f35ee324d7093cb9ab362f0e2df9b",
+    "normalization": "UTF-8 text; machine-specific source-root prefix replaced with <SOURCE_ROOT>; no mathematical or status lines altered.",
+    "original_preserved_locally": true
+  },
+  {
+    "original_log": "FULL_AUDIT_PUBLIC_1_0.log",
+    "original_sha256": "db5b313d471cbd94b1bddb4987a6e405ad50a023de59e0cb11a73f7c1947e136",
+    "portable_log": "FULL_AUDIT_PUBLIC_1_0.portable.log",
+    "portable_sha256": "db5b313d471cbd94b1bddb4987a6e405ad50a023de59e0cb11a73f7c1947e136",
+    "normalization": "UTF-8 text; machine-specific source-root prefix replaced with <SOURCE_ROOT>; no mathematical or status lines altered.",
+    "original_preserved_locally": true
+  }
+]

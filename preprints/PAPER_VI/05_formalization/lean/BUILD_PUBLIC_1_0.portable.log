@@ -1,0 +1,640 @@
+✔ [1320/1331] Built LeanPool.ListEdgeColoringComplete.Basic (32s)
+✔ [1324/1331] Built PaperVI.Defs (32s)
+✔ [1327/1331] Built PaperVI.Counting (44s)
+✔ [1328/1331] Built PaperVI.Local (66s)
+✔ [1329/1335] Built LeanPool.ListEdgeColoringComplete.Certificate (117s)
+⚠ [1922/1942] Built PaperVI.Lifting (52s)
+warning: PaperVI/Lifting.lean:147:12: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [1923/1943] Built LeanPool.ListEdgeColoringComplete.Polynomial (60s)
+⚠ [1924/1945] Built PaperVI.StarDegree (48s)
+warning: PaperVI/StarDegree.lean:26:0: automatically included section variable(s) unused in theorem `PaperVI.star_edit_adj`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [2107/2146] Built LeanPool.ListEdgeColoringComplete.Main (43s)
+⚠ [2108/2147] Built PaperV.Vizing.Endpoints (33s)
+warning: PaperV/Vizing/Endpoints.lean:21:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/Vizing/Endpoints.lean:28:0: 'Mathlib.Combinatorics.SimpleGraph.ConcreteColorings' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Constructions
+warning: PaperV/Vizing/Endpoints.lean:115:34: `Finset.card_univ_diff` has been deprecated: Use `Finset.card_univ_sdiff` instead
+
+Hint: Replace the deprecated name:
+  F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵u̵n̵i̵v̵_̵d̵i̵f̵f̵c̲a̲r̲d̲_̲u̲n̲i̲v̲_̲s̲d̲i̲f̲f̲
+⚠ [2109/2148] Built PaperV.Vizing.Basic (42s)
+warning: PaperV/Vizing/Basic.lean:23:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/Vizing/Basic.lean:29:0: 'Mathlib.Combinatorics.SimpleGraph.ConcreteColorings' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Constructions
+warning: PaperV/Vizing/Basic.lean:90:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/Vizing/Basic.lean:111:79: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Basic.lean:114:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Basic.lean:117:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Basic.lean:127:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Basic.lean:127:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Basic.lean:128:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Basic.lean:128:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Basic.lean:137:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Basic.lean:146:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Basic.lean:152:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [2110/2149] Built LeanPool.ListEdgeColoringComplete (46s)
+⚠ [2111/2150] Built PaperV.Vizing.Kempe (28s)
+warning: PaperV/Vizing/Kempe.lean:83:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Kempe.lean:84:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Kempe.lean:77:0: automatically included section variable(s) unused in theorem `Vizing.PEC.kempeSwapFun_of_reachable`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/Vizing/Kempe.lean:101:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Kempe.lean:96:0: automatically included section variable(s) unused in theorem `Vizing.PEC.kempeSwapFun_of_not_reachable`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/Vizing/Kempe.lean:119:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Kempe.lean:119:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Kempe.lean:120:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Kempe.lean:120:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+✔ [2112/2150] Built Solution (31s)
+✔ [2113/2151] Built PaperVIResearch.GreedyCount (27s)
+⚠ [2114/2151] Built PaperV.Vizing.Fan (33s)
+warning: PaperV/Vizing/Fan.lean:152:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2115/2153] Built PaperVI.ListColoring (35s)
+warning: PaperVI/ListColoring.lean:76:34: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [2116/2156] Built PaperV.Vizing.Step (31s)
+warning: PaperV/Vizing/Step.lean:106:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/Vizing/Step.lean:111:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/Vizing/Step.lean:113:53: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Step.lean:114:33: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [2118/2157] Built PaperVI.Assembly (35s)
+⚠ [2119/2157] Built PaperV.Vizing.Main (40s)
+warning: PaperV/Vizing/Main.lean:81:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [2120/2158] Built PaperVI.Engine (41s)
+⚠ [2121/2158] Built PaperVIResearch.VizingExtraction (39s)
+warning: PaperVIResearch/VizingExtraction.lean:48:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/VizingExtraction.lean:65:31: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperVIResearch/VizingExtraction.lean:69:31: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [2122/2158] Built PaperVI.TheoremA (44s)
+warning: PaperVI/TheoremA.lean:36:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperVI/TheoremA.lean:113:18: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [2123/2158] Built PaperVIRecourse.BlockDistance (27s)
+✔ [2124/2158] Built PaperVIResearch.Intrinsic (44s)
+✔ [2125/2158] Built PaperVI.Rigidity (59s)
+⚠ [2126/2161] Built PaperVI.TheoremB (42s)
+warning: PaperVI/TheoremB.lean:36:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperVI/TheoremB.lean:192:18: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2127/2161] Built PaperVI.TheoremC (43s)
+warning: PaperVI/TheoremC.lean:36:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [2128/2161] Built PaperVIOpt.InducedC4 (58s)
+⚠ [2129/2161] Built PaperVI.Examples (42s)
+warning: PaperVI/Examples.lean:136:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2130/2161] Built PaperVIResearch.ResidualCount (53s)
+warning: PaperVIResearch/ResidualCount.lean:137:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperVIResearch/ResidualCount.lean:148:85: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ResidualCount.lean:149:83: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+✔ [2131/2161] Built PaperVIResearch.PhysicalExtension (59s)
+⚠ [2132/2161] Built PaperVI.JoinVariant (46s)
+warning: PaperVI/JoinVariant.lean:152:23: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperVI/JoinVariant.lean:158:22: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperVI/JoinVariant.lean:162:23: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperVI/JoinVariant.lean:168:26: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperVI/JoinVariant.lean:172:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+✔ [2133/2164] Built PaperVIOpt.Parametric (69s)
+⚠ [2134/2165] Built PaperVI.Optimal (44s)
+warning: PaperVI/Optimal.lean:139:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVI/Optimal.lean:158:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVI/Optimal.lean:158:20: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [2135/2165] Built PaperVIResearch.PhysicalRecourse (67s)
+warning: PaperVIResearch/PhysicalRecourse.lean:191:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperVIResearch/PhysicalRecourse.lean:210:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [2136/2165] Built PaperVIRecourse.Prefix (50s)
+✔ [2137/2165] Built PaperVI.Concentrated (37s)
+✔ [2138/2165] Built PaperVIResearch.SecondExtremal (44s)
+✔ [2139/2165] Built PaperVIRecourse.ResourceHits (42s)
+⚠ [2140/2165] Built PaperVIOpt.Budgets (72s)
+warning: PaperVIOpt/Budgets.lean:115:12: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2141/2165] Built PaperVIOpt.Secondary (41s)
+warning: PaperVIOpt/Secondary.lean:150:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperVIOpt/Secondary.lean:155:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIOpt/Secondary.lean:199:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIOpt/Secondary.lean:199:29: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperVIOpt/Secondary.lean:201:18: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperVIOpt/Secondary.lean:201:59: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+⚠ [2142/2165] Built PaperVIResearch.PrescribedCount (46s)
+warning: PaperVIResearch/PrescribedCount.lean:151:6: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/PrescribedCount.lean:151:18: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/PrescribedCount.lean:164:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [2143/2165] Built PaperVI.Fractional (46s)
+✔ [2144/2165] Built PaperVIRecourse.Compensation (38s)
+✔ [2145/2165] Built PaperVIRecourse.JoinPrefix (38s)
+⚠ [2146/2165] Built PaperVIOpt.FracFace (49s)
+warning: PaperVIOpt/FracFace.lean:103:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperVIOpt/FracFace.lean:105:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIOpt/FracFace.lean:129:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIOpt/FracFace.lean:199:33: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIOpt/FracFace.lean:212:60: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperVIOpt/FracFace.lean:218:23: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+⚠ [2147/2165] Built PaperVI.TrianglePacking (44s)
+warning: PaperVI/TrianglePacking.lean:112:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperVI/TrianglePacking.lean:179:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2148/2167] Built PaperVIResearch.Duals (34s)
+warning: PaperVIResearch/Duals.lean:162:34: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [2149/2167] Built PaperVIRecourse.OptimalAdapter (33s)
+✔ [2150/2167] Built PaperVIOpt (34s)
+⚠ [2151/2167] Built PaperVI.GainPacking (38s)
+warning: PaperVI/GainPacking.lean:112:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2152/2167] Built PaperVIResearch.ExceptionalSetup (39s)
+warning: PaperVIResearch/ExceptionalSetup.lean:302:27: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ExceptionalSetup.lean:303:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ExceptionalSetup.lean:304:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ExceptionalSetup.lean:304:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ExceptionalSetup.lean:308:27: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperVIResearch/ExceptionalSetup.lean:309:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperVIResearch/ExceptionalSetup.lean:310:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperVIResearch/ExceptionalSetup.lean:310:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+✔ [2153/2167] Built PaperVIRecourse.ProtectedOwners (28s)
+⚠ [2154/2167] Built PaperVIRecourse.PhysicalPrefix (30s)
+warning: PaperVIRecourse/PhysicalPrefix.lean:23:0: automatically included section variable(s) unused in theorem `PaperVIRecourse.type21_eq_triangle`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperVIRecourse/PhysicalPrefix.lean:103:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIRecourse/PhysicalPrefix.lean:153:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [hba, hbb'.symm, hbx] at hbe
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [2155/2169] Built PaperVIResearch.ExceptionalConstruction (31s)
+warning: PaperVIResearch/ExceptionalConstruction.lean:221:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2156/2169] Built PaperVIRecourse.ProtectedLifting (36s)
+warning: PaperVIRecourse/ProtectedLifting.lean:95:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperVIRecourse/ProtectedLifting.lean:146:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2157/2173] Built PaperVIRecourse.CompatiblePrefix (29s)
+warning: PaperVIRecourse/CompatiblePrefix.lean:57:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIRecourse/CompatiblePrefix.lean:106:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [hba, hbb'.symm, hbx] at hbe
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+info: PaperVIRecourse/CompatiblePrefix.lean:126:0: 'PaperVIRecourse.exists_optimal_partition_of_compatible_triangles' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [2158/2173] Built PaperVIResearch.ExceptionalTheorem (35s)
+warning: PaperVIResearch/ExceptionalTheorem.lean:65:27: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperVIResearch/ExceptionalTheorem.lean:113:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ExceptionalTheorem.lean:113:32: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ExceptionalTheorem.lean:114:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperVIResearch/ExceptionalTheorem.lean:114:44: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+ℹ [2159/2174] Built PaperVIRecourse.Counts (32s)
+info: PaperVIRecourse/Counts.lean:98:0: 'PaperVIRecourse.optimal_allK5_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [2161/2180] Built PaperVIResearch.ExceptionalTriangles (31s)
+warning: PaperVIResearch/ExceptionalTriangles.lean:41:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperVIResearch/ExceptionalTriangles.lean:86:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ExceptionalTriangles.lean:90:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperVIResearch/ExceptionalTriangles.lean:133:22: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ExceptionalTriangles.lean:146:22: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+✔ [2162/2180] Built PaperVIRecourse.RetainedConstruction (30s)
+⚠ [2163/2180] Built PaperVIResearch.ExceptionalExamples (35s)
+warning: PaperVIResearch/ExceptionalExamples.lean:122:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+ℹ [2164/2180] Built PaperVIRecourse.CrossCharges (30s)
+info: PaperVIRecourse/CrossCharges.lean:139:0: 'PaperVIRecourse.crossing_loss_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [2165/2180] Built PaperVIResearch.ExceptionalIntrinsic (76s)
+warning: PaperVIResearch/ExceptionalIntrinsic.lean:94:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperVIResearch/ExceptionalIntrinsic.lean:140:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ExceptionalIntrinsic.lean:146:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperVIResearch/ExceptionalIntrinsic.lean:158:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ExceptionalIntrinsic.lean:169:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperVIResearch/ExceptionalIntrinsic.lean:187:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ExceptionalIntrinsic.lean:202:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperVIResearch/ExceptionalIntrinsic.lean:286:26: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ExceptionalIntrinsic.lean:316:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperVIResearch/ExceptionalIntrinsic.lean:317:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperVIResearch/ExceptionalIntrinsic.lean:328:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperVIResearch/ExceptionalIntrinsic.lean:329:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [2166/2180] Built PaperVIResearch.ExceptionalCleanup (80s)
+⚠ [2167/2180] Built PaperVIRecourse.PhysicalRecourse (83s)
+warning: PaperVIRecourse/PhysicalRecourse.lean:82:0: automatically included section variable(s) unused in theorem `PaperVIRecourse.terminal_loss_le_removed`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ℹ [2168/2180] Built PaperVIRecourse.PartitionIdentity (33s)
+info: PaperVIRecourse/PartitionIdentity.lean:89:0: 'PaperVIRecourse.optimal_partition_eq_of_terminal_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [2169/2180] Built PaperVIResearch.ExceptionalModel (38s)
+ℹ [2170/2180] Built PaperVIRecourse.TerminalStep (30s)
+info: PaperVIRecourse/TerminalStep.lean:135:0: 'PaperVIRecourse.exists_terminal_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [2171/2180] Built PaperVIRecourse.Paths (31s)
+✔ [2172/2180] Built PaperVIResearch (29s)
+ℹ [2173/2180] Built PaperVIRecourse.TerminalAlignment (28s)
+info: PaperVIRecourse/TerminalAlignment.lean:109:0: 'PaperVIRecourse.terminal_alignment_missing_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PaperVIRecourse/TerminalAlignment.lean:110:0: 'PaperVIRecourse.terminal_alignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [2174/2180] Built PaperVIRecourse.LiftAlignment (31s)
+✔ [2175/2180] Built PaperVI (29s)
+✔ [2176/2180] Built PaperVIRecourse.Connectivity (33s)
+✔ [2177/2180] Built PaperVIExtended (34s)
+✔ [2178/2180] Built PaperVIRecourse (28s)
+✔ [2179/2180] Built PaperVIRelease (29s)
+Build completed successfully (2180 jobs).

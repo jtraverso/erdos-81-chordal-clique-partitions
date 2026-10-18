@@ -1,0 +1,643 @@
+{
+  "paper": "Paper V Preprint 1.0",
+  "public_root": "PaperV",
+  "manuscript": "01_manuscript/PAPER_V_preprint_v1.0_en.md",
+  "sha256": "b94189f78c5291af48625cb2aa9bdbd8b5e48199acb9ba06e476246b2f6183c2",
+  "endpoints": [
+    {
+      "id": "Definition 2.1",
+      "source_line": 150,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.ConflictSystem",
+        "PaperV.CSFeasible",
+        "PaperV.nu"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Definition 2.1 (conflict system).** A *conflict system* is a pair\n\\((\\mathcal O,K)\\), where \\(\\mathcal O\\) is a finite set of objects and \\(K\\) is a symmetric,\nirreflexive relation on distinct objects. A feasible solution is an independent set\n\\(S\\subseteq\\mathcal O\\). Write \\(\\nu(\\mathcal O,K)\\) for the maximum size of a feasible\nsolution.",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Definition 2.2",
+      "source_line": 159,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Copies",
+        "PaperV.Hgraph",
+        "PaperV.IsQMultiset"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Definition 2.2 (bounded-multiplicity multiset and conflict graph).** Let \\(X\\) be a multiset\nover \\(\\mathcal O\\). Its conflict graph \\(H[X]\\) has one vertex for each copy in \\(X\\). Two\nvertices are adjacent when their underlying objects conflict; two distinct copies of the same\nobject are also adjacent. If each object has multiplicity at most \\(q\\), then \\(X\\) is called a\n\\(q\\)-multiset.",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Definition 2.3",
+      "source_line": 165,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Dq",
+        "PaperV.oct",
+        "PaperV.Dq_one_eq"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Definition 2.3 (colorability defect).** For \\(q\\ge1\\), let \\(D_q(H)\\) be the minimum number\nof vertices whose deletion makes \\(H\\) \\(q\\)-colorable. For \\(q=2\\),",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Definition 2.4",
+      "source_line": 181,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Manuscript.ResourceRelaxation",
+        "PaperV.ResourceCertificate.System",
+        "PaperV.ResourceCertificate.System.incidence"
+      ],
+      "semantic_note": "The general relaxation permits empty resource sets; nonempty resources are required only for the separate F1 system.",
+      "text": "**Definition 2.4 (resource structure and resource LP).** A conflict system is\n*resource-structured* if there is a finite set \\(\\mathcal R\\) and a map\n\\(\\rho:\\mathcal O\\to 2^{\\mathcal R}\\) such that two distinct objects conflict if and only if\ntheir resource sets intersect. The resource-capacity polyhedron is",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Definition 2.5",
+      "source_line": 198,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Manuscript.ResourceRelaxation",
+        "PaperV.Manuscript.ResourceRelaxation.Optimum"
+      ],
+      "semantic_note": "A feasible-set interface more general than a polytope; convexity is unused. Optimum includes an actual maximizing feasible point.",
+      "text": "**Definition 2.5 (resource-dominated relaxation).** A polytope\n\\(P\\subseteq\\mathbb R_{\\ge0}^{\\mathcal O}\\) is a *resource-dominated relaxation* if",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Lemma 3.1",
+      "source_line": 226,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.splitting"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Lemma 3.1 (splitting).** For every finite multiset \\(X\\), there exist disjoint feasible\nsolutions \\(S_1,S_2\\subseteq X\\) such that",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Corollary 3.2",
+      "source_line": 220,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.nu_ge_ceil"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Corollary 3.2.** For every finite multiset \\(X\\),",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Corollary 3.2a",
+      "source_line": 258,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.cover_witness_defect",
+        "PaperV.triangle_cover_defect"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Corollary 3.2a (private-witness lower bound).** Let \\(X_C\\) be a multiset of private\nwitnesses for a cover-side certificate \\(C\\), and let \\(H[X_C]\\) be its conflict graph. If\n\\(\\nu\\) denotes the largest feasible subfamily, then for every \\(q\\ge2\\)",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Corollary 3.2b",
+      "source_line": 283,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Manuscript.minimum_coloring_rigidity_iff"
+      ],
+      "semantic_note": "Minimum deletion and any proper coloring of its complement; additive equality avoids truncated natural subtraction.",
+      "text": "**Corollary 3.2b (rigidity at equality).** With the notation of Corollary 3.2a, suppose",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Theorem 3.3",
+      "source_line": 312,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Manuscript.resource_half_integral_transfer"
+      ],
+      "semantic_note": "Includes the coordinate bound <=1 in the manuscript's bounded 1/q-integrality convention.",
+      "text": "**Theorem 3.3 (half-integral transfer).** Let \\(P\\) be a resource-dominated relaxation and\nwrite \\(\\mu^*=\\mu^*(P)\\). Suppose that \\(P\\) has a half-integral optimum \\(x^*\\). Let \\(X\\)\ncontain two copies of each object with \\(x_o^*=1\\) and one copy of each object with\n\\(x_o^*=1/2\\). Then",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Theorem 3.4",
+      "source_line": 334,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Manuscript.resource_integral_transfer"
+      ],
+      "semantic_note": "Includes the coordinate bound <=1 in the manuscript's bounded 1/q-integrality convention.",
+      "text": "**Theorem 3.4 (\\(q\\)-integral transfer).** Let \\(P\\) be a resource-dominated relaxation and\nwrite \\(\\mu^*=\\mu^*(P)\\). Suppose that \\(P\\) has a \\(1/q\\)-integral optimum \\(x^*\\). Let \\(X\\)\ncontain \\(qx_o^*\\) copies of each object \\(o\\). Then",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Theorem 3.4w",
+      "source_line": 373,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.transfer_q_weighted"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "Historical evidence retained in baseline; current public evidence is in 02_validation/PREPRINT_1_0.",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Lemma 3.5",
+      "source_line": 407,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.parity_localization"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Lemma 3.5 (parity localization).** Let \\(X=A\\sqcup B\\). Every odd cycle of \\(H[X]\\)\ncontains an odd number of edges internal to \\(A\\) or \\(B\\). Consequently, deleting a vertex\ncover of the internal-edge subgraph leaves a bipartite graph, and therefore",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Definition 4.1",
+      "source_line": 432,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.ClassRealizer",
+        "PaperV.RealCert",
+        "PaperV.RealCert.cost"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "Historical evidence retained in baseline; current public evidence is in 02_validation/PREPRINT_1_0.",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Theorem 4.2",
+      "source_line": 452,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.realizable_class_transfer",
+        "PaperV.realizable_transfer_cert"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Theorem 4.2 (Realizable-Class Transfer, RCT).** For \\(q\\ge1\\), every realizability\ncertificate has a class \\(C_i\\) whose realization satisfies",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Definition 4.3",
+      "source_line": 486,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.wRDq"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Definition 4.3 (realizability defect).** For \\(q\\ge1\\) and an admissibility class \\(\\mathcal R\\), write\n\\(D^w_{q,\\mathcal R}(X)\\) for the minimum cost of an \\(\\mathcal R\\)-admissible realizability\ncertificate, when the class of such certificates is nonempty. In that case,",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Theorem 4.4",
+      "source_line": 503,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.wRDq_identity_eq_wDq",
+        "PaperV.wRDq_le_wDq"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Theorem 4.4 (the identity realizer recovers the colorability engine).** For \\(q\\ge1\\), if \\(\\mathsf T=\\mathcal C\\)\nand \\(\\mathcal R_{\\mathrm{id}}\\) consists of independent classes realized by their own objects\nwith loss zero, then",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Example 4.5",
+      "source_line": 522,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.StarExample.intermediate_defect"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Example 4.5 (a non-vacuous loss).** In the unit-weight \\(K_{1,3}\\) instance with \\(q=1\\)\nand two full host lists, the ordinary defect is \\(D_1=2\\), whereas the host-realizability defect\nis \\(D_{1,\\mathcal R_{\\mathrm{host}}}=1\\). One base is deleted and the other two are placed\non distinct hosts; no packing can contain more than two triangles because every triangle uses a\nlink from a host to the centre.",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Corollary 4.6",
+      "source_line": 540,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.ResourceCertificate.two_error_real_optimum",
+        "PaperV.ResourceCertificate.resource_gap_identity",
+        "PaperV.ResourceCertificate.exists_real_optimum"
+      ],
+      "semantic_note": "Rational occurrence multiplicities are partitioned object by object; physical outputs have disjoint resource sets. Real optimum is justified by exact rational-to-real primal and dual embedding.",
+      "text": "**Corollary 4.6 (certification with two errors).** Let \\(x\\) be rational and feasible in\nthe resource LP, and let \\(y\\in\\mathbb Q_{\\ge0}^{\\mathcal R}\\) satisfy\n\\(\\sum_{e\\in\\rho(o)}y_e\\ge w(o)\\) for every object. Put\n\\[\nL=\\sum_o w(o)x_o,\\qquad U=\\sum_e y_e,\n\\qquad \\ell_e(x)=\\sum_{o:e\\in\\rho(o)}x_o.\n\\]\nLet \\(q\\ge1\\) be an integer such that every \\(qx_o\\) is integral, and let \\(X\\) contain\nthat many labeled occurrences of \\(o\\). Suppose that\n\\(X\\setminus Z=C_1\\sqcup\\cdots\\sqcup C_q\\), and that for each \\(i\\) there is a feasible\npacking \\(P_i\\) in this same resource system and a rational \\(r_i\\ge0\\) with\n\\(w(C_i)\\le g(P_i)+r_i\\). Define\n\\(C_{\\mathrm{real}}=w(Z)+\\sum_i r_i\\). One of the \\(P_i\\), denoted by \\(P\\), satisfies\n\\[\ng(P)\\ge L-\\frac{C_{\\mathrm{real}}}{q},\n\\qquad\n0\\le W^*-g(P)\\le U-L+\\frac{C_{\\mathrm{real}}}{q}.\n\\]\nMoreover,\n\\[\nU-L=\\sum_e y_e(1-\\ell_e(x))\n +\\sum_o x_o\\left(\\sum_{e\\in\\rho(o)}y_e-w(o)\\right).\n\\]",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Proposition 5.1",
+      "source_line": 592,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Host.csFeasible_hostCS_of_properOn"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Proposition 5.1 (physical soundness).** A proper list host assignment on \\(T\\) produces a\nfeasible packing of all associated host triangles. Consequently, a class of pairwise distinct\nbases carrying such an assignment has an exact host realizer. The target packing number is at\nmost the number of bases.",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Theorem 5.2",
+      "source_line": 597,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Galvin.galvin_multigraph_max_degree",
+        "PaperV.Galvin.galvin_bkw_local"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Theorem 5.2 (bipartite list-edge realization).** Let \\(B\\) be a bipartite request graph over a nonempty host set \\(H\\). If every edge list has size at least \\(\\Delta(B)\\), then a proper list host assignment exists. The local theorem of Borodin--Kostochka--Woodall [19] gives the same conclusion when the list of an edge \\(uv\\) has size at least \\(\\max(d_B(u),d_B(v))\\). The global statement is Galvin's theorem [18].",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Corollary 5.3",
+      "source_line": 599,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Host.galvin_host_completion_exact",
+        "PaperV.Host.bkw_host_completion_exact",
+        "PaperV.Host.galvin_lifted_transfer",
+        "PaperV.Host.galvin_local_lifted_transfer"
+      ],
+      "semantic_note": "Exact host optimum is for hostCSOn, the restricted base family; unrestricted equality requires all bases.",
+      "text": "**Corollary 5.3 (host completion and lifted transfer).** Under either set of hypotheses in\nTheorem 5.2, in particular with a nonempty host set, every requested base is physically realized, so \\(|B|\\le\\nu(\\mathrm{hostCS})\\) for the unrestricted host system.\nIf the target system is restricted to the requested bases — with objects \\((e,h)\\) for\n\\(e\\in B\\), denoted by \\(\\mathrm{hostCS}_B\\) — then",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Example 5.5",
+      "source_line": 623,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Strictness.strict_separation",
+        "PaperV.Strictness.nu_hostCS_kr"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Example 5.5 (strict separation).** For \\(K_{r,r}\\) with \\(r\\ge2\\), unit weights, \\(q=1\\), and \\(r\\)\nhosts, the auxiliary conflict graph is the line graph of \\(K_{r,r}\\). Thus",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Subsidiary Claim 6.1a",
+      "source_line": 682,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.copy_integral_edgeLoad_le_two"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Subsidiary Claim 6.1a (mapped edge-load bound).** For any integral packings \\(P'\\) and\n\\(P''\\), every edge of \\(G\\) has total load at most two in \\(T_2\\).",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Theorem 6.1",
+      "source_line": 693,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.copy_fractional"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Theorem 6.1 (fractional copy inequality; Paper II restated).** For nonadjacent \\(u,v\\),",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Theorem 6.2",
+      "source_line": 724,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.copy_integral_for_optimal_packings",
+        "PaperV.copy_integral_for_packings",
+        "PaperV.triangleImageMultiset"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Theorem 6.2 (integral copy inequality).** For optimal packings \\(P'\\) and \\(P''\\),",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Lemma 6.2k",
+      "source_line": 768,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.third_subset_union",
+        "PaperV.k4_of_three_triangles",
+        "PaperV.triCS_clique_card_le_four"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Lemma 6.2k (load-2 triangle systems live on physical \\(K_4\\)'s).** Let\n\\(t_1,t_2,t_3\\) be distinct triangles of \\(G\\) that pairwise share an edge, and suppose that\nno edge lies in all three. Then \\(t_3\\subseteq t_1\\cup t_2\\),\n\\(|t_1\\cup t_2|=4\\), and \\(t_1\\cup t_2\\) induces a \\(K_4\\) in \\(G\\). Consequently, any\nfamily of pairwise edge-sharing triangles with edge-load at most two has at most four members,\nand every clique of size at least three in the triangle conflict graph of a load-2 multiset has\nsize three or four and is supported on one physical \\(K_4\\).",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Corollary 6.2a",
+      "source_line": 784,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.copy_triple_bound",
+        "PaperV.tight_oct"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Corollary 6.2a (triple copy bound).** For nonadjacent \\(u,v\\),",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Proposition 7.1",
+      "source_line": 849,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.PureProfile.prop43_nu",
+        "PaperV.PureProfile.prop43_muMat"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Proposition 7.1 (pure profile).** Suppose that all \\(m\\) hosts have the same palette \\(N\\),\nwith \\(|N|=s\\ge2\\). Then",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Proposition 7.1a",
+      "source_line": 900,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.PureProfile.nu_ge_frac_muMatDeg",
+        "PaperV.PureProfile.nu_ge_two_thirds_muMatDeg",
+        "PaperV.PureProfile.nu_ge_muMatDeg_two"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Proposition 7.1a (global pure-profile resource gap).** For every pure profile with \\(m\\)\nhosts and common palette size \\(s\\ge1\\),\n\\[\n\\nu(m,s)\\ge\\frac{s-1}{s}\\,\\mu^*_{\\mathrm{res}}(m,s).\n\\]\nConsequently the factor is at least \\(2/3\\) for \\(s\\ge3\\), and\n\\(\\nu(m,2)=\\mu^*_{\\mathrm{res}}(m,2)\\). At \\((m,s)=(1,3)\\), the values are\n\\(\\nu=1\\) and \\(\\mu^*_{\\mathrm{res}}=3/2\\).",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Proposition 7.1b",
+      "source_line": 919,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.PureProfile.muMatDeg_eq_min",
+        "PaperV.PureProfile.nu_eq_muMatDeg_of_even",
+        "PaperV.PureProfile.nu_eq_frac_muMatDeg_of_odd"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Proposition 7.1b (exact resource value and parity).** For \\(m\\ge1\\) and \\(s\\ge2\\),\n\\[\n\\mu^*_{\\mathrm{res}}(m,s)=\\min\\{ms/2,\\tbinom{s}{2}\\}.\n\\]\nFor even \\(s\\), \\(\\nu(m,s)=\\mu^*_{\\mathrm{res}}(m,s)\\). For odd \\(s\\ge3\\) and\n\\(1\\le m\\le s-1\\),\n\\[\n\\nu(m,s)=\\frac{s-1}{s}\\,\\mu^*_{\\mathrm{res}}(m,s).\n\\]",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Theorem 7.3",
+      "source_line": 998,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Mixed.mixed_copy_fractional",
+        "PaperV.mixed_copy_integral"
+      ],
+      "semantic_note": "gain: Nat -> Nat; nonadjacency is explicit; mixed-family scope only.",
+      "text": "**Theorem 7.3 (mixed-copy inequalities).** For nonadjacent \\(u,v\\),",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Corollary 7.3a",
+      "source_line": 1022,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Mixed.mixed_copy_integral_of_roundingGap"
+      ],
+      "semantic_note": "RoundingGap remains an explicit hypothesis; no unconditional asymptotic rounding theorem is claimed.",
+      "text": "**Corollary 7.3a (mixed copies with a rounding-gap bound).** Let \\(u,v\\) be nonadjacent\nvertices of \\(G\\), and suppose that the mixed packing values satisfy\n\\(W^*(G)\\le W(G)+B\\). Then\n\\[\nW(G_{u\\to v})+W(G_{v\\to u})\\le2W(G)+2B.\n\\]\nIn particular, \\(B=0\\) gives an exact integral inequality.",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Proposition 8.1",
+      "source_line": 1085,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.feasible_run",
+        "PaperV.SealBridge.sealFeasible_of_properOn"
+      ],
+      "semantic_note": "Finite operation semantics, feasibility invariants and proper-host assignment, not verification of the complete executable.",
+      "text": "**Proposition 8.1 (finite-run feasibility).** Every finite execution of SEAL produces a\nfeasible packing at every stage. In particular, a packing supplied by the exact bipartite regime\nis feasible whenever its proper list assignment passes the stated check.",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Proposition 8.2",
+      "source_line": 1094,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.accepted_repairs_le_cov",
+        "PaperV.accepted_repairs_le_audit"
+      ],
+      "semantic_note": "Accepted-repair count is formalized. The polynomial enumeration/runtime argument is written mathematics; no Lean cost model is claimed.",
+      "text": "**Proposition 8.2 (termination under improving repairs).** Suppose that Phase 3 exhaustively\ntests the fixed-depth N1 and N2 neighborhoods and accepts an exchange only when it strictly\nincreases \\(|R|\\). Then SEAL halts after at most\n\\(\\lvert\\operatorname{cov}\\rvert\\) accepted repairs. The construction-and-repair loop\ndescribed above runs in time polynomial in the number of hosts and coverable pairs. This\nstatement does not include the optional computation of the LP upper bound \\(U\\).",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Theorem 8.3",
+      "source_line": 1112,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.SealBridge.seal_galvin_regime",
+        "PaperV.SealBridge.seal_bkw_regime",
+        "PaperV.SealBridge.seal_konig_guarantee"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Theorem 8.3 (exact bipartite SEAL regime).** Let \\(B\\) be a bipartite connected component of the\ncoverable-pair graph. If its host lists satisfy either the global Galvin condition\n\\(\\lvert L(e)\\rvert\\ge\\Delta(B)\\) or the local Borodin--Kostochka--Woodall condition\n\\(\\lvert L(uv)\\rvert\\ge\\max\\{d_B(u),d_B(v)\\}\\), a proper list assignment realizes every pair\nof \\(B\\). The resulting SEAL packing is feasible and has size \\(\\lvert B\\rvert\\), so the\ncomponent contributes zero to \\(u\\).",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    },
+    {
+      "id": "Proposition 9.3",
+      "source_line": 1238,
+      "declaration": null,
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "declarations": [
+        "PaperV.Steiner.exists_quadratic_defect_frac"
+      ],
+      "semantic_note": "Manuscript statement is represented by the listed declarations; inspect the emitted exact types.",
+      "text": "**Proposition 9.3 (quadratic defect of an optimal representation).** For every \\(d\\ge1\\) there\nis a complete graph \\(K_n\\), with \\(n=4^d\\), and a triangle multiset \\(X\\) of multiplicity at\nmost one, hence also a 2-multiset, such that:",
+      "excerpt_scope": "Statement excerpt only; complete assumptions and proof are in the current main manuscript, with exact formal hypotheses in the checked declaration types."
+    }
+  ],
+  "nonformal_scope": [
+    "SEAL executable implementation",
+    "SEAL computational benchmarks",
+    "SEAL polynomial runtime cost model",
+    "historical priority claims",
+    "Exact finite enumeration of70BK maximum packings (separate reproducible computation)"
+  ],
+  "ancillary_retained": [
+    {
+      "id": "Proposition 3.6",
+      "source_line": 15,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.Dq_antitone",
+        "PaperV.Dq_le_oct",
+        "PaperV.Dq_mono_left"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Proposition 3.7",
+      "source_line": 27,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.Dq_eq_zero_iff",
+        "PaperV.oct_eq_zero_iff",
+        "PaperV.Dq_eq_zero_iff_chromatic",
+        "PaperV.Dq_pos_iff_lt_chromatic"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Proposition 3.8",
+      "source_line": 50,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.Dq_ge_card_sub",
+        "PaperV.defect_tight_all_max",
+        "PaperV.defect_eq_of_survivors",
+        "PaperV.Manuscript.minimum_coloring_rigidity_iff"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Proposition 3.9",
+      "source_line": 72,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.Dq_sum",
+        "PaperV.oct_sum"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Proposition 3.10",
+      "source_line": 125,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.Dq_lineGraph_eq_zero_iff",
+        "PaperV.Dq_lineGraph_pos_iff",
+        "PaperV.Dq_one_lineGraph",
+        "PaperV.profile_zero_set_not_values"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Corollary 3.11",
+      "source_line": 171,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.TerminalPair.p4_133_existence_sharp",
+        "PaperV.TerminalPair.p4_133_existence_coarse"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Theorem 7.4",
+      "source_line": 193,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.PairedFactors.exists_paired_completion"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Proposition 7.5",
+      "source_line": 207,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.FiniteLP.gap_identity",
+        "PaperV.FiniteLP.weak_duality",
+        "PaperV.FiniteLP.complementarity_of_equal_value",
+        "PaperV.RationalFarkas.farkas",
+        "PaperV.RationalFarkas.not_sat_of_cert",
+        "PaperV.FiniteLP.exists_equal_primal_dual"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Corollary 5.4",
+      "source_line": 224,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.Host.weighted_host_selection",
+        "PaperV.Host.weighted_host_selection_nu",
+        "PaperV.Host.konig_weighted_host_selection",
+        "PaperV.Host.galvin_heavy_single_host"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Lemma C.1",
+      "source_line": 253,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.UnitBoundary.completion_optimal_unconditional",
+        "PaperV.UnitBoundary.unitBoundary_completion_optimal",
+        "PaperV.UnitBoundary.exists_optimal_normPack"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "semantic_note": "Universal formula adapter has no Inhabited/object-nonempty or Reps hypothesis; original normalized-witness theorem retains explicit representatives."
+    },
+    {
+      "id": "Lemma C.2",
+      "source_line": 260,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.UnitBoundary.exists_endpoint_repacking",
+        "PaperV.UnitBoundary.endpoint_repacking_card_bound",
+        "PaperV.UnitBoundary.endpoint_repacking_nonloss"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "semantic_note": "Actual representative family and physical packing exist, including empty universe; original theorem supplies normalized-packing identity and transport for given representatives."
+    }
+  ],
+  "ancillary_map": "SUPPLEMENT_MAP.json",
+  "ancillary_gate": "PaperVSupplementGate.lean",
+  "formal_validation": "FREEZE_VALIDATION.json",
+  "source_scope": "Main 37 correspondences plus 11 supporting interfaces. Computational counts are distinguished from kernel statements.",
+  "unnumbered_ancillary": [
+    {
+      "id": "Section9.1 BK certificates",
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.BK.bk_nu",
+        "PaperV.BK.bk_cov_card",
+        "PaperV.BK.bk_beta_lt_k",
+        "PaperV.BK.resource_upper_bound",
+        "PaperV.BK.real_resource_attainment",
+        "PaperV.BK.residual_two_attained"
+      ],
+      "nonformal_computation": "Exactly70maximum packings: ../BK_ANCILLARY_CERTIFICATES.json with parent reproducible verifier; not claimed as a Lean theorem.",
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    }
+  ]
+}

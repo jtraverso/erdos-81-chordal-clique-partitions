@@ -1,0 +1,38 @@
+{
+  "name": "triangle_one_host",
+  "implementation": "SEAL_REFERENCE_v1",
+  "hosts": [
+    [
+      0,
+      1,
+      2
+    ]
+  ],
+  "mode": "selector_N1_N2_dual",
+  "packing": [
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "dual": [
+    {
+      "kind": "odd",
+      "host": 0,
+      "vertices": [
+        0,
+        1,
+        2
+      ],
+      "value": "1"
+    }
+  ],
+  "lower": 1,
+  "upper": "1",
+  "certified_optimal": true,
+  "accepted_repairs": {
+    "N1": 0,
+    "N2": 0
+  }
+}

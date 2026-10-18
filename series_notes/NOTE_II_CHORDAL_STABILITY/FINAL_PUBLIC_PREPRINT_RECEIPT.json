@@ -1,0 +1,88 @@
+{
+  "status": "READY_PREPRINT_1_0",
+  "version": "Preprint 1.0",
+  "note": "II",
+  "public_destination": "series_notes/NOTE_II_CHORDAL_STABILITY",
+  "document_pairs": [
+    {
+      "role": "main",
+      "en": {
+        "md": {
+          "path": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.md",
+          "sha256": "5bc47e473946f3946014c4b5d578a44029e6ca53c55bed60554934aab063867b"
+        },
+        "tex": {
+          "path": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.tex",
+          "sha256": "e90942e6c4e8e3dcb72686f8c4dce28d4ebb5d52becfc94f9a2b1401859abf93"
+        },
+        "pdf": {
+          "path": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.pdf",
+          "sha256": "dc04832b7afc04ec8e81f1b351765e7a520dd0d483a67ad74e85e9828e7e2d4d"
+        }
+      },
+      "es": {
+        "md": {
+          "path": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.md",
+          "sha256": "b65bad59e13ece51571814c92dd22e3868415cd2e70db0bc1b7a7691def6169e"
+        },
+        "tex": {
+          "path": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.tex",
+          "sha256": "f0b5029066312b12b942c2e3fd858b95eee1a0f25a1facc8484621ecfd79a456"
+        },
+        "pdf": {
+          "path": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.pdf",
+          "sha256": "5925f0aadf9989e3199fdbd35f26bfeb5be74474d000507b48deff3a4db3fdf9"
+        }
+      }
+    },
+    {
+      "role": "companion",
+      "en": {
+        "md": {
+          "path": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+          "sha256": "320bce1490dfc87c3eba2c5a5ca262d3d8dc0d44c8c6e68032ec2fba460ba05c"
+        },
+        "tex": {
+          "path": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+          "sha256": "5a8bcd2edfebbe750bde1a8723e2799cab5a22d39bcbdaca89a8c466e7a38501"
+        },
+        "pdf": {
+          "path": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+          "sha256": "58dbce77cf9bf305e63360b7bfbbd53e7ad9c27c8337ca78d4d40f56aaa9c592"
+        }
+      },
+      "es": {
+        "md": {
+          "path": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+          "sha256": "accf344b6849eca5f1199a6d03ac7e7c42501ef0c1c545032b726167ec2a70cd"
+        },
+        "tex": {
+          "path": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+          "sha256": "fd87f57495493031f86c3b601658c3b4db1c723044ae7832b0bf8ba161a54e28"
+        },
+        "pdf": {
+          "path": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+          "sha256": "ca68c3c0b993efae5b8c53602becb11d09d54c414bf0a38f5942e69271de48dd"
+        }
+      }
+    }
+  ],
+  "source_archive": "05_formalization/formal_sources/NOTE_II_LEAN435_FINAL_SOURCE_v1.0.zip",
+  "source_archive_sha256": "b24c5543d719779568ee9c099d453c170d4c69cbd4a31b293f4ee8375e287531",
+  "source_project_root": "05_formalization/source/lean435",
+  "source_validation": "05_formalization/source/FINAL_FORMAL_VALIDATION.json",
+  "source_manifest": "05_formalization/source/SOURCE_MANIFEST.json",
+  "publication_files": "PUBLICATION_FILES.json",
+  "publication_files_sha256": "3569c34fbd19d3195f29c5adee862152dcbfb6c40dfd6d74602631606000e561",
+  "public_evidence": "02_validation/PUBLIC",
+  "supplementary_checks": "03_reproducibility",
+  "pages_visually_reviewed": 19,
+  "extra_control_files": [
+    "PUBLICATION_FILES.json",
+    "FINAL_PUBLIC_PREPRINT_RECEIPT.json"
+  ],
+  "mathematical_changes": false,
+  "baseline_modified": false,
+  "git_actions": false,
+  "created_utc": "2026-10-18T20:08:01.456479+00:00"
+}

@@ -1,0 +1,134 @@
+{
+  "paper": "Paper V Preprint 1.0",
+  "public_root": "PaperV",
+  "scope": "Supporting mathematical interfaces listed in companion Section 6; no undelivered written supplement is cited. Source labels preserve the eleven-item inventory.",
+  "status": "CHECKED_SOURCE_INTERFACES",
+  "endpoints": [
+    {
+      "id": "Proposition 3.6",
+      "source_line": 15,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.Dq_antitone",
+        "PaperV.Dq_le_oct",
+        "PaperV.Dq_mono_left"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Proposition 3.7",
+      "source_line": 27,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.Dq_eq_zero_iff",
+        "PaperV.oct_eq_zero_iff",
+        "PaperV.Dq_eq_zero_iff_chromatic",
+        "PaperV.Dq_pos_iff_lt_chromatic"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Proposition 3.8",
+      "source_line": 50,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.Dq_ge_card_sub",
+        "PaperV.defect_tight_all_max",
+        "PaperV.defect_eq_of_survivors",
+        "PaperV.Manuscript.minimum_coloring_rigidity_iff"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Proposition 3.9",
+      "source_line": 72,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.Dq_sum",
+        "PaperV.oct_sum"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Proposition 3.10",
+      "source_line": 125,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.Dq_lineGraph_eq_zero_iff",
+        "PaperV.Dq_lineGraph_pos_iff",
+        "PaperV.Dq_one_lineGraph",
+        "PaperV.profile_zero_set_not_values"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Corollary 3.11",
+      "source_line": 171,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.TerminalPair.p4_133_existence_sharp",
+        "PaperV.TerminalPair.p4_133_existence_coarse"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Theorem 7.4",
+      "source_line": 193,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.PairedFactors.exists_paired_completion"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Proposition 7.5",
+      "source_line": 207,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.FiniteLP.gap_identity",
+        "PaperV.FiniteLP.weak_duality",
+        "PaperV.FiniteLP.complementarity_of_equal_value",
+        "PaperV.RationalFarkas.farkas",
+        "PaperV.RationalFarkas.not_sat_of_cert",
+        "PaperV.FiniteLP.exists_equal_primal_dual"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Corollary 5.4",
+      "source_line": 224,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.Host.weighted_host_selection",
+        "PaperV.Host.weighted_host_selection_nu",
+        "PaperV.Host.konig_weighted_host_selection",
+        "PaperV.Host.galvin_heavy_single_host"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED"
+    },
+    {
+      "id": "Lemma C.1",
+      "source_line": 253,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.UnitBoundary.completion_optimal_unconditional",
+        "PaperV.UnitBoundary.unitBoundary_completion_optimal",
+        "PaperV.UnitBoundary.exists_optimal_normPack"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "semantic_note": "Universal formula adapter has no Inhabited/object-nonempty or Reps hypothesis; original normalized-witness theorem retains explicit representatives."
+    },
+    {
+      "id": "Lemma C.2",
+      "source_line": 260,
+      "scope": "ancillary_retained",
+      "declarations": [
+        "PaperV.UnitBoundary.exists_endpoint_repacking",
+        "PaperV.UnitBoundary.endpoint_repacking_card_bound",
+        "PaperV.UnitBoundary.endpoint_repacking_nonloss"
+      ],
+      "semantic_audit_status": "CANONICAL_435_TYPE_AND_AXIOM_GATES_PASSED",
+      "semantic_note": "Actual representative family and physical packing exist, including empty universe; original theorem supplies normalized-packing identity and transport for given representatives."
+    }
+  ]
+}

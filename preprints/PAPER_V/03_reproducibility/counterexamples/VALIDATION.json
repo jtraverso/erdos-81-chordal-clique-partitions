@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "python_version": "3.12.10",
+  "source_sha256": "f4e67b83c3d303a03c3b99c8f9cf7c2cbfc4023a2c7172567b0f6e7bcf746895",
+  "certificate_sha256": "e1b1c2a839592856fa87a221a03be66d7176bfa7889b2ce90f3f46c48f1846e1",
+  "replay_script_sha256": "a45fa13fc44b960091e1d7affc1b2e2ef2065476a57419c928539ba1627fbdb0",
+  "verify_command": [
+    "python",
+    "bk_completion_certificates.py",
+    "--verify-only"
+  ],
+  "verify_exit_code": 0,
+  "negative_control_exit_code": 1,
+  "negative_control": "Altered first dual price rejected by the unchanged verifier.",
+  "scope": "Exact finite unit-capacity BK instance. The rational dual of value 19/2 gives the integral upper bound 9. All 70 feasible nine-element optimal families and beta=2 are recomputed. This is not a universal proof or an end-to-end Lean verification of Python."
+}

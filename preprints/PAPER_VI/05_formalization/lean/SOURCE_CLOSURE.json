@@ -1,0 +1,318 @@
+{
+  "LeanPool/ListEdgeColoringComplete/Basic.lean": {
+    "sha256": "318bc4d408fb5367547c4093e2e16418ec710cd1492284191b1bf1e17fa0fcea",
+    "bytes": 1540
+  },
+  "LeanPool/ListEdgeColoringComplete/Certificate.lean": {
+    "sha256": "f8725c793164a0acb39d14357419297d2e08c50566d28aeb954e62ef2b1f9079",
+    "bytes": 13431
+  },
+  "LeanPool/ListEdgeColoringComplete/Main.lean": {
+    "sha256": "9e903ff402fdf5f06de520e49021f1a3f5579d856c6feb399afbdaf2493398fd",
+    "bytes": 6937
+  },
+  "LeanPool/ListEdgeColoringComplete/Polynomial.lean": {
+    "sha256": "36214e8d5d7bf6236cfd5a6f0d680f9a00476cc3cc0efc51663be297d7b4fc76",
+    "bytes": 11131
+  },
+  "LeanPool/ListEdgeColoringComplete.lean": {
+    "sha256": "b302b9608f13f0685a3b70e991c90478cb8acb56c8bea0963f8918522a1c0b29",
+    "bytes": 961
+  },
+  "PaperV/Vizing/Basic.lean": {
+    "sha256": "46b6cbbf7a0d16557a99a30e866055f099a920ad4dac1734b2f791de618d8b0a",
+    "bytes": 7974
+  },
+  "PaperV/Vizing/Endpoints.lean": {
+    "sha256": "43c60f3539f00ecc69a79b61634c03d430be161b9fc741d5a396e84ddc555ae0",
+    "bytes": 5426
+  },
+  "PaperV/Vizing/Fan.lean": {
+    "sha256": "5dc758226ae5bb7e35a7fd7a986a8abed2c9e4b232e86b502065724d493cd5a5",
+    "bytes": 6049
+  },
+  "PaperV/Vizing/Kempe.lean": {
+    "sha256": "70f115f62d9dea42da1d0d10e7a2411cc67563ae0e7f48b324dc5edbcff89331",
+    "bytes": 9319
+  },
+  "PaperV/Vizing/Main.lean": {
+    "sha256": "f563dcd5520a7a9286f16f5cac5a250d1d39df64abd4c529497d685ba6ad3dc2",
+    "bytes": 5539
+  },
+  "PaperV/Vizing/Step.lean": {
+    "sha256": "95f863f60cf8a98284cb836d1bf254545c6d4363c95d93306780577a95e349cd",
+    "bytes": 9761
+  },
+  "PaperVI/Assembly.lean": {
+    "sha256": "2ebc2a3a315b24e0ade7c89a8a1d7793e9ad41b9fe56cd937626bc23eb01582b",
+    "bytes": 22021
+  },
+  "PaperVI/Concentrated.lean": {
+    "sha256": "a235098e19f7fcc38cc323200a4167f345bd791664ac84514ec68a58aac7212d",
+    "bytes": 3715
+  },
+  "PaperVI/Counting.lean": {
+    "sha256": "dd6fa423ffba3d439e88ea1b29c85bc72b9a3ec624d3dfa246898aaf95a23d9d",
+    "bytes": 17893
+  },
+  "PaperVI/Defs.lean": {
+    "sha256": "1bf372d0b7d8eea6fbf5f1293f84fbffa9a54ca826c44e5cfd33928008184b1d",
+    "bytes": 5243
+  },
+  "PaperVI/Engine.lean": {
+    "sha256": "ad6cc8595cff39355b5675b4bb5a25c24f695b6d538703ae0fb701c2710cb043",
+    "bytes": 13610
+  },
+  "PaperVI/Examples.lean": {
+    "sha256": "1502027af0608dc32d14c17efd33fc41017164af6c6e2d442d96eab98bd9e774",
+    "bytes": 6172
+  },
+  "PaperVI/Fractional.lean": {
+    "sha256": "ba333936d582d9e57f5eb88d88c11cde4b55aa2731fb5fb425524cecc9a432de",
+    "bytes": 8729
+  },
+  "PaperVI/GainPacking.lean": {
+    "sha256": "243c85ad65256297b8345bcfff2339a2d3566a1e6e2287228e6d0ac6670fa6fe",
+    "bytes": 8065
+  },
+  "PaperVI/JoinVariant.lean": {
+    "sha256": "bfb1613015d30caf14edff05d8cda1d3ce43363a77065397bd0e60e6531765c5",
+    "bytes": 29354
+  },
+  "PaperVI/Lifting.lean": {
+    "sha256": "4d84590363682879cc903f002844ae7bbea57bf1df3f94025e7cb607bce7aed6",
+    "bytes": 18888
+  },
+  "PaperVI/ListColoring.lean": {
+    "sha256": "1623bfea8830c7bf924185416bacc63ee35116c531eadaeb9eecd3dfe2eb6202",
+    "bytes": 4489
+  },
+  "PaperVI/Local.lean": {
+    "sha256": "fbe6cdfb83007fa599d3c395c84a093fda1cd532f0ec799f157c8ef237cd6449",
+    "bytes": 7766
+  },
+  "PaperVI/Optimal.lean": {
+    "sha256": "31045d4981d7fb7d4fb9cf16e70ce204c5290956a81612a909ecf9119cb820a8",
+    "bytes": 8490
+  },
+  "PaperVI/Rigidity.lean": {
+    "sha256": "310d66f3d5defee157be82df26c0aabd750d8dad5989336637cac7b05af9f5f7",
+    "bytes": 11491
+  },
+  "PaperVI/StarDegree.lean": {
+    "sha256": "6dbaca8f8fe6674c372f2661a1a19603f5f4dcd9d140b883e075a8002304a7b9",
+    "bytes": 3545
+  },
+  "PaperVI/TheoremA.lean": {
+    "sha256": "d17f8ee72dd22f68184292401b301e78b3919bdc49203d13bd18023d0c09a052",
+    "bytes": 7642
+  },
+  "PaperVI/TheoremB.lean": {
+    "sha256": "222e10fed4ce8596907426c45b76a7235a607d5dd0267c080ed97207a595eee8",
+    "bytes": 11316
+  },
+  "PaperVI/TheoremC.lean": {
+    "sha256": "d663745d7d8df9e25e6b70e6c785b7bbc7d3e646368d01158d32e4983943c781",
+    "bytes": 4772
+  },
+  "PaperVI/TrianglePacking.lean": {
+    "sha256": "845f13f6c7ac5072772abd751f2d22e3f055c3899ee6fbc408ffb180dbe89494",
+    "bytes": 9699
+  },
+  "PaperVI.lean": {
+    "sha256": "97d1b5fcd37eac1ff5e14fd2a116ea27e38e43b1e33e60565d3a0ae0d5ab1851",
+    "bytes": 1054
+  },
+  "PaperVIExtended.lean": {
+    "sha256": "68ab3585eb256212468033f374a59f11a94fd4ac1bac0d7478acd4427eb210be",
+    "bytes": 392
+  },
+  "PaperVIOpt/Budgets.lean": {
+    "sha256": "17334369735e17d2a9af6bcfcc8aca2c010a528dfa5d51bd4a76d9c7f9b3bdff",
+    "bytes": 27986
+  },
+  "PaperVIOpt/FracFace.lean": {
+    "sha256": "404947e7cea381644bc5f6a2dbe172783b1f3b62717a9daeb13680dd0beec66e",
+    "bytes": 11085
+  },
+  "PaperVIOpt/InducedC4.lean": {
+    "sha256": "3798e0ad11c0335e2be5de6d49c6e2a185ab86871a74d4c8da4ed5d594144efc",
+    "bytes": 23036
+  },
+  "PaperVIOpt/Parametric.lean": {
+    "sha256": "1a6d44bd01687e1ddaa97b8c4555fd98cc052944e7629cf6278b8cca7aad44b3",
+    "bytes": 25077
+  },
+  "PaperVIOpt/Secondary.lean": {
+    "sha256": "70216520f1d893d34ce98a44d065a49831d3a9420147fc7bd7b022ad0c1e02be",
+    "bytes": 14543
+  },
+  "PaperVIOpt.lean": {
+    "sha256": "9c0e846b967265bb4d509722454d8a3a1bd49fd20968a251206c60ec89a00e47",
+    "bytes": 549
+  },
+  "PaperVIRecourse/BlockDistance.lean": {
+    "sha256": "b73b6970d1702638899132a6dcc40bb6a30d724a5b0b3508a5938dc06e940a22",
+    "bytes": 3408
+  },
+  "PaperVIRecourse/CompatiblePrefix.lean": {
+    "sha256": "6640cfb1a12fb9893e7c5a43f948ca571efd1f4b36ee178f75a2ab846dfa2d51",
+    "bytes": 6126
+  },
+  "PaperVIRecourse/Compensation.lean": {
+    "sha256": "0f645f7ae7c797fc0d682283972e7e718d222bde781dade747ad21ec7b11bc01",
+    "bytes": 4542
+  },
+  "PaperVIRecourse/Connectivity.lean": {
+    "sha256": "2cdae544ec2db781a30c444c586bbfff080f144288bc1f4e0ff5d3535f53cee2",
+    "bytes": 2346
+  },
+  "PaperVIRecourse/Counts.lean": {
+    "sha256": "04b258cb7d42706b43ff42fefc6555a4d21cca9d2d6224e09b680c2309602639",
+    "bytes": 3892
+  },
+  "PaperVIRecourse/CrossCharges.lean": {
+    "sha256": "e683f8d0b9c37c0d4fcb3573931cdee8b83d63faad978253c537cb261a3b46ef",
+    "bytes": 6879
+  },
+  "PaperVIRecourse/JoinPrefix.lean": {
+    "sha256": "ef8c68d46be69f81be84927e9af06bef25e808f41421bf05f2f0323325dba4ed",
+    "bytes": 5255
+  },
+  "PaperVIRecourse/LiftAlignment.lean": {
+    "sha256": "316591485a0d50ed417a02c9b0e95f93713a51143e036fa2e28a2a93ca0b981e",
+    "bytes": 6685
+  },
+  "PaperVIRecourse/OptimalAdapter.lean": {
+    "sha256": "2aa9d98de4a201b9ff857cb1b3096331703ad06fa46ae7ff21ed9ef23a8c3dbd",
+    "bytes": 3835
+  },
+  "PaperVIRecourse/PartitionIdentity.lean": {
+    "sha256": "2cbb37b88079b2fab712fc5f7379dfb4df32fc0229039e7403102cf996e3fd13",
+    "bytes": 4376
+  },
+  "PaperVIRecourse/Paths.lean": {
+    "sha256": "707eabb6b37a7b6955b794c0d2da48a4b3c73d13d408aa3eb0d2f1a71f975ee7",
+    "bytes": 2206
+  },
+  "PaperVIRecourse/PhysicalPrefix.lean": {
+    "sha256": "5022ded635a25a5ec022236d67c08ef2cfa15b14c86025cfa9ff9be99f96229f",
+    "bytes": 8250
+  },
+  "PaperVIRecourse/PhysicalRecourse.lean": {
+    "sha256": "3286c59cb4a60d4c1a9c8f3e8daacca62109e054ad4e1cf695cb670d179f6122",
+    "bytes": 7684
+  },
+  "PaperVIRecourse/Prefix.lean": {
+    "sha256": "831db512d6094db1cb78b446681c2aa29d1a002d37349fe2e3c74df2e1298318",
+    "bytes": 7279
+  },
+  "PaperVIRecourse/ProtectedLifting.lean": {
+    "sha256": "d1dc0394114de5afed8ed08ba22a00f6da18544aaa7c9a1addd1b0618a638df3",
+    "bytes": 12168
+  },
+  "PaperVIRecourse/ProtectedOwners.lean": {
+    "sha256": "ebaff4ba99c3779d5b58003fd179faab7652de5b8482145b6fce001ed4cf2484",
+    "bytes": 1986
+  },
+  "PaperVIRecourse/ResourceHits.lean": {
+    "sha256": "993212c40ba427569f368728e65a92a1621f7612bb3cf77843414b6c5106dd36",
+    "bytes": 5166
+  },
+  "PaperVIRecourse/RetainedConstruction.lean": {
+    "sha256": "f7359e2c9bdd1def2df1f27c6a1577d1ffaea41e3dd5b5d24639d40e7c21d989",
+    "bytes": 7350
+  },
+  "PaperVIRecourse/TerminalAlignment.lean": {
+    "sha256": "5e19224847953374fc886043eb24383a2a140c4483488c101572e2fc162bbe29",
+    "bytes": 5487
+  },
+  "PaperVIRecourse/TerminalStep.lean": {
+    "sha256": "b806344884d11bc6b1c87710314d9bcd7472263079a1e7de9cfc959350eceb43",
+    "bytes": 6611
+  },
+  "PaperVIRecourse.lean": {
+    "sha256": "b5766b3ffdd3d041343aaa97007ebe980f52607213bf5516a2cbc61857800ba7",
+    "bytes": 1267
+  },
+  "PaperVIRelease.lean": {
+    "sha256": "05de8cc26e4077d04e74d9a15c1373e40f8c66ed32590df90c617509bf44acee",
+    "bytes": 454
+  },
+  "PaperVIResearch/Duals.lean": {
+    "sha256": "ea7d00198a354ff6d10e0e3688462fc7855fee1389f5b3d30173bb3c64e40963",
+    "bytes": 8695
+  },
+  "PaperVIResearch/ExceptionalCleanup.lean": {
+    "sha256": "e707b1edb294ca1c2ef8153e24d0feea8f78e2e0654673bb71a429f72e585fc4",
+    "bytes": 2668
+  },
+  "PaperVIResearch/ExceptionalConstruction.lean": {
+    "sha256": "5872188b9011f1d3099dd15d0d3830700345db61aeb20b1b783653f7ac55a6c3",
+    "bytes": 14953
+  },
+  "PaperVIResearch/ExceptionalExamples.lean": {
+    "sha256": "73562dc16ace640802f172ad4582270a6ffc2f4c2fd453e583dc6a97e9763196",
+    "bytes": 12116
+  },
+  "PaperVIResearch/ExceptionalIntrinsic.lean": {
+    "sha256": "8b2ef18c7b0a6dc11d03b0ef21b016e07b00f84111bc78d98b331bab4c45a7a4",
+    "bytes": 17121
+  },
+  "PaperVIResearch/ExceptionalModel.lean": {
+    "sha256": "0d1941f8cbdaf3d0c74e29757132981cafd73f70a85e4a916d4a18e3fb6a7bd1",
+    "bytes": 6473
+  },
+  "PaperVIResearch/ExceptionalSetup.lean": {
+    "sha256": "fe2f250565142e1de416a65428a5bf31c5e2e747bfc06ab87c2781f6612747f7",
+    "bytes": 15207
+  },
+  "PaperVIResearch/ExceptionalTheorem.lean": {
+    "sha256": "dc7f8077b55e5bd705916b9c987736e050415e341b47886629278faa217e6701",
+    "bytes": 13147
+  },
+  "PaperVIResearch/ExceptionalTriangles.lean": {
+    "sha256": "708505692cf442313bd8a415ddfa0a2ca6ae7e63fa956bb9c8107a737569129b",
+    "bytes": 10431
+  },
+  "PaperVIResearch/GreedyCount.lean": {
+    "sha256": "402403437cc51171f1416bab3b95c8edb17519df2fd65bd956b38ac057b549f4",
+    "bytes": 7659
+  },
+  "PaperVIResearch/Intrinsic.lean": {
+    "sha256": "81fa069b2135449328c3b3a7bbfcb9896c104659f884697c5df9a25dc00e85a2",
+    "bytes": 5386
+  },
+  "PaperVIResearch/PhysicalExtension.lean": {
+    "sha256": "0ae2326481a3a93782ea5eccdd9df3c62a5b466cfdfebd0c82a7f974090b7026",
+    "bytes": 8455
+  },
+  "PaperVIResearch/PhysicalRecourse.lean": {
+    "sha256": "b6ee8c7fbf99bb146dae7a07358ef1b0a192462aeb2fcfda153785af8cea8d22",
+    "bytes": 19475
+  },
+  "PaperVIResearch/PrescribedCount.lean": {
+    "sha256": "0a796a0093ae4a084101edb987add241a3a8dc328a612d0621b0053152f51826",
+    "bytes": 13687
+  },
+  "PaperVIResearch/ResidualCount.lean": {
+    "sha256": "be1cee53e2225fa7c3a4e180a1566a744c9db04211f05a5432ce03c735ad0d88",
+    "bytes": 15480
+  },
+  "PaperVIResearch/SecondExtremal.lean": {
+    "sha256": "20a0d4f4d1eafadd99fd742948d3247220705a4f12562b1007d4edba0266430a",
+    "bytes": 2055
+  },
+  "PaperVIResearch/VizingExtraction.lean": {
+    "sha256": "ca404c7ff785052fbc460b81124bc53ad4b51b0c7a58e0016231e4ec38613885",
+    "bytes": 3733
+  },
+  "PaperVIResearch.lean": {
+    "sha256": "f3e089158cd9f51aaf9a68b55a489301b47beabc09c5b055e037393a20cb355f",
+    "bytes": 1215
+  },
+  "Solution.lean": {
+    "sha256": "18cc5770609905d7dfba7d36f0de8f48db31e723751a6216459717e90a45cf2f",
+    "bytes": 1495
+  }
+}

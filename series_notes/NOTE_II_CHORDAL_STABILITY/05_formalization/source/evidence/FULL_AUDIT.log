@@ -1,0 +1,4 @@
+MODULE_PRESENCE_PASS expected=343 missing=0
+FREEZE_FULL_AUDIT declarations=7393 nonstandard=0 modules=343 visited=10976
+AXIOM_UNION [Quot.sound, Classical.choice, propext]
+AUDIT_START declarations=7393

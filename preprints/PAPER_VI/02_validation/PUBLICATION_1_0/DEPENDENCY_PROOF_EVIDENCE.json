@@ -1,0 +1,32 @@
+{
+  "status": "PROVED_DEPENDENCIES_CHECKED",
+  "scope": "Actual imported formalization files, not merely declarations in a registry. Registration provenance is distinct from the present source build and axiom audit. Ordinary Vizing is not an equitable list-completion theorem.",
+  "dependencies": [
+    {
+      "theorem": "Häggkvist–Janssen",
+      "source": "Solution.lean",
+      "line": 33,
+      "declaration": "HaggkvistJanssen.exists_listEdgeColoring_complete",
+      "sha256": "18cc5770609905d7dfba7d36f0de8f48db31e723751a6216459717e90a45cf2f",
+      "inspection": "Wrapper applies the proved LeanPool theorem, not an axiom."
+    },
+    {
+      "theorem": "Häggkvist–Janssen proof",
+      "source": "LeanPool/ListEdgeColoringComplete/Main.lean",
+      "line": 88,
+      "declaration": "LeanPool.ListEdgeColoringComplete.exists_listEdgeColoring_complete",
+      "sha256": "9e903ff402fdf5f06de520e49021f1a3f5579d856c6feb399afbdaf2493398fd",
+      "inspection": "Finite color encoding, polynomial certificate and Combinatorial Nullstellensatz produce and decode a legal list edge coloring."
+    },
+    {
+      "theorem": "Vizing",
+      "source": "PaperV/Vizing/Main.lean",
+      "line": 136,
+      "declaration": "Vizing.lineGraph_colorable",
+      "sha256": "f563dcd5520a7a9286f16f5cac5a250d1d39df64abd4c529497d685ba6ad3dc2",
+      "inspection": "Invokes PEC.exists_total from the proved finite extension construction; fan/Kempe arguments occur in its proved local dependencies."
+    }
+  ],
+  "canonical_validation": "05_formalization/lean/FREEZE_VALIDATION.json",
+  "nonstandard_axioms": 0
+}

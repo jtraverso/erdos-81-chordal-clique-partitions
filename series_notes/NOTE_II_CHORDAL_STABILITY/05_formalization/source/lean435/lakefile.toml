@@ -1,0 +1,47 @@
+name = "chordal_stability_note"
+version = "0.1.0"
+defaultTargets = ["ChordalStabilityNote"]
+
+[leanOptions]
+relaxedAutoImplicit = false
+linter.unusedSimpArgs = false
+
+[[require]]
+name = "erdos81_application_note"
+path = "vendor/iv"
+
+[[require]]
+name = "paper_vi_integrated"
+path = "vendor/vi"
+
+[[lean_lib]]
+name = "ChordalStabilityNote"
+moreLeanArgs = ["-j", "1", "-s", "32768"]
+
+[[lean_lib]]
+name = "FarGap"
+moreLeanArgs = ["-j", "1", "-s", "32768"]
+
+[[lean_lib]]
+name = "GlobalAssembly"
+moreLeanArgs = ["-j", "1", "-s", "32768"]
+
+[[lean_lib]]
+name = "GraphWindow"
+moreLeanArgs = ["-j", "1", "-s", "32768"]
+
+[[lean_lib]]
+name = "NearAssembly"
+moreLeanArgs = ["-j", "1", "-s", "32768"]
+
+[[lean_lib]]
+name = "PaidRootAssembly"
+moreLeanArgs = ["-j", "1", "-s", "32768"]
+
+[[lean_lib]]
+name = "PartitionAdapter"
+moreLeanArgs = ["-j", "1", "-s", "32768"]
+
+[[lean_lib]]
+name = "WindowArithmetic"
+moreLeanArgs = ["-j", "1", "-s", "32768"]

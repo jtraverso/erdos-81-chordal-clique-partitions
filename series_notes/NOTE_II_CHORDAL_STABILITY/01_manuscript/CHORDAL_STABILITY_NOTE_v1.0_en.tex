@@ -1,0 +1,408 @@
+% Adaptación del preámbulo de Paper III v1.5 español; no plantilla standalone de Pandoc.
+\documentclass[english,11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\newlength{\LeanCharWidth}
+\usepackage{amsmath,amssymb}
+\usepackage[english]{babel}
+\usepackage{microtype,parskip}
+\usepackage{graphicx,float,caption}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref,bookmark}
+\usepackage{etoolbox,needspace}
+\setcounter{secnumdepth}{-\maxdimen}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}\small}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{4\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,pdflang={en-US}}
+\title{Exact stability for nearly extremal chordal clique partitions}
+\author{Juan Pablo Traverso Gianini\\
+Independent researcher, Santiago, Chile}
+\date{}\begin{document}\raggedbottom\maketitle
+Series research note II, accompanying Papers IV and VI\\
+Preprint 1.0 --- 18 October 2026
+
+\subsection{Abstract}\label{abstract}
+
+Let \(M(n)=\lfloor n(n+1)/6\rfloor\), and let
+\(d=M(n)-\operatorname{cp}(G)\) be the deficit of a chordal graph. We
+combine the structural theorem of Paper IV with the parametric local
+formula of Paper VI. For sufficiently large order and
+\(0\le d\le n/2000\), the vertices of degree greater than \(n/2\) form a
+clique \(P\). Relative to this clique, the deficit is exactly the sum of
+the loss caused by its size, the number of missing cross edges, and
+twice the number of exterior edges. In particular, the graph differs
+from the associated complete split graph in at most \(d\) edges, and an
+optimal partition uses cliques of order at most four. The proof first
+obtains a coarse edit bound from IV, uses it to enter the local regime
+of VI, and then recovers the exact formula. This is an application of
+the two papers, with a separate formal companion.
+
+A clique partition covers every edge exactly once by cliques of order at
+least two. Its minimum number of blocks is denoted by
+\(\operatorname{cp}(G)\). We write \(\operatorname{cp}_{\le4}(G)\) when
+blocks are restricted to order at most four. All graphs are finite and
+simple. For disjoint vertex sets \(P,O\), the notation \(K_P\vee I_O\)
+denotes the complete split graph with clique \(P\) and independent set
+\(O\).
+
+The distinction between a local formula and a structural theorem matters
+here. Paper VI gives exact attainment once the graph is locally close to
+a suitable complete split graph. Paper IV supplies that reference clique
+for a nearly extremal chordal graph. The present note records how the
+two statements combine and keeps the resulting deficit identity
+explicit. The eventual Erdős 81 bound is already established in IV and
+in the other developments compared in its Section 8. This note concerns
+the stated stability consequence, not a new solution of that problem.
+
+\subsection{1. Exact stability in a linear deficit
+window}\label{exact-stability-in-a-linear-deficit-window}
+
+Put
+
+\[
+M(n)=\left\lfloor\frac{n(n+1)}6\right\rfloor,
+\qquad B(n,p)=p(n-p)-\binom p2,
+\qquad \eta=10^{-16}.
+\]
+
+\Needspace{6\baselineskip}
+\textbf{Theorem 1.1.} Using the uniform far-rounding and near-structure
+theorems of Paper IV stated below, there exists an integer \(N\) such
+that every chordal graph \(G\) of order \(n\ge N\), with deficit
+
+\[
+d=M(n)-\operatorname{cp}(G),\qquad 0\le d\le n/2000,
+\]
+
+has the following description. The set
+
+\[
+P=\{v:2d_G(v)>n\}
+\]
+
+is a clique. Write \(p=|P|\), \(O=V(G)\setminus P\), let \(A\) count
+missing edges between \(P\) and \(O\), and put \(m=e(G[O])\). Then
+
+\[
+\boxed{\operatorname{cp}(G)=\operatorname{cp}_{\le4}(G)
+=B(n,p)-A-2m,}
+\tag{1}
+\] \[
+\boxed{d=\bigl(M(n)-B(n,p)\bigr)+A+2m,}
+\tag{2}
+\] \[
+\boxed{|E(G)\triangle E(K_P\vee I_O)|=A+m\le d.}
+\tag{3}
+\]
+
+In addition,
+
+\[
+(6p-2n-1)^2\le24d+25.
+\tag{4}
+\]
+
+Equation (2) separates the deficit into quantities that can be read from
+the graph once the clique is known. The first term measures the effect
+of its size; the other terms count actual missing cross edges and
+exterior edges. Equation (3) then bounds the total number of edits to
+the associated complete split graph. The degree test identifies the same
+clique without requiring a search over vertex bipartitions.
+
+The size \(p\) need not be a maximizing size, such as
+\(\lfloor(n+1)/3\rfloor\). This is why the parametric Proposition 2.1 of
+VI, rather than its balanced Theorem A alone, is needed.
+
+\subsection{2. Structural and rounding
+inputs}\label{structural-and-rounding-inputs}
+
+Let \(W^*(G)\) be the fractional maximum gain of a packing of triangles
+and copies of \(K_4\), with gains 2 and 5. Write \(F_4(G)=e(G)-W^*(G)\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Uniform rounding {[}1, Theorem 3.1{]}.} For \(\zeta=\eta/2\),
+  once \(n\ge N(\eta/2)\), there is a physical packing whose completion
+  into cliques has at most \[
+  F_4(G)+(\eta/2)n^2
+  \] blocks. This input applies uniformly to the graphs in question, not
+  only to a preselected fractional optimizer.
+\item
+  \textbf{Near-structure witness {[}1, Proposition 4.3, Theorem 5.0 and
+  Lemma 5.3{]}.} If \(n\ge4\cdot10^{12}\), \(G\) is chordal and \[
+  F_4(G)\ge n^2/6-\eta n^2,
+  \] IV produces a literal clique root \(P\), a physical packing and its
+  completed partition of size \(L\), with literal exterior-edge and
+  missing-spoke counts \(m,A\), satisfying \[
+  L\le B(n,p)-m/20-A/2.
+  \tag{5}
+  \]
+\end{enumerate}
+
+In the first input, completing a packing means covering every unused
+edge individually. The resulting object is a partition of the original
+graph, so its number of blocks is an upper bound for
+\(\operatorname{cp}(G)\). In the second input, the root, packing,
+partition and counts belong to a single witness. We will use its
+partition to control the counts, and its root to apply VI.
+
+The counts in this witness are the actual exterior edges and missing
+cross edges of its regularized clique root. Equation (5.15) of IV gives
+(5); its stronger form (5.15a) concerns the same witness. This physical
+identification is needed before the local theorem of VI can be applied.
+The separate formal companion records the source interfaces.
+
+\subsection{3. The order threshold}\label{the-order-threshold}
+
+Choose \(N\) so that, for every \(n\ge N\),
+
+\[
+n\ge N(\eta/2),\qquad n\ge4\cdot10^{12},\qquad n\ge100,
+\qquad \frac\eta2n^2>\frac n{2000}+1.
+\tag{6}
+\]
+
+Such an \(N\) exists because \(\eta>0\). For the purely numerical last
+condition, \(n\ge2\cdot10^{13}\) is already sufficient; the unknown
+uniform-rounding threshold may be larger. This is an eventual theorem,
+not an all-orders numerical assertion.
+
+\subsection{4. Proof}\label{proof}
+
+We first exclude the far regime. We then use the near witness to bound
+the number of edited edges and the size of its clique root. Those two
+bounds verify the hypotheses of VI; only after applying its exact
+formula do we improve the edit bound and identify the root by degrees.
+
+Suppose first that \(F_4(G)<n^2/6-\eta n^2\). Uniform rounding gives a
+physical clique partition with fewer than
+
+\[
+\frac{n^2}{6}-\frac\eta2n^2
+<\frac{n^2}{6}-\frac n{2000}-1
+\le M(n)-d=\operatorname{cp}(G)
+\]
+
+blocks, a contradiction. The last weak inequality uses
+\(M(n)\ge n^2/6-1\) and \(d\le n/2000\). Thus the near-structure input
+applies.
+
+Use its root \(P\), its actual counts \(m,A\) and its partition of size
+\(L\). The square identity gives \(B(n,p)\le Q(n)=(2n+1)^2/24\). For
+integer orders, \(Q(n)-M(n)\) is \(1/24\) when \(n\equiv0,2\pmod3\), and
+\(9/24\) when \(n\equiv1\pmod3\). Thus \(Q(n)<M(n)+1\); since \(B(n,p)\)
+is an integer, \(B(n,p)\le M(n)\). Hence
+
+\[
+M(n)-d=\operatorname{cp}(G)\le L
+\le B(n,p)-m/20-A/2\le M(n)-m/20-A/2.
+\]
+
+The first two conclusions below follow by comparing the left and right
+sides of this chain. For the third, multiply the bound \(m/20+A/2\le d\)
+by 20 and use \(A\ge0\):
+
+\[
+B(n,p)\ge M(n)-d,\qquad m/20+A/2\le d,
+\qquad m+A\le20d.
+\tag{7}
+\]
+
+Because this root is a clique, the complete split graph
+\(S=K_P\vee I_O\) differs from \(G\) in exactly \(m+A\) edges. Its
+maximum modification degree therefore satisfies
+
+\[
+h=\Delta(G\triangle S)\le m+A\le20d\le n/100.
+\tag{8}
+\]
+
+To control the root size, set \(Q(n)=(2n+1)^2/24\). Completing the
+square gives
+
+\[
+Q(n)-B(n,p)=\frac{(6p-2n-1)^2}{24},
+\qquad 0<Q(n)-M(n)<25/24.
+\]
+
+The square identity measures the distance of the root size from the
+center of the split parabola. By (7), \(M(n)-B(n,p)\le d\); adding the
+floor error \(Q(n)-M(n)\) and multiplying by 24 proves (4). The bound on
+that floor error follows from \(Q(n)=n(n+1)/6+1/24\) and the defining
+property of the floor. Since \(d\le n/2000\) and \(n\ge100\),
+
+\[
+24d+25\le0.012n+25\le n^2/100.
+\]
+
+Taking square roots gives \(|6p-2n-1|\le n/10\). Thus
+\(1.9n+1\le6p\le2.1n+1\). For \(n\ge100\), these inequalities imply the
+convenient coarse bounds
+
+\[
+3n/10\le p\le2n/5.
+\tag{9}
+\]
+
+Put \(q=n-p\). Equations (8)--(9) yield
+
+\[
+q-p=n-2p\ge n/5\ge18h,
+\qquad 4p-q=5p-n\ge n/2\ge36h.
+\]
+
+These are precisely
+
+\[
+p+18h\le q\le4p-36h,
+\]
+
+the hypotheses of VI Proposition 2.1 with its parameter
+\(t_{\rm par}=4\). Indeed, its inequalities are
+\(p+(4t_{\rm par}+2)h\le q\) and
+\(q+t_{\rm par}(t_{\rm par}+5)h\le t_{\rm par}p\). The required
+positivity of the core and the condition \(q\ge p\) follow from (9) and
+the first inequality. The root has no missing internal edges. The local
+formula is therefore \(pq-\binom p2-A-2m\), which is (1). Subtracting it
+from \(M(n)\) gives (2). All three summands in (2) are nonnegative, so
+\(A+m\le A+2m\le d\), proving (3). Notice that the initial bound \(20d\)
+was only an entry budget; exact attainment improves it to \(d\).
+
+It remains to check that the root just used is the set specified in the
+theorem. A vertex of the clique has degree \(n-1\) in the complete split
+reference and loses at most \(h\) incident edges. An exterior vertex has
+reference degree \(p\) and gains at most \(h\). Thus, for \(a\in P\) and
+\(x\in O\), the modification-degree bounds give
+
+\[
+d_G(a)\ge n-1-h\ge0.99n-1>n/2,
+\qquad d_G(x)\le p+h\le0.41n<n/2.
+\]
+
+Thus this same root is exactly the degree-defined set in the statement.
+This proves the theorem.
+
+\subsection{5. Relation to the series}\label{relation-to-the-series}
+
+The existence of the clique root and the exclusion of the far regime
+come from Paper IV. The exact formula in the resulting neighborhood
+comes from Paper VI. The initial bound \(A+m\le20d\) pays for entry into
+that neighborhood; exact attainment then improves it to \(A+m\le d\).
+The abstract transfer inequality of Paper V does not supply the
+structural root. Its application to the eventual Erdős 81 bound is
+developed in the separate IV--V note.
+
+When \(d=0\), equation (2) forces \(A=m=0\) and \(B(n,p)=M(n)\). Thus
+the graph is complete split, with a maximizing clique size. That
+classification is already established in IV {[}1, Corollary 6.2{]} and
+Okechukwu {[}4, Corollary 1.2{]}. The present note records an exact
+deficit identity and degree recognition throughout the stated linear
+window.
+
+Okechukwu {[}4, Theorem 1.3{]} proves qualitative stability for graphs
+with sublinear rooted simplicial defect; Section 7 asks for a
+quantitative relation between the partition deficit and edit distance.
+Paper IV {[}1, Theorem 6.1{]} already provides a linear edit bound to an
+associated complete split graph and distinguishes that graph from one
+with an optimizing core size. The present application combines IV with
+VI to obtain the coefficient-one bound (3) and the exact identity (2) in
+the smaller window \(d\le n/2000\). Its edit distance is to the
+degree-identified graph \(K_P\vee I_O\), whose core size need not
+maximize \(B(n,p)\). It therefore does not assert an optimal
+quantitative rate for the entire class considered in {[}4{]}. The
+original chordal clique-partition problem is due to Erdős, Ordman and
+Zalcstein {[}5{]}.
+
+\subsection{Formalization and
+reproducibility}\label{formalization-and-reproducibility}
+
+The separate Lean 4.35 project proves Theorem 1.1 from the proved inputs
+of IV and VI. The formal companion identifies its final source freeze,
+the public endpoint and physical adapters, the canonical root build and
+axiom audits, and the pinned reproduction commands. Its selected
+dependency chain excludes IV's final global-bound theorem while
+retaining IV's structural and rounding constructors. The source and
+audit records distinguish this project's eight modules from the exact
+upstream source cuts.
+\href{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_II_CHORDAL_STABILITY/05_formalization}{Sources
+and formal companion}.
+
+\subsection{Acknowledgments}\label{acknowledgments}
+
+The author is deeply grateful to his wife María Paz and his children
+Lucas, Juan Cristóbal, Francisca, Raimundo, and Benjamín for their love,
+patience, and support.
+
+\subsection{Use of artificial intelligence and computational
+tools}\label{use-of-artificial-intelligence-and-computational-tools}
+
+In the source papers used here, Claude, by Anthropic, and ChatGPT/Codex,
+by OpenAI, were used to explore and check arguments and to prepare the
+manuscripts. Aristotle, by Harmonic, contributed to exploring
+approaches, searching for counterexamples, developing proofs, and
+formalizing and reviewing them in Lean; its role was not limited to
+translating finished proofs.
+
+For this note, ChatGPT/Codex assisted in assembling and checking the
+argument, developing the Lean interfaces, and preparing the manuscript
+and audit materials. Aristotle contributed a separate formalization
+proposal.
+
+Certo and Jacobian were the computational tools used in the underlying
+research program to explore instances, check identities, and assess
+candidates, as disclosed in Paper IV. Their use is acknowledged
+separately from the logical dependencies of the formal proof. The finite
+regression checks performed specifically for this note use the
+exact-arithmetic scripts identified in the accompanying audit.
+Computations were reviewed within their stated scope; a finite search
+does not replace a universal proof.
+
+\Needspace{3\baselineskip}The author remains responsible for the arguments, citations, code, and
+presentation. No AI system is listed as an author.
+
+\subsection{References}\small\label{references}
+
+{[}1{]} J. P. Traverso Gianini, \emph{Clique partitions with rooted
+simplicial defect: quantitative stability and sharp eventual bounds},
+Paper IV, preprint v1.23, October 1, 2026.
+\href{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/054593443bdece587dda9686a411bb18b0ca34c5/preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_en.md}{Manuscript
+and materials}. Deposit:
+\href{https://doi.org/10.5281/zenodo.23089131}{doi:10.5281/zenodo.23089131}.
+
+{[}2{]} J. P. Traverso Gianini, \emph{Optimal clique partitions under
+local perturbations}, Paper VI, Preprint 1.0. The proof uses the frozen
+parametric source interface identified in the companion, October 18,
+2026.
+\href{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI}{Manuscript
+and materials}.
+
+{[}3{]} J. P. Traverso Gianini, \emph{From realizability certificates to
+the Erdős 81 bound}, separate research note accompanying Papers IV and
+V, Preprint 1.0, October 18, 2026.
+\href{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/series_notes/NOTE_I_ERDOS81_TRANSFER}{Manuscript
+and materials}.
+
+{[}4{]} O. Okechukwu, \emph{Clique partitions and bounded simplicial
+defect}, arXiv:2609.20871v1 (2026).
+\url{https://arxiv.org/abs/2609.20871v1}.
+
+{[}5{]} P. Erdős, E. T. Ordman, and Y. Zalcstein, ``Clique partitions of
+chordal graphs,'' \emph{Combinatorics, Probability and Computing}
+\textbf{2} (1993), 409--415.
+\url{https://doi.org/10.1017/S0963548300000808}.
+
+\end{document}

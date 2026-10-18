@@ -1,0 +1,166 @@
+{
+  "exact_dual": [
+    {
+      "resource": [
+        "pair",
+        0,
+        1
+      ],
+      "price": "1"
+    },
+    {
+      "resource": [
+        "pair",
+        0,
+        2
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "pair",
+        0,
+        3
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "pair",
+        0,
+        4
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "pair",
+        0,
+        5
+      ],
+      "price": "1"
+    },
+    {
+      "resource": [
+        "pair",
+        3,
+        5
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "pair",
+        4,
+        5
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "host",
+        1,
+        3
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "host",
+        3,
+        2
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "host",
+        3,
+        3
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "host",
+        3,
+        4
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "host",
+        4,
+        1
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "host",
+        4,
+        2
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "host",
+        4,
+        4
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "host",
+        5,
+        3
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "host",
+        5,
+        4
+      ],
+      "price": "1/2"
+    },
+    {
+      "resource": [
+        "host",
+        7,
+        4
+      ],
+      "price": "1/2"
+    }
+  ],
+  "dual_value": "19/2",
+  "number_of_maximum_packings": 70,
+  "beta": 2,
+  "beta_witness": {
+    "packing": [
+      4,
+      6,
+      9,
+      12,
+      15,
+      18,
+      21,
+      23,
+      26
+    ],
+    "uncovered_pairs": [
+      [
+        3,
+        4
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  }
+}

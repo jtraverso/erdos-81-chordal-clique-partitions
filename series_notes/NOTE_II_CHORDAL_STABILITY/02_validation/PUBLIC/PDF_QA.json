@@ -1,0 +1,93 @@
+{
+  "status": "PASS_ALL_FINAL_PAGES",
+  "total_pages": 19,
+  "documents": [
+    {
+      "pdf_sha256": "dc04832b7afc04ec8e81f1b351765e7a520dd0d483a67ad74e85e9828e7e2d4d",
+      "md_sha256": "5bc47e473946f3946014c4b5d578a44029e6ca53c55bed60554934aab063867b",
+      "tex_sha256": "e90942e6c4e8e3dcb72686f8c4dce28d4ebb5d52becfc94f9a2b1401859abf93",
+      "pages": 5,
+      "renderer": "PyMuPDF 129.6 dpi",
+      "visual_inspection": "PASS_ALL_FINAL_PAGES",
+      "compilation": "Two Tectonic passes, exit0",
+      "layout_authority": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_en.tex",
+      "layout_authority_sha256": "09315d2c719adf9a3def8be20d62fd36d78e8b49fbea0c13e0b26db0cbb28c0b",
+      "role": "main",
+      "language": "en",
+      "pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "method": "All pages inspected in rendered contact sheets, with full-resolution inspection of changed mathematical, reference, title and source-package pages. No clipping, missing glyphs, overlaps or unreadable equations found.",
+      "pdf": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_en.pdf"
+    },
+    {
+      "pdf_sha256": "5925f0aadf9989e3199fdbd35f26bfeb5be74474d000507b48deff3a4db3fdf9",
+      "md_sha256": "b65bad59e13ece51571814c92dd22e3868415cd2e70db0bc1b7a7691def6169e",
+      "tex_sha256": "f0b5029066312b12b942c2e3fd858b95eee1a0f25a1facc8484621ecfd79a456",
+      "pages": 6,
+      "renderer": "PyMuPDF 129.6 dpi",
+      "visual_inspection": "PASS_ALL_FINAL_PAGES",
+      "compilation": "Two Tectonic passes, exit0",
+      "layout_authority": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_es.tex",
+      "layout_authority_sha256": "28f4be8737a65a474cb422eef39b42f821ba12614749cdfcb261ac001f0dd62c",
+      "role": "main",
+      "language": "es",
+      "pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "method": "All pages inspected in rendered contact sheets, with full-resolution inspection of changed mathematical, reference, title and source-package pages. No clipping, missing glyphs, overlaps or unreadable equations found.",
+      "pdf": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.pdf"
+    },
+    {
+      "pdf_sha256": "58dbce77cf9bf305e63360b7bfbbd53e7ad9c27c8337ca78d4d40f56aaa9c592",
+      "md_sha256": "320bce1490dfc87c3eba2c5a5ca262d3d8dc0d44c8c6e68032ec2fba460ba05c",
+      "tex_sha256": "5a8bcd2edfebbe750bde1a8723e2799cab5a22d39bcbdaca89a8c466e7a38501",
+      "pages": 4,
+      "renderer": "PyMuPDF 129.6 dpi",
+      "visual_inspection": "PASS_ALL_FINAL_PAGES",
+      "compilation": "Two Tectonic passes, exit0",
+      "layout_authority": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_en.tex",
+      "layout_authority_sha256": "09315d2c719adf9a3def8be20d62fd36d78e8b49fbea0c13e0b26db0cbb28c0b",
+      "role": "companion",
+      "language": "en",
+      "pages_viewed": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "method": "All pages inspected in rendered contact sheets, with full-resolution inspection of changed mathematical, reference, title and source-package pages. No clipping, missing glyphs, overlaps or unreadable equations found.",
+      "pdf": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    {
+      "pdf_sha256": "ca68c3c0b993efae5b8c53602becb11d09d54c414bf0a38f5942e69271de48dd",
+      "md_sha256": "accf344b6849eca5f1199a6d03ac7e7c42501ef0c1c545032b726167ec2a70cd",
+      "tex_sha256": "fd87f57495493031f86c3b601658c3b4db1c723044ae7832b0bf8ba161a54e28",
+      "pages": 4,
+      "renderer": "PyMuPDF 129.6 dpi",
+      "visual_inspection": "PASS_ALL_FINAL_PAGES",
+      "compilation": "Two Tectonic passes, exit0",
+      "layout_authority": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_es.tex",
+      "layout_authority_sha256": "28f4be8737a65a474cb422eef39b42f821ba12614749cdfcb261ac001f0dd62c",
+      "role": "companion",
+      "language": "es",
+      "pages_viewed": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "method": "All pages inspected in rendered contact sheets, with full-resolution inspection of changed mathematical, reference, title and source-package pages. No clipping, missing glyphs, overlaps or unreadable equations found.",
+      "pdf": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf"
+    }
+  ]
+}

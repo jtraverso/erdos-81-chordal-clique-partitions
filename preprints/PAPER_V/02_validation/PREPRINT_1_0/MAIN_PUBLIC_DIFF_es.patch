@@ -1,0 +1,121 @@
+--- PAPER_V_v1.10_es.md
++++ PAPER_V_preprint_v1.0_es.md
+@@ -5,7 +5,7 @@
+ [jtraverso@gmail.com](mailto:jtraverso@gmail.com)  
+ [ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
+ 
+-**Paper V de la serie — borrador de trabajo v1.10**  
++**Paper V de la serie — Preprint 1.0**  
+ **Fecha:** 18 de octubre de 2026  
+ 
+ **MSC 2020:** Principal 05C70; secundarias 05C15, 05C85, 90C27.
+@@ -68,13 +68,13 @@
+ 
+ Wallis y Zhang [31, Proposición 3.2] establecieron una conexión exacta anterior entre particiones en cliques y un déficit de colorabilidad. Para un join con un conjunto independiente expresan el número de partición mediante el máximo orden total de una subfamilia coloreable de cliques del núcleo, descontando el coste de la partición del núcleo. Para particiones en aristas y triángulos en su marco subcúbico, su análisis separa además costes de triángulos y de eliminación. Es un antecedente concreto de la contabilidad de defectos mediante colorabilidad; este artículo estudia certificados ponderados de transferencia y realización en un sistema objetivo fijo, junto con las aplicaciones a copias y asignaciones a anfitriones.
+ 
+-El Paper IV [25] ya establece la cota de Erdős 81 que motivó esta serie. El presente artículo estudia mecanismos generales de empaquetamiento y realización finitos, con los defectos de colorabilidad y realizabilidad como cantidades que miden la pérdida entre representaciones.
++El Paper IV [25] demuestra para todo orden la cota \(c_4(G)\le M(n)+b\) en grafos cordales, con una constante absoluta \(b\), y el máximo exacto \(M(n)=\lfloor n(n+1)/6\rfloor\) para todos los órdenes suficientemente grandes. Esto implica la cota \(n^2/6+O(n)\) planteada en el problema 81 de Erdős [14]; no afirma \(b=0\) en todos los órdenes. Okechukwu [32, Teorema 1.1 y Corolario 1.2] también demuestra la cota para todo orden salvo una constante aditiva y el valor extremal exacto eventual. Aquí no se reivindica prioridad para esas conclusiones extremales. El presente artículo estudia mecanismos generales de empaquetamiento y realización finitos, con los defectos de colorabilidad y realizabilidad como medidas de la pérdida entre representaciones.
+ 
+ Dentro de la serie Erdős #81 [13,14], los Papers I y II estudian funcionales fraccionales de empaquetamiento y cubrimiento de triángulos [2,4], y el Paper III demuestra un resultado con error lineal para grafos split [5]. El Paper V utiliza la operación de copia del Paper II y da una demostración, desde el lado del empaquetamiento, de su desigualdad de copia fraccional. La identidad \(\nu_3^*=\tau_3^*\) es dualidad finita de programación lineal. La afirmación entera de copia es la contribución de la sección sobre copias. En las demostraciones que siguen no se utiliza ningún teorema del Paper III ni ningún teorema de redondeo asintótico.
+ 
+ La nota de investigación IV–V que acompaña a este trabajo [24] da un ensamblaje separado, basado en certificados, de esa cota ya establecida de Erdős 81 mediante la transferencia de clases realizables. Completar un empaquetamiento físico de triángulos/\(K_4\) da \(c_4(G)\le e(G)-L+\rho\), donde \(L\) es la ganancia de referencia y \(\rho\) el coste normalizado del certificado. El redondeo mixto y los constructores casi extremales del Paper IV [25] proporcionan certificados que se ajustan al objetivo \(M(n)=\lfloor n(n+1)/6\rfloor\) para grafos cordales suficientemente grandes, con una corrección aditiva absoluta para los órdenes restantes. Esa aplicación conserva como resultado demostrado la localización estructural de IV; la desigualdad de transferencia no establece por sí sola el coste de realización requerido. Su demostración y su proyecto formal independiente se mantienen en la nota, en lugar de incorporarse al argumento principal de este trabajo.
+ 
+-Las Secciones 2–4 presentan las afirmaciones de transferencia y realización. La Sección 5 construye realizadores en anfitriones. Las Secciones 6–7 establecen las aplicaciones de copia y programación lineal; la Sección 8 presenta la construcción SEAL y sus certificados. La Sección 9 registra obstrucciones finitas a afirmaciones más fuertes. El cálculo estructural adicional y el material de incidencias de recursos se conservan en un suplemento matemático separado. El teorema abstracto de transferencia no proporciona por sí solo los resultados estructurales necesarios para la aplicación cordal de [24].
++Las Secciones 2–4 presentan las afirmaciones de transferencia y realización. La Sección 5 construye realizadores en anfitriones. Las Secciones 6–7 establecen las aplicaciones de copia y programación lineal; la Sección 8 presenta la construcción SEAL y sus certificados. La Sección 9 registra obstrucciones finitas a afirmaciones más fuertes. Las interfaces adicionales del cálculo estructural y de incidencias de recursos se enumeran en la Sección 6 del companion formal. El teorema abstracto de transferencia no proporciona por sí solo los resultados estructurales necesarios para la aplicación cordal de [24].
+ 
+ ## 2. Sistemas de conflictos y relajaciones dominadas por recursos
+ 
+@@ -92,7 +92,7 @@
+ 
+ el número de transversal de ciclos impares.
+ 
+-Para \(q=2\), \(D_2(H)\) es el defecto de colorabilidad de Dol'nikov [15]. Para \(q\) general, \(D_q(H)\) coincide con el defecto de \(q\)-colorabilidad \(\mathrm{cd}^q(H)\) de Kříž [16] (véase también Ziegler [17]) cuando \(H\) se considera un hipergrafo 2-uniforme. Conservamos la notación \(D_q\) para destacar su papel como defecto por eliminación de vértices en las cotas de transferencia. En particular, \(D_1(H)=|V(H)|-\alpha(H)\). No se reivindica novedad para el parámetro en sí ni para el cálculo elemental conservado en el suplemento matemático.
++Para \(q=2\), \(D_2(H)\) es el defecto de colorabilidad de Dol'nikov [15]. Para \(q\) general, \(D_q(H)\) coincide con el defecto de \(q\)-colorabilidad \(\mathrm{cd}^q(H)\) de Kříž [16] (véase también Ziegler [17]) cuando \(H\) se considera un hipergrafo 2-uniforme. Conservamos la notación \(D_q\) para destacar su papel como defecto por eliminación de vértices en las cotas de transferencia. En particular, \(D_1(H)=|V(H)|-\alpha(H)\). No se reivindica novedad para el parámetro en sí ni para el cálculo elemental enumerado en la sección de resultados auxiliares del companion formal.
+ 
+ **Definición 2.4 (estructura de recursos y programa lineal de recursos).** Un sistema de conflictos tiene *estructura de recursos* si existe un conjunto finito \(\mathcal R\) y una aplicación \(\rho:\mathcal O\to 2^{\mathcal R}\) tales que dos objetos distintos están en conflicto si y solo si sus conjuntos de recursos se intersecan. El poliedro de capacidades de recursos es
+ 
+@@ -122,7 +122,7 @@
+ 
+ Un óptimo \(x^*\in P\) es \(1/q\)-entero si \(x_o^*\in\{0,1/q,\ldots,1\}\) para todo \(o\). Cuando la región de capacidades de recursos es acotada, el propio programa lineal de recursos y cualquier refuerzo que conserve los puntos \(0/1\) factibles son dominados por recursos. Que cada objeto tenga un conjunto de recursos no vacío es suficiente para la acotación. Si se permiten conjuntos de recursos vacíos, añadir las cotas \(x_o\le1\) da una relajación acotada con los mismos puntos \(0/1\) factibles.
+ 
+-Las estructuras adicionales de incidencia de recursos se conservan en el suplemento matemático.
++Las estructuras adicionales de incidencia de recursos se describen en la sección de resultados auxiliares del companion formal.
+ 
+ ---
+ 
+@@ -760,7 +760,7 @@
+ 
+ Los ejemplos examinan afirmaciones más fuertes que los resultados de transferencia. Distinguen un residuo no cubierto pequeño, un defecto auxiliar pequeño y una brecha de integralidad pequeña. Ninguna de estas propiedades puede sustituirse por otra sin un argumento adicional, incluso cuando la instancia es finita y su óptimo se conoce exactamente.
+ 
+-Cada elemento que sigue es una afirmación finita que surge de un fortalecimiento natural considerado dentro del programa; ninguno se atribuye a una conjetura publicada anteriormente. Las afirmaciones numéricas están respaldadas por certificados exactos enumerados en el documento de reproducibilidad que acompaña a este trabajo.
++Cada elemento que sigue es una afirmación finita que surge de un fortalecimiento natural considerado dentro del programa; ninguno se atribuye a una conjetura publicada anteriormente. Las afirmaciones numéricas están respaldadas por certificados exactos documentados en el companion formal y computacional y en los archivos de reproducibilidad que acompañan a este trabajo.
+ 
+ ### 9.1 (BK) «una deficiencia pequeña implica ausencia de brecha» — falso
+ 
+@@ -870,7 +870,7 @@
+ 
+ Los resultados exactos de anfitriones conservan su universo de solicitudes y sus hipótesis de listas especificados. SEAL proporciona salidas exactas en esos regímenes e intervalos certificados cuando se proporciona un certificado dual válido. Aquí no se establece ninguna garantía de optimalidad o aproximación para su búsqueda local general. Una pregunta posterior natural es si la reasignación bajo cambios en las listas de anfitriones puede acotarse en función de esos cambios, conservando al mismo tiempo un certificado útil de la calidad de la salida.
+ 
+-**Formalización y reproducibilidad.** El companion separado describe el desarrollo canónico de Lean 4.35, su entrada pública, las correspondencias exactas entre enunciados, el paquete congelado de fuentes y los comandos de reproducción. Los resultados formales incluyen certificación primal–dual, realización compatible, eliminación de frontera unitaria y el presupuesto finito de copia mixta. Las garantías matemáticas de SEAL siguen siendo distintas de la validación de su implementación de referencia y sus certificados computacionales finitos. La aplicación IV–V [24] es un proyecto formal separado. La revisión externa y la prioridad bibliográfica siguen siendo cuestiones separadas de estas comprobaciones.
++**Formalización y reproducibilidad.** El [companion separado](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V/05_formalization) describe el desarrollo canónico de Lean 4.35, su entrada pública, las correspondencias exactas entre enunciados, el paquete congelado de fuentes y los comandos de reproducción. Los resultados formales incluyen certificación primal–dual, realización compatible, eliminación de frontera unitaria y el presupuesto finito de copia mixta. Las garantías matemáticas de SEAL siguen siendo distintas de la validación de su implementación de referencia y sus certificados computacionales finitos. La aplicación IV–V [24] es un proyecto formal separado. La revisión externa y la prioridad bibliográfica siguen siendo cuestiones separadas de estas comprobaciones.
+ 
+ ## Agradecimientos
+ 
+@@ -882,22 +882,22 @@
+ 
+ Certo [26], <https://github.com/jtraverso/certo-math>, y Jacobian [27], <https://github.com/morluto/jacobian>, son las herramientas computacionales usadas para explorar instancias, comprobar identidades y evaluar candidatos. Su uso se declara por separado de las dependencias lógicas de la prueba formal. Los cálculos se revisaron según su alcance; una búsqueda finita no reemplaza una prueba universal.
+ 
+-El autor conserva la responsabilidad por los argumentos, las citas, el código y la presentación. Ningún sistema de IA figura como autor. El borrador queda sujeto a su revisión final.
++El autor conserva la responsabilidad por los argumentos, las citas, el código y la presentación. Ningún sistema de IA figura como autor.
+ 
+ ## Referencias
+ 
+ [1] J. Edmonds, “Maximum matching and a polyhedron with 0,1-vertices,” *Journal of Research of the National Bureau of Standards, Section B: Mathematics and Mathematical Physics* **69B** (1965), 125–130.
+ 
+-[2] J. P. Traverso Gianini, “Affine profile reduction for fractional triangle packings in split graphs” (Paper I in the series), preprint v1.1, July 2026.
++[2] J. P. Traverso Gianini, “Affine profile reduction for fractional triangle packings in split graphs” (Paper I in the series), preprint v1.3 (2026). [Edición depositada](https://doi.org/10.5281/zenodo.23089131).
+ 
+ [3] B. Reed, K. Smith, and A. Vetta, “Finding odd cycle transversals,” *Operations Research Letters*
+ **32** (2004), 299–301.
+ 
+ [4] J. P. Traverso Gianini, “Complete-split extremizers for a fractional triangle-cover
+-functional on chordal graphs” (Paper II in the series), preprint v1.1, August 2026.
++functional on chordal graphs” (Paper II in the series), preprint v1.2 (2026). [Edición depositada](https://doi.org/10.5281/zenodo.23089131).
+ 
+ [5] J. P. Traverso Gianini, “Linear-error clique partitions of split graphs via structured
+-triangle packing” (Paper III in the series), preprint v1.1, July 2026.
++triangle packing” (Paper III in the series), preprint v1.5 (2026). [Edición depositada](https://doi.org/10.5281/zenodo.23089131).
+ 
+ [6] M. Grötschel, L. Lovász, and A. Schrijver, “The ellipsoid method and its consequences in
+ combinatorial optimization,” *Combinatorica* **1** (1981), 169–197.
+@@ -921,8 +921,7 @@
+ 
+ [13] P. Erdős, E. T. Ordman, and Y. Zalcstein, “Clique partitions of chordal graphs,” *Combinatorics, Probability and Computing* **2** (1993), no. 4, 409–415.
+ 
+-[14] T. F. Bloom, “Erdős Problem #81,” *Erdős Problems*, https://www.erdosproblems.com/81, accessed July 6, 2026.
+-
++[14] T. F. Bloom, “Erdős Problem #81,” *Erdős Problems*, <https://www.erdosproblems.com/81>.
+ [15] V. L. Dol'nikov, “A certain combinatorial inequality,” *Siberian Mathematical Journal*
+ **29** (1988), 375–379.
+ 
+@@ -954,12 +953,11 @@
+ 
+ 
+ [24] J. P. Traverso Gianini, *From realizability certificates to the Erdős 81 bound*,
+-separate research note accompanying Papers IV and V, private working manuscript
+-v0.4 and formal companion, October 18, 2026.
++separate research note accompanying Papers IV and V, Preprint 1.0 and formal companion, 2026. [Series repository](https://github.com/jtraverso/erdos-81-chordal-clique-partitions).
+ 
+ [25] J. P. Traverso Gianini, *Clique partitions with rooted simplicial defect:
+ quantitative stability and sharp eventual bounds*, Paper IV, preprint v1.23,
+-October 1, 2026.
++October 1, 2026. [Deposited edition](https://doi.org/10.5281/zenodo.23089131).
+ 
+ [26] J. P. Traverso Gianini, *Certo: computational tools with verifiable certificates*.
+ Software repository, <https://github.com/jtraverso/certo-math>. Historical use is
+@@ -976,3 +974,5 @@
+ [30] G. Stamoulis, “Grouped Color Deletion, Lasserre Exactness and Clique-Sum Locality for Rainbow Matching,” arXiv:2604.25556v1, April 28, 2026. [Versioned preprint](https://arxiv.org/abs/2604.25556v1).
+ 
+ [31] W. D. Wallis and G.-H. Zhang, “On the partition and coloring of a graph by cliques,” *Discrete Mathematics* **120** (1993), 191–203. [DOI](https://doi.org/10.1016/0012-365X(93)90576-F).
++
++[32] O. Okechukwu, “Clique partitions and bounded simplicial defect,” arXiv:2609.20871v1 (2026), Theorem 1.1 and Corollary 1.2. [Versioned preprint](https://arxiv.org/abs/2609.20871v1).

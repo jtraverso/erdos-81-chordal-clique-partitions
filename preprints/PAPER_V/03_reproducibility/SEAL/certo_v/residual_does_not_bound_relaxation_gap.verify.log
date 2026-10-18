@@ -1,0 +1,91 @@
+{
+  "ok": true,
+  "kind": "model",
+  "degree": "complete",
+  "timed_out": false,
+  "partial": [],
+  "assumed": [],
+  "solver_free": true,
+  "method": "",
+  "checks": [
+    {
+      "check": "the assignment satisfies the formula",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "it is about the obligation in residual_does_not_bound_relaxation_gap.py",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "warnings": [],
+  "detail": "",
+  "explained": [
+    {
+      "formula": "nu == cover",
+      "lhs": "0",
+      "op": "==",
+      "rhs": "0",
+      "holds": true,
+      "slack": "0",
+      "active": true
+    },
+    {
+      "formula": "relax >= nu",
+      "lhs": "1/2",
+      "op": ">=",
+      "rhs": "0",
+      "holds": true,
+      "slack": "1/2",
+      "active": false
+    },
+    {
+      "formula": "nu >= 0",
+      "lhs": "0",
+      "op": ">=",
+      "rhs": "0",
+      "holds": true,
+      "slack": "0",
+      "active": true
+    },
+    {
+      "formula": "relax == nu",
+      "lhs": "1/2",
+      "op": "==",
+      "rhs": "0",
+      "holds": true,
+      "fails": true,
+      "by": "1/2"
+    }
+  ],
+  "card": {
+    "kind": "model",
+    "evidence": "counterexample",
+    "conclusion": "",
+    "scope": [],
+    "hypotheses_used": [],
+    "cited": {},
+    "pending": [],
+    "role": null,
+    "link": null,
+    "declared": false,
+    "degree": "complete",
+    "provenance": {
+      "digest": "2debd38eff72ab73",
+      "schema": 5,
+      "schema_known": 5,
+      "produced_by": "0.34.0",
+      "verified_by": "0.34.0",
+      "spec_path": "residual_does_not_bound_relaxation_gap.py",
+      "spec_sha256": "d8c633132f53a015e44689565320013b1ba8d257d3b0a845e8fbc14d1b773ef0",
+      "python": "3.12.10",
+      "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+    },
+    "exact": true,
+    "external": []
+  }
+}
+
+STDERR

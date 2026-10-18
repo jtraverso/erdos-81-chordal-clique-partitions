@@ -1,0 +1,20 @@
+[
+  {
+    "file": "ROOT_BUILD.log",
+    "private_original_sha256": "2e2aa3096f393a405a7741278e4616a274dd651f179dcbafc1f804fea7fa80ba",
+    "public_sha256": "3b26c182852fe9926a99d895b2e43307d32de13b4e15a289781b61efbc398b4c",
+    "path_redactions": false
+  },
+  {
+    "file": "ENDPOINTS.log",
+    "private_original_sha256": "f2cb0d6000015d72469473ddca1e0dccc4c6c0debd845e36d0ebbe485c6644c2",
+    "public_sha256": "c116c130f507e1f904fa9601a52490f7f6b0c9aad4761af64a1558203671bdea",
+    "path_redactions": false
+  },
+  {
+    "file": "FULL_AUDIT.log",
+    "private_original_sha256": "9f086dced990fa2b53a3c6ef9453b7deb94fe6a5f6d616e7cc748c73d29c897b",
+    "public_sha256": "0056753714662a6ddcb46620cd21c9be6ae0db5fcedb9588410710f6534efed4",
+    "path_redactions": false
+  }
+]

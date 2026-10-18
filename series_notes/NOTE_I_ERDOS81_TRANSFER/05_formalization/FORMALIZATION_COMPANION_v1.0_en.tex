@@ -1,0 +1,373 @@
+% Adaptación del preámbulo de Paper III v1.5 español; no plantilla standalone de Pandoc.
+\documentclass[english,11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\newlength{\LeanCharWidth}
+\usepackage{amsmath,amssymb}
+\usepackage[english]{babel}
+\usepackage{microtype,parskip}
+\usepackage{graphicx,float,caption}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref,bookmark}
+\usepackage{etoolbox,needspace}
+\setcounter{secnumdepth}{-\maxdimen}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}\small}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{4\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,pdflang={en-US}}
+\title{Formal companion to the Erdős 81 transfer note}
+\author{Juan Pablo Traverso Gianini}
+\date{}\begin{document}\raggedbottom\maketitle
+Formal assembly of the IV--V application\\
+Preprint 1.0, October 18, 2026
+
+This companion describes the final Lean source package for Series
+research note I, Preprint 1.0. The note reorganizes part of the proof in
+Paper IV through Paper V's transfer interface. It claims no new solution
+of Erdős Problem 81 and no mathematically independent proof. The
+statements and proof terms retain their established scope. The current
+validation is bound to the source manifest and final logs identified
+below.
+
+\subsection{1. What the formalization
+proves}\label{what-the-formalization-proves}
+
+The public conclusions produce actual clique partitions of the original
+graph. For all sufficiently large chordal graphs of order \(n\), the
+partition has at most
+
+\[
+M(n)=\left\lfloor\frac{n(n+1)}6\right\rfloor
+\]
+
+blocks, each with at most four vertices. For all orders, including zero,
+an absolute additive constant suffices. There is no assertion of the
+sharp bound at every order, no numerical upper bound on the eventual
+threshold, and no new extremal value claimed by this application.
+
+The source root is \nolinkurl{Erdos81Note.lean}. It imports
+\nolinkurl{Erdos81Note.Assembly}, which imports the physical transfer
+adapter and the required results of IV directly. The assembly invokes
+the actual realizable-class transfer theorem from V. It does not invoke
+IV's final all-chordal bound. The project remains mathematically
+dependent on the structural and rounding results of IV and on the
+transfer theorem of V; the separate project records a different assembly
+of those proved inputs. Paper VI is not an input.
+
+The principal note keeps one paragraph on formalization. This companion
+gives the model boundary, the six checked public interfaces, the
+selected dependency chain, the complete local-project axiom audit, and
+reproduction information.
+
+\subsection{2. Graphs, resources and integer
+arithmetic}\label{graphs-resources-and-integer-arithmetic}
+
+The physical graph model is \texttt{SimpleGraph\ V} with a finite vertex
+type, decidable equality and decidable adjacency. The first two public
+interfaces work on an arbitrary finite type. The final graph theorems
+use \texttt{Fin\ n}. Chordality is the predicate
+\texttt{PaperIV.IsChordal\ G}, which is printed as \nolinkurl{G.IsChordal}
+in the endpoint gate.
+
+A packing item is a finite set of vertices that is a clique and has
+cardinality three or four. Its resources are its unordered pairs of
+distinct vertices, hence actual graph edges. A packing consists of such
+items with disjoint edge supports. Its natural-valued gain is
+
+\[
+g(P)=\sum_{Q\in P}\left(\binom{|Q|}{2}-1\right).
+\]
+
+The adapter \nolinkurl{physicalCS} makes two distinct items conflict
+precisely when their edge supports overlap. The maps \nolinkurl{toPacking}
+and \nolinkurl{liftPacking} prove the correspondence between feasible
+outputs of V and physical packings in IV; their gain lemmas preserve the
+weighted sum. This step rules out a certificate whose alleged
+realization is merely an auxiliary object without graph edges.
+
+A \texttt{CliquePartition\ G} contains a finite family of cliques, each
+of order at least two, with pairwise disjoint edge supports whose union
+is exactly \nolinkurl{G.edgeFinset}. \nolinkurl{Q.size} counts blocks, and
+\texttt{Q.OrderAtMost\ 4} bounds their orders. Completion adds one
+two-vertex block for each uncovered edge and proves
+
+\[
+|Q|+g(P)=e(G).
+\]
+
+Thus the subtraction used in the paid-packing interface is natural
+subtraction with a proved bound \(g(P)\le e(G)\); it is not an
+unexamined truncation. Likewise, \texttt{targetSize\ n} is natural
+division \(n(n+1)/6\), exactly \(M(n)\).
+
+The rational predicate \texttt{CertifiedFractionalOptimum\ G\ w} means
+that there exist a feasible fractional mixed packing and a feasible dual
+cover, both of value \(w\). It supplies matching primal and dual
+witnesses, rather than an unsupported assertion that a maximum exists.
+The assembly obtains this certificate from IV's proved existence theorem
+before splitting into the far and near cases.
+
+\subsection{3. The six checked public
+interfaces}\label{the-six-checked-public-interfaces}
+
+All names in this section belong to the namespace \nolinkurl{Erdos81Note}.
+The endpoint gate checks their full elaborated types and prints their
+axiom dependencies. The final output is retained as
+\nolinkurl{evidence/ENDPOINTS.log}; the following descriptions retain every
+substantive hypothesis and conclusion.
+
+\subsubsection{\texorpdfstring{3.1.
+\nolinkurl{partition_of_certificate}}{3.1. partition\_of\_certificate}}\label{partition_of_certificate}
+
+Let \(G\) be any finite simple graph, \(C\) an auxiliary conflict
+system, and let the weight function \(w\), multiplicity function \(X\),
+class count \(q\), and target \(T\) be natural-valued. Assume \(1\le q\)
+and a certificate
+
+\[
+\texttt{RealCert}\bigl(C,\operatorname{physicalCS}(G),
+w,\operatorname{physicalWeight}(G),X,q\bigr).
+\]
+
+The certificate includes deleted occurrences, an assignment of the
+remaining occurrences to classes, and a feasible physical realizer for
+each class with an explicitly bounded natural-valued loss. Its cost is
+the deleted weight plus the sum of realization losses. If
+
+\[
+q\,e(G)+\operatorname{cost}(\mathrm{cert})
+\le qT+\operatorname{wMultSize}(C,w,X),
+\]
+
+then there exists a \texttt{CliquePartition\ G} of order at most four
+and size at most \(T\). No chordality hypothesis is needed. The proof
+calls \nolinkurl{PaperV.realizable_class_transfer}, converts the selected
+realization into a physical packing, and completes it.
+
+\subsubsection{\texorpdfstring{3.2.
+\nolinkurl{partition_of_paid_packing}}{3.2. partition\_of\_paid\_packing}}\label{partition_of_paid_packing}
+
+For any finite graph \(G\), natural target \(T\), and physical mixed
+packing \(P\), assume
+
+\[
+e(G)-g(P)\le T.
+\]
+
+Then there exists a clique partition of \(G\), of order at most four and
+size at most \(T\). Internally, the proof chooses one auxiliary
+occurrence with reference weight \(e(G)\), one class, and realization
+loss \(e(G)-g(P)\), and applies the preceding interface. The
+construction records a paid physical packing in the transfer language;
+it does not claim an additional saving from averaging.
+
+\subsubsection{\texorpdfstring{3.3.
+\nolinkurl{far_certificate}}{3.3. far\_certificate}}\label{far_certificate}
+
+For every rational \(\eta>0\), there exists a natural threshold \(N\)
+such that, for every \(n\ge N\), every graph \(G\) on \texttt{Fin\ n},
+and every rational certified optimum \(w\), the inequality
+
+\[
+e(G)-w<\frac{n^2}{6}-\eta n^2
+\]
+
+implies a clique partition of order at most four and size at most
+\(M(n)\). This interface does \textbf{not} require chordality. It uses
+IV's uniform transfer with parameter \(\eta/2\); the far-regime margin
+pays the rounding loss. Its threshold is existential, not the explicit
+near-branch threshold below.
+
+\subsubsection{\texorpdfstring{3.4.
+\nolinkurl{near_certificate}}{3.4. near\_certificate}}\label{near_certificate}
+
+Let \(n\ge4\cdot10^{12}\), let \(G\) on \texttt{Fin\ n} be chordal, and
+let \(w\in\mathbb Q\) have a certified fractional optimum witness.
+Assume the negation of the strict far inequality:
+
+\[
+\neg\left(e(G)-w<\frac{n^2}{6}-\eta n^2\right),
+\qquad \eta=10^{-16}.
+\]
+
+Then there exists a clique partition of order at most four and size at
+most \(M(n)\). The proof obtains an actual near-structure witness
+through IV's descent localization, uses its physical packing and
+retained accounts, proves that its completion is paid, and invokes
+\nolinkurl{partition_of_paid_packing}. Neither a target partition bound
+nor a pre-existing root witness is assumed in this interface.
+
+\subsubsection{\texorpdfstring{3.5.
+\nolinkurl{erdos81_eventual}}{3.5. erdos81\_eventual}}\label{erdos81_eventual}
+
+There exists \(N\in\mathbb N\) such that, for every \(n\ge N\) and every
+chordal graph \(G\) on \texttt{Fin\ n}, there exists a clique partition
+of order at most four and size at most \(M(n)\). The certified optimum
+and the case split are obtained internally. The chosen threshold is the
+maximum of the far-branch threshold at \(\eta=10^{-16}\) and
+\(4\cdot10^{12}\); the latter alone is not asserted to suffice for the
+global theorem.
+
+\subsubsection{\texorpdfstring{3.6.
+\nolinkurl{erdos81_all_orders}}{3.6. erdos81\_all\_orders}}\label{erdos81_all_orders}
+
+There exists \(b\in\mathbb N\) such that, for every \(n\in\mathbb N\)
+and every chordal graph \(G\) on \texttt{Fin\ n}, there exists a clique
+partition of order at most four and size at most \(M(n)+b\). The proof
+takes \(b=N^2\) from the previous theorem. Below the threshold it uses
+individual edges; above it, the eventual theorem. No positive-order
+assumption excludes the empty graph.
+
+\subsection{4. Which results are used, and which are
+excluded}\label{which-results-are-used-and-which-are-excluded}
+
+The far branch calls \nolinkurl{PaperIV.RC01FarAssembly.uniformTransferAt}.
+The near branch calls
+\nolinkurl{PaperIV.NearH1Localization.exists_nearStructureWitness_of_nearRegime}
+and reaches the descent-localization declaration
+\nolinkurl{PaperIV.LocalStability.localize_original_of_windowed_accounts_descent}.
+Optimum existence is supplied by
+\nolinkurl{PaperIV.CertifiedOptimumExistence.exists_certifiedFractionalOptimum}.
+
+The selected proof-chain audit begins with the certificate interface and
+the two final bounds. It follows declaration types and proof values
+through the local series and records 6,528 visited declarations. It
+requires actual dependencies on V's transfer and IV's descent
+localization. It rejects declarations originating in
+\nolinkurl{PaperIV.Erdos81Unconditional}, the final global-bound module.
+The recorded forbidden list and normalized first-entry hits are empty.
+
+This is a dependency claim about the selected proof, not a claim that
+all imported source files omit alternative arguments. Some upstream
+files contain unused first-entry developments. Their presence in a
+source package does not make those declarations premises of the final
+application. The complete dependency listing is preserved as
+\nolinkurl{DECLARATION_DEPENDENCIES.txt}.
+
+The physical partition is constructed once in the original graph after
+localization. The formalization does not transport partitions backwards
+along vertex-copy steps and does not charge an extra loss per step. The
+certificate theorem organizes the gain budget; the structural
+localization and physical construction remain the work of IV.
+
+\subsection{5. Final validation and trusted
+boundary}\label{final-validation-and-trusted-boundary}
+
+The canonical project uses \nolinkurl{leanprover/lean4:v4.35.0} and Mathlib
+commit \nolinkurl{56a005855ea17e0b0958f73ec801ae140b0a1679}. The source
+closure contains 324 local modules. The final validation consists of a
+root build, the six-interface gate, and a full local-project audit. The
+build uses complete, trace-checked cached artifacts for unchanged
+dependencies and recompiles the changed modules; it is not described as
+a fresh build of all upstream sources or of Mathlib.
+
+The selected root audit traverses 6,528 declaration dependencies. It
+checks actual use of V's transfer and IV's descent localization and
+excludes IV's final global-bound module. The full audit covers 6,850
+local declarations and visits 10,304 dependencies. These are distinct
+scopes: the latter includes the private helpers and other declarations
+in all imported local modules.
+
+The full audit first verifies that every module in the source manifest
+is present in the imported Lean environment; a missing module causes
+rejection.
+
+The permitted axiom union is \nolinkurl{propext}, \nolinkurl{Classical.choice}
+and \nolinkurl{Quot.sound}. The gates reject additional mathematical axioms
+and \nolinkurl{sorryAx}. The successful command exits and logs are recorded
+in \nolinkurl{evidence/BUILD_CHECKS.json};
+\nolinkurl{FINAL_FORMAL_VALIDATION.json} binds those records to the exact
+source closure and the checks of the public entry point.
+
+The author of the note's formalization is Juan Pablo Traverso Gianini.
+Its own modules and gates identify the author in their headers.
+\nolinkurl{AUTHORSHIP_NOTICE.md} credits the inherited series source cuts
+without altering their existing mathematical and assistance
+attributions. The Paper V dependencies use the author-credited source
+version recorded in the manifest. The note's own modules and audit gates
+are distributed under Apache License 2.0, with the complete license in
+\nolinkurl{lean435/LICENSE} and source attribution in
+\nolinkurl{lean435/NOTICE}. Inherited license and authorship notices remain
+applicable.
+
+\nolinkurl{lean435/OWNERSHIP_AND_LICENSE.json} enumerates, with hashes,
+all author-owned Lean sources, including the reused series cuts,
+released by the author under Apache 2.0. The new full headers cover this
+note's specific modules and audit entry points; inherited headers and
+mathematical attributions are preserved. External dependencies retain
+their own licenses.
+
+\Needspace{12\baselineskip}
+\subsection{6. Reproduction and immutable
+package}\label{reproduction-and-immutable-package}
+
+\Needspace{8\baselineskip}
+Extract \nolinkurl{NOTE_I_LEAN435_FINAL_SOURCE_v1.0.zip}, enter
+\nolinkurl{lean435}, and run:
+
+\begin{verbatim}
+lake exe cache get
+lake build Erdos81Note
+lake env lean -j 1 -s 32768 Endpoint435Gate.lean
+lake env lean -j 1 -s 32768 FreezeFullAudit.lean
+\end{verbatim}
+
+Preserve the supplied \nolinkurl{lake-manifest.json}; the cache command
+retrieves artifacts for the pinned dependencies without requesting a new
+dependency selection.
+
+The root build runs the selected dependency audit in
+\nolinkurl{Erdos81Note.lean}. The endpoint gate prints the six public types
+and their axiom dependencies. The full audit checks every declaration in
+the imported local source closure. The archive includes all required
+local source files and pinned configuration; it excludes \nolinkurl{.lake}
+caches and development junctions. The package does not require a
+checkout of Papers IV or V.
+
+\Needspace{8\baselineskip}
+The source archive SHA-256 is:
+
+\begin{verbatim}
+eae69a0316113f1701246b54243a1b51696b85ea656309319b8738932f90f604
+\end{verbatim}
+
+\Needspace{8\baselineskip}
+\nolinkurl{SOURCE_MANIFEST.json} gives the hash of every packaged source
+and configuration file. Its own SHA-256 is:
+
+\begin{verbatim}
+5f7deb401e26fcce100d576e4ed5c6975a46d14265144a1f267439b67f24613f
+\end{verbatim}
+
+\nolinkurl{FINAL_FORMAL_VALIDATION.json} records the build, export and
+axiom results for this package. Exact-arithmetic regression scripts are
+supplementary checks, not premises of the universal theorems.
+
+\subsection{Assistance and scope}\label{assistance-and-scope}
+
+The principal note retains Paper IV's attribution of Claude, by
+Anthropic, ChatGPT/Codex, by OpenAI, Aristotle, by Harmonic, Certo and
+Jacobian for the inherited work. Aristotle's contribution to that work
+included exploration, counterexample search, proof development,
+formalization and review, and was not limited to translating finished
+proofs. For this note, ChatGPT/Codex assisted with the adapters,
+verification and presentation of the final package. Computations were
+reviewed within their stated scope; a finite search does not replace a
+universal proof. Kernel verification does not establish historical
+priority or replace external review.
+
+\Needspace{3\baselineskip}The author remains responsible for the arguments, citations, code, and
+presentation. No AI system is listed as an author.
+
+\end{document}

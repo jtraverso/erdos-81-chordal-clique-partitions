@@ -1,0 +1,142 @@
+[
+  {
+    "role": "companion",
+    "language": "es",
+    "command": [
+      "tectonic",
+      "--keep-logs",
+      "--outdir",
+      "<PAPER_VI_SOURCE_ROOT>\\05_formalization",
+      "<PAPER_VI_SOURCE_ROOT>\\05_formalization\\FORMALIZATION_COMPANION_v1.0_es.tex"
+    ],
+    "passes": [
+      {
+        "pass": 1,
+        "exit_code": 0,
+        "log": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pass1.log"
+      },
+      {
+        "pass": 2,
+        "exit_code": 0,
+        "log": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pass2.log"
+      }
+    ],
+    "files": {
+      "md": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+      "tex": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+      "pdf": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf"
+    },
+    "hashes": {
+      "md": "eb3412de434639f207f5a8156d3714ea5a81304b8f16967a9d933f121c061c13",
+      "tex": "0ef4fa3870b7a804e544db56eb911380cfed40b1eb382240b4a584b46fa10e1a",
+      "pdf": "9cfa28610a438f9dcb16ab3ed2a191ce49042fb7d4fba7d9d74b95b3ceef7349"
+    },
+    "compiler_log": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.log",
+    "issues": []
+  },
+  {
+    "role": "companion",
+    "language": "en",
+    "command": [
+      "tectonic",
+      "--keep-logs",
+      "--outdir",
+      "<PAPER_VI_SOURCE_ROOT>\\05_formalization",
+      "<PAPER_VI_SOURCE_ROOT>\\05_formalization\\FORMALIZATION_COMPANION_v1.0_en.tex"
+    ],
+    "passes": [
+      {
+        "pass": 1,
+        "exit_code": 0,
+        "log": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pass1.log"
+      },
+      {
+        "pass": 2,
+        "exit_code": 0,
+        "log": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pass2.log"
+      }
+    ],
+    "files": {
+      "md": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+      "tex": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+      "pdf": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    "hashes": {
+      "md": "42602f0b230d9a27690005577db4f3461085e3a0cd884851421149ff51013103",
+      "tex": "bedd1a9a1f6444df805204d4bf437972438ef1b655dd28608b2e3f06297add34",
+      "pdf": "55e9828cc157b61e8f130ef7b65ec9261a1eb48fd2e0362337962e7a8b1ae47c"
+    },
+    "compiler_log": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.log",
+    "issues": []
+  },
+  {
+    "role": "main",
+    "language": "en",
+    "command": [
+      "tectonic",
+      "--keep-logs",
+      "--outdir",
+      "<PAPER_VI_SOURCE_ROOT>\\01_manuscript",
+      "<PAPER_VI_SOURCE_ROOT>\\01_manuscript\\PAPER_VI_preprint_v1.0_en.tex"
+    ],
+    "passes": [
+      {
+        "pass": 1,
+        "exit_code": 0,
+        "log": "01_manuscript/PAPER_VI_preprint_v1.0_en.pass1.log"
+      },
+      {
+        "pass": 2,
+        "exit_code": 0,
+        "log": "01_manuscript/PAPER_VI_preprint_v1.0_en.pass2.log"
+      }
+    ],
+    "files": {
+      "md": "01_manuscript/PAPER_VI_preprint_v1.0_en.md",
+      "tex": "01_manuscript/PAPER_VI_preprint_v1.0_en.tex",
+      "pdf": "01_manuscript/PAPER_VI_preprint_v1.0_en.pdf"
+    },
+    "hashes": {
+      "md": "86305a1141f80ee47ff9875015c62e61c0b0919e8aabcfc91c1db3c5f98f83b4",
+      "tex": "d602858df9a9713bf728a01f6d7ff7c641b4d47d678dcff1c2dcf2afca6b0335",
+      "pdf": "b7e40eb47ce17efb22bba680fcf6bef98777a1802308819ff035398f48c3c740"
+    },
+    "compiler_log": "01_manuscript/PAPER_VI_preprint_v1.0_en.log",
+    "issues": []
+  },
+  {
+    "role": "main",
+    "language": "es",
+    "command": [
+      "tectonic",
+      "--keep-logs",
+      "--outdir",
+      "<PAPER_VI_SOURCE_ROOT>\\01_manuscript",
+      "<PAPER_VI_SOURCE_ROOT>\\01_manuscript\\PAPER_VI_preprint_v1.0_es.tex"
+    ],
+    "passes": [
+      {
+        "pass": 1,
+        "exit_code": 0,
+        "log": "01_manuscript/PAPER_VI_preprint_v1.0_es.pass1.log"
+      },
+      {
+        "pass": 2,
+        "exit_code": 0,
+        "log": "01_manuscript/PAPER_VI_preprint_v1.0_es.pass2.log"
+      }
+    ],
+    "files": {
+      "md": "01_manuscript/PAPER_VI_preprint_v1.0_es.md",
+      "tex": "01_manuscript/PAPER_VI_preprint_v1.0_es.tex",
+      "pdf": "01_manuscript/PAPER_VI_preprint_v1.0_es.pdf"
+    },
+    "hashes": {
+      "md": "8f5e023ef9b14be0844d2b6435319c1df06715b5e34cad639be44d379db097f1",
+      "tex": "053fbf57b0d66f0df2c8ee240aece2420888c903452544a22d3a3b1c892c483a",
+      "pdf": "a8349949005413de5f82bc5f7103ee9e3dfea2deaf8cecadbfc0c8e894379a45"
+    },
+    "compiler_log": "01_manuscript/PAPER_VI_preprint_v1.0_es.log",
+    "issues": []
+  }
+]

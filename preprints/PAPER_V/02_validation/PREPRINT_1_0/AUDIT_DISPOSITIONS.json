@@ -1,0 +1,62 @@
+{
+  "scope": "All concrete pasted findings supplied for this task; a separate full AUDIT2 file was not available and is not claimed to have been closed.",
+  "items": [
+    {
+      "id": "IV_ATTRIBUTION",
+      "disposition": "Corrected §1.3 to the all-order M+b and sharp eventual M scope; no universal b=0 claim. Okechukwu Theorem 1.1 and Corollary 1.2 is explicitly cited.",
+      "evidence": "Main §1.3; references 14, 25, 32",
+      "status": "ADDRESSED_AND_CHECKED"
+    },
+    {
+      "id": "CURRENT_IDENTIFIERS",
+      "disposition": "Papers I–IV identify their deposited editions through the verified version DOI 10.5281/zenodo.23089131. The Problem 81 URL remains without an unverified access date.",
+      "evidence": "Main references 2, 4, 5, 14, 25",
+      "status": "ADDRESSED_AND_CHECKED"
+    },
+    {
+      "id": "THEOREM_6_2_INTERFACE",
+      "disposition": "Added actual image multiset and bounds for the two specified feasible copied packings, with an adapter retaining specified optimal families; no replacement premise equal to the desired conclusion.",
+      "evidence": "PaperV.CopyPackings; statement/axiom gates; MANUSCRIPT_MAP",
+      "status": "ADDRESSED_AND_CHECKED"
+    },
+    {
+      "id": "THEOREM_7_3_INTERFACE",
+      "disposition": "Mapped the public theorem to existing mixed_copy_integral, which uses the actual mixed-copy data; retained existential convenience APIs without using them as the correspondence.",
+      "evidence": "MANUSCRIPT_MAP; companion §5",
+      "status": "ADDRESSED_AND_CHECKED"
+    },
+    {
+      "id": "SUPPORTING_MATERIAL",
+      "disposition": "Replaced references to an undelivered written supplement by companion §6 and the delivered source-interface map. Delivered and independently replayed the complete BK finite certificate and checker.",
+      "evidence": "Companion §6/§8; 03_reproducibility/counterexamples",
+      "status": "ADDRESSED_AND_CHECKED"
+    },
+    {
+      "id": "PUBLIC_VERSIONS",
+      "disposition": "Public reader files consistently use Preprint 1.0 and canonical distinct main/companion names. Historical freezes remain unchanged.",
+      "evidence": "Main/companion MD, TeX, PDF",
+      "status": "ADDRESSED_AND_CHECKED"
+    },
+    {
+      "id": "READER_STATUS",
+      "disposition": "Removed working/private-draft status and the final-author-review draft sentence. Kept author responsibility and tool contributions; external human review and priority are not implied by kernel checks.",
+      "evidence": "SEMANTIC_INTEGRITY; companion §7",
+      "status": "ADDRESSED_AND_CHECKED"
+    },
+    {
+      "id": "PUBLIC_COMPANION_ACCESS",
+      "disposition": "Linked the existing words identifying the separate companion directly to the public formalization directory, in both languages, without adding visible text or changing page counts.",
+      "evidence": "Main formalization paragraph; final PDF links",
+      "status": "ADDRESSED_AND_CHECKED"
+    },
+    {
+      "id": "LICENSES_PORTABILITY",
+      "disposition": "Added author copyright/Apache 2.0 grant to owned Lean contributions while preserving prior notices. Source archive contains only relative portable source/config/license metadata; public logs are separate.",
+      "evidence": "Source archive; LICENSES; STATIC_ESCAPE_HATCH_SCAN",
+      "status": "ADDRESSED_AND_CHECKED"
+    }
+  ],
+  "verdict": "EDITORIALLY_READY",
+  "formal_validation": "05_formalization/FREEZE_VALIDATION.json",
+  "render_validation": "02_validation/PREPRINT_1_0/RENDER_QA.json"
+}

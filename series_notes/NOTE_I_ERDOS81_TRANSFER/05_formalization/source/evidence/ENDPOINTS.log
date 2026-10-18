@@ -1,0 +1,39 @@
+@Erdos81Note.partition_of_certificate : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (C : PaperV.ConflictSystem) (w X : C.O → ℕ) {q T : ℕ},
+  1 ≤ q →
+    ∀ (cert : PaperV.RealCert C (Erdos81Note.physicalCS G) w (Erdos81Note.physicalWeight G) X q),
+      q * G.edgeFinset.card + cert.cost ≤ q * T + PaperV.wMultSize C w X → ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ T
+@Erdos81Note.partition_of_paid_packing : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] (T : ℕ) (P : PaperIV.FarRounding.Packing G),
+  G.edgeFinset.card - P.gain ≤ T → ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ T
+@Erdos81Note.far_certificate : ∀ {η : ℚ},
+  0 < η →
+    ∃ N,
+      ∀ (n : ℕ),
+        N ≤ n →
+          ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj] (w : ℚ),
+            PaperIV.FarRounding.CertifiedFractionalOptimum G w →
+              ↑G.edgeFinset.card - w < ↑n ^ 2 / 6 - η * ↑n ^ 2 →
+                ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.FarRounding.targetSize n
+@Erdos81Note.near_certificate : ∀ {n : ℕ},
+  4 * 10 ^ 12 ≤ n →
+    ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+      G.IsChordal →
+        ∀ {w : ℚ},
+          PaperIV.FarRounding.CertifiedFractionalOptimum G w →
+            ¬↑G.edgeFinset.card - w < ↑n ^ 2 / 6 - PaperIV.NearH1Calibration.eta * ↑n ^ 2 →
+              ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.FarRounding.targetSize n
+Erdos81Note.erdos81_eventual : ∃ N,
+  ∀ (n : ℕ),
+    N ≤ n →
+      ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+        G.IsChordal → ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.FarRounding.targetSize n
+Erdos81Note.erdos81_all_orders : ∃ b,
+  ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+    G.IsChordal → ∃ Q, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.FarRounding.targetSize n + b
+'Erdos81Note.partition_of_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos81Note.partition_of_paid_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos81Note.far_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos81Note.near_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos81Note.erdos81_eventual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos81Note.erdos81_all_orders' depends on axioms: [propext, Classical.choice, Quot.sound]

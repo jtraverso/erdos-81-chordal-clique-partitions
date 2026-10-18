@@ -19,11 +19,13 @@ Other manuscript versions occur solely in audit backups, including the
 published v1.22 baseline. Unrelated working drafts are excluded. The released
 Papers I–III packages are unchanged.
 
-These are author preprints, not human peer-reviewed publications. The author
-approved GitHub publication of v1.23 on 1 October 2026. A new Zenodo deposit
-is a separate action.
+## Continuation of the series
 
-DOI supplied by the author for the new version including Paper IV:
-[10.5281/zenodo.23089131](https://doi.org/10.5281/zenodo.23089131).
-Its public record was not yet available at the 1 October 2026 check.
-The series concept DOI remains [10.5281/zenodo.21273143](https://doi.org/10.5281/zenodo.21273143).
+| Work | Selected version | Package |
+|---|---|---|
+| V | Preprint 1.0 | [Colorability and Realizability Defects](PAPER_V/README.md) |
+| VI | Preprint 1.0 | [Optimal Clique Partitions under Local Perturbations](PAPER_VI/README.md) |
+| Note I | Preprint 1.0 | [Realizability transfer](../series_notes/NOTE_I_ERDOS81_TRANSFER/README.md) |
+| Note II | Preprint 1.0 | [Exact chordal stability](../series_notes/NOTE_II_CHORDAL_STABILITY/README.md) |
+
+These are author preprints; AI-assisted audits are distinguished from human peer review. The I–IV snapshot is publicly available at https://doi.org/10.5281/zenodo.23089131. The series concept DOI is https://doi.org/10.5281/zenodo.21273143.

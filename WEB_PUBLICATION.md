@@ -1,5 +1,11 @@
 # Static series website
 
+The October 18, 2026 edition adds Paper V, Paper VI and two independent series
+notes, all Preprint 1.0. Each new package has a bilingual `index.html` explaining
+the question, mechanism, mathematical scope and reproducibility at four levels.
+The root landing page links all six papers and both notes. Their separate formal
+companions and source archives are linked from their package README files.
+
 `index.html` is the bilingual series landing page. Each paper has a linked
 `Paper*_explained_4_levels.html`. No server-side code, build system, CDN font
 or mathematics renderer is required for the new landing page and Paper IV

@@ -1,0 +1,56 @@
+{
+  "source": "Paper IV official repository README",
+  "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions",
+  "sha256": "fe2684803b8128ea10fefbbb2cf8648794f1350606e33d54e000802fab0ec20b",
+  "locators": [
+    {
+      "line": 44,
+      "text": "- [English translation of the consolidated report](preprints/PAPER_IV/02_validation/translations/v1.22_r4/FINAL_CONSOLIDATED_AUDIT_REPORT_en.md)"
+    },
+    {
+      "line": 45,
+      "text": "- [Frozen Lean sources](preprints/PAPER_IV/05_formalization/README.md)"
+    },
+    {
+      "line": 46,
+      "text": "- [Superseded public draft v0.8](preprints/PAPER_IV/superseded/README.md)"
+    },
+    {
+      "line": 47,
+      "text": "- [Publication integrity checks](preprints/PAPER_IV/04_integrity/PUBLICATION_CHECKS.json)"
+    },
+    {
+      "line": 48,
+      "text": ""
+    },
+    {
+      "line": 49,
+      "text": "The paper proves the all-orders chordal bound c₄(G) ≤ floor(n(n+1)/6) + b"
+    },
+    {
+      "line": 50,
+      "text": "for an absolute constant, and the sharp eventual maximum. It also treats"
+    },
+    {
+      "line": 51,
+      "text": "rooted simplicial defect, quantitative same-root stability of graphs and"
+    },
+    {
+      "line": 52,
+      "text": "partitions, and explicit (impractical) thresholds. See the manuscript for exact"
+    },
+    {
+      "line": 53,
+      "text": "hypotheses and attribution. Neither universal b = 0 nor priority for the"
+    },
+    {
+      "line": 54,
+      "text": "extremal bound is claimed."
+    },
+    {
+      "line": 55,
+      "text": ""
+    }
+  ],
+  "conclusion": "All-orders additive bound and sharp eventual bound; no universal b=0 claim."
+}

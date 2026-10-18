@@ -1,0 +1,937 @@
+{
+  "status": "PASS",
+  "baseline_commit": "a1f4589fa6228ae7076792507d5835f83eb096e9",
+  "prior_source_files": 132,
+  "changes": [
+    {
+      "path": "FreezeFullAudit.lean",
+      "baseline_sha256": "e129e9170c73685101a484f60c4c5f862eb79a2df36b2be368cbc0eeec3de39d",
+      "current_sha256": "6eb3e65f59f54d8940bd28ec2f04dfe541d645b51223d089739529e1c10c0add",
+      "prior_bytes_retained_exactly": false,
+      "scope": "Copyright header and addition of CopyPackings to the asserted import-coverage set."
+    },
+    {
+      "path": "PaperV/AffineK4.lean",
+      "baseline_sha256": "eed97e8033ab5f59f4eaa677cd58782cfc9631084cc6525e345500623051185c",
+      "current_sha256": "2360b266c2db90951ef949356971732df4330b8edcf80721964e063e994645f1",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BeckFiala.lean",
+      "baseline_sha256": "4fc4e9191518cd15c4b06a36d4c27a41c3d98fe7779df7b4f59febcc3c708c7f",
+      "current_sha256": "3ef04a91d7dc4c24d0955515d2aa454823530a0c6e3724b02a7665e90032b2f6",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BK.lean",
+      "baseline_sha256": "b09603635456df14106765d3a3866d00fa3f8c6bbd9b04b255534121e7530982",
+      "current_sha256": "8199fc41bf898e08b533d7a6e54002e0eba964c904c7f639470ee48a6e8d6efc",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BKExact.lean",
+      "baseline_sha256": "ecdf31fde8176c9645d391f3385a6f2cc030f5932d99bdd49ce360b3ff94302f",
+      "current_sha256": "69f44e9325f152ce78371aa7dd6e7a53e3f5936e33aa2f7549094e9c14612ac4",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksB4.lean",
+      "baseline_sha256": "11aa67403e91765da42f6876968d404e4ab6e6ddfaddf1809850995a0d3ea167",
+      "current_sha256": "266c5031db1d7a553dc249944ec323ded9ccb9e8a9b0430c67eb5c227a6a3979",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksBlock.lean",
+      "baseline_sha256": "9d54dd50ed2091a3b48b60a211ccd0ba208aced44b01cae73f1ebaaffd8d8f5a",
+      "current_sha256": "c9fa3f9681a0b89bfa1e118c787c40a5dab6223dd1427db7ba7dd8d9c325e509",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksCut.lean",
+      "baseline_sha256": "ce34d095f547f76889ad3765d19807fedc3f33757d2f596ec95936e10e476dc5",
+      "current_sha256": "1cf2c663483d98c3bd5f559216eacf1e8e3ece3cb73de7a77b08e5dd12e7792a",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksCutExists.lean",
+      "baseline_sha256": "92c2a51a0b83bda9c4e5d8ab12380508acf62b2dc0335ce25b4c4ed7136ffed7",
+      "current_sha256": "a84b9586e6f405c1315cb55c04e12d6411a691e99712fbbb08210ba3aa3810da",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksGlue.lean",
+      "baseline_sha256": "3c3a47c98fc8ae419c93c30bb29b76ff0fb99cd908668d5a56ed4a036d42e239",
+      "current_sha256": "4f72505e7ddecf436c3ef25bc49c2a0b2b3a0269d208a533ae9a9fb82721c19a",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksGreedyCtrl.lean",
+      "baseline_sha256": "6b39a203a72b903be7c01593e03810f0822a9c3350d72aeecc03fb7461648f85",
+      "current_sha256": "abf7b634dfe799105ff2ca39e70737c9afa12f810f7b52d3ce083e469fcb3587",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksHub.lean",
+      "baseline_sha256": "585a66f8174b9005f073d699c7712c2e30a7d4d618eac682fa75eaab209051ff",
+      "current_sha256": "72f9c830aade0449dd8db5452a78ec2dbe2f2f3615df22573402dc3af825e4e8",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksK4.lean",
+      "baseline_sha256": "675c483303a244cfdf70145a3d1529ab5ea9c2030cc372dcb0ecca82ea6975f5",
+      "current_sha256": "6d1b4780db4a463ea5dcd32984a3fbf76f438753f473cd3c01365a233acbc263",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksLovasz.lean",
+      "baseline_sha256": "da11edf8de630f7d1866036e510751730740bb0f2b23d5f9ae9101c3a2be3157",
+      "current_sha256": "fdcc08fae97c61ec22b5f4009631d71fcdee62f15aeb7ab6f34e53cb31d77156",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksLovaszCore.lean",
+      "baseline_sha256": "de6c3ff88a088f45979c1f30491293b264b4cb1f5b96b877370636287b0e9bcb",
+      "current_sha256": "6c3d2303988cd5eca0f8bd077298580966a5371a2a9f7b8b32bfd2d2c947ba8a",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksLovaszCut.lean",
+      "baseline_sha256": "22480b75246b156772ed0c8dcd4986706ed373458aca9852e2454c69c9000de7",
+      "current_sha256": "3f376c8208fe83a439d8cb725dd876b5896de7f3b91ddb6ed1272ab4c9531ca1",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksLovaszEndblock.lean",
+      "baseline_sha256": "f12f8edd97f18f709add22f942403a0b5dce0215cfcb88ea04728eb43041288c",
+      "current_sha256": "20945ef798d50363f78b0fff556b47e8c0f11724438b29efbf1dc24153fc1a10",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksMain.lean",
+      "baseline_sha256": "903ffe8c776b6db48b1ede8e62284d80192b632457e0a6388a2a9b6ceef9320c",
+      "current_sha256": "4d7dd23cb1f45066b8b93d6a8e66ea1c4999af22c2f91cc22fdf4ac0ce076cea",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksNonRegular.lean",
+      "baseline_sha256": "ecd396fde490e3befcfc1ae32fe36c15357f7c9e541f95bd7068a6a19c752156",
+      "current_sha256": "54a3655b3a523aba7a2869fe9ca99b125fb2161acbb8ac3fdad60515b891d325",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksOct.lean",
+      "baseline_sha256": "f99feabb2f8563a24dbb385ff380f19c3a69b0b1836202e9c410a6b8c76d1a33",
+      "current_sha256": "19f8805548cc1c1912c482711fc824b41d354938f7b9169d8963ad0f80e1f6f2",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/BrooksReg.lean",
+      "baseline_sha256": "f076e00f995b5a8846cf9ba36bf6ba4c2671248d99b9fab482db4e7d1ef2924e",
+      "current_sha256": "c3e018dacfe37fc5c543a430dd47c8156bfe201803307934a701e000b0ca05c8",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/C1.lean",
+      "baseline_sha256": "f4afe6f6b6e340adfa90baefa9c2ebc7427fd2aa583ec2c3b10bca43c8112563",
+      "current_sha256": "676e339936ecefa0a4ecfd2d3054df882589341ebf190e65db74ad5cebc6bc9a",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Certificates.lean",
+      "baseline_sha256": "edbde2e30f7fd6054148797a8d7e3a0f8d09185efb6b45f34cd9b9cf3b12f8a1",
+      "current_sha256": "36389915e87e96bb11d6768d134f035906faa305187715df8756dc8952cd999e",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/ChromaticIndex.lean",
+      "baseline_sha256": "7f424ce3d77abcb13f804e0e61c87b85b76d3caa3f4997b5fb490dc86391c93e",
+      "current_sha256": "1b782a27683dd5adda89967db6f8358daf371c8173e0ffc3c3acea1a12d3a8ae",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/CleanupTransfer.lean",
+      "baseline_sha256": "f342f2e0d27c5b906cc1cae42d9dd1719680874e475f50572483ff3541fa996d",
+      "current_sha256": "a0ba8669eb50be04ff95e5e5662a69abc29469a6f3fdcf31ffa933146b51fe60",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Clon2.lean",
+      "baseline_sha256": "3c8a7d5ea5802e36a27c8ee06ef1a71f44ecb954cb530f932d3cf4ba6183321b",
+      "current_sha256": "b4c0202cffb19491d12d7fbcd54ba6c409c26ad238aa36858beb7dad0b2a968f",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/ConflictGraph.lean",
+      "baseline_sha256": "d08482b9b382fc7e70a0288fecec53b45a38244e5020ef57ce93b0fc0bcd3b23",
+      "current_sha256": "2ceb1ee985d587964c2c77127a80dcdd3ae283a6c19bc32f829fe6e4771b2670",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Copy.lean",
+      "baseline_sha256": "1dbc888f5bb2ec280c76c1b789da892dea974b2b3b4aebaa222374877b539425",
+      "current_sha256": "96a111156c7b65558053878ca2a1a4836b837edc2e5b4f012a22c5cc24721a6a",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/CopyCore.lean",
+      "baseline_sha256": "ee2096f4cfed3ca3e67226169f9ae0759f2c8413af835e136ee56372f1c61d99",
+      "current_sha256": "7d148f45fc15498d75c887bc46f9b7271c3b4424688202fd8623c92b22b66cbe",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/CopyFrac.lean",
+      "baseline_sha256": "6a2e519454903b21500e8c98a0182f7a1efa71fafc8de7e6793912d90473bd63",
+      "current_sha256": "a29179d48bf83e76c90e5b69e932ff1f8bb35665985ea8ded817a26eb0069398",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/CopyN1Degree.lean",
+      "baseline_sha256": "aa5f87fe393fed441a6bf4dc74e16ce182519b660d0f6efb93d71e0e55333462",
+      "current_sha256": "9ea3f755d51547c40c66e04655f7b6c2c8bda7594e2d9287a934467ed9f70cfd",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/CopyN1K4.lean",
+      "baseline_sha256": "b7bf1c18e57ec214da542af9a959add59d6ce365c286604f6ee284cdbdf033a0",
+      "current_sha256": "0e6cda29e59d9329f8d4c94505d9b645947523b64470b8674e33728f23a0e7c9",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Core.lean",
+      "baseline_sha256": "52e5043b2113df0867803b1c0e141ec6d0c3fef6b62d6bad243d6eedc6c960ba",
+      "current_sha256": "56aa4ba4053091b87a4e81bf7264ffc8ac9823b4d2d5368fc04a6684e1bcc2a0",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/CoverDefect.lean",
+      "baseline_sha256": "6421973ffc7b43119a416b8c16008966ca2746b2b5bb867e7e73bce97d31564a",
+      "current_sha256": "705eb13e31ddbb4a9b7152bcb7658701081dca5662a8d806d5d0e4153648ad64",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/CoverWitness.lean",
+      "baseline_sha256": "62852192be76111493cc0e3e59d9b0f0ec9eec1a6a9963d04156135a8dcf1ba2",
+      "current_sha256": "3b56b99d2b96418f1af0b75c677e9745f05849e661d4d32b502123b41bde381d",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/CycleDefect.lean",
+      "baseline_sha256": "3f4eb971ce459fa51b918d997b89abde7855afc8f5cc6a23c98794dd26305758",
+      "current_sha256": "24ec3b5c8facafde2107a9a214d81bdb4285e3a015c1c28c875d3dcf6b80b6d1",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/DefectApps.lean",
+      "baseline_sha256": "f2bc69d674edd0fd87423e653d7f9a1c01f43b7c04243adce55449cf9b0f89c5",
+      "current_sha256": "98494b358eeff04b8d30f02b6a90aacf4f0c4882369421a584210f4db60c5ef5",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/DefectOne.lean",
+      "baseline_sha256": "d76b47a3e89cfe59209f56a4ff24793f801f645bebe9bf82986f08d51d744fb6",
+      "current_sha256": "b2c5c08997b31993d2f42472315a23918700d9b5c95d87b513259d42a1ecf93c",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Defs.lean",
+      "baseline_sha256": "e74e60e142364906a63f3d09afb9ba6f1e1cd063121419995fb3e8f551d3333a",
+      "current_sha256": "2b317186772c6c38f840325eff45c4f54da157082d46308aa6be5f85370e5e1d",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/DqBasic.lean",
+      "baseline_sha256": "1713ab15b4dbf188bc1dc6013e2da15a6b9f09554f8dd970778cc0c94e3fe2ab",
+      "current_sha256": "000e7cd2ef2772c43fc0c444fbe3204e7531f69b23983448fdb86c3d6b0c748c",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/EdgeDefectProfile.lean",
+      "baseline_sha256": "dec0142852eb21e8808a7f361cff6d8963f867b1c34ab204cef7475d51b4bf2e",
+      "current_sha256": "d1e5e5f415dd8656ddaa68b192d378545e8f3f28f93a4edd7b6742eab62fc9d9",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Extremal.lean",
+      "baseline_sha256": "2b0f1f52f1c3a60f1f682deabfa6818bd786e0e2b848d09e046b5c69f5f01008",
+      "current_sha256": "2b481208efe76f9d07bf28b70455dffe72d632220277f8736f949249ece28457",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/FiniteValueStability.lean",
+      "baseline_sha256": "83461f30828e71893a55766e4ab0048357646b87684a5e58c5fb8875a2a29dce",
+      "current_sha256": "bb943b84bad69a96d334bfbeed7882ec8f6d9afea2cedf66e671113b318da274",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/FracCopyGeneric.lean",
+      "baseline_sha256": "185c4baffb81455ee654b3dfb233227ec2240b7c69979690bf3f2069e2d80341",
+      "current_sha256": "86ecbffa9085e713918b4bce99017a6e3bc536c0b29efffb3a4d17f84c4f1401",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/FractionalAxiomGate.lean",
+      "baseline_sha256": "f63e4b0c94c21cfd6ae1102f4f4d317600737e080ee2a4278ca3649e9a530d86",
+      "current_sha256": "006ec3e534d4115fc49fa3fcf11dd2a68523bda5626de64a10187c168de2510b",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/FractionalIntegral.lean",
+      "baseline_sha256": "af75fc28088aa3e2501803b4ebf6fa0d81035b4569abb1b0ff597beb036af325",
+      "current_sha256": "31e62c81e3c902321f460813b0d27925ef87938aabc10c0980ae3b1709c95c98",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/FractionalOptimum.lean",
+      "baseline_sha256": "fdfb12eee2bf7a135d2ae5a012fc9d135634e7a09e5655239a055134ab93ecac",
+      "current_sha256": "78aa4b3e8aa8f3301de4d41e677904e387c03676992e44f58038178884fded7f",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/FractionalUnitBoundary.lean",
+      "baseline_sha256": "c865c274ab68dcb6de7970197e8a0a73f607408d948f3b5defbff7050df1f462",
+      "current_sha256": "2f5688de28fe7b5df8d2d4f753be015d512565a6992410e13dd485bb2d44e1fc",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Galvin.lean",
+      "baseline_sha256": "e5869a0dd0c676a3c2e3716752bd4f5e43ec7e943a2406c636e0c88848715430",
+      "current_sha256": "4ad8d00a2e5a7d96f1f12388de8328acc0616295564516b42bb66e1721fc842a",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/GalvinClass.lean",
+      "baseline_sha256": "23e4e07e887b34f5e3daace67bd063dcda96cd07718c316e23229fa6d74ab5a3",
+      "current_sha256": "271fbee3d649798f2505450047f4e8c0c774abb4930fc22a09854de5cfb098e0",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/GalvinLocal.lean",
+      "baseline_sha256": "5859cb847871f391138009c86b3837304940902b7eb892787912eced2487047d",
+      "current_sha256": "886e0055da23bc4e984aaaa7ef234225d9ca1e5d240bf5aec13d9923cdc709aa",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/GalvinMultigraph.lean",
+      "baseline_sha256": "85747d03cf314a6f5952f7c4c038fa7800f065f69d163c31ac8315fc26a859fc",
+      "current_sha256": "cc1b090f827f899c88b68e702bcc939973280ca8bce7e20cdb2daffa20d0b050",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/GalvinRealizer.lean",
+      "baseline_sha256": "d9386a894a66e9a2164cf098b2c90775bc3ba268187020da1655ea7245d78205",
+      "current_sha256": "fe74d2addc3cd52d24ac21ce98599b34dfedc38d4a3f7778cfa76dcf40ebef29",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/GreedyLists.lean",
+      "baseline_sha256": "250303fb54d1b0af2e5198c99d6ca733d6e6dc397af212d9d19a00717292e25c",
+      "current_sha256": "8c6510af36bd522b44a7b5e474ede47fcb3b148ca89a0d76e3c02f383026acc6",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/HostCompletion.lean",
+      "baseline_sha256": "253382633f726b1b4290ca02c3612fc33122b5e05c35be401b67565598aae60b",
+      "current_sha256": "47ec506c9dd359c0a368f3f478d95d75ad0ff3123ce67e826fd776cc48c52c74",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/HostConstructionAdapters.lean",
+      "baseline_sha256": "5b3cf0e71bec8dfe96948d2071136d83b62a3bc887535a67e55071066b664533",
+      "current_sha256": "de928926cc38329261056d60928dde1a83a8de33b28183d8c6a9e94aa7b5e708",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/HostRealizer.lean",
+      "baseline_sha256": "39c8f4faf838bf21117378f6c65585083f48cb82dfd97de3788e1c0d3d3cdb88",
+      "current_sha256": "0cc4a7164aac39387abd02c1488de0aaa3ef7c99e10fbf2fdeae277ef3c75014",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/KonigProfile.lean",
+      "baseline_sha256": "dd2c9ba15a6172b313478d40775b1f9267d6652c569181f3bb9524a930b4602c",
+      "current_sha256": "f0cde47791d3de454e8854410b46fb9a64ff10462539e1a3d4a9c4c7d5602be1",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/LineGraph.lean",
+      "baseline_sha256": "c5532ebeea4a870db4daa3bc9d0c707f831246a7855f10191007246db61a9510",
+      "current_sha256": "9b4511e1f54d3a49121edcd3f25f69fbebff005d61c8ea96924f45b31715703e",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/LoadTwoK4.lean",
+      "baseline_sha256": "016e0bf075171cdb6402099d5e4bf80d14c32ff3c881d50d0bc655970d5eb063",
+      "current_sha256": "192b9d6ad962c481580ccbb6c06d5ed25ee4f1841be0245d27dca2d26a25e73f",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/LPBridge.lean",
+      "baseline_sha256": "5d46ff92ecca8a6fa3dec1519591011a3797d58649afb3ef4954c47fc3a3a899",
+      "current_sha256": "298ce737cc5d9a8710e4ecbdc84906e2a96276d77317d3064101770ad5fb85d0",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/ManuscriptEndpoints.lean",
+      "baseline_sha256": "baf0835d670090f8c3412ba02993de0502d52662155134167e03953c233eec89",
+      "current_sha256": "b58265b65fef9d8170ee79f371444e514e4c922728d2005c911f383530eaf690",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/MixedCopy.lean",
+      "baseline_sha256": "ac6e893940f44994c31b58c263e1e368ca5df2a789b68be1afe806856b8f268e",
+      "current_sha256": "879acc0b7a099c5df8d09c4b6b0dfabda399e7cc401c65a2850cd718ef1419b9",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/MixedCopyAsymptotic.lean",
+      "baseline_sha256": "4603887feb96873b5c3883600ce89b6d6d22f775a3a7c5e6e74bb8d1b17226a6",
+      "current_sha256": "781f9485534b688b2f86496943dc351c186cb2216f60b2781c0eebe3aaaed988",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/MixedCopyFrac.lean",
+      "baseline_sha256": "542405659760a780695bcf141f9a997d2140dd55dfbd37b7be32a36eaebd96f7",
+      "current_sha256": "76224ed9cafd0c2f2cedbbdf1d9601bc0558706d9a11fc5f962362c93422dfe1",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/MixedGapBudget.lean",
+      "baseline_sha256": "c1b7c04504bacc785e141dbb59c59a2a9f86aaee7040481eec36b972def79a7d",
+      "current_sha256": "ebfce01efbcad488a9d2e1f58b8e8151170f47cb5cc4eb8e5530c843d3b48181",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/MixedNormalization.lean",
+      "baseline_sha256": "e8736d0fe0f174ee77b7beca6fbf54f20203052d1714ff2b1af4e62672336649",
+      "current_sha256": "bf2182128ae1a5f73c5482a406e3f5a0269352c364729d072fb4d1579928ba63",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/MixedPromotion.lean",
+      "baseline_sha256": "4a6229d26cb433543b9e7d94fd1c93b5aaf5146397b0a480d0781c40e15ba8db",
+      "current_sha256": "e9d541cd8f86c84e332e95b91c6c23302a510653cb0d49326296a7ff786569dd",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/MixedRationalNormalization.lean",
+      "baseline_sha256": "5e471060c6b863b0686d80bdc6fdc3e0de853589ea6cdadfa64e0ee3247dbefd",
+      "current_sha256": "81bd34816453f2ef4540dc8912d11b532403771ee0bb9c6526783489a47f4067",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/MultiGalvinBase.lean",
+      "baseline_sha256": "0542b1c14dfbe0246dc05eeb7c22c8e5bc35437cedaa3f9337f53e9fe908a9bd",
+      "current_sha256": "de183daf1d44dbaeb09b61cc23789229b80ba6d7b26d71de198bd95b31073242",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/MultiKonig.lean",
+      "baseline_sha256": "a8e143a91484a133f21aaa44f2c580f37d7914a4b59b66bbc83a37bf7e97a785",
+      "current_sha256": "b7083420518c18e2ba90fc55e706d9dd597e3838b6add0f7c10e257c4d47ac2d",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/MultiRanks.lean",
+      "baseline_sha256": "f9aaa2f517b0e2a768765a4384116e4c4dcd1685473d28705bba81b5f849c571",
+      "current_sha256": "46abb6fe156190e72d36d59e5da9e10a27351927403d49a9f3b83c2825ff5440",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/MultiStable.lean",
+      "baseline_sha256": "8ec11aa9321560d6f64687ed7e04887b54f56ee21423781221005f102b8eca89",
+      "current_sha256": "ae14554acf3efb2457f0fd728bbbd8c74ccddc81f65f51ef2a653b06f06f0842",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/N1.lean",
+      "baseline_sha256": "d9e3765e2d1be2e0755ff928c7a6539f7c4022fb6d3e2f191855860d9e4ea8a8",
+      "current_sha256": "f674dc4b7f1139ec60cbdf28d230216a7e78105d6fa4e3d5af300009fe50e467",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/N2.lean",
+      "baseline_sha256": "ec7d46b61bf90750d8a51cba39d17dd4ab3a49d9a6968cd556ff43604f1c6e12",
+      "current_sha256": "2aa160b306533cc001955dc47be5d06c88d072b2c5946540dd105ab975e4a49a",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/N2Gap.lean",
+      "baseline_sha256": "100e084581c0c6c471e88cddda33c4a28998d7b5b33e67fba0361615201655c5",
+      "current_sha256": "860f89acc76e31ec093c600758887993d279f2d3bfee60e3354db3e58a8078db",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/OddCycle.lean",
+      "baseline_sha256": "9bb8700a0ea5bc0c2baa167c1d3eb31a81e9fcbc5c49af90207d2b0d1a76c250",
+      "current_sha256": "627c6a3f952a3863c6dfd258b4e43994b0cb0d7fd5afe9e9d2105d4f3b74042e",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/PackingCert.lean",
+      "baseline_sha256": "9b1534560527fc2fca4a2b1c2808c2aa24c849aedbabeb4c9ff46d86a8962604",
+      "current_sha256": "817ffd973b742fbf30ec10e9a4765afa35c5d09a43b5c99f604c59812c7b7ad7",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/PairedFactors.lean",
+      "baseline_sha256": "f3ab909f7a8acc8ded2c51b56ff76ad11c8905f30d3e08445618df69e5bcdbf8",
+      "current_sha256": "7771376d596a5e5a393537bdcc8ffba2a11b817ade4b0766fae62dfe35d984c6",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Parity.lean",
+      "baseline_sha256": "0a94e49440117ab2b2ef16fedcff6022edc773b6856a7c488aa0cab338fb6505",
+      "current_sha256": "fdc96416c94d8881d422baa63bc5d09765635879c94df99c90e30ba7324507ed",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/PureProfile.lean",
+      "baseline_sha256": "0759d29aadddfe3ea3084f90c56155dadd8f0edee54867e54d7861fd261cf1ff",
+      "current_sha256": "cc858aa80236308f64628433efd0970b5ea11726d3d85d46ba4be5c9028cdc72",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/PureProfileExact.lean",
+      "baseline_sha256": "dab7735dea65896247ece117c672c02657e67316f0cc75ff26b2eeddf4b2dd09",
+      "current_sha256": "3526bccbab445634866e6f9f645110e5b9fb706db54cf9773e28d3d165e270ac",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/PureProfileGap.lean",
+      "baseline_sha256": "cf533b252c5c22e1c024bfc60f4fc45b28a5efbcb38bc236fac68c8b353dfeb0",
+      "current_sha256": "6d87aacbe754a791dd0f4cba95850340e3eecfe912c000d19e39172f07213232",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/PureProfileSharp.lean",
+      "baseline_sha256": "dbc89ada5e1c14bf0aa472792c709f17bd9fb29d2f00439a18f529ed5df46d6e",
+      "current_sha256": "aaf29ef70efb9af58d5b1555bf1ebdfb55c1d04452531354e95b22f3def32ed6",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/RationalFarkas.lean",
+      "baseline_sha256": "26edb9641b5ef3d4e2cb248d0d35a631e3ca05319334d2c5ffe4d803fea60f09",
+      "current_sha256": "41afb0a2da954752418ce50594a0d90602aa1acd583e05ea4f3b985702485ab6",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/RationalLP.lean",
+      "baseline_sha256": "20d7205a820f530334b9cb7b77cfb7707e0871be470cfbb47b7d541b4a579a17",
+      "current_sha256": "789458fa70e91148d113bd483152d40fcbaceec452c52105cbce9931cca1cda2",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/RationalWeights.lean",
+      "baseline_sha256": "16d24786f89aa3e9672bddd4c4198534dfb92d5b43422d5e362ecbacfe4c53f4",
+      "current_sha256": "bb41ce075465abfe99cb6fd8f4e595369462aa4d255c556ad3b4555f1d517dc7",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/RealizabilityDefect.lean",
+      "baseline_sha256": "c877a54b3c6e409fca2594d9429cb1511c402c9af8ab89af93d54689aad01802",
+      "current_sha256": "21b4b48c00b5e5f4b84be70fae57746b218c93e39bd1a09aba500fc09a740d16",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Realizer.lean",
+      "baseline_sha256": "c2228bc0af911263edcdcc61f857da0f92e82c08de142ff09c33fd3efdaf4ef7",
+      "current_sha256": "2a441e4833bac2a9e877b094386eb5023f0d97c9ea7c59705a15a89c9b79cb40",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/RealizerCombinators.lean",
+      "baseline_sha256": "a7e7ae007fa44d5586176caebb40022435fd198fcf394e58b05ce74937293249",
+      "current_sha256": "76de276f4ced2df6b38c3088b23901e24388c0965cd230f0eb629a6ed93166c6",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/ResourceComposition.lean",
+      "baseline_sha256": "abecd8698160476505824ac0891f14cea3decc501292e5a3e86defae7a063bc6",
+      "current_sha256": "18de5c7dd1d3cb5fec332b073d512f0e48b94a01abd81ff123100e405d1b4701",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/ResourceOptimum.lean",
+      "baseline_sha256": "d0629e610ef6f7a271fd2a66f267dde27666faa5669f21e05970ea201f6f3809",
+      "current_sha256": "35ec80eb5b351b5f02c6f3b11523170a0ecc8bc8508dc4f9b1ac54834475f111",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Seal.lean",
+      "baseline_sha256": "2853c1c37458038ebc331a6a3c4a5154438ed647b3baae10036b10c43247d39a",
+      "current_sha256": "59852cd38c81a0c94715722db7111235fb89e89a68c43a3189044b16f276ec48",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/SealHost.lean",
+      "baseline_sha256": "7086d736101b7ff0d7ed73331372f182bcc9239a43a7c4d3223526f1b8e2c2fd",
+      "current_sha256": "59b98687d0d0539a91bb139355572c0441ada22c7ba09d804d6da54886811fb7",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/SealTermination.lean",
+      "baseline_sha256": "6c613b345dd8bd183efa595de9aac6a4b5ae8283f5c33a797384f5740bd9acf5",
+      "current_sha256": "d363d93d999f25cbfe77d32275069b2e160c7ae5546929f300907dcbf33bab45",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/SplittingQ.lean",
+      "baseline_sha256": "1f9fcb32d8aafb814ddc70241c4c7db5d6ca7021100279fb37e92a7695667e26",
+      "current_sha256": "7bb0e3bca4ef6720a6ac94bca8cbd7146b07ada3a7b3fe117a04a364ea3d5c5b",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/StarT2.lean",
+      "baseline_sha256": "13ba17b934d9c43aeb946cb6611826fac50cb4e261077e299fd25ba9887880cb",
+      "current_sha256": "85e9509add14475fbcb8ad5df1ad69f558f0ebd8606edbc707abe62849f46f64",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/SteinerFrac.lean",
+      "baseline_sha256": "039d6dc691b03f56ea010ad7abef84400cde236d04a1062b8a13483a9b57d7a4",
+      "current_sha256": "a93f36e9e2278aed36e94375eab09f23ff5a1ab299fb9d4690461ad3d705b6c2",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/SteinerK4.lean",
+      "baseline_sha256": "c8cd1dfc21dc525e3234452fb7042c0e7931b0c80c0f454ed38e3e6c9fde3c88",
+      "current_sha256": "34ef644784a6d22b5fcd19115ed46ae54cef8a3443716db19fe10bdc70cccb2e",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/SteinerK4Oct.lean",
+      "baseline_sha256": "f9a3326b23fdd3118780e79efc894ef92e81b3295125dd12eddeef6580c6fb18",
+      "current_sha256": "a7a55f3e1bf07c31f326e045d79a5bdaec46e10a7c5009750e008212035c986a",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/StrictnessExample.lean",
+      "baseline_sha256": "df9b58a164df4a62174907fdcc2d6b505c41b078e5ed9a56d0e0a7232aa642ee",
+      "current_sha256": "003d7c26b49adab66b4d8abfaf2913602b63e8893b785f9259c2fa2492deb372",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/StrictnessIntermediate.lean",
+      "baseline_sha256": "7f0ad0a864364ec8f39823920af51f3297cca168c8af48b940cabca0b56f916e",
+      "current_sha256": "1b8e44718a68e2387965bd35c0c1dcdd059477106fe32e2bb8185a3ec82bb22e",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/StrongDuality.lean",
+      "baseline_sha256": "c1cb4ebdb5a597292a6b0550d0a040d9e0f2ffecacaf6746c49f6af3d90bb28c",
+      "current_sha256": "a8177668cf4193ffb04b8efc9e1f14e25b746770acd577f6304f502bb481fe88",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/SumDefect.lean",
+      "baseline_sha256": "c2d5cf8a6ec02df1a889172735c28ab173f1c86493285a53e1c84fdc0f85266a",
+      "current_sha256": "005578da68d8f573fb93f75556c417e5cf22c4004fe6b21e5c6be285743559f0",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/TerminalPairAssembly.lean",
+      "baseline_sha256": "ffcccd6054f5cce7eb5214e5a83f6c0ca89bae9c969f70b5369bf17cd10c85f5",
+      "current_sha256": "663773de5fd177783c17dfc6cd08728032a0238875186fbbdf35e296fa675d60",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/TerminalPairRounding.lean",
+      "baseline_sha256": "c37edecac5c67e45e485ab826ff73a04d15cdb5258b2f37350c20d811d4d7d70",
+      "current_sha256": "40939a15eb748531c7760476ad41a4150400c3cc39155aaa0fc670d48c1d9ceb",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/TerminalPairSharp.lean",
+      "baseline_sha256": "21ed1ab6e9fd1e16444fa59ca2927d09583b63614d81810f5de897d229c6eccb",
+      "current_sha256": "a50afaaf97c79a14991614c3ef56f5ad90f40a00f8f97d23e213ee36ba4e48d8",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Tightness.lean",
+      "baseline_sha256": "aa6745c67ccbaedaef8fa5178e40b675af4b1e4073081e3f86edecba7b953e83",
+      "current_sha256": "35f4f2e0aa3a362eea85130a6e5d98e9ded36d6cbbfbfd339cb62c7909e3ccf8",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/TransferCorollaries.lean",
+      "baseline_sha256": "19099fa2cef3cb9975b6203f4519987acc2b025ba94e7a7f62e75bbba6d857bb",
+      "current_sha256": "bbecc22bb50fc5801f5fc06cd4cbba02d0756be6a7a28e7963c9f087f5587e33",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/TwoErrorCertificate.lean",
+      "baseline_sha256": "59d3841a89fc683d44f132fb03da6841c6ebb82bbc14955073d9240e536e5a94",
+      "current_sha256": "0fad5dfc270e491eac20679a8233fb269c1e12556fecd0f9edf873ce0a3abd4b",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/UnitBoundaryCompletion.lean",
+      "baseline_sha256": "4359f10e8e87b52132b145ded19d50872e6fce3c94a5f6dd7eb0ca55d2b2d9d0",
+      "current_sha256": "cbeb7adf41fefe57662ea6d1dd3f664b43c6c04e6e06374ddd81985032a86567",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/UnitBoundaryEndpoints.lean",
+      "baseline_sha256": "74cbb364fee1501b9ed195f762d6896e6692428f4be8044535a8a41ae4b39e9d",
+      "current_sha256": "b2148f82ca0528642a2595576ba11f97aaad416a5ecc18c3721defdbeb905570",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/UnitBoundaryWeighted.lean",
+      "baseline_sha256": "91885f7005acee0fecef65bf2c27077142173234af3e357eead8d5828e760ac2",
+      "current_sha256": "1ab870a659ab260537efd8783168d5d8c9f25c476f8d02b4f2d1358f5a4d7976",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/UnitBoundaryWitnesses.lean",
+      "baseline_sha256": "41f2d9e08d14493ece603052e301e5ec43218000b981896fc436fbc6bc5b8eac",
+      "current_sha256": "a4e04bee8e2db2d3db68d451bd8683180e57015048d0ac8c38f9bd173089ae27",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Vizing/Basic.lean",
+      "baseline_sha256": "ac590869217a6a543ce5e19f194af2a83fd5c627ccaaa38e6f99952c355ffd72",
+      "current_sha256": "1da365d976a20885ed31c5e9c72da2a205a6aceb4c1f333c192ac7b9c8847bce",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Vizing/Endpoints.lean",
+      "baseline_sha256": "a096f02425c830982a169ae5dc60905a17ad48923d8ec97288644bd585c14138",
+      "current_sha256": "64e88152546e2ed0c7e668acc0ff38f36a876521f69cd2441ceda95adc1371f1",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Vizing/Fan.lean",
+      "baseline_sha256": "67a1feddb0b3d2dbc66eede5dfaf73dbe668e002e5c3d19b4d155ab05d4da49e",
+      "current_sha256": "465570ba50939c5c52515aea43fa9d7044d063bbc970a8202f28e499808205b6",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Vizing/Kempe.lean",
+      "baseline_sha256": "7dda789e95a63d7a74df45777aef6e1d4c388df021092bbd69f2dae19b2c2a70",
+      "current_sha256": "ad7772cbe98ee1b64efd008659045e0a0a28a9cc43e82b8f7c16b1987bd4846c",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Vizing/Main.lean",
+      "baseline_sha256": "4ffdd22d6269716649906864f609fd9b3a7869206bfcc84196a1c95ec058e33b",
+      "current_sha256": "822b1af45dd75a7371193847cf4ca567d9afd5c29c0c2f85368fb48c9d9abe0f",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Vizing/Step.lean",
+      "baseline_sha256": "db01fcfa7e65bdd69eff4128c782e3acef83d64a392f69025d1e801cd1396c9f",
+      "current_sha256": "3e5ea2c2c42a43c60d1c1a2e61a24f4e466e54be3e5ca2a1699654e7f7eac150",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/Vizing.lean",
+      "baseline_sha256": "039169a4f792ad74670294e72f167422c026683f7c7be1148c6d43fe52c7293f",
+      "current_sha256": "cc975f16dc4f6487b8fe58b6e8599d02b29661da39bdbb20974651879084aa26",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV/WeightedTransfer.lean",
+      "baseline_sha256": "b6e9a013d4bb3ada4ab89468a5991989876e04d493b437869873899dacb4984e",
+      "current_sha256": "d89e9b1eec0b9e992d563522d5435ca2cc9698cfb6fdea791c0114c0351b2bc3",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperV.lean",
+      "baseline_sha256": "52236550617c3df8f8d8956613e5cad1979a38af541b07c3ea24248762d61ba1",
+      "current_sha256": "6f8d32f421973867e64856798f1a56bf2d7fcd29e6a0e7cd39460bf75e6e7e8a",
+      "prior_bytes_retained_exactly": false,
+      "scope": "Public root header and import of CopyPackings."
+    },
+    {
+      "path": "PaperVConstructionGate.lean",
+      "baseline_sha256": "f91b3eee33132752248b50d16d7eac6580555b4857beba2f4b7492812938437b",
+      "current_sha256": "d0f8cadb21327d6a6f171cdbeecbe53167645f94f52c5be2ee0b54c2751d39f9",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperVGapBudgetGate.lean",
+      "baseline_sha256": "8a179123e3d40f2390b06aa25f25253387fe6ab1559115f42b78efd2bbb023dd",
+      "current_sha256": "163d6394b447efa09d6ad04a5b68c0fe927f63684aa44987eabff1cd738fa019",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperVImprovementsGate.lean",
+      "baseline_sha256": "53683b8324c5a87e2bae2ba26ba1615479e0271d47e2b2963076009973093c2d",
+      "current_sha256": "c99264cfa31e18979ca9c160168e786e013828a2961654fe06ef54dac6e761b1",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperVManuscriptGate.lean",
+      "baseline_sha256": "98c5a88db2e9d09de2237966af27fba8f25f647ebe26541c2f81fda88d87905f",
+      "current_sha256": "45f0c62d9a04f43f8883ad65c4562bc93da362d2f001b335cecf8e98f44a83cc",
+      "prior_bytes_retained_exactly": false,
+      "scope": "Copyright header and six strong-interface type/axiom queries."
+    },
+    {
+      "path": "PaperVNewGate.lean",
+      "baseline_sha256": "9c981f0768744342f3287bf7ef6582948dcfc09be98bf70eac785293f1a3bddb",
+      "current_sha256": "4fdc6555f93f971b749b905b8d88025fe1994eb79db5143583339b1f0c02e887",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperVRationalPromotionGate.lean",
+      "baseline_sha256": "c07ae8816fd79f7647ca2cf5056248eb229563a2a117702ca4ff235af1da9f76",
+      "current_sha256": "798e92b9d99b63beb415e3427ede3773c021f6c62d20b2147d168ea40c22d0aa",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperVReleaseGate.lean",
+      "baseline_sha256": "710e0ab53907dec17560f014526710f1b9101491f3bd1243d2263d32cfce9920",
+      "current_sha256": "eaf907eca99b6e5b565b381e162abe8fd4ce318618ccad3e10caefa94b83bb25",
+      "prior_bytes_retained_exactly": false,
+      "scope": "Copyright header and six strong-interface type/axiom queries."
+    },
+    {
+      "path": "PaperVSupplementGate.lean",
+      "baseline_sha256": "09d7a08e8a98e96e79d7e62cdfe0184751fe685955b420d9c5d0283fbf0d76ad",
+      "current_sha256": "98f4f880ecfe7207f24ef0cf80816bc4ef40f24d7cf5ba51763e05adff9e3400",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    },
+    {
+      "path": "PaperVUnitBoundaryGate.lean",
+      "baseline_sha256": "4765ecf7531226de7c75e92f6d9c3df772608d20ebcca5625d1ef880464e6627",
+      "current_sha256": "53284afe928bebf32f7ddb91cc34e6f21bb915b6a7483b49de6e3b0d70ebcf33",
+      "prior_bytes_retained_exactly": true,
+      "scope": "Apache copyright/license prefix only; every prior byte retained."
+    }
+  ],
+  "new_module": {
+    "path": "PaperV/CopyPackings.lean",
+    "sha256": "a85353d3f311d2a5b52c61a787b14b6f460b8e5f804f6760b51f0768b7d2206c",
+    "scope": "Actual image multiset of the specified copied families; cardinality, multiplicity and transfer proofs; optimal-family adapter for written Theorem 6.2."
+  },
+  "configuration": "Public package version 1.0.0; exact Lean/Mathlib pins preserved. License notices updated only in this new release."
+}

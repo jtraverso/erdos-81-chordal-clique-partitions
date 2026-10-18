@@ -1,0 +1,1444 @@
+% Adaptación del preámbulo de Paper III v1.5 español; no plantilla standalone de Pandoc.
+\documentclass[spanish,11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\newlength{\LeanCharWidth}
+\usepackage{amsmath,amssymb}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\usepackage{microtype,parskip}
+\usepackage{graphicx,float,caption}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref,bookmark}
+\usepackage{etoolbox,needspace}
+\setcounter{secnumdepth}{-\maxdimen}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}\small}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{4\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{pdfauthor={Juan Pablo Traverso Gianini},pdflang={es-ES},colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\title{Particiones óptimas en cliques\\bajo perturbaciones locales}
+\author{Juan Pablo Traverso Gianini\\\small Investigador independiente, Santiago, Chile\\\small \href{mailto:jtraverso@gmail.com}{jtraverso@gmail.com}\\\small ORCID: 0009-0003-6068-4096}
+\date{}\begin{document}\raggedbottom\maketitle
+\textbf{Artículo VI de la serie}\\
+\textbf{Preprint 1.0}\\
+\textbf{Fecha:} 18 de octubre de 2026.
+
+Copyright © 2026 Juan Pablo Traverso Gianini. Licencia CC BY-NC 4.0.
+
+\subsection{Resumen}\label{resumen}
+
+Determinamos exactamente el número de partición en cliques en un entorno
+explícito de un grafo completo-split. Escribamos
+\(h=\Delta(G\triangle(K_P\vee I_O))\), donde
+\(|P|=p=\lfloor(n+1)/3\rfloor\), y sean \(u,m,s\) los números de aristas
+del núcleo, exteriores y cruzadas. Si \(p\ge18h+1\), entonces
+\(\operatorname{cp}(G)=s-u-2m\), con un óptimo que utiliza bloques de
+orden a lo sumo cuatro; al restringirse a triángulos, el óptimo aumenta
+exactamente en \(m\). Si \(p\ge63h\), se puede prescribir de manera
+independiente que cada arista exterior pertenezca a un bloque de orden
+cuatro o cinco. Para \(p\ge16\), cada prescripción admite al menos
+\(p^{\lfloor p^2/64\rfloor}\) particiones óptimas. En la región local,
+el núcleo de referencia se puede recuperar a partir de los grados.
+También determinamos el coste adicional exacto causado por un vértice
+excepcional. Este coste puede ser lineal incluso después de optimizar la
+cota inferior asociada a la bipartición sobre todos los núcleos. Las
+construcciones alcanzan cotas duales explícitas con signo mediante
+elecciones de carga acotada y coloreo de aristas con listas; el teorema
+de Vizing proporciona el paso de conteo. La cordalidad da una fórmula
+exacta de estabilidad local, pero no se supone en los resultados
+principales de perturbación.
+
+Para joins completos con \(q\ge2p-1\), dos levantamientos legales
+formados solo por \(K_5\) que difieren en \(k\) asignaciones admiten
+completaciones óptimas cuya diferencia simétrica de bloques es a lo sumo
+\(68k\). Si \(q\in\{2p-1,2p,2p+1\}\) y \(p\ge63\Delta(H)\), los óptimos
+con levantamientos formados solo por \(K_5\) y con carga del núcleo a lo
+sumo \(7\Delta(H)\) se conectan mediante a lo sumo \(\binom p2-2m\)
+pasos de distancia entre bloques a lo sumo \(884\).
+
+\textbf{Palabras clave:} partición en cliques; grafo completo-split;
+perturbación local; coloreo de aristas con listas; grafo cordal;
+estabilidad exacta.
+
+\subsection{1. Introducción}\label{introducciuxf3n}
+
+Una partición en cliques de un grafo es una partición de su conjunto de
+aristas en subgrafos completos. Los bloques pueden compartir vértices y
+no tienen que ser cliques maximales. Escribimos \(\operatorname{cp}(G)\)
+para el número mínimo de bloques y \(\operatorname{cp}_{\le r}(G)\)
+cuando sus órdenes se restringen a lo sumo a \(r\).
+
+Paper IV {[}IV{]} demuestra la cota para grafos cordales de Erdős 81,
+con la cota entera exacta para órdenes suficientemente grandes. Este
+artículo continúa el estudio de las particiones en cliques más allá de
+esa cota global: determina valores exactos bajo perturbaciones locales,
+permite prescribir bloques exteriores y estudia la estabilidad y la
+conectividad restringida de particiones óptimas. Estos resultados no son
+insumos necesarios para completar la demostración de Paper IV.
+
+Los grafos completo-split constituyen una familia de referencia útil
+para este problema. Una arista de su parte completa puede servir de base
+a un triángulo con un vértice exterior. Si estos triángulos se eligen de
+forma compatible, reducen el número de bloques de una sola arista.
+Añadir una arista exterior abre otras posibilidades: se puede unir a una
+arista del núcleo para formar un \(K_4\), o a un triángulo del núcleo
+para formar un \(K_5\). La dificultad consiste en realizar todas estas
+elecciones sin agotar las aristas cruzadas necesarias para completar el
+núcleo residual.
+
+Demostramos que una cota sobre el número de modificaciones en cada
+vértice basta para efectuar esta construcción y alcanzar exactamente una
+cota inferior clásica. No es necesario que el grafo sea cordal. La
+cordalidad se utiliza solo después, cuando obliga a que el núcleo siga
+siendo completo.
+
+\subsubsection{1.1. El modelo local}\label{el-modelo-local}
+
+Sea \(n\ge2\), y pongamos \[
+p=\left\lfloor\frac{n+1}{3}\right\rfloor,\qquad
+q=n-p,\qquad M(n)=\left\lfloor\frac{n(n+1)}6\right\rfloor.
+\] Fijemos una bipartición etiquetada \(V=P\sqcup O\), con \(|P|=p\) y
+\(|O|=q\), y sea \(S=K_P\vee I_O\). Entonces \[
+q\in\{2p-1,2p,2p+1\},\qquad q\ge p,\qquad
+pq-\binom p2=M(n). \tag{1}
+\] Para un grafo simple \(G\) sobre este conjunto de vértices,
+escribamos \[
+\begin{aligned}
+C&=\binom p2-e(G[P]), &u&=e(G[P])=\binom p2-C,\\
+A&=pq-e_G(P,O), &s&=e_G(P,O)=pq-A,\\
+H&=G[O], &m&=e(H).
+\end{aligned}
+\] Así, \(C\) y \(A\) cuentan las aristas ausentes del núcleo y las
+cruzadas, mientras que \(m\) cuenta las aristas exteriores. El parámetro
+de modificación local es \[
+h=\Delta(G\triangle S). \tag{2}
+\] Todas las distancias y todos los tipos que siguen se refieren a esta
+bipartición fija. Un clique tiene tipo \((a,b)\) si contiene \(a\)
+vértices del núcleo y \(b\) vértices exteriores.
+
+Para \(a\in P\), sean \(c_a\) y \(\alpha_a\) los números de sus vecinos
+ausentes dentro del núcleo y en el exterior. Para \(x\in O\), sea
+\(\beta_x\) el número de sus vecinos ausentes del núcleo. La definición
+de \(h\) da \[
+c_a+\alpha_a\le h,\qquad \beta_x+d_H(x)\le h,
+\qquad m\le qh/2. \tag{3}
+\] Las cotas conjuntas de (3) se utilizan en los pasos de selección.
+
+\Needspace{20\baselineskip}
+\subsubsection{1.2. Resultados
+principales}\label{resultados-principales}
+
+\Needspace{14\baselineskip}
+\textbf{Teorema A (fórmula local exacta).} Si \[
+p\ge18h+1, \tag{4}
+\] entonces \[
+\operatorname{cp}(G)=\operatorname{cp}_{\le4}(G)
+=s-u-2m=M(n)+C-A-2m. \tag{5}
+\] Existe una partición óptima con \(m\) bloques \(K_4\) de tipo
+\((2,2)\), \(u-m\) triángulos de tipo \((2,1)\) y \(s-2u-2m\) bloques de
+una sola arista cruzada. Cuando \(q=2p\), basta la condición más débil
+\(p\ge18h\). La hipótesis también implica \(m\le u\): por (3),
+\(2(u-m)\ge p(p-1)-(p+q)h\ge p(p-1)-(3p+1)h\ge0\). Por tanto, la cota
+inferior que aquí se alcanza es exactamente el caso correspondiente de
+la cota de Erdős--Faudree--Ordman.
+
+La fórmula contabiliza por separado los tres tipos de modificación. En
+esta región, eliminar una arista del núcleo aumenta en uno la expresión
+de referencia, eliminar una arista cruzada la reduce en uno y añadir una
+arista exterior la reduce en dos. Las constantes de las hipótesis
+locales son constantes suficientes obtenidas de la construcción; no se
+afirma que sean óptimas.
+
+\textbf{Teorema B (restricción a triángulos).} Bajo (4), \[
+\operatorname{cp}_{\le3}(G)=s-u-m=M(n)+C-A-m, \tag{6}
+\] y, por tanto, \[
+\operatorname{cp}_{\le3}(G)-\operatorname{cp}(G)=m. \tag{7}
+\]
+
+Así, incluso una construcción triangular óptima requiere un bloque
+adicional por cada arista exterior respecto del óptimo sin restricción.
+Se comparan aquí dos familias de bloques permitidos. En el problema de
+empaquetamiento de triángulos, tanto el óptimo entero como el fraccional
+son \(u+m\), como se demuestra en la Sección 4.
+
+\textbf{Teorema C (bloques exteriores prescritos).} Si \[
+p\ge63h, \tag{8}
+\] entonces, para toda función \(\sigma:E(H)\to\{4,5\}\), existe una
+partición óptima en la que cada arista exterior \(xy\) pertenece a un
+bloque \(K_{\sigma(xy)}\) que contiene exactamente dos vértices
+exteriores. Todos los demás bloques son triángulos de tipo \((2,1)\) o
+aristas cruzadas individuales. Si \(k=|\sigma^{-1}(5)|\), los números de
+bloques son \[
+N_5=k,\quad N_4=m-k,\quad N_3=u-m-2k,
+\quad N_2=s-2u-2m+2k. \tag{9}
+\] En particular, \(G\) tiene al menos \(2^m\) particiones óptimas en
+cliques distintas.
+
+La prescripción puede variar de una arista a otra. El teorema construye
+una partición para cada prescripción. La Sección 9 distingue esta
+libertad del cambio acotado disponible en una capa de levantamiento
+determinada.
+
+Para joins completos, el caso formado solo por \(K_5\) permite una
+conclusión adicional sobre las propias particiones óptimas. La Sección
+10 extiende cualquier prefijo terminal legal, controla la partición
+completa después de cambiar el levantamiento y conecta mediante pasos
+acotados los óptimos de carga acotada con levantamientos formados solo
+por \(K_5\). Estos enunciados conservan las hipótesis de join completo y
+de usar solo \(K_5\); no se refieren a toda la clase de prescripciones
+mixtas.
+
+\subsubsection{1.3. Estrategia de demostración y trabajos
+anteriores}\label{estrategia-de-demostraciuxf3n-y-trabajos-anteriores}
+
+Erdős, Faudree y Ordman {[}EFO88{]} demostraron que una bipartición con
+\(u,v\) aristas internas y \(s\) aristas cruzadas satisface
+\(\operatorname{cp}(G)\ge s-u-v-\min\{u,v\}\). También identificaron la
+eficiencia de los bloques \(K_4\) y \(K_5\) con dos vértices en un mismo
+lado. Utilizamos una forma asimétrica de su cota cuyos tipos de holgura
+cero son precisamente \((1,1),(2,1),(2,2),(3,2)\). La contribución que
+aquí se considera es una construcción uniforme que alcanza esa cota en
+todo el entorno local indicado, incluso con aristas ausentes del núcleo
+y entre las partes, y con prescripciones arbitrarias para las aristas
+exteriores.
+
+La construcción tiene dos etapas. Primero, cada arista exterior se
+extiende a un clique adecuado. Una cota sobre el número de extensiones
+que utilizan cada vértice del núcleo mantiene disponibles suficientes
+aristas cruzadas. Después, el núcleo residual se descompone en
+triángulos eligiendo un vértice exterior para cada arista residual. Este
+es un problema de coloreo de aristas con listas: la lista de una arista
+del núcleo está formada por los vértices exteriores cuyas dos aristas
+cruzadas siguen disponibles. El teorema de Häggkvist y Janssen
+{[}HJ97{]} completa este paso de manera exacta.
+
+El caso de join con un factor independiente tiene un antecedente clásico
+más fuerte. Pullman y Donald {[}PD81, Teorema 3{]}, citados aquí
+mediante {[}EFO88, p.~94{]} y {[}WZ93, Corolario 3.3{]}, demostraron que
+\[
+\operatorname{cp}(F\vee I_q)=q|V(F)|-e(F)
+\quad\text{si }q\ge\chi'(F),
+\] y describieron sus particiones óptimas mediante aristas y triángulos.
+El factor \(I_q\) es independiente. Esto incluye nuestro caso \(A=m=0\),
+incluso con un grafo arbitrario \(F=G[P]\) en el núcleo. No cubre la
+presencia simultánea de aristas cruzadas ausentes y aristas exteriores
+añadidas. Wallis y Zhang {[}WZ93, Proposición 3.2{]} dan una
+caracterización exacta del número de partición en cliques de un join con
+factor independiente mediante una optimización de coloreo de cliques
+generalizado. Su Corolario 3.3 da el criterio necesario y suficiente
+para la igualdad anterior y lo atribuye a Pullman y Donald. También
+recupera un caso de frontera del Teorema D: cuando el vértice
+excepcional es adyacente a todo vértice exterior ordinario, trasladarlo
+al núcleo produce un join con factor independiente al que se aplica el
+criterio clásico. Son antecedentes exactos en las subfamilias de joins;
+no proporcionan la construcción con modificaciones simultáneas ni los
+levantamientos exteriores prescritos considerados aquí.
+
+Erdős, Ordman y Zalcstein {[}EOZ93{]} plantearon el problema de
+partición en cliques para grafos cordales y exhibieron ejemplos
+extremales completo-split. Chen, Erdős y Ordman {[}CEO94, Teoremas
+1--2{]} demostraron las cotas \(3n^2/16+O(n)\) para grafos split y
+\(n^2/6+O(n)\) para grafos completo-split. Su uso de matchings del
+núcleo, completaciones triangulares y cuentas de aristas cruzadas
+ausentes es un antecedente del método de construcción. Nuestro enunciado
+es una igualdad finita bajo las hipótesis locales indicadas, y no una
+cota para todo grafo split. En la Sección 8, la familia excepcional es
+split cuando \(a=p\); la familia general también incluye grafos no
+cordales. Wallis y Wu {[}WW91{]} demostraron la NP-completitud del
+problema general para grafos split, lo que es compatible con el
+resultado de reconocimiento restringido de este trabajo. La subfamilia
+\(a=p\) también es de umbral. Las cotas de Ma por clases de grado
+{[}Ma88, Teorema 2{]} ya alcanzan el valor entero en una subregión de
+esa familia: cuando el núcleo no está vacío, el vértice excepcional
+tiene más vecinos exteriores que el tamaño del núcleo y al menos ese
+tamaño de no vecinos exteriores. El Teorema D trata la familia
+excepcional completa y determina también sus óptimos fraccional y
+triangular. Esta comparación usa el artículo completo en chino, y no
+sólo su resumen.
+
+En Okechukwu {[}Oke26, Lemas 4.1--4.3{]} aparecen construcciones
+terminales relacionadas. Su Lema 4.2 da una cota superior de partición
+triangular bajo sus propias hipótesis de coloreo, capacidad y defecto.
+En los subcasos con enlaces completos que cumplen esas hipótesis, la
+cota superior coincide con la cota inferior elemental usada en B. Esta
+comparación no cubre toda la ventana de modificaciones simultáneas de B.
+Ning {[}Nin26, Proposición 3.1{]} alcanza la cota EFO mediante \(K_4\)
+para joins de dos uniones especificadas de cliques iguales, bajo sus
+condiciones de paridad y tamaño. Monson {[}Mon96{]} estudió los efectos
+generales de las eliminaciones sobre el número de partición en cliques.
+Las cotas inferiores, los tipos eficientes de bloques, la fórmula de
+join con factor independiente y el método de matchings del núcleo son
+herramientas clásicas.
+
+El conteo de particiones mínimas de aristas en cliques también tiene
+antecedentes clásicos: McGuinness y Rees {[}MR90{]} las enumeran para
+grafos línea. Más generalmente, Kwan, Sah y Sawhney {[}KSS23{]} cuentan
+descomposiciones de grafos completos en cliques sin la restricción de
+número mínimo de bloques usada aquí. El Teorema E da, en cambio, una
+cota inferior uniforme para cada patrón prescrito de bloques exteriores
+de nuestra región local. La reconfiguración del coloreo de aristas con
+listas tiene su propia teoría establecida {[}IKD12{]}. La Sección 10
+controla particiones completas en cliques dentro de una clase de carga
+acotada con levantamientos sólo de K5 y cambios acotados de bloques; no
+es un resultado general de recoloreo de una arista por vez. Estas
+comparaciones delimitan las aportaciones candidatas y no constituyen una
+afirmación exhaustiva de prioridad histórica.
+
+La Sección 2 presenta el certificado de cota inferior y la herramienta
+de completación. Las Secciones 3--5 demuestran A, B y C. Las Secciones
+6--7 deducen estabilidad cordal local y optimalidad fraccional. La
+Sección 8 recupera el núcleo y determina el defecto del vértice
+excepcional; la Sección 9 enuncia el resultado de conteo. La Sección 10
+demuestra completación estable y conectividad restringida para joins
+completos con levantamientos formados solo por \(K_5\). Los apéndices
+presentan una construcción elemental para joins, una localización de los
+bloques ineficientes y la demostración del conteo.
+
+\subsection{2. Cotas inferiores y completación
+exacta}\label{cotas-inferiores-y-completaciuxf3n-exacta}
+
+\subsubsection{2.1. Una identidad de
+holgura}\label{una-identidad-de-holgura}
+
+Para un clique de tipo \((a,b)\), con \(a+b\ge2\), definamos \[
+\ell(a,b)=1-ab+\binom a2+2\binom b2
+=\frac{(a-b)(a-b-1)+(b-1)(b-2)}2\ge0. \tag{10}
+\] La desigualdad se sigue de que el producto de dos enteros
+consecutivos es no negativo. Para cualquier partición en cliques
+\(\Pi\), contar una vez cada arista presente da \[
+|\Pi|-(s-u-2m)=\sum_{Q\in\Pi}\ell(a_Q,b_Q). \tag{11}
+\] En consecuencia, \(\operatorname{cp}(G)\ge s-u-2m\) para todo grafo
+con la bipartición fija, sin restricción sobre \(h\). Esto también se
+deduce de {[}EFO88{]} y coincide con su cota cuando \(m\le u\).
+
+La identidad cuenta de dos maneras las mismas aristas físicas. Cada
+arista cruzada aparece una vez en el término que contiene \(ab\), cada
+arista del núcleo una vez en el término que contiene \(\binom a2\) y
+cada arista exterior una vez en el término que contiene \(\binom b2\).
+La contribución restante es una unidad por bloque. Esta cota inferior no
+utiliza la elección de ninguna construcción particular.
+
+Ambos productos de (10) se anulan exactamente para \[
+(a,b)\in\{(1,1),(2,1),(2,2),(3,2)\}. \tag{12}
+\] Por tanto, basta construir una partición que utilice únicamente estos
+tipos. Una vez construida tal partición, la identidad también
+identificará todos los tipos óptimos.
+
+\subsubsection{2.2. Pares y triángulos disponibles en el
+núcleo}\label{pares-y-triuxe1ngulos-disponibles-en-el-nuxfacleo}
+
+Sea \(B\) un grafo de pares prohibidos del núcleo, con
+\(\Delta(B)\le D\). Todo conjunto de candidatos con al menos \(D+2\)
+vértices contiene un par disponible. En efecto, un vértice prohíbe a lo
+sumo \(D\) de los demás. Un conjunto de candidatos con al menos \(2D+3\)
+vértices contiene un triángulo disponible: se elige un par disponible y
+luego un tercer vértice fuera de sus dos extremos y de sus vecindarios
+prohibidos. Se han excluido a lo sumo \(2D+2\) vértices.
+
+\subsubsection{2.3. Completación mediante coloreo de aristas con
+listas}\label{completaciuxf3n-mediante-coloreo-de-aristas-con-listas}
+
+Häggkvist y Janssen {[}HJ97{]} demostraron \[
+\chi'_{\ell}(K_p)\le p. \tag{13}
+\] Aplicamos este resultado a un grafo residual \(J\subseteq G[P]\) del
+núcleo. Para cada \(a\in P\), sea \(F_a\subseteq O\) el conjunto de
+vértices exteriores cuya arista cruzada hacia \(a\) está ausente o ya se
+ha utilizado. A cada \(ab\in E(J)\) se le asigna la lista
+\(L_{ab}=O\setminus(F_a\cup F_b)\).
+
+Si todas las listas tienen al menos \(p\) elementos, se extienden las
+listas al grafo completo abstracto sobre \(P\) asignando \(O\) a cada
+par no residual. Estas listas añadidas tienen tamaño \(q\ge p\), de modo
+que se aplica (13). Se restringe el coloreo propio con listas resultante
+a \(E(J)\). Una arista \(ab\) de color \(x\) da el triángulo \(abx\).
+Las listas aseguran que ambas aristas cruzadas existen y están libres;
+que el coloreo sea propio asegura que dos de los nuevos triángulos no
+utilizan una misma arista cruzada. Los pares ficticios del núcleo no se
+convierten en bloques. Una vez cubiertas todas las aristas exteriores y
+del núcleo, las aristas cruzadas restantes se pueden tomar
+individualmente.
+
+\subsubsection{2.4. Otros tamaños del
+núcleo}\label{otros-tamauxf1os-del-nuxfacleo}
+
+El argumento de levantamiento no exige \(p=\lfloor(n+1)/3\rfloor\). Para
+un grafo split de referencia arbitrario, con tamaños de las partes
+\(p,q\), sea \(h\) el mismo parámetro local de antes.
+
+\Needspace{13\baselineskip}
+\textbf{Proposición 2.1.} Sea \(t\ge1\) un entero. Si \[
+p+(4t+2)h\le q,\qquad q+t(t+5)h\le tp,
+\] entonces \[
+\operatorname{cp}(G)=\operatorname{cp}_{\le4}(G)
+=s-u-2m=pq-\binom p2+C-A-2m.
+\]
+
+\emph{Demostración.} Se utiliza la construcción de la Sección 3 con tope
+de carga \(r=th\). Para \(h\ge1\), la selección de candidatos y de pares
+es válida siempre que \[
+r(5h+r-2)+2(m-1)\le rp.
+\] La segunda desigualdad de tamaños y \(2m\le qh\) implican esta cota
+de capacidad. La primera desigualdad de tamaños es exactamente la
+condición de listas \(p+2(h+2r)\le q\). Así, la misma construcción
+física produce solo bloques de holgura cero y alcanza la cota inferior.
+Si \(h=0\), no hay levantamiento exterior, y el coloreo con listas
+completa el núcleo completo puesto que \(q\ge p\). \(\square\)
+
+Por ejemplo, \(t=4\) permite \(p+18h\le q\le4p-36h\). Esto también cubre
+el segundo tamaño extremal completo-split. Para \(n=3k+1\), ambos grafos
+\[
+K_k\vee I_{2k+1},\qquad K_{k+1}\vee I_{2k}
+\] tienen valor de referencia \(M(n)\). Para el segundo núcleo, de
+tamaño \(p=k+1\), la condición suficiente \(p\ge18h+2\) da la misma
+fórmula \(M(n)+C-A-2m\). En efecto, \(q=2p-2\) satisface el intervalo
+mostrado, y \(p(2p-2)-\binom p2=M(3p-2)\). La afirmación de igualdad
+local de la Sección 6 siempre se refiere al grafo de referencia que en
+ella se especifica.
+
+\subsection{3. Demostración del Teorema
+A}\label{demostraciuxf3n-del-teorema-a}
+
+Si \(h=0\), entonces \(G=S\). Un coloreo propio de las aristas del
+núcleo con a lo sumo \(p\) colores exteriores proporciona la
+construcción triangular requerida. Un coloreo de este tipo etiqueta el
+núcleo mediante \(\mathbb Z/p\mathbb Z\) y colorea \(ab\) con \(a+b\);
+las aristas incidentes tienen colores distintos. Para \(p=1\) no hay
+aristas del núcleo. La partición resultante tiene \(pq-\binom p2=M(n)\)
+bloques y alcanza (11).
+
+Supongamos \(h\ge1\). Se procesan las aristas exteriores \(xy\in E(H)\)
+en cualquier orden, asignándoles un par disponible \(ab\) del núcleo
+para obtener un \(K_4\) sobre \(\{a,b,x,y\}\). Se mantiene que los pares
+del núcleo no se reutilizan, que los pares del núcleo asignados a
+aristas exteriores incidentes son disjuntos en vértices y que cada
+vértice del núcleo pertenece a lo sumo a \(r=4h\) bloques asignados.
+Llamamos carga de un vértice al número de bloques asignados que lo
+contienen.
+
+Antes de procesar \(xy\), se excluyen los vértices del núcleo no
+adyacentes a \(x\) o \(y\), los vértices utilizados antes en alguno de
+los dos extremos exteriores y los vértices de carga \(r\). Las dos
+primeras causas excluyen a lo sumo \[
+\beta_x+\beta_y+2(d_H(x)-1)+2(d_H(y)-1)\le4h-4. \tag{14}
+\] La carga total anterior a este paso es a lo sumo \(2(m-1)\), por lo
+que están saturados menos de \(2m/(4h)\le q/4\) vértices. El conjunto de
+candidatos tiene tamaño \(k\), con \[
+\begin{aligned}
+k&>p-4h+4-q/4\\
+ &\ge p/2-4h+15/4\\
+ &\ge5h+17/4,
+\end{aligned} \tag{15}
+\] utilizando \(q\le2p+1\) y (4).
+
+Aquí un vértice saturado tiene carga exactamente \(r\). Cada arista
+exterior asignada anteriormente aporta dos unidades a la carga total del
+núcleo, lo que acota el número de vértices saturados. Las demás
+exclusiones se estiman mediante una cota de la unión; no tienen que ser
+disjuntas. Las desigualdades conjuntas de (3), en lugar de cotas
+separadas de peor caso para las aristas ausentes y los grados
+exteriores, dan (14).
+
+El grafo de pares prohibidos está formado por las aristas ausentes del
+núcleo y los pares del núcleo ya utilizados. Su grado máximo es a lo
+sumo \(h+r=5h\). Por la Sección 2.2 y (15), existe entonces un par
+disponible \(ab\). Las cuatro aristas cruzadas de \(abxy\) están
+presentes y libres gracias a las exclusiones, y \(xy\) es la arista
+exterior actual. Como \(a,b\) no estaban saturados, sus nuevas cargas
+siguen siendo a lo sumo \(r\). Esto demuestra el paso inductivo. Si
+\(m=0\), esta etapa es vacía.
+
+Al terminar, un vértice \(a\) del núcleo de carga \(t_a\le4h\) ha
+utilizado exactamente \(2t_a\) aristas cruzadas distintas. Por tanto,
+\(|F_a|=\alpha_a+2t_a\le9h\), y cada arista residual del núcleo tiene
+una lista de tamaño \[
+|L_{ab}|\ge q-18h\ge2p-1-18h\ge p. \tag{16}
+\] La Sección 2.3 completa las \(u-m\) aristas residuales del núcleo con
+triángulos. Los \(m\) bloques \(K_4\) utilizan \(4m\) aristas cruzadas,
+y los triángulos utilizan \(2(u-m)\). Quedan \(s-2u-2m\) aristas
+cruzadas individuales. El número total de bloques es \(s-u-2m\), que
+alcanza (11). Los recuentos son no negativos porque cuentan los bloques
+de esta partición.
+
+El invariante de las aristas incidentes también hace exacto el cálculo
+de \(F_a\): dos bloques del levantamiento que pasan por un mismo vértice
+del núcleo no pueden utilizar un mismo extremo exterior. Así, las
+\(2t_a\) aristas cruzadas contadas allí son distintas, y el posterior
+coloreo con listas no puede reutilizar ninguna de ellas.
+
+Cuando \(q=2p\), la estimación de candidatos tiene más margen y la
+última desigualdad de (16) solo exige \(p\ge18h\). Esto demuestra la
+variante equilibrada. \(\square\)
+
+\subsection{4. Demostración del Teorema
+B}\label{demostraciuxf3n-del-teorema-b}
+
+Todo triángulo tiene al menos una arista interna a una de las dos
+partes. Hay \(u+m\) aristas de este tipo, por lo que un empaquetamiento
+de triángulos tiene tamaño a lo sumo \(u+m\).
+
+Para ver la inyección que sustenta esta cota, se elige una arista
+interna de cada triángulo. Dos triángulos distintos del empaquetamiento
+no pueden elegir la misma arista, porque el empaquetamiento es disjunto
+en aristas. El argumento fraccional posterior es una versión ponderada
+separada de esta cuenta; no supone que un empaquetamiento fraccional sea
+entero. Una partición con \(t\) triángulos y todas las aristas restantes
+individuales tiene \(e(G)-2t\) bloques. Por tanto, \[
+\operatorname{cp}_{\le3}(G)\ge(s+u+m)-2(u+m)=s-u-m. \tag{17}
+\]
+
+Construimos \(u+m\) triángulos. El caso \(h=0\) se trató en la Sección
+3. Para \(h\ge1\), se procesa primero cada arista exterior \(xy\)
+asignándole una raíz \(a\) del núcleo para formar \(axy\). Se permite
+que cada raíz del núcleo reciba a lo sumo \(2h\) aristas exteriores. Las
+adyacencias ausentes y las asignaciones anteriores en \(x,y\) excluyen a
+lo sumo \[
+(\beta_x+d_H(x)-1)+(\beta_y+d_H(y)-1)\le2h-2
+\] raíces. Están saturadas menos de \(m/(2h)\le q/4\) raíces. Quedan más
+de \[
+p-(2h-2)-q/4\ge p/2-2h+7/4>0
+\] candidatos, por lo que la asignación se puede completar.
+
+Esta etapa cubre todas las aristas exteriores y no utiliza ninguna
+arista del núcleo. Cada vértice del núcleo ha utilizado a lo sumo \(4h\)
+aristas cruzadas. Incluyendo sus adyacencias ausentes, prohíbe a lo sumo
+\(5h\) colores exteriores. Así, cada lista de una arista del núcleo
+tiene tamaño al menos \(q-10h\ge p\). La Sección 2.3 proporciona un
+triángulo por cada una de las \(u\) aristas del núcleo, con lo que se
+alcanzan \(u+m\) triángulos y la igualdad en (17). Junto con A, esto
+demuestra (7). \(\square\)
+
+La selección de raíces debe utilizar la información sobre las
+adyacencias ausentes. Un coloreo ordinario de \(H\) seguido de una
+asignación arbitraria de colores a los vértices del núcleo no aseguraría
+la existencia de todas las aristas cruzadas requeridas.
+
+La misma cuenta de aristas internas es un certificado fraccional: se
+asigna peso uno a cada arista interna y cero a cada arista cruzada. Todo
+triángulo tiene peso total de cobertura al menos uno. El empaquetamiento
+construido alcanza ese valor, de modo que \[
+\nu_3(G)=\nu_3^*(G)=u+m. \tag{18}
+\]
+
+\subsection{5. Demostración del Teorema
+C}\label{demostraciuxf3n-del-teorema-c}
+
+Cuando \(h=0\), la prescripción es vacía y se aplica la construcción
+base. Supongamos \(h\ge1\) y fijemos \(\sigma\). Un \(K_4\) prescrito
+necesita un par del núcleo, mientras que un \(K_5\) prescrito necesita
+un triángulo del núcleo. Como antes, se exige que las aristas del núcleo
+utilizadas en bloques distintos sean distintas y que los conjuntos del
+núcleo asignados a aristas exteriores incidentes sean disjuntos en
+vértices. Se fija como carga máxima por vértice \(r=7h\).
+
+Antes de procesar \(xy\), las aristas cruzadas ausentes y las
+asignaciones anteriores en sus extremos excluyen a lo sumo \[
+\beta_x+\beta_y+3(d_H(x)-1)+3(d_H(y)-1)\le6h-6
+\] vértices. La carga total anterior es a lo sumo \(3(m-1)\), por lo que
+están saturados menos de \(3m/(7h)\le3q/14\) vértices. El número de
+candidatos es mayor que \[
+\begin{aligned}
+p-6h+6-3q/14
+&\ge4p/7-6h+81/14\\
+&\ge30h+81/14>30h+3.
+\end{aligned} \tag{19}
+\] Cada participación anterior utilizó a lo sumo dos aristas incidentes
+del núcleo. Incluyendo las aristas ausentes del núcleo, el grafo de
+pares prohibidos tiene grado máximo a lo sumo \(h+2r=15h\). La Sección
+2.2 proporciona un triángulo disponible del núcleo. Se utiliza entero
+para la etiqueta 5 y solo uno de sus pares para la etiqueta 4, cargando
+únicamente los vértices que se usan. Las mismas exclusiones de la
+Sección 3 aseguran que todas las aristas del bloque estén presentes,
+libres y sean compatibles con los invariantes.
+
+Una terna se utiliza únicamente para encontrar una configuración
+disponible. Para un \(K_4\) prescrito, su tercer vértice no utilizado no
+se añade al levantamiento ni recibe carga. Para un \(K_5\), una
+participación utiliza dos aristas incidentes del núcleo; por eso el
+grado de pares prohibidos se acota por \(h+2r\) en el paso siguiente.
+
+Al terminar, cada vértice del núcleo ha utilizado a lo sumo \(2r=14h\)
+aristas cruzadas. Las listas de completación tienen tamaño al menos \[
+q-2h-4r=q-30h\ge2p-1-30h\ge p,
+\] puesto que \(p\ge63h\) y \(h\ge1\). Se aplica la Sección 2.3 y se
+dejan las aristas cruzadas restantes como bloques de una sola arista.
+Todos los bloques tienen holgura cero en (11), lo que demuestra la
+optimalidad.
+
+Si \(k\) aristas exteriores tienen etiqueta 5, los bloques grandes
+utilizan \(m+2k\) aristas del núcleo y \(4m+2k\) aristas cruzadas. Así,
+\(N_3=u-m-2k\) y \[
+N_2=s-(4m+2k)-2(u-m-2k)=s-2u-2m+2k,
+\] lo que demuestra (9). Por último, el orden del único bloque que
+contiene cada arista exterior permite recuperar su etiqueta. Por tanto,
+prescripciones distintas producen particiones distintas, lo que da al
+menos \(2^m\) óptimos. \(\square\)
+
+\subsection{6. Estabilidad local para grafos
+cordales}\label{estabilidad-local-para-grafos-cordales}
+
+\textbf{Lema 6.1 (rigidez del núcleo).} Bajo las hipótesis de A, si
+\(G\) es cordal, entonces \(C=0\).
+
+\emph{Demostración.} El caso \(h=0\) es inmediato. En otro caso,
+supongamos que falta una arista \(ab\) del núcleo. Sus extremos tienen
+al menos \[
+q-\alpha_a-\alpha_b\ge q-2h\ge2p-1-2h>h+1
+\] vecinos exteriores comunes. Como \(\Delta(H)\le h\), este conjunto no
+es un clique. Se eligen vecinos comunes no adyacentes \(x,y\). Los
+vértices \(a,x,b,y\) inducen un ciclo de longitud cuatro: sus dos
+posibles cuerdas \(ab,xy\) están ausentes. Esto contradice la
+cordalidad. \(\square\)
+
+En consecuencia, para grafos cordales de este entorno, A da \[
+\operatorname{cp}(G)=M(n)-A-2m. \tag{20}
+\] La distancia de edición etiquetada es
+\(d_{\rm edit}=|E(G)\triangle E(S)|=A+m\). Por tanto, \[
+d_{\rm edit}\le M(n)-\operatorname{cp}(G)\le2d_{\rm edit}. \tag{21}
+\] En particular, la igualdad \(\operatorname{cp}(G)=M(n)\) obliga a
+\(G=S\) dentro de este entorno. Esta es una conclusión local relativa al
+grafo de referencia fijo; no caracteriza todos los grafos cordales
+extremales.
+
+\subsection{7. Optimalidad fraccional y tipos de bloques
+óptimos}\label{optimalidad-fraccional-y-tipos-de-bloques-uxf3ptimos}
+
+Definamos el número de partición fraccional
+\(\operatorname{cp}_{=}^{*}(G)\) minimizando \(\sum_Q x_Q\), sobre
+cliques de orden al menos dos, sujeto a \(x_Q\ge0\) y
+\(\sum_{Q\ni e}x_Q=1\) para toda arista presente \(e\). Asignemos a las
+aristas presentes cruzadas, del núcleo y exteriores los pesos
+respectivos \(1,-1,-2\). Su suma en un clique de tipo \((a,b)\) es
+\(1-\ell(a,b)\le1\), y su suma total es \(s-u-2m\). Así, toda partición
+fraccional factible satisface \[
+\sum_Qx_Q-(s-u-2m)=\sum_Q\ell(a_Q,b_Q)x_Q\ge0.
+\] Bajo A, la construcción entera alcanza la cota, lo que demuestra \[
+\operatorname{cp}_{=}^{*}(G)=\operatorname{cp}_{\le4,=}^{*}(G)
+=\operatorname{cp}_{\le4}(G)=\operatorname{cp}(G). \tag{22}
+\] Aquí el subíndice \(\le4\) restringe también las variables de los
+bloques fraccionales. Esta es una igualdad para el objetivo uniforme de
+partición; no afirma que todo el politopo sea entero. Las restricciones
+de aristas son igualdades, de modo que este problema también es distinto
+del de cobertura fraccional.
+
+De manera equivalente, se maximiza la ganancia \(\binom{|Q|}{2}-1\)
+sobre empaquetamientos de cliques disjuntos en aristas, o sobre
+empaquetamientos fraccionales con capacidades unitarias por arista.
+Completar la capacidad no utilizada mediante \(K_2\) muestra que ambos
+óptimos de ganancia son \(2u+3m\). Esto proporciona un caso exacto de la
+distinción del Artículo V entre un certificado de empaquetamiento y su
+realización. La construcción y la cota inferior de este trabajo
+demuestran directamente la igualdad; no se necesita ningún teorema de
+transferencia del Artículo V.
+
+La ecuación (11) también muestra que toda partición entera óptima
+utiliza únicamente los cuatro tipos de (12). La misma conclusión vale
+para el soporte de toda partición fraccional óptima. Ningún bloque
+óptimo tiene orden mayor que cinco, incluso si el grafo contiene cliques
+mayores. El Teorema A proporciona un óptimo con orden a lo sumo cuatro,
+mientras que C permite las elecciones independientes indicadas entre
+cuatro y cinco. El Apéndice B cuantifica cuántas aristas pueden
+pertenecer a otros tipos en una partición casi óptima.
+
+\subsection{8. Reconocer el núcleo y permitir un vértice
+excepcional}\label{reconocer-el-nuxfacleo-y-permitir-un-vuxe9rtice-excepcional}
+
+La fórmula del Teorema A se enuncia respecto de un núcleo de referencia.
+Primero demostramos que, en esa región local, el núcleo se puede
+recuperar a partir del grafo. Después examinamos una familia con un
+vértice excepcional. En esa familia, el coste adicional tiene una
+fórmula exacta, y cambiar el núcleo no necesariamente lo elimina.
+
+\subsubsection{8.1. Una fórmula intrínseca en la región
+local}\label{una-fuxf3rmula-intruxednseca-en-la-regiuxf3n-local}
+
+Para todo conjunto de vértices \(Q\), sin condición sobre su tamaño,
+pongamos \[
+\Phi_Q(G)=e_G(Q,V\setminus Q)-e(G[Q])-2e(G[V\setminus Q]).
+\] La identidad de holgura de la Sección 2 da
+\(\Phi_Q(G)\le\operatorname{cp}(G)\) para todo \(Q\). Bajo las hipótesis
+del Teorema A, se alcanza la igualdad en el núcleo de referencia. Por
+tanto, \[
+\operatorname{cp}(G)=\max_{Q\subseteq V}\Phi_Q(G)=\Phi_P(G).
+\] Esta conclusión no afirma que el conjunto maximizador sea único.
+
+Si \(n\ge3\), las mismas hipótesis dan la identificación más útil \[
+P=\{v\in V:2d_G(v)>n\}.
+\] En efecto, un vértice del núcleo tiene grado al menos \(n-1-h\),
+mientras que un vértice exterior tiene grado a lo sumo \(p+h\). Para
+\(h=0\), la separación afirmada se sigue de \(n\ge3\) y del valor
+especificado de \(p\). Para \(h\ge1\), se utilizan \(p\ge18h+1\) y
+\(n\ge3p-1\) para obtener \(n-1-h>n/2>p+h\).
+
+Así, el valor se puede calcular sin recibir la partición de referencia:
+se forma el conjunto de vértices por encima de este umbral de grado, se
+comprueba su tamaño y su grado de modificación local y, si se aplica el
+Teorema A, se cuentan sus tres clases de aristas. Con una matriz de
+adyacencia, estas operaciones requieren tiempo \(O(n^2)\). Este es un
+algoritmo para el valor en la región reconocida. No proporciona una cota
+del tiempo necesario para construir la partición mediante el teorema
+exacto de coloreo con listas.
+
+\subsubsection{8.2. El defecto exacto de un vértice
+excepcional}\label{el-defecto-exacto-de-un-vuxe9rtice-excepcional}
+
+En esta subsección se permiten tamaños arbitrarios \(p,q\). Sea \(P\) un
+clique de tamaño \(p\), sea \(R\) un conjunto independiente de tamaño
+\(q-1\) e incluyamos todas las aristas entre \(P\) y \(R\). Se añade un
+vértice \(z\) con exactamente \(a\) vecinos en \(P\) y \(b\) vecinos en
+\(R\). Supongamos \(q\ge p+3\); se permiten valores cero de \(p,a,b\)
+cuando sean compatibles con estas condiciones. Respecto del núcleo
+\(P\), escribamos \[
+u=\binom p2,\qquad m=b,\qquad s=p(q-1)+a,\qquad \Phi=s-u-2b,
+\] y definamos \[
+D(a,b)=\max\{0,2b-a,3b-2a\}.
+\] La subfamilia \(a=p\) es split. El caso general no tiene por qué ser
+cordal: si \(a<p\) y \(b\ge2\), un no vecino de \(z\) en \(P\) y dos
+vecinos de \(z\) en \(R\) forman un ciclo inducido de longitud cuatro
+con \(z\).
+
+\textbf{Teorema D.} Para este grafo, \[
+\operatorname{cp}(G)=\operatorname{cp}_{\le4}(G)
+=\operatorname{cp}^{*}_{=}(G)=\Phi+D(a,b).
+\] Además, \[
+\nu_3(G)=\nu_3^*(G)=u+\min(a,b),\qquad
+\operatorname{cp}_{\le3}(G)-\operatorname{cp}(G)
+=\min\{b,\max(0,a-b)\}.
+\] Aquí \(\operatorname{cp}^{*}_{=}\) denota partición fraccional con
+igualdad en cada arista, como en la Sección 7, y \(\nu_3\) cuenta
+triángulos disjuntos en aristas.
+
+\emph{Demostración.} Todo bloque que contiene una arista de \(z\) a
+\(R\) contiene exactamente un vértice de \(R\), el vértice \(z\) y un
+número \(k\) de vecinos de \(z\) en \(P\). Hay exactamente \(b\) bloques
+de este tipo, puesto que \(R\) es independiente. Sus conjuntos del
+núcleo son disjuntos dos a dos: compartir un vértice del núcleo
+reutilizaría su arista hacia \(z\). Por tanto, la suma de sus tamaños en
+el núcleo es a lo sumo \(a\).
+
+La holgura de uno de estos bloques es \[
+\ell(k,2)=3-2k+\binom k2\ge\max\{0,2-k,3-2k\}.
+\] Todos los demás bloques tienen holgura no negativa. Al sumar se
+obtiene \(\operatorname{cp}(G)\ge\Phi+D(a,b)\). La misma cota es válida
+en el caso fraccional. Para verlo directamente, se parte de los pesos de
+aristas de la Sección 7. Además de esos pesos, se utiliza cada una de
+las dos correcciones \[
+(-1,2),\qquad (-2,3)
+\] en las aristas \(zP,zR\), respectivamente. Cada peso corregido es
+factible para todo clique: las desigualdades mostradas tratan los
+bloques que intersectan \(R\), y la corrección es no positiva en los
+bloques que pasan por \(z\) y que, aparte de ese vértice, solo
+intersectan \(P\). Los tres valores duales son
+\(\Phi,\Phi+2b-a,\Phi+3b-2a\).
+
+Este argumento dual es necesario para la conclusión fraccional. Contar
+los \(b\) bloques reales que pasan por \(zR\) demuestra la cota inferior
+entera, pero esa cuenta por sí sola no justificaría un enunciado sobre
+pesos fraccionales arbitrarios. La factibilidad de las tres asignaciones
+de pesos a las aristas proporciona la cota inferior fraccional de manera
+independiente de la construcción entera.
+
+Para la construcción que alcanza la cota, se asignan subconjuntos
+disjuntos de los \(a\) vecinos de \(z\) en el núcleo a sus \(b\) vecinos
+en \(R\). Si \(a\le b\), se utilizan \(a\) triángulos y \(b-a\) aristas
+individuales que pasan por \(zR\). Si \(b\le a\le2b\), se utilizan
+\(a-b\) copias de \(K_4\) y \(2b-a\) triángulos. Si \(a\ge2b\), se
+utilizan \(b\) copias de \(K_4\) y se cubren individualmente las aristas
+\(zP\) no utilizadas. Estas elecciones cubren todas las aristas
+incidentes con \(z\), y su holgura total es \(D(a,b)\).
+
+Cada vértice del núcleo ha utilizado a lo sumo una arista cruzada hacia
+\(R\). Se excluye \(z\) de los colores de completación. Cada arista
+residual del núcleo tiene entonces al menos \(|R|-2=q-3\ge p\) colores
+disponibles. La completación mediante coloreo con listas de la Sección 2
+cubre el núcleo residual con triángulos; todas las aristas cruzadas
+restantes son bloques individuales. Esos bloques finales tienen holgura
+cero. Así se construye un óptimo de orden a lo sumo cuatro, y su función
+indicadora también alcanza la cota fraccional.
+
+Para los triángulos, se asigna peso de cobertura uno a cada arista del
+núcleo y, según cuál de los dos conjuntos sea menor, a todas las aristas
+\(zP\) o a todas las aristas \(zR\). Todo triángulo recibe peso al menos
+uno. El peso de cobertura es \(u+\min(a,b)\), lo que demuestra la cota
+superior fraccional. Se utilizan \(\min(a,b)\) triángulos que pasan por
+\(z\), con vecinos distintos en el núcleo y en el exterior. Se completan
+todas las \(u\) aristas del núcleo con colores en \(R\), utilizando de
+nuevo listas de tamaño al menos \(p\). Esto alcanza el peso de
+cobertura. Por último, un empaquetamiento de \(t\) triángulos se
+completa a \(e(G)-2t\) piezas. Al sustituir las dos fórmulas exactas en
+los tres intervalos de \(a\), se obtiene la brecha de restricción
+enunciada. \(\square\)
+
+\subsubsection{8.3. Lo que cambiar el núcleo no puede
+reparar}\label{lo-que-cambiar-el-nuxfacleo-no-puede-reparar}
+
+La familia excepcional ya impide intervalos locales mayores. Tomemos
+\(a=p\) y \(b=\lfloor p/2\rfloor+1\), con \(p\ge1\) y la hipótesis
+vigente \(q\ge p+3\) de la Sección 8.2. El grafo es split y, por tanto,
+cordal, y su grado de modificación respecto del núcleo original es
+\(h=b\). Su defecto es \(D(p,b)=2b-p>0\). Así, una fórmula sin defecto
+para toda perturbación cordal no puede extenderse a razones de
+modificación estrictamente mayores que \(1/2\). Esto proporciona una
+obstrucción superior; no se demuestra un umbral suficiente coincidente.
+Para la elección \(q=2p\), que exige \(p\ge3\) bajo esta hipótesis, el
+vértice excepcional satisface \(d_G(z)=p+b>n/2\). El criterio de grados
+de la Sección 8.1 lo situaría en el núcleo, pero sus hipótesis locales
+fallan: respecto de \(P\cup\{z\}\), el vértice \(z\) tiene \(2p-1-b\)
+aristas cruzadas ausentes.
+
+Se podría intentar eliminar el defecto cambiando el núcleo de
+referencia. Incluso optimizar sobre todas las biparticiones puede no
+bastar. Si \(q=2p\) y \(p\ge19\), entonces \[
+\max_{Q\subseteq V}\Phi_Q(G)=\Phi+\max\{0,3b-2a\}.
+\] He aquí una comparación directa. Para un conjunto propuesto \(Q\),
+pongamos \(x=|Q\cap P|\), \(x'=p-x\), \(y=|Q\cap R|\) y \(y'=2p-1-y\).
+Los vértices normales aportan al menos \[
+2\left(\binom x2+xy\right)
++3\left(\binom{x'}2+x'y'\right)
+\ge 2\binom p2+3x'+3y
+\] a \(2e(G[Q])+3e(G[V\setminus Q])\). Para comprobar la desigualdad, el
+doble de su diferencia es \(E=5x'^2+(8p-13)x'+(4p-6)y-10x'y\), y \[
+\begin{aligned}
+(2p-1)E&=(2p-1-y)\bigl(5x'^2+(8p-13)x'\bigr)\\
+&\quad+y\bigl(p^2+2px+5x^2-19p+3x+6\bigr)\ge0.
+\end{aligned}
+\] Aquí se utiliza la condición \(p\ge19\) mediante \(p^2-19p\ge0\); es
+una condición suficiente para esta estimación. Si \(z\in Q\), al menos
+\(a-x'\) de sus vecinos del núcleo están en \(Q\), lo que da un coste
+total al menos \(2\binom p2+2a\). Si \(z\notin Q\), al menos \(b-y\) de
+sus vecinos en \(R\) están fuera de \(Q\), lo que da un coste al menos
+\(2\binom p2+3b\). Como \(\Phi_Q=e(G)-2e(G[Q])-3e(G[V\setminus Q])\),
+estas cotas dan el máximo afirmado. Lo alcanzan \(P\) o \(P\cup\{z\}\),
+cuyos valores difieren en \(3b-2a\).
+
+Para \(a=p\) y \(0\le b\le p\), la brecha es \[
+\operatorname{cp}(G)-\max_Q\Phi_Q(G)
+=\max\{0,2b-p\}-\max\{0,3b-2p\}.
+\] Ya es positiva cuando \(p/2<b<2p/3\). El valor \(2p/3\) marca el
+cambio entre los dos núcleos de referencia maximizadores y el máximo de
+la expresión lineal por tramos de la brecha, y no el comienzo del fallo
+después de optimizar el núcleo. En particular, para \(a=p\), \(3b=2p\) y
+\(p\ge19\), \[
+\operatorname{cp}(G)-\max_Q\Phi_Q(G)=p/3.
+\] Todas las modificaciones son incidentes con \(z\); todos los demás
+vértices tienen grado de modificación a lo sumo uno. Tomando \(p=3t\),
+\(t\ge7\) se obtienen ejemplos cordales concretos con brecha \(t\). Por
+tanto, un número acotado de vértices excepcionales no se puede tratar
+como un coste aditivo constante sin otra hipótesis. Los tres duales del
+Teorema D detectan una obstrucción de recursos que la familia de
+biparticiones por sí sola no ve. En la terminología del Artículo V, las
+demandas exteriores que compiten comparten el conjunto finito de aristas
+utilizables desde \(z\) hasta el núcleo; una distancia total de edición
+pequeña no acota la pérdida de realización resultante.
+
+\subsection{9. Prescripciones y número de particiones
+óptimas}\label{prescripciones-y-nuxfamero-de-particiones-uxf3ptimas}
+
+Sea \(N(G)\) el número de particiones en cliques del grafo etiquetado
+\(G\) que alcanzan \(\operatorname{cp}(G)\). Las particiones son
+familias de conjuntos de vértices, y no listas ordenadas de bloques ni
+clases de isomorfismo.
+
+\textbf{Teorema E.} Bajo las hipótesis del Teorema C, si \(p\ge16\),
+cada prescripción fija de aristas exteriores se realiza mediante al
+menos \(p^{\lfloor p^2/64\rfloor}\) particiones óptimas. En
+consecuencia, \[
+2^m p^{\lfloor p^2/64\rfloor}\le N(G)\le(n+1)^{5e(G)}.
+\] En particular, \(\log N(G)=\Theta(p^2\log p)\) en esta región cuando
+\(p\to\infty\).
+
+La demostración, presentada en el Apéndice C, fija el levantamiento
+exterior y cuenta muchos coloreos compatibles de un subgrafo ralo
+suficientemente grande del núcleo residual. El teorema de Vizing extrae
+ese subgrafo; Häggkvist--Janssen extiende cada uno de los prefijos
+contados. Estos dos resultados de coloreo tienen funciones distintas. El
+núcleo residual tiene grado cercano a \(p\), por lo que tratarlo como un
+grafo de grado \(O(h)\) no justificaría la conclusión.
+
+El levantamiento también permite un cambio acotado cuando se prescribe
+un bloque exterior físico. Damos el invariante y el argumento, puesto
+que esta conclusión concierne a algo más que elegir los órdenes de los
+bloques.
+
+Para una arista exterior \(e=xy\), un \emph{conjunto legal del núcleo}
+es un subconjunto \(N\subseteq P\) que induce un clique y cuyos vértices
+son todos adyacentes tanto a \(x\) como a \(y\). La legalidad se refiere
+aquí a ese bloque propuesto; la compatibilidad con el levantamiento
+actual se impone o se repara por separado.
+
+\textbf{Proposición 9.1 (extensión y cambio del levantamiento
+exterior).} Supongamos las hipótesis del Teorema C. Para cada arista
+exterior asignada \(e=xy\), sea \(T_e\subseteq P\) un conjunto de tamaño
+dos o tres que induce un clique y es adyacente a ambos extremos de
+\(e\). Se exige que los conjuntos de aristas del núcleo de los \(T_e\)
+sean disjuntos dos a dos, que \(T_e\cap T_f=\varnothing\) siempre que
+\(e,f\) sean aristas exteriores distintas e incidentes y que cada
+vértice del núcleo pertenezca a lo sumo a \(7h\) conjuntos asignados.
+Todo levantamiento parcial de este tipo se extiende a una partición
+óptima con los órdenes especificados en todas las aristas exteriores,
+siempre que esos órdenes concuerden con los conjuntos asignados. Dado un
+levantamiento completo y un nuevo conjunto legal \(N\) del núcleo de
+tamaño dos o tres para una arista \(e_0\), existe un levantamiento
+completo que contiene \(N\) en \(e_0\), que cambia a lo sumo trece
+asignaciones, incluida la de \(e_0\), y conserva la cota de carga. Solo
+puede cambiar el orden prescrito en \(e_0\).
+
+\emph{Demostración.} Las estimaciones de la Sección 5 dependen del
+número de aristas asignadas y del invariante indicado, por lo que su
+inducción puede comenzar desde el levantamiento parcial prescrito. La
+completación por coloreo con listas conserva entonces todos los bloques
+asignados.
+
+Para efectuar el cambio, se elimina la asignación antigua en \(e_0\).
+También se elimina toda asignación que utilice un par de \(N\) o un
+vértice de \(N\) en un extremo de \(e_0\). Cada uno de los a lo sumo
+tres pares de \(N\) tiene a lo sumo un propietario, porque las aristas
+del núcleo son disjuntas. Cada una de las a lo sumo seis incidencias
+extremo--núcleo tiene a lo sumo un propietario, por la condición de las
+aristas incidentes. Después de estas eliminaciones, si un vértice de
+\(N\) aún tiene carga \(7h\), se elimina otra asignación que lo
+contenga. Bastan a lo sumo tres eliminaciones adicionales. Por tanto, se
+han eliminado a lo sumo \(1+3+6+3=13\) asignaciones exteriores. Como
+\(e_0\) es una arista exterior, \(h\ge1\), de modo que un vértice
+saturado tiene una asignación disponible para eliminar. Se inserta el
+nuevo bloque: no tiene conflictos de pares ni de aristas cruzadas, y sus
+vértices del núcleo tenían carga menor que \(7h\). Se extiende el
+levantamiento parcial resultante mediante la primera afirmación. Se
+conservan todas las asignaciones que quedan fuera del conjunto
+eliminado. \(\square\)
+
+La completación triangular puede cambiar globalmente. La Proposición 9.1
+acota los cambios en la capa de levantamiento exterior; no implica un
+cambio de trece bloques en la partición completa ni la conectividad de
+particiones óptimas arbitrarias. La subclase de joins completos con
+levantamientos formados solo por \(K_5\) admite las conclusiones más
+fuertes de la Sección 10.
+
+El papel de la serie queda ahora más explícito. El Artículo IV {[}IV{]}
+utiliza localización estructural y cuentas terminales físicas para
+cubrir el presupuesto global de partición. Los resultados de este
+trabajo determinan óptimos exactos y el coste de una familia terminal
+restringida en una región local, mientras que el Teorema D identifica
+una obstrucción adicional cuando falla el control local. El Artículo V
+{[}V{]} proporciona un lenguaje para contabilizar las pérdidas de
+realización, pero su desigualdad abstracta de transferencia no construye
+la raíz ni las realizaciones de bajo coste utilizadas aquí. Ninguna de
+estas conclusiones locales se infiere únicamente de una distancia total
+de edición pequeña.
+
+\subsection{10. Completación estable y conectividad restringida en joins
+completos}\label{completaciuxf3n-estable-y-conectividad-restringida-en-joins-completos}
+
+El cambio exterior de la Proposición 9.1 controla las asignaciones,
+mientras que una partición en cliques también contiene triángulos
+terminales y aristas cruzadas individuales. En un join completo con
+todos los bloques exteriores de orden cinco, estos bloques restantes se
+pueden reparar con un coste proporcional al número de asignaciones
+cambiadas. La razón es una compensación exacta entre las aristas del
+núcleo y las aristas cruzadas utilizadas por un levantamiento.
+
+En toda esta sección, sea \(p\ge1\), sea \(G=K_P\vee H\), donde
+\(|P|=p\), \(|V(H)|=q\), y escribamos \(u=\binom p2\), \(m=e(H)\). Un
+\emph{levantamiento completo legal formado solo por \(K_5\)} asigna a
+cada arista exterior \(xy\) una terna \(T_{xy}\) del núcleo, de modo que
+los bloques resultantes \(T_{xy}\cup\{x,y\}\) son disjuntos en aristas
+dos a dos. Su carga en un vértice del núcleo es el número de estos
+bloques que contienen ese vértice. Un triángulo terminal tiene tipo
+\((2,1)\).
+
+\subsubsection{10.1. Completación a partir de un prefijo legal
+arbitrario}\label{completaciuxf3n-a-partir-de-un-prefijo-legal-arbitrario}
+
+\textbf{Lema 10.1.} Supongamos \(q\ge2p-1\) y fijemos un levantamiento
+completo legal formado solo por \(K_5\). Toda familia de triángulos
+terminales disjuntos en aristas que no comparte aristas con sus bloques
+se extiende a una partición óptima en cliques que contiene el
+levantamiento. Los bloques restantes son triángulos terminales y aristas
+cruzadas individuales.
+
+\emph{Demostración.} Sea \(J\) el grafo del núcleo no utilizado y sea
+\(F_a\) el conjunto de vértices exteriores cuyas aristas cruzadas en
+\(a\) utiliza el levantamiento. Si \(a\) tiene carga \(t_a\), la
+disjunción en aristas da \[
+d_J(a)=p-1-2t_a,\qquad |F_a|=2t_a,
+\qquad d_J(a)+|F_a|=p-1.
+\] Los triángulos terminales prescritos determinan un coloreo propio
+parcial de las aristas de \(J\), con los vértices exteriores como
+colores. El color de \(ab\) evita \(F_a\cup F_b\). Para una arista no
+coloreada \(ab\), el levantamiento y los colores ya utilizados en sus
+extremos prohíben a lo sumo \[
+|F_a|+|F_b|+(d_J(a)-1)+(d_J(b)-1)=2p-4<q
+\] colores. Así, toda arista restante se puede colorear de forma voraz
+sin cambiar el prefijo. Si existe una arista no coloreada, entonces
+\(p\ge2\) y ambos extremos tienen grado positivo, de modo que la cuenta
+no contiene ningún término de grado negativo. Se convierten los colores
+resultantes en triángulos terminales y se toman individualmente las
+aristas cruzadas restantes. Todos los bloques tienen holgura cero en
+(11), lo que demuestra la optimalidad. En particular, los números de
+bloques son \(m\), \(u-3m\) y \(pq-2u\), respectivamente. \(\square\)
+
+El lema supone que el levantamiento completo ya existe. No requiere una
+cota de su carga ni una cota superior de \(q\). Su prefijo puede
+contener cualesquiera triángulos terminales compatibles, y no solo
+triángulos seleccionados por una ejecución anterior del procedimiento
+voraz.
+
+\subsubsection{10.2. Reparar la partición
+completa}\label{reparar-la-particiuxf3n-completa}
+
+\textbf{Proposición 10.2.} Supongamos \(q\ge2p-1\). Sean \(L_0,L_1\)
+levantamientos completos legales formados solo por \(K_5\) cuyas
+asignaciones difieren en exactamente \(k\) aristas exteriores. Para toda
+partición óptima en cliques \(\Pi_0\) que extiende \(L_0\), existe una
+partición óptima \(\Pi_1\) que extiende \(L_1\) tal que \[
+|\Pi_0\setminus\Pi_1|=|\Pi_1\setminus\Pi_0|\le34k,
+\qquad |\Pi_0\triangle\Pi_1|\le68k.
+\] La partición \(\Pi_1\) puede conservar todos los triángulos
+terminales de \(\Pi_0\) cuyas aristas no pertenecen a ningún bloque de
+\(L_1\).
+
+\emph{Demostración.} El Lema 10.1 muestra que se alcanza la cota
+inferior \(pq-u-2m\). Por tanto, la identidad de holgura obliga a que
+toda partición óptima utilice únicamente los tipos de holgura cero. Como
+\(\Pi_0\) contiene un bloque del levantamiento para cada arista
+exterior, todos sus demás bloques son triángulos terminales o aristas
+cruzadas individuales. Su familia terminal \(\mathcal T_0\) tiene
+\(u-3m\) miembros.
+
+Se conservan los miembros de \(\mathcal T_0\) que no comparten aristas
+con ningún bloque de \(L_1\), y sea \(R\) el número de los descartados.
+Un bloque del levantamiento que no cambia no puede compartir aristas con
+un triángulo terminal antiguo. Cada bloque nuevo cambiado tiene tres
+aristas del núcleo y seis aristas cruzadas que pueden pertenecer a
+triángulos terminales antiguos. Como esos triángulos son disjuntos en
+aristas, se descartan a lo sumo nueve por asignación cambiada. Por
+tanto, \(R\le9k\). Los triángulos conservados forman un prefijo legal
+para \(L_1\). Ambos grafos residuales del núcleo tienen \(u-3m\)
+aristas, por lo que el Lema 10.1 añade exactamente \(R\) triángulos
+terminales a este prefijo.
+
+Los grafos residuales del núcleo no tienen por qué tener los mismos
+conjuntos de aristas. Solo se comparan sus cardinalidades: cada
+triángulo conservado representa una arista distinta del nuevo núcleo
+residual, y cada una de las demás aristas es una nueva demanda. Esto
+explica por qué el número de demandas que se deben cubrir de nuevo es
+exactamente el número de triángulos descartados.
+
+Se pierden a lo sumo \(k\) bloques antiguos del levantamiento y \(R\)
+triángulos terminales antiguos. Una arista cruzada individual antigua
+solo puede desaparecer al incorporarse a un bloque nuevo cambiado del
+levantamiento o a un nuevo triángulo terminal. Estos utilizan a lo sumo
+\(6k+2R\) aristas cruzadas. Así, \[
+|\Pi_0\setminus\Pi_1|\le k+R+6k+2R
+=7k+3R\le34k.
+\] Las dos particiones óptimas tienen el mismo tamaño, por lo que sus
+diferencias unilaterales son iguales. Su suma da la cota de diferencia
+simétrica. Esto también cubre \(k=0\), cuando se conserva la partición
+original. \(\square\)
+
+Por tanto, para los joins completos de carga acotada de la Proposición
+9.1, se puede insertar un nuevo \(K_5\) legal prescrito en una arista
+exterior perdiendo a lo sumo \(34\cdot13=442\) bloques antiguos y
+cambiando a lo sumo \(68\cdot13=884\) bloques en diferencia simétrica. A
+diferencia de la Proposición 9.1 por sí sola, esto controla la partición
+completa. Las hipótesis de join completo y de utilizar solo \(K_5\) se
+usan en el Lema 10.1.
+
+\subsubsection{\texorpdfstring{10.3. Caminos entre óptimos de carga
+acotada con levantamientos solo de
+\(K_5\)}{10.3. Caminos entre óptimos de carga acotada con levantamientos solo de K\_5}}\label{caminos-entre-uxf3ptimos-de-carga-acotada-con-levantamientos-solo-de-k_5}
+
+\textbf{Teorema 10.3.} Supongamos \[
+q\in\{2p-1,2p,2p+1\},\qquad h=\Delta(H),\qquad p\ge63h.
+\] Sea \(\mathcal C\) la clase de particiones óptimas en cliques en las
+que toda arista exterior pertenece a un bloque \(K_5\) de tipo \((3,2)\)
+y el levantamiento inducido tiene carga a lo sumo \(7h\) en cada vértice
+del núcleo. Cualesquiera dos miembros de \(\mathcal C\) están unidos
+dentro de \(\mathcal C\) por una sucesión de a lo sumo \(u-2m\) pasos,
+cada uno de diferencia simétrica de bloques a lo sumo \(884\). Más
+precisamente, a lo sumo \(m\) pasos cambian el levantamiento exterior; a
+lo sumo \(u-3m\) pasos adicionales lo mantienen fijo y tienen diferencia
+simétrica a lo sumo \(18\).
+
+\emph{Demostración.} Se fijan la partición objetivo \(\Pi_*\) y su
+levantamiento \(L_*\). Primero se alinean las asignaciones exteriores.
+Se protege cada asignación del levantamiento actual que ya coincide con
+su objetivo. En una arista exterior no alineada \(e_0\), se prescribe la
+terna objetivo \(N=L_*(e_0)\).
+
+Como en la Proposición 9.1, se eliminan la asignación antigua en
+\(e_0\), los propietarios de los pares del núcleo de \(N\) y los
+propietarios de las aristas cruzadas que necesita el bloque objetivo. Se
+eliminan a lo sumo \(1+3+6\) asignaciones. Ninguna está protegida: un
+propietario protegido entraría en conflicto con \(L_*(e_0)\) en el
+levantamiento objetivo legal. Si un vértice de \(N\) sigue saturado con
+carga \(7h\), a lo sumo \(7h-1\) de sus asignaciones pueden estar
+protegidas. En efecto, el levantamiento objetivo tiene carga a lo sumo
+\(7h\) en ese vértice y también contiene su asignación adicional en
+\(e_0\). Por tanto, hay una asignación no protegida que se puede
+eliminar. A lo sumo tres eliminaciones adicionales dejan espacio para el
+bloque objetivo.
+
+Se inserta ese bloque y se extiende el levantamiento parcial conservado
+mediante la Proposición 9.1. Todas las asignaciones siguen siendo de
+orden cinco, se mantiene la cota de carga y cambian a lo sumo trece
+asignaciones. Se conservan todas las asignaciones protegidas y \(e_0\)
+queda alineada. La Proposición 10.2 proporciona una partición completa
+óptima a distancia entre bloques a lo sumo \(884\). A lo sumo \(m\)
+repeticiones hacen que el levantamiento sea igual a \(L_*\). Si \(m>0\),
+entonces \(h\ge1\), por lo que el umbral de saturación utilizado aquí es
+positivo; si \(h=0\), esta fase es vacía.
+
+Ahora se mantiene fijo este levantamiento y se alinean los triángulos
+terminales. Estos son coloreos propios con listas de las aristas de su
+grafo residual del núcleo \(J\), y \(|E(J)|=u-3m\). Se protege cada
+triángulo que ya se comparte con \(\Pi_*\). Se elige una arista del
+núcleo no alineada \(ab\) cuyo color objetivo es \(x\). Se eliminan su
+triángulo actual y los triángulos, si los hay, en las a lo sumo dos
+aristas incidentes que tienen actualmente color \(x\). Se eliminan a lo
+sumo \(R\le3\) triángulos terminales. Ninguno está protegido, puesto que
+el coloreo objetivo es propio.
+
+Se inserta \(abx\). No comparte aristas con el levantamiento ni con
+ningún triángulo conservado, de modo que el Lema 10.1 completa este
+prefijo legal manteniendo todos los triángulos protegidos. Se adquiere
+al menos un nuevo triángulo objetivo. Se pierden a lo sumo \(R\)
+triángulos terminales antiguos, lo que da una diferencia simétrica
+terminal a lo sumo \(2R\). Solo las a lo sumo \(2R\) aristas cruzadas de
+los nuevos triángulos terminales pueden consumir aristas cruzadas
+individuales antiguas. Ambas particiones tienen \(pq-2u\) bloques de una
+sola arista cruzada, por lo que su diferencia simétrica es a lo sumo
+\(4R\). Por tanto, el paso completo cambia a lo sumo \(6R\le18\)
+bloques.
+
+Después de a lo sumo \(u-3m\) pasos, todos los triángulos terminales
+coinciden con el objetivo. Las aristas cruzadas individuales restantes
+quedan entonces determinadas, por lo que las particiones completas
+coinciden. Al concatenar las dos fases se obtienen a lo sumo
+\(m+(u-3m)=u-2m\) pasos. La desigualdad \(u\ge3m\) se sigue de los
+triángulos del núcleo disjuntos en aristas de cualquier levantamiento
+legal formado solo por \(K_5\). \(\square\)
+
+La construcción del Teorema C proporciona miembros de \(\mathcal C\).
+Para \(p=1\) o \(2\), un levantamiento completo formado solo por \(K_5\)
+obliga a \(m=0\); la primera fase es vacía y se aplica el mismo
+argumento terminal. El teorema concierne a esta clase de carga acotada
+con levantamientos formados solo por \(K_5\). No proporciona la
+conectividad de óptimos mixtos \(K_4/K_5\) ni una reparación tras
+cambios arbitrarios del grafo. No se afirma que las constantes \(18\),
+\(68\) o \(884\) sean óptimas.
+
+\textbf{Formalización y reproducibilidad.} El complemento
+{[}VI-companion{]} registra el punto de entrada canónico en Lean 4.35,
+la correspondencia de teoremas, las dependencias demostradas y la
+compilación final con caché y auditoría de axiomas de A--E, los
+resultados intrínsecos y excepcionales y la Sección 10. Las particiones
+y los empaquetamientos triangulares fraccionales usan pesos reales.
+Häggkvist--Janssen y Vizing son dependencias demostradas {[}HJ-formal,
+Viz-formal{]}. La auditoría final permite únicamente los axiomas
+fundacionales habituales de Lean. Los ejemplos finitos y sus
+certificados, comprobados independientemente, constituyen evidencia de
+regresión separada de las demostraciones universales. El complemento
+indica los dominios ensayados, las dependencias de las demostraciones y
+el alcance de la verificación.
+
+\subsection{Apéndice A. Una variante elemental para joins
+completos}\label{apuxe9ndice-a.-una-variante-elemental-para-joins-completos}
+
+\textbf{Teorema A.1.} Sean \(q\in\{2p-1,2p,2p+1\}\), \(n=p+q\) y
+\(G=K_p\vee H\), donde \(|H|=q\) y \(d=\Delta(H)\). Si \(p\ge24d\),
+entonces \[
+\operatorname{cp}(K_p\vee H)=M(n)-2e(H). \tag{23}
+\] Existe un óptimo en el que toda arista exterior pertenece a un
+\(K_5\) de tipo \((3,2)\).
+
+\emph{Demostración.} Para \(d=0\) se utiliza la construcción base.
+Supongamos \(d\ge1\) y pongamos \(m=e(H)\). Se asigna un triángulo del
+núcleo a cada arista exterior. Se exige que los triángulos sean
+disjuntos en aristas y que sean disjuntos en vértices cuando sus aristas
+exteriores sean incidentes. Antes de procesar \(xy\), los usos
+anteriores en sus extremos excluyen a lo sumo \(6(d-1)\) vértices del
+núcleo. Quedan \(k\ge p-6(d-1)\ge3p/4+6\) candidatos. Se han utilizado a
+lo sumo \(3(m-1)\) aristas del núcleo. Como
+\(m\le qd/2\le p^2/24+p/48\), \[
+\begin{aligned}
+\binom k2-3(m-1)-\left\lfloor k^2/4\right\rfloor
+&\ge k^2/4-k/2-3m+3\\
+&\ge p^2/64+29p/16+9>0.
+\end{aligned} \tag{24}
+\] La cota de Mantel proporciona un triángulo disponible. Para completar
+el argumento, en un grafo sin triángulos sobre \(k\) vértices, la suma
+de los grados de los extremos de cada arista es a lo sumo \(k\). Por
+tanto, \(\sum_v d(v)^2\le ke\), mientras que Cauchy--Schwarz da
+\(4e^2/k\le\sum_v d(v)^2\). Para \(e>0\) se obtiene \(e\le k^2/4\), y el
+caso \(e=0\) es inmediato. Esto justifica la selección de (24) y
+completa la inducción que construye los \(m\) bloques \(K_5\).
+
+Sea \(t_a\) el número de estos bloques que contienen a un vértice \(a\)
+del núcleo, y sea \(J\) el núcleo residual. Cada participación utiliza
+dos aristas del núcleo y dos aristas cruzadas en \(a\). Por tanto, \[
+d_J(a)=p-1-2t_a,\qquad |F_a|=2t_a,
+\qquad d_J(a)+|F_a|=p-1. \tag{25}
+\] Ahora se colorea \(E(J)\) de forma voraz con colores exteriores. Al
+colorear \(ab\), las exclusiones de listas y las aristas incidentes
+anteriores prohíben a lo sumo \[
+|F_a|+|F_b|+(d_J(a)-1)+(d_J(b)-1)=2p-4
+\] colores. Hay \(q\ge2p-1\) colores, por lo que siempre es posible
+elegir uno. Se completa el núcleo con triángulos y se toman
+individualmente las aristas cruzadas restantes. Los recuentos son \[
+N_5=m,\qquad N_3=\binom p2-3m,\qquad N_2=pq-2\binom p2.
+\] Su suma es \(M(n)-2m\), que alcanza la cota inferior. \(\square\)
+
+La fórmula del valor por sí sola ya está cubierta por el Teorema A bajo
+la condición menos restrictiva \(p\ge18d+1\). El contenido adicional
+aquí es que toda arista exterior puede utilizar un \(K_5\) bajo
+\(p\ge24d\), en lugar del umbral general de prescripción \(63d\), y que
+la completación es voraz y no necesita el teorema HJ.
+
+Aquí los colores cruzados que gasta un \(K_5\) se compensan exactamente
+con la disminución del grado residual del núcleo. Esto permite una
+completación voraz sin el teorema de coloreo con listas utilizado en el
+caso general de perturbaciones.
+
+\subsection{Apéndice B. Aristas en bloques
+ineficientes}\label{apuxe9ndice-b.-aristas-en-bloques-ineficientes}
+
+Bajo A, sea \(\Pi\) una partición con \(|\Pi|=\operatorname{cp}(G)+t\).
+La ecuación (11) da \(t=\sum_{Q\in\Pi}\ell(a_Q,b_Q)\). A lo sumo \(t\)
+bloques tienen holgura positiva, y la unión de sus aristas tiene tamaño
+a lo sumo \[
+21t. \tag{26}
+\] Para demostrar esta última cota, pongamos \(k=a+b\). Si \(k\le7\) y
+\(\ell(a,b)>0\), la integralidad da \(\binom k2\le21\le21\ell(a,b)\). Si
+\(k\ge8\), se utiliza \[
+40\ell(a,b)=(10b-4k-1)^2+4k^2-28k+39
+\] para obtener \[
+21\ell(a,b)-\binom k2
+\ge\frac{(k-8)(64k-56)+371}{40}>0.
+\] Al sumar se demuestra (26). La constante es óptima para esta
+desigualdad por bloque: el tipo \((4,3)\) tiene holgura uno y 21
+aristas. La cota localiza los bloques ineficientes; no implica una
+reparación que deje fijos todos los demás bloques.
+
+\subsection{Apéndice C. Muchas completaciones para cada
+prescripción}\label{apuxe9ndice-c.-muchas-completaciones-para-cada-prescripciuxf3n}
+
+Se fijan una prescripción y un levantamiento exterior del Teorema C con
+carga a lo sumo \(7h\). Sea \(J\) el núcleo residual y sea \(L_e\) su
+lista residual en una arista \(e\). Cada vértice del núcleo ha perdido a
+lo sumo \(h\) vecinos originales del núcleo y a lo sumo \(14h\) aristas
+del núcleo por el levantamiento. Por tanto, \[
+\delta(J)\ge p-1-15h,\qquad
+e(J)\ge\frac{p(p-1-15h)}2.
+\] Su conjunto exterior prohibido tiene tamaño a lo sumo \(15h\), de
+modo que \(|L_e|\ge q-30h\).
+
+Pongamos \(d=\lfloor p/8\rfloor\). El teorema de Vizing {[}Viz64{]}
+colorea \(J\) de forma propia con a lo sumo \(\Delta(J)+1\le p\)
+colores. Se agrupan colores consecutivos en ventanas de a lo sumo \(d\)
+colores. Hay a lo sumo \(\lfloor\Delta(J)/d\rfloor+1\le12\) ventanas
+para \(p\ge16\). Una ventana de tamaño máximo contiene un subgrafo con
+conjunto de aristas \(K\), grado máximo a lo sumo \(d\) y \[
+|K|\ge e(J)/12\ge p^2/64.
+\] Para la última desigualdad, \(p\ge63h\) y \(p\ge16\) implican
+\(p-1-15h\ge3p/8\).
+
+Se colorean las aristas de \(K\) en un orden fijo a partir de sus listas
+residuales. Una arista tiene a lo sumo \(2(d-1)\) competidoras
+incidentes en \(K\), y las hipótesis de tamaño dan \[
+q-30h-2(d-1)\ge p.
+\] Cada paso tiene al menos \(p\) elecciones, independientemente de las
+elecciones legales anteriores. Esto cuenta al menos \(p^{|K|}\) prefijos
+de coloreo propio con listas.
+
+Para cualquiera de esos prefijos, se eliminan sus colores incidentes de
+las listas de las aristas del núcleo no coloreadas. Cada lista pierde a
+lo sumo \(2d\) colores adicionales y sigue teniendo tamaño al menos
+\(q-30h-2d\ge p\). Se aplica Häggkvist--Janssen como en la Sección 2
+para completar el núcleo residual conservando el prefijo. Dos prefijos
+producen particiones distintas: para cada arista de \(K\), el único
+triángulo que contiene esa arista del núcleo permite recuperar su color
+exterior. El levantamiento exterior permanece fijo en todo el proceso,
+por lo que ninguno de sus bloques utiliza una arista de \(K\). Esto
+demuestra la cota inferior para una sola prescripción.
+
+Las familias correspondientes a prescripciones distintas son disjuntas,
+puesto que el orden del único bloque que pasa por una arista exterior
+permite recuperar su etiqueta. Multiplicar por \(2^m\) da la cota
+inferior total.
+
+Para la cota superior, todo bloque óptimo tiene orden a lo sumo cinco,
+por la identidad de holgura. Hay a lo sumo \((n+1)^5\) conjuntos de
+vértices de tamaño a lo sumo cinco: se ordenan sus elementos de una
+manera fija y se rellenan las posiciones restantes con un símbolo
+centinela para obtener una codificación inyectiva mediante cinco
+entradas de un alfabeto de tamaño \(n+1\). Una partición está
+determinada por la aplicación que asigna a cada arista su único bloque.
+Por tanto, hay a lo sumo \(((n+1)^5)^{e(G)}\) particiones óptimas.
+
+Por último, \(n=\Theta(p)\), \(e(G)=O(p^2)\) y el exponente inferior es
+\(\Theta(p^2)\). Al tomar logaritmos se obtiene el orden de crecimiento
+enunciado. El complemento formal registra las cotas finitas explícitas,
+sin exigir como premisa un enunciado asintótico separado. \(\square\)
+
+\subsection{Agradecimientos}\label{agradecimientos}
+
+El autor agradece profundamente a su esposa María Paz y a sus hijos
+Lucas, Juan Cristóbal, Francisca, Raimundo y Benjamín su amor, paciencia
+y apoyo.
+
+\subsection{Uso de inteligencia artificial y herramientas
+computacionales}\label{uso-de-inteligencia-artificial-y-herramientas-computacionales}
+
+Se utilizó ChatGPT/Codex, de OpenAI, para explorar argumentos,
+comprobarlos y preparar el manuscrito. Aristotle, de Harmonic, participó
+en la exploración de caminos, la búsqueda de contraejemplos, la
+elaboración de pruebas y su formalización y revisión en Lean; no sólo
+tradujo pruebas terminadas. El Paper IV acredita a Claude, de Anthropic,
+por su contribución al trabajo heredado.
+
+Certo {[}Certo{]} se utilizó en las nuevas comprobaciones finitas. Las
+comprobaciones anteriores realizadas con Certo y Jacobian {[}Jacobian{]}
+se conservan en los materiales de auditoría adjuntos, donde se
+identifican sus versiones, especificaciones y resultados registrados.
+Los certificados finitos se comprueban por separado de la construcción
+que los produce. Su uso se declara por separado de las dependencias
+lógicas de la prueba formal. Los cálculos se revisaron según su alcance;
+una búsqueda finita no reemplaza una prueba universal.
+
+El expediente de fuentes registra dos revisiones de la construcción por
+IA, una de ellas con participación en las derivaciones, y una auditoría
+algebraica. Estas no son revisiones humanas independientes.
+
+El autor conserva la responsabilidad por los argumentos, las citas, el
+código y la presentación. Ningún sistema de IA figura como autor.
+
+\subsection{Referencias}\label{referencias}
+
+{[}EFO88{]} P. Erdős, R. J. Faudree and E. T. Ordman, \emph{Clique
+partitions and clique coverings}, Discrete Mathematics \textbf{72}
+(1988), 93--101.
+\href{https://www.renyi.hu/~p_erdos/1988-04.pdf}{Original article}.
+\href{https://doi.org/10.1016/0012-365X(88)90197-5}{DOI}.
+
+{[}HJ97{]} R. Häggkvist and J. C. M. Janssen, \emph{New Bounds on the
+List-Chromatic Index of the Complete Graph and Other Simple Graphs},
+Combinatorics, Probability and Computing \textbf{6} (1997), 295--313.
+\href{https://doi.org/10.1017/S0963548397002927}{DOI}.
+
+{[}Mon96{]} S. D. Monson, \emph{The effects of vertex deletion and edge
+deletion on the clique partition number}, Ars Combinatoria \textbf{42}
+(1996), 89--96.
+\href{https://combinatorialpress.com/article/ars/Volume\%20042/volume-42-paper-6.pdf}{Original
+article}.
+
+{[}Oke26{]} O. Okechukwu, \emph{Clique partitions and bounded simplicial
+defect}, arXiv:2609.20871v1 (2026), especially Lemmas 4.1--4.3.
+\href{https://arxiv.org/html/2609.20871v1}{Preprint}.
+
+{[}Nin26{]} B. Ning, \emph{On the difference between clique partition
+and clique covering numbers of graphs}, arXiv:2608.11536v1 (2026),
+Proposition 3.1. \href{https://arxiv.org/html/2608.11536v1}{Preprint}.
+
+{[}Viz64{]} V. G. Vizing, \emph{On an estimate of the chromatic class of
+a p-graph}, Diskret. Analiz. \textbf{3} (1964), 25--30 (in Russian).
+
+{[}IV{]} J. P. Traverso Gianini, \emph{Clique partitions with rooted
+simplicial defect: quantitative stability and sharp eventual bounds},
+Paper IV, preprint v1.23 (2026).
+
+{[}V{]} J. P. Traverso Gianini, \emph{Colorability and Realizability
+Defects in Resource-Dominated Packing Relaxations}, Paper V, Preprint
+1.0 (2026).
+\href{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V}{Fuentes
+y manuscrito públicos}.
+
+{[}PD81{]} N. J. Pullman and A. Donald, \emph{Clique coverings of
+graphs---II: complements of cliques}, Utilitas Mathematica \textbf{19}
+(1981), 207--213. Citado mediante {[}EFO88, p.~94{]} y {[}WZ93,
+Corolario 3.3{]}; el artículo original no se consultó para esta
+revisión.
+
+{[}EOZ93{]} P. Erdős, E. T. Ordman and Y. Zalcstein, \emph{Clique
+partitions of chordal graphs}, Combinatorics, Probability and Computing
+\textbf{2} (1993), 409--415.
+\href{https://doi.org/10.1017/S0963548300000808}{DOI}.
+
+{[}CEO94{]} G.-T. Chen, P. Erdős and E. T. Ordman, \emph{Clique
+partitions of split graphs}, in Y. Alavi, D. R. Lick and J. Liu (eds.),
+\emph{Combinatorics, Graph Theory, Algorithms and Applications}
+(Beijing, 1993), World Scientific, 1994, 21--30.
+\href{http://ordman.net/MathResearch/CEOClique_Parts.pdf}{Author's
+copy}.
+
+{[}WW91{]} W. D. Wallis and J. Wu, \emph{On clique partitions of split
+graphs}, Discrete Mathematics \textbf{92} (1991), 427--429.
+\href{https://doi.org/10.1016/0012-365X(91)90297-F}{DOI}.
+
+{[}WZ93{]} W. D. Wallis and G.-H. Zhang, \emph{On the partition and
+coloring of a graph by cliques}, Discrete Mathematics \textbf{120}
+(1993), 191--203.
+\href{https://doi.org/10.1016/0012-365X(93)90576-F}{DOI}.
+
+{[}Ma88{]} S.-H. Ma, \emph{Clique partitions of threshold graphs}, Acta
+Mathematicae Applicatae Sinica \textbf{11} (1988), 493--502.
+\href{https://applmath.cjoe.ac.cn/jweb_yysxxb/EN/10.12387/C1988054}{Publisher}.
+En chino, con resumen en inglés.
+
+{[}MR90{]} S. McGuinness y R. Rees, \emph{On the number of distinct
+minimal clique partitions and clique covers of a line graph}, Discrete
+Mathematics \textbf{83} (1990), 49--62.
+\href{https://faculty.tru.ca/smcguinness/cliquecoverslinegraph.pdf}{Copia
+del autor}. \href{https://doi.org/10.1016/0012-365X(90)90220-C}{DOI}.
+
+{[}KSS23{]} M. Kwan, A. Sah y M. Sawhney, \emph{Enumerating Matroids and
+Linear Spaces}, Comptes Rendus. Mathématique \textbf{361} (2023),
+565--575.
+\href{https://numdam.org/articles/10.5802/crmath.423/}{Artículo
+publicado}.
+
+{[}IKD12{]} T. Ito, M. Kamiński y E. D. Demaine, \emph{Reconfiguration
+of List Edge-Colorings in a Graph}, Discrete Applied Mathematics
+\textbf{160} (2012), 2199--2207.
+\href{https://doi.org/10.1016/j.dam.2012.05.014}{DOI}. La
+\href{https://erikdemaine.org/papers/NPReconfiguration_WADS2009/paper.pdf}{versión
+WADS 2009} está disponible en el sitio de los autores.
+
+{[}HJ-formal{]} J. P. Traverso Gianini, \emph{The list chromatic index
+of complete graphs (Häggkvist--Janssen)}, Lean formalization, Palomar
+\href{https://palomar-registry.org/entry.html?id=PALOMAR-2026-10-15-000003&version=1}{PALOMAR-2026-10-15-000003,
+version 1}.
+
+{[}Viz-formal{]} J. P. Traverso Gianini, \emph{Vizing's theorem and
+equitable edge colourings}, Lean formalization, Palomar
+\href{https://palomar-registry.org/entry.html?id=PALOMAR-2026-10-15-000004&version=1}{PALOMAR-2026-10-15-000004,
+version 1}.
+
+{[}VI-companion{]} J. P. Traverso Gianini, \emph{Formalization and
+reproducibility companion to Optimal Clique Partitions under Local
+Perturbations}, accompanying source distribution, Preprint 1.0 (2026).
+\href{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI/05_formalization}{Fuentes
+y complemento públicos}. Exact source and archive hashes are recorded in
+the companion.
+
+{[}Certo{]} J. P. Traverso Gianini, \emph{Certo: computational tools
+with verifiable certificates}.
+\href{https://github.com/jtraverso/certo-math}{Software}. The audited
+local version and certificate specifications are fixed in the companion.
+
+{[}Jacobian{]} Morluto and contributors, \emph{Jacobian: composable
+mathematical tools}.
+\href{https://github.com/morluto/jacobian}{Software}. Installed
+operation declarations and versions used here are recorded with the
+computational checks.
+
+\end{document}

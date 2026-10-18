@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "Finite exact-arithmetic transcription checks of the split baseline; no new theorem or stronger constant is asserted.",
+  "baseline": {
+    "orders": 10001,
+    "core_sizes": 69105,
+    "domain": "n=0..10000; all p for n<200, otherwise five documented sizes"
+  },
+  "negative_controls_rejected": 2,
+  "script_sha256": "e084cca9e3499b9232fae5870bd738542f05dfb8b311e45b279404546cc6296a"
+}

@@ -1,0 +1,34 @@
+@PaperV.MixedBudget.fractionalSlack_nonneg : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] (v u : V),
+  ¬G.Adj u v → ∀ (gain : ℕ → ℕ), 0 ≤ PaperV.MixedBudget.fractionalSlack G v u gain
+'PaperV.MixedBudget.fractionalSlack_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.MixedBudget.mixed_copy_gap_budget : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] (v u : V) (huv : ¬G.Adj u v) (gain : ℕ → ℕ)
+  (P₁ : Finset (PaperV.mixedCS (PaperV.copyGraph G v u)).O) (P₂ : Finset (PaperV.mixedCS (PaperV.copyGraph G u v)).O),
+  PaperV.CSFeasible (PaperV.mixedCS (PaperV.copyGraph G v u)) P₁ →
+    PaperV.CSFeasible (PaperV.mixedCS (PaperV.copyGraph G u v)) P₂ →
+      PaperV.packGain (PaperV.copyGraph G v u) gain P₁ =
+          PaperV.wNu (PaperV.mixedCS (PaperV.copyGraph G v u)) (PaperV.mixedWeight (PaperV.copyGraph G v u) gain) →
+        PaperV.packGain (PaperV.copyGraph G u v) gain P₂ =
+            PaperV.wNu (PaperV.mixedCS (PaperV.copyGraph G u v)) (PaperV.mixedWeight (PaperV.copyGraph G u v) gain) →
+          ∀
+            (cert :
+              PaperV.RealCert (PaperV.mixedCS G) (PaperV.mixedCS G) (PaperV.mixedWeight G gain)
+                (PaperV.mixedWeight G gain) (PaperV.imageMultiset G v u huv ⋯ P₁ P₂) 2),
+            0 ≤ PaperV.MixedBudget.fractionalSlack G v u gain ∧
+              PaperV.MixedBudget.gap G gain ≤
+                (PaperV.MixedBudget.gap (PaperV.copyGraph G v u) gain +
+                        PaperV.MixedBudget.gap (PaperV.copyGraph G u v) gain) /
+                      2 +
+                    PaperV.MixedBudget.fractionalSlack G v u gain +
+                  ↑cert.cost / 2
+'PaperV.MixedBudget.mixed_copy_gap_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.MixedBudget.CopyTree.gap_budget : ∀ {α : Type u_1} (Γ δ C : α → ℝ) (t : PaperV.MixedBudget.CopyTree α),
+  PaperV.MixedBudget.CopyTree.valid Γ δ C t →
+    Γ t.root ≤
+      PaperV.MixedBudget.CopyTree.leaves Γ t + PaperV.MixedBudget.CopyTree.internal δ t +
+        PaperV.MixedBudget.CopyTree.internal C t / 2
+'PaperV.MixedBudget.CopyTree.gap_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.MixedBudget.CopyTree.slack_telescopes : ∀ {α : Type u_1} (F : α → ℝ) (t : PaperV.MixedBudget.CopyTree α),
+  PaperV.MixedBudget.CopyTree.slack F t = F t.root - PaperV.MixedBudget.CopyTree.leaves F t
+'PaperV.MixedBudget.CopyTree.slack_telescopes' depends on axioms: [propext, Classical.choice, Quot.sound]

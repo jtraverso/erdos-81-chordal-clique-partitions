@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "documents": [
+    {
+      "role": "main",
+      "en_sha256": "5bc47e473946f3946014c4b5d578a44029e6ca53c55bed60554934aab063867b",
+      "es_sha256": "b65bad59e13ece51571814c92dd22e3868415cd2e70db0bc1b7a7691def6169e",
+      "math_fragments_per_language": 113,
+      "normalized_math_multiset_equal": true,
+      "code_blocks_identical": true,
+      "link_targets_identical": true,
+      "manual_semantic_review": "PASS: quantifiers, hypotheses, exclusions, proof dependency roles, authorship and finite-check scope are equivalent.",
+      "normalizations": []
+    },
+    {
+      "role": "companion",
+      "en_sha256": "320bce1490dfc87c3eba2c5a5ca262d3d8dc0d44c8c6e68032ec2fba460ba05c",
+      "es_sha256": "accf344b6849eca5f1199a6d03ac7e7c42501ef0c1c545032b726167ec2a70cd",
+      "math_fragments_per_language": 0,
+      "normalized_math_multiset_equal": true,
+      "code_blocks_identical": true,
+      "link_targets_identical": true,
+      "manual_semantic_review": "PASS: quantifiers, hypotheses, exclusions, proof dependency roles, authorship and finite-check scope are equivalent.",
+      "normalizations": []
+    }
+  ]
+}

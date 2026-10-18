@@ -1,0 +1,4 @@
+MODULE_COVERAGE checked=122 all_imported=true
+FREEZE_FULL_AUDIT declarations=2838 nonstandard=0 modules=122 visited=5547
+AXIOM_UNION [Quot.sound, Classical.choice, propext]
+AUDIT_START declarations=2838

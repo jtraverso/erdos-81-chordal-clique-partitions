@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "method": "Exact protection against each approved language baseline; declaration/command parity across companions; human-assisted semantic review of the authorized attribution and scope corrections. No automatic test is treated as a proof of translation semantics.",
+  "main": [
+    {
+      "language": "en",
+      "path": "01_manuscript/PAPER_V_preprint_v1.0_en.md",
+      "sha256": "b94189f78c5291af48625cb2aa9bdbd8b5e48199acb9ba06e476246b2f6183c2",
+      "baseline_sha256": "82f8411d6bb488d1c9134979189ff3ab8d4e0a4f0f1cf1419a34fe6afdbbba8d",
+      "displayed_equations": 76,
+      "numbered_statement_headings": 34,
+      "references": 32,
+      "protected_display_math_and_statement_headings_unchanged": true
+    },
+    {
+      "language": "es",
+      "path": "01_manuscript/PAPER_V_preprint_v1.0_es.md",
+      "sha256": "bbc913b78670f9425dfd01f30db32d7dc8988945cb3e4feee2ca74ef3f235a86",
+      "baseline_sha256": "f400413bcf7fc09df7180f993fa1b16e00f1e301acd0ece9ff5bbe132a98e6c3",
+      "displayed_equations": 76,
+      "numbered_statement_headings": 34,
+      "references": 32,
+      "protected_display_math_and_statement_headings_unchanged": true
+    }
+  ],
+  "companion": {
+    "en_sha256": "eafc4a4059e3a9cbba288fd570f325253d0dace3db6bf54f1572e15add231a32",
+    "es_sha256": "e4270118ebee571e296619cb68338080a9f86bef39b8fd74a66d4a639759b60d",
+    "declaration_identifiers_equal": true,
+    "identifier_count": 108,
+    "reproduction_code_blocks_equal": true,
+    "main_formal_paragraph_count": 1,
+    "semantic_boundaries": "All-order M+b/eventual M, actual specified copied families, finite executable checks separate from kernel proofs, unchanged model restrictions and computational counts."
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "file": "02_validation/PUBLIC/compiler_logs/ERDOS81_TRANSFER_NOTE_v1.0_en.pass1.log",
+    "private_original_sha256": "e44a36eb171c1e25a36ea31ffb3426c3830939611fdb45be76891cbe296f7944",
+    "public_sha256": "d013efc972ba60596e99a9af92b016ddd90504310e36e052a8e12e7514646025",
+    "path_redaction": true
+  },
+  {
+    "file": "02_validation/PUBLIC/compiler_logs/ERDOS81_TRANSFER_NOTE_v1.0_en.pass2.log",
+    "private_original_sha256": "e44a36eb171c1e25a36ea31ffb3426c3830939611fdb45be76891cbe296f7944",
+    "public_sha256": "d013efc972ba60596e99a9af92b016ddd90504310e36e052a8e12e7514646025",
+    "path_redaction": true
+  },
+  {
+    "file": "02_validation/PUBLIC/compiler_logs/ERDOS81_TRANSFER_NOTE_v1.0_es.pass1.log",
+    "private_original_sha256": "07ef9b61a005b800c6f4be8e552f3f41f91fe88c17850d0041aa6a336502e10d",
+    "public_sha256": "b7c843aff6cf0b7d61a5221b157de159f957067c3c6e6db8a0fc97699e57ea2b",
+    "path_redaction": true
+  },
+  {
+    "file": "02_validation/PUBLIC/compiler_logs/ERDOS81_TRANSFER_NOTE_v1.0_es.pass2.log",
+    "private_original_sha256": "07ef9b61a005b800c6f4be8e552f3f41f91fe88c17850d0041aa6a336502e10d",
+    "public_sha256": "b7c843aff6cf0b7d61a5221b157de159f957067c3c6e6db8a0fc97699e57ea2b",
+    "path_redaction": true
+  },
+  {
+    "file": "02_validation/PUBLIC/compiler_logs/FORMALIZATION_COMPANION_v1.0_en.pass1.log",
+    "private_original_sha256": "27c6ea4468c07e185533fd04727d8e1b8a681544bcbe97bd1b5b3c18b90daa90",
+    "public_sha256": "c43729b624b418bc1a8d2ac1919faf8b99ae00545c656fb4065fa63a328cc68d",
+    "path_redaction": true
+  },
+  {
+    "file": "02_validation/PUBLIC/compiler_logs/FORMALIZATION_COMPANION_v1.0_en.pass2.log",
+    "private_original_sha256": "4aa42e28a71f4596e6c781142b1e90f01e9635532f68825b281c240c4c446a6d",
+    "public_sha256": "14cc183f8fcc27f43b99f7aaf4baff2cc03e8c1b7afecc575cc7a1eaa9684489",
+    "path_redaction": true
+  },
+  {
+    "file": "02_validation/PUBLIC/compiler_logs/FORMALIZATION_COMPANION_v1.0_es.pass1.log",
+    "private_original_sha256": "6e0b9b1c6dcc952caf06b35e97d7616a7616a8b4c358e6de2e92f60d6a353ece",
+    "public_sha256": "634697230e3500b5b7fdc0be954fc3fb80dec675145f99a0a31083425164397d",
+    "path_redaction": true
+  },
+  {
+    "file": "02_validation/PUBLIC/compiler_logs/FORMALIZATION_COMPANION_v1.0_es.pass2.log",
+    "private_original_sha256": "6e0b9b1c6dcc952caf06b35e97d7616a7616a8b4c358e6de2e92f60d6a353ece",
+    "public_sha256": "634697230e3500b5b7fdc0be954fc3fb80dec675145f99a0a31083425164397d",
+    "path_redaction": true
+  }
+]

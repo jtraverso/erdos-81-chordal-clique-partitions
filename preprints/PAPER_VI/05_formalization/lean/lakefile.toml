@@ -1,0 +1,50 @@
+name = "paper_vi_integrated"
+version = "1.0.0"
+defaultTargets = ["PaperVIRelease"]
+
+[leanOptions]
+relaxedAutoImplicit = false
+linter.unusedSimpArgs = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "56a005855ea17e0b0958f73ec801ae140b0a1679"
+
+[[lean_lib]]
+name = "LeanPool"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "PaperV"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "PaperVI"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "PaperVIExtended"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "PaperVIOpt"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "PaperVIResearch"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "Solution"
+moreLeanArgs = ["-s", "32768"]
+
+
+[[lean_lib]]
+name = "PaperVIRecourse"
+moreLeanArgs = ["-s", "32768"]
+
+[[lean_lib]]
+name = "PaperVIRelease"
+moreLeanArgs = ["-s", "32768"]

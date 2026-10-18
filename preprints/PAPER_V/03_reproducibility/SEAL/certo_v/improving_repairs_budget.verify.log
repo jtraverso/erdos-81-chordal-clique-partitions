@@ -1,0 +1,103 @@
+{
+  "ok": true,
+  "kind": "unsat_core",
+  "degree": "complete",
+  "timed_out": false,
+  "partial": [],
+  "assumed": [],
+  "solver_free": true,
+  "method": "verify.core.by_farkas",
+  "checks": [
+    {
+      "check": "the rows are the core they claim to be",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "every multiplier is non-negative",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "the combination closes: sum of lambda_i * row_i is a contradiction",
+      "ok": true,
+      "detail": "constant 0, and < 0 is false"
+    },
+    {
+      "check": "it is about the obligation in improving_repairs_budget.py",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "warnings": [],
+  "detail": "3 rows carry a non-zero multiplier: improvement, capacity",
+  "explained": [
+    {
+      "role": "used",
+      "name": "improvement"
+    },
+    {
+      "role": "used",
+      "name": "capacity"
+    },
+    {
+      "role": "unused",
+      "name": "start"
+    },
+    {
+      "role": "term",
+      "name": "improvement",
+      "times": "1",
+      "row": "-final + initial + steps <= 0"
+    },
+    {
+      "role": "term",
+      "name": "capacity",
+      "times": "1",
+      "row": "-cover + final <= 0"
+    },
+    {
+      "role": "term",
+      "name": "__goal__",
+      "times": "1",
+      "row": "cover - initial - steps < 0"
+    },
+    {
+      "role": "sum",
+      "row": "0 < 0",
+      "constant": "0"
+    }
+  ],
+  "card": {
+    "kind": "unsat_core",
+    "evidence": "universal",
+    "conclusion": "3 rows carry a non-zero multiplier: improvement, capacity",
+    "scope": [],
+    "hypotheses_used": [
+      "improvement",
+      "capacity"
+    ],
+    "cited": {},
+    "pending": [],
+    "role": null,
+    "link": null,
+    "declared": false,
+    "degree": "complete",
+    "provenance": {
+      "digest": "5fc45c792c6595d3",
+      "schema": 5,
+      "schema_known": 5,
+      "produced_by": "0.34.0",
+      "verified_by": "0.34.0",
+      "spec_path": "improving_repairs_budget.py",
+      "spec_sha256": "671c0bf99246f825d62009dfd386aa3a4f43aeb8cebf4aca1a89ea7c2ff3f8eb",
+      "python": "3.12.10",
+      "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+    },
+    "exact": true,
+    "external": []
+  }
+}
+
+STDERR

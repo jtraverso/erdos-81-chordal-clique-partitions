@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "feasible_initial_states": 685,
+  "operation_trials": 27708,
+  "accepted_positive_insertions": 3180,
+  "rejected_trials_restored": 24528,
+  "capacities": [
+    1,
+    2
+  ],
+  "gains": [
+    0,
+    1
+  ],
+  "host_systems": [
+    [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        3
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ]
+  ],
+  "source_sha256": "d6b0fac38e5de09b558a3ad5b2281d76328d8dc2381c260202a045e464420780",
+  "scope": "Finite exhaustive regression against independent physical-set feasibility; no universal theorem claim."
+}

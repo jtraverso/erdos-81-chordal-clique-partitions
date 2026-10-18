@@ -1,0 +1,279 @@
+@extend : {I : Type u_1} →
+  {E : Type u_2} →
+    [inst : Fintype I] →
+      [inst_1 : Fintype E] →
+        [DecidableEq I] →
+          [inst_3 : DecidableEq E] →
+            {K : Type u_3} →
+              [inst_4 : Field K] →
+                [inst_5 : LinearOrder K] →
+                  [IsStrictOrderedRing K] →
+                    {R : PaperV.ResourceCertificate.System I E} →
+                      {Q D : Finset I} →
+                        {S : Finset E} →
+                          {A : I → E → K} →
+                            PaperV.UnitBoundary.Config R.resources Q D S →
+                              (∀ (o : I), o ∈ Q ∨ o ∈ D) →
+                                IsIncidence R A →
+                                  (I → K) →
+                                    PaperV.FiniteLP.PrimalFeasible (centralInc D S A) → PaperV.FiniteLP.PrimalFeasible A
+'PaperV.FractionalUnitBoundary.extend' depends on axioms: [propext, Classical.choice, Quot.sound]
+@extend_central : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [inst_2 : DecidableEq I]
+  [inst_3 : DecidableEq E] {K : Type u_3} [inst_4 : Field K] [inst_5 : LinearOrder K] [inst_6 : IsStrictOrderedRing K]
+  {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → K} {A : I → E → K}
+  (cfg : PaperV.UnitBoundary.Config R.resources Q D S) (hQD : ∀ (o : I), o ∈ Q ∨ o ∈ D) (hA : IsIncidence R A)
+  (u : PaperV.FiniteLP.PrimalFeasible (centralInc D S A)) (d : ↥D), (extend cfg hQD hA w u).weight ↑d = u.weight d
+'PaperV.FractionalUnitBoundary.extend_central' depends on axioms: [propext, Classical.choice, Quot.sound]
+@extend_Z : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [inst_2 : DecidableEq I]
+  [inst_3 : DecidableEq E] {K : Type u_3} [inst_4 : Field K] [inst_5 : LinearOrder K] [inst_6 : IsStrictOrderedRing K]
+  {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → K} {A : I → E → K}
+  (cfg : PaperV.UnitBoundary.Config R.resources Q D S) (hQD : ∀ (o : I), o ∈ Q ∨ o ∈ D) (hA : IsIncidence R A)
+  (u : PaperV.FiniteLP.PrimalFeasible (centralInc D S A)) {o : I},
+  o ∈ PaperV.UnitBoundary.Z R.resources Q S → (extend cfg hQD hA w u).weight o = 1
+'PaperV.FractionalUnitBoundary.extend_Z' depends on axioms: [propext, Classical.choice, Quot.sound]
+@extend_value : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [inst_2 : DecidableEq I]
+  [inst_3 : DecidableEq E] {K : Type u_3} [inst_4 : Field K] [inst_5 : LinearOrder K] [inst_6 : IsStrictOrderedRing K]
+  {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → K} {A : I → E → K}
+  (cfg : PaperV.UnitBoundary.Config R.resources Q D S) (hQD : ∀ (o : I), o ∈ Q ∨ o ∈ D) (hA : IsIncidence R A),
+  (∀ (o : I), 0 ≤ w o) →
+    ∀ (u : PaperV.FiniteLP.PrimalFeasible (centralInc D S A)),
+      PaperV.FiniteLP.primalValue w (extend cfg hQD hA w u) =
+        B0 R.resources Q S w + PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u
+'PaperV.FractionalUnitBoundary.extend_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+@restrict : {I : Type u_1} →
+  {E : Type u_2} →
+    [inst : Fintype I] →
+      [inst_1 : Fintype E] →
+        [inst_2 : DecidableEq E] →
+          {K : Type u_3} →
+            [inst_3 : Field K] →
+              [inst_4 : LinearOrder K] →
+                [IsStrictOrderedRing K] →
+                  {R : PaperV.ResourceCertificate.System I E} →
+                    {D : Finset I} →
+                      {S : Finset E} →
+                        {A : I → E → K} →
+                          IsIncidence R A →
+                            PaperV.FiniteLP.PrimalFeasible A → PaperV.FiniteLP.PrimalFeasible (centralInc D S A)
+'PaperV.FractionalUnitBoundary.restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+@value_le_restrict : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [DecidableEq I]
+  [inst_3 : DecidableEq E] {K : Type u_3} [inst_4 : Field K] [inst_5 : LinearOrder K] [inst_6 : IsStrictOrderedRing K]
+  {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → K} {A : I → E → K},
+  PaperV.UnitBoundary.Config R.resources Q D S →
+    (∀ (o : I), o ∈ Q ∨ o ∈ D) →
+      ∀ (hA : IsIncidence R A),
+        (∀ (o : I), 0 ≤ w o) →
+          ∀ (p : PaperV.FiniteLP.PrimalFeasible A),
+            PaperV.FiniteLP.primalValue w p ≤
+              B0 R.resources Q S w + PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) (restrict hA p)
+'PaperV.FractionalUnitBoundary.value_le_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+@opt_value_eq : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [DecidableEq I]
+  [inst_3 : DecidableEq E] {K : Type u_3} [inst_4 : Field K] [inst_5 : LinearOrder K] [IsStrictOrderedRing K]
+  {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → K} {A : I → E → K},
+  PaperV.UnitBoundary.Config R.resources Q D S →
+    (∀ (o : I), o ∈ Q ∨ o ∈ D) →
+      IsIncidence R A →
+        (∀ (o : I), 0 ≤ w o) →
+          ∀ (p : PaperV.FiniteLP.PrimalFeasible A),
+            (∀ (p' : PaperV.FiniteLP.PrimalFeasible A),
+                PaperV.FiniteLP.primalValue w p' ≤ PaperV.FiniteLP.primalValue w p) →
+              ∀ (u : PaperV.FiniteLP.PrimalFeasible (centralInc D S A)),
+                (∀ (u' : PaperV.FiniteLP.PrimalFeasible (centralInc D S A)),
+                    PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u' ≤
+                      PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u) →
+                  PaperV.FiniteLP.primalValue w p =
+                    B0 R.resources Q S w + PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u
+'PaperV.FractionalUnitBoundary.opt_value_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@privRes_injOn : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [DecidableEq I]
+  [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E},
+  PaperV.UnitBoundary.Config R.resources Q D S →
+    ∀ {o o' : I},
+      o ∈ PaperV.UnitBoundary.Z R.resources Q S →
+        o' ∈ PaperV.UnitBoundary.Z R.resources Q S → o ≠ o' → privRes R o ≠ privRes R o'
+'PaperV.FractionalUnitBoundary.privRes_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+@liftDual : {I : Type u_1} →
+  {E : Type u_2} →
+    [inst : Fintype I] →
+      [inst_1 : Fintype E] →
+        [DecidableEq I] →
+          [inst_3 : DecidableEq E] →
+            {K : Type u_3} →
+              [inst_4 : Field K] →
+                [inst_5 : LinearOrder K] →
+                  [IsStrictOrderedRing K] →
+                    {R : PaperV.ResourceCertificate.System I E} →
+                      {Q D : Finset I} →
+                        {S : Finset E} →
+                          {w : I → K} →
+                            {A : I → E → K} →
+                              PaperV.FiniteLP.DualFeasible (centralInc D S A) (centralGain R.resources Q D S w) →
+                                PaperV.UnitBoundary.Config R.resources Q D S →
+                                  (∀ (o : I), o ∈ Q ∨ o ∈ D) →
+                                    IsIncidence R A → (∀ (o : I), 0 ≤ w o) → PaperV.FiniteLP.DualFeasible A w
+'PaperV.FractionalUnitBoundary.liftDual' depends on axioms: [propext, Classical.choice, Quot.sound]
+@liftPrice_shared : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [DecidableEq I]
+  [inst_3 : DecidableEq E] {K : Type u_3} [inst_4 : Field K] [inst_5 : LinearOrder K]
+  {R : PaperV.ResourceCertificate.System I E} {Q : Finset I} {S : Finset E} {w : I → K} (zp : ↥S → K) {e : E}
+  (he : e ∈ S), liftPrice R Q S w zp e = piW R.resources Q S w e + zp ⟨e, he⟩
+'PaperV.FractionalUnitBoundary.liftPrice_shared' depends on axioms: [propext, Classical.choice, Quot.sound]
+@liftPrice_chosen : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [DecidableEq I]
+  [inst_3 : DecidableEq E] {K : Type u_3} [inst_4 : Field K] [inst_5 : LinearOrder K]
+  {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → K},
+  PaperV.UnitBoundary.Config R.resources Q D S →
+    ∀ (zp : ↥S → K) {o : I}, o ∈ PaperV.UnitBoundary.Z R.resources Q S → liftPrice R Q S w zp (privRes R o) = w o
+'PaperV.FractionalUnitBoundary.liftPrice_chosen' depends on axioms: [propext, Classical.choice, Quot.sound]
+@liftPrice_other : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [inst_2 : DecidableEq E]
+  {K : Type u_3} [inst_3 : Field K] [inst_4 : LinearOrder K] {R : PaperV.ResourceCertificate.System I E} {Q : Finset I}
+  {S : Finset E} {w : I → K} (zp : ↥S → K) {e : E},
+  e ∉ S → (∀ o ∈ PaperV.UnitBoundary.Z R.resources Q S, privRes R o ≠ e) → liftPrice R Q S w zp e = 0
+'PaperV.FractionalUnitBoundary.liftPrice_other' depends on axioms: [propext, Classical.choice, Quot.sound]
+@liftDual_value : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [inst_2 : DecidableEq I]
+  [inst_3 : DecidableEq E] {K : Type u_3} [inst_4 : Field K] [inst_5 : LinearOrder K] [inst_6 : IsStrictOrderedRing K]
+  {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → K} {A : I → E → K}
+  (z : PaperV.FiniteLP.DualFeasible (centralInc D S A) (centralGain R.resources Q D S w))
+  (cfg : PaperV.UnitBoundary.Config R.resources Q D S) (hQD : ∀ (o : I), o ∈ Q ∨ o ∈ D) (hA : IsIncidence R A)
+  (hw : ∀ (o : I), 0 ≤ w o),
+  PaperV.FiniteLP.dualValue (liftDual z cfg hQD hA hw) = B0 R.resources Q S w + PaperV.FiniteLP.dualValue z
+'PaperV.FractionalUnitBoundary.liftDual_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+@lifted_gap_eq : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [inst_2 : DecidableEq I]
+  [inst_3 : DecidableEq E] {K : Type u_3} [inst_4 : Field K] [inst_5 : LinearOrder K] [inst_6 : IsStrictOrderedRing K]
+  {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → K} {A : I → E → K}
+  (cfg : PaperV.UnitBoundary.Config R.resources Q D S) (hQD : ∀ (o : I), o ∈ Q ∨ o ∈ D) (hA : IsIncidence R A)
+  (hw : ∀ (o : I), 0 ≤ w o) (u : PaperV.FiniteLP.PrimalFeasible (centralInc D S A))
+  (z : PaperV.FiniteLP.DualFeasible (centralInc D S A) (centralGain R.resources Q D S w)) {L U : K},
+  PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u = L →
+    PaperV.FiniteLP.dualValue z = U →
+      PaperV.FiniteLP.dualValue (liftDual z cfg hQD hA hw) - PaperV.FiniteLP.primalValue w (extend cfg hQD hA w u) =
+        U - L
+'PaperV.FractionalUnitBoundary.lifted_gap_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rat_optimum : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [inst_2 : DecidableEq I]
+  [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → ℚ}
+  (cfg : PaperV.UnitBoundary.Config R.resources Q D S) (hQD : ∀ (o : I), o ∈ Q ∨ o ∈ D) (hw : ∀ (o : I), 0 ≤ w o),
+  ∃ u z,
+    PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u = PaperV.FiniteLP.dualValue z ∧
+      (∀ (u' : PaperV.FiniteLP.PrimalFeasible (centralInc D S R.incidence)),
+          PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u' ≤
+            PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u) ∧
+        (∀ (p' : PaperV.FiniteLP.PrimalFeasible R.incidence),
+            PaperV.FiniteLP.primalValue w p' ≤ PaperV.FiniteLP.primalValue w (extend cfg hQD ⋯ w u)) ∧
+          PaperV.FiniteLP.primalValue w (extend cfg hQD ⋯ w u) = PaperV.FiniteLP.dualValue (liftDual z cfg hQD ⋯ hw) ∧
+            PaperV.FiniteLP.primalValue w (extend cfg hQD ⋯ w u) =
+              B0 R.resources Q S w + PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u
+'PaperV.FractionalUnitBoundary.rat_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@exists_rat_full_optimum : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [DecidableEq I]
+  [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → ℚ},
+  PaperV.UnitBoundary.Config R.resources Q D S →
+    (∀ (o : I), o ∈ Q ∨ o ∈ D) →
+      (∀ (o : I), 0 ≤ w o) →
+        ∃ p,
+          ∀ (p' : PaperV.FiniteLP.PrimalFeasible R.incidence),
+            PaperV.FiniteLP.primalValue w p' ≤ PaperV.FiniteLP.primalValue w p
+'PaperV.FractionalUnitBoundary.exists_rat_full_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@exists_rat_central_optimum : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [DecidableEq I]
+  [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E},
+  PaperV.UnitBoundary.Config R.resources Q D S →
+    ∀ (w : I → ℚ),
+      ∃ u,
+        ∀ (u' : PaperV.FiniteLP.PrimalFeasible (centralInc D S R.incidence)),
+          PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u' ≤
+            PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u
+'PaperV.FractionalUnitBoundary.exists_rat_central_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@real_optimum : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [inst_2 : DecidableEq I]
+  [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → ℚ}
+  (cfg : PaperV.UnitBoundary.Config R.resources Q D S) (hQD : ∀ (o : I), o ∈ Q ∨ o ∈ D),
+  (∀ (o : I), 0 ≤ w o) →
+    ∃ u,
+      (∀ (u' : PaperV.FiniteLP.PrimalFeasible (centralInc D S R.incidence)),
+          PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u' ≤
+            PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u) ∧
+        (∀ (p' : PaperV.FiniteLP.PrimalFeasible (PaperV.ResourceCertificate.realIncidence R)),
+            PaperV.FiniteLP.primalValue (fun o => ↑(w o)) p' ≤
+              PaperV.FiniteLP.primalValue (fun o => ↑(w o)) (primalCast (extend cfg hQD ⋯ w u))) ∧
+          (∀ (u' : PaperV.FiniteLP.PrimalFeasible (centralInc D S (PaperV.ResourceCertificate.realIncidence R))),
+              PaperV.FiniteLP.primalValue (centralGain R.resources Q D S fun o => ↑(w o)) u' ≤
+                PaperV.FiniteLP.primalValue (centralGain R.resources Q D S fun o => ↑(w o)) (primalCast u)) ∧
+            PaperV.FiniteLP.primalValue (fun o => ↑(w o)) (primalCast (extend cfg hQD ⋯ w u)) =
+              ↑(B0 R.resources Q S w + PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u)
+'PaperV.FractionalUnitBoundary.real_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@real_opt_value_eq : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [DecidableEq I]
+  [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → ℚ},
+  PaperV.UnitBoundary.Config R.resources Q D S →
+    (∀ (o : I), o ∈ Q ∨ o ∈ D) →
+      (∀ (o : I), 0 ≤ w o) →
+        ∀ (pR : PaperV.FiniteLP.PrimalFeasible (PaperV.ResourceCertificate.realIncidence R)),
+          (∀ (p' : PaperV.FiniteLP.PrimalFeasible (PaperV.ResourceCertificate.realIncidence R)),
+              PaperV.FiniteLP.primalValue (fun o => ↑(w o)) p' ≤ PaperV.FiniteLP.primalValue (fun o => ↑(w o)) pR) →
+            ∀ (uR : PaperV.FiniteLP.PrimalFeasible (centralInc D S (PaperV.ResourceCertificate.realIncidence R))),
+              (∀ (u' : PaperV.FiniteLP.PrimalFeasible (centralInc D S (PaperV.ResourceCertificate.realIncidence R))),
+                  PaperV.FiniteLP.primalValue (centralGain R.resources Q D S fun o => ↑(w o)) u' ≤
+                    PaperV.FiniteLP.primalValue (centralGain R.resources Q D S fun o => ↑(w o)) uR) →
+                PaperV.FiniteLP.primalValue (fun o => ↑(w o)) pR =
+                  ↑(B0 R.resources Q S w) +
+                    PaperV.FiniteLP.primalValue (centralGain R.resources Q D S fun o => ↑(w o)) uR
+'PaperV.FractionalUnitBoundary.real_opt_value_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@real_full_opt_eq_rat : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [DecidableEq I]
+  [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → ℚ},
+  PaperV.UnitBoundary.Config R.resources Q D S →
+    (∀ (o : I), o ∈ Q ∨ o ∈ D) →
+      (∀ (o : I), 0 ≤ w o) →
+        ∀ (p : PaperV.FiniteLP.PrimalFeasible R.incidence),
+          (∀ (p' : PaperV.FiniteLP.PrimalFeasible R.incidence),
+              PaperV.FiniteLP.primalValue w p' ≤ PaperV.FiniteLP.primalValue w p) →
+            ∀ (pR : PaperV.FiniteLP.PrimalFeasible (PaperV.ResourceCertificate.realIncidence R)),
+              (∀ (p' : PaperV.FiniteLP.PrimalFeasible (PaperV.ResourceCertificate.realIncidence R)),
+                  PaperV.FiniteLP.primalValue (fun o => ↑(w o)) p' ≤ PaperV.FiniteLP.primalValue (fun o => ↑(w o)) pR) →
+                PaperV.FiniteLP.primalValue (fun o => ↑(w o)) pR = ↑(PaperV.FiniteLP.primalValue w p)
+'PaperV.FractionalUnitBoundary.real_full_opt_eq_rat' depends on axioms: [propext, Classical.choice, Quot.sound]
+@real_central_opt_eq_rat : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [DecidableEq I]
+  [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → ℚ},
+  PaperV.UnitBoundary.Config R.resources Q D S →
+    (∀ (o : I), 0 ≤ w o) →
+      ∀ (u : PaperV.FiniteLP.PrimalFeasible (centralInc D S R.incidence)),
+        (∀ (u' : PaperV.FiniteLP.PrimalFeasible (centralInc D S R.incidence)),
+            PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u' ≤
+              PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u) →
+          ∀ (uR : PaperV.FiniteLP.PrimalFeasible (centralInc D S (PaperV.ResourceCertificate.realIncidence R))),
+            (∀ (u' : PaperV.FiniteLP.PrimalFeasible (centralInc D S (PaperV.ResourceCertificate.realIncidence R))),
+                PaperV.FiniteLP.primalValue (centralGain R.resources Q D S fun o => ↑(w o)) u' ≤
+                  PaperV.FiniteLP.primalValue (centralGain R.resources Q D S fun o => ↑(w o)) uR) →
+              PaperV.FiniteLP.primalValue (centralGain R.resources Q D S fun o => ↑(w o)) uR =
+                ↑(PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u)
+'PaperV.FractionalUnitBoundary.real_central_opt_eq_rat' depends on axioms: [propext, Classical.choice, Quot.sound]
+@exists_common_denom : ∀ {I : Type u_1} [Fintype I] (w : I → ℚ),
+  (∀ (o : I), 0 ≤ w o) → ∃ q, 0 < q ∧ ∃ n, ∀ (o : I), ↑(n o) = ↑q * w o
+'PaperV.FractionalUnitBoundary.exists_common_denom' depends on axioms: [propext, Classical.choice, Quot.sound]
+@integral_formula : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [inst_2 : DecidableEq I]
+  [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → ℚ},
+  PaperV.UnitBoundary.Config R.resources Q D S →
+    (∀ (o : I), o ∈ Q ∨ o ∈ D) → (∀ (o : I), 0 ≤ w o) → packW R w = B0 R.resources Q S w + redW R Q D S w
+'PaperV.FractionalUnitBoundary.integral_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+@conserved_gap : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [inst_2 : DecidableEq I]
+  [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → ℚ},
+  PaperV.UnitBoundary.Config R.resources Q D S →
+    (∀ (o : I), o ∈ Q ∨ o ∈ D) →
+      (∀ (o : I), 0 ≤ w o) →
+        ∀ (p : PaperV.FiniteLP.PrimalFeasible R.incidence),
+          (∀ (p' : PaperV.FiniteLP.PrimalFeasible R.incidence),
+              PaperV.FiniteLP.primalValue w p' ≤ PaperV.FiniteLP.primalValue w p) →
+            ∀ (u : PaperV.FiniteLP.PrimalFeasible (centralInc D S R.incidence)),
+              (∀ (u' : PaperV.FiniteLP.PrimalFeasible (centralInc D S R.incidence)),
+                  PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u' ≤
+                    PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u) →
+                PaperV.FiniteLP.primalValue w p - packW R w =
+                  PaperV.FiniteLP.primalValue (centralGain R.resources Q D S w) u - redW R Q D S w
+'PaperV.FractionalUnitBoundary.conserved_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@conserved_gap_real : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] [inst_2 : DecidableEq I]
+  [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E} {Q D : Finset I} {S : Finset E} {w : I → ℚ},
+  PaperV.UnitBoundary.Config R.resources Q D S →
+    (∀ (o : I), o ∈ Q ∨ o ∈ D) →
+      (∀ (o : I), 0 ≤ w o) →
+        ∀ (pR : PaperV.FiniteLP.PrimalFeasible (PaperV.ResourceCertificate.realIncidence R)),
+          (∀ (p' : PaperV.FiniteLP.PrimalFeasible (PaperV.ResourceCertificate.realIncidence R)),
+              PaperV.FiniteLP.primalValue (fun o => ↑(w o)) p' ≤ PaperV.FiniteLP.primalValue (fun o => ↑(w o)) pR) →
+            ∀ (uR : PaperV.FiniteLP.PrimalFeasible (centralInc D S (PaperV.ResourceCertificate.realIncidence R))),
+              (∀ (u' : PaperV.FiniteLP.PrimalFeasible (centralInc D S (PaperV.ResourceCertificate.realIncidence R))),
+                  PaperV.FiniteLP.primalValue (centralGain R.resources Q D S fun o => ↑(w o)) u' ≤
+                    PaperV.FiniteLP.primalValue (centralGain R.resources Q D S fun o => ↑(w o)) uR) →
+                PaperV.FiniteLP.primalValue (fun o => ↑(w o)) pR - ↑(packW R w) =
+                  PaperV.FiniteLP.primalValue (centralGain R.resources Q D S fun o => ↑(w o)) uR - ↑(redW R Q D S w)
+'PaperV.FractionalUnitBoundary.conserved_gap_real' depends on axioms: [propext, Classical.choice, Quot.sound]

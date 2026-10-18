@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "kind": "unsat_core",
+  "degree": "with_solver",
+  "timed_out": false,
+  "partial": [],
+  "assumed": [],
+  "solver_free": false,
+  "method": "",
+  "checks": [
+    {
+      "check": "the core really is unsatisfiable",
+      "ok": true,
+      "detail": "unsat"
+    },
+    {
+      "check": "one name per formula of the core, each once",
+      "ok": true,
+      "detail": "3 name(s) for 3 hypothesis formula(s)"
+    },
+    {
+      "check": "it is about the obligation in gap_residual_and_resource_defect.py",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "warnings": [],
+  "detail": "core of 3 formulas (includes the negated claim)",
+  "explained": [
+    {
+      "role": "used",
+      "name": "resource_excess"
+    },
+    {
+      "role": "used",
+      "name": "relaxation"
+    },
+    {
+      "role": "unused",
+      "name": "feasible_pairs"
+    }
+  ],
+  "card": {
+    "kind": "unsat_core",
+    "evidence": "universal",
+    "conclusion": "core of 3 formulas (includes the negated claim)",
+    "scope": [],
+    "hypotheses_used": [
+      "resource_excess",
+      "relaxation"
+    ],
+    "cited": {},
+    "pending": [],
+    "role": null,
+    "link": null,
+    "declared": false,
+    "degree": "with_solver",
+    "provenance": {
+      "digest": "78ce6688fe3f0d79",
+      "schema": 5,
+      "schema_known": 5,
+      "produced_by": "0.34.0",
+      "verified_by": "0.34.0",
+      "spec_path": "gap_residual_and_resource_defect.py",
+      "spec_sha256": "552064d1b7d78a28edb14fa6b4104aaa7b52d8dbdeb5d48df82ae1089579e9b6",
+      "python": "3.12.10",
+      "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+    },
+    "exact": true,
+    "external": []
+  }
+}
+
+STDERR

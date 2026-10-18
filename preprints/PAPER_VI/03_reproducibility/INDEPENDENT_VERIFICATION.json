@@ -1,0 +1,484 @@
+{
+  "status": "PASS_INDEPENDENT_LITERAL_CHECKS",
+  "cases": [
+    {
+      "kind": "local",
+      "p": 18,
+      "q": 36,
+      "h": 1,
+      "u": 153,
+      "m": 18,
+      "s": 648,
+      "blocks": 459,
+      "edges": 819,
+      "mode": "all_k4",
+      "certificate": "18_36_saturated_matching_all_k4.json.gz",
+      "sha256": "52b37e60eb1f960d6c7b63d46f28225e238866210dc4b3ed99c67865ab92db98"
+    },
+    {
+      "kind": "local",
+      "p": 18,
+      "q": 36,
+      "h": 1,
+      "u": 153,
+      "m": 18,
+      "s": 648,
+      "blocks": 477,
+      "edges": 819,
+      "mode": "triangles",
+      "certificate": "18_36_saturated_matching_triangles.json.gz",
+      "sha256": "921148ff4cf9bb5ecbd632a15534f63e056ba2a912ea2f20fe08d6012b8767b1"
+    },
+    {
+      "kind": "local",
+      "p": 19,
+      "q": 37,
+      "h": 1,
+      "u": 170,
+      "m": 18,
+      "s": 702,
+      "blocks": 496,
+      "edges": 890,
+      "mode": "all_k4",
+      "certificate": "19_37_three_edit_classes_all_k4.json.gz",
+      "sha256": "f5152fe4c9fd45dc977de91b137d9eb3766f6a55c8748c053bb4db3a0f1dccf6"
+    },
+    {
+      "kind": "local",
+      "p": 19,
+      "q": 37,
+      "h": 1,
+      "u": 170,
+      "m": 18,
+      "s": 702,
+      "blocks": 514,
+      "edges": 890,
+      "mode": "triangles",
+      "certificate": "19_37_three_edit_classes_triangles.json.gz",
+      "sha256": "9e63e21bd2dbefa91edfc5af1dad3043763a2bdef095a6ce6b9424e25a26c7b8"
+    },
+    {
+      "kind": "local",
+      "p": 19,
+      "q": 39,
+      "h": 1,
+      "u": 170,
+      "m": 19,
+      "s": 740,
+      "blocks": 532,
+      "edges": 929,
+      "mode": "all_k4",
+      "certificate": "19_39_three_edit_classes_all_k4.json.gz",
+      "sha256": "4063a7cb836ffcb2a8dc5ce6f049d2204b59d1923fb450435580ff063ed78d81"
+    },
+    {
+      "kind": "local",
+      "p": 19,
+      "q": 39,
+      "h": 1,
+      "u": 170,
+      "m": 19,
+      "s": 740,
+      "blocks": 551,
+      "edges": 929,
+      "mode": "triangles",
+      "certificate": "19_39_three_edit_classes_triangles.json.gz",
+      "sha256": "b71c59ef3c2d106f439a65fe19a6be1d8a346fa3c9c66bad83c24da8b87e52cb"
+    },
+    {
+      "kind": "local",
+      "p": 37,
+      "q": 73,
+      "h": 2,
+      "u": 664,
+      "m": 4,
+      "s": 2699,
+      "blocks": 2027,
+      "edges": 3367,
+      "mode": "all_k4",
+      "certificate": "37_73_concentrated_stars_all_k4.json.gz",
+      "sha256": "d1ab0a09e0ef07e85d901cb57bf68f8337322d613f1af73154a3811d57be70de"
+    },
+    {
+      "kind": "local",
+      "p": 37,
+      "q": 73,
+      "h": 2,
+      "u": 664,
+      "m": 4,
+      "s": 2699,
+      "blocks": 2031,
+      "edges": 3367,
+      "mode": "triangles",
+      "certificate": "37_73_concentrated_stars_triangles.json.gz",
+      "sha256": "b35267c21e4b7fa32b9a893d6fed60bba5ff1780efd7c009474b5b7535a0438d"
+    },
+    {
+      "kind": "local",
+      "p": 37,
+      "q": 74,
+      "h": 2,
+      "u": 666,
+      "m": 74,
+      "s": 2738,
+      "blocks": 1924,
+      "edges": 3478,
+      "mode": "all_k4",
+      "certificate": "37_74_dense_outer_cycle_all_k4.json.gz",
+      "sha256": "0eb36130c4a389affd407c6078c65667d266a9086b2319a01a11bd53298f6f56"
+    },
+    {
+      "kind": "local",
+      "p": 37,
+      "q": 74,
+      "h": 2,
+      "u": 666,
+      "m": 74,
+      "s": 2738,
+      "blocks": 1998,
+      "edges": 3478,
+      "mode": "triangles",
+      "certificate": "37_74_dense_outer_cycle_triangles.json.gz",
+      "sha256": "1a4e908b7ece7e30ca391b6493cce0a69abc6a4c7ddc7be33f6c98cd84874597"
+    },
+    {
+      "kind": "local",
+      "p": 37,
+      "q": 75,
+      "h": 2,
+      "u": 664,
+      "m": 4,
+      "s": 2773,
+      "blocks": 2101,
+      "edges": 3441,
+      "mode": "all_k4",
+      "certificate": "37_75_concentrated_stars_all_k4.json.gz",
+      "sha256": "41ab57eddef2e78a576b29d1681076c072d12b202aa7adef07579c92335c4ad1"
+    },
+    {
+      "kind": "local",
+      "p": 37,
+      "q": 75,
+      "h": 2,
+      "u": 664,
+      "m": 4,
+      "s": 2773,
+      "blocks": 2105,
+      "edges": 3441,
+      "mode": "triangles",
+      "certificate": "37_75_concentrated_stars_triangles.json.gz",
+      "sha256": "2ea01f8c3ba0cd8440fc3d5bc23fdfc16ed431bb73fd1bc7fd69abf5cbad8bc8"
+    },
+    {
+      "kind": "local",
+      "p": 63,
+      "q": 125,
+      "h": 1,
+      "u": 1952,
+      "m": 62,
+      "s": 7874,
+      "blocks": 5798,
+      "edges": 9888,
+      "mode": "all_k5",
+      "certificate": "63_125_mixed_all_k5.json.gz",
+      "sha256": "288cf88e8350cdd6d0ba586b7628d428f168f6a1f8a2f0162f541b14d41f6b03"
+    },
+    {
+      "kind": "local",
+      "p": 63,
+      "q": 125,
+      "h": 1,
+      "u": 1952,
+      "m": 62,
+      "s": 7874,
+      "blocks": 5798,
+      "edges": 9888,
+      "mode": "alternating_types",
+      "certificate": "63_125_mixed_alternating_types.json.gz",
+      "sha256": "5a8edf7875bdb2db6c92b6479d05c0af1aa839b60b5d55a886483bad8d498610"
+    },
+    {
+      "kind": "local",
+      "p": 63,
+      "q": 126,
+      "h": 1,
+      "u": 1952,
+      "m": 62,
+      "s": 7937,
+      "blocks": 5861,
+      "edges": 9951,
+      "mode": "all_k5",
+      "certificate": "63_126_mixed_all_k5.json.gz",
+      "sha256": "84f0a1034f289cb97e3bd53ef0f45c2fcdbc70c4cc64db61e45ff2fd95edf65d"
+    },
+    {
+      "kind": "local",
+      "p": 63,
+      "q": 126,
+      "h": 1,
+      "u": 1952,
+      "m": 62,
+      "s": 7937,
+      "blocks": 5861,
+      "edges": 9951,
+      "mode": "alternating_types",
+      "certificate": "63_126_mixed_alternating_types.json.gz",
+      "sha256": "409816304be10ff2a4f738c2f0c694e6f55bbb9283268fe6e539cb3801f169d9"
+    },
+    {
+      "kind": "local",
+      "p": 63,
+      "q": 127,
+      "h": 1,
+      "u": 1952,
+      "m": 63,
+      "s": 8000,
+      "blocks": 5922,
+      "edges": 10015,
+      "mode": "all_k5",
+      "certificate": "63_127_mixed_all_k5.json.gz",
+      "sha256": "774a4fd8c05f3690c5622ed5f0bedb090c592b1f19dbcdb7ab6d2d40e8e66a4a"
+    },
+    {
+      "kind": "local",
+      "p": 63,
+      "q": 127,
+      "h": 1,
+      "u": 1952,
+      "m": 63,
+      "s": 8000,
+      "blocks": 5922,
+      "edges": 10015,
+      "mode": "alternating_types",
+      "certificate": "63_127_mixed_alternating_types.json.gz",
+      "sha256": "893f981d27c0934129001250cdd73516e5645a8be1bed5f38ebc5836849eab30"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 0,
+      "b": 0,
+      "cp": 7,
+      "duals": [
+        7,
+        7,
+        7
+      ],
+      "certificate": "exceptional_p2_q5_a0_b0.json.gz",
+      "sha256": "793c25f318c9aeeedf2043963135188e68c43dfbfc01c871ef65397048633995"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 0,
+      "b": 1,
+      "cp": 8,
+      "duals": [
+        5,
+        7,
+        8
+      ],
+      "certificate": "exceptional_p2_q5_a0_b1.json.gz",
+      "sha256": "5bac093baf79f5876d52d38df887f165f1347d5aa64e2e6738e3b6053faba44a"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 0,
+      "b": 2,
+      "cp": 9,
+      "duals": [
+        3,
+        7,
+        9
+      ],
+      "certificate": "exceptional_p2_q5_a0_b2.json.gz",
+      "sha256": "d7944a8308d0dcf353ef4021fbb79d0c0a4d8b3740c9d6eb533b38dde1a21465"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 0,
+      "b": 3,
+      "cp": 10,
+      "duals": [
+        1,
+        7,
+        10
+      ],
+      "certificate": "exceptional_p2_q5_a0_b3.json.gz",
+      "sha256": "93cce6e858cfb61fdda1533f26ae5751b468ef584a2bdb92beb4dfb93ddc117d"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 0,
+      "b": 4,
+      "cp": 11,
+      "duals": [
+        -1,
+        7,
+        11
+      ],
+      "certificate": "exceptional_p2_q5_a0_b4.json.gz",
+      "sha256": "d688dd5ddba636e2f3bc6fc2f331012b979552512fe5971a8e9a8b21b7310559"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 1,
+      "b": 0,
+      "cp": 8,
+      "duals": [
+        8,
+        7,
+        6
+      ],
+      "certificate": "exceptional_p2_q5_a1_b0.json.gz",
+      "sha256": "d89a028f82bf5b5bedc075b27c5789fd240d66775fa0b03f75662ae169791c1c"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 1,
+      "b": 1,
+      "cp": 7,
+      "duals": [
+        6,
+        7,
+        7
+      ],
+      "certificate": "exceptional_p2_q5_a1_b1.json.gz",
+      "sha256": "79fe809a8f08b000b55449e4c393fa6dc8cdeadcc8b3d8af1904319b4103c628"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 1,
+      "b": 2,
+      "cp": 8,
+      "duals": [
+        4,
+        7,
+        8
+      ],
+      "certificate": "exceptional_p2_q5_a1_b2.json.gz",
+      "sha256": "7b0e81cd2270266a5e1fcbe0f2a337a4c582d59bcf5880b07e1be863f883d094"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 1,
+      "b": 3,
+      "cp": 9,
+      "duals": [
+        2,
+        7,
+        9
+      ],
+      "certificate": "exceptional_p2_q5_a1_b3.json.gz",
+      "sha256": "91bce94057fafe5a9aae2c475a5dbd0ded7d1f6631292e0dd0cc1cba6a23ba50"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 1,
+      "b": 4,
+      "cp": 10,
+      "duals": [
+        0,
+        7,
+        10
+      ],
+      "certificate": "exceptional_p2_q5_a1_b4.json.gz",
+      "sha256": "12071d1694db7269e93fc5e5603c13991b4903f948f635da15169a3a1e6d5774"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 2,
+      "b": 0,
+      "cp": 9,
+      "duals": [
+        9,
+        7,
+        5
+      ],
+      "certificate": "exceptional_p2_q5_a2_b0.json.gz",
+      "sha256": "023e17b023c412935a849b503532a309ea1f2b2a104fadebe542895a70b2dd02"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 2,
+      "b": 1,
+      "cp": 7,
+      "duals": [
+        7,
+        7,
+        6
+      ],
+      "certificate": "exceptional_p2_q5_a2_b1.json.gz",
+      "sha256": "62fb4996e5ad9010528bb9003f32ab3f8aa81a33fbdbf1dcf2a4214c2a225512"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 2,
+      "b": 2,
+      "cp": 7,
+      "duals": [
+        5,
+        7,
+        7
+      ],
+      "certificate": "exceptional_p2_q5_a2_b2.json.gz",
+      "sha256": "495e8312591a06e358ab5f8a31d3ee55655189c19194b7db29cf94c2388ab4d4"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 2,
+      "b": 3,
+      "cp": 8,
+      "duals": [
+        3,
+        7,
+        8
+      ],
+      "certificate": "exceptional_p2_q5_a2_b3.json.gz",
+      "sha256": "39c50a0c7f9738205d21f8372b240a061e48cba285925c20bf35e2a959ed9d36"
+    },
+    {
+      "kind": "exceptional",
+      "p": 2,
+      "q": 5,
+      "a": 2,
+      "b": 4,
+      "cp": 9,
+      "duals": [
+        1,
+        7,
+        9
+      ],
+      "certificate": "exceptional_p2_q5_a2_b4.json.gz",
+      "sha256": "2c518e3439b47d969f182476d79ddd3dada5e1cf2aa493ec268a2cfdbd44f4e2"
+    }
+  ],
+  "count": 33,
+  "scope": "Finite regression certificates only; no universal theorem inferred."
+}

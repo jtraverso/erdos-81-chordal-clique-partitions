@@ -1,0 +1,125 @@
+--- PAPER_V_v1.10_en.md
++++ PAPER_V_preprint_v1.0_en.md
+@@ -5,7 +5,7 @@
+ [jtraverso@gmail.com](mailto:jtraverso@gmail.com)  
+ [ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
+ 
+-**Paper V in the series — v1.10 working draft**  
++**Paper V in the series — Preprint 1.0**  
+ **Date:** October 18, 2026  
+ 
+ **MSC 2020:** Primary 05C70; Secondary 05C15, 05C85, 90C27.
+@@ -119,7 +119,7 @@
+ 
+ An earlier exact connection between clique partitions and a colorability deficit is due to Wallis and Zhang [31, Proposition 3.2]. For an independent join they express the clique partition number through the maximum total order of a colorable subfamily of core cliques, with a charge for the core partition. For edge-and-triangle partitions in their subcubic setting, their analysis further separates triangle and deletion costs. This is a concrete antecedent to defect accounting through colorability; the present paper concerns weighted transfer and realization certificates in a fixed target system, together with the copy and host applications.
+ 
+-Paper IV [25] has already established the Erdős 81 bound that motivated this series. The present paper studies general finite packing and realization mechanisms, with the colorability and realizability defects serving as quantities that measure loss between representations.
++Paper IV [25] proves an all-order bound \(c_4(G)\le M(n)+b\) for chordal graphs, with an absolute constant \(b\), and the exact maximum \(M(n)=\lfloor n(n+1)/6\rfloor\) for all sufficiently large orders. This implies the \(n^2/6+O(n)\) bound asked in Erdős Problem 81 [14]; it does not assert \(b=0\) at every order. Okechukwu [32, Theorem 1.1 and Corollary 1.2] also proves the all-order bound up to an additive constant and the exact eventual extremal value. No priority for those extremal conclusions is claimed here. The present paper studies general finite packing and realization mechanisms, with the colorability and realizability defects measuring loss between representations.
+ 
+ Within the Erdős #81 series [13,14], Papers I and II study fractional triangle packing
+ and covering functionals [2,4], and Paper III proves a linear-error split-graph result [5].
+@@ -141,8 +141,8 @@
+ Sections 2–4 set up the transfer and realization statements. Section 5 constructs host
+ realizers. Sections 6–7 establish the copy and LP applications; Section 8 gives the SEAL
+ construction and its certificates. Section 9 records finite obstructions to stronger
+-claims. Additional structural calculus and resource-incidence material are preserved in
+-a separate mathematical supplement. The abstract transfer theorem alone does not supply the structural
++claims. Additional structural calculus and resource-incidence interfaces are listed in
++Section 6 of the formal companion. The abstract transfer theorem alone does not supply the structural
+ inputs for the chordal application in [24].
+ 
+ ## 2. Conflict systems and resource-dominated relaxations
+@@ -176,7 +176,7 @@
+ (see also Ziegler [17]) when \(H\) is regarded as a 2-uniform hypergraph. We retain the
+ notation \(D_q\) to emphasize its role as a vertex-deletion defect in the transfer bounds. In
+ particular, \(D_1(H)=|V(H)|-\alpha(H)\). No novelty is claimed for the parameter itself or for
+-the elementary calculus retained in the mathematical supplement.
++the elementary calculus listed in the supporting-results section of the formal companion.
+ 
+ **Definition 2.4 (resource structure and resource LP).** A conflict system is
+ *resource-structured* if there is a finite set \(\mathcal R\) and a map
+@@ -215,7 +215,7 @@
+ resource sets are allowed, adjoining the bounds \(x_o\le1\) gives a bounded
+ relaxation with the same feasible \(0/1\) points.
+ 
+-Additional resource-incidence kernels are retained in the mathematical supplement.
++Additional resource-incidence kernels are described in the supporting-results section of the formal companion.
+ 
+ ---
+ 
+@@ -1133,7 +1133,7 @@
+ The examples test statements stronger than the transfer results. They distinguish a small uncovered residual, a small auxiliary defect, and a small integrality gap. None of those properties may be substituted for the others without an additional argument, even when the instance is finite and its optimum is known exactly.
+ 
+ Each item below is a finite statement arising from a natural strengthening considered within the program; none is attributed to a previously published conjecture. The numerical assertions are supported by exact
+-certificates listed in the accompanying reproducibility document.
++certificates documented in the formal and computational companion and the accompanying reproducibility files.
+ 
+ ### 9.1 (BK) “small deficiency implies no gap” — false
+ 
+@@ -1287,7 +1287,7 @@
+ reassignment under changes to the host lists can be bounded in terms of those
+ changes, while preserving a useful certificate of the output's quality.
+ 
+-**Formalization and reproducibility.** The separate companion describes the canonical Lean 4.35 development, its public entry point, exact statement correspondences, source freeze and reproduction commands. The formal results include primal–dual certification, compatible realization, unit-boundary elimination and the finite mixed-copy budget. SEAL's mathematical guarantees remain distinct from validation of its reference implementation and finite computational certificates. The IV–V application [24] is a separate formal project. External review and bibliographic priority remain separate from these checks.
++**Formalization and reproducibility.** The [separate companion](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V/05_formalization) describes the canonical Lean 4.35 development, its public entry point, exact statement correspondences, source freeze and reproduction commands. The formal results include primal–dual certification, compatible realization, unit-boundary elimination and the finite mixed-copy budget. SEAL's mathematical guarantees remain distinct from validation of its reference implementation and finite computational certificates. The IV–V application [24] is a separate formal project. External review and bibliographic priority remain separate from these checks.
+ 
+ ## Acknowledgements
+ 
+@@ -1300,22 +1300,22 @@
+ 
+ Certo [26], <https://github.com/jtraverso/certo-math>, and Jacobian [27], <https://github.com/morluto/jacobian>, were the computational tools used to explore instances, check identities, and assess candidates. Their use is acknowledged separately from the logical dependencies of the formal proof. Computations were reviewed within their stated scope; a finite search does not replace a universal proof.
+ 
+-The author remains responsible for the arguments, citations, code, and presentation. No AI system is listed as an author. The draft remains subject to the author's final review.
++The author remains responsible for the arguments, citations, code, and presentation. No AI system is listed as an author.
+ 
+ ## References
+ 
+ [1] J. Edmonds, “Maximum matching and a polyhedron with 0,1-vertices,” *Journal of Research of the National Bureau of Standards, Section B: Mathematics and Mathematical Physics* **69B** (1965), 125–130.
+ 
+-[2] J. P. Traverso Gianini, “Affine profile reduction for fractional triangle packings in split graphs” (Paper I in the series), preprint v1.1, July 2026.
++[2] J. P. Traverso Gianini, “Affine profile reduction for fractional triangle packings in split graphs” (Paper I in the series), preprint v1.3 (2026). [Deposited edition](https://doi.org/10.5281/zenodo.23089131).
+ 
+ [3] B. Reed, K. Smith, and A. Vetta, “Finding odd cycle transversals,” *Operations Research Letters*
+ **32** (2004), 299–301.
+ 
+ [4] J. P. Traverso Gianini, “Complete-split extremizers for a fractional triangle-cover
+-functional on chordal graphs” (Paper II in the series), preprint v1.1, August 2026.
++functional on chordal graphs” (Paper II in the series), preprint v1.2 (2026). [Deposited edition](https://doi.org/10.5281/zenodo.23089131).
+ 
+ [5] J. P. Traverso Gianini, “Linear-error clique partitions of split graphs via structured
+-triangle packing” (Paper III in the series), preprint v1.1, July 2026.
++triangle packing” (Paper III in the series), preprint v1.5 (2026). [Deposited edition](https://doi.org/10.5281/zenodo.23089131).
+ 
+ [6] M. Grötschel, L. Lovász, and A. Schrijver, “The ellipsoid method and its consequences in
+ combinatorial optimization,” *Combinatorica* **1** (1981), 169–197.
+@@ -1339,8 +1339,7 @@
+ 
+ [13] P. Erdős, E. T. Ordman, and Y. Zalcstein, “Clique partitions of chordal graphs,” *Combinatorics, Probability and Computing* **2** (1993), no. 4, 409–415.
+ 
+-[14] T. F. Bloom, “Erdős Problem #81,” *Erdős Problems*, https://www.erdosproblems.com/81, accessed July 6, 2026.
+-
++[14] T. F. Bloom, “Erdős Problem #81,” *Erdős Problems*, <https://www.erdosproblems.com/81>.
+ [15] V. L. Dol'nikov, “A certain combinatorial inequality,” *Siberian Mathematical Journal*
+ **29** (1988), 375–379.
+ 
+@@ -1372,12 +1371,11 @@
+ 
+ 
+ [24] J. P. Traverso Gianini, *From realizability certificates to the Erdős 81 bound*,
+-separate research note accompanying Papers IV and V, private working manuscript
+-v0.4 and formal companion, October 18, 2026.
++separate research note accompanying Papers IV and V, Preprint 1.0 and formal companion, 2026. [Series repository](https://github.com/jtraverso/erdos-81-chordal-clique-partitions).
+ 
+ [25] J. P. Traverso Gianini, *Clique partitions with rooted simplicial defect:
+ quantitative stability and sharp eventual bounds*, Paper IV, preprint v1.23,
+-October 1, 2026.
++October 1, 2026. [Deposited edition](https://doi.org/10.5281/zenodo.23089131).
+ 
+ [26] J. P. Traverso Gianini, *Certo: computational tools with verifiable certificates*.
+ Software repository, <https://github.com/jtraverso/certo-math>. Historical use is
+@@ -1394,3 +1392,5 @@
+ [30] G. Stamoulis, “Grouped Color Deletion, Lasserre Exactness and Clique-Sum Locality for Rainbow Matching,” arXiv:2604.25556v1, April 28, 2026. [Versioned preprint](https://arxiv.org/abs/2604.25556v1).
+ 
+ [31] W. D. Wallis and G.-H. Zhang, “On the partition and coloring of a graph by cliques,” *Discrete Mathematics* **120** (1993), 191–203. [DOI](https://doi.org/10.1016/0012-365X(93)90576-F).
++
++[32] O. Okechukwu, “Clique partitions and bounded simplicial defect,” arXiv:2609.20871v1 (2026), Theorem 1.1 and Corollary 1.2. [Versioned preprint](https://arxiv.org/abs/2609.20871v1).

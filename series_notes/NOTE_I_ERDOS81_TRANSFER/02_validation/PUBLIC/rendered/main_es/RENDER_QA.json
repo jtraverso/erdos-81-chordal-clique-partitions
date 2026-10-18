@@ -1,0 +1,25 @@
+{
+  "pdf_sha256": "7ced575c385891ab8b4500152a72881ee27f58cfd2007eb86af88a591d135456",
+  "md_sha256": "e30d8196a11d3f6a2060a9105d92de3ee7ff7019b2027b9b463112b3713849f4",
+  "tex_sha256": "69b21bf2f28819ddaf2f500136902f425b540e4ac7f0f4b3ce405a2ebf687449",
+  "pages": 8,
+  "renderer": "PyMuPDF 129.6 dpi",
+  "visual_inspection": "PASS_ALL_FINAL_PAGES",
+  "compilation": "Two Tectonic passes, exit0",
+  "layout_authority": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_es.tex",
+  "layout_authority_sha256": "28f4be8737a65a474cb422eef39b42f821ba12614749cdfcb261ac001f0dd62c",
+  "role": "main",
+  "language": "es",
+  "pages_viewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "method": "All pages inspected in rendered contact sheets, with full-resolution inspection of changed mathematical, reference, title and source-package pages. No clipping, missing glyphs, overlaps or unreadable equations found.",
+  "pdf": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.pdf"
+}

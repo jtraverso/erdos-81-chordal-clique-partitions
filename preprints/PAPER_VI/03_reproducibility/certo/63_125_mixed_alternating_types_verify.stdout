@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "kind": "exact_cover",
+  "degree": "complete",
+  "timed_out": false,
+  "partial": [],
+  "assumed": [],
+  "solver_free": true,
+  "method": "verify.cover.method",
+  "checks": [
+    {
+      "check": "every element of the universe is covered",
+      "ok": true,
+      "detail": "0 missed: -"
+    },
+    {
+      "check": "no part covers anything outside the universe",
+      "ok": true,
+      "detail": "0 foreign elements"
+    },
+    {
+      "check": "and covered exactly once",
+      "ok": true,
+      "detail": "0 covered more than once: -"
+    },
+    {
+      "check": "the declared number of parts is the number of parts",
+      "ok": true,
+      "detail": "5798 counted, 5798 declared"
+    },
+    {
+      "check": "every part really is a clique of the graph",
+      "ok": true,
+      "detail": "0 parts are not"
+    }
+  ],
+  "warnings": [
+    "this says the cover is VALID and how large it is. It does not say it is the smallest: for that, pair it with an exact dual from `opt` on the same universe."
+  ],
+  "detail": "5798 parts covering 9888 elements exactly once each",
+  "card": {
+    "kind": "exact_cover",
+    "evidence": "feasible",
+    "conclusion": "5798 parts covering 9888 elements exactly once each",
+    "scope": [
+      "a cover you HAVE -- not shown to be minimum"
+    ],
+    "hypotheses_used": [],
+    "cited": {},
+    "pending": [],
+    "role": null,
+    "link": null,
+    "declared": false,
+    "degree": "complete",
+    "provenance": {
+      "digest": "77cb53c00e952faf",
+      "schema": 5,
+      "schema_known": 5,
+      "produced_by": "0.34.0",
+      "verified_by": "0.34.0",
+      "spec_path": "C:\\e81-repro-100\\PAPER_VI\\certo\\63_125_mixed_alternating_types.py",
+      "spec_sha256": "4c2e4f555a20c14aa1d6d8a1fe6fe9df37ddec0e43224bdeeb501bef537f32d6",
+      "python": "3.12.10",
+      "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+    },
+    "exact": true,
+    "external": []
+  },
+  "obligation": "27f2ebe066a94502ae39c9dee267a6601ec6504cdd09fb40794e67079165315a"
+}

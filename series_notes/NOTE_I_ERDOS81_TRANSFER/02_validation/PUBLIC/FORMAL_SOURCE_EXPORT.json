@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "archive": "05_formalization/formal_sources/NOTE_I_LEAN435_FINAL_SOURCE_v1.0.zip",
+  "sha256": "eae69a0316113f1701246b54243a1b51696b85ea656309319b8738932f90f604",
+  "bytes": 1205196,
+  "source_manifest_sha256": "5f7deb401e26fcce100d576e4ed5c6975a46d14265144a1f267439b67f24613f",
+  "module_count": 324,
+  "local_declarations": 6850,
+  "visited_dependencies": 10304,
+  "nonstandard_axioms": 0,
+  "public_path_scan": "PASS",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "--rehash",
+        "build",
+        "Erdos81Note"
+      ],
+      "cwd": "lean435",
+      "started_utc": "2026-10-18T19:45:25.046198+00:00",
+      "finished_utc": "2026-10-18T19:53:17.599177+00:00",
+      "exit_code": 0,
+      "log": "ROOT_BUILD.log",
+      "log_sha256": "6d49ab2a30e64e1385314f76fc3af8af3c5782bbcbfb2b93803d2d6f77f4d90d"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-s",
+        "32768",
+        "Endpoint435Gate.lean"
+      ],
+      "cwd": "lean435",
+      "started_utc": "2026-10-18T19:53:17.602598+00:00",
+      "finished_utc": "2026-10-18T19:54:50.579249+00:00",
+      "exit_code": 0,
+      "log": "ENDPOINTS.log",
+      "log_sha256": "1245401785193109b219335fe441ed22036b470166a507caeb171b103af2b5b5"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-s",
+        "32768",
+        "FreezeFullAudit.lean"
+      ],
+      "cwd": "lean435",
+      "started_utc": "2026-10-18T19:54:50.584254+00:00",
+      "finished_utc": "2026-10-18T19:56:43.782198+00:00",
+      "exit_code": 0,
+      "log": "FULL_AUDIT.log",
+      "log_sha256": "f3253ece3851ccc3a5666846bcc921e081080ba4ba1789b24ea0a575f8c5d677"
+    }
+  ]
+}

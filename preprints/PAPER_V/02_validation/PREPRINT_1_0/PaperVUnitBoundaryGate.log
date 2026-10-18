@@ -1,0 +1,29 @@
+@PaperV.UnitBoundary.completion_optimal_unconditional : ∀ {α : Type u_1} {R : Type u_2} [inst : DecidableEq α]
+  [inst_1 : DecidableEq R] (res : α → Finset R) (Q D : Finset α) (SR : Finset R),
+  PaperV.UnitBoundary.Config res Q D SR →
+    PaperV.UnitBoundary.packOpt res (Q ∪ D) =
+      (PaperV.UnitBoundary.Z res Q SR).card + (PaperV.UnitBoundary.B res Q SR).card +
+        PaperV.UnitBoundary.nuAvoid res D (PaperV.UnitBoundary.B res Q SR)
+'PaperV.UnitBoundary.completion_optimal_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.UnitBoundary.exists_endpoint_repacking : ∀ {α : Type u_1} {R : Type u_2} [inst : DecidableEq α]
+  [inst_1 : DecidableEq R] (res : α → Finset R) (Q0 Q1 D : Finset α) (SR : Finset R),
+  PaperV.UnitBoundary.Config res Q0 D SR →
+    PaperV.UnitBoundary.Config res Q1 D SR →
+      ∀ C0 ⊆ D,
+        PaperV.UnitBoundary.ResFeasible res C0 →
+          (∀ d ∈ C0, Disjoint (res d) (PaperV.UnitBoundary.B res Q0 SR)) →
+            ∃ R1 P1,
+              R1 ⊆ Q1 \ PaperV.UnitBoundary.Z res Q1 SR ∧
+                P1 =
+                    PaperV.UnitBoundary.Z res Q1 SR ∪ R1 ∪
+                      PaperV.UnitBoundary.keptCentral res C0 (PaperV.UnitBoundary.B res Q1 SR) ∧
+                  PaperV.UnitBoundary.ResFeasible res P1 ∧
+                    P1 ⊆ Q1 ∪ D ∧
+                      (∃ h ≤ (PaperV.UnitBoundary.B res Q1 SR \ PaperV.UnitBoundary.B res Q0 SR).card,
+                          P1.card + h =
+                            (PaperV.UnitBoundary.Z res Q1 SR).card + (PaperV.UnitBoundary.B res Q1 SR).card + C0.card) ∧
+                        (PaperV.UnitBoundary.Z res Q0 SR).card + (PaperV.UnitBoundary.B res Q0 SR).card + C0.card +
+                            (PaperV.UnitBoundary.Z res Q1 SR).card ≤
+                          P1.card + (PaperV.UnitBoundary.Z res Q0 SR).card +
+                            (PaperV.UnitBoundary.B res Q0 SR \ PaperV.UnitBoundary.B res Q1 SR).card
+'PaperV.UnitBoundary.exists_endpoint_repacking' depends on axioms: [propext, Classical.choice, Quot.sound]

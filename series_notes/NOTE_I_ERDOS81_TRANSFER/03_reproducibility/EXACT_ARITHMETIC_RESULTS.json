@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Finite exact-arithmetic transcription checks only; not a proof of graph construction or a replacement for Lean.",
+  "baseline": {
+    "orders": 10001,
+    "core_sizes": 69105,
+    "domain": "n=0..10000; all p for n<200, otherwise five documented sizes"
+  },
+  "transfer_budget_cases": 245970,
+  "negative_controls_rejected": 1,
+  "script_sha256": "cc2f69a8a0a12f777ecdcd9c6a7cb8ae38816c109a486e8e527a37de6ee7fb5d"
+}

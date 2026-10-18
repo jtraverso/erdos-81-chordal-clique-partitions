@@ -1,0 +1,393 @@
+{
+  "status": "PASS",
+  "transaction_cases": 9,
+  "languages": [
+    "Python",
+    "JavaScript",
+    "C++"
+  ],
+  "transaction_results": [
+    {
+      "name": "cap1_improves",
+      "accepted": true,
+      "R": [
+        [
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "weighted_positive",
+      "accepted": true,
+      "R": [
+        [
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "zero_gain_rejected",
+      "accepted": false,
+      "R": [
+        [
+          [
+            0,
+            1
+          ]
+        ],
+        []
+      ]
+    },
+    {
+      "name": "negative_gain_rejected",
+      "accepted": false,
+      "R": [
+        [
+          [
+            0,
+            1
+          ]
+        ],
+        []
+      ]
+    },
+    {
+      "name": "destination_full_rollback",
+      "accepted": false,
+      "R": [
+        [
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "target_blocked_rollback",
+      "accepted": false,
+      "R": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        []
+      ]
+    },
+    {
+      "name": "cap2_improves",
+      "accepted": true,
+      "R": [
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "cap2_target_full_rollback",
+      "accepted": false,
+      "R": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        []
+      ]
+    },
+    {
+      "name": "nonhost_destination_rejected",
+      "accepted": false,
+      "R": [
+        [
+          [
+            0,
+            1
+          ]
+        ],
+        []
+      ]
+    }
+  ],
+  "real_N1": {
+    "R": [
+      [
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "size": 2,
+    "value": 2.0,
+    "moves": 3,
+    "n1_moves": 1,
+    "potential_trace": [
+      [
+        0,
+        3
+      ],
+      [
+        1.0,
+        2
+      ],
+      [
+        2.0,
+        1
+      ]
+    ],
+    "monotone_value": true,
+    "num_accepted_moves": 2
+  },
+  "real_N1_js": {
+    "size": 2,
+    "value": 2,
+    "n1_moves": 1,
+    "R": [
+      [
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ]
+      ]
+    ]
+  },
+  "real_N1_cpp": {
+    "value": 2,
+    "size": 2,
+    "n1_moves": 1,
+    "R": [
+      [
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ]
+      ]
+    ]
+  },
+  "zero_weight_python": {
+    "R": [
+      [
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "size": 2,
+    "value": 2,
+    "moves": 2,
+    "n1_moves": 0,
+    "construct": "scarcity"
+  },
+  "zero_weight_js": {
+    "size": 2,
+    "value": 2,
+    "n1_moves": 0,
+    "R": [
+      [
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ]
+      ]
+    ]
+  },
+  "zero_weight_cli_python_js_cpp": true,
+  "v3_unsupported_models_rejected": 2,
+  "runs": [
+    {
+      "name": "js_transactions",
+      "command": [
+        "node",
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\tests\\results\\transactions.js",
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\tests\\transaction_cases.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.13999999995576218
+    },
+    {
+      "name": "cpp_transactions_compile",
+      "command": [
+        "C:/msys64/ucrt64/bin/g++.exe",
+        "-std=c++17",
+        "-O2",
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\tests\\results\\transactions.cpp",
+        "-o",
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\tests\\results\\transactions.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 5.157000000006519
+    },
+    {
+      "name": "cpp_transactions",
+      "command": [
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\tests\\results\\transactions.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 0.15600000001722947
+    },
+    {
+      "name": "js_real_N1",
+      "command": [
+        "node",
+        "-e",
+        "const {seal}=require('./js/seal.js');console.log(JSON.stringify(seal([[0,1,2],[0,1]],{construct:'hostmatch'})))"
+      ],
+      "exit_code": 0,
+      "seconds": 0.14000000001396984
+    },
+    {
+      "name": "cpp_real_compile",
+      "command": [
+        "C:/msys64/ucrt64/bin/g++.exe",
+        "-std=c++17",
+        "-O2",
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\tests\\results\\real_n1.cpp",
+        "-o",
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\tests\\results\\real_n1.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 3.905999999959022
+    },
+    {
+      "name": "cpp_real_N1",
+      "command": [
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\tests\\results\\real_n1.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 0.15600000001722947
+    },
+    {
+      "name": "js_zero_weight",
+      "command": [
+        "node",
+        "-e",
+        "const {sealBest}=require('./js/seal.js');console.log(JSON.stringify(sealBest([[0,1,2],[0,1]],{mode:'weighted',weights:new Map([['0,1',0],['0,2',2],['1,2',1]])})))"
+      ],
+      "exit_code": 0,
+      "seconds": 0.10999999998603016
+    },
+    {
+      "name": "cpp_cli_compile",
+      "command": [
+        "C:/msys64/ucrt64/bin/g++.exe",
+        "-std=c++17",
+        "-O2",
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\cpp\\seal.cpp",
+        "-o",
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\tests\\results\\seal_cli.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 3.812000000034459
+    },
+    {
+      "name": "cpp_zero_cli",
+      "command": [
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\tests\\results\\seal_cli.exe",
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\tests\\zero_instances",
+        "--packings"
+      ],
+      "exit_code": 0,
+      "seconds": 0.18799999996554106
+    },
+    {
+      "name": "js_zero_cli",
+      "command": [
+        "node",
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\js\\seal.js",
+        "<USER_HOME>\\e81-seal-corrected-20261018\\current\\tests\\zero_instances",
+        "--packings"
+      ],
+      "exit_code": 0,
+      "seconds": 0.15600000001722947
+    }
+  ],
+  "negative_gain_scope": "Only N1 requires positive gain; construction behavior is unchanged."
+}

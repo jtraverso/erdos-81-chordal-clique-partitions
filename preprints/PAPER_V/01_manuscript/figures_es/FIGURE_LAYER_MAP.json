@@ -1,0 +1,169 @@
+{
+  "method": "Vector/document text overlays; immutable background pixels and graph geometry; original EN assets never modified.",
+  "figures": [
+    {
+      "source": "fig1_splitting_en.png",
+      "name": "fig1_splitting_es",
+      "width": 1184,
+      "height": 534,
+      "boxes": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1184,
+          "h": 54,
+          "text": "El mecanismo de separación / transferencia",
+          "tex": "El mecanismo de separación / transferencia",
+          "size": 24,
+          "color": "black"
+        },
+        {
+          "x": 0,
+          "y": 83,
+          "w": 345,
+          "h": 42,
+          "text": "grafo de conflictos H[X]",
+          "tex": "grafo de conflictos \\(H[X]\\)",
+          "size": 20,
+          "color": "black"
+        },
+        {
+          "x": 430,
+          "y": 83,
+          "w": 335,
+          "h": 42,
+          "text": "eliminar una OCT mínima",
+          "tex": "eliminar una OCT mínima",
+          "size": 20,
+          "color": "black"
+        },
+        {
+          "x": 840,
+          "y": 83,
+          "w": 344,
+          "h": 42,
+          "text": "2-colorear el resto bipartito",
+          "tex": "2-colorear el resto bipartito",
+          "size": 20,
+          "color": "black"
+        },
+        {
+          "x": 0,
+          "y": 483,
+          "w": 1184,
+          "h": 51,
+          "text": "Cada clase de color es factible; la mayor tiene tamaño ≥ (|X| − oct(H[X]))/2.",
+          "tex": "Cada clase de color es factible; la mayor tiene tamaño \\(\\ge (|X|-\\operatorname{oct}(H[X]))/2\\).",
+          "size": 18,
+          "color": "black"
+        }
+      ],
+      "background_sha256": "8e1dcda9069c61e221a5ecdb740dfc311fefb2096e5271192b2891b3d3f54876",
+      "svg_sha256": "89c17cddc979771fd71be495832bdce0299607c0fccb127f62d539f25dd2d5de",
+      "tex_sha256": "71576899447e16c2ea03f5f43c352534df064add2747cd9feded8130ae317776"
+    },
+    {
+      "source": "fig2_copy_en.png",
+      "name": "fig2_copy_es",
+      "width": 1180,
+      "height": 543,
+      "boxes": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1180,
+          "h": 54,
+          "text": "Copia de vértices en G = K₄ ⊔ K₄ (igualdad del Teorema 6.2)",
+          "tex": "Copia de vértices en \\(G=K_4\\sqcup K_4\\) (igualdad del Teorema 6.2)",
+          "size": 24,
+          "color": "black"
+        },
+        {
+          "x": 440,
+          "y": 447,
+          "w": 290,
+          "h": 37,
+          "text": "u, v (par copiado)",
+          "tex": "\\(u,v\\) (par copiado)",
+          "size": 17,
+          "color": "red"
+        },
+        {
+          "x": 0,
+          "y": 493,
+          "w": 1180,
+          "h": 50,
+          "text": "El transporte da un 2-multiconjunto T₂ con oct(H[T₂]) = 2; ν₃(Gᵥ→ᵤ) + ν₃(Gᵤ→ᵥ) = 6 = 2ν₃(G) + oct(H[T₂]): igualdad.",
+          "tex": "El transporte da un 2-multiconjunto \\(T_2\\) con \\(\\operatorname{oct}(H[T_2])=2\\); \\(\\nu_3(G_{v\\to u})+\\nu_3(G_{u\\to v})=6=2\\nu_3(G)+\\operatorname{oct}(H[T_2])\\): igualdad.",
+          "size": 16,
+          "color": "black"
+        }
+      ],
+      "background_sha256": "514d91439f94e0cccedf6995a385a4de63777af88b903bc2df8489bbdb5c18d4",
+      "svg_sha256": "8f31a95be606c9c478ef278e5f7083f9999d4a51358fe8d615f85a4b04739959",
+      "tex_sha256": "1fbcc9cc0facebdabc8f04992b5784d8895ff414f885886f543de6c6ab883ae4"
+    },
+    {
+      "source": "fig3_clon2_oct_en.png",
+      "name": "fig3_clon2_oct_es",
+      "width": 984,
+      "height": 1001,
+      "boxes": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 984,
+          "h": 58,
+          "text": "Grafo H[T₂] del contraejemplo CLON-2 (§9.2): 14 vértices, 19 aristas",
+          "tex": "Grafo \\(H[T_2]\\) del contraejemplo CLON-2 (\\S9.2): 14 vértices, 19 aristas",
+          "size": 22,
+          "color": "black"
+        },
+        {
+          "x": 288,
+          "y": 850,
+          "w": 458,
+          "h": 39,
+          "text": "4 triángulos disjuntos en vértices ⇒ oct ≥ 4",
+          "tex": "4 triángulos disjuntos en vértices \\(\\Rightarrow\\operatorname{oct}\\ge4\\)",
+          "size": 18,
+          "color": "black"
+        },
+        {
+          "x": 288,
+          "y": 889,
+          "w": 458,
+          "h": 30,
+          "text": "eliminar {0,1,2,5} (círculos) ⇒ bipartito ⇒ oct ≤ 4",
+          "tex": "eliminar \\(\\{0,1,2,5\\}\\) (círculos) \\(\\Rightarrow\\) bipartito \\(\\Rightarrow\\operatorname{oct}\\le4\\)",
+          "size": 17,
+          "color": "black"
+        },
+        {
+          "x": 288,
+          "y": 919,
+          "w": 458,
+          "h": 32,
+          "text": "por tanto oct(H[T₂]) = 4 > 2: CLON-2 es falso",
+          "tex": "por tanto \\(\\operatorname{oct}(H[T_2])=4>2\\): CLON-2 es falso",
+          "size": 18,
+          "color": "black"
+        },
+        {
+          "x": 288,
+          "y": 951,
+          "w": 458,
+          "h": 32,
+          "text": "otros vértices",
+          "tex": "otros vértices",
+          "size": 18,
+          "color": "black"
+        }
+      ],
+      "background_sha256": "786caeba5e79c7a61c78d518b0ad3abb29330a95b0023a7aa25286cc94a77a2d",
+      "svg_sha256": "8ec7765f9a7a40f99fb7ea8d2f4c0971197c1a0afc349363f5603d4531479f4d",
+      "tex_sha256": "a592d34c3f63a4cb22d0786184cb15b1491fde86cf262ab0d52e8f2abfd0f598"
+    }
+  ],
+  "mathematical_geometry_changed": false
+}

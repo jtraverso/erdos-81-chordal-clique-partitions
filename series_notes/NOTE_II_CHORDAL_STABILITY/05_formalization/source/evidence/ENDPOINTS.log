@@ -1,0 +1,10 @@
+ChordalStabilityNote.eventual_root_stability :
+  ∃ N,
+    ∀ (n : ℕ),
+      N ≤ n →
+        ∀ (G : SimpleGraph (Fin n)) [inst : DecidableRel G.Adj],
+          G.IsChordal →
+            PaperVI.cp G ≤ PaperVI.Mval n →
+              2000 * (PaperVI.Mval n - PaperVI.cp G) ≤ n → ChordalStabilityNote.RootStability G {v | n < 2 * G.degree v}
+'ChordalStabilityNote.eventual_root_stability' depends on axioms: [propext, Classical.choice, Quot.sound]
+ChordalStabilityNote.RootStability {n : ℕ} (G : SimpleGraph (Fin n)) [DecidableRel G.Adj] (P : Finset (Fin n)) : Prop

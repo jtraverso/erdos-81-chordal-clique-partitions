@@ -1,0 +1,23 @@
+{
+  "pdf_sha256": "5925f0aadf9989e3199fdbd35f26bfeb5be74474d000507b48deff3a4db3fdf9",
+  "md_sha256": "b65bad59e13ece51571814c92dd22e3868415cd2e70db0bc1b7a7691def6169e",
+  "tex_sha256": "f0b5029066312b12b942c2e3fd858b95eee1a0f25a1facc8484621ecfd79a456",
+  "pages": 6,
+  "renderer": "PyMuPDF 129.6 dpi",
+  "visual_inspection": "PASS_ALL_FINAL_PAGES",
+  "compilation": "Two Tectonic passes, exit0",
+  "layout_authority": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_es.tex",
+  "layout_authority_sha256": "28f4be8737a65a474cb422eef39b42f821ba12614749cdfcb261ac001f0dd62c",
+  "role": "main",
+  "language": "es",
+  "pages_viewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "method": "All pages inspected in rendered contact sheets, with full-resolution inspection of changed mathematical, reference, title and source-package pages. No clipping, missing glyphs, overlaps or unreadable equations found.",
+  "pdf": "01_manuscript/CHORDAL_STABILITY_NOTE_v1.0_es.pdf"
+}

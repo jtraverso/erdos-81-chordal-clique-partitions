@@ -1,0 +1,27 @@
+{
+  "schema": 5,
+  "kind": "unsat_core",
+  "solver_free": false,
+  "note_key": "cert.note.unsat_core",
+  "note_args": {},
+  "note": "Verifying requires re-solving, but only the core (far smaller).",
+  "provenance": {
+    "certo_version": "0.34.0",
+    "created": "2026-10-18T19:48:02+00:00",
+    "spec_path": "composed_realization_errors.py",
+    "spec_sha256": "67d4eeaf4902473d930b0948976e640e392a56058ad99382dce724204bd519f4"
+  },
+  "payload": {
+    "core_smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun U () Real)\n(declare-fun W () Real)\n(declare-fun r () Real)\n(declare-fun L () Real)\n(declare-fun g () Real)\n(declare-fun t () Real)\n(declare-fun h () Real)\n(assert\n (<= W U))\n(assert\n (>= g (- L r)))\n(assert\n (>= h (- g t)))\n(assert\n (<= h W))\n(assert\n (let (($x25 (and (>= (- W h) 0.0) (<= (- W h) (+ (+ (- U L) r) t)))))\n(not $x25)))\n(check-sat)\n",
+    "names": [
+      "dual",
+      "first",
+      "second",
+      "feasible",
+      "__goal__"
+    ],
+    "dropped": [],
+    "vacuous": false,
+    "clash": []
+  }
+}

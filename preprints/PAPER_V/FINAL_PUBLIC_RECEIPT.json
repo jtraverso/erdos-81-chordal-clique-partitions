@@ -1,0 +1,100 @@
+{
+  "status": "READY",
+  "verdict": "EDITORIALLY_READY",
+  "release": "Paper V Preprint 1.0",
+  "document_pairs": [
+    {
+      "role": "main",
+      "en": {
+        "md": "01_manuscript/PAPER_V_preprint_v1.0_en.md",
+        "tex": "01_manuscript/PAPER_V_preprint_v1.0_en.tex",
+        "pdf": "01_manuscript/PAPER_V_preprint_v1.0_en.pdf"
+      },
+      "es": {
+        "md": "01_manuscript/PAPER_V_preprint_v1.0_es.md",
+        "tex": "01_manuscript/PAPER_V_preprint_v1.0_es.tex",
+        "pdf": "01_manuscript/PAPER_V_preprint_v1.0_es.pdf"
+      },
+      "hashes": {
+        "en": {
+          "md": "b94189f78c5291af48625cb2aa9bdbd8b5e48199acb9ba06e476246b2f6183c2",
+          "tex": "bb225d1774e55929510175e4d246c1db1e84c052d9cbe991de2b0440aed93a97",
+          "pdf": "2a9fce5f7c83750daada99b906c142206b3e6b7c1bf88175d04b30db7d3f7a56"
+        },
+        "es": {
+          "md": "bbc913b78670f9425dfd01f30db32d7dc8988945cb3e4feee2ca74ef3f235a86",
+          "tex": "8416343ce0b9d23585568c435f34735a524c1497818306c53943566bab7d756d",
+          "pdf": "edfbedd896e25cfbb6b87c55bc66b733ab2f416526857447724b8c2a20dfad7a"
+        }
+      }
+    },
+    {
+      "role": "companion",
+      "en": {
+        "md": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+        "tex": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+        "pdf": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf"
+      },
+      "es": {
+        "md": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+        "tex": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+        "pdf": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf"
+      },
+      "hashes": {
+        "en": {
+          "md": "eafc4a4059e3a9cbba288fd570f325253d0dace3db6bf54f1572e15add231a32",
+          "tex": "630f5c8d84b618e1d8e8b892aa9d6a71a0bc228cd4bbe339c3469fff409814a9",
+          "pdf": "139b86a12b73763628ebb1c9066fce34115020643e9703720316ff6dfcdded88"
+        },
+        "es": {
+          "md": "e4270118ebee571e296619cb68338080a9f86bef39b8fd74a66d4a639759b60d",
+          "tex": "a1a5bed54a10576331429fed124038687eea0fdd4fa2ea23f2d77bbbee386592",
+          "pdf": "80b4256d3b7b9a3ce42929371149bb40c2baf7f280da8b46e01a07aa05aa7f11"
+        }
+      }
+    }
+  ],
+  "source_archive": "05_formalization/formal_sources/PAPER_V_preprint_v1.0_FORMAL_SOURCE_435.zip",
+  "source_archive_sha256": "0da5d26084199da97b8c39cb4e354e06cdfd43b490e852c4ffdeb3b95e4bd89b",
+  "source_manifest": "05_formalization/SOURCE_MANIFEST.json",
+  "source_manifest_sha256": "34c687842a3120c5a7395c2971fcdaa0c873f0d3a033c49f674369869848509b",
+  "formal_validation": "05_formalization/FREEZE_VALIDATION.json",
+  "full_audit": {
+    "exit_code": 0,
+    "declarations": 2838,
+    "nonstandard": 0,
+    "modules": 122,
+    "visited": 5547,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "log": "02_validation/PREPRINT_1_0/FreezeFullAudit.log"
+  },
+  "endpoint_gates": {
+    "count": 10,
+    "queries": 834,
+    "type_queries": 403,
+    "axiom_queries": 431,
+    "all_exit_zero": true
+  },
+  "render_qa": "02_validation/PREPRINT_1_0/RENDER_QA.json",
+  "render_qa_sha256": "903221660fc76ce28f5e2fff99f96cc39732bb218ba2361ff8f18ac904fda96e",
+  "publication_manifest": "PUBLICATION_FILES.json",
+  "evidence_scope": "Current checks and all concrete audit findings supplied for this release; no claim to have reviewed an unavailable full AUDIT2 file. No new mathematical claims. External human peer review and historical priority are not certified.",
+  "marker": {
+    "owner": "parent",
+    "operation_kind": "edit",
+    "global_expected_output_count": 16,
+    "success": true
+  },
+  "publication": "No Git or Zenodo mutation performed by this subagent; parent owns authorized integration and publication.",
+  "portable_transcripts": {
+    "status": "PASS",
+    "map": "02_validation/PREPRINT_1_0/PORTABILITY_LOG_REDACTIONS.json",
+    "map_sha256": "4946a2e3c5d52dd14346979844696461d8f6c8ae8be0a05e656fd142e0a2e8d0",
+    "transcript_count": 8,
+    "pdfs_and_source_unchanged": true
+  }
+}

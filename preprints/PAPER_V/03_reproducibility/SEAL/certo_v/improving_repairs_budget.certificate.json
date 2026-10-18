@@ -1,0 +1,66 @@
+{
+  "schema": 5,
+  "kind": "unsat_core",
+  "solver_free": true,
+  "note_key": "cert.note.unsat_core",
+  "note_args": {},
+  "note": "Verifying requires re-solving, but only the core (far smaller).",
+  "provenance": {
+    "certo_version": "0.34.0",
+    "created": "2026-10-18T19:48:07+00:00",
+    "spec_path": "improving_repairs_budget.py",
+    "spec_sha256": "671c0bf99246f825d62009dfd386aa3a4f43aeb8cebf4aca1a89ea7c2ff3f8eb"
+  },
+  "payload": {
+    "core_smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun steps () Int)\n(declare-fun initial () Int)\n(declare-fun final () Int)\n(declare-fun cover () Int)\n(assert\n (>= final (+ initial steps)))\n(assert\n (<= final cover))\n(assert\n (let (($x15 (<= steps (- cover initial))))\n(not $x15)))\n(check-sat)\n",
+    "names": [
+      "improvement",
+      "capacity",
+      "__goal__"
+    ],
+    "dropped": [
+      "start"
+    ],
+    "vacuous": false,
+    "clash": [],
+    "rows": [
+      {
+        "name": "improvement",
+        "poly": {
+          "final": "-1",
+          "initial": "1",
+          "steps": "1"
+        },
+        "rel": "<="
+      },
+      {
+        "name": "capacity",
+        "poly": {
+          "final": "1",
+          "cover": "-1"
+        },
+        "rel": "<="
+      },
+      {
+        "name": "__goal__",
+        "poly": {
+          "steps": "-1",
+          "cover": "1",
+          "initial": "-1"
+        },
+        "rel": "<"
+      }
+    ],
+    "multipliers": [
+      "1",
+      "1",
+      "1"
+    ],
+    "sorts": {
+      "cover": "Int",
+      "final": "Int",
+      "initial": "Int",
+      "steps": "Int"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "scope": "Existing frozen Papers I\u2013IV are byte-identical to the preceding public manifest. Root navigation changes are outside this check.",
+  "checked_files": 13987,
+  "failures": [],
+  "long_paths_checked_with_windows_extended_prefix": 103
+}

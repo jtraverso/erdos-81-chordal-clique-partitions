@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "pairs": [
+    {
+      "role": "main",
+      "display_count": 67,
+      "inline_count": 612,
+      "inline_code_count": 0,
+      "ordered_urls": 24,
+      "bilingual_math_parity": true,
+      "natural_language_math_exception": "Existing if→si in the classical join formula only"
+    },
+    {
+      "role": "companion",
+      "display_count": 0,
+      "inline_count": 0,
+      "inline_code_count": 92,
+      "ordered_urls": 1,
+      "bilingual_math_parity": true,
+      "natural_language_math_exception": null
+    }
+  ],
+  "protected_baseline_math": "MATHEMATICAL_SEMANTIC_DIFF.json",
+  "manual_review": "All authorized hypothesis/definition changes and theorem-map additions were compared across languages; no changed quantified mathematical claim beyond repeating the existing exceptional-size condition."
+}

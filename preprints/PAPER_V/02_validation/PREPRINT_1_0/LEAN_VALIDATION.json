@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "LEAN_NUM_THREADS": 2,
+  "records": [
+    {
+      "name": "BUILD_PUBLIC_FINAL",
+      "command": [
+        "lake",
+        "build",
+        "PaperV"
+      ],
+      "exit_code": 0,
+      "seconds": 92.71029939997243,
+      "log": "02_validation/PREPRINT_1_0/BUILD_PUBLIC_FINAL.log",
+      "log_sha256": "e809c959c6e899a99e97729222d097ccc10093b30228cc779f1a7fe231b26e90"
+    },
+    {
+      "name": "PaperVManuscriptGate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "PaperVManuscriptGate.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 79.74716209998587,
+      "log": "02_validation/PREPRINT_1_0/PaperVManuscriptGate.log",
+      "log_sha256": "ad946117e9458760a3e2358a21690d29e8fe5a9693fd160b10cb8361c2970130",
+      "queries": 154,
+      "gate_sha256": "45f0c62d9a04f43f8883ad65c4562bc93da362d2f001b335cecf8e98f44a83cc",
+      "gate": "PaperVManuscriptGate.lean"
+    },
+    {
+      "name": "PaperVSupplementGate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "PaperVSupplementGate.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 38.140760500042234,
+      "log": "02_validation/PREPRINT_1_0/PaperVSupplementGate.log",
+      "log_sha256": "9fd1246cd1e4a1c5398244275402844bf4ee96f5741387d4ba803bee4c282628",
+      "queries": 78,
+      "gate_sha256": "98f4f880ecfe7207f24ef0cf80816bc4ef40f24d7cf5ba51763e05adff9e3400",
+      "gate": "PaperVSupplementGate.lean"
+    },
+    {
+      "name": "PaperVImprovementsGate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "PaperVImprovementsGate.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 40.45627009996679,
+      "log": "02_validation/PREPRINT_1_0/PaperVImprovementsGate.log",
+      "log_sha256": "9b5b1a7f6ea35b5fb4e5279e0c3acb2d4897757ad3c13cb634a33ca111d3447f",
+      "queries": 76,
+      "gate_sha256": "c99264cfa31e18979ca9c160168e786e013828a2961654fe06ef54dac6e761b1",
+      "gate": "PaperVImprovementsGate.lean"
+    },
+    {
+      "name": "PaperVReleaseGate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "PaperVReleaseGate.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 56.10341350000817,
+      "log": "02_validation/PREPRINT_1_0/PaperVReleaseGate.log",
+      "log_sha256": "a07fe52da3e4fdb885050cc080684d44d5e4a98a92af056974d77f91d4b08a35",
+      "queries": 422,
+      "gate_sha256": "eaf907eca99b6e5b565b381e162abe8fd4ce318618ccad3e10caefa94b83bb25",
+      "gate": "PaperVReleaseGate.lean"
+    },
+    {
+      "name": "PaperVNewGate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "PaperVNewGate.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 64.81869330001064,
+      "log": "02_validation/PREPRINT_1_0/PaperVNewGate.log",
+      "log_sha256": "b47124513ea209163ce31e18e435de4fb52ecb101b8faa2bd43739b376ef768b",
+      "queries": 14,
+      "gate_sha256": "4fdc6555f93f971b749b905b8d88025fe1994eb79db5143583339b1f0c02e887",
+      "gate": "PaperVNewGate.lean"
+    },
+    {
+      "name": "PaperVConstructionGate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "PaperVConstructionGate.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 36.14309940004023,
+      "log": "02_validation/PREPRINT_1_0/PaperVConstructionGate.log",
+      "log_sha256": "1b576408681dab8f3acbc71425c8cd19d69f40cf3c24ea4b5e01425ab42dc2c6",
+      "queries": 24,
+      "gate_sha256": "d0f8cadb21327d6a6f171cdbeecbe53167645f94f52c5be2ee0b54c2751d39f9",
+      "gate": "PaperVConstructionGate.lean"
+    },
+    {
+      "name": "PaperV_FractionalAxiomGate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "PaperV/FractionalAxiomGate.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 24.8672809000127,
+      "log": "02_validation/PREPRINT_1_0/PaperV_FractionalAxiomGate.log",
+      "log_sha256": "809caf1d4ef78e27ad9a7b4d1ca0170ce4c93ccc6b6c8a901213cfdb82b5d70a",
+      "queries": 50,
+      "gate": "PaperV/FractionalAxiomGate.lean",
+      "gate_sha256": "006ec3e534d4115fc49fa3fcf11dd2a68523bda5626de64a10187c168de2510b"
+    },
+    {
+      "name": "PaperVGapBudgetGate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "PaperVGapBudgetGate.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 25.72839159995783,
+      "log": "02_validation/PREPRINT_1_0/PaperVGapBudgetGate.log",
+      "log_sha256": "4e42b74305bff6b25daffc96761b36507d6f47ab0f7b7d77ed5239c4a6bce7f9",
+      "queries": 8,
+      "gate": "PaperVGapBudgetGate.lean",
+      "gate_sha256": "163d6394b447efa09d6ad04a5b68c0fe927f63684aa44987eabff1cd738fa019"
+    },
+    {
+      "name": "PaperVRationalPromotionGate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "PaperVRationalPromotionGate.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 28.624277500028256,
+      "log": "02_validation/PREPRINT_1_0/PaperVRationalPromotionGate.log",
+      "log_sha256": "78cad65ef8aa06db602bcece038fe6eb3f42ca9f96b8774efbdc3b929e460d10",
+      "queries": 4,
+      "gate": "PaperVRationalPromotionGate.lean",
+      "gate_sha256": "798e92b9d99b63beb415e3427ede3773c021f6c62d20b2147d168ea40c22d0aa"
+    },
+    {
+      "name": "PaperVUnitBoundaryGate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "PaperVUnitBoundaryGate.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 21.498591999989003,
+      "log": "02_validation/PREPRINT_1_0/PaperVUnitBoundaryGate.log",
+      "log_sha256": "cb2d777bb16163d87eee3c56b236b6016157218f065fc2f97c28713b46951a33",
+      "queries": 4,
+      "gate": "PaperVUnitBoundaryGate.lean",
+      "gate_sha256": "53284afe928bebf32f7ddb91cc34e6f21bb915b6a7483b49de6e3b0d70ebcf33"
+    },
+    {
+      "name": "FreezeFullAudit",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "FreezeFullAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 66.69301830005134,
+      "log": "02_validation/PREPRINT_1_0/FreezeFullAudit.log",
+      "log_sha256": "a9f49c277d56b8b28a2136f1d3f950875a8d18d7267048fd28a43fce690fb10d"
+    }
+  ]
+}

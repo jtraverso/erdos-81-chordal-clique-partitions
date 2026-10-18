@@ -1,0 +1,36 @@
+{
+  "status": "PASS_SOURCE_AND_LINKS",
+  "scope": "HTML source structure and local navigation. Browser visual capture was blocked by tool policy and is not claimed.",
+  "pages": [
+    {
+      "path": "index.html",
+      "sha256": "7699d74568d6275b525a76bb0ab979fb46430dfd2807cd3aba091f734dc6815b",
+      "structure_present": true,
+      "broken_local_links": []
+    },
+    {
+      "path": "preprints/PAPER_V/index.html",
+      "sha256": "875f1a493dd53260cff982344a2d55f0947eb0bf6b3972725ec9d243bf8c2766",
+      "structure_present": true,
+      "broken_local_links": []
+    },
+    {
+      "path": "preprints/PAPER_VI/index.html",
+      "sha256": "69cd78dbc837b53a7dfbe9daaf343735a686f9d586ec294daf0aa04038113dc7",
+      "structure_present": true,
+      "broken_local_links": []
+    },
+    {
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "sha256": "38b5df55ece5240018fcc4f5d9122067727f26cbb8b61df21ac7d44e4794b8a1",
+      "structure_present": true,
+      "broken_local_links": []
+    },
+    {
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "sha256": "248b123aecb9782d3653ec769ff38930927e0d1fdc34f3fc611dce27ce320476",
+      "structure_present": true,
+      "broken_local_links": []
+    }
+  ]
+}

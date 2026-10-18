@@ -1,0 +1,31 @@
+{
+  "schema": 5,
+  "kind": "model",
+  "solver_free": true,
+  "note_key": "cert.note.model",
+  "note_args": {},
+  "note": "Verified by substitution and simplification; no search required.",
+  "provenance": {
+    "certo_version": "0.34.0",
+    "created": "2026-10-18T19:48:18+00:00",
+    "spec_path": "residual_does_not_bound_relaxation_gap.py",
+    "spec_sha256": "d8c633132f53a015e44689565320013b1ba8d257d3b0a845e8fbc14d1b773ef0"
+  },
+  "payload": {
+    "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun cover () Real)\n(declare-fun nu () Real)\n(declare-fun relax () Real)\n(assert\n (= nu cover))\n(assert\n (>= relax nu))\n(assert\n (>= nu 0.0))\n(assert\n (let (($x12 (= relax nu)))\n(not $x12)))\n(check-sat)\n",
+    "assignment": {
+      "cover": [
+        "Real",
+        "0"
+      ],
+      "nu": [
+        "Real",
+        "0"
+      ],
+      "relax": [
+        "Real",
+        "1/2"
+      ]
+    }
+  }
+}

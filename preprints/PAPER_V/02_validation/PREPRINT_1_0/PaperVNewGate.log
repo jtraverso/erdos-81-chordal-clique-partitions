@@ -1,0 +1,68 @@
+@PaperV.ResourceCertificate.two_error_certificate : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I]
+  [inst_1 : Fintype E] [DecidableEq I] [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E} (w : I → ℚ)
+  (p : PaperV.FiniteLP.PrimalFeasible R.incidence) (d : PaperV.FiniteLP.DualFeasible R.incidence w) {q : ℕ},
+  0 < q →
+    ∀ {X : I → ℕ},
+      (∀ (o : I), ↑q * p.weight o = ↑(X o)) →
+        ∀ (c : PaperV.ResourceCertificate.Realization R w X q),
+          ∃ i,
+            R.Packing (c.out i) ∧
+              PaperV.FiniteLP.primalValue w p - c.cost / ↑q ≤ R.gain w (c.out i) ∧
+                ∀ (z : PaperV.FiniteLP.PrimalFeasible R.incidence),
+                  PaperV.FiniteLP.primalValue w z - R.gain w (c.out i) ≤
+                    PaperV.FiniteLP.dualValue d - PaperV.FiniteLP.primalValue w p + c.cost / ↑q
+'PaperV.ResourceCertificate.two_error_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.ResourceCertificate.resource_gap_identity : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I]
+  [inst_1 : Fintype E] [DecidableEq I] [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E} (w : I → ℚ)
+  (p : PaperV.FiniteLP.PrimalFeasible R.incidence) (d : PaperV.FiniteLP.DualFeasible R.incidence w),
+  PaperV.FiniteLP.dualValue d - PaperV.FiniteLP.primalValue w p =
+    ∑ e, d.price e * (1 - ∑ o, R.incidence o e * p.weight o) +
+      ∑ o, p.weight o * (∑ e, R.incidence o e * d.price e - w o)
+'PaperV.ResourceCertificate.resource_gap_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.ResourceCertificate.two_error_real_optimum : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I]
+  [inst_1 : Fintype E] [DecidableEq I] [inst_3 : DecidableEq E] (R : PaperV.ResourceCertificate.System I E) (w : I → ℚ)
+  (p : PaperV.FiniteLP.PrimalFeasible R.incidence) (d : PaperV.FiniteLP.DualFeasible R.incidence w)
+  (pstar : PaperV.FiniteLP.PrimalFeasible (PaperV.ResourceCertificate.realIncidence R)),
+  (∀ (z : PaperV.FiniteLP.PrimalFeasible (PaperV.ResourceCertificate.realIncidence R)),
+      PaperV.FiniteLP.primalValue (fun o => ↑(w o)) z ≤ PaperV.FiniteLP.primalValue (fun o => ↑(w o)) pstar) →
+    ∀ {q : ℕ},
+      0 < q →
+        ∀ {X : I → ℕ},
+          (∀ (o : I), ↑q * p.weight o = ↑(X o)) →
+            ∀ (c : PaperV.ResourceCertificate.Realization R w X q),
+              ∃ i,
+                R.Packing (c.out i) ∧
+                  ↑(PaperV.FiniteLP.primalValue w p) - ↑c.cost / ↑q ≤ ↑(R.gain w (c.out i)) ∧
+                    0 ≤ PaperV.FiniteLP.primalValue (fun o => ↑(w o)) pstar - ↑(R.gain w (c.out i)) ∧
+                      PaperV.FiniteLP.primalValue (fun o => ↑(w o)) pstar - ↑(R.gain w (c.out i)) ≤
+                        ↑(PaperV.FiniteLP.dualValue d) - ↑(PaperV.FiniteLP.primalValue w p) + ↑c.cost / ↑q
+'PaperV.ResourceCertificate.two_error_real_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.ResourceCertificate.exists_real_optimum : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I]
+  [inst_1 : Fintype E] [DecidableEq I] [inst_3 : DecidableEq E] (R : PaperV.ResourceCertificate.System I E) (w : I → ℚ),
+  ∃ p,
+    ∀ (z : PaperV.FiniteLP.PrimalFeasible (PaperV.ResourceCertificate.realIncidence R)),
+      PaperV.FiniteLP.primalValue (fun o => ↑(w o)) z ≤ PaperV.FiniteLP.primalValue (fun o => ↑(w o)) p
+'PaperV.ResourceCertificate.exists_real_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Manuscript.resource_integral_transfer : ∀ {C : PaperV.ConflictSystem}
+  (P : PaperV.Manuscript.ResourceRelaxation C) (x : P.Optimum) {q : ℕ},
+  0 < q →
+    ∀ {X : C.O → ℕ},
+      (∀ (o : C.O), ↑q * x.point o = ↑(X o)) →
+        (∀ (o : C.O), x.point o ≤ 1) →
+          PaperV.IsQMultiset C X q ∧ x.value - ↑(PaperV.nu C) ≤ ↑(PaperV.Dq (PaperV.Hgraph C X) q) / ↑q
+'PaperV.Manuscript.resource_integral_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Manuscript.resource_half_integral_transfer : ∀ {C : PaperV.ConflictSystem}
+  (P : PaperV.Manuscript.ResourceRelaxation C) (x : P.Optimum) {X : C.O → ℕ},
+  (∀ (o : C.O), 2 * x.point o = ↑(X o)) →
+    (∀ (o : C.O), x.point o ≤ 1) →
+      PaperV.IsQMultiset C X 2 ∧ x.value - ↑(PaperV.nu C) ≤ ↑(PaperV.oct (PaperV.Hgraph C X)) / 2
+'PaperV.Manuscript.resource_half_integral_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Manuscript.minimum_coloring_rigidity_iff : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (H : SimpleGraph V) [DecidableRel H.Adj] {q ν : ℕ},
+  (∀ (S : Finset V), PaperV.Feasible H S → S.card ≤ ν) →
+    ∀ (Z : Finset V),
+      Z.card = PaperV.Dq H q →
+        ∀ (c : V → Fin q),
+          (∀ a ∉ Z, ∀ b ∉ Z, H.Adj a b → c a ≠ c b) →
+            (PaperV.Dq H q + q * ν = Fintype.card V ↔ ∀ (i : Fin q), (PaperV.Manuscript.remainingClass Z c i).card = ν)
+'PaperV.Manuscript.minimum_coloring_rigidity_iff' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,38 @@
+{
+  "author": "Juan Pablo Traverso Gianini",
+  "edition": "Preprint 1.0",
+  "works": [
+    {
+      "work": "PAPER_V",
+      "version": "1.0",
+      "path": "preprints/PAPER_V",
+      "title": "Colorability and Realizability Defects in Resource-Dominated Packing Relaxations",
+      "main_stem": "PAPER_V_preprint_v1.0",
+      "companion_stem": "FORMALIZATION_COMPANION_v1.0"
+    },
+    {
+      "work": "PAPER_VI",
+      "version": "1.0",
+      "path": "preprints/PAPER_VI",
+      "title": "Optimal Clique Partitions under Local Perturbations",
+      "main_stem": "PAPER_VI_preprint_v1.0",
+      "companion_stem": "FORMALIZATION_COMPANION_v1.0"
+    },
+    {
+      "work": "NOTE_I",
+      "version": "1.0",
+      "path": "series_notes/NOTE_I_ERDOS81_TRANSFER",
+      "title": "From realizability certificates to the Erdős 81 bound",
+      "main_stem": "ERDOS81_TRANSFER_NOTE_v1.0",
+      "companion_stem": "FORMALIZATION_COMPANION_v1.0"
+    },
+    {
+      "work": "NOTE_II",
+      "version": "1.0",
+      "path": "series_notes/NOTE_II_CHORDAL_STABILITY",
+      "title": "Exact stability for nearly extremal chordal clique partitions",
+      "main_stem": "CHORDAL_STABILITY_NOTE_v1.0",
+      "companion_stem": "FORMALIZATION_COMPANION_v1.0"
+    }
+  ]
+}

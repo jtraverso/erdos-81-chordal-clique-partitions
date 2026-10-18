@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "checker_imports_implementation_or_solver": false,
+  "base_outputs": {
+    "standard": 18,
+    "weighted": 18,
+    "bmatching": 18,
+    "psi": 18
+  },
+  "base_n1_moves": {
+    "standard": 15,
+    "weighted": 8,
+    "bmatching": 2,
+    "psi": 9
+  },
+  "v3_outputs": {
+    "release": 18,
+    "witness": 2,
+    "table2": 18
+  },
+  "certified_cardinality_optima": {
+    "release": 6,
+    "witness": 2,
+    "table2": 4
+  },
+  "dual_objects": 149819,
+  "dual_rows": 47015,
+  "exact_rational_duals": 38,
+  "python_physical_packings": 110,
+  "port_physical_packings": {
+    "js": 54,
+    "cpp": 54
+  },
+  "port_equal_objectives": {
+    "js": 54,
+    "cpp": 54
+  },
+  "explicit_n1_witness": true,
+  "negative_controls": [
+    {
+      "name": "repeated pair",
+      "rejected": true,
+      "reason": "repeated pair"
+    },
+    {
+      "name": "non-host pair",
+      "rejected": true,
+      "reason": "host containment"
+    },
+    {
+      "name": "false size",
+      "rejected": true,
+      "reason": "size"
+    },
+    {
+      "name": "false objective",
+      "rejected": true,
+      "reason": "value"
+    },
+    {
+      "name": "zero dual undercoverage",
+      "rejected": true,
+      "reason": "dual undercoverage"
+    },
+    {
+      "name": "false dual objective",
+      "rejected": true,
+      "reason": "dual objective"
+    },
+    {
+      "name": "host degree overcapacity",
+      "rejected": true,
+      "reason": "host capacity"
+    }
+  ],
+  "scope": "Saved finite physical outputs; duals certify cardinality upper bounds. A positive gap is an interval, not a known optimum. No polynomial-time or general software-correctness assertion."
+}

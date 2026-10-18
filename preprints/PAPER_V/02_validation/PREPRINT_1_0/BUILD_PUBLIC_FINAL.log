@@ -1,0 +1,3152 @@
+⚠ [1109/1115] Replayed PaperV.Core
+warning: PaperV/Core.lean:32:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/Core.lean:70:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/Core.lean:66:0: automatically included section variable(s) unused in theorem `PaperV.defectSet_nonempty`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/Core.lean:66:56: Variable name `hq` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hq
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1123/1132] Replayed PaperV.ConflictGraph
+warning: PaperV/ConflictGraph.lean:60:10: `Symmetric` has been deprecated: Use `Std.Symm` instead
+
+Hint: Replace the deprecated name:
+  S̵y̵m̵m̵e̵t̵r̵i̵c̵S̲t̲d̲.̲S̲y̲m̲m̲
+warning: PaperV/ConflictGraph.lean:139:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/ConflictGraph.lean:168:8: This simp argument is unused:
+  show Finset.filter (fun a => a ∉ O) Finset.univ = Finset.univ \ O by ext; simp [Finset.mem_sdiff]
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/ConflictGraph.lean:198:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/ConflictGraph.lean:204:55: Variable name `hX` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hX
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1128/1136] Replayed PaperV.CopyCore
+warning: PaperV/CopyCore.lean:97:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/CopyCore.lean:97:25: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/CopyCore.lean:99:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/CopyCore.lean:99:25: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/CopyCore.lean:262:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/CopyCore.lean:263:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/CopyCore.lean:265:27: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/CopyCore.lean:266:27: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [1149/1156] Replayed PaperV.CopyN1Degree
+warning: PaperV/CopyN1Degree.lean:242:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/CopyN1Degree.lean:258:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/CopyN1Degree.lean:274:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/CopyN1Degree.lean:368:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/CopyN1Degree.lean:380:62: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/CopyN1Degree.lean:246:38: This simp argument is unused:
+  Finset.mem_univ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.mem_erase]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/CopyN1Degree.lean:262:38: This simp argument is unused:
+  Finset.mem_univ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.mem_erase]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/CopyN1Degree.lean:278:38: This simp argument is unused:
+  Finset.mem_univ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.mem_erase]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1152/1157] Replayed PaperV.CopyN1K4
+warning: PaperV/CopyN1K4.lean:84:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:101:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:147:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:236:20: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:346:20: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:934:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:939:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:962:14: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:975:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:980:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:1003:14: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:1185:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:1190:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:1227:14: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:1374:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:1399:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:1404:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:1409:12: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:1547:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/CopyN1K4.lean:1591:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CopyN1K4.lean:1641:65: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/CopyN1K4.lean:1642:65: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/CopyN1K4.lean:1747:14: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [1193/1207] Replayed PaperV.Seal
+warning: PaperV/Seal.lean:75:23: Variable name `hab` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hab
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1209/1216] Replayed PaperV.FracCopyGeneric
+warning: PaperV/FracCopyGeneric.lean:89:17: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/FracCopyGeneric.lean:91:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FracCopyGeneric.lean:95:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FracCopyGeneric.lean:96:28: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/FracCopyGeneric.lean:110:0: automatically included section variable(s) unused in theorem `PaperV.FracCopy.push_nonneg`:
+  [DecidablePred PG]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidablePred PG] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/FracCopyGeneric.lean:154:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/FracCopyGeneric.lean:160:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FracCopyGeneric.lean:163:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FracCopyGeneric.lean:166:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [1362/1374] Replayed PaperV.CoverDefect
+warning: PaperV/CoverDefect.lean:51:0: automatically included section variable(s) unused in theorem `PaperV.rigidity_at_equality`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1365/1376] Replayed PaperV.SplittingQ
+warning: PaperV/SplittingQ.lean:107:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1366/1376] Replayed PaperV.DqBasic
+warning: PaperV/DqBasic.lean:53:0: automatically included section variable(s) unused in theorem `PaperV.colorable_induce_univ_iff`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1372/1382] Replayed PaperV.PureProfile
+warning: PaperV/PureProfile.lean:119:33: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/PureProfile.lean:218:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/PureProfile.lean:288:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/PureProfile.lean:346:17: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/PureProfile.lean:346:29: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/PureProfile.lean:354:17: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/PureProfile.lean:354:29: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/PureProfile.lean:362:17: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/PureProfile.lean:362:29: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/PureProfile.lean:373:17: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/PureProfile.lean:373:29: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/PureProfile.lean:381:17: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/PureProfile.lean:381:29: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/PureProfile.lean:388:17: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/PureProfile.lean:388:29: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/PureProfile.lean:394:17: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/PureProfile.lean:394:29: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/PureProfile.lean:512:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/PureProfile.lean:519:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/PureProfile.lean:590:65: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [1378/1386] Replayed PaperV.N2
+warning: PaperV/N2.lean:59:5: Variable name `hmf` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmf
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperV/N2.lean:59:34: Variable name `hhalf` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhalf
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperV/N2.lean:60:5: Variable name `hopt` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hopt
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1568/1622] Replayed PaperV.LineGraph
+warning: PaperV/LineGraph.lean:57:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/LineGraph.lean:48:0: automatically included section variable(s) unused in theorem `PaperV.feasible_lineGraph_iff`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/LineGraph.lean:71:0: automatically included section variable(s) unused in theorem `PaperV.colorable_lineGraph_iff_edge`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/LineGraph.lean:138:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/LineGraph.lean:129:0: automatically included section variable(s) unused in theorem `PaperV.feasible_multiLineGraph_iff`:
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1570/1622] Replayed PaperV.SumDefect
+warning: PaperV/SumDefect.lean:39:0: automatically included section variable(s) unused in theorem `PaperV.induce_sum_colorable_iff`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype W]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype W] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/SumDefect.lean:48:35: This simp argument is unused:
+  Finset.mem_preimage
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hOV] at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/SumDefect.lean:50:35: This simp argument is unused:
+  Finset.mem_preimage
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hOW] at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/SumDefect.lean:65:0: automatically included section variable(s) unused in theorem `PaperV.card_preimage_sum`:
+  [Fintype V]
+  [Fintype W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/SumDefect.lean:70:41: This simp argument is unused:
+  Finset.mem_preimage
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Sum.exists]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/SumDefect.lean:70:62: This simp argument is unused:
+  Sum.exists
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.mem_preimage]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/SumDefect.lean:90:23: This simp argument is unused:
+  Finset.mem_preimage
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hO, Sum.inl.injEq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/SumDefect.lean:90:44: This simp argument is unused:
+  Sum.inl.injEq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hO, Finset.mem_preimage]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/SumDefect.lean:92:23: This simp argument is unused:
+  Finset.mem_preimage
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hO, Sum.inr.injEq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/SumDefect.lean:92:44: This simp argument is unused:
+  Sum.inr.injEq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hO, Finset.mem_preimage]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1575/1622] Replayed PaperV.BrooksGlue
+warning: PaperV/BrooksGlue.lean:32:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/BrooksGlue.lean:72:30: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/BrooksGlue.lean:75:30: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [1578/1622] Replayed PaperV.ChromaticIndex
+warning: PaperV/ChromaticIndex.lean:68:0: automatically included section variable(s) unused in theorem `PaperV.maxDegree_le_edgeChromaticNumber`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/ChromaticIndex.lean:88:32: This simp argument is unused:
+  Function.Embedding.coeFn_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [s, emb, Finset.coe_map, Set.mem_image, Finset.mem_coe, Finset.mem_attach, true_and,
+    Subtype.exists] at ha hb
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1608/1640] Replayed PaperV.BrooksK4
+warning: PaperV/BrooksK4.lean:26:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/BrooksK4.lean:32:0: 'Mathlib.Combinatorics.SimpleGraph.ConcreteColorings' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Constructions
+warning: PaperV/BrooksK4.lean:61:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksK4.lean:77:10: Unused tactic linter: `(exact ha)` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperV/BrooksK4.lean:77:23: Unused tactic linter: `(exact hb)` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperV/BrooksK4.lean:77:36: Unused tactic linter: `(exact hc)` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperV/BrooksK4.lean:78:10: Unused tactic linter: `(exact hnab)` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperV/BrooksK4.lean:78:25: Unused tactic linter: `(exact hnac)` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperV/BrooksK4.lean:78:40: Unused tactic linter: `(exact hnbc)` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [1609/1640] Replayed PaperV.CycleDefect
+warning: PaperV/CycleDefect.lean:28:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/CycleDefect.lean:34:0: 'Mathlib.Combinatorics.SimpleGraph.ConcreteColorings' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Constructions
+warning: PaperV/CycleDefect.lean:69:20: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/CycleDefect.lean:78:20: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1610/1640] Replayed PaperV.Vizing.Basic
+warning: PaperV/Vizing/Basic.lean:21:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/Vizing/Basic.lean:27:0: 'Mathlib.Combinatorics.SimpleGraph.ConcreteColorings' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Constructions
+warning: PaperV/Vizing/Basic.lean:88:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/Vizing/Basic.lean:109:79: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Basic.lean:112:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Basic.lean:115:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Basic.lean:125:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Basic.lean:125:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Basic.lean:126:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Basic.lean:126:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Basic.lean:135:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Basic.lean:144:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Basic.lean:150:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [1611/1640] Replayed PaperV.Vizing.Endpoints
+warning: PaperV/Vizing/Endpoints.lean:19:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/Vizing/Endpoints.lean:26:0: 'Mathlib.Combinatorics.SimpleGraph.ConcreteColorings' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Constructions
+warning: PaperV/Vizing/Endpoints.lean:113:34: `Finset.card_univ_diff` has been deprecated: Use `Finset.card_univ_sdiff` instead
+
+Hint: Replace the deprecated name:
+  F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵u̵n̵i̵v̵_̵d̵i̵f̵f̵c̲a̲r̲d̲_̲u̲n̲i̲v̲_̲s̲d̲i̲f̲f̲
+⚠ [1613/1640] Replayed PaperV.BrooksNonRegular
+warning: PaperV/BrooksNonRegular.lean:26:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/BrooksNonRegular.lean:32:0: 'Mathlib.Combinatorics.SimpleGraph.ConcreteColorings' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Constructions
+warning: PaperV/BrooksNonRegular.lean:52:0: automatically included section variable(s) unused in theorem `PaperV.Brooks.colorable_of_lower_neighbors_lt`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/BrooksNonRegular.lean:156:0: automatically included section variable(s) unused in theorem `PaperV.Brooks.exists_closer_neighbor`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1614/1640] Replayed PaperV.BrooksB4
+warning: PaperV/BrooksB4.lean:21:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/BrooksB4.lean:27:0: 'Mathlib.Combinatorics.SimpleGraph.ConcreteColorings' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Constructions
+⚠ [1615/1640] Replayed PaperV.BrooksGreedyCtrl
+warning: PaperV/BrooksGreedyCtrl.lean:25:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/BrooksGreedyCtrl.lean:31:0: 'Mathlib.Combinatorics.SimpleGraph.ConcreteColorings' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Constructions
+warning: PaperV/BrooksGreedyCtrl.lean:49:0: automatically included section variable(s) unused in theorem `PaperV.Brooks.greedy_coloring_zero`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1616/1640] Replayed PaperV.BrooksHub
+warning: PaperV/BrooksHub.lean:32:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/BrooksHub.lean:38:0: 'Mathlib.Combinatorics.SimpleGraph.ConcreteColorings' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Constructions
+warning: PaperV/BrooksHub.lean:55:0: automatically included section variable(s) unused in theorem `PaperV.Brooks.mem_of_walk_closed`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/BrooksHub.lean:71:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1617/1640] Replayed PaperV.OddCycle
+warning: PaperV/OddCycle.lean:34:0: 'Mathlib.Combinatorics.SimpleGraph.Coloring' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex
+warning: PaperV/OddCycle.lean:40:0: 'Mathlib.Combinatorics.SimpleGraph.ConcreteColorings' has been deprecated: please replace this import by
+
+import Mathlib.Combinatorics.SimpleGraph.Coloring.Constructions
+warning: PaperV/OddCycle.lean:60:44: `SimpleGraph.Walk.nil_iff_length_eq` has been deprecated: Use `SimpleGraph.Walk.length_eq_zero_iff` instead
+
+Note: The updated constant has a different type:
+  ∀ {V : Type u} {G : SimpleGraph V} {u v : V} {p : G.Walk u v}, p.length = 0 ↔ p.Nil
+instead of
+  ∀ {V : Type u} {G : SimpleGraph V} {v w : V} {p : G.Walk v w}, p.Nil ↔ p.length = 0
+warning: PaperV/OddCycle.lean:83:44: `SimpleGraph.Walk.nil_iff_length_eq` has been deprecated: Use `SimpleGraph.Walk.length_eq_zero_iff` instead
+
+Note: The updated constant has a different type:
+  ∀ {V : Type u} {G : SimpleGraph V} {u v : V} {p : G.Walk u v}, p.length = 0 ↔ p.Nil
+instead of
+  ∀ {V : Type u} {G : SimpleGraph V} {v w : V} {p : G.Walk v w}, p.Nil ↔ p.length = 0
+warning: PaperV/OddCycle.lean:56:0: automatically included section variable(s) unused in theorem `PaperV.Brooks.exists_split_of_not_cycle`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/OddCycle.lean:135:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/OddCycle.lean:141:0: automatically included section variable(s) unused in theorem `PaperV.Brooks.exists_maximal_independent`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1618/1640] Replayed PaperV.Vizing.Kempe
+warning: PaperV/Vizing/Kempe.lean:81:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Kempe.lean:82:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Kempe.lean:75:0: automatically included section variable(s) unused in theorem `Vizing.PEC.kempeSwapFun_of_reachable`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/Vizing/Kempe.lean:99:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Kempe.lean:94:0: automatically included section variable(s) unused in theorem `Vizing.PEC.kempeSwapFun_of_not_reachable`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/Vizing/Kempe.lean:117:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Kempe.lean:117:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/Vizing/Kempe.lean:118:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Kempe.lean:118:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [1621/1640] Replayed PaperV.DefectApps
+warning: PaperV/DefectApps.lean:85:0: automatically included section variable(s) unused in theorem `PaperV.induce_top_eq`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/DefectApps.lean:120:0: automatically included section variable(s) unused in theorem `PaperV.feasible_card_le_indepNum`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1622/1640] Replayed PaperV.BrooksCutExists
+warning: PaperV/BrooksCutExists.lean:41:0: automatically included section variable(s) unused in theorem `PaperV.Brooks.connected_induce_insert_of_component_neighbors`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1623/1640] Replayed PaperV.BrooksLovasz
+warning: PaperV/BrooksLovasz.lean:56:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovasz.lean:69:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1624/1640] Replayed PaperV.BrooksBlock
+warning: PaperV/BrooksBlock.lean:53:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksBlock.lean:47:0: automatically included section variable(s) unused in theorem `PaperV.Brooks.exists_unreachable_of_cutVertex`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/BrooksBlock.lean:70:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksBlock.lean:64:0: automatically included section variable(s) unused in theorem `PaperV.Brooks.exists_unreachable_of_notConnected`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/BrooksBlock.lean:90:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksBlock.lean:121:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1625/1642] Replayed PaperV.BrooksCut
+warning: PaperV/BrooksCut.lean:87:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksCut.lean:88:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksCut.lean:145:36: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksCut.lean:186:36: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1626/1642] Replayed PaperV.BrooksLovaszEndblock
+warning: PaperV/BrooksLovaszEndblock.lean:36:0: automatically included section variable(s) unused in theorem `PaperV.Brooks.pair_compl_ne`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/BrooksLovaszEndblock.lean:63:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszEndblock.lean:42:22: Variable name `hay` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hay
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperV/BrooksLovaszEndblock.lean:166:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszEndblock.lean:244:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszEndblock.lean:258:12: `SimpleGraph.Walk.length_takeUntil_le` has been deprecated: Use `SimpleGraph.Walk.length_takeUntil_le_length` instead
+
+Hint: Replace the deprecated name:
+  S̵i̵m̵p̵l̵e̵G̵r̵a̵p̵h̵.̵W̵a̵l̵k̵.̵l̵e̵n̵g̵t̵h̵_̵t̵a̵k̵e̵U̵n̵t̵i̵l̵_̵l̵e̵W̲a̲l̲k̲.̲l̲e̲n̲g̲t̲h̲_̲t̲a̲k̲e̲U̲n̲t̲i̲l̲_̲l̲e̲_̲l̲e̲n̲g̲t̲h̲
+warning: PaperV/BrooksLovaszEndblock.lean:295:12: `SimpleGraph.Walk.length_takeUntil_le` has been deprecated: Use `SimpleGraph.Walk.length_takeUntil_le_length` instead
+
+Hint: Replace the deprecated name:
+  S̵i̵m̵p̵l̵e̵G̵r̵a̵p̵h̵.̵W̵a̵l̵k̵.̵l̵e̵n̵g̵t̵h̵_̵t̵a̵k̵e̵U̵n̵t̵i̵l̵_̵l̵e̵W̲a̲l̲k̲.̲l̲e̲n̲g̲t̲h̲_̲t̲a̲k̲e̲U̲n̲t̲i̲l̲_̲l̲e̲_̲l̲e̲n̲g̲t̲h̲
+warning: PaperV/BrooksLovaszEndblock.lean:226:0: automatically included section variable(s) unused in theorem `PaperV.Brooks.parallel_neighbors_not_both_separating`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/BrooksLovaszEndblock.lean:231:5: Variable name `hxy` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hxy
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperV/BrooksLovaszEndblock.lean:354:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszEndblock.lean:401:0: automatically included section variable(s) unused in theorem `PaperV.Brooks.component_eq_of_adj_in_induce`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/BrooksLovaszEndblock.lean:444:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszEndblock.lean:546:5: Variable name `hconn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hconn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1627/1642] Replayed PaperV.Vizing.Fan
+warning: PaperV/Vizing/Fan.lean:150:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1631/1648] Replayed PaperV.BrooksLovaszCore
+warning: PaperV/BrooksLovaszCore.lean:48:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:60:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:117:12: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:121:10: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:166:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:197:8: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:200:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:217:31: `ENat.coe_lt_coe` has been deprecated: Use `ENat.natCast_lt_natCast` instead
+
+Hint: Replace the deprecated name:
+  E̵N̵a̵t̵.̵c̵o̵e̵_̵l̵t̵_̵c̵o̵e̵E̲N̲a̲t̲.̲n̲a̲t̲C̲a̲s̲t̲_̲l̲t̲_̲n̲a̲t̲C̲a̲s̲t̲
+warning: PaperV/BrooksLovaszCore.lean:225:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:253:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:340:8: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:346:18: `ENat.coe_le_coe` has been deprecated: Use `ENat.natCast_le_natCast` instead
+
+Hint: Replace the deprecated name:
+  E̵N̵a̵t̵.̵c̵o̵e̵_̵l̵e̵_̵c̵o̵e̵E̲N̲a̲t̲.̲n̲a̲t̲C̲a̲s̲t̲_̲l̲e̲_̲n̲a̲t̲C̲a̲s̲t̲
+warning: PaperV/BrooksLovaszCore.lean:360:8: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:363:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:379:31: `ENat.coe_lt_coe` has been deprecated: Use `ENat.natCast_lt_natCast` instead
+
+Hint: Replace the deprecated name:
+  E̵N̵a̵t̵.̵c̵o̵e̵_̵l̵t̵_̵c̵o̵e̵E̲N̲a̲t̲.̲n̲a̲t̲C̲a̲s̲t̲_̲l̲t̲_̲n̲a̲t̲C̲a̲s̲t̲
+warning: PaperV/BrooksLovaszCore.lean:384:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:397:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:467:8: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:473:18: `ENat.coe_le_coe` has been deprecated: Use `ENat.natCast_le_natCast` instead
+
+Hint: Replace the deprecated name:
+  E̵N̵a̵t̵.̵c̵o̵e̵_̵l̵e̵_̵c̵o̵e̵E̲N̲a̲t̲.̲n̲a̲t̲C̲a̲s̲t̲_̲l̲e̲_̲n̲a̲t̲C̲a̲s̲t̲
+warning: PaperV/BrooksLovaszCore.lean:331:23: This simp argument is unused:
+  SimpleGraph.Walk.getVert_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hl1, hi_eq] at hwin
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/BrooksLovaszCore.lean:335:23: This simp argument is unused:
+  Nat.add_sub_cancel' hi_le
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hl2, hi_eq] at dwin
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/BrooksLovaszCore.lean:458:23: This simp argument is unused:
+  SimpleGraph.Walk.getVert_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hl1, hi_eq] at hwin
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/BrooksLovaszCore.lean:462:23: This simp argument is unused:
+  Nat.add_sub_cancel' hi_le
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hl2, hi_eq] at dwin
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/BrooksLovaszCore.lean:109:44: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperV/BrooksLovaszCore.lean:317:14: Unused tactic linter: `all_goals apply Subtype.ext; rfl` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperV/BrooksLovaszCore.lean:447:14: Unused tactic linter: `all_goals apply Subtype.ext; rfl` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperV/BrooksLovaszCore.lean:317:24: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: PaperV/BrooksLovaszCore.lean:317:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: PaperV/BrooksLovaszCore.lean:447:24: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: PaperV/BrooksLovaszCore.lean:447:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: PaperV/BrooksLovaszCore.lean:109:44: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: PaperV/BrooksLovaszCore.lean:487:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:492:6: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:504:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:511:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:522:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:535:6: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:539:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:554:16: `ENat.coe_lt_coe` has been deprecated: Use `ENat.natCast_lt_natCast` instead
+
+Hint: Replace the deprecated name:
+  E̵N̵a̵t̵.̵c̵o̵e̵_̵l̵t̵_̵c̵o̵e̵E̲N̲a̲t̲.̲n̲a̲t̲C̲a̲s̲t̲_̲l̲t̲_̲n̲a̲t̲C̲a̲s̲t̲
+warning: PaperV/BrooksLovaszCore.lean:559:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:593:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:604:10: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:608:12: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:613:12: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:627:18: `ENat.coe_lt_coe` has been deprecated: Use `ENat.natCast_lt_natCast` instead
+
+Hint: Replace the deprecated name:
+  E̵N̵a̵t̵.̵c̵o̵e̵_̵l̵t̵_̵c̵o̵e̵E̲N̲a̲t̲.̲n̲a̲t̲C̲a̲s̲t̲_̲l̲t̲_̲n̲a̲t̲C̲a̲s̲t̲
+warning: PaperV/BrooksLovaszCore.lean:649:10: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:663:18: `ENat.coe_le_coe` has been deprecated: Use `ENat.natCast_le_natCast` instead
+
+Hint: Replace the deprecated name:
+  E̵N̵a̵t̵.̵c̵o̵e̵_̵l̵e̵_̵c̵o̵e̵E̲N̲a̲t̲.̲n̲a̲t̲C̲a̲s̲t̲_̲l̲e̲_̲n̲a̲t̲C̲a̲s̲t̲
+warning: PaperV/BrooksLovaszCore.lean:692:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:699:10: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:704:12: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:709:12: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BrooksLovaszCore.lean:723:18: `ENat.coe_lt_coe` has been deprecated: Use `ENat.natCast_lt_natCast` instead
+
+Hint: Replace the deprecated name:
+  E̵N̵a̵t̵.̵c̵o̵e̵_̵l̵t̵_̵c̵o̵e̵E̲N̲a̲t̲.̲n̲a̲t̲C̲a̲s̲t̲_̲l̲t̲_̲n̲a̲t̲C̲a̲s̲t̲
+warning: PaperV/BrooksLovaszCore.lean:738:8: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksLovaszCore.lean:753:27: `ENat.coe_add` has been deprecated: Use `ENat.natCast_add` instead
+
+Hint: Replace the deprecated name:
+  E̵N̵a̵t̵.̵c̵o̵e̵_̵a̵d̵d̵E̲N̲a̲t̲.̲n̲a̲t̲C̲a̲s̲t̲_̲a̲d̲d̲
+warning: PaperV/BrooksLovaszCore.lean:754:20: `ENat.coe_le_coe` has been deprecated: Use `ENat.natCast_le_natCast` instead
+
+Hint: Replace the deprecated name:
+  E̵N̵a̵t̵.̵c̵o̵e̵_̵l̵e̵_̵c̵o̵e̵E̲N̲a̲t̲.̲n̲a̲t̲C̲a̲s̲t̲_̲l̲e̲_̲n̲a̲t̲C̲a̲s̲t̲
+warning: PaperV/BrooksLovaszCore.lean:588:42: This simp argument is unused:
+  not_exists
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SimpleGraph.Reachable, not_and] at hall_pass_z
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/BrooksLovaszCore.lean:588:54: This simp argument is unused:
+  not_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SimpleGraph.Reachable, not_exists] at hall_pass_z
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/BrooksLovaszCore.lean:640:25: This simp argument is unused:
+  SimpleGraph.Walk.getVert_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SimpleGraph.Walk.take_length, min_eq_left hi_le, hi_eq] at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/BrooksLovaszCore.lean:660:20: This simp argument is unused:
+  hreach_xd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/BrooksLovaszCore.lean:687:42: This simp argument is unused:
+  not_exists
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SimpleGraph.Reachable, not_and] at hall_pass_z
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/BrooksLovaszCore.lean:687:54: This simp argument is unused:
+  not_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SimpleGraph.Reachable, not_exists] at hall_pass_z
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/BrooksLovaszCore.lean:729:23: This simp argument is unused:
+  SimpleGraph.Walk.getVert_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [SimpleGraph.Walk.take_length, min_eq_left hi_le, hi_eq] at this
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/BrooksLovaszCore.lean:779:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1632/1648] Replayed PaperV.BrooksLovaszCut
+warning: PaperV/BrooksLovaszCut.lean:65:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1633/1648] Replayed PaperV.Vizing.Step
+warning: PaperV/Vizing/Step.lean:104:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/Vizing/Step.lean:109:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/Vizing/Step.lean:111:53: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/Vizing/Step.lean:112:33: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [1635/1648] Replayed PaperV.BrooksReg
+warning: PaperV/BrooksReg.lean:273:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1636/1648] Replayed PaperV.Vizing.Main
+warning: PaperV/Vizing/Main.lean:79:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [1638/1653] Replayed PaperV.BrooksMain
+warning: PaperV/BrooksMain.lean:38:8: `SimpleGraph.colorable_iff_forall_connectedComponents` has been deprecated: Use `SimpleGraph.colorable_iff_forall_connectedComponent` instead
+warning: PaperV/BrooksMain.lean:40:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/BrooksMain.lean:42:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [1639/1653] Replayed PaperV.Vizing
+warning: PaperV/Vizing.lean:71:44: `ENat.coe_ne_top` has been deprecated: Use `ENat.natCast_ne_top` instead
+
+Hint: Replace the deprecated name:
+  E̵N̵a̵t̵.̵c̵o̵e̵_̵n̵e̵_̵t̵o̵p̵E̲N̲a̲t̲.̲n̲a̲t̲C̲a̲s̲t̲_̲n̲e̲_̲t̲o̲p̲
+⚠ [1643/1653] Replayed PaperV.BrooksOct
+warning: PaperV/BrooksOct.lean:67:17: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2017/2035] Replayed PaperV.TerminalPairRounding
+warning: PaperV/TerminalPairRounding.lean:54:0: automatically included section variable(s) unused in theorem `PaperV.TerminalPair.incDeg_le_of_discrepancy`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/TerminalPairRounding.lean:84:0: automatically included section variable(s) unused in theorem `PaperV.TerminalPair.extract_a_edge_colorable`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2018/2035] Replayed PaperV.WeightedTransfer
+warning: PaperV/WeightedTransfer.lean:68:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/WeightedTransfer.lean:106:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2020/2035] Replayed PaperV.UnitBoundaryCompletion
+warning: PaperV/UnitBoundaryCompletion.lean:70:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.le_packOpt`:
+  [DecidableEq α]
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryCompletion.lean:76:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.packOpt_le`:
+  [DecidableEq α]
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryCompletion.lean:97:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.le_nuAvoid`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryCompletion.lean:103:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.exists_nuAvoid`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryCompletion.lean:133:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.Z_subset`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryCompletion.lean:135:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.mem_Z`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryCompletion.lean:151:6: Variable name `r` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _r
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperV/UnitBoundaryCompletion.lean:158:31: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+
+Hint: Replace the deprecated name:
+  Set.mem_s̲diff
+warning: PaperV/UnitBoundaryCompletion.lean:258:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/UnitBoundaryCompletion.lean:467:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [2021/2035] Replayed PaperV.EdgeDefectProfile
+warning: PaperV/EdgeDefectProfile.lean:64:45: `ENat.coe_inj` has been deprecated: Use `ENat.natCast_inj` instead
+
+Hint: Replace the deprecated name:
+  E̵N̵a̵t̵.̵c̵o̵e̵_̵i̵n̵j̵E̲N̲a̲t̲.̲n̲a̲t̲C̲a̲s̲t̲_̲i̲n̲j̲
+warning: PaperV/EdgeDefectProfile.lean:94:51: `ENat.coe_inj` has been deprecated: Use `ENat.natCast_inj` instead
+
+Hint: Replace the deprecated name:
+  E̵N̵a̵t̵.̵c̵o̵e̵_̵i̵n̵j̵E̲N̲a̲t̲.̲n̲a̲t̲C̲a̲s̲t̲_̲i̲n̲j̲
+warning: PaperV/EdgeDefectProfile.lean:107:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/EdgeDefectProfile.lean:112:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/EdgeDefectProfile.lean:117:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/EdgeDefectProfile.lean:122:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/EdgeDefectProfile.lean:123:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2023/2036] Replayed PaperV.SealTermination
+warning: PaperV/SealTermination.lean:76:0: automatically included section variable(s) unused in theorem `PaperV.card_chain`:
+  [DecidableEq J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2024/2036] Replayed PaperV.CoverWitness
+warning: PaperV/CoverWitness.lean:55:0: automatically included section variable(s) unused in theorem `PaperV.witnessMultiset_le_one`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/CoverWitness.lean:64:0: automatically included section variable(s) unused in theorem `PaperV.multSize_witnessMultiset`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/CoverWitness.lean:91:34: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/CoverWitness.lean:73:0: automatically included section variable(s) unused in theorem `PaperV.witness_feasible_compat`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2025/2036] Replayed PaperV.SteinerK4
+warning: PaperV/SteinerK4.lean:64:0: automatically included section variable(s) unused in theorem `PaperV.Steiner.IsSteinerK4.eq_of_two_le_inter`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/SteinerK4.lean:86:0: automatically included section variable(s) unused in theorem `PaperV.Steiner.blockOf_spec`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/SteinerK4.lean:245:31: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/SteinerK4.lean:247:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/SteinerK4.lean:248:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/SteinerK4.lean:250:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/SteinerK4.lean:292:31: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+
+Hint: Replace the deprecated name:
+  Set.mem_s̲diff
+⚠ [2027/2036] Replayed PaperV.UnitBoundaryWitnesses
+warning: PaperV/UnitBoundaryWitnesses.lean:98:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.packOpt_eq_of`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryWitnesses.lean:106:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.nuAvoid_eq_of`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2028/2036] Replayed PaperV.SteinerK4Oct
+warning: PaperV/SteinerK4Oct.lean:174:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/SteinerK4Oct.lean:248:29: Variable name `hx'` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hx'
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperV/SteinerK4Oct.lean:252:0: automatically included section variable(s) unused in theorem `PaperV.Steiner.erase_inj_of_mem`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/SteinerK4Oct.lean:252:65: Variable name `hx'` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hx'
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2037/2042] Replayed PaperV.BeckFiala
+warning: PaperV/BeckFiala.lean:65:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BeckFiala.lean:148:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BeckFiala.lean:215:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/BeckFiala.lean:218:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/BeckFiala.lean:231:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/BeckFiala.lean:236:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/BeckFiala.lean:246:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/BeckFiala.lean:251:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/BeckFiala.lean:340:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/BeckFiala.lean:355:10: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2041/2058] Replayed PaperV.TerminalPairAssembly
+warning: PaperV/TerminalPairAssembly.lean:87:74: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/TerminalPairAssembly.lean:120:59: Variable name `p` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _p
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperV/TerminalPairAssembly.lean:373:15: `Finset.card_univ_diff` has been deprecated: Use `Finset.card_univ_sdiff` instead
+
+Hint: Replace the deprecated name:
+  F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵u̵n̵i̵v̵_̵d̵i̵f̵f̵c̲a̲r̲d̲_̲u̲n̲i̲v̲_̲s̲d̲i̲f̲f̲
+warning: PaperV/TerminalPairAssembly.lean:384:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2375/2439] Replayed PaperV.DefectOne
+warning: PaperV/DefectOne.lean:45:0: automatically included section variable(s) unused in theorem `PaperV.exists_feasible_card_indepNum`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2376/2439] Replayed PaperV.RationalLP
+warning: PaperV/RationalLP.lean:74:0: automatically included section variable(s) unused in theorem `PaperV.FiniteLP.gap_identity`:
+  [IsStrictOrderedRing K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsStrictOrderedRing K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/RationalLP.lean:153:0: automatically included section variable(s) unused in theorem `PaperV.FiniteLP.discarded_value_le`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2377/2439] Replayed PaperV.UnitBoundaryWeighted
+warning: PaperV/UnitBoundaryWeighted.lean:84:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.Weighted.le_wOpt`:
+  [DecidableEq α]
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryWeighted.lean:90:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.Weighted.exists_wOpt`:
+  [DecidableEq α]
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryWeighted.lean:105:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.Weighted.centralFams_nonempty`:
+  [DecidableEq α]
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryWeighted.lean:113:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.Weighted.mem_centralFams`:
+  [DecidableEq α]
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryWeighted.lean:137:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.Weighted.mem_Rep`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryWeighted.lean:139:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.Weighted.le_aW`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryWeighted.lean:142:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.Weighted.aW_eq_zero_of_empty`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryWeighted.lean:335:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.Weighted.sum_aW_free`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/UnitBoundaryWeighted.lean:539:16: Unused tactic linter: `push_cast at this ⊢` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [2380/2439] Replayed PaperV.MixedCopy
+warning: PaperV/MixedCopy.lean:64:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/MixedCopy.lean:64:25: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/MixedCopy.lean:66:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/MixedCopy.lean:66:25: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [2384/2439] Replayed PaperV.RationalFarkas
+warning: PaperV/RationalFarkas.lean:114:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/RationalFarkas.lean:130:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/RationalFarkas.lean:188:18: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/RationalFarkas.lean:193:20: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/RationalFarkas.lean:196:20: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/RationalFarkas.lean:196:34: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/RationalFarkas.lean:268:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/RationalFarkas.lean:273:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/RationalFarkas.lean:280:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [2386/2439] Replayed PaperV.PairedFactors
+warning: PaperV/PairedFactors.lean:104:34: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/PairedFactors.lean:107:34: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/PairedFactors.lean:156:34: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/PairedFactors.lean:160:34: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/PairedFactors.lean:179:38: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/PairedFactors.lean:216:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/PairedFactors.lean:220:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/PairedFactors.lean:220:26: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/PairedFactors.lean:240:34: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/PairedFactors.lean:243:34: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/PairedFactors.lean:312:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/PairedFactors.lean:326:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/PairedFactors.lean:251:0: automatically included section variable(s) unused in theorem `PaperV.PairedFactors.exists_paired_completion`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/PairedFactors.lean:252:83: Variable name `hβ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hβ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2390/2439] Replayed PaperV.GreedyLists
+warning: PaperV/GreedyLists.lean:79:52: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/GreedyLists.lean:79:64: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/GreedyLists.lean:87:52: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/GreedyLists.lean:87:64: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/GreedyLists.lean:91:26: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/GreedyLists.lean:91:38: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/GreedyLists.lean:104:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/GreedyLists.lean:107:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/GreedyLists.lean:111:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2393/2439] Replayed PaperV.CleanupTransfer
+warning: PaperV/CleanupTransfer.lean:126:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.disjoint_of_owner`:
+  [DecidableEq α]
+  [DecidableEq R]
+  [Fintype Cl]
+  [DecidableEq Cl]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] [DecidableEq R] [Fintype Cl] [DecidableEq Cl] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/CleanupTransfer.lean:135:0: automatically included section variable(s) unused in theorem `PaperV.UnitBoundary.ResFeasible_biUnion_of_owner`:
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2395/2439] Replayed PaperV.TwoErrorCertificate
+warning: PaperV/TwoErrorCertificate.lean:76:26: This simp argument is unused:
+  Finset.sum_filter
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [incidence, T, Finset.sum_ite_mem, mul_ite, ite_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/TwoErrorCertificate.lean:76:74: This simp argument is unused:
+  ite_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [incidence, T, Finset.sum_filter, Finset.sum_ite_mem, mul_ite]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/TwoErrorCertificate.lean:87:5: Ambiguous namespace `System`: it is interpreted as `_root_.PaperV.ResourceCertificate.System` because this `open` occurs inside `namespace PaperV.ResourceCertificate`, while `_root_.System` is silently not opened. Specify the namespace unambiguously, e.g. `_root_.PaperV.ResourceCertificate.System`. The warning can sometimes also be addressed by moving the `open` outside of the surrounding `namespace`.
+
+Note: This linter can be disabled with `set_option linter.ambiguousOpen false`
+warning: PaperV/TwoErrorCertificate.lean:107:0: automatically included section variable(s) unused in theorem `PaperV.ResourceCertificate.Realization.cost_nonneg`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/TwoErrorCertificate.lean:115:0: automatically included section variable(s) unused in theorem `PaperV.ResourceCertificate.resource_gap_identity`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/TwoErrorCertificate.lean:123:0: automatically included section variable(s) unused in theorem `PaperV.ResourceCertificate.Realization.mass_split`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2397/2439] Replayed PaperV.Galvin
+warning: PaperV/Galvin.lean:81:5: Variable name `hirr` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hirr
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperV/Galvin.lean:107:54: This simp argument is unused:
+  Finset.filter_not
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all +decide [Finset.card_sdiff]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/Galvin.lean:156:5: Variable name `hr` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperV/Galvin.lean:157:5: Variable name `hPB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hPB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperV/Galvin.lean:164:29: This simp argument is unused:
+  hgA
+
+Hint: Omit it from the simp argument list.
+  [apply] simp +decide [DAAccepted]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/Galvin.lean:230:0: automatically included section variable(s) unused in theorem `PaperV.Galvin.matching_saturates_max_left`:
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/Galvin.lean:231:5: Variable name `hdegU` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdegU
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperV/Galvin.lean:406:155: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [2398/2439] Replayed PaperV.StrongDuality
+warning: PaperV/StrongDuality.lean:112:44: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/StrongDuality.lean:125:44: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/StrongDuality.lean:173:25: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/StrongDuality.lean:181:25: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+⚠ [2399/2439] Replayed PaperV.MixedCopyFrac
+warning: PaperV/MixedCopyFrac.lean:69:31: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperV/MixedCopyFrac.lean:69:35: Unused tactic linter: `apply Subsingleton.elim` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperV/MixedCopyFrac.lean:72:31: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperV/MixedCopyFrac.lean:72:35: Unused tactic linter: `apply Subsingleton.elim` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: PaperV/MixedCopyFrac.lean:69:35: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: PaperV/MixedCopyFrac.lean:72:35: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [2400/2439] Replayed PaperV.MultiStable
+warning: PaperV/MultiStable.lean:90:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2405/2439] Replayed PaperV.ResourceComposition
+warning: PaperV/ResourceComposition.lean:37:0: automatically included section variable(s) unused in theorem `PaperV.ResourceCertificate.System.disjoint_of_cross_resources`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/ResourceComposition.lean:100:5: Ambiguous namespace `System`: it is interpreted as `_root_.PaperV.ResourceCertificate.System` because this `open` occurs inside `namespace PaperV.ResourceCertificate`, while `_root_.System` is silently not opened. Specify the namespace unambiguously, e.g. `_root_.PaperV.ResourceCertificate.System`. The warning can sometimes also be addressed by moving the `open` outside of the surrounding `namespace`.
+
+Note: This linter can be disabled with `set_option linter.ambiguousOpen false`
+⚠ [2406/2440] Replayed PaperV.HostRealizer
+warning: PaperV/HostRealizer.lean:109:0: automatically included section variable(s) unused in theorem `PaperV.Host.csFeasible_hostCS_of_properOn`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/HostRealizer.lean:115:0: automatically included section variable(s) unused in theorem `PaperV.Host.base_injOn_of_csFeasible`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2412/2441] Replayed PaperV.ResourceOptimum
+warning: PaperV/ResourceOptimum.lean:29:12: Ambiguous namespace `System`: it is interpreted as `_root_.PaperV.ResourceCertificate.System` because this `open` occurs inside `namespace PaperV.ResourceCertificate`, while `_root_.System` is silently not opened. Specify the namespace unambiguously, e.g. `_root_.PaperV.ResourceCertificate.System`. The warning can sometimes also be addressed by moving the `open` outside of the surrounding `namespace`.
+
+Note: This linter can be disabled with `set_option linter.ambiguousOpen false`
+warning: PaperV/ResourceOptimum.lean:55:0: automatically included section variable(s) unused in theorem `PaperV.ResourceCertificate.primalToReal_value`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/ResourceOptimum.lean:60:0: automatically included section variable(s) unused in theorem `PaperV.ResourceCertificate.dualToReal_value`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2413/2441] Replayed PaperV.MultiKonig
+warning: PaperV/MultiKonig.lean:171:30: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiKonig.lean:171:39: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiKonig.lean:171:30: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiKonig.lean:171:39: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiKonig.lean:171:30: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiKonig.lean:171:39: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiKonig.lean:171:30: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiKonig.lean:171:39: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiKonig.lean:178:30: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiKonig.lean:178:39: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiKonig.lean:178:30: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiKonig.lean:178:39: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiKonig.lean:178:30: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiKonig.lean:178:39: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiKonig.lean:178:30: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiKonig.lean:178:39: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiKonig.lean:297:29: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiKonig.lean:297:38: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiKonig.lean:300:29: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiKonig.lean:300:38: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiKonig.lean:302:29: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+⚠ [2414/2441] Replayed PaperV.PureProfileExact
+warning: PaperV/PureProfileExact.lean:68:24: This simp argument is unused:
+  Nat.succ_sub_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/PureProfileExact.lean:98:34: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/PureProfileExact.lean:110:34: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/PureProfileExact.lean:98:52: This simp argument is unused:
+  Finset.mem_filter
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.coe_filter, Set.mem_setOf_eq, Finset.mem_univ, true_and] at ho
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/PureProfileExact.lean:179:27: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2415/2441] Replayed PaperV.MixedRationalNormalization
+warning: PaperV/MixedRationalNormalization.lean:33:0: automatically included section variable(s) unused in theorem `PaperV.MixedPromotion.promote_rational`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2416/2441] Replayed PaperV.StrictnessExample
+warning: PaperV/StrictnessExample.lean:172:0: automatically included section variable(s) unused in theorem `PaperV.Strictness.hostCert_admissible`:
+  [NeZero r]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero r] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/StrictnessExample.lean:176:0: automatically included section variable(s) unused in theorem `PaperV.Strictness.hostCert_cost`:
+  [NeZero r]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero r] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/StrictnessExample.lean:203:0: automatically included section variable(s) unused in theorem `PaperV.Strictness.nu_hostCS_kr`:
+  [NeZero r]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero r] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2417/2441] Replayed PaperV.GalvinRealizer
+warning: PaperV/GalvinRealizer.lean:62:0: automatically included section variable(s) unused in theorem `PaperV.Host.not_disjoint_bipEnds_iff`:
+  [Fintype U]
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype U] [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/GalvinRealizer.lean:74:0: automatically included section variable(s) unused in theorem `PaperV.Host.properOn_of_matching`:
+  [Fintype H]
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype H] [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/GalvinRealizer.lean:95:0: automatically included section variable(s) unused in theorem `PaperV.Host.galvin_host_assignment`:
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/GalvinRealizer.lean:155:0: automatically included section variable(s) unused in theorem `PaperV.Host.exists_heavy_colour_class`:
+  [Fintype U]
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype U] [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/GalvinRealizer.lean:235:0: automatically included section variable(s) unused in theorem `PaperV.Host.galvin_heavy_single_host`:
+  [Fintype U]
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype U] [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2418/2441] Replayed PaperV.HostConstructionAdapters
+warning: PaperV/HostConstructionAdapters.lean:32:0: automatically included section variable(s) unused in theorem `PaperV.Host.greedy_host_assignment`:
+  [Fintype V]
+  [Fintype H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/HostConstructionAdapters.lean:41:0: automatically included section variable(s) unused in theorem `PaperV.Host.assigned_weight`:
+  [Fintype E]
+  [Fintype H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [Fintype H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/HostConstructionAdapters.lean:54:0: automatically included section variable(s) unused in theorem `PaperV.Host.compatible_background_union`:
+  [Fintype E]
+  [Fintype H]
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [Fintype H] [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/HostConstructionAdapters.lean:81:0: automatically included section variable(s) unused in theorem `PaperV.Host.proper_assignment_avoids_background`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/HostConstructionAdapters.lean:117:6: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [c, hi]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: PaperV/HostConstructionAdapters.lean:99:0: automatically included section variable(s) unused in theorem `PaperV.Host.paired_factor_assignment`:
+  [DecidableEq E]
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] [Fintype V] [DecidableEq V] [Fintype H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/HostConstructionAdapters.lean:168:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/HostConstructionAdapters.lean:164:0: automatically included section variable(s) unused in theorem `PaperV.Host.empty_factor_completion`:
+  [Fintype V]
+  [DecidableEq V]
+  [Fintype H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [Fintype H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2421/2441] Replayed PaperV.MultiRanks
+warning: PaperV/MultiRanks.lean:234:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/MultiRanks.lean:266:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/MultiRanks.lean:354:35: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:362:35: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:365:25: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:367:41: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/MultiRanks.lean:368:25: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:375:26: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:382:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:382:46: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:386:26: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:391:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:394:33: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:396:43: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/MultiRanks.lean:397:33: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:407:26: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:407:40: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:408:31: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:415:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:415:41: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:416:31: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:419:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:419:41: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:429:26: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:429:40: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:430:31: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:437:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:437:41: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:438:31: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:441:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:441:41: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:445:26: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:447:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:462:40: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: PaperV/MultiRanks.lean:471:26: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:476:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:480:26: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:485:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:496:26: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:496:40: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:504:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:504:41: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:507:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:507:41: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:518:26: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:518:40: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:526:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:526:41: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:529:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:529:41: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: PaperV/MultiRanks.lean:533:26: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: PaperV/MultiRanks.lean:538:26: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+⚠ [2422/2441] Replayed PaperV.FractionalUnitBoundary
+warning: PaperV/FractionalUnitBoundary.lean:100:0: automatically included section variable(s) unused in theorem `PaperV.FractionalUnitBoundary.piW_eq_zero`:
+  [Fintype I]
+  [Fintype E]
+  [DecidableEq I]
+  [IsStrictOrderedRing K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [Fintype E] [DecidableEq I] [IsStrictOrderedRing K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/FractionalUnitBoundary.lean:103:0: automatically included section variable(s) unused in theorem `PaperV.FractionalUnitBoundary.exists_eq_piW`:
+  [Fintype I]
+  [Fintype E]
+  [DecidableEq I]
+  [IsStrictOrderedRing K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [Fintype E] [DecidableEq I] [IsStrictOrderedRing K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/FractionalUnitBoundary.lean:140:64: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:142:41: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:213:0: automatically included section variable(s) unused in theorem `PaperV.FractionalUnitBoundary.not_mem_Z_of_mem_Rep`:
+  [Fintype I]
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/FractionalUnitBoundary.lean:266:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:270:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:298:0: automatically included section variable(s) unused in theorem `PaperV.FractionalUnitBoundary.lam_nonneg`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/FractionalUnitBoundary.lean:305:0: automatically included section variable(s) unused in theorem `PaperV.FractionalUnitBoundary.lam_eq_zero`:
+  [DecidableEq I]
+  [IsStrictOrderedRing K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] [IsStrictOrderedRing K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/FractionalUnitBoundary.lean:334:6: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:334:18: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:335:37: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:331:0: automatically included section variable(s) unused in theorem `PaperV.FractionalUnitBoundary.extWeight_central`:
+  [IsStrictOrderedRing K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsStrictOrderedRing K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/FractionalUnitBoundary.lean:343:6: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:437:6: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:437:44: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:438:35: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:487:0: automatically included section variable(s) unused in theorem `PaperV.FractionalUnitBoundary.restrict_weight`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/FractionalUnitBoundary.lean:491:0: automatically included section variable(s) unused in theorem `PaperV.FractionalUnitBoundary.weight_le_one`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/FractionalUnitBoundary.lean:501:0: automatically included section variable(s) unused in theorem `PaperV.FractionalUnitBoundary.partial_load_le`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/FractionalUnitBoundary.lean:635:6: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:635:50: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:642:6: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:642:83: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:644:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:650:6: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:650:50: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: PaperV/FractionalUnitBoundary.lean:655:0: automatically included section variable(s) unused in theorem `PaperV.FractionalUnitBoundary.liftPrice_nonneg`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/FractionalUnitBoundary.lean:695:40: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [2427/2442] Replayed PaperV.GalvinMultigraph
+warning: PaperV/GalvinMultigraph.lean:161:40: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/GalvinMultigraph.lean:179:40: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/GalvinMultigraph.lean:241:36: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/GalvinMultigraph.lean:261:36: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/GalvinMultigraph.lean:205:0: automatically included section variable(s) unused in theorem `PaperV.Galvin.galvin_bkw_local`:
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2429/2442] Replayed PaperV.FractionalOptimum
+warning: PaperV/FractionalOptimum.lean:144:0: automatically included section variable(s) unused in theorem `PaperV.FractionalUnitBoundary.central_nonneg`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/FractionalOptimum.lean:148:0: automatically included section variable(s) unused in theorem `PaperV.FractionalUnitBoundary.central_cover`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2430/2448] Replayed PaperV.GalvinLocal
+warning: PaperV/GalvinLocal.lean:57:0: automatically included section variable(s) unused in theorem `PaperV.Host.bkw_host_assignment`:
+  [DecidableEq H]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq H] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2431/2448] Replayed PaperV.KonigProfile
+warning: PaperV/KonigProfile.lean:63:0: automatically included section variable(s) unused in theorem `PaperV.Konig.col_snd`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/KonigProfile.lean:71:0: automatically included section variable(s) unused in theorem `PaperV.Konig.exists_orient`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/KonigProfile.lean:114:67: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/KonigProfile.lean:118:67: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/KonigProfile.lean:132:67: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: PaperV/KonigProfile.lean:136:67: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [2432/2448] Replayed PaperV.FractionalIntegral
+warning: PaperV/FractionalIntegral.lean:57:0: automatically included section variable(s) unused in theorem `PaperV.FractionalUnitBoundary.packFams_nonempty`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/FractionalIntegral.lean:207:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2435/2452] Replayed PaperV.SealHost
+warning: PaperV/SealHost.lean:62:0: automatically included section variable(s) unused in theorem `PaperV.SealBridge.ends_sealOf`:
+  [DecidableEq J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/SealHost.lean:109:0: automatically included section variable(s) unused in theorem `PaperV.SealBridge.pairEnds_bipPair`:
+  [Fintype U]
+  [Fintype R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype U] [Fintype R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/SealHost.lean:111:0: automatically included section variable(s) unused in theorem `PaperV.SealBridge.bipPair_injective`:
+  [Fintype U]
+  [DecidableEq U]
+  [Fintype R]
+  [DecidableEq R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype U] [DecidableEq U] [Fintype R] [DecidableEq R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/SealHost.lean:127:0: automatically included section variable(s) unused in theorem `PaperV.SealBridge.properOn_transport`:
+  [DecidableEq J]
+  [Fintype J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq J] [Fintype J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: PaperV/SealHost.lean:166:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/SealHost.lean:170:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/SealHost.lean:196:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/SealHost.lean:200:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/SealHost.lean:230:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: PaperV/SealHost.lean:234:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [2436/2452] Replayed PaperV.HostCompletion
+warning: PaperV/HostCompletion.lean:132:0: automatically included section variable(s) unused in theorem `PaperV.Host.le_nu_hostCSOn_of_properOn`:
+  [Fintype E]
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2449/2456] Replayed PaperV.AffineK4
+warning: PaperV/AffineK4.lean:76:45: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: PaperV/AffineK4.lean:90:70: This simp argument is unused:
+  ← sub_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_smul, mul_smul, smul_sub, add_sub_add_left_eq_sub]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/AffineK4.lean:149:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/AffineK4.lean:152:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/AffineK4.lean:153:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2450/2456] Replayed PaperV.SteinerFrac
+warning: PaperV/SteinerFrac.lean:38:0: 'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by
+
+import Mathlib.Basic.Real.Basic
+warning: PaperV/SteinerFrac.lean:60:0: automatically included section variable(s) unused in theorem `PaperV.Steiner.sum_fracLoad`:
+  [LinearOrder K]
+  [IsStrictOrderedRing K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LinearOrder K] [IsStrictOrderedRing K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2577/2582] Replayed PaperV.UnitBoundaryEndpoints
+warning: PaperV/UnitBoundaryEndpoints.lean:31:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/UnitBoundaryEndpoints.lean:32:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/UnitBoundaryEndpoints.lean:59:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: PaperV/UnitBoundaryEndpoints.lean:60:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2578/2582] Replayed PaperV.BKExact
+warning: PaperV/BKExact.lean:88:28: This simp argument is unused:
+  opair
+
+Hint: Omit it from the simp argument list.
+  [apply] simp +decide [Feasible, ohost, objs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/BKExact.lean:88:35: This simp argument is unused:
+  ohost
+
+Hint: Omit it from the simp argument list.
+  [apply] simp +decide [Feasible, opair, objs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: PaperV/BKExact.lean:88:42: This simp argument is unused:
+  objs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp +decide [Feasible, opair, ohost]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2580/2582] Replayed PaperV.FiniteValueStability
+warning: PaperV/FiniteValueStability.lean:199:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+Build completed successfully (2582 jobs).

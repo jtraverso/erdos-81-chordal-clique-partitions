@@ -1,0 +1,1095 @@
+@PaperV.ResourceCertificate.resource_gap_identity.{u_1,
+    u_2} : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype.{u_1} I] [inst_1 : Fintype.{u_2} E] [DecidableEq.{u_1 + 1} I]
+  [inst_3 : DecidableEq.{u_2 + 1} E] {R : @PaperV.ResourceCertificate.System.{u_1, u_2} I E inst inst_1 inst_3}
+  (w : I → Rat)
+  (p :
+    @PaperV.FiniteLP.PrimalFeasible.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+      (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R))
+  (d :
+    @PaperV.FiniteLP.DualFeasible.{u_1, u_2, 0} I E inst_1 Rat Rat.instField Rat.linearOrder
+      (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w),
+  @Eq.{1} Rat
+    (@HSub.hSub.{0, 0, 0} Rat Rat Rat (@instHSub.{0} Rat Rat.instSub)
+      (@PaperV.FiniteLP.dualValue.{u_1, u_2, 0} I E inst_1 Rat Rat.instField Rat.linearOrder
+        (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w d)
+      (@PaperV.FiniteLP.primalValue.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+        (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w p))
+    (@HAdd.hAdd.{0, 0, 0} Rat Rat Rat (@instHAdd.{0} Rat Rat.instAdd)
+      (∑ e,
+        @HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul)
+          (@PaperV.FiniteLP.DualFeasible.price.{u_1, u_2, 0} I E inst_1 Rat Rat.instField Rat.linearOrder
+            (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w d e)
+          (@HSub.hSub.{0, 0, 0} Rat Rat Rat (@instHSub.{0} Rat Rat.instSub)
+            (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1)))
+            (∑ o,
+              @HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul)
+                (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R o e)
+                (@PaperV.FiniteLP.PrimalFeasible.weight.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+                  (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) p o))))
+      (∑ o,
+        @HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul)
+          (@PaperV.FiniteLP.PrimalFeasible.weight.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+            (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) p o)
+          (@HSub.hSub.{0, 0, 0} Rat Rat Rat (@instHSub.{0} Rat Rat.instSub)
+            (∑ e,
+              @HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul)
+                (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R o e)
+                (@PaperV.FiniteLP.DualFeasible.price.{u_1, u_2, 0} I E inst_1 Rat Rat.instField Rat.linearOrder
+                  (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w d e))
+            (w o))))
+'PaperV.ResourceCertificate.resource_gap_identity' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.ResourceCertificate.two_error_certificate.{u_1,
+    u_2} : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype.{u_1} I] [inst_1 : Fintype.{u_2} E] [DecidableEq.{u_1 + 1} I]
+  [inst_3 : DecidableEq.{u_2 + 1} E] {R : @PaperV.ResourceCertificate.System.{u_1, u_2} I E inst inst_1 inst_3}
+  (w : I → Rat)
+  (p :
+    @PaperV.FiniteLP.PrimalFeasible.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+      (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R))
+  (d :
+    @PaperV.FiniteLP.DualFeasible.{u_1, u_2, 0} I E inst_1 Rat Rat.instField Rat.linearOrder
+      (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w)
+  {q : Nat},
+  @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) q →
+    ∀ {X : I → Nat},
+      (∀ (o : I),
+          @Eq.{1} Rat
+            (@HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul) (@Nat.cast.{0} Rat Rat.instNatCast q)
+              (@PaperV.FiniteLP.PrimalFeasible.weight.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+                (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) p o))
+            (@Nat.cast.{0} Rat Rat.instNatCast (X o))) →
+        ∀ (c : @PaperV.ResourceCertificate.Realization.{u_1, u_2} I E inst inst_1 inst_3 R w X q),
+          ∃ i,
+            And
+              (@PaperV.ResourceCertificate.System.Packing.{u_1, u_2} I E inst inst_1 inst_3 R
+                (@PaperV.ResourceCertificate.Realization.out.{u_1, u_2} I E inst inst_1 inst_3 R w X q c i))
+              (And
+                (@LE.le.{0} Rat Rat.instLE
+                  (@HSub.hSub.{0, 0, 0} Rat Rat Rat (@instHSub.{0} Rat Rat.instSub)
+                    (@PaperV.FiniteLP.primalValue.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+                      (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w p)
+                    (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+                      (@PaperV.ResourceCertificate.Realization.cost.{u_1, u_2} I E inst inst_1 inst_3 R w X q c)
+                      (@Nat.cast.{0} Rat Rat.instNatCast q)))
+                  (@PaperV.ResourceCertificate.System.gain.{u_1, u_2} I E inst inst_1 inst_3 R w
+                    (@PaperV.ResourceCertificate.Realization.out.{u_1, u_2} I E inst inst_1 inst_3 R w X q c i)))
+                (∀
+                  (z :
+                    @PaperV.FiniteLP.PrimalFeasible.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+                      (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R)),
+                  @LE.le.{0} Rat Rat.instLE
+                    (@HSub.hSub.{0, 0, 0} Rat Rat Rat (@instHSub.{0} Rat Rat.instSub)
+                      (@PaperV.FiniteLP.primalValue.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+                        (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w z)
+                      (@PaperV.ResourceCertificate.System.gain.{u_1, u_2} I E inst inst_1 inst_3 R w
+                        (@PaperV.ResourceCertificate.Realization.out.{u_1, u_2} I E inst inst_1 inst_3 R w X q c i)))
+                    (@HAdd.hAdd.{0, 0, 0} Rat Rat Rat (@instHAdd.{0} Rat Rat.instAdd)
+                      (@HSub.hSub.{0, 0, 0} Rat Rat Rat (@instHSub.{0} Rat Rat.instSub)
+                        (@PaperV.FiniteLP.dualValue.{u_1, u_2, 0} I E inst_1 Rat Rat.instField Rat.linearOrder
+                          (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w d)
+                        (@PaperV.FiniteLP.primalValue.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+                          (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w p))
+                      (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+                        (@PaperV.ResourceCertificate.Realization.cost.{u_1, u_2} I E inst inst_1 inst_3 R w X q c)
+                        (@Nat.cast.{0} Rat Rat.instNatCast q)))))
+'PaperV.ResourceCertificate.two_error_certificate' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.ResourceCertificate.two_error_real_optimum.{u_1,
+    u_2} : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype.{u_1} I] [inst_1 : Fintype.{u_2} E] [DecidableEq.{u_1 + 1} I]
+  [inst_3 : DecidableEq.{u_2 + 1} E] (R : @PaperV.ResourceCertificate.System.{u_1, u_2} I E inst inst_1 inst_3)
+  (w : I → Rat)
+  (p :
+    @PaperV.FiniteLP.PrimalFeasible.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+      (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R))
+  (d :
+    @PaperV.FiniteLP.DualFeasible.{u_1, u_2, 0} I E inst_1 Rat Rat.instField Rat.linearOrder
+      (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w)
+  (pstar :
+    @PaperV.FiniteLP.PrimalFeasible.{u_1, u_2, 0} I E inst Real Real.instField Real.linearOrder
+      (@PaperV.ResourceCertificate.realIncidence.{u_1, u_2} I E inst inst_1 inst_3 R)),
+  (∀
+      (z :
+        @PaperV.FiniteLP.PrimalFeasible.{u_1, u_2, 0} I E inst Real Real.instField Real.linearOrder
+          (@PaperV.ResourceCertificate.realIncidence.{u_1, u_2} I E inst inst_1 inst_3 R)),
+      @LE.le.{0} Real Real.instLE
+        (@PaperV.FiniteLP.primalValue.{u_1, u_2, 0} I E inst Real Real.instField Real.linearOrder
+          (@PaperV.ResourceCertificate.realIncidence.{u_1, u_2} I E inst inst_1 inst_3 R)
+          (fun o => @Rat.cast.{0} Real Real.instRatCast (w o)) z)
+        (@PaperV.FiniteLP.primalValue.{u_1, u_2, 0} I E inst Real Real.instField Real.linearOrder
+          (@PaperV.ResourceCertificate.realIncidence.{u_1, u_2} I E inst inst_1 inst_3 R)
+          (fun o => @Rat.cast.{0} Real Real.instRatCast (w o)) pstar)) →
+    ∀ {q : Nat},
+      @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) q →
+        ∀ {X : I → Nat},
+          (∀ (o : I),
+              @Eq.{1} Rat
+                (@HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul) (@Nat.cast.{0} Rat Rat.instNatCast q)
+                  (@PaperV.FiniteLP.PrimalFeasible.weight.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+                    (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) p o))
+                (@Nat.cast.{0} Rat Rat.instNatCast (X o))) →
+            ∀ (c : @PaperV.ResourceCertificate.Realization.{u_1, u_2} I E inst inst_1 inst_3 R w X q),
+              ∃ i,
+                And
+                  (@PaperV.ResourceCertificate.System.Packing.{u_1, u_2} I E inst inst_1 inst_3 R
+                    (@PaperV.ResourceCertificate.Realization.out.{u_1, u_2} I E inst inst_1 inst_3 R w X q c i))
+                  (And
+                    (@LE.le.{0} Real Real.instLE
+                      (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+                        (@Rat.cast.{0} Real Real.instRatCast
+                          (@PaperV.FiniteLP.primalValue.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+                            (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w p))
+                        (@HDiv.hDiv.{0, 0, 0} Real Real Real
+                          (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+                          (@Rat.cast.{0} Real Real.instRatCast
+                            (@PaperV.ResourceCertificate.Realization.cost.{u_1, u_2} I E inst inst_1 inst_3 R w X q c))
+                          (@Nat.cast.{0} Real Real.instNatCast q)))
+                      (@Rat.cast.{0} Real Real.instRatCast
+                        (@PaperV.ResourceCertificate.System.gain.{u_1, u_2} I E inst inst_1 inst_3 R w
+                          (@PaperV.ResourceCertificate.Realization.out.{u_1, u_2} I E inst inst_1 inst_3 R w X q c i))))
+                    (And
+                      (@LE.le.{0} Real Real.instLE
+                        (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+                        (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+                          (@PaperV.FiniteLP.primalValue.{u_1, u_2, 0} I E inst Real Real.instField Real.linearOrder
+                            (@PaperV.ResourceCertificate.realIncidence.{u_1, u_2} I E inst inst_1 inst_3 R)
+                            (fun o => @Rat.cast.{0} Real Real.instRatCast (w o)) pstar)
+                          (@Rat.cast.{0} Real Real.instRatCast
+                            (@PaperV.ResourceCertificate.System.gain.{u_1, u_2} I E inst inst_1 inst_3 R w
+                              (@PaperV.ResourceCertificate.Realization.out.{u_1, u_2} I E inst inst_1 inst_3 R w X q c
+                                i)))))
+                      (@LE.le.{0} Real Real.instLE
+                        (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+                          (@PaperV.FiniteLP.primalValue.{u_1, u_2, 0} I E inst Real Real.instField Real.linearOrder
+                            (@PaperV.ResourceCertificate.realIncidence.{u_1, u_2} I E inst inst_1 inst_3 R)
+                            (fun o => @Rat.cast.{0} Real Real.instRatCast (w o)) pstar)
+                          (@Rat.cast.{0} Real Real.instRatCast
+                            (@PaperV.ResourceCertificate.System.gain.{u_1, u_2} I E inst inst_1 inst_3 R w
+                              (@PaperV.ResourceCertificate.Realization.out.{u_1, u_2} I E inst inst_1 inst_3 R w X q c
+                                i))))
+                        (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+                          (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+                            (@Rat.cast.{0} Real Real.instRatCast
+                              (@PaperV.FiniteLP.dualValue.{u_1, u_2, 0} I E inst_1 Rat Rat.instField Rat.linearOrder
+                                (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w d))
+                            (@Rat.cast.{0} Real Real.instRatCast
+                              (@PaperV.FiniteLP.primalValue.{u_1, u_2, 0} I E inst Rat Rat.instField Rat.linearOrder
+                                (@PaperV.ResourceCertificate.System.incidence.{u_1, u_2} I E inst inst_1 inst_3 R) w
+                                p)))
+                          (@HDiv.hDiv.{0, 0, 0} Real Real Real
+                            (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+                            (@Rat.cast.{0} Real Real.instRatCast
+                              (@PaperV.ResourceCertificate.Realization.cost.{u_1, u_2} I E inst inst_1 inst_3 R w X q
+                                c))
+                            (@Nat.cast.{0} Real Real.instNatCast q))))))
+'PaperV.ResourceCertificate.two_error_real_optimum' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.ResourceCertificate.exists_real_optimum.{u_1,
+    u_2} : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype.{u_1} I] [inst_1 : Fintype.{u_2} E] [DecidableEq.{u_1 + 1} I]
+  [inst_3 : DecidableEq.{u_2 + 1} E] (R : @PaperV.ResourceCertificate.System.{u_1, u_2} I E inst inst_1 inst_3)
+  (w : I → Rat),
+  ∃ p,
+    ∀
+      (z :
+        @PaperV.FiniteLP.PrimalFeasible.{u_1, u_2, 0} I E inst Real Real.instField Real.linearOrder
+          (@PaperV.ResourceCertificate.realIncidence.{u_1, u_2} I E inst inst_1 inst_3 R)),
+      @LE.le.{0} Real Real.instLE
+        (@PaperV.FiniteLP.primalValue.{u_1, u_2, 0} I E inst Real Real.instField Real.linearOrder
+          (@PaperV.ResourceCertificate.realIncidence.{u_1, u_2} I E inst inst_1 inst_3 R)
+          (fun o => @Rat.cast.{0} Real Real.instRatCast (w o)) z)
+        (@PaperV.FiniteLP.primalValue.{u_1, u_2, 0} I E inst Real Real.instField Real.linearOrder
+          (@PaperV.ResourceCertificate.realIncidence.{u_1, u_2} I E inst inst_1 inst_3 R)
+          (fun o => @Rat.cast.{0} Real Real.instRatCast (w o)) p)
+'PaperV.ResourceCertificate.exists_real_optimum' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.ResourceCertificate.System.packing_union.{u_1,
+    u_2} : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype.{u_1} I] [inst_1 : Fintype.{u_2} E]
+  [inst_2 : DecidableEq.{u_1 + 1} I] [inst_3 : DecidableEq.{u_2 + 1} E]
+  (R : @PaperV.ResourceCertificate.System.{u_1, u_2} I E inst inst_1 inst_3) {P Q : Finset.{u_1} I},
+  @PaperV.ResourceCertificate.System.Packing.{u_1, u_2} I E inst inst_1 inst_3 R P →
+    @PaperV.ResourceCertificate.System.Packing.{u_1, u_2} I E inst inst_1 inst_3 R Q →
+      (∀ (a : I),
+          @Membership.mem.{u_1, u_1} I (Finset.{u_1} I)
+              (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} I) I (@Finset.instSetLike.{u_1} I)) P a →
+            ∀ (b : I),
+              @Membership.mem.{u_1, u_1} I (Finset.{u_1} I)
+                  (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} I) I (@Finset.instSetLike.{u_1} I)) Q b →
+                @Disjoint.{u_2} (Finset.{u_2} E) (@Finset.instPartialOrder.{u_2} E) (@Finset.instOrderBot.{u_2} E)
+                  (@PaperV.ResourceCertificate.System.resources.{u_1, u_2} I E inst inst_1 inst_3 R a)
+                  (@PaperV.ResourceCertificate.System.resources.{u_1, u_2} I E inst inst_1 inst_3 R b)) →
+        @PaperV.ResourceCertificate.System.Packing.{u_1, u_2} I E inst inst_1 inst_3 R
+          (@Union.union.{u_1} (Finset.{u_1} I) (@Finset.instUnion.{u_1} I inst_2) P Q)
+'PaperV.ResourceCertificate.System.packing_union' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.ResourceCertificate.System.compatible_realization_union.{u_1, u_2,
+    u_3} : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype.{u_1} I] [inst_1 : Fintype.{u_2} E]
+  [inst_2 : DecidableEq.{u_1 + 1} I] [inst_3 : DecidableEq.{u_2 + 1} E]
+  (R : @PaperV.ResourceCertificate.System.{u_1, u_2} I E inst inst_1 inst_3) {J : Type u_3} [DecidableEq.{u_3 + 1} J]
+  (js : Finset.{u_3} J) (out : J → Finset.{u_1} I) (w : I → Rat) (mass loss : J → Rat),
+  (∀ (j : J),
+      @Membership.mem.{u_3, u_3} J (Finset.{u_3} J)
+          (@SetLike.instMembership.{u_3, u_3} (Finset.{u_3} J) J (@Finset.instSetLike.{u_3} J)) js j →
+        @PaperV.ResourceCertificate.System.Packing.{u_1, u_2} I E inst inst_1 inst_3 R (out j)) →
+    (∀ (i : J),
+        @Membership.mem.{u_3, u_3} J (Finset.{u_3} J)
+            (@SetLike.instMembership.{u_3, u_3} (Finset.{u_3} J) J (@Finset.instSetLike.{u_3} J)) js i →
+          ∀ (j : J),
+            @Membership.mem.{u_3, u_3} J (Finset.{u_3} J)
+                (@SetLike.instMembership.{u_3, u_3} (Finset.{u_3} J) J (@Finset.instSetLike.{u_3} J)) js j →
+              @Ne.{u_3 + 1} J i j →
+                ∀ (a : I),
+                  @Membership.mem.{u_1, u_1} I (Finset.{u_1} I)
+                      (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} I) I (@Finset.instSetLike.{u_1} I)) (out i) a →
+                    ∀ (b : I),
+                      @Membership.mem.{u_1, u_1} I (Finset.{u_1} I)
+                          (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} I) I (@Finset.instSetLike.{u_1} I)) (out j)
+                          b →
+                        @Disjoint.{u_2} (Finset.{u_2} E) (@Finset.instPartialOrder.{u_2} E)
+                          (@Finset.instOrderBot.{u_2} E)
+                          (@PaperV.ResourceCertificate.System.resources.{u_1, u_2} I E inst inst_1 inst_3 R a)
+                          (@PaperV.ResourceCertificate.System.resources.{u_1, u_2} I E inst inst_1 inst_3 R b)) →
+      (∀ (j : J),
+          @Membership.mem.{u_3, u_3} J (Finset.{u_3} J)
+              (@SetLike.instMembership.{u_3, u_3} (Finset.{u_3} J) J (@Finset.instSetLike.{u_3} J)) js j →
+            @LE.le.{0} Rat Rat.instLE (mass j)
+              (@HAdd.hAdd.{0, 0, 0} Rat Rat Rat (@instHAdd.{0} Rat Rat.instAdd)
+                (@PaperV.ResourceCertificate.System.gain.{u_1, u_2} I E inst inst_1 inst_3 R w (out j)) (loss j))) →
+        And
+          (@PaperV.ResourceCertificate.System.Packing.{u_1, u_2} I E inst inst_1 inst_3 R
+            (@Finset.biUnion.{u_3, u_1} J I inst_2 js out))
+          (@LE.le.{0} Rat Rat.instLE (∑ j ∈ js, mass j)
+            (@HAdd.hAdd.{0, 0, 0} Rat Rat Rat (@instHAdd.{0} Rat Rat.instAdd)
+              (@PaperV.ResourceCertificate.System.gain.{u_1, u_2} I E inst inst_1 inst_3 R w
+                (@Finset.biUnion.{u_3, u_1} J I inst_2 js out))
+              (∑ j ∈ js, loss j)))
+'PaperV.ResourceCertificate.System.compatible_realization_union' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@PaperV.ResourceCertificate.portfolio_selection.{u_1, u_2,
+    u_3} : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype.{u_1} I] [inst_1 : Fintype.{u_2} E] [DecidableEq.{u_1 + 1} I]
+  [inst_3 : DecidableEq.{u_2 + 1} E] {R : @PaperV.ResourceCertificate.System.{u_1, u_2} I E inst inst_1 inst_3}
+  {J : Type u_3} [Fintype.{u_3} J] [Nonempty.{u_3 + 1} J] {w : I → Rat} {X : I → Nat} {q : Nat},
+  @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) q →
+    ∀ (cert : J → @PaperV.ResourceCertificate.Realization.{u_1, u_2} I E inst inst_1 inst_3 R w X q),
+      ∃ j,
+        And
+          (∀ (k : J),
+            @LE.le.{0} Rat Rat.instLE
+              (@PaperV.ResourceCertificate.Realization.cost.{u_1, u_2} I E inst inst_1 inst_3 R w X q (cert j))
+              (@PaperV.ResourceCertificate.Realization.cost.{u_1, u_2} I E inst inst_1 inst_3 R w X q (cert k)))
+          (∃ i,
+            And
+              (@PaperV.ResourceCertificate.System.Packing.{u_1, u_2} I E inst inst_1 inst_3 R
+                (@PaperV.ResourceCertificate.Realization.out.{u_1, u_2} I E inst inst_1 inst_3 R w X q (cert j) i))
+              (@LE.le.{0} Rat Rat.instLE
+                (@HSub.hSub.{0, 0, 0} Rat Rat Rat (@instHSub.{0} Rat Rat.instSub)
+                  (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+                    (@PaperV.ResourceCertificate.System.mass.{u_1, u_2} I E inst inst_1 inst_3 R w X)
+                    (@Nat.cast.{0} Rat Rat.instNatCast q))
+                  (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+                    (@PaperV.ResourceCertificate.Realization.cost.{u_1, u_2} I E inst inst_1 inst_3 R w X q (cert j))
+                    (@Nat.cast.{0} Rat Rat.instNatCast q)))
+                (@PaperV.ResourceCertificate.System.gain.{u_1, u_2} I E inst inst_1 inst_3 R w
+                  (@PaperV.ResourceCertificate.Realization.out.{u_1, u_2} I E inst inst_1 inst_3 R w X q (cert j) i))))
+'PaperV.ResourceCertificate.portfolio_selection' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.Host.greedy_host_assignment.{u_1, u_2,
+    u_3} : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [inst : Fintype.{u_1} E] [DecidableEq.{u_1 + 1} E]
+  [Fintype.{u_2} V] [inst_3 : DecidableEq.{u_2 + 1} V] [Fintype.{u_3} H] [DecidableEq.{u_3 + 1} H]
+  (ends : E → Finset.{u_2} V) (L : E → Finset.{u_3} H),
+  (∀ (e : E),
+      ∃ u v,
+        And (@Ne.{u_2 + 1} V u v)
+          (@Eq.{u_2 + 1} (Finset.{u_2} V) (ends e)
+            (@insert.{u_2, u_2} V (Finset.{u_2} V) (@Finset.instInsert.{u_2} V inst_3) u
+              (@singleton.{u_2, u_2} V (Finset.{u_2} V) (@Finset.instSingleton.{u_2} V) v)))) →
+    (∀ (e : E) (u v : V),
+        @Eq.{u_2 + 1} (Finset.{u_2} V) (ends e)
+            (@insert.{u_2, u_2} V (Finset.{u_2} V) (@Finset.instInsert.{u_2} V inst_3) u
+              (@singleton.{u_2, u_2} V (Finset.{u_2} V) (@Finset.instSingleton.{u_2} V) v)) →
+          @LE.le.{0} Nat instLENat
+            (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+              (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+                (@PaperV.GreedyLists.degree.{u_1, u_2} E V inst_3 inst ends u)
+                (@PaperV.GreedyLists.degree.{u_1, u_2} E V inst_3 inst ends v))
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+            (@Finset.card.{u_3} H (L e))) →
+      ∃ c, @PaperV.Host.ProperOn.{u_1, u_2, u_3} E V H ends L (@Finset.univ.{u_1} E inst) c
+'PaperV.Host.greedy_host_assignment' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.Host.assigned_weight.{u_1,
+    u_2} : ∀ {E : Type u_1} {H : Type u_2} [Fintype.{u_1} E] [inst : DecidableEq.{u_1 + 1} E] [Fintype.{u_2} H]
+  [inst_2 : DecidableEq.{u_2 + 1} H] (T : Finset.{u_1} E) (c : E → H) (β : E → Rat),
+  @Eq.{1} Rat
+    (∑
+      t ∈
+        @Finset.image.{u_1, max u_2 u_1} E (Prod.{u_1, u_2} E H)
+          (fun a b => @instDecidableEqProd.{u_1, u_2} E H inst inst_2 a b) (fun e => @Prod.mk.{u_1, u_2} E H e (c e)) T,
+      β (@Prod.fst.{u_1, u_2} E H t))
+    (∑ e ∈ T, β e)
+'PaperV.Host.assigned_weight' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.Host.compatible_background_union.{u_1, u_2, u_3,
+    u_4} : ∀ {E : Type u_1} {H : Type u_2} [Fintype.{u_1} E] [inst : DecidableEq.{u_1 + 1} E] [Fintype.{u_2} H]
+  [inst_2 : DecidableEq.{u_2 + 1} H] {A : Type u_3} {R : Type u_4} [inst_3 : DecidableEq.{u_3 + 1} A]
+  [DecidableEq.{u_4 + 1} R] (resA : A → Finset.{u_4} R) (resB : Prod.{u_1, u_2} E H → Finset.{u_4} R)
+  (P₀ : Finset.{u_3} A) (P₁ : Finset.{max u_2 u_1} (Prod.{u_1, u_2} E H)),
+  @PaperV.UnitBoundary.ResFeasible.{u_3, u_4} A R resA P₀ →
+    @PaperV.UnitBoundary.ResFeasible.{max u_1 u_2, u_4} (Prod.{u_1, u_2} E H) R resB P₁ →
+      (∀ (a : A),
+          @Membership.mem.{u_3, u_3} A (Finset.{u_3} A)
+              (@SetLike.instMembership.{u_3, u_3} (Finset.{u_3} A) A (@Finset.instSetLike.{u_3} A)) P₀ a →
+            ∀ (b : Prod.{u_1, u_2} E H),
+              @Membership.mem.{max u_1 u_2, max u_1 u_2} (Prod.{u_1, u_2} E H)
+                  (Finset.{max u_2 u_1} (Prod.{u_1, u_2} E H))
+                  (@SetLike.instMembership.{max u_1 u_2, max u_1 u_2} (Finset.{max u_2 u_1} (Prod.{u_1, u_2} E H))
+                    (Prod.{u_1, u_2} E H) (@Finset.instSetLike.{max u_1 u_2} (Prod.{u_1, u_2} E H)))
+                  P₁ b →
+                @Disjoint.{u_4} (Finset.{u_4} R) (@Finset.instPartialOrder.{u_4} R) (@Finset.instOrderBot.{u_4} R)
+                  (resA a) (resB b)) →
+        @PaperV.UnitBoundary.ResFeasible.{max (max u_1 u_2) u_3, u_4} (Sum.{u_3, max u_1 u_2} A (Prod.{u_1, u_2} E H)) R
+          (@Sum.elim.{u_3, max u_1 u_2, u_4 + 1} A (Prod.{u_1, u_2} E H) (Finset.{u_4} R) resA resB)
+          (@Union.union.{max (max u_1 u_2) u_3}
+            (Finset.{max (max u_1 u_2) u_3} (Sum.{u_3, max u_1 u_2} A (Prod.{u_1, u_2} E H)))
+            (@Finset.instUnion.{max (max u_1 u_2) u_3} (Sum.{u_3, max u_1 u_2} A (Prod.{u_1, u_2} E H)) fun a b =>
+              @instDecidableEqSum.{u_3, max u_1 u_2} A (Prod.{u_1, u_2} E H) inst_3
+                (fun a b => @instDecidableEqProd.{u_1, u_2} E H inst inst_2 a b) a b)
+            (@Finset.image.{u_3, max (max u_1 u_2) u_3} A (Sum.{u_3, max u_1 u_2} A (Prod.{u_1, u_2} E H))
+              (fun a b =>
+                @instDecidableEqSum.{u_3, max u_1 u_2} A (Prod.{u_1, u_2} E H) inst_3
+                  (fun a b => @instDecidableEqProd.{u_1, u_2} E H inst inst_2 a b) a b)
+              (@Sum.inl.{u_3, max u_1 u_2} A (Prod.{u_1, u_2} E H)) P₀)
+            (@Finset.image.{max u_1 u_2, max (max u_1 u_2) u_3} (Prod.{u_1, u_2} E H)
+              (Sum.{u_3, max u_1 u_2} A (Prod.{u_1, u_2} E H))
+              (fun a b =>
+                @instDecidableEqSum.{u_3, max u_1 u_2} A (Prod.{u_1, u_2} E H) inst_3
+                  (fun a b => @instDecidableEqProd.{u_1, u_2} E H inst inst_2 a b) a b)
+              (@Sum.inr.{u_3, max u_1 u_2} A (Prod.{u_1, u_2} E H)) P₁))
+'PaperV.Host.compatible_background_union' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.Host.proper_assignment_avoids_background.{u_1, u_2, u_3,
+    u_4} : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [Fintype.{u_1} E] [inst : DecidableEq.{u_1 + 1} E]
+  [Fintype.{u_2} V] [inst_2 : DecidableEq.{u_2 + 1} V] [Fintype.{u_3} H] [inst_4 : DecidableEq.{u_3 + 1} H]
+  {A : Type u_4} [inst_5 : DecidableEq.{u_4 + 1} A] (ends : E → Finset.{u_2} V) (L : E → Finset.{u_3} H)
+  (T : Finset.{u_1} E) (c : E → H),
+  @PaperV.Host.ProperOn.{u_1, u_2, u_3} E V H ends L T c →
+    ∀ (res₀ : A → Finset.{max (max u_2 u_3) u_1} (Sum.{u_1, max u_2 u_3} E (Prod.{u_3, u_2} H V)))
+      (P₀ : Finset.{u_4} A),
+      @PaperV.UnitBoundary.ResFeasible.{u_4, max (max u_1 u_2) u_3} A (Sum.{u_1, max u_2 u_3} E (Prod.{u_3, u_2} H V))
+          res₀ P₀ →
+        (∀ (a : A),
+            @Membership.mem.{u_4, u_4} A (Finset.{u_4} A)
+                (@SetLike.instMembership.{u_4, u_4} (Finset.{u_4} A) A (@Finset.instSetLike.{u_4} A)) P₀ a →
+              ∀ (e : E),
+                @Membership.mem.{u_1, u_1} E (Finset.{u_1} E)
+                    (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} E) E (@Finset.instSetLike.{u_1} E)) T e →
+                  ∀ (h : H),
+                    @Membership.mem.{u_3, u_3} H (Finset.{u_3} H)
+                        (@SetLike.instMembership.{u_3, u_3} (Finset.{u_3} H) H (@Finset.instSetLike.{u_3} H)) (L e) h →
+                      @Disjoint.{max (max u_1 u_2) u_3}
+                        (Finset.{max (max u_2 u_3) u_1} (Sum.{u_1, max u_2 u_3} E (Prod.{u_3, u_2} H V)))
+                        (@Finset.instPartialOrder.{max (max u_1 u_2) u_3}
+                          (Sum.{u_1, max u_2 u_3} E (Prod.{u_3, u_2} H V)))
+                        (@Finset.instOrderBot.{max (max u_1 u_2) u_3} (Sum.{u_1, max u_2 u_3} E (Prod.{u_3, u_2} H V)))
+                        (res₀ a)
+                        (@PaperV.Host.triRes.{u_1, u_2, u_3} E V H inst inst_2 inst_4 ends
+                          (@Prod.mk.{u_1, u_3} E H e h))) →
+          @PaperV.UnitBoundary.ResFeasible.{max (max u_3 u_1) u_4, max (max u_1 u_2) u_3}
+            (Sum.{u_4, max u_3 u_1} A (Prod.{u_1, u_3} E H)) (Sum.{u_1, max u_2 u_3} E (Prod.{u_3, u_2} H V))
+            (@Sum.elim.{u_4, max u_3 u_1, (max (max u_1 u_2) u_3) + 1} A (Prod.{u_1, u_3} E H)
+              (Finset.{max (max u_1 u_2) u_3} (Sum.{u_1, max u_2 u_3} E (Prod.{u_3, u_2} H V))) res₀
+              (@PaperV.Host.triRes.{u_1, u_2, u_3} E V H inst inst_2 inst_4 ends))
+            (@Union.union.{max (max u_1 u_3) u_4}
+              (Finset.{max (max u_3 u_1) u_4} (Sum.{u_4, max u_3 u_1} A (Prod.{u_1, u_3} E H)))
+              (@Finset.instUnion.{max (max u_1 u_3) u_4} (Sum.{u_4, max u_3 u_1} A (Prod.{u_1, u_3} E H)) fun a b =>
+                @instDecidableEqSum.{u_4, max u_1 u_3} A (Prod.{u_1, u_3} E H) inst_5
+                  (fun a b => @instDecidableEqProd.{u_1, u_3} E H inst inst_4 a b) a b)
+              (@Finset.image.{u_4, max (max u_1 u_3) u_4} A (Sum.{u_4, max u_3 u_1} A (Prod.{u_1, u_3} E H))
+                (fun a b =>
+                  @instDecidableEqSum.{u_4, max u_1 u_3} A (Prod.{u_1, u_3} E H) inst_5
+                    (fun a b => @instDecidableEqProd.{u_1, u_3} E H inst inst_4 a b) a b)
+                (@Sum.inl.{u_4, max u_1 u_3} A (Prod.{u_1, u_3} E H)) P₀)
+              (@Finset.image.{max u_1 u_3, max (max u_1 u_3) u_4} (Prod.{u_1, u_3} E H)
+                (Sum.{u_4, max u_3 u_1} A (Prod.{u_1, u_3} E H))
+                (fun a b =>
+                  @instDecidableEqSum.{u_4, max u_1 u_3} A (Prod.{u_1, u_3} E H) inst_5
+                    (fun a b => @instDecidableEqProd.{u_1, u_3} E H inst inst_4 a b) a b)
+                (@Sum.inr.{u_4, max u_1 u_3} A (Prod.{u_1, u_3} E H))
+                (@Finset.image.{u_1, max u_3 u_1} E (Prod.{u_1, u_3} E H)
+                  (fun a b => @instDecidableEqProd.{u_1, u_3} E H inst inst_4 a b)
+                  (fun e => @Prod.mk.{u_1, u_3} E H e (c e)) T)))
+'PaperV.Host.proper_assignment_avoids_background' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.Host.paired_factor_assignment.{u_1, u_2,
+    u_3} : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [inst : Fintype.{u_1} E] [DecidableEq.{u_1 + 1} E]
+  [Fintype.{u_2} V] [DecidableEq.{u_2 + 1} V] [Fintype.{u_3} H] [inst_5 : DecidableEq.{u_3 + 1} H] {k : Nat}
+  (ends : E → Finset.{u_2} V) (factor : E → Fin k) (L : E → Finset.{u_3} H),
+  (∀ (e f : E),
+      @Ne.{u_1 + 1} E e f →
+        @Eq.{1} (Fin k) (factor e) (factor f) →
+          @Disjoint.{u_2} (Finset.{u_2} V) (@Finset.instPartialOrder.{u_2} V) (@Finset.instOrderBot.{u_2} V) (ends e)
+            (ends f)) →
+    ∀ (S : Finset.{0} (Fin k)) (ι ι' : Fin k → H),
+      @Function.Injective.{1, u_3 + 1} (Fin k) H ι →
+        @Set.InjOn.{0, u_3} (Fin k) H ι'
+            (@SetLike.coe.{0, 0} (Finset.{0} (Fin k)) (Fin k) (@Finset.instSetLike.{0} (Fin k))
+              (@compl.{0} (Finset.{0} (Fin k))
+                (@BooleanAlgebra.toCompl.{0} (Finset.{0} (Fin k))
+                  (@Finset.booleanAlgebra.{0} (Fin k) (Fin.fintype k) (instDecidableEqFin k)))
+                S)) →
+          (∀ f ∉ S, ∀ (g : Fin k), @Ne.{u_3 + 1} H (ι' f) (ι g)) →
+            ∃ c,
+              @PaperV.Host.ProperOn.{u_1, u_2, u_3} E V H ends L
+                {e | Not (@PaperV.PairedFactors.Uncovered.{u_3, u_1} H E k factor L S ι ι' e)} c
+'PaperV.Host.paired_factor_assignment' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.Host.empty_factor_completion.{u_1, u_2,
+    u_3} : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [inst : Fintype.{u_1} E] [inst_1 : DecidableEq.{u_1 + 1} E]
+  [Fintype.{u_2} V] [DecidableEq.{u_2 + 1} V] [Fintype.{u_3} H] [inst_5 : DecidableEq.{u_3 + 1} H]
+  (ends : E → Finset.{u_2} V) (L : E → Finset.{u_3} H)
+  (factor : E → Fin (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))),
+  ∃ c,
+    And (@PaperV.Host.ProperOn.{u_1, u_2, u_3} E V H ends L (@Finset.univ.{u_1} E inst) c)
+      (@Eq.{max (u_1 + 1) (u_3 + 1)} (Finset.{max u_1 u_3} (Prod.{u_1, u_3} E H))
+        (@Finset.image.{u_1, max u_1 u_3} E (Prod.{u_1, u_3} E H)
+          (fun a b => @instDecidableEqProd.{u_1, u_3} E H inst_1 inst_5 a b) (fun e => @Prod.mk.{u_1, u_3} E H e (c e))
+          (@Finset.univ.{u_1} E inst))
+        (@EmptyCollection.emptyCollection.{max u_1 u_3} (Finset.{max u_1 u_3} (Prod.{u_1, u_3} E H))
+          (@Finset.instEmptyCollection.{max u_1 u_3} (Prod.{u_1, u_3} E H))))
+'PaperV.Host.empty_factor_completion' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.MixedPromotion.face_count.{u_1} : ∀ {V : Type u_1} [inst : DecidableEq.{u_1 + 1} V] (Q : Finset.{u_1} V),
+  @Eq.{1} Nat (@Finset.card.{u_1} V Q) (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+    ∀ (a b : V),
+      @Ne.{u_1 + 1} V a b →
+        @Eq.{1} Nat
+          (@Finset.card.{u_1} (Finset.{u_1} V)
+            ({T ∈ @Finset.powersetCard.{u_1} V (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) Q |
+              And
+                (@Membership.mem.{u_1, u_1} V (Finset.{u_1} V)
+                  (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} V) V (@Finset.instSetLike.{u_1} V)) T a)
+                (@Membership.mem.{u_1, u_1} V (Finset.{u_1} V)
+                  (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} V) V (@Finset.instSetLike.{u_1} V)) T b)}))
+          (@ite.{1} Nat
+            (And
+              (@Membership.mem.{u_1, u_1} V (Finset.{u_1} V)
+                (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} V) V (@Finset.instSetLike.{u_1} V)) Q a)
+              (@Membership.mem.{u_1, u_1} V (Finset.{u_1} V)
+                (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} V) V (@Finset.instSetLike.{u_1} V)) Q b))
+            (@instDecidableAnd
+              (@Membership.mem.{u_1, u_1} V (Finset.{u_1} V)
+                (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} V) V (@Finset.instSetLike.{u_1} V)) Q a)
+              (@Membership.mem.{u_1, u_1} V (Finset.{u_1} V)
+                (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} V) V (@Finset.instSetLike.{u_1} V)) Q b)
+              (@Finset.decidableMem.{u_1} V inst a Q) (@Finset.decidableMem.{u_1} V inst b Q))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+            (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))))
+'PaperV.MixedPromotion.face_count' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.MixedPromotion.load_promote.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V] [inst_1 : DecidableEq.{u_1 + 1} V]
+  (y : Finset.{u_1} V → Real) (Q : Finset.{u_1} V),
+  @Eq.{1} Nat (@Finset.card.{u_1} V Q) (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+    ∀ (α : Real) (a b : V),
+      @Ne.{u_1 + 1} V a b →
+        @Eq.{1} Real
+          (@PaperV.MixedPromotion.load.{u_1} V inst inst_1 (@PaperV.MixedPromotion.promote.{u_1} V inst_1 y Q α) a b)
+          (@PaperV.MixedPromotion.load.{u_1} V inst inst_1 y a b)
+'PaperV.MixedPromotion.load_promote' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.MixedPromotion.feasible_promote.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+  [inst_1 : DecidableEq.{u_1 + 1} V] (G : SimpleGraph.{u_1} V) {y : Finset.{u_1} V → Real},
+  @PaperV.MixedPromotion.Feasible.{u_1} V inst inst_1 G y →
+    ∀ (Q : Finset.{u_1} V),
+      @Eq.{1} Nat (@Finset.card.{u_1} V Q) (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+        @SimpleGraph.IsClique.{u_1} V G (@SetLike.coe.{u_1, u_1} (Finset.{u_1} V) V (@Finset.instSetLike.{u_1} V) Q) →
+          ∀ (α : Real),
+            @LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) α →
+              (∀ (T : Finset.{u_1} V),
+                  @Membership.mem.{u_1, u_1} (Finset.{u_1} V) (Finset.{u_1} (Finset.{u_1} V))
+                      (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (Finset.{u_1} V)) (Finset.{u_1} V)
+                        (@Finset.instSetLike.{u_1} (Finset.{u_1} V)))
+                      (@Finset.powersetCard.{u_1} V (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) Q) T →
+                    @LE.le.{0} Real Real.instLE α (y T)) →
+                @PaperV.MixedPromotion.Feasible.{u_1} V inst inst_1 G
+                  (@PaperV.MixedPromotion.promote.{u_1} V inst_1 y Q α)
+'PaperV.MixedPromotion.feasible_promote' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.MixedPromotion.gain_promote.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V] [inst_1 : DecidableEq.{u_1 + 1} V]
+  (y : Finset.{u_1} V → Real) (Q : Finset.{u_1} V),
+  @Eq.{1} Nat (@Finset.card.{u_1} V Q) (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+    ∀ (α : Real),
+      @Eq.{1} Real
+        (@PaperV.MixedPromotion.value.{u_1} V inst (@PaperV.MixedPromotion.gain.{u_1} V)
+          (@PaperV.MixedPromotion.promote.{u_1} V inst_1 y Q α))
+        (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+          (@PaperV.MixedPromotion.value.{u_1} V inst (@PaperV.MixedPromotion.gain.{u_1} V) y)
+          (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+            (@OfNat.ofNat.{0} Real (nat_lit 2) (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast ⋯)) α))
+'PaperV.MixedPromotion.gain_promote' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.MixedPromotion.pricedValue_promote.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+  [inst_1 : DecidableEq.{u_1 + 1} V] (π : V → V → Real) (y : Finset.{u_1} V → Real) (Q : Finset.{u_1} V),
+  @Eq.{1} Nat (@Finset.card.{u_1} V Q) (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+    ∀ (α : Real),
+      @Eq.{1} Real
+        (@PaperV.MixedPromotion.pricedValue.{u_1} V inst inst_1 π (@PaperV.MixedPromotion.promote.{u_1} V inst_1 y Q α))
+        (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+          (@PaperV.MixedPromotion.pricedValue.{u_1} V inst inst_1 π y)
+          (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+            (@OfNat.ofNat.{0} Real (nat_lit 2) (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast ⋯)) α))
+'PaperV.MixedPromotion.pricedValue_promote' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.MixedPromotion.optimal_support_exclusion.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+  [inst_1 : DecidableEq.{u_1 + 1} V] (G : SimpleGraph.{u_1} V) {y : Finset.{u_1} V → Real},
+  @PaperV.MixedPromotion.Feasible.{u_1} V inst inst_1 G y →
+    ∀ (π : V → V → Real),
+      (∀ (z : Finset.{u_1} V → Real),
+          @PaperV.MixedPromotion.Feasible.{u_1} V inst inst_1 G z →
+            @LE.le.{0} Real Real.instLE (@PaperV.MixedPromotion.pricedValue.{u_1} V inst inst_1 π z)
+              (@PaperV.MixedPromotion.pricedValue.{u_1} V inst inst_1 π y)) →
+        ∀ (Q : Finset.{u_1} V),
+          @Eq.{1} Nat (@Finset.card.{u_1} V Q) (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+            @SimpleGraph.IsClique.{u_1} V G
+                (@SetLike.coe.{u_1, u_1} (Finset.{u_1} V) V (@Finset.instSetLike.{u_1} V) Q) →
+              ∃ T,
+                And
+                  (@Membership.mem.{u_1, u_1} (Finset.{u_1} V) (Finset.{u_1} (Finset.{u_1} V))
+                    (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (Finset.{u_1} V)) (Finset.{u_1} V)
+                      (@Finset.instSetLike.{u_1} (Finset.{u_1} V)))
+                    (@Finset.powersetCard.{u_1} V (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) Q) T)
+                  (@Eq.{1} Real (y T) (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)))
+'PaperV.MixedPromotion.optimal_support_exclusion' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.MixedPromotion.support_decreases.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+  [inst_1 : DecidableEq.{u_1 + 1} V] {y : Finset.{u_1} V → Real} (Q : Finset.{u_1} V),
+  @Eq.{1} Nat (@Finset.card.{u_1} V Q) (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) →
+    ∀ (α : Real),
+      @LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) α →
+        ∀ (T : Finset.{u_1} V),
+          @Membership.mem.{u_1, u_1} (Finset.{u_1} V) (Finset.{u_1} (Finset.{u_1} V))
+              (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (Finset.{u_1} V)) (Finset.{u_1} V)
+                (@Finset.instSetLike.{u_1} (Finset.{u_1} V)))
+              (@Finset.powersetCard.{u_1} V (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) Q) T →
+            @Eq.{1} Real (y T) α →
+              @LT.lt.{0} Nat instLTNat
+                (@Finset.card.{u_1} (Finset.{u_1} V)
+                  (@PaperV.MixedPromotion.triangleSupport.{u_1} V inst
+                    (@PaperV.MixedPromotion.promote.{u_1} V inst_1 y Q α)))
+                (@Finset.card.{u_1} (Finset.{u_1} V) (@PaperV.MixedPromotion.triangleSupport.{u_1} V inst y))
+'PaperV.MixedPromotion.support_decreases' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.MixedPromotion.exists_normalized.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+  [inst_1 : DecidableEq.{u_1 + 1} V] (G : SimpleGraph.{u_1} V) {y : Finset.{u_1} V → Real},
+  @PaperV.MixedPromotion.Feasible.{u_1} V inst inst_1 G y →
+    ∀ (π : V → V → Real),
+      ∃ k z,
+        And
+          (@LE.le.{0} Nat instLENat k
+            (@Finset.card.{u_1} (Finset.{u_1} V) (@PaperV.MixedPromotion.triangleSupport.{u_1} V inst y)))
+          (And (@PaperV.MixedPromotion.PromotionChain.{u_1} V inst_1 G k y z)
+            (And (@PaperV.MixedPromotion.Feasible.{u_1} V inst inst_1 G z)
+              (And
+                (∀ (a b : V),
+                  @Ne.{u_1 + 1} V a b →
+                    @Eq.{1} Real (@PaperV.MixedPromotion.load.{u_1} V inst inst_1 z a b)
+                      (@PaperV.MixedPromotion.load.{u_1} V inst inst_1 y a b))
+                (And
+                  (@LE.le.{0} Real Real.instLE (@PaperV.MixedPromotion.pricedValue.{u_1} V inst inst_1 π y)
+                    (@PaperV.MixedPromotion.pricedValue.{u_1} V inst inst_1 π z))
+                  (@PaperV.MixedPromotion.Normalized.{u_1} V G z)))))
+'PaperV.MixedPromotion.exists_normalized' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.MixedBudget.fractionalSlack_nonneg.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+  [inst_1 : DecidableEq.{u_1 + 1} V] (G : SimpleGraph.{u_1} V)
+  [inst_2 : @DecidableRel.{u_1 + 1, u_1 + 1} V V (@SimpleGraph.Adj.{u_1} V G)] (v u : V),
+  Not (@SimpleGraph.Adj.{u_1} V G u v) →
+    ∀ (gain : Nat → Nat),
+      @LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+        (@PaperV.MixedBudget.fractionalSlack.{u_1} V inst inst_1 G inst_2 v u gain)
+'PaperV.MixedBudget.fractionalSlack_nonneg' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.MixedBudget.mixed_copy_gap_budget.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+  [inst_1 : DecidableEq.{u_1 + 1} V] (G : SimpleGraph.{u_1} V)
+  [inst_2 : @DecidableRel.{u_1 + 1, u_1 + 1} V V (@SimpleGraph.Adj.{u_1} V G)] (v u : V)
+  (huv : Not (@SimpleGraph.Adj.{u_1} V G u v)) (gain : Nat → Nat)
+  (P₁ :
+    Finset.{u_1}
+      (@PaperV.mixedCS.{u_1} V inst inst_1 (@PaperV.copyGraph.{u_1} V G v u) fun a b =>
+          @PaperV.instDecidableRelAdjCopyGraph.{u_1} V inst_1 G inst_2 v u a b).O)
+  (P₂ :
+    Finset.{u_1}
+      (@PaperV.mixedCS.{u_1} V inst inst_1 (@PaperV.copyGraph.{u_1} V G u v) fun a b =>
+          @PaperV.instDecidableRelAdjCopyGraph.{u_1} V inst_1 G inst_2 u v a b).O),
+  PaperV.CSFeasible.{u_1}
+      (@PaperV.mixedCS.{u_1} V inst inst_1 (@PaperV.copyGraph.{u_1} V G v u) fun a b =>
+        @PaperV.instDecidableRelAdjCopyGraph.{u_1} V inst_1 G inst_2 v u a b)
+      P₁ →
+    PaperV.CSFeasible.{u_1}
+        (@PaperV.mixedCS.{u_1} V inst inst_1 (@PaperV.copyGraph.{u_1} V G u v) fun a b =>
+          @PaperV.instDecidableRelAdjCopyGraph.{u_1} V inst_1 G inst_2 u v a b)
+        P₂ →
+      @Eq.{1} Nat
+          (@PaperV.packGain.{u_1} V inst inst_1 (@PaperV.copyGraph.{u_1} V G v u)
+            (fun a b => @PaperV.instDecidableRelAdjCopyGraph.{u_1} V inst_1 G inst_2 v u a b) gain P₁)
+          (PaperV.wNu.{u_1}
+            (@PaperV.mixedCS.{u_1} V inst inst_1 (@PaperV.copyGraph.{u_1} V G v u) fun a b =>
+              @PaperV.instDecidableRelAdjCopyGraph.{u_1} V inst_1 G inst_2 v u a b)
+            (@PaperV.mixedWeight.{u_1} V inst inst_1 (@PaperV.copyGraph.{u_1} V G v u)
+              (fun a b => @PaperV.instDecidableRelAdjCopyGraph.{u_1} V inst_1 G inst_2 v u a b) gain)) →
+        @Eq.{1} Nat
+            (@PaperV.packGain.{u_1} V inst inst_1 (@PaperV.copyGraph.{u_1} V G u v)
+              (fun a b => @PaperV.instDecidableRelAdjCopyGraph.{u_1} V inst_1 G inst_2 u v a b) gain P₂)
+            (PaperV.wNu.{u_1}
+              (@PaperV.mixedCS.{u_1} V inst inst_1 (@PaperV.copyGraph.{u_1} V G u v) fun a b =>
+                @PaperV.instDecidableRelAdjCopyGraph.{u_1} V inst_1 G inst_2 u v a b)
+              (@PaperV.mixedWeight.{u_1} V inst inst_1 (@PaperV.copyGraph.{u_1} V G u v)
+                (fun a b => @PaperV.instDecidableRelAdjCopyGraph.{u_1} V inst_1 G inst_2 u v a b) gain)) →
+          ∀
+            (cert :
+              PaperV.RealCert.{u_1, u_1} (@PaperV.mixedCS.{u_1} V inst inst_1 G inst_2)
+                (@PaperV.mixedCS.{u_1} V inst inst_1 G inst_2) (@PaperV.mixedWeight.{u_1} V inst inst_1 G inst_2 gain)
+                (@PaperV.mixedWeight.{u_1} V inst inst_1 G inst_2 gain)
+                (@PaperV.imageMultiset.{u_1} V inst inst_1 G inst_2 v u huv ⋯ P₁ P₂)
+                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))),
+            And
+              (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+                (@PaperV.MixedBudget.fractionalSlack.{u_1} V inst inst_1 G inst_2 v u gain))
+              (@LE.le.{0} Real Real.instLE (@PaperV.MixedBudget.gap.{u_1} V inst inst_1 G inst_2 gain)
+                (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+                  (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+                    (@HDiv.hDiv.{0, 0, 0} Real Real Real
+                      (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+                      (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+                        (@PaperV.MixedBudget.gap.{u_1} V inst inst_1 (@PaperV.copyGraph.{u_1} V G v u)
+                          (fun a b => @PaperV.instDecidableRelAdjCopyGraph.{u_1} V inst_1 G inst_2 v u a b) gain)
+                        (@PaperV.MixedBudget.gap.{u_1} V inst inst_1 (@PaperV.copyGraph.{u_1} V G u v)
+                          (fun a b => @PaperV.instDecidableRelAdjCopyGraph.{u_1} V inst_1 G inst_2 u v a b) gain))
+                      (@OfNat.ofNat.{0} Real (nat_lit 2)
+                        (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast ⋯)))
+                    (@PaperV.MixedBudget.fractionalSlack.{u_1} V inst inst_1 G inst_2 v u gain))
+                  (@HDiv.hDiv.{0, 0, 0} Real Real Real
+                    (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+                    (@Nat.cast.{0} Real Real.instNatCast
+                      (@PaperV.RealCert.cost.{u_1, u_1} (@PaperV.mixedCS.{u_1} V inst inst_1 G inst_2)
+                        (@PaperV.mixedCS.{u_1} V inst inst_1 G inst_2)
+                        (@PaperV.mixedWeight.{u_1} V inst inst_1 G inst_2 gain)
+                        (@PaperV.mixedWeight.{u_1} V inst inst_1 G inst_2 gain)
+                        (@PaperV.imageMultiset.{u_1} V inst inst_1 G inst_2 v u huv ⋯ P₁ P₂)
+                        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) cert))
+                    (@OfNat.ofNat.{0} Real (nat_lit 2)
+                      (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast ⋯)))))
+'PaperV.MixedBudget.mixed_copy_gap_budget' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.Host.exists_paired_host_completion.{u_1, u_2,
+    u_3} : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [inst : Fintype.{u_1} E] [DecidableEq.{u_1 + 1} E]
+  [Fintype.{u_2} V] [DecidableEq.{u_2 + 1} V] [inst_4 : Fintype.{u_3} H] [inst_5 : DecidableEq.{u_3 + 1} H]
+  (k q s : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) k →
+    @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) q →
+      @LE.le.{0} Nat instLENat s k →
+        @LE.le.{0} Nat instLENat
+            (@HSub.hSub.{0, 0, 0} Nat Nat Nat (@instHSub.{0} Nat instSubNat)
+              (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) k)
+              s)
+            q →
+          @Eq.{1} Nat (@Fintype.card.{u_3} H inst_4) q →
+            ∀ (ends : E → Finset.{u_2} V) (factor : E → Fin k) (L : E → Finset.{u_3} H) (β : E → Rat),
+              (∀ (e : E),
+                  @LE.le.{0} Rat Rat.instLE (@OfNat.ofNat.{0} Rat (nat_lit 0) (@Rat.instOfNat (nat_lit 0))) (β e)) →
+                (∀ (e f : E),
+                    @Ne.{u_1 + 1} E e f →
+                      @Eq.{1} (Fin k) (factor e) (factor f) →
+                        @Disjoint.{u_2} (Finset.{u_2} V) (@Finset.instPartialOrder.{u_2} V)
+                          (@Finset.instOrderBot.{u_2} V) (ends e) (ends f)) →
+                  ∃ S ι ι' c,
+                    And (@Eq.{1} Nat (@Finset.card.{0} (Fin k) S) s)
+                      (And (@Function.Injective.{1, u_3 + 1} (Fin k) H ι)
+                        (And
+                          (@Set.InjOn.{0, u_3} (Fin k) H ι'
+                            (@SetLike.coe.{0, 0} (Finset.{0} (Fin k)) (Fin k) (@Finset.instSetLike.{0} (Fin k))
+                              (@compl.{0} (Finset.{0} (Fin k))
+                                (@BooleanAlgebra.toCompl.{0} (Finset.{0} (Fin k))
+                                  (@Finset.booleanAlgebra.{0} (Fin k) (Fin.fintype k) (instDecidableEqFin k)))
+                                S)))
+                          (And (∀ f ∉ S, ∀ (g : Fin k), @Ne.{u_3 + 1} H (ι' f) (ι g))
+                            (And
+                              (@PaperV.Host.ProperOn.{u_1, u_2, u_3} E V H ends L
+                                {e | Not (@PaperV.PairedFactors.Uncovered.{u_3, u_1} H E k factor L S ι ι' e)} c)
+                              (@LE.le.{0} Rat Rat.instLE
+                                (∑ e with (@PaperV.PairedFactors.Uncovered.{u_3, u_1} H E k factor L S ι ι') e, β e)
+                                (@HAdd.hAdd.{0, 0, 0} Rat Rat Rat (@instHAdd.{0} Rat Rat.instAdd)
+                                  (@HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul)
+                                    (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+                                      (@Nat.cast.{0} Rat Rat.instNatCast s)
+                                      (@HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul)
+                                        (@Nat.cast.{0} Rat Rat.instNatCast k) (@Nat.cast.{0} Rat Rat.instNatCast q)))
+                                    (∑ e,
+                                      @HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul) (β e)
+                                        (@Nat.cast.{0} Rat Rat.instNatCast
+                                          (@PaperV.PairedFactors.bad.{u_3, u_1} H E q L e))))
+                                  (@HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul)
+                                    (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+                                      (@HSub.hSub.{0, 0, 0} Rat Rat Rat (@instHSub.{0} Rat Rat.instSub)
+                                        (@Nat.cast.{0} Rat Rat.instNatCast k) (@Nat.cast.{0} Rat Rat.instNatCast s))
+                                      (@HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul)
+                                        (@HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul)
+                                          (@Nat.cast.{0} Rat Rat.instNatCast k) (@Nat.cast.{0} Rat Rat.instNatCast q))
+                                        (@HSub.hSub.{0, 0, 0} Rat Rat Rat (@instHSub.{0} Rat Rat.instSub)
+                                          (@Nat.cast.{0} Rat Rat.instNatCast q)
+                                          (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1))))))
+                                    (∑ e,
+                                      @HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul)
+                                        (@HMul.hMul.{0, 0, 0} Rat Rat Rat (@instHMul.{0} Rat Rat.instMul) (β e)
+                                          (@Nat.cast.{0} Rat Rat.instNatCast
+                                            (@PaperV.PairedFactors.bad.{u_3, u_1} H E q L e)))
+                                        (@HSub.hSub.{0, 0, 0} Rat Rat Rat (@instHSub.{0} Rat Rat.instSub)
+                                          (@Nat.cast.{0} Rat Rat.instNatCast
+                                            (@PaperV.PairedFactors.bad.{u_3, u_1} H E q L e))
+                                          (@OfNat.ofNat.{0} Rat (nat_lit 1) (@Rat.instOfNat (nat_lit 1))))))))))))
+'PaperV.Host.exists_paired_host_completion' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.MixedBudget.CopyTree.gap_budget.{u_1} : ∀ {α : Type u_1} (Γ δ C : α → Real)
+  (t : PaperV.MixedBudget.CopyTree.{u_1} α),
+  @PaperV.MixedBudget.CopyTree.valid.{u_1} α Γ δ C t →
+    @LE.le.{0} Real Real.instLE (Γ (@PaperV.MixedBudget.CopyTree.root.{u_1} α t))
+      (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+        (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+          (@PaperV.MixedBudget.CopyTree.leaves.{u_1} α Γ t) (@PaperV.MixedBudget.CopyTree.internal.{u_1} α δ t))
+        (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+          (@PaperV.MixedBudget.CopyTree.internal.{u_1} α C t)
+          (@OfNat.ofNat.{0} Real (nat_lit 2) (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast ⋯))))
+'PaperV.MixedBudget.CopyTree.gap_budget' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.MixedBudget.CopyTree.slack_telescopes.{u_1} : ∀ {α : Type u_1} (F : α → Real)
+  (t : PaperV.MixedBudget.CopyTree.{u_1} α),
+  @Eq.{1} Real (@PaperV.MixedBudget.CopyTree.slack.{u_1} α F t)
+    (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+      (F (@PaperV.MixedBudget.CopyTree.root.{u_1} α t)) (@PaperV.MixedBudget.CopyTree.leaves.{u_1} α F t))
+'PaperV.MixedBudget.CopyTree.slack_telescopes' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.FiniteValueStability.minimum_le.{u_1} : ∀ {I : Type u_1} [inst : Fintype.{u_1} I] (A : Finset.{u_1} (I → Real))
+  (hA : @Finset.Nonempty.{u_1} (I → Real) A) (c : I → Real) {v : I → Real},
+  @Membership.mem.{u_1, u_1} (I → Real) (Finset.{u_1} (I → Real))
+      (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real) (@Finset.instSetLike.{u_1} (I → Real))) A
+      v →
+    @LE.le.{0} Real Real.instLE (@PaperV.FiniteValueStability.minimum.{u_1} I inst A hA c)
+      (@PaperV.FiniteValueStability.dot.{u_1} I inst c v)
+'PaperV.FiniteValueStability.minimum_le' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.FiniteValueStability.exists_minimizer.{u_1} : ∀ {I : Type u_1} [inst : Fintype.{u_1} I]
+  (A : Finset.{u_1} (I → Real)) (hA : @Finset.Nonempty.{u_1} (I → Real) A) (c : I → Real),
+  ∃ v,
+    And
+      (@Membership.mem.{u_1, u_1} (I → Real) (Finset.{u_1} (I → Real))
+        (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real) (@Finset.instSetLike.{u_1} (I → Real)))
+        A v)
+      (@Eq.{1} Real (@PaperV.FiniteValueStability.minimum.{u_1} I inst A hA c)
+        (@PaperV.FiniteValueStability.dot.{u_1} I inst c v))
+'PaperV.FiniteValueStability.exists_minimizer' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.FiniteValueStability.sensitivity.{u_1} : ∀ {I : Type u_1} [inst : Fintype.{u_1} I] (A : Finset.{u_1} (I → Real))
+  (hA : @Finset.Nonempty.{u_1} (I → Real) A),
+  (∀ (v : I → Real),
+      @Membership.mem.{u_1, u_1} (I → Real) (Finset.{u_1} (I → Real))
+          (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real)
+            (@Finset.instSetLike.{u_1} (I → Real)))
+          A v →
+        ∀ (i : I),
+          And
+            (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+              (v i))
+            (@LE.le.{0} Real Real.instLE (v i)
+              (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))) →
+    ∀ (c d : I → Real),
+      @LE.le.{0} Real Real.instLE
+        (@abs.{0} Real Real.lattice Real.instAddGroup
+          (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+            (@PaperV.FiniteValueStability.minimum.{u_1} I inst A hA c)
+            (@PaperV.FiniteValueStability.minimum.{u_1} I inst A hA d)))
+        (@PaperV.FiniteValueStability.l1.{u_1} I inst
+          (@HSub.hSub.{u_1, u_1, u_1} (I → Real) (I → Real) (I → Real)
+            (@instHSub.{u_1} (I → Real) (@Pi.instSub.{u_1, 0} I (fun a => Real) fun i => Real.instSub)) c d))
+'PaperV.FiniteValueStability.sensitivity' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.FiniteValueStability.convexHull_minimum.{u_1} : ∀ {I : Type u_1} [inst : Fintype.{u_1} I]
+  (A : Finset.{u_1} (I → Real)) (hA : @Finset.Nonempty.{u_1} (I → Real) A) (c : I → Real),
+  And
+    (∀ (z : I → Real),
+      @Membership.mem.{u_1, u_1} (I → Real) (Set.{u_1} (I → Real)) (@Set.instMembership.{u_1} (I → Real))
+          (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+            (@ClosureOperator.{u_1} (Set.{u_1} (I → Real))
+              (@PartialOrder.toPreorder.{u_1} (Set.{u_1} (I → Real))
+                (@ChainCompletePartialOrder.toPartialOrder.{u_1} (Set.{u_1} (I → Real))
+                  (@ChainCompletePartialOrder.instOfCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                    (@CompleteBooleanAlgebra.toCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                      (@CompleteAtomicBooleanAlgebra.toCompleteBooleanAlgebra.{u_1} (Set.{u_1} (I → Real))
+                        (@Set.instCompleteAtomicBooleanAlgebra.{u_1} (I → Real))))))))
+            (Set.{u_1} (I → Real)) (fun x => Set.{u_1} (I → Real))
+            (@ClosureOperator.instFunLike.{u_1} (Set.{u_1} (I → Real))
+              (@PartialOrder.toPreorder.{u_1} (Set.{u_1} (I → Real))
+                (@ChainCompletePartialOrder.toPartialOrder.{u_1} (Set.{u_1} (I → Real))
+                  (@ChainCompletePartialOrder.instOfCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                    (@CompleteBooleanAlgebra.toCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                      (@CompleteAtomicBooleanAlgebra.toCompleteBooleanAlgebra.{u_1} (Set.{u_1} (I → Real))
+                        (@Set.instCompleteAtomicBooleanAlgebra.{u_1} (I → Real))))))))
+            (@convexHull.{0, u_1} Real (I → Real) Real.semiring Real.partialOrder
+              (@Pi.addCommMonoid.{u_1, 0} I (fun a => Real) fun i => Real.instAddCommMonoid)
+              (@Pi.Function.module.{u_1, 0, 0} I Real Real Real.semiring Real.instAddCommMonoid
+                (@Semiring.toModule.{0} Real Real.semiring)))
+            (@SetLike.coe.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real) (@Finset.instSetLike.{u_1} (I → Real)) A))
+          z →
+        @LE.le.{0} Real Real.instLE (@PaperV.FiniteValueStability.minimum.{u_1} I inst A hA c)
+          (@PaperV.FiniteValueStability.dot.{u_1} I inst c z))
+    (∃ v,
+      And
+        (@Membership.mem.{u_1, u_1} (I → Real) (Set.{u_1} (I → Real)) (@Set.instMembership.{u_1} (I → Real))
+          (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+            (@ClosureOperator.{u_1} (Set.{u_1} (I → Real))
+              (@PartialOrder.toPreorder.{u_1} (Set.{u_1} (I → Real))
+                (@ChainCompletePartialOrder.toPartialOrder.{u_1} (Set.{u_1} (I → Real))
+                  (@ChainCompletePartialOrder.instOfCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                    (@CompleteBooleanAlgebra.toCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                      (@CompleteAtomicBooleanAlgebra.toCompleteBooleanAlgebra.{u_1} (Set.{u_1} (I → Real))
+                        (@Set.instCompleteAtomicBooleanAlgebra.{u_1} (I → Real))))))))
+            (Set.{u_1} (I → Real)) (fun x => Set.{u_1} (I → Real))
+            (@ClosureOperator.instFunLike.{u_1} (Set.{u_1} (I → Real))
+              (@PartialOrder.toPreorder.{u_1} (Set.{u_1} (I → Real))
+                (@ChainCompletePartialOrder.toPartialOrder.{u_1} (Set.{u_1} (I → Real))
+                  (@ChainCompletePartialOrder.instOfCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                    (@CompleteBooleanAlgebra.toCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                      (@CompleteAtomicBooleanAlgebra.toCompleteBooleanAlgebra.{u_1} (Set.{u_1} (I → Real))
+                        (@Set.instCompleteAtomicBooleanAlgebra.{u_1} (I → Real))))))))
+            (@convexHull.{0, u_1} Real (I → Real) Real.semiring Real.partialOrder
+              (@Pi.addCommMonoid.{u_1, 0} I (fun a => Real) fun i => Real.instAddCommMonoid)
+              (@Pi.Function.module.{u_1, 0, 0} I Real Real Real.semiring Real.instAddCommMonoid
+                (@Semiring.toModule.{0} Real Real.semiring)))
+            (@SetLike.coe.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real) (@Finset.instSetLike.{u_1} (I → Real)) A))
+          v)
+        (@Eq.{1} Real (@PaperV.FiniteValueStability.minimum.{u_1} I inst A hA c)
+          (@PaperV.FiniteValueStability.dot.{u_1} I inst c v)))
+'PaperV.FiniteValueStability.convexHull_minimum' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.FiniteValueStability.continuous_minimum.{u_1} : ∀ {I : Type u_1} [inst : Fintype.{u_1} I]
+  (A : Finset.{u_1} (I → Real)) (hA : @Finset.Nonempty.{u_1} (I → Real) A),
+  @Continuous.{u_1, 0} (I → Real) Real
+    (@Pi.topologicalSpace.{0, u_1} I (fun a => Real) fun i =>
+      @UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+    (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+    fun c => @PaperV.FiniteValueStability.minimum.{u_1} I inst A hA c
+'PaperV.FiniteValueStability.continuous_minimum' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.FiniteValueStability.dense_minimizers.{u_1,
+    u_2} : ∀ {I : Type u_1} [inst : Fintype.{u_1} I] {Θ : Type u_2} [inst_1 : TopologicalSpace.{u_2} Θ]
+  (A R : Finset.{u_1} (I → Real)) (hA : @Finset.Nonempty.{u_1} (I → Real) A) (hR : @Finset.Nonempty.{u_1} (I → Real) R),
+  @LE.le.{u_1} (Finset.{u_1} (I → Real))
+      (@Preorder.toLE.{u_1} (Finset.{u_1} (I → Real))
+        (@PartialOrder.toPreorder.{u_1} (Finset.{u_1} (I → Real)) (@Finset.instPartialOrder.{u_1} (I → Real))))
+      R A →
+    ∀ (c : Θ → I → Real),
+      @Continuous.{u_2, u_1} Θ (I → Real) inst_1
+          (@Pi.topologicalSpace.{0, u_1} I (fun a => Real) fun i =>
+            @UniformSpace.toTopologicalSpace.{0} Real
+              (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+          c →
+        ∀ (D : Set.{u_2} Θ),
+          @Dense.{u_2} Θ inst_1 D →
+            (∀ (θ : Θ),
+                @Membership.mem.{u_2, u_2} Θ (Set.{u_2} Θ) (@Set.instMembership.{u_2} Θ) D θ →
+                  ∃ v,
+                    And
+                      (@Membership.mem.{u_1, u_1} (I → Real) (Finset.{u_1} (I → Real))
+                        (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real)
+                          (@Finset.instSetLike.{u_1} (I → Real)))
+                        R v)
+                      (∀ (z : I → Real),
+                        @Membership.mem.{u_1, u_1} (I → Real) (Finset.{u_1} (I → Real))
+                            (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real)
+                              (@Finset.instSetLike.{u_1} (I → Real)))
+                            A z →
+                          @LE.le.{0} Real Real.instLE (@PaperV.FiniteValueStability.dot.{u_1} I inst (c θ) v)
+                            (@PaperV.FiniteValueStability.dot.{u_1} I inst (c θ) z))) →
+              ∀ (θ : Θ),
+                @Eq.{1} Real (@PaperV.FiniteValueStability.minimum.{u_1} I inst A hA (c θ))
+                  (@PaperV.FiniteValueStability.minimum.{u_1} I inst R hR (c θ))
+'PaperV.FiniteValueStability.dense_minimizers' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.FiniteValueStability.exists_positive_gap.{u_1} : ∀ {I : Type u_1} [inst : Fintype.{u_1} I]
+  (A : Finset.{u_1} (I → Real)) (c v : I → Real),
+  @PaperV.FiniteValueStability.UniqueMinimizer.{u_1} I inst A c v →
+    @Finset.Nonempty.{u_1} (I → Real)
+        (@Finset.erase.{u_1} (I → Real)
+          (fun a b => @Fintype.decidablePiFintype.{u_1, 0} I (fun a => Real) (fun a => Real.decidableEq) inst a b) A
+          v) →
+      ∃ δ,
+        And (@GT.gt.{0} Real Real.instLT δ (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)))
+          (∀ (z : I → Real),
+            @Membership.mem.{u_1, u_1} (I → Real) (Finset.{u_1} (I → Real))
+                (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real)
+                  (@Finset.instSetLike.{u_1} (I → Real)))
+                A z →
+              @Ne.{u_1 + 1} (I → Real) z v →
+                @LE.le.{0} Real Real.instLE δ
+                  (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+                    (@PaperV.FiniteValueStability.dot.{u_1} I inst c z)
+                    (@PaperV.FiniteValueStability.dot.{u_1} I inst c v)))
+'PaperV.FiniteValueStability.exists_positive_gap' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.FiniteValueStability.unique_minimizer_stability.{u_1} : ∀ {I : Type u_1} [inst : Fintype.{u_1} I]
+  (A : Finset.{u_1} (I → Real)),
+  (∀ (v : I → Real),
+      @Membership.mem.{u_1, u_1} (I → Real) (Finset.{u_1} (I → Real))
+          (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real)
+            (@Finset.instSetLike.{u_1} (I → Real)))
+          A v →
+        ∀ (i : I),
+          And
+            (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+              (v i))
+            (@LE.le.{0} Real Real.instLE (v i)
+              (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))) →
+    ∀ (c d v : I → Real),
+      @Membership.mem.{u_1, u_1} (I → Real) (Finset.{u_1} (I → Real))
+          (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real)
+            (@Finset.instSetLike.{u_1} (I → Real)))
+          A v →
+        ∀ (δ : Real),
+          (∀ (z : I → Real),
+              @Membership.mem.{u_1, u_1} (I → Real) (Finset.{u_1} (I → Real))
+                  (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real)
+                    (@Finset.instSetLike.{u_1} (I → Real)))
+                  A z →
+                @Ne.{u_1 + 1} (I → Real) z v →
+                  @LE.le.{0} Real Real.instLE δ
+                    (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+                      (@PaperV.FiniteValueStability.dot.{u_1} I inst c z)
+                      (@PaperV.FiniteValueStability.dot.{u_1} I inst c v))) →
+            @LT.lt.{0} Real Real.instLT
+                (@PaperV.FiniteValueStability.l1.{u_1} I inst
+                  (@HSub.hSub.{u_1, u_1, u_1} (I → Real) (I → Real) (I → Real)
+                    (@instHSub.{u_1} (I → Real) (@Pi.instSub.{u_1, 0} I (fun a => Real) fun i => Real.instSub)) d c))
+                δ →
+              @PaperV.FiniteValueStability.UniqueMinimizer.{u_1} I inst A d v
+'PaperV.FiniteValueStability.unique_minimizer_stability' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@PaperV.FiniteValueStability.unique_on_convexHull.{u_1} : ∀ {I : Type u_1} [inst : Fintype.{u_1} I]
+  (A : Finset.{u_1} (I → Real)) (c v : I → Real),
+  @PaperV.FiniteValueStability.UniqueMinimizer.{u_1} I inst A c v →
+    ∀ {z : I → Real},
+      @Membership.mem.{u_1, u_1} (I → Real) (Set.{u_1} (I → Real)) (@Set.instMembership.{u_1} (I → Real))
+          (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+            (@ClosureOperator.{u_1} (Set.{u_1} (I → Real))
+              (@PartialOrder.toPreorder.{u_1} (Set.{u_1} (I → Real))
+                (@ChainCompletePartialOrder.toPartialOrder.{u_1} (Set.{u_1} (I → Real))
+                  (@ChainCompletePartialOrder.instOfCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                    (@CompleteBooleanAlgebra.toCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                      (@CompleteAtomicBooleanAlgebra.toCompleteBooleanAlgebra.{u_1} (Set.{u_1} (I → Real))
+                        (@Set.instCompleteAtomicBooleanAlgebra.{u_1} (I → Real))))))))
+            (Set.{u_1} (I → Real)) (fun x => Set.{u_1} (I → Real))
+            (@ClosureOperator.instFunLike.{u_1} (Set.{u_1} (I → Real))
+              (@PartialOrder.toPreorder.{u_1} (Set.{u_1} (I → Real))
+                (@ChainCompletePartialOrder.toPartialOrder.{u_1} (Set.{u_1} (I → Real))
+                  (@ChainCompletePartialOrder.instOfCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                    (@CompleteBooleanAlgebra.toCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                      (@CompleteAtomicBooleanAlgebra.toCompleteBooleanAlgebra.{u_1} (Set.{u_1} (I → Real))
+                        (@Set.instCompleteAtomicBooleanAlgebra.{u_1} (I → Real))))))))
+            (@convexHull.{0, u_1} Real (I → Real) Real.semiring Real.partialOrder
+              (@Pi.addCommMonoid.{u_1, 0} I (fun a => Real) fun i => Real.instAddCommMonoid)
+              (@Pi.Function.module.{u_1, 0, 0} I Real Real Real.semiring Real.instAddCommMonoid
+                (@Semiring.toModule.{0} Real Real.semiring)))
+            (@SetLike.coe.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real) (@Finset.instSetLike.{u_1} (I → Real)) A))
+          z →
+        @Eq.{1} Real (@PaperV.FiniteValueStability.dot.{u_1} I inst c z)
+            (@PaperV.FiniteValueStability.dot.{u_1} I inst c v) →
+          @Eq.{u_1 + 1} (I → Real) z v
+'PaperV.FiniteValueStability.unique_on_convexHull' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.FiniteValueStability.stable_convexHull_minimizer.{u_1} : ∀ {I : Type u_1} [inst : Fintype.{u_1} I]
+  (A : Finset.{u_1} (I → Real)),
+  (∀ (v : I → Real),
+      @Membership.mem.{u_1, u_1} (I → Real) (Finset.{u_1} (I → Real))
+          (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real)
+            (@Finset.instSetLike.{u_1} (I → Real)))
+          A v →
+        ∀ (i : I),
+          And
+            (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+              (v i))
+            (@LE.le.{0} Real Real.instLE (v i)
+              (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))) →
+    ∀ (c d v : I → Real),
+      @Membership.mem.{u_1, u_1} (I → Real) (Finset.{u_1} (I → Real))
+          (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real)
+            (@Finset.instSetLike.{u_1} (I → Real)))
+          A v →
+        ∀ (δ : Real),
+          (∀ (z : I → Real),
+              @Membership.mem.{u_1, u_1} (I → Real) (Finset.{u_1} (I → Real))
+                  (@SetLike.instMembership.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real)
+                    (@Finset.instSetLike.{u_1} (I → Real)))
+                  A z →
+                @Ne.{u_1 + 1} (I → Real) z v →
+                  @LE.le.{0} Real Real.instLE δ
+                    (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+                      (@PaperV.FiniteValueStability.dot.{u_1} I inst c z)
+                      (@PaperV.FiniteValueStability.dot.{u_1} I inst c v))) →
+            @LT.lt.{0} Real Real.instLT
+                (@PaperV.FiniteValueStability.l1.{u_1} I inst
+                  (@HSub.hSub.{u_1, u_1, u_1} (I → Real) (I → Real) (I → Real)
+                    (@instHSub.{u_1} (I → Real) (@Pi.instSub.{u_1, 0} I (fun a => Real) fun i => Real.instSub)) d c))
+                δ →
+              And
+                (∀ (z : I → Real),
+                  @Membership.mem.{u_1, u_1} (I → Real) (Set.{u_1} (I → Real)) (@Set.instMembership.{u_1} (I → Real))
+                      (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+                        (@ClosureOperator.{u_1} (Set.{u_1} (I → Real))
+                          (@PartialOrder.toPreorder.{u_1} (Set.{u_1} (I → Real))
+                            (@ChainCompletePartialOrder.toPartialOrder.{u_1} (Set.{u_1} (I → Real))
+                              (@ChainCompletePartialOrder.instOfCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                                (@CompleteBooleanAlgebra.toCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                                  (@CompleteAtomicBooleanAlgebra.toCompleteBooleanAlgebra.{u_1} (Set.{u_1} (I → Real))
+                                    (@Set.instCompleteAtomicBooleanAlgebra.{u_1} (I → Real))))))))
+                        (Set.{u_1} (I → Real)) (fun x => Set.{u_1} (I → Real))
+                        (@ClosureOperator.instFunLike.{u_1} (Set.{u_1} (I → Real))
+                          (@PartialOrder.toPreorder.{u_1} (Set.{u_1} (I → Real))
+                            (@ChainCompletePartialOrder.toPartialOrder.{u_1} (Set.{u_1} (I → Real))
+                              (@ChainCompletePartialOrder.instOfCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                                (@CompleteBooleanAlgebra.toCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                                  (@CompleteAtomicBooleanAlgebra.toCompleteBooleanAlgebra.{u_1} (Set.{u_1} (I → Real))
+                                    (@Set.instCompleteAtomicBooleanAlgebra.{u_1} (I → Real))))))))
+                        (@convexHull.{0, u_1} Real (I → Real) Real.semiring Real.partialOrder
+                          (@Pi.addCommMonoid.{u_1, 0} I (fun a => Real) fun i => Real.instAddCommMonoid)
+                          (@Pi.Function.module.{u_1, 0, 0} I Real Real Real.semiring Real.instAddCommMonoid
+                            (@Semiring.toModule.{0} Real Real.semiring)))
+                        (@SetLike.coe.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real)
+                          (@Finset.instSetLike.{u_1} (I → Real)) A))
+                      z →
+                    @LE.le.{0} Real Real.instLE (@PaperV.FiniteValueStability.dot.{u_1} I inst d v)
+                      (@PaperV.FiniteValueStability.dot.{u_1} I inst d z))
+                (∀ (z : I → Real),
+                  @Membership.mem.{u_1, u_1} (I → Real) (Set.{u_1} (I → Real)) (@Set.instMembership.{u_1} (I → Real))
+                      (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+                        (@ClosureOperator.{u_1} (Set.{u_1} (I → Real))
+                          (@PartialOrder.toPreorder.{u_1} (Set.{u_1} (I → Real))
+                            (@ChainCompletePartialOrder.toPartialOrder.{u_1} (Set.{u_1} (I → Real))
+                              (@ChainCompletePartialOrder.instOfCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                                (@CompleteBooleanAlgebra.toCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                                  (@CompleteAtomicBooleanAlgebra.toCompleteBooleanAlgebra.{u_1} (Set.{u_1} (I → Real))
+                                    (@Set.instCompleteAtomicBooleanAlgebra.{u_1} (I → Real))))))))
+                        (Set.{u_1} (I → Real)) (fun x => Set.{u_1} (I → Real))
+                        (@ClosureOperator.instFunLike.{u_1} (Set.{u_1} (I → Real))
+                          (@PartialOrder.toPreorder.{u_1} (Set.{u_1} (I → Real))
+                            (@ChainCompletePartialOrder.toPartialOrder.{u_1} (Set.{u_1} (I → Real))
+                              (@ChainCompletePartialOrder.instOfCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                                (@CompleteBooleanAlgebra.toCompleteLattice.{u_1} (Set.{u_1} (I → Real))
+                                  (@CompleteAtomicBooleanAlgebra.toCompleteBooleanAlgebra.{u_1} (Set.{u_1} (I → Real))
+                                    (@Set.instCompleteAtomicBooleanAlgebra.{u_1} (I → Real))))))))
+                        (@convexHull.{0, u_1} Real (I → Real) Real.semiring Real.partialOrder
+                          (@Pi.addCommMonoid.{u_1, 0} I (fun a => Real) fun i => Real.instAddCommMonoid)
+                          (@Pi.Function.module.{u_1, 0, 0} I Real Real Real.semiring Real.instAddCommMonoid
+                            (@Semiring.toModule.{0} Real Real.semiring)))
+                        (@SetLike.coe.{u_1, u_1} (Finset.{u_1} (I → Real)) (I → Real)
+                          (@Finset.instSetLike.{u_1} (I → Real)) A))
+                      z →
+                    @Eq.{1} Real (@PaperV.FiniteValueStability.dot.{u_1} I inst d z)
+                        (@PaperV.FiniteValueStability.dot.{u_1} I inst d v) →
+                      @Eq.{u_1 + 1} (I → Real) z v)
+'PaperV.FiniteValueStability.stable_convexHull_minimizer' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@PaperV.MixedPromotion.promote_rational.{u_1} : ∀ {V : Type u_1} [Fintype.{u_1} V] [inst : DecidableEq.{u_1 + 1} V]
+  {y : Finset.{u_1} V → Real},
+  @PaperV.MixedPromotion.RationalMass.{u_1} V y →
+    ∀ (Q : Finset.{u_1} V) {α : Real},
+      (∃ a, @Eq.{1} Real α (@Rat.cast.{0} Real Real.instRatCast a)) →
+        @PaperV.MixedPromotion.RationalMass.{u_1} V (@PaperV.MixedPromotion.promote.{u_1} V inst y Q α)
+'PaperV.MixedPromotion.promote_rational' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PaperV.MixedPromotion.exists_normalized_rational.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+  [inst_1 : DecidableEq.{u_1 + 1} V] (G : SimpleGraph.{u_1} V) {y : Finset.{u_1} V → Real},
+  @PaperV.MixedPromotion.Feasible.{u_1} V inst inst_1 G y →
+    @PaperV.MixedPromotion.RationalMass.{u_1} V y →
+      ∀ (π : V → V → Real),
+        ∃ k z,
+          And
+            (@LE.le.{0} Nat instLENat k
+              (@Finset.card.{u_1} (Finset.{u_1} V) (@PaperV.MixedPromotion.triangleSupport.{u_1} V inst y)))
+            (And (@PaperV.MixedPromotion.PromotionChain.{u_1} V inst_1 G k y z)
+              (And (@PaperV.MixedPromotion.Feasible.{u_1} V inst inst_1 G z)
+                (And (@PaperV.MixedPromotion.RationalMass.{u_1} V z)
+                  (And
+                    (∀ (a b : V),
+                      @Ne.{u_1 + 1} V a b →
+                        @Eq.{1} Real (@PaperV.MixedPromotion.load.{u_1} V inst inst_1 z a b)
+                          (@PaperV.MixedPromotion.load.{u_1} V inst inst_1 y a b))
+                    (And
+                      (@LE.le.{0} Real Real.instLE (@PaperV.MixedPromotion.pricedValue.{u_1} V inst inst_1 π y)
+                        (@PaperV.MixedPromotion.pricedValue.{u_1} V inst inst_1 π z))
+                      (@PaperV.MixedPromotion.Normalized.{u_1} V G z))))))
+'PaperV.MixedPromotion.exists_normalized_rational' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

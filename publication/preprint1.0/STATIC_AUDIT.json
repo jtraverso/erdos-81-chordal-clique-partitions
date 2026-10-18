@@ -1,0 +1,713 @@
+{
+  "status": "PASS_STATIC_PUBLICATION",
+  "scope": "Static release integrity, privacy, exact filenames, navigation, and proof escape-hatch scan; build and rendered QA are separate evidence.",
+  "counts": {
+    "documents": 16,
+    "lean_files": 885,
+    "files": 1778,
+    "archives": 4
+  },
+  "checks": [
+    {
+      "check": "PAPER_V scaffold README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V scaffold LICENSE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V scaffold LICENSE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V scaffold CITATION.cff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V scaffold index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V main en md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V main en tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V main en pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V main en version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V main en no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_V main en portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V main es md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V main es tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V main es pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V main es version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V main es no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_V main es portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V companion en md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V companion en tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V companion en pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V companion en version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V companion en no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_V companion en portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V companion es md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V companion es tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V companion es pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V companion es version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V companion es no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_V companion es portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V Apache source license",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_V no workstation paths",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_V archive privacy",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_V no Lean proof escape hatches",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_V GitHub file size",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_V local navigation",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_VI scaffold README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI scaffold LICENSE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI scaffold LICENSE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI scaffold CITATION.cff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI scaffold index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI main en md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI main en tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI main en pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI main en version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI main en no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_VI main en portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI main es md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI main es tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI main es pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI main es version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI main es no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_VI main es portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI companion en md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI companion en tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI companion en pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI companion en version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI companion en no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_VI companion en portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI companion es md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI companion es tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI companion es pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI companion es version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI companion es no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_VI companion es portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI Apache source license",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PAPER_VI no workstation paths",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_VI archive privacy",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_VI no Lean proof escape hatches",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_VI GitHub file size",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PAPER_VI local navigation",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_I scaffold README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I scaffold LICENSE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I scaffold LICENSE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I scaffold CITATION.cff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I scaffold index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I main en md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I main en tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I main en pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I main en version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I main en no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_I main en portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I main es md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I main es tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I main es pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I main es version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I main es no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_I main es portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I companion en md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I companion en tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I companion en pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I companion en version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I companion en no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_I companion en portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I companion es md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I companion es tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I companion es pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I companion es version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I companion es no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_I companion es portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I Apache source license",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_I no workstation paths",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_I archive privacy",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_I no Lean proof escape hatches",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_I GitHub file size",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_I local navigation",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_II scaffold README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II scaffold LICENSE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II scaffold LICENSE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II scaffold CITATION.cff",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II scaffold index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II main en md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II main en tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II main en pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II main en version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II main en no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_II main en portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II main es md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II main es tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II main es pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II main es version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II main es no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_II main es portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II companion en md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II companion en tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II companion en pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II companion en version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II companion en no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_II companion en portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II companion es md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II companion es tex",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II companion es pdf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II companion es version1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II companion es no draft marks",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_II companion es portable text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II Apache source license",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NOTE_II no workstation paths",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_II archive privacy",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_II no Lean proof escape hatches",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_II GitHub file size",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "NOTE_II local navigation",
+      "passed": true,
+      "detail": "[]"
+    }
+  ],
+  "failures": []
+}

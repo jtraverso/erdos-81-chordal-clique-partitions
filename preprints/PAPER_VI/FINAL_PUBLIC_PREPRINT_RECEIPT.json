@@ -1,0 +1,137 @@
+{
+  "status": "READY",
+  "version": "Preprint 1.0",
+  "baseline_commit": "a1f4589fa6228ae7076792507d5835f83eb096e9",
+  "document_pairs": [
+    {
+      "role": "main",
+      "en": {
+        "md": "01_manuscript/PAPER_VI_preprint_v1.0_en.md",
+        "tex": "01_manuscript/PAPER_VI_preprint_v1.0_en.tex",
+        "pdf": "01_manuscript/PAPER_VI_preprint_v1.0_en.pdf"
+      },
+      "es": {
+        "md": "01_manuscript/PAPER_VI_preprint_v1.0_es.md",
+        "tex": "01_manuscript/PAPER_VI_preprint_v1.0_es.tex",
+        "pdf": "01_manuscript/PAPER_VI_preprint_v1.0_es.pdf"
+      },
+      "hashes": {
+        "en": {
+          "md": "86305a1141f80ee47ff9875015c62e61c0b0919e8aabcfc91c1db3c5f98f83b4",
+          "tex": "d602858df9a9713bf728a01f6d7ff7c641b4d47d678dcff1c2dcf2afca6b0335",
+          "pdf": "b7e40eb47ce17efb22bba680fcf6bef98777a1802308819ff035398f48c3c740"
+        },
+        "es": {
+          "md": "8f5e023ef9b14be0844d2b6435319c1df06715b5e34cad639be44d379db097f1",
+          "tex": "053fbf57b0d66f0df2c8ee240aece2420888c903452544a22d3a3b1c892c483a",
+          "pdf": "a8349949005413de5f82bc5f7103ee9e3dfea2deaf8cecadbfc0c8e894379a45"
+        }
+      }
+    },
+    {
+      "role": "companion",
+      "en": {
+        "md": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+        "tex": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+        "pdf": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf"
+      },
+      "es": {
+        "md": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+        "tex": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+        "pdf": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf"
+      },
+      "hashes": {
+        "en": {
+          "md": "42602f0b230d9a27690005577db4f3461085e3a0cd884851421149ff51013103",
+          "tex": "bedd1a9a1f6444df805204d4bf437972438ef1b655dd28608b2e3f06297add34",
+          "pdf": "55e9828cc157b61e8f130ef7b65ec9261a1eb48fd2e0362337962e7a8b1ae47c"
+        },
+        "es": {
+          "md": "eb3412de434639f207f5a8156d3714ea5a81304b8f16967a9d933f121c061c13",
+          "tex": "0ef4fa3870b7a804e544db56eb911380cfed40b1eb382240b4a584b46fa10e1a",
+          "pdf": "9cfa28610a438f9dcb16ab3ed2a191ce49042fb7d4fba7d9d74b95b3ceef7349"
+        }
+      }
+    }
+  ],
+  "source_archive": "05_formalization/formal_sources/PAPER_VI_Preprint1.0_LEAN435_FORMAL_SOURCE_FREEZE.zip",
+  "source_archive_sha256": "c5c32a9d9315350d8e2683f0c58389824116bd1844f58f7b09ad78d7fe3b61bb",
+  "source_project_root": "05_formalization/lean",
+  "canonical_root": "PaperVIRelease",
+  "formal_validation": {
+    "status": "CHECKED_FORMAL_SOURCE_FREEZE",
+    "version": "Preprint 1.0",
+    "canonical_root": "PaperVIRelease",
+    "lean": "4.35.0",
+    "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+    "build": {
+      "command": "lake build PaperVIRelease",
+      "exit_code": 0,
+      "log": "BUILD_PUBLIC_1_0.portable.log",
+      "cache_used": true
+    },
+    "endpoint_check": {
+      "command": "lake env lean -j1 -s32768 EndpointGate.lean",
+      "exit_code": 0,
+      "log": "ENDPOINTS_PUBLIC_1_0.portable.log",
+      "queries": 32
+    },
+    "full_project_audit": {
+      "command": "lake env lean -j1 -s32768 FreezeFullAudit.lean",
+      "exit_code": 0,
+      "log": "FULL_AUDIT_PUBLIC_1_0.portable.log",
+      "local_declarations": 1836,
+      "local_modules": 79,
+      "visited_declarations": 3421,
+      "nonstandard_axioms": 0,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "active_escape_scan": {
+      "hits": [],
+      "comments_strings_masked": true
+    },
+    "root_sha256": "05de8cc26e4077d04e74d9a15c1373e40f8c66ed32590df90c617509bf44acee",
+    "source_closure_sha256": "1c121b7b8bf561acde97166ee7fe7c16b68d7dba771d601a0705633b396227a3",
+    "changes": "Added Apache-2.0 copyright/SPDX comments and package version 1.0.0; active Lean source identical to preserved baseline.",
+    "licenses": "Author-written code Apache-2.0; existing notices retained.",
+    "no_priority_or_peer_review_assertion": true
+  },
+  "manifest": "PUBLIC_RELEASE_MANIFEST.json",
+  "manifest_sha256": "711b160a428b502037ff4a71af05ba855d74cc773a839ca211fad2da14addcee",
+  "evidence_files": [
+    "02_validation/PUBLICATION_1_0/AUDIT2_DISPOSITIONS.json",
+    "02_validation/PUBLICATION_1_0/AUDIT2_DISPOSITIONS.md",
+    "02_validation/PUBLICATION_1_0/BIBLIOGRAPHIC_COMPARISON.md",
+    "02_validation/PUBLICATION_1_0/BILINGUAL_PARITY.json",
+    "02_validation/PUBLICATION_1_0/COMPILATION_PREPRINT_1_0.json",
+    "02_validation/PUBLICATION_1_0/COMPLETE_THEOREM_MAP.json",
+    "02_validation/PUBLICATION_1_0/DEPENDENCY_PROOF_EVIDENCE.json",
+    "02_validation/PUBLICATION_1_0/EDITORIAL_OPERATIONS.json",
+    "02_validation/PUBLICATION_1_0/FINAL_VISUAL_QA.json",
+    "02_validation/PUBLICATION_1_0/INPUT_SNAPSHOT.json",
+    "02_validation/PUBLICATION_1_0/IV_SCOPE_EVIDENCE.json",
+    "02_validation/PUBLICATION_1_0/LICENSE_SOURCE_DIFF.json",
+    "02_validation/PUBLICATION_1_0/MATHEMATICAL_SEMANTIC_DIFF.json",
+    "02_validation/PUBLICATION_1_0/PDF_REPRODUCTION.md",
+    "02_validation/PUBLICATION_1_0/PORTABILITY_TRACE.json",
+    "02_validation/PUBLICATION_1_0/RENDER_INDEX.json",
+    "02_validation/PUBLICATION_1_0/TYPESETTING_PROFILE_PREPRINT_1_0.json"
+  ],
+  "visual_qa": "02_validation/PUBLICATION_1_0/FINAL_VISUAL_QA.json",
+  "audit_disposition": "Only concrete supplied findings; full 26-item report not supplied and not claimed closed.",
+  "mathematical_proof_changes": false,
+  "authorized_statement_clarification": "Repeat q≥p+3 in exceptional example and define legal core set, matching existing Lean.",
+  "publication_action": "No repository modification or publication performed by this subagent.",
+  "excluded_from_publication": [
+    "baseline/",
+    "private staging scripts with machine-specific tool paths",
+    "raw logs; portable source-package copies are supplied",
+    ".lake/",
+    "third-party full-text PDFs/HTML",
+    "earlier sealed archives"
+  ]
+}

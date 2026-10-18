@@ -1,0 +1,74 @@
+[
+  {
+    "role": "main",
+    "language": "en",
+    "files": {
+      "md": {
+        "path": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.md",
+        "sha256": "10e1d7c750c55ff4edafae12a622beab0902fad3c5a8e740c0991ea62910f77c"
+      },
+      "tex": {
+        "path": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.tex",
+        "sha256": "46d71944182851078591d42e546727f1fc8fd43cb54efd8dd252637bb1d8cd67"
+      },
+      "pdf": {
+        "path": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_en.pdf",
+        "sha256": "ee43e6fdc2c9d72c258af20a8e2b064dce015a65288c9dd76773bc0a54b2e919"
+      }
+    }
+  },
+  {
+    "role": "main",
+    "language": "es",
+    "files": {
+      "md": {
+        "path": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.md",
+        "sha256": "e30d8196a11d3f6a2060a9105d92de3ee7ff7019b2027b9b463112b3713849f4"
+      },
+      "tex": {
+        "path": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.tex",
+        "sha256": "69b21bf2f28819ddaf2f500136902f425b540e4ac7f0f4b3ce405a2ebf687449"
+      },
+      "pdf": {
+        "path": "01_manuscript/ERDOS81_TRANSFER_NOTE_v1.0_es.pdf",
+        "sha256": "7ced575c385891ab8b4500152a72881ee27f58cfd2007eb86af88a591d135456"
+      }
+    }
+  },
+  {
+    "role": "companion",
+    "language": "en",
+    "files": {
+      "md": {
+        "path": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+        "sha256": "527c349684e203163c23bcf65c9838a7b99f57689ee64bbce033e543bd9a6792"
+      },
+      "tex": {
+        "path": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.tex",
+        "sha256": "7e085da69d8ec8a5d2899edcdeb4b9abb5d4a2269fe24122edf43167e5779866"
+      },
+      "pdf": {
+        "path": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+        "sha256": "585427c3ee7899d9fc9cc6a5d5fc68ccf8bfac8952a7c92d13ce6593a8120775"
+      }
+    }
+  },
+  {
+    "role": "companion",
+    "language": "es",
+    "files": {
+      "md": {
+        "path": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+        "sha256": "1f8929acb34c3b0023423291a57fcba87e3bfb3d0b35d5ea0947e73422985400"
+      },
+      "tex": {
+        "path": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.tex",
+        "sha256": "c0d2aef826a6bdffc61cb16b7b3bebe3e48d4b99a64822b18d2633fa91b1fa81"
+      },
+      "pdf": {
+        "path": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+        "sha256": "521956bf53a11edc21285d7b0ead9abc02e63d446a3476c66174b2d7caa794df"
+      }
+    }
+  }
+]

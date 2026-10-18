@@ -1,0 +1,30 @@
+{
+  "command": "prove",
+  "status": "unsat",
+  "verdict": "proved",
+  "engine": "z3:5.1.0",
+  "elapsed_ms": 3.92,
+  "detail": "proved using 4 of 4 hypotheses",
+  "meta": {
+    "hypotheses_used": [
+      "dual",
+      "first",
+      "second",
+      "feasible"
+    ],
+    "hypotheses_dropped": [],
+    "vacuous": false,
+    "clash": null
+  },
+  "certificate": {
+    "kind": "unsat_core",
+    "digest": "5584515f1b005eae",
+    "solver_free": false,
+    "bytes": 982,
+    "summarised": true
+  },
+  "scope": [],
+  "evidence": "universal"
+}
+
+STDERR

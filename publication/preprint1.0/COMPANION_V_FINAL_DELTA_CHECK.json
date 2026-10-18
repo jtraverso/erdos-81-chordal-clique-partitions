@@ -1,0 +1,70 @@
+[
+  {
+    "file": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+    "current_sha256": "eafc4a4059e3a9cbba288fd570f325253d0dace3db6bf54f1572e15add231a32",
+    "previous_review_sha256": "b75f46f4c2e08ba887b24d9d3b1d61b6d52408a6473804bea299df090b376994",
+    "reversal_sha256": "b75f46f4c2e08ba887b24d9d3b1d61b6d52408a6473804bea299df090b376994",
+    "reversal_crlf_sha256": null,
+    "exact_previous_bytes_recovered": true,
+    "documented_substitutions": [
+      {
+        "current": "122 local modules",
+        "reviewed": "121 local modules"
+      },
+      {
+        "current": "2582 jobs",
+        "reviewed": "2581 jobs"
+      },
+      {
+        "current": "2838 declarations, 122 modules, 5547 visited",
+        "reviewed": "2832 declarations, 121 modules, 5541 visited"
+      },
+      {
+        "current": "10 gates; 403 type queries and 431 axiom queries",
+        "reviewed": "10 gates; 419 queries"
+      },
+      {
+        "current": "Main and supporting-interface correspondences",
+        "reviewed": "Main and retained-supplement correspondences"
+      },
+      {
+        "current": "The separate `02_validation/PREPRINT_1_0/` directory contains",
+        "reviewed": "The separate validation directory contains"
+      }
+    ]
+  },
+  {
+    "file": "preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+    "current_sha256": "e4270118ebee571e296619cb68338080a9f86bef39b8fd74a66d4a639759b60d",
+    "previous_review_sha256": "de385000ad75e429daf716d77b3bc23acb7d1901c4e12493f2f9035f43d8b1f3",
+    "reversal_sha256": "de385000ad75e429daf716d77b3bc23acb7d1901c4e12493f2f9035f43d8b1f3",
+    "reversal_crlf_sha256": null,
+    "exact_previous_bytes_recovered": true,
+    "documented_substitutions": [
+      {
+        "current": "122 módulos locales",
+        "reviewed": "121 módulos locales"
+      },
+      {
+        "current": "2582 tareas",
+        "reviewed": "2581 tareas"
+      },
+      {
+        "current": "2838 declaraciones, 122 módulos, 5547 visitadas",
+        "reviewed": "2832 declaraciones, 121 módulos, 5541 visitadas"
+      },
+      {
+        "current": "10 gates; 403 consultas de tipos y 431 consultas de axiomas",
+        "reviewed": "10 gates; 419 consultas"
+      },
+      {
+        "current": "Correspondencias principales y de interfaces auxiliares",
+        "reviewed": "Correspondencias principales y del suplemento"
+      },
+      {
+        "current": "El directorio separado `02_validation/PREPRINT_1_0/` contiene",
+        "reviewed": "El directorio separado de validación contiene"
+      }
+    ]
+  }
+]

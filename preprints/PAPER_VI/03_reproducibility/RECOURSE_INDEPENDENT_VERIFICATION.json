@@ -1,0 +1,14 @@
+{
+  "status": "PASS_INDEPENDENT_PHYSICAL_RECOURSE",
+  "states": 3,
+  "exterior_edges": 2,
+  "changed_liftings": 1,
+  "retained_safe_triangles": 1938,
+  "lost": 24,
+  "symmetric_difference": 48,
+  "terminal_difference": 6,
+  "path_steps": 2,
+  "path_bound": 1949,
+  "certificate_sha256": "8e9f8e81708d15c8d82f9c4935a97b9217efce9dc65ce04c928f8edc0ce4ce93",
+  "scope": "One finite two-edge recourse path, not a universal connectivity proof."
+}

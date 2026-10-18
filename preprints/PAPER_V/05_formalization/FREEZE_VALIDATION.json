@@ -1,0 +1,43 @@
+{
+  "status": "FORMAL_SOURCE_FREEZE",
+  "release": "Preprint 1.0",
+  "source_archive": "05_formalization/formal_sources/PAPER_V_preprint_v1.0_FORMAL_SOURCE_435.zip",
+  "sha256": "0da5d26084199da97b8c39cb4e354e06cdfd43b490e852c4ffdeb3b95e4bd89b",
+  "source_manifest": "05_formalization/SOURCE_MANIFEST.json",
+  "source_manifest_sha256": "34c687842a3120c5a7395c2971fcdaa0c873f0d3a033c49f674369869848509b",
+  "build": {
+    "name": "BUILD_PUBLIC_FINAL",
+    "command": [
+      "lake",
+      "build",
+      "PaperV"
+    ],
+    "exit_code": 0,
+    "seconds": 92.71029939997243,
+    "log": "02_validation/PREPRINT_1_0/BUILD_PUBLIC_FINAL.log",
+    "log_sha256": "e809c959c6e899a99e97729222d097ccc10093b30228cc779f1a7fe231b26e90"
+  },
+  "full_audit": {
+    "exit_code": 0,
+    "declarations": 2838,
+    "nonstandard": 0,
+    "modules": 122,
+    "visited": 5547,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "log": "02_validation/PREPRINT_1_0/FreezeFullAudit.log"
+  },
+  "endpoint_gates": {
+    "count": 10,
+    "queries": 834,
+    "type_queries": 403,
+    "axiom_queries": 431,
+    "all_exit_zero": true
+  },
+  "static_scan": "02_validation/PREPRINT_1_0/STATIC_ESCAPE_HATCH_SCAN.json",
+  "source_count": 133,
+  "proof_scope": "Public root plus separate statement/audit programs; source presence, root reachability, compilation and axiom closure are separately evidenced."
+}

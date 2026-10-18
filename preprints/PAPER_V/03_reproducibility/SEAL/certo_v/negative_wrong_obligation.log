@@ -1,0 +1,4 @@
+{"command": "verify", "status": "error", "verdict": "error", "error": "refused", "message": "REFUSED: wrong_obligation.py is NOT the file this certificate was made from. It names two_error_transfer.py, sha256 43f281e8e1f4ed09...; the file you gave has 2311ecae61daafd9.... The certificate may still be perfectly valid -- it is just not about this file.", "exit": 1}
+
+STDERR
+REFUSED: wrong_obligation.py is NOT the file this certificate was made from. It names two_error_transfer.py, sha256 43f281e8e1f4ed09...; the file you gave has 2311ecae61daafd9.... The certificate may still be perfectly valid -- it is just not about this file.

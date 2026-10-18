@@ -1,0 +1,46 @@
+{
+  "status": "PASS_INTERNAL_AUTHOR_SIDE",
+  "version": "Preprint 1.0",
+  "note": "I",
+  "findings": [
+    {
+      "id": "I-ABSTRACT",
+      "resolution": "Closed",
+      "detail": "The abstract identifies IV structural descent, retained accounts and physical constructors; [7, Section 8] and [8] are explicit antecedents."
+    },
+    {
+      "id": "I-ROUNDING",
+      "resolution": "Closed",
+      "detail": "Input 3.1 is identified exactly with RUW Theorem 3.4 at r=4, using gains 2 and 5 and uniform o(n^2) loss. The proved IV implementation is not presented as a stronger theorem. Primary definitions (3.4)-(3.5) were checked."
+    },
+    {
+      "id": "I-FIRST-ENTRY",
+      "resolution": "Closed",
+      "detail": "The first-entry antecedent is credited to [7, Section 8], compared in IV Section 8. The chosen formal proof uses IV descent localization; this is not a new localization supplied by transfer."
+    },
+    {
+      "id": "I-SCOPE",
+      "resolution": "Retained frozen independent-artifact scope",
+      "detail": "The note remains a separate exposition and formal assembly of part of IV through V. It claims neither a new solution nor a mathematically independent proof. The exact bound is eventual; the all-orders result retains an additive constant. The suggested merger was not adopted."
+    },
+    {
+      "id": "COMMON-STATUS",
+      "resolution": "Closed",
+      "detail": "All main and companion documents carry Preprint 1.0. Draft review instructions and development chronology have been removed from their current presentation."
+    },
+    {
+      "id": "COMMON-LICENSE",
+      "resolution": "Closed",
+      "detail": "Full Apache 2.0 headers cover note-specific sources and gates. A per-file ownership/hash manifest and directory LICENSE/NOTICE expressly license the inherited author-owned formalization cuts. External dependencies retain their terms. Written manuscripts retain CC BY-NC 4.0."
+    },
+    {
+      "id": "COMMON-VALIDATION",
+      "resolution": "Closed",
+      "detail": "Fresh cached root build, public endpoint gate and complete local-project axiom audit all passed. No clean rebuild of every upstream dependency is claimed. All final PDF pages were rendered and inspected."
+    }
+  ],
+  "limitations": [
+    "Internal editorial and source-validation review, not independent human peer review or a certification of historical priority.",
+    "Finite supplementary calculations do not replace universal proofs."
+  ]
+}

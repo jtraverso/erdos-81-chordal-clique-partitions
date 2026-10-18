@@ -1,0 +1,69 @@
+{
+  "command": "prove",
+  "status": "sat",
+  "verdict": "refuted",
+  "engine": "z3:5.1.0",
+  "elapsed_ms": 4.12,
+  "detail": "REFUTED: there is a counterexample that satisfies the hypotheses and violates the claim",
+  "meta": {
+    "counterexample": {
+      "cover": "0",
+      "nu": "0",
+      "relax": "1/2"
+    },
+    "hints": [
+      "the counterexample is not integral (relax = 1/2). If these quantities are integers, declare them with z3.Int / z3.Ints: over the reals the claim is weaker than meant, and a counterexample like this one can be spurious"
+    ],
+    "self_check_ms": 2.67,
+    "self_check": "ok"
+  },
+  "certificate": {
+    "kind": "model",
+    "digest": "2debd38eff72ab73",
+    "solver_free": true,
+    "bytes": 802,
+    "summarised": true
+  },
+  "scope": [],
+  "evidence": "counterexample",
+  "explained": [
+    {
+      "formula": "nu == cover",
+      "lhs": "0",
+      "op": "==",
+      "rhs": "0",
+      "holds": true,
+      "slack": "0",
+      "active": true
+    },
+    {
+      "formula": "relax >= nu",
+      "lhs": "1/2",
+      "op": ">=",
+      "rhs": "0",
+      "holds": true,
+      "slack": "1/2",
+      "active": false
+    },
+    {
+      "formula": "nu >= 0",
+      "lhs": "0",
+      "op": ">=",
+      "rhs": "0",
+      "holds": true,
+      "slack": "0",
+      "active": true
+    },
+    {
+      "formula": "relax == nu",
+      "lhs": "1/2",
+      "op": "==",
+      "rhs": "0",
+      "holds": true,
+      "fails": true,
+      "by": "1/2"
+    }
+  ]
+}
+
+STDERR

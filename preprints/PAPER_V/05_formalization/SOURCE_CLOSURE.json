@@ -1,0 +1,756 @@
+{
+  "public_root": "PaperV",
+  "modules": [
+    "PaperV",
+    "PaperV.AffineK4",
+    "PaperV.BK",
+    "PaperV.BKExact",
+    "PaperV.BeckFiala",
+    "PaperV.BrooksB4",
+    "PaperV.BrooksBlock",
+    "PaperV.BrooksCut",
+    "PaperV.BrooksCutExists",
+    "PaperV.BrooksGlue",
+    "PaperV.BrooksGreedyCtrl",
+    "PaperV.BrooksHub",
+    "PaperV.BrooksK4",
+    "PaperV.BrooksLovasz",
+    "PaperV.BrooksLovaszCore",
+    "PaperV.BrooksLovaszCut",
+    "PaperV.BrooksLovaszEndblock",
+    "PaperV.BrooksMain",
+    "PaperV.BrooksNonRegular",
+    "PaperV.BrooksOct",
+    "PaperV.BrooksReg",
+    "PaperV.C1",
+    "PaperV.Certificates",
+    "PaperV.ChromaticIndex",
+    "PaperV.CleanupTransfer",
+    "PaperV.Clon2",
+    "PaperV.ConflictGraph",
+    "PaperV.Copy",
+    "PaperV.CopyCore",
+    "PaperV.CopyFrac",
+    "PaperV.CopyN1Degree",
+    "PaperV.CopyN1K4",
+    "PaperV.CopyPackings",
+    "PaperV.Core",
+    "PaperV.CoverDefect",
+    "PaperV.CoverWitness",
+    "PaperV.CycleDefect",
+    "PaperV.DefectApps",
+    "PaperV.DefectOne",
+    "PaperV.Defs",
+    "PaperV.DqBasic",
+    "PaperV.EdgeDefectProfile",
+    "PaperV.Extremal",
+    "PaperV.FiniteValueStability",
+    "PaperV.FracCopyGeneric",
+    "PaperV.FractionalIntegral",
+    "PaperV.FractionalOptimum",
+    "PaperV.FractionalUnitBoundary",
+    "PaperV.Galvin",
+    "PaperV.GalvinClass",
+    "PaperV.GalvinLocal",
+    "PaperV.GalvinMultigraph",
+    "PaperV.GalvinRealizer",
+    "PaperV.GreedyLists",
+    "PaperV.HostCompletion",
+    "PaperV.HostConstructionAdapters",
+    "PaperV.HostRealizer",
+    "PaperV.KonigProfile",
+    "PaperV.LPBridge",
+    "PaperV.LineGraph",
+    "PaperV.LoadTwoK4",
+    "PaperV.ManuscriptEndpoints",
+    "PaperV.MixedCopy",
+    "PaperV.MixedCopyAsymptotic",
+    "PaperV.MixedCopyFrac",
+    "PaperV.MixedGapBudget",
+    "PaperV.MixedNormalization",
+    "PaperV.MixedPromotion",
+    "PaperV.MixedRationalNormalization",
+    "PaperV.MultiGalvinBase",
+    "PaperV.MultiKonig",
+    "PaperV.MultiRanks",
+    "PaperV.MultiStable",
+    "PaperV.N1",
+    "PaperV.N2",
+    "PaperV.N2Gap",
+    "PaperV.OddCycle",
+    "PaperV.PackingCert",
+    "PaperV.PairedFactors",
+    "PaperV.Parity",
+    "PaperV.PureProfile",
+    "PaperV.PureProfileExact",
+    "PaperV.PureProfileGap",
+    "PaperV.PureProfileSharp",
+    "PaperV.RationalFarkas",
+    "PaperV.RationalLP",
+    "PaperV.RationalWeights",
+    "PaperV.RealizabilityDefect",
+    "PaperV.Realizer",
+    "PaperV.RealizerCombinators",
+    "PaperV.ResourceComposition",
+    "PaperV.ResourceOptimum",
+    "PaperV.Seal",
+    "PaperV.SealHost",
+    "PaperV.SealTermination",
+    "PaperV.SplittingQ",
+    "PaperV.StarT2",
+    "PaperV.SteinerFrac",
+    "PaperV.SteinerK4",
+    "PaperV.SteinerK4Oct",
+    "PaperV.StrictnessExample",
+    "PaperV.StrictnessIntermediate",
+    "PaperV.StrongDuality",
+    "PaperV.SumDefect",
+    "PaperV.TerminalPairAssembly",
+    "PaperV.TerminalPairRounding",
+    "PaperV.TerminalPairSharp",
+    "PaperV.Tightness",
+    "PaperV.TransferCorollaries",
+    "PaperV.TwoErrorCertificate",
+    "PaperV.UnitBoundaryCompletion",
+    "PaperV.UnitBoundaryEndpoints",
+    "PaperV.UnitBoundaryWeighted",
+    "PaperV.UnitBoundaryWitnesses",
+    "PaperV.Vizing",
+    "PaperV.Vizing.Basic",
+    "PaperV.Vizing.Endpoints",
+    "PaperV.Vizing.Fan",
+    "PaperV.Vizing.Kempe",
+    "PaperV.Vizing.Main",
+    "PaperV.Vizing.Step",
+    "PaperV.WeightedTransfer"
+  ],
+  "count": 122,
+  "auditor_module_list_matches_exactly": true,
+  "all_modules_asserted_imported_by_executed_audit": true,
+  "sources": [
+    {
+      "module": "PaperV",
+      "path": "PaperV.lean",
+      "sha256": "6f8d32f421973867e64856798f1a56bf2d7fcd29e6a0e7cd39460bf75e6e7e8a"
+    },
+    {
+      "module": "PaperV.AffineK4",
+      "path": "PaperV/AffineK4.lean",
+      "sha256": "2360b266c2db90951ef949356971732df4330b8edcf80721964e063e994645f1"
+    },
+    {
+      "module": "PaperV.BK",
+      "path": "PaperV/BK.lean",
+      "sha256": "8199fc41bf898e08b533d7a6e54002e0eba964c904c7f639470ee48a6e8d6efc"
+    },
+    {
+      "module": "PaperV.BKExact",
+      "path": "PaperV/BKExact.lean",
+      "sha256": "69f44e9325f152ce78371aa7dd6e7a53e3f5936e33aa2f7549094e9c14612ac4"
+    },
+    {
+      "module": "PaperV.BeckFiala",
+      "path": "PaperV/BeckFiala.lean",
+      "sha256": "3ef04a91d7dc4c24d0955515d2aa454823530a0c6e3724b02a7665e90032b2f6"
+    },
+    {
+      "module": "PaperV.BrooksB4",
+      "path": "PaperV/BrooksB4.lean",
+      "sha256": "266c5031db1d7a553dc249944ec323ded9ccb9e8a9b0430c67eb5c227a6a3979"
+    },
+    {
+      "module": "PaperV.BrooksBlock",
+      "path": "PaperV/BrooksBlock.lean",
+      "sha256": "c9fa3f9681a0b89bfa1e118c787c40a5dab6223dd1427db7ba7dd8d9c325e509"
+    },
+    {
+      "module": "PaperV.BrooksCut",
+      "path": "PaperV/BrooksCut.lean",
+      "sha256": "1cf2c663483d98c3bd5f559216eacf1e8e3ece3cb73de7a77b08e5dd12e7792a"
+    },
+    {
+      "module": "PaperV.BrooksCutExists",
+      "path": "PaperV/BrooksCutExists.lean",
+      "sha256": "a84b9586e6f405c1315cb55c04e12d6411a691e99712fbbb08210ba3aa3810da"
+    },
+    {
+      "module": "PaperV.BrooksGlue",
+      "path": "PaperV/BrooksGlue.lean",
+      "sha256": "4f72505e7ddecf436c3ef25bc49c2a0b2b3a0269d208a533ae9a9fb82721c19a"
+    },
+    {
+      "module": "PaperV.BrooksGreedyCtrl",
+      "path": "PaperV/BrooksGreedyCtrl.lean",
+      "sha256": "abf7b634dfe799105ff2ca39e70737c9afa12f810f7b52d3ce083e469fcb3587"
+    },
+    {
+      "module": "PaperV.BrooksHub",
+      "path": "PaperV/BrooksHub.lean",
+      "sha256": "72f9c830aade0449dd8db5452a78ec2dbe2f2f3615df22573402dc3af825e4e8"
+    },
+    {
+      "module": "PaperV.BrooksK4",
+      "path": "PaperV/BrooksK4.lean",
+      "sha256": "6d1b4780db4a463ea5dcd32984a3fbf76f438753f473cd3c01365a233acbc263"
+    },
+    {
+      "module": "PaperV.BrooksLovasz",
+      "path": "PaperV/BrooksLovasz.lean",
+      "sha256": "fdcc08fae97c61ec22b5f4009631d71fcdee62f15aeb7ab6f34e53cb31d77156"
+    },
+    {
+      "module": "PaperV.BrooksLovaszCore",
+      "path": "PaperV/BrooksLovaszCore.lean",
+      "sha256": "6c3d2303988cd5eca0f8bd077298580966a5371a2a9f7b8b32bfd2d2c947ba8a"
+    },
+    {
+      "module": "PaperV.BrooksLovaszCut",
+      "path": "PaperV/BrooksLovaszCut.lean",
+      "sha256": "3f376c8208fe83a439d8cb725dd876b5896de7f3b91ddb6ed1272ab4c9531ca1"
+    },
+    {
+      "module": "PaperV.BrooksLovaszEndblock",
+      "path": "PaperV/BrooksLovaszEndblock.lean",
+      "sha256": "20945ef798d50363f78b0fff556b47e8c0f11724438b29efbf1dc24153fc1a10"
+    },
+    {
+      "module": "PaperV.BrooksMain",
+      "path": "PaperV/BrooksMain.lean",
+      "sha256": "4d7dd23cb1f45066b8b93d6a8e66ea1c4999af22c2f91cc22fdf4ac0ce076cea"
+    },
+    {
+      "module": "PaperV.BrooksNonRegular",
+      "path": "PaperV/BrooksNonRegular.lean",
+      "sha256": "54a3655b3a523aba7a2869fe9ca99b125fb2161acbb8ac3fdad60515b891d325"
+    },
+    {
+      "module": "PaperV.BrooksOct",
+      "path": "PaperV/BrooksOct.lean",
+      "sha256": "19f8805548cc1c1912c482711fc824b41d354938f7b9169d8963ad0f80e1f6f2"
+    },
+    {
+      "module": "PaperV.BrooksReg",
+      "path": "PaperV/BrooksReg.lean",
+      "sha256": "c3e018dacfe37fc5c543a430dd47c8156bfe201803307934a701e000b0ca05c8"
+    },
+    {
+      "module": "PaperV.C1",
+      "path": "PaperV/C1.lean",
+      "sha256": "676e339936ecefa0a4ecfd2d3054df882589341ebf190e65db74ad5cebc6bc9a"
+    },
+    {
+      "module": "PaperV.Certificates",
+      "path": "PaperV/Certificates.lean",
+      "sha256": "36389915e87e96bb11d6768d134f035906faa305187715df8756dc8952cd999e"
+    },
+    {
+      "module": "PaperV.ChromaticIndex",
+      "path": "PaperV/ChromaticIndex.lean",
+      "sha256": "1b782a27683dd5adda89967db6f8358daf371c8173e0ffc3c3acea1a12d3a8ae"
+    },
+    {
+      "module": "PaperV.CleanupTransfer",
+      "path": "PaperV/CleanupTransfer.lean",
+      "sha256": "a0ba8669eb50be04ff95e5e5662a69abc29469a6f3fdcf31ffa933146b51fe60"
+    },
+    {
+      "module": "PaperV.Clon2",
+      "path": "PaperV/Clon2.lean",
+      "sha256": "b4c0202cffb19491d12d7fbcd54ba6c409c26ad238aa36858beb7dad0b2a968f"
+    },
+    {
+      "module": "PaperV.ConflictGraph",
+      "path": "PaperV/ConflictGraph.lean",
+      "sha256": "2ceb1ee985d587964c2c77127a80dcdd3ae283a6c19bc32f829fe6e4771b2670"
+    },
+    {
+      "module": "PaperV.Copy",
+      "path": "PaperV/Copy.lean",
+      "sha256": "96a111156c7b65558053878ca2a1a4836b837edc2e5b4f012a22c5cc24721a6a"
+    },
+    {
+      "module": "PaperV.CopyCore",
+      "path": "PaperV/CopyCore.lean",
+      "sha256": "7d148f45fc15498d75c887bc46f9b7271c3b4424688202fd8623c92b22b66cbe"
+    },
+    {
+      "module": "PaperV.CopyFrac",
+      "path": "PaperV/CopyFrac.lean",
+      "sha256": "a29179d48bf83e76c90e5b69e932ff1f8bb35665985ea8ded817a26eb0069398"
+    },
+    {
+      "module": "PaperV.CopyN1Degree",
+      "path": "PaperV/CopyN1Degree.lean",
+      "sha256": "9ea3f755d51547c40c66e04655f7b6c2c8bda7594e2d9287a934467ed9f70cfd"
+    },
+    {
+      "module": "PaperV.CopyN1K4",
+      "path": "PaperV/CopyN1K4.lean",
+      "sha256": "0e6cda29e59d9329f8d4c94505d9b645947523b64470b8674e33728f23a0e7c9"
+    },
+    {
+      "module": "PaperV.CopyPackings",
+      "path": "PaperV/CopyPackings.lean",
+      "sha256": "a85353d3f311d2a5b52c61a787b14b6f460b8e5f804f6760b51f0768b7d2206c"
+    },
+    {
+      "module": "PaperV.Core",
+      "path": "PaperV/Core.lean",
+      "sha256": "56aa4ba4053091b87a4e81bf7264ffc8ac9823b4d2d5368fc04a6684e1bcc2a0"
+    },
+    {
+      "module": "PaperV.CoverDefect",
+      "path": "PaperV/CoverDefect.lean",
+      "sha256": "705eb13e31ddbb4a9b7152bcb7658701081dca5662a8d806d5d0e4153648ad64"
+    },
+    {
+      "module": "PaperV.CoverWitness",
+      "path": "PaperV/CoverWitness.lean",
+      "sha256": "3b56b99d2b96418f1af0b75c677e9745f05849e661d4d32b502123b41bde381d"
+    },
+    {
+      "module": "PaperV.CycleDefect",
+      "path": "PaperV/CycleDefect.lean",
+      "sha256": "24ec3b5c8facafde2107a9a214d81bdb4285e3a015c1c28c875d3dcf6b80b6d1"
+    },
+    {
+      "module": "PaperV.DefectApps",
+      "path": "PaperV/DefectApps.lean",
+      "sha256": "98494b358eeff04b8d30f02b6a90aacf4f0c4882369421a584210f4db60c5ef5"
+    },
+    {
+      "module": "PaperV.DefectOne",
+      "path": "PaperV/DefectOne.lean",
+      "sha256": "b2c5c08997b31993d2f42472315a23918700d9b5c95d87b513259d42a1ecf93c"
+    },
+    {
+      "module": "PaperV.Defs",
+      "path": "PaperV/Defs.lean",
+      "sha256": "2b317186772c6c38f840325eff45c4f54da157082d46308aa6be5f85370e5e1d"
+    },
+    {
+      "module": "PaperV.DqBasic",
+      "path": "PaperV/DqBasic.lean",
+      "sha256": "000e7cd2ef2772c43fc0c444fbe3204e7531f69b23983448fdb86c3d6b0c748c"
+    },
+    {
+      "module": "PaperV.EdgeDefectProfile",
+      "path": "PaperV/EdgeDefectProfile.lean",
+      "sha256": "d1e5e5f415dd8656ddaa68b192d378545e8f3f28f93a4edd7b6742eab62fc9d9"
+    },
+    {
+      "module": "PaperV.Extremal",
+      "path": "PaperV/Extremal.lean",
+      "sha256": "2b481208efe76f9d07bf28b70455dffe72d632220277f8736f949249ece28457"
+    },
+    {
+      "module": "PaperV.FiniteValueStability",
+      "path": "PaperV/FiniteValueStability.lean",
+      "sha256": "bb943b84bad69a96d334bfbeed7882ec8f6d9afea2cedf66e671113b318da274"
+    },
+    {
+      "module": "PaperV.FracCopyGeneric",
+      "path": "PaperV/FracCopyGeneric.lean",
+      "sha256": "86ecbffa9085e713918b4bce99017a6e3bc536c0b29efffb3a4d17f84c4f1401"
+    },
+    {
+      "module": "PaperV.FractionalIntegral",
+      "path": "PaperV/FractionalIntegral.lean",
+      "sha256": "31e62c81e3c902321f460813b0d27925ef87938aabc10c0980ae3b1709c95c98"
+    },
+    {
+      "module": "PaperV.FractionalOptimum",
+      "path": "PaperV/FractionalOptimum.lean",
+      "sha256": "78aa4b3e8aa8f3301de4d41e677904e387c03676992e44f58038178884fded7f"
+    },
+    {
+      "module": "PaperV.FractionalUnitBoundary",
+      "path": "PaperV/FractionalUnitBoundary.lean",
+      "sha256": "2f5688de28fe7b5df8d2d4f753be015d512565a6992410e13dd485bb2d44e1fc"
+    },
+    {
+      "module": "PaperV.Galvin",
+      "path": "PaperV/Galvin.lean",
+      "sha256": "4ad8d00a2e5a7d96f1f12388de8328acc0616295564516b42bb66e1721fc842a"
+    },
+    {
+      "module": "PaperV.GalvinClass",
+      "path": "PaperV/GalvinClass.lean",
+      "sha256": "271fbee3d649798f2505450047f4e8c0c774abb4930fc22a09854de5cfb098e0"
+    },
+    {
+      "module": "PaperV.GalvinLocal",
+      "path": "PaperV/GalvinLocal.lean",
+      "sha256": "886e0055da23bc4e984aaaa7ef234225d9ca1e5d240bf5aec13d9923cdc709aa"
+    },
+    {
+      "module": "PaperV.GalvinMultigraph",
+      "path": "PaperV/GalvinMultigraph.lean",
+      "sha256": "cc1b090f827f899c88b68e702bcc939973280ca8bce7e20cdb2daffa20d0b050"
+    },
+    {
+      "module": "PaperV.GalvinRealizer",
+      "path": "PaperV/GalvinRealizer.lean",
+      "sha256": "fe74d2addc3cd52d24ac21ce98599b34dfedc38d4a3f7778cfa76dcf40ebef29"
+    },
+    {
+      "module": "PaperV.GreedyLists",
+      "path": "PaperV/GreedyLists.lean",
+      "sha256": "8c6510af36bd522b44a7b5e474ede47fcb3b148ca89a0d76e3c02f383026acc6"
+    },
+    {
+      "module": "PaperV.HostCompletion",
+      "path": "PaperV/HostCompletion.lean",
+      "sha256": "47ec506c9dd359c0a368f3f478d95d75ad0ff3123ce67e826fd776cc48c52c74"
+    },
+    {
+      "module": "PaperV.HostConstructionAdapters",
+      "path": "PaperV/HostConstructionAdapters.lean",
+      "sha256": "de928926cc38329261056d60928dde1a83a8de33b28183d8c6a9e94aa7b5e708"
+    },
+    {
+      "module": "PaperV.HostRealizer",
+      "path": "PaperV/HostRealizer.lean",
+      "sha256": "0cc4a7164aac39387abd02c1488de0aaa3ef7c99e10fbf2fdeae277ef3c75014"
+    },
+    {
+      "module": "PaperV.KonigProfile",
+      "path": "PaperV/KonigProfile.lean",
+      "sha256": "f0cde47791d3de454e8854410b46fb9a64ff10462539e1a3d4a9c4c7d5602be1"
+    },
+    {
+      "module": "PaperV.LPBridge",
+      "path": "PaperV/LPBridge.lean",
+      "sha256": "298ce737cc5d9a8710e4ecbdc84906e2a96276d77317d3064101770ad5fb85d0"
+    },
+    {
+      "module": "PaperV.LineGraph",
+      "path": "PaperV/LineGraph.lean",
+      "sha256": "9b4511e1f54d3a49121edcd3f25f69fbebff005d61c8ea96924f45b31715703e"
+    },
+    {
+      "module": "PaperV.LoadTwoK4",
+      "path": "PaperV/LoadTwoK4.lean",
+      "sha256": "192b9d6ad962c481580ccbb6c06d5ed25ee4f1841be0245d27dca2d26a25e73f"
+    },
+    {
+      "module": "PaperV.ManuscriptEndpoints",
+      "path": "PaperV/ManuscriptEndpoints.lean",
+      "sha256": "b58265b65fef9d8170ee79f371444e514e4c922728d2005c911f383530eaf690"
+    },
+    {
+      "module": "PaperV.MixedCopy",
+      "path": "PaperV/MixedCopy.lean",
+      "sha256": "879acc0b7a099c5df8d09c4b6b0dfabda399e7cc401c65a2850cd718ef1419b9"
+    },
+    {
+      "module": "PaperV.MixedCopyAsymptotic",
+      "path": "PaperV/MixedCopyAsymptotic.lean",
+      "sha256": "781f9485534b688b2f86496943dc351c186cb2216f60b2781c0eebe3aaaed988"
+    },
+    {
+      "module": "PaperV.MixedCopyFrac",
+      "path": "PaperV/MixedCopyFrac.lean",
+      "sha256": "76224ed9cafd0c2f2cedbbdf1d9601bc0558706d9a11fc5f962362c93422dfe1"
+    },
+    {
+      "module": "PaperV.MixedGapBudget",
+      "path": "PaperV/MixedGapBudget.lean",
+      "sha256": "ebfce01efbcad488a9d2e1f58b8e8151170f47cb5cc4eb8e5530c843d3b48181"
+    },
+    {
+      "module": "PaperV.MixedNormalization",
+      "path": "PaperV/MixedNormalization.lean",
+      "sha256": "bf2182128ae1a5f73c5482a406e3f5a0269352c364729d072fb4d1579928ba63"
+    },
+    {
+      "module": "PaperV.MixedPromotion",
+      "path": "PaperV/MixedPromotion.lean",
+      "sha256": "e9d541cd8f86c84e332e95b91c6c23302a510653cb0d49326296a7ff786569dd"
+    },
+    {
+      "module": "PaperV.MixedRationalNormalization",
+      "path": "PaperV/MixedRationalNormalization.lean",
+      "sha256": "81bd34816453f2ef4540dc8912d11b532403771ee0bb9c6526783489a47f4067"
+    },
+    {
+      "module": "PaperV.MultiGalvinBase",
+      "path": "PaperV/MultiGalvinBase.lean",
+      "sha256": "de183daf1d44dbaeb09b61cc23789229b80ba6d7b26d71de198bd95b31073242"
+    },
+    {
+      "module": "PaperV.MultiKonig",
+      "path": "PaperV/MultiKonig.lean",
+      "sha256": "b7083420518c18e2ba90fc55e706d9dd597e3838b6add0f7c10e257c4d47ac2d"
+    },
+    {
+      "module": "PaperV.MultiRanks",
+      "path": "PaperV/MultiRanks.lean",
+      "sha256": "46abb6fe156190e72d36d59e5da9e10a27351927403d49a9f3b83c2825ff5440"
+    },
+    {
+      "module": "PaperV.MultiStable",
+      "path": "PaperV/MultiStable.lean",
+      "sha256": "ae14554acf3efb2457f0fd728bbbd8c74ccddc81f65f51ef2a653b06f06f0842"
+    },
+    {
+      "module": "PaperV.N1",
+      "path": "PaperV/N1.lean",
+      "sha256": "f674dc4b7f1139ec60cbdf28d230216a7e78105d6fa4e3d5af300009fe50e467"
+    },
+    {
+      "module": "PaperV.N2",
+      "path": "PaperV/N2.lean",
+      "sha256": "2aa160b306533cc001955dc47be5d06c88d072b2c5946540dd105ab975e4a49a"
+    },
+    {
+      "module": "PaperV.N2Gap",
+      "path": "PaperV/N2Gap.lean",
+      "sha256": "860f89acc76e31ec093c600758887993d279f2d3bfee60e3354db3e58a8078db"
+    },
+    {
+      "module": "PaperV.OddCycle",
+      "path": "PaperV/OddCycle.lean",
+      "sha256": "627c6a3f952a3863c6dfd258b4e43994b0cb0d7fd5afe9e9d2105d4f3b74042e"
+    },
+    {
+      "module": "PaperV.PackingCert",
+      "path": "PaperV/PackingCert.lean",
+      "sha256": "817ffd973b742fbf30ec10e9a4765afa35c5d09a43b5c99f604c59812c7b7ad7"
+    },
+    {
+      "module": "PaperV.PairedFactors",
+      "path": "PaperV/PairedFactors.lean",
+      "sha256": "7771376d596a5e5a393537bdcc8ffba2a11b817ade4b0766fae62dfe35d984c6"
+    },
+    {
+      "module": "PaperV.Parity",
+      "path": "PaperV/Parity.lean",
+      "sha256": "fdc96416c94d8881d422baa63bc5d09765635879c94df99c90e30ba7324507ed"
+    },
+    {
+      "module": "PaperV.PureProfile",
+      "path": "PaperV/PureProfile.lean",
+      "sha256": "cc858aa80236308f64628433efd0970b5ea11726d3d85d46ba4be5c9028cdc72"
+    },
+    {
+      "module": "PaperV.PureProfileExact",
+      "path": "PaperV/PureProfileExact.lean",
+      "sha256": "3526bccbab445634866e6f9f645110e5b9fb706db54cf9773e28d3d165e270ac"
+    },
+    {
+      "module": "PaperV.PureProfileGap",
+      "path": "PaperV/PureProfileGap.lean",
+      "sha256": "6d87aacbe754a791dd0f4cba95850340e3eecfe912c000d19e39172f07213232"
+    },
+    {
+      "module": "PaperV.PureProfileSharp",
+      "path": "PaperV/PureProfileSharp.lean",
+      "sha256": "aaf29ef70efb9af58d5b1555bf1ebdfb55c1d04452531354e95b22f3def32ed6"
+    },
+    {
+      "module": "PaperV.RationalFarkas",
+      "path": "PaperV/RationalFarkas.lean",
+      "sha256": "41afb0a2da954752418ce50594a0d90602aa1acd583e05ea4f3b985702485ab6"
+    },
+    {
+      "module": "PaperV.RationalLP",
+      "path": "PaperV/RationalLP.lean",
+      "sha256": "789458fa70e91148d113bd483152d40fcbaceec452c52105cbce9931cca1cda2"
+    },
+    {
+      "module": "PaperV.RationalWeights",
+      "path": "PaperV/RationalWeights.lean",
+      "sha256": "bb41ce075465abfe99cb6fd8f4e595369462aa4d255c556ad3b4555f1d517dc7"
+    },
+    {
+      "module": "PaperV.RealizabilityDefect",
+      "path": "PaperV/RealizabilityDefect.lean",
+      "sha256": "21b4b48c00b5e5f4b84be70fae57746b218c93e39bd1a09aba500fc09a740d16"
+    },
+    {
+      "module": "PaperV.Realizer",
+      "path": "PaperV/Realizer.lean",
+      "sha256": "2a441e4833bac2a9e877b094386eb5023f0d97c9ea7c59705a15a89c9b79cb40"
+    },
+    {
+      "module": "PaperV.RealizerCombinators",
+      "path": "PaperV/RealizerCombinators.lean",
+      "sha256": "76de276f4ced2df6b38c3088b23901e24388c0965cd230f0eb629a6ed93166c6"
+    },
+    {
+      "module": "PaperV.ResourceComposition",
+      "path": "PaperV/ResourceComposition.lean",
+      "sha256": "18de5c7dd1d3cb5fec332b073d512f0e48b94a01abd81ff123100e405d1b4701"
+    },
+    {
+      "module": "PaperV.ResourceOptimum",
+      "path": "PaperV/ResourceOptimum.lean",
+      "sha256": "35ec80eb5b351b5f02c6f3b11523170a0ecc8bc8508dc4f9b1ac54834475f111"
+    },
+    {
+      "module": "PaperV.Seal",
+      "path": "PaperV/Seal.lean",
+      "sha256": "59852cd38c81a0c94715722db7111235fb89e89a68c43a3189044b16f276ec48"
+    },
+    {
+      "module": "PaperV.SealHost",
+      "path": "PaperV/SealHost.lean",
+      "sha256": "59b98687d0d0539a91bb139355572c0441ada22c7ba09d804d6da54886811fb7"
+    },
+    {
+      "module": "PaperV.SealTermination",
+      "path": "PaperV/SealTermination.lean",
+      "sha256": "d363d93d999f25cbfe77d32275069b2e160c7ae5546929f300907dcbf33bab45"
+    },
+    {
+      "module": "PaperV.SplittingQ",
+      "path": "PaperV/SplittingQ.lean",
+      "sha256": "7bb0e3bca4ef6720a6ac94bca8cbd7146b07ada3a7b3fe117a04a364ea3d5c5b"
+    },
+    {
+      "module": "PaperV.StarT2",
+      "path": "PaperV/StarT2.lean",
+      "sha256": "85e9509add14475fbcb8ad5df1ad69f558f0ebd8606edbc707abe62849f46f64"
+    },
+    {
+      "module": "PaperV.SteinerFrac",
+      "path": "PaperV/SteinerFrac.lean",
+      "sha256": "a93f36e9e2278aed36e94375eab09f23ff5a1ab299fb9d4690461ad3d705b6c2"
+    },
+    {
+      "module": "PaperV.SteinerK4",
+      "path": "PaperV/SteinerK4.lean",
+      "sha256": "34ef644784a6d22b5fcd19115ed46ae54cef8a3443716db19fe10bdc70cccb2e"
+    },
+    {
+      "module": "PaperV.SteinerK4Oct",
+      "path": "PaperV/SteinerK4Oct.lean",
+      "sha256": "a7a55f3e1bf07c31f326e045d79a5bdaec46e10a7c5009750e008212035c986a"
+    },
+    {
+      "module": "PaperV.StrictnessExample",
+      "path": "PaperV/StrictnessExample.lean",
+      "sha256": "003d7c26b49adab66b4d8abfaf2913602b63e8893b785f9259c2fa2492deb372"
+    },
+    {
+      "module": "PaperV.StrictnessIntermediate",
+      "path": "PaperV/StrictnessIntermediate.lean",
+      "sha256": "1b8e44718a68e2387965bd35c0c1dcdd059477106fe32e2bb8185a3ec82bb22e"
+    },
+    {
+      "module": "PaperV.StrongDuality",
+      "path": "PaperV/StrongDuality.lean",
+      "sha256": "a8177668cf4193ffb04b8efc9e1f14e25b746770acd577f6304f502bb481fe88"
+    },
+    {
+      "module": "PaperV.SumDefect",
+      "path": "PaperV/SumDefect.lean",
+      "sha256": "005578da68d8f573fb93f75556c417e5cf22c4004fe6b21e5c6be285743559f0"
+    },
+    {
+      "module": "PaperV.TerminalPairAssembly",
+      "path": "PaperV/TerminalPairAssembly.lean",
+      "sha256": "663773de5fd177783c17dfc6cd08728032a0238875186fbbdf35e296fa675d60"
+    },
+    {
+      "module": "PaperV.TerminalPairRounding",
+      "path": "PaperV/TerminalPairRounding.lean",
+      "sha256": "40939a15eb748531c7760476ad41a4150400c3cc39155aaa0fc670d48c1d9ceb"
+    },
+    {
+      "module": "PaperV.TerminalPairSharp",
+      "path": "PaperV/TerminalPairSharp.lean",
+      "sha256": "a50afaaf97c79a14991614c3ef56f5ad90f40a00f8f97d23e213ee36ba4e48d8"
+    },
+    {
+      "module": "PaperV.Tightness",
+      "path": "PaperV/Tightness.lean",
+      "sha256": "35f4f2e0aa3a362eea85130a6e5d98e9ded36d6cbbfbfd339cb62c7909e3ccf8"
+    },
+    {
+      "module": "PaperV.TransferCorollaries",
+      "path": "PaperV/TransferCorollaries.lean",
+      "sha256": "bbecc22bb50fc5801f5fc06cd4cbba02d0756be6a7a28e7963c9f087f5587e33"
+    },
+    {
+      "module": "PaperV.TwoErrorCertificate",
+      "path": "PaperV/TwoErrorCertificate.lean",
+      "sha256": "0fad5dfc270e491eac20679a8233fb269c1e12556fecd0f9edf873ce0a3abd4b"
+    },
+    {
+      "module": "PaperV.UnitBoundaryCompletion",
+      "path": "PaperV/UnitBoundaryCompletion.lean",
+      "sha256": "cbeb7adf41fefe57662ea6d1dd3f664b43c6c04e6e06374ddd81985032a86567"
+    },
+    {
+      "module": "PaperV.UnitBoundaryEndpoints",
+      "path": "PaperV/UnitBoundaryEndpoints.lean",
+      "sha256": "b2148f82ca0528642a2595576ba11f97aaad416a5ecc18c3721defdbeb905570"
+    },
+    {
+      "module": "PaperV.UnitBoundaryWeighted",
+      "path": "PaperV/UnitBoundaryWeighted.lean",
+      "sha256": "1ab870a659ab260537efd8783168d5d8c9f25c476f8d02b4f2d1358f5a4d7976"
+    },
+    {
+      "module": "PaperV.UnitBoundaryWitnesses",
+      "path": "PaperV/UnitBoundaryWitnesses.lean",
+      "sha256": "a4e04bee8e2db2d3db68d451bd8683180e57015048d0ac8c38f9bd173089ae27"
+    },
+    {
+      "module": "PaperV.Vizing",
+      "path": "PaperV/Vizing.lean",
+      "sha256": "cc975f16dc4f6487b8fe58b6e8599d02b29661da39bdbb20974651879084aa26"
+    },
+    {
+      "module": "PaperV.Vizing.Basic",
+      "path": "PaperV/Vizing/Basic.lean",
+      "sha256": "1da365d976a20885ed31c5e9c72da2a205a6aceb4c1f333c192ac7b9c8847bce"
+    },
+    {
+      "module": "PaperV.Vizing.Endpoints",
+      "path": "PaperV/Vizing/Endpoints.lean",
+      "sha256": "64e88152546e2ed0c7e668acc0ff38f36a876521f69cd2441ceda95adc1371f1"
+    },
+    {
+      "module": "PaperV.Vizing.Fan",
+      "path": "PaperV/Vizing/Fan.lean",
+      "sha256": "465570ba50939c5c52515aea43fa9d7044d063bbc970a8202f28e499808205b6"
+    },
+    {
+      "module": "PaperV.Vizing.Kempe",
+      "path": "PaperV/Vizing/Kempe.lean",
+      "sha256": "ad7772cbe98ee1b64efd008659045e0a0a28a9cc43e82b8f7c16b1987bd4846c"
+    },
+    {
+      "module": "PaperV.Vizing.Main",
+      "path": "PaperV/Vizing/Main.lean",
+      "sha256": "822b1af45dd75a7371193847cf4ca567d9afd5c29c0c2f85368fb48c9d9abe0f"
+    },
+    {
+      "module": "PaperV.Vizing.Step",
+      "path": "PaperV/Vizing/Step.lean",
+      "sha256": "3e5ea2c2c42a43c60d1c1a2e61a24f4e466e54be3e5ca2a1699654e7f7eac150"
+    },
+    {
+      "module": "PaperV.WeightedTransfer",
+      "path": "PaperV/WeightedTransfer.lean",
+      "sha256": "d89e9b1eec0b9e992d563522d5435ca2cc9698cfb6fdea791c0114c0351b2bc3"
+    }
+  ],
+  "source_count": 133,
+  "standalone_gates": [
+    "PaperVManuscriptGate",
+    "PaperVSupplementGate",
+    "PaperVImprovementsGate",
+    "PaperVReleaseGate",
+    "PaperVNewGate",
+    "PaperVConstructionGate",
+    "PaperV_FractionalAxiomGate",
+    "PaperVGapBudgetGate",
+    "PaperVRationalPromotionGate",
+    "PaperVUnitBoundaryGate"
+  ],
+  "audit": "FreezeFullAudit.lean"
+}

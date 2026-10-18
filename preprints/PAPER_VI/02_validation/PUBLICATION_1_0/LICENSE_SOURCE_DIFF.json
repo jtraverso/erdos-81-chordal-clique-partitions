@@ -1,0 +1,494 @@
+{
+  "baseline_commit": "a1f4589fa6228ae7076792507d5835f83eb096e9",
+  "files": [
+    {
+      "path": "EndpointGate.lean",
+      "before_sha256": "0be2b2be3d504204ecdc9cb2c342a9c268a330dfe4e196e4432012e5e54fdfe9",
+      "after_sha256": "e67086fd9efd03294173f400f63e93709ded6e132cb95e704631437524f9e09e",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "FreezeFullAudit.lean",
+      "before_sha256": "ba834821a5a3c5b241b9187656cf627f35ffecfc8a5e6d4a792b0306f274a8a8",
+      "after_sha256": "01e4c6389d9578a06c8b456f01a15af7fe0ac349d4dda990d2a6dcb9d174b03f",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI.lean",
+      "before_sha256": "bf0505282218b873966c6f715b729f74be770e7c6f871673de1e8aee0fc4793e",
+      "after_sha256": "97d1b5fcd37eac1ff5e14fd2a116ea27e38e43b1e33e60565d3a0ae0d5ab1851",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIExtended.lean",
+      "before_sha256": "45e3f0c594dfd02dc827055ea5e3944469f328c3a00e725535a3adcd63922e73",
+      "after_sha256": "68ab3585eb256212468033f374a59f11a94fd4ac1bac0d7478acd4427eb210be",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIOpt.lean",
+      "before_sha256": "7fe4f58b18e2eb466213261a019f4f046817c6e20a6c3a908e2746a083cfae31",
+      "after_sha256": "9c0e846b967265bb4d509722454d8a3a1bd49fd20968a251206c60ec89a00e47",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse.lean",
+      "before_sha256": "e3501149d536bfa77ac7007532cd99f64466a74d405994b78a017ac9f26f8ebd",
+      "after_sha256": "b5766b3ffdd3d041343aaa97007ebe980f52607213bf5516a2cbc61857800ba7",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRelease.lean",
+      "before_sha256": "2d72b888a8ff2313c71ae98ff21322e44dd35c880102c8a129fc9c25676be185",
+      "after_sha256": "05de8cc26e4077d04e74d9a15c1373e40f8c66ed32590df90c617509bf44acee",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch.lean",
+      "before_sha256": "93c981c622f405ea45611672ce68588f2275553c9d070fe363d26a3c49a65d98",
+      "after_sha256": "f3e089158cd9f51aaf9a68b55a489301b47beabc09c5b055e037393a20cb355f",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "Solution.lean",
+      "before_sha256": "4f47f1f84273504bb2dc01e17520edc10c7727b247cc81f72ca22ce8186cd8ab",
+      "after_sha256": "18cc5770609905d7dfba7d36f0de8f48db31e723751a6216459717e90a45cf2f",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "LeanPool/ListEdgeColoringComplete.lean",
+      "before_sha256": "456896ac4af925f517e231e738a79798a75eb72d008d5efe582bf46f344a721b",
+      "after_sha256": "b302b9608f13f0685a3b70e991c90478cb8acb56c8bea0963f8918522a1c0b29",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/Assembly.lean",
+      "before_sha256": "f8bb33c717526107da83721d411c40c5cf877123fb30e2d0d443d1ce367ff0dd",
+      "after_sha256": "2ebc2a3a315b24e0ade7c89a8a1d7793e9ad41b9fe56cd937626bc23eb01582b",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/Concentrated.lean",
+      "before_sha256": "36a8e50c0d60d0b84a08bece322b2b322affe1e196fb1c395be6844269adf72a",
+      "after_sha256": "a235098e19f7fcc38cc323200a4167f345bd791664ac84514ec68a58aac7212d",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/Counting.lean",
+      "before_sha256": "512f3984bdbe0dd17c9d50cb095fe8244b86ca717c9d2810a50844c994f0d497",
+      "after_sha256": "dd6fa423ffba3d439e88ea1b29c85bc72b9a3ec624d3dfa246898aaf95a23d9d",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/Defs.lean",
+      "before_sha256": "6b3f4c8b912679593cb7731046cc1877f832d6e5282fd2a9d1eb7c2ff01d55f4",
+      "after_sha256": "1bf372d0b7d8eea6fbf5f1293f84fbffa9a54ca826c44e5cfd33928008184b1d",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/Engine.lean",
+      "before_sha256": "92423dcb6f391ab77a297c10efbc10a4ccb720075c3df6c8dc2d83853c285ced",
+      "after_sha256": "ad6cc8595cff39355b5675b4bb5a25c24f695b6d538703ae0fb701c2710cb043",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/Examples.lean",
+      "before_sha256": "fcdd741fc40d167761a3d37b0913c36f26daa03b1a4ccfb8174eb63615cb2492",
+      "after_sha256": "1502027af0608dc32d14c17efd33fc41017164af6c6e2d442d96eab98bd9e774",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/Fractional.lean",
+      "before_sha256": "85ed69a675ec2b1434034f11e690bb2b54c67ccd3e2b6d9fb507b2d2894104ed",
+      "after_sha256": "ba333936d582d9e57f5eb88d88c11cde4b55aa2731fb5fb425524cecc9a432de",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/GainPacking.lean",
+      "before_sha256": "cedd07d31e568fb0a129dfa807c681ef7438dce438797759b2753905efa2cf4a",
+      "after_sha256": "243c85ad65256297b8345bcfff2339a2d3566a1e6e2287228e6d0ac6670fa6fe",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/JoinVariant.lean",
+      "before_sha256": "b37ffacc47220eb37334f96c92c113fca3818ad2689150bcbf8a22a0ea9ce8e9",
+      "after_sha256": "bfb1613015d30caf14edff05d8cda1d3ce43363a77065397bd0e60e6531765c5",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/Lifting.lean",
+      "before_sha256": "643797f757c6a980b2c9f07f805897fab7de4d134ca2b59d65950a2170d8ad6e",
+      "after_sha256": "4d84590363682879cc903f002844ae7bbea57bf1df3f94025e7cb607bce7aed6",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/ListColoring.lean",
+      "before_sha256": "d0fb51ad7f4ce6d6949e7e76ce1e0d75887ac5072038e5c2014f5a0c28b81bc7",
+      "after_sha256": "1623bfea8830c7bf924185416bacc63ee35116c531eadaeb9eecd3dfe2eb6202",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/Local.lean",
+      "before_sha256": "d87f1d1984b5bfed29bb6fbe259a1cb5989fc4b83d6b58569b3a48324c913688",
+      "after_sha256": "fbe6cdfb83007fa599d3c395c84a093fda1cd532f0ec799f157c8ef237cd6449",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/Optimal.lean",
+      "before_sha256": "1d1607ce47889f3918caa0cbd7a78a3acf3d6c30416b6589a4e95ed0102d605b",
+      "after_sha256": "31045d4981d7fb7d4fb9cf16e70ce204c5290956a81612a909ecf9119cb820a8",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/Rigidity.lean",
+      "before_sha256": "1674caa0af11cd3425a53f539144fb406e8504ff9fe9da426f0b2c0c8b10319c",
+      "after_sha256": "310d66f3d5defee157be82df26c0aabd750d8dad5989336637cac7b05af9f5f7",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/StarDegree.lean",
+      "before_sha256": "eda0225608b4ada3df023eeb6e033193b4abfb2920a21a9a03f54e9a709d353a",
+      "after_sha256": "6dbaca8f8fe6674c372f2661a1a19603f5f4dcd9d140b883e075a8002304a7b9",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/TheoremA.lean",
+      "before_sha256": "70acbc1d0756b2227c7b57d6f71044aa540ec90384796004f49d80b5f809d8e0",
+      "after_sha256": "d17f8ee72dd22f68184292401b301e78b3919bdc49203d13bd18023d0c09a052",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/TheoremB.lean",
+      "before_sha256": "fd80c1c15e2ce00f1cff0acec5f677538176f17869fc8d23f38dac9d6ae7465b",
+      "after_sha256": "222e10fed4ce8596907426c45b76a7235a607d5dd0267c080ed97207a595eee8",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/TheoremC.lean",
+      "before_sha256": "5a77a0f591b104608dcb48a94427e79aeaa51902044fa3491acd4aeb4d991ba4",
+      "after_sha256": "d663745d7d8df9e25e6b70e6c785b7bbc7d3e646368d01158d32e4983943c781",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVI/TrianglePacking.lean",
+      "before_sha256": "50e5897e449d5d58396c3bb535761cbf98023c31680284267129da883a945ad4",
+      "after_sha256": "845f13f6c7ac5072772abd751f2d22e3f055c3899ee6fbc408ffb180dbe89494",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIOpt/Budgets.lean",
+      "before_sha256": "411c809893b0ccc130d7540eab9f7810efeec159a1bb99e500cd50e3243a3d61",
+      "after_sha256": "17334369735e17d2a9af6bcfcc8aca2c010a528dfa5d51bd4a76d9c7f9b3bdff",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIOpt/FracFace.lean",
+      "before_sha256": "014630c201f6550f6507f2c4e18e8d55fdc1a2008ef19da082098a3cbf5ecca8",
+      "after_sha256": "404947e7cea381644bc5f6a2dbe172783b1f3b62717a9daeb13680dd0beec66e",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIOpt/InducedC4.lean",
+      "before_sha256": "76d02cb8f3369a09cd350fce17e826802a0ae1f0b6c26166fe9b273cbaf43785",
+      "after_sha256": "3798e0ad11c0335e2be5de6d49c6e2a185ab86871a74d4c8da4ed5d594144efc",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIOpt/Parametric.lean",
+      "before_sha256": "59608bcd2a9d89831b7ea143cd64aad62f06d7a32a32ac15cc6193c16c26b55c",
+      "after_sha256": "1a6d44bd01687e1ddaa97b8c4555fd98cc052944e7629cf6278b8cca7aad44b3",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIOpt/Secondary.lean",
+      "before_sha256": "295a36b083417d5b2667b9b37849b35e6e624468bdc00dd379b4390ba9a6a28a",
+      "after_sha256": "70216520f1d893d34ce98a44d065a49831d3a9420147fc7bd7b022ad0c1e02be",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/BlockDistance.lean",
+      "before_sha256": "efc748a6310a0476d46e3bc60a782a840efea394c6873da2def453053ea6fec2",
+      "after_sha256": "b73b6970d1702638899132a6dcc40bb6a30d724a5b0b3508a5938dc06e940a22",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/CompatiblePrefix.lean",
+      "before_sha256": "17a8cedb9251b1b4f0e32aaf5c848fe761db34ff5f1e2b49fb9cc8fcbf45eac7",
+      "after_sha256": "6640cfb1a12fb9893e7c5a43f948ca571efd1f4b36ee178f75a2ab846dfa2d51",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/Compensation.lean",
+      "before_sha256": "70bb4cc3f1183cbefc9a3745db1e421135e78e5f6ed2e32558e4429d2f9fe41d",
+      "after_sha256": "0f645f7ae7c797fc0d682283972e7e718d222bde781dade747ad21ec7b11bc01",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/Connectivity.lean",
+      "before_sha256": "a57c8360e92db8c78d8aae4e304f7c2666ec9e77ab1e5f04f3cc9e75b1bf259b",
+      "after_sha256": "2cdae544ec2db781a30c444c586bbfff080f144288bc1f4e0ff5d3535f53cee2",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/Counts.lean",
+      "before_sha256": "e3c239c33505f36f924737d46bc0f354de292c2f1f59fff1d42c37797c7c9a9c",
+      "after_sha256": "04b258cb7d42706b43ff42fefc6555a4d21cca9d2d6224e09b680c2309602639",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/CrossCharges.lean",
+      "before_sha256": "135238b4aac71d6ff2ba649ed4690e6ce81c1e50ff74452c2ea332a75a09430e",
+      "after_sha256": "e683f8d0b9c37c0d4fcb3573931cdee8b83d63faad978253c537cb261a3b46ef",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/JoinPrefix.lean",
+      "before_sha256": "750b6aa1678bb16aa88042d7b6b84bcf82fa8da21222c78b293820a742932d9f",
+      "after_sha256": "ef8c68d46be69f81be84927e9af06bef25e808f41421bf05f2f0323325dba4ed",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/LiftAlignment.lean",
+      "before_sha256": "c2cb55a19e0363b44894a395b3b58237ff1c5d9f1859b3a38e4f5da65cf5e0e3",
+      "after_sha256": "316591485a0d50ed417a02c9b0e95f93713a51143e036fa2e28a2a93ca0b981e",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/OptimalAdapter.lean",
+      "before_sha256": "9b534018d4b2493e71b0013177ef56e9be60c23ea32ea4558cc04173ab3a4257",
+      "after_sha256": "2aa9d98de4a201b9ff857cb1b3096331703ad06fa46ae7ff21ed9ef23a8c3dbd",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/PartitionIdentity.lean",
+      "before_sha256": "09b3be806e55411a6fa54b93fe3ee7905ff308dfc2f783243693d2bd044be4d7",
+      "after_sha256": "2cbb37b88079b2fab712fc5f7379dfb4df32fc0229039e7403102cf996e3fd13",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/Paths.lean",
+      "before_sha256": "5f58a0176a4b9d33b1cac6e50fb02fcf2049279582a6a9fc0258dd3aa5de9b04",
+      "after_sha256": "707eabb6b37a7b6955b794c0d2da48a4b3c73d13d408aa3eb0d2f1a71f975ee7",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/PhysicalPrefix.lean",
+      "before_sha256": "ec6348bcb5f9f55e2e1c0d1e35ca86cb96e7bc7ce4d402e77147dc3af391823a",
+      "after_sha256": "5022ded635a25a5ec022236d67c08ef2cfa15b14c86025cfa9ff9be99f96229f",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/PhysicalRecourse.lean",
+      "before_sha256": "b4ac4a224a8dd51b095f55a8b7d50698c188aa296545bc22eb5409476fae0c62",
+      "after_sha256": "3286c59cb4a60d4c1a9c8f3e8daacca62109e054ad4e1cf695cb670d179f6122",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/Prefix.lean",
+      "before_sha256": "b08e19d3886bb1cd3744d3454a67706e36d6a3914457fd6780daa9bac8427c26",
+      "after_sha256": "831db512d6094db1cb78b446681c2aa29d1a002d37349fe2e3c74df2e1298318",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/ProtectedLifting.lean",
+      "before_sha256": "4dd532178b1af77a7a8e1a8dd0f78e39647e67fa12d8ed1dd0fed6b2c2903f2d",
+      "after_sha256": "d1dc0394114de5afed8ed08ba22a00f6da18544aaa7c9a1addd1b0618a638df3",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/ProtectedOwners.lean",
+      "before_sha256": "1a41946c50d7e479c02a1fd92814948aeb0429ffa6aea5c69764dcffb739d0a2",
+      "after_sha256": "ebaff4ba99c3779d5b58003fd179faab7652de5b8482145b6fce001ed4cf2484",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/ResourceHits.lean",
+      "before_sha256": "4e12ddcd93e33722290fc4bb110cf44c0a725417fcd3cb10a64488f968133506",
+      "after_sha256": "993212c40ba427569f368728e65a92a1621f7612bb3cf77843414b6c5106dd36",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/RetainedConstruction.lean",
+      "before_sha256": "e6b5105e3595f70801ea3dbddd4e387531da9fcafecdcff5ec65af02c08860b3",
+      "after_sha256": "f7359e2c9bdd1def2df1f27c6a1577d1ffaea41e3dd5b5d24639d40e7c21d989",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/TerminalAlignment.lean",
+      "before_sha256": "fa90e559947e60791fd4208da89bb1f87d1291b81da29fa4492ac170bbd26887",
+      "after_sha256": "5e19224847953374fc886043eb24383a2a140c4483488c101572e2fc162bbe29",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIRecourse/TerminalStep.lean",
+      "before_sha256": "e4059550b11b205530951fc3e5d5e535195961b03220dbe74d9929d7f99e2fa4",
+      "after_sha256": "b806344884d11bc6b1c87710314d9bcd7472263079a1e7de9cfc959350eceb43",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/Duals.lean",
+      "before_sha256": "05eb0b6ab5a6bc7f03ff30bdf6dc265b84ea157993baec6dbe62d0ef0b7d3b10",
+      "after_sha256": "ea7d00198a354ff6d10e0e3688462fc7855fee1389f5b3d30173bb3c64e40963",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/ExceptionalCleanup.lean",
+      "before_sha256": "6ca99da9b41f345259b32d81cb62f80c0ce86185228ef7affc374710280d522b",
+      "after_sha256": "e707b1edb294ca1c2ef8153e24d0feea8f78e2e0654673bb71a429f72e585fc4",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/ExceptionalConstruction.lean",
+      "before_sha256": "b2a53ff8cd13cfd6e0fe722375b2b290da0e72eaf3f9fd4ca4c507ae8cbe429a",
+      "after_sha256": "5872188b9011f1d3099dd15d0d3830700345db61aeb20b1b783653f7ac55a6c3",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/ExceptionalExamples.lean",
+      "before_sha256": "bfb07c76cf97553ee73589b5b2e9c07881fc417f61c06e4bd662fba717466ece",
+      "after_sha256": "73562dc16ace640802f172ad4582270a6ffc2f4c2fd453e583dc6a97e9763196",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/ExceptionalIntrinsic.lean",
+      "before_sha256": "4710c829b7206791c1f6ac7ce13094d7d001ba4b085623f7ad3a0e5f1e4f9229",
+      "after_sha256": "8b2ef18c7b0a6dc11d03b0ef21b016e07b00f84111bc78d98b331bab4c45a7a4",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/ExceptionalModel.lean",
+      "before_sha256": "063a0c2830d9b29bb9c7da2a855425b139271cbca198f614cf77248d734d98fb",
+      "after_sha256": "0d1941f8cbdaf3d0c74e29757132981cafd73f70a85e4a916d4a18e3fb6a7bd1",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/ExceptionalSetup.lean",
+      "before_sha256": "448bc8286d076245c4cf76894b60cf6415fd745637577bb781366c92b6343f00",
+      "after_sha256": "fe2f250565142e1de416a65428a5bf31c5e2e747bfc06ab87c2781f6612747f7",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/ExceptionalTheorem.lean",
+      "before_sha256": "42a93d5a84231ed691f8255ab7618de6b2714d558bac93dc1fda5090472e6e1f",
+      "after_sha256": "dc7f8077b55e5bd705916b9c987736e050415e341b47886629278faa217e6701",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/ExceptionalTriangles.lean",
+      "before_sha256": "5fd0704d0b9aeb561537051e6838f7c55e3023ef39515fa93e0e0b69a6ce643c",
+      "after_sha256": "708505692cf442313bd8a415ddfa0a2ca6ae7e63fa956bb9c8107a737569129b",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/GreedyCount.lean",
+      "before_sha256": "128522ff208077c34754d8cdb712af1b1df287c0b344997b3aad6f4795f7a543",
+      "after_sha256": "402403437cc51171f1416bab3b95c8edb17519df2fd65bd956b38ac057b549f4",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/Intrinsic.lean",
+      "before_sha256": "ba5349852f66f89de7332c3051f507b4f87c47d4d0b4220bf36bb8387fb8d80c",
+      "after_sha256": "81fa069b2135449328c3b3a7bbfcb9896c104659f884697c5df9a25dc00e85a2",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/PhysicalExtension.lean",
+      "before_sha256": "41f0a412c62217249a7235ca15c163d4770e89840bd6266fe66418d8e975cd65",
+      "after_sha256": "0ae2326481a3a93782ea5eccdd9df3c62a5b466cfdfebd0c82a7f974090b7026",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/PhysicalRecourse.lean",
+      "before_sha256": "eaf76ae4c751904fcc7d3b3c081085ba5fa49ce26761ad5bd98970a6e3a63eb2",
+      "after_sha256": "b6ee8c7fbf99bb146dae7a07358ef1b0a192462aeb2fcfda153785af8cea8d22",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/PrescribedCount.lean",
+      "before_sha256": "535ded36e306c6d91091475e81b0cd490a4416c8f20f165bb3cdea8ef16867b2",
+      "after_sha256": "0a796a0093ae4a084101edb987add241a3a8dc328a612d0621b0053152f51826",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/ResidualCount.lean",
+      "before_sha256": "de5ad75cafe9cfa4dc10e800400f98a3a349d1a542037fc3fdc02a4d83bc75fd",
+      "after_sha256": "be1cee53e2225fa7c3a4e180a1566a744c9db04211f05a5432ce03c735ad0d88",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/SecondExtremal.lean",
+      "before_sha256": "e7420bf33c148064213691f5c03280269f606acd3c5182c61a567961a2adc174",
+      "after_sha256": "20a0d4f4d1eafadd99fd742948d3247220705a4f12562b1007d4edba0266430a",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperVIResearch/VizingExtraction.lean",
+      "before_sha256": "5913c1e2e8ddf98c9eaf1c95932a92a60c414eeaf8ea96b90a1d4ce9357ffa31",
+      "after_sha256": "ca404c7ff785052fbc460b81124bc53ad4b51b0c7a58e0016231e4ec38613885",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "LeanPool/ListEdgeColoringComplete/Basic.lean",
+      "before_sha256": "9a0435669980ccfc5abbb53d23cceed9a0b0146e9dbe69ca4f6bfdfb02782f2c",
+      "after_sha256": "318bc4d408fb5367547c4093e2e16418ec710cd1492284191b1bf1e17fa0fcea",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "LeanPool/ListEdgeColoringComplete/Certificate.lean",
+      "before_sha256": "cc6b5d75ffa3ff91abab806dc7b4a0099d80b47a43c501742d04aed130f7ee96",
+      "after_sha256": "f8725c793164a0acb39d14357419297d2e08c50566d28aeb954e62ef2b1f9079",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "LeanPool/ListEdgeColoringComplete/Main.lean",
+      "before_sha256": "5012ea255f96ffc84cb0f61f0a0a45919acc325f107ef8d5de26877731c36f12",
+      "after_sha256": "9e903ff402fdf5f06de520e49021f1a3f5579d856c6feb399afbdaf2493398fd",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "LeanPool/ListEdgeColoringComplete/Polynomial.lean",
+      "before_sha256": "0c9736331f0aea8e87aaaa9537dc23b69660770caeee7723c1405c79832a1b36",
+      "after_sha256": "36214e8d5d7bf6236cfd5a6f0d680f9a00476cc3cc0efc51663be297d7b4fc76",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperV/Vizing/Basic.lean",
+      "before_sha256": "ac590869217a6a543ce5e19f194af2a83fd5c627ccaaa38e6f99952c355ffd72",
+      "after_sha256": "46b6cbbf7a0d16557a99a30e866055f099a920ad4dac1734b2f791de618d8b0a",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperV/Vizing/Endpoints.lean",
+      "before_sha256": "a096f02425c830982a169ae5dc60905a17ad48923d8ec97288644bd585c14138",
+      "after_sha256": "43c60f3539f00ecc69a79b61634c03d430be161b9fc741d5a396e84ddc555ae0",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperV/Vizing/Fan.lean",
+      "before_sha256": "67a1feddb0b3d2dbc66eede5dfaf73dbe668e002e5c3d19b4d155ab05d4da49e",
+      "after_sha256": "5dc758226ae5bb7e35a7fd7a986a8abed2c9e4b232e86b502065724d493cd5a5",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperV/Vizing/Kempe.lean",
+      "before_sha256": "7dda789e95a63d7a74df45777aef6e1d4c388df021092bbd69f2dae19b2c2a70",
+      "after_sha256": "70f115f62d9dea42da1d0d10e7a2411cc67563ae0e7f48b324dc5edbcff89331",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperV/Vizing/Main.lean",
+      "before_sha256": "4ffdd22d6269716649906864f609fd9b3a7869206bfcc84196a1c95ec058e33b",
+      "after_sha256": "f563dcd5520a7a9286f16f5cac5a250d1d39df64abd4c529497d685ba6ad3dc2",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    },
+    {
+      "path": "PaperV/Vizing/Step.lean",
+      "before_sha256": "db01fcfa7e65bdd69eff4128c782e3acef83d64a392f69025d1e801cd1396c9f",
+      "after_sha256": "95f863f60cf8a98284cb836d1bf254545c6d4363c95d93306780577a95e349cd",
+      "change": "Added copyright/SPDX comment only; all prior content retained verbatim as Unicode text."
+    }
+  ],
+  "package_version_change": "0.6.0 -> 1.0.0",
+  "mathlib_pin": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "old_source_archive_unchanged": "3be5d979048c4ee877590b6aa18618b94dd0d49d5df2a581042371db004e4c42"
+}

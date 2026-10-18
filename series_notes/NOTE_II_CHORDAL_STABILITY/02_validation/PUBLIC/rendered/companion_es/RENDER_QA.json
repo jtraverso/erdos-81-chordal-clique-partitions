@@ -1,0 +1,21 @@
+{
+  "pdf_sha256": "ca68c3c0b993efae5b8c53602becb11d09d54c414bf0a38f5942e69271de48dd",
+  "md_sha256": "accf344b6849eca5f1199a6d03ac7e7c42501ef0c1c545032b726167ec2a70cd",
+  "tex_sha256": "fd87f57495493031f86c3b601658c3b4db1c723044ae7832b0bf8ba161a54e28",
+  "pages": 4,
+  "renderer": "PyMuPDF 129.6 dpi",
+  "visual_inspection": "PASS_ALL_FINAL_PAGES",
+  "compilation": "Two Tectonic passes, exit0",
+  "layout_authority": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_es.tex",
+  "layout_authority_sha256": "28f4be8737a65a474cb422eef39b42f821ba12614749cdfcb261ac001f0dd62c",
+  "role": "companion",
+  "language": "es",
+  "pages_viewed": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "method": "All pages inspected in rendered contact sheets, with full-resolution inspection of changed mathematical, reference, title and source-package pages. No clipping, missing glyphs, overlaps or unreadable equations found.",
+  "pdf": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf"
+}

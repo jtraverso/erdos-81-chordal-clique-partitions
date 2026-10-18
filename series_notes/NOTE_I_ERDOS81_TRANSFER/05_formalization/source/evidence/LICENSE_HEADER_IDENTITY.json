@@ -1,0 +1,37 @@
+{
+  "status": "PASS_EXACT_SUFFIX_IDENTITY",
+  "changes": [
+    {
+      "path": "lean435/Endpoint435Gate.lean",
+      "old_sha256": "855dc54cb1a054d3455220ddccac32da53cc2aef7c7257ce51d7073461ba6eca",
+      "new_sha256": "7de0666789c544e18fd4ad9ddd7890dda19aa0228af164e2a3e15e01bec46802",
+      "exact_old_bytes_retained_after_header": true
+    },
+    {
+      "path": "lean435/Erdos81Note.lean",
+      "old_sha256": "2dc371f70773f692f86b946bec252ef7b275d660d4e073e427f1fe3008c54d28",
+      "new_sha256": "a7b3b17788a89016f3c2e153d7ee8ed14451c8eecb90c96da4a78f7e5824685e",
+      "exact_old_bytes_retained_after_header": true
+    },
+    {
+      "path": "lean435/FreezeFullAudit.lean",
+      "old_sha256": "6b16b0851939dd127b83301952efa631fb315d521004dd1ccf705d0fb51909f3",
+      "new_sha256": "90dc02e7d77065ab7577475443f113101e2d9efd23a57d7157339c64d6b6911e",
+      "exact_old_bytes_retained_after_header": true
+    },
+    {
+      "path": "lean435/Erdos81Note/Assembly.lean",
+      "old_sha256": "1d4525ae10c59989131a0f9c8f110442db7119a81809bd6ad81714fdd170f772",
+      "new_sha256": "5418e4346cdef677eb0f83c266cb2dace8d1ade3b71fbc0e06e5aecc815505e8",
+      "exact_old_bytes_retained_after_header": true
+    },
+    {
+      "path": "lean435/Erdos81Note/PhysicalTransfer.lean",
+      "old_sha256": "b40113e155be15d123a97c9b4c9c5c9b8591c17e656b0ff54784ade37f101354",
+      "new_sha256": "e0b3fb828de6b8dc99d4100a2e7176883366f0f2e3a76e9debdb00a0a6dab74f",
+      "exact_old_bytes_retained_after_header": true
+    }
+  ],
+  "proof_change": false,
+  "header_utf8": "/-\nCopyright (c) 2026 Juan Pablo Traverso Gianini. All rights reserved.\nReleased under Apache 2.0 license as described in the file LICENSE.\nAuthors: Juan Pablo Traverso Gianini\n-/\n\n"
+}

@@ -1,0 +1,76 @@
+{
+  "ok": false,
+  "kind": "unsat_core",
+  "degree": "invalid",
+  "timed_out": false,
+  "partial": [],
+  "assumed": [],
+  "solver_free": false,
+  "method": "",
+  "checks": [
+    {
+      "check": "the core really is unsatisfiable",
+      "ok": true,
+      "detail": "unsat"
+    },
+    {
+      "check": "one name per formula of the core, each once",
+      "ok": true,
+      "detail": "4 name(s) for 4 hypothesis formula(s)"
+    },
+    {
+      "check": "it is about the obligation in wrong_obligation.py",
+      "ok": false,
+      "detail": "the CLAIM differs: the certificate proves another statement than the spec's"
+    }
+  ],
+  "warnings": [],
+  "detail": "valid on its own terms, and NOT about the obligation in wrong_obligation.py",
+  "explained": [
+    {
+      "role": "used",
+      "name": "dual_upper"
+    },
+    {
+      "role": "used",
+      "name": "realization_lower"
+    },
+    {
+      "role": "used",
+      "name": "feasible_gain"
+    }
+  ],
+  "card": {
+    "kind": "unsat_core",
+    "evidence": "universal",
+    "conclusion": "valid on its own terms, and NOT about the obligation in wrong_obligation.py",
+    "scope": [],
+    "hypotheses_used": [
+      "dual_upper",
+      "realization_lower",
+      "feasible_gain"
+    ],
+    "cited": {},
+    "pending": [],
+    "role": null,
+    "link": null,
+    "declared": false,
+    "degree": "invalid",
+    "provenance": {
+      "digest": "acf0adcc6146be87",
+      "schema": 5,
+      "schema_known": 5,
+      "produced_by": "0.34.0",
+      "verified_by": "0.34.0",
+      "spec_path": "two_error_transfer.py",
+      "spec_sha256": "43f281e8e1f4ed09c893efe2550d832fa3cde4fd77bc3c2f2d11622ef93bcbf5",
+      "python": "3.12.10",
+      "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+    },
+    "exact": false,
+    "external": []
+  }
+}
+
+STDERR

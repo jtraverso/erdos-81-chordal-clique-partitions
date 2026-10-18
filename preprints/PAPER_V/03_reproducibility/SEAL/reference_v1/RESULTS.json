@@ -1,0 +1,570 @@
+{
+  "status": "PASS",
+  "count": 30,
+  "results": [
+    {
+      "name": "empty",
+      "lower": 0,
+      "upper": "0",
+      "floor_upper": 0,
+      "certified_optimal": true,
+      "objects": 0,
+      "independent_enumeration_optimum": 0,
+      "mode": "selector_N1_N2_dual",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 1.203,
+      "certificate_sha256": "f7b83111c8be68f3db8598fa61bb1dab1cc07955f0005166370e67b1a1094274"
+    },
+    {
+      "name": "triangle_one_host",
+      "lower": 1,
+      "upper": "1",
+      "floor_upper": 1,
+      "certified_optimal": true,
+      "objects": 3,
+      "independent_enumeration_optimum": 1,
+      "mode": "selector_N1_N2_dual",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 0.016,
+      "certificate_sha256": "aab12163dbf58cca73244f0c1ce80567a6fdc5bc32402dc82149028118f97d83"
+    },
+    {
+      "name": "triangle_three_hosts",
+      "lower": 3,
+      "upper": "3",
+      "floor_upper": 3,
+      "certified_optimal": true,
+      "objects": 9,
+      "independent_enumeration_optimum": 3,
+      "mode": "selector_N1_N2_dual",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 0.0,
+      "certificate_sha256": "4329e9a1d33c685f92e52295348e1770cf42e7c2703d8eaede1224113f90f7dd"
+    },
+    {
+      "name": "k4_two_hosts",
+      "lower": 4,
+      "upper": "4",
+      "floor_upper": 4,
+      "certified_optimal": true,
+      "objects": 12,
+      "independent_enumeration_optimum": 4,
+      "mode": "selector_N1_N2_dual",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 0.015,
+      "certificate_sha256": "646732d5217cb655aea2258229fb9b06a6f0b3a135e2cf79925def7cf2eb09c0"
+    },
+    {
+      "name": "overlap",
+      "lower": 3,
+      "upper": "3",
+      "floor_upper": 3,
+      "certified_optimal": true,
+      "objects": 9,
+      "independent_enumeration_optimum": 3,
+      "mode": "selector_N1_N2_dual",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 0.0,
+      "certificate_sha256": "e7262d25558342402ac74a0b9514fd84d1ad66a0a9c1ac3514580327b5e4e197"
+    },
+    {
+      "name": "five_one_host",
+      "lower": 2,
+      "upper": "2",
+      "floor_upper": 2,
+      "certified_optimal": true,
+      "objects": 10,
+      "independent_enumeration_optimum": 2,
+      "mode": "selector_N1_N2_dual",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 0.0,
+      "certificate_sha256": "47c3a5dbbe9e22c8f7ea475b2a5ef52ffc3e5eeb4ae9691f17689a63c63d4b02"
+    },
+    {
+      "name": "compact_1",
+      "lower": 16,
+      "upper": "16",
+      "floor_upper": 16,
+      "certified_optimal": true,
+      "objects": 58,
+      "mode": "selector_N1_N2_dual",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 0.016,
+      "certificate_sha256": "c7d0cc3eb51202be9e0d52b3c4b0bd4656c1f225fb62a32cbd1b867443093016"
+    },
+    {
+      "name": "compact_2",
+      "lower": 20,
+      "upper": "20",
+      "floor_upper": 20,
+      "certified_optimal": true,
+      "objects": 104,
+      "mode": "selector_N1_N2_dual",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 0.031,
+      "certificate_sha256": "592df422bbd8ec8c086714e4152b02369d02bde66c1ec54f43d98fe47bf14cc3"
+    },
+    {
+      "name": "compact_3",
+      "lower": 18,
+      "upper": "20",
+      "floor_upper": 20,
+      "certified_optimal": false,
+      "objects": 94,
+      "mode": "selector_N1_N2_dual",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 0.016,
+      "certificate_sha256": "9382301a7e6f7a9f8023a096c179592b42e93328a50f07c23031e6f06b8c5ccc"
+    },
+    {
+      "name": "compact_4",
+      "lower": 17,
+      "upper": "17",
+      "floor_upper": 17,
+      "certified_optimal": true,
+      "objects": 77,
+      "mode": "selector_N1_N2_dual",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 0.015,
+      "certificate_sha256": "b46f223d963346cb6d7478c8fbd30988e5036bc6bb591d1c40526c3526b4a138"
+    },
+    {
+      "name": "compact_5",
+      "lower": 19,
+      "upper": "21",
+      "floor_upper": 21,
+      "certified_optimal": false,
+      "objects": 103,
+      "mode": "selector_N1_N2_dual",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 0.016,
+      "certificate_sha256": "8babbb29d1b0b4ead03a007dc8eff4c90f51303bcf50327b96fdcf2e5b6fcf70"
+    },
+    {
+      "name": "compact_6",
+      "lower": 20,
+      "upper": "20",
+      "floor_upper": 20,
+      "certified_optimal": true,
+      "objects": 96,
+      "mode": "selector_N1_N2_dual",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 0.016,
+      "certificate_sha256": "1f7c57ef96b57dec755e3b5c8a63b7442607021c9815da6c86c71bee76bf6d94"
+    },
+    {
+      "name": "rand_24_60_1",
+      "lower": 135,
+      "upper": "136",
+      "floor_upper": 136,
+      "certified_optimal": false,
+      "objects": 690,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 0.281,
+      "certificate_sha256": "798598bb7181a98d12a43cabaef4bb3a93837797a802089a7ee34e7a5869a913"
+    },
+    {
+      "name": "rand_24_60_2",
+      "lower": 125,
+      "upper": "129",
+      "floor_upper": 129,
+      "certified_optimal": false,
+      "objects": 627,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 0.219,
+      "certificate_sha256": "65023b38868329f2aedbbf8742cb0ba82d1033d1e8861284f000541517f9c34f"
+    },
+    {
+      "name": "rand_32_100_1",
+      "lower": 217,
+      "upper": "221",
+      "floor_upper": 221,
+      "certified_optimal": false,
+      "objects": 1117,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 1.453,
+      "certificate_sha256": "d7a23450fa3b9f1b5ebf5b5f5cd95c44656593af7a13918575189dc7fcf52dce"
+    },
+    {
+      "name": "rand_32_100_2",
+      "lower": 216,
+      "upper": "220",
+      "floor_upper": 220,
+      "certified_optimal": false,
+      "objects": 1102,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 1.109,
+      "certificate_sha256": "cf852942bad93884fe593b144bdffbb9fa37d23f6ae82b55053fc87376f0e9fb"
+    },
+    {
+      "name": "rand_40_140_1",
+      "lower": 288,
+      "upper": "294",
+      "floor_upper": 294,
+      "certified_optimal": false,
+      "objects": 1422,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 2.469,
+      "certificate_sha256": "c3135693205d74eeec18c2f8eaf85ef59298a871afb50ab9e9478e75168fa957"
+    },
+    {
+      "name": "rand_40_140_2",
+      "lower": 302,
+      "upper": "307",
+      "floor_upper": 307,
+      "certified_optimal": false,
+      "objects": 1493,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 3.75,
+      "certificate_sha256": "d93cccb8c04b801f12dda99e6b1b1221469028a79f29108d86921f1ba20f2e5e"
+    },
+    {
+      "name": "bigrand_24_40_1",
+      "lower": 258,
+      "upper": "265",
+      "floor_upper": 265,
+      "certified_optimal": false,
+      "objects": 4008,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 2.437,
+      "certificate_sha256": "01e7896fd3fc382125b6d317c65495f00c2c00e61c284171e0ce87bdda3e97e9"
+    },
+    {
+      "name": "bigrand_24_40_2",
+      "lower": 274,
+      "upper": "274",
+      "floor_upper": 274,
+      "certified_optimal": true,
+      "objects": 4528,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 3.141,
+      "certificate_sha256": "1bee25e9d986fa47403c3b43a4d480aae564697162675f9063bf412a6cf7df28"
+    },
+    {
+      "name": "bigrand_32_60_1",
+      "lower": 494,
+      "upper": "494",
+      "floor_upper": 494,
+      "certified_optimal": true,
+      "objects": 12499,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 11.813,
+      "certificate_sha256": "3c5f9b2ed6d867a3c281735d7d871880611e627846eff270dd87ffac2c904fa9"
+    },
+    {
+      "name": "bigrand_32_60_2",
+      "lower": 493,
+      "upper": "494",
+      "floor_upper": 494,
+      "certified_optimal": false,
+      "objects": 11389,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 9.812,
+      "certificate_sha256": "d4623b78a13b908ec6d153a09f01d0e8ea4865fb9d9bd168ddc1a9b2fd6a5682"
+    },
+    {
+      "name": "bigrand_40_80_1",
+      "lower": 780,
+      "upper": "780",
+      "floor_upper": 780,
+      "certified_optimal": true,
+      "objects": 25116,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 34.156,
+      "certificate_sha256": "f51408efc9c0ee490d652b491a13c7d1da2d637afcce332631fe3e86a9a7464c"
+    },
+    {
+      "name": "bigrand_40_80_2",
+      "lower": 780,
+      "upper": "780",
+      "floor_upper": 780,
+      "certified_optimal": true,
+      "objects": 24465,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 31.532,
+      "certificate_sha256": "378f78bab5b7e8d2d6534fdcf237b990d2691703de9604fc8c45224c2b5a4a49"
+    },
+    {
+      "name": "rr_24_6_1",
+      "lower": 194,
+      "upper": "207",
+      "floor_upper": 207,
+      "certified_optimal": false,
+      "objects": 3519,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 1.796,
+      "certificate_sha256": "380cb10ad4426e6874614bd8d16acda4c08676039fc567816afd5e725f1b14d6"
+    },
+    {
+      "name": "rr_24_6_2",
+      "lower": 198,
+      "upper": "207",
+      "floor_upper": 207,
+      "certified_optimal": false,
+      "objects": 3519,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 1.125,
+      "certificate_sha256": "f4649a588793c3a54023278b45f41af66c472b741c18440460f8a89ee957d43e"
+    },
+    {
+      "name": "rr_32_8_1",
+      "lower": 356,
+      "upper": "372",
+      "floor_upper": 372,
+      "certified_optimal": false,
+      "objects": 8556,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 4.563,
+      "certificate_sha256": "7559e7cba72b0f1ba802977a9606ebdc2c34c694787eb0d20fd5f9905ab1e2e6"
+    },
+    {
+      "name": "rr_32_8_2",
+      "lower": 340,
+      "upper": "372",
+      "floor_upper": 372,
+      "certified_optimal": false,
+      "objects": 8556,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 5.39,
+      "certificate_sha256": "0034913e76a2957ddeb6782d7eb5ae8a79a8932ae4ade4fb6786912bd3a42016"
+    },
+    {
+      "name": "rr_40_10_1",
+      "lower": 548,
+      "upper": "585",
+      "floor_upper": 585,
+      "certified_optimal": false,
+      "objects": 16965,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 19.656,
+      "certificate_sha256": "0cd28898803fbeb7b0b863a2f07cdb8f7252815a3c24a3db5b56cb4bbdbfab13"
+    },
+    {
+      "name": "rr_40_10_2",
+      "lower": 549,
+      "upper": "585",
+      "floor_upper": 585,
+      "certified_optimal": false,
+      "objects": 16965,
+      "mode": "selector_dual_no_repairs",
+      "accepted_repairs": {
+        "N1": 0,
+        "N2": 0
+      },
+      "elapsed_seconds": 15.579,
+      "certificate_sha256": "591b955921985dec6b13c36cff4a60c6793714080bd2daa284eb69c4a57dc684"
+    }
+  ],
+  "negative_controls": [
+    {
+      "mutation": "duplicate_pair",
+      "rejected": true,
+      "reason": "duplicate pair"
+    },
+    {
+      "mutation": "uncovered_dual",
+      "rejected": true,
+      "reason": "uncovered dual object (0, (0, 1))"
+    },
+    {
+      "mutation": "inflated_lower",
+      "rejected": true,
+      "reason": "reported lower"
+    },
+    {
+      "mutation": "wrong_upper",
+      "rejected": true,
+      "reason": "reported upper"
+    }
+  ],
+  "direct_move_checks": [
+    {
+      "move": "N1",
+      "before": [
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "after": [
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "hosts": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "verified": true
+    },
+    {
+      "move": "N2",
+      "before": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "after": [
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "hosts": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "verified": true
+    }
+  ],
+  "scope": "Finite witnesses and rational upper bounds; no universal theorem or historical runtime claim."
+}

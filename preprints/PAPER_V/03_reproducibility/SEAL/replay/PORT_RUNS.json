@@ -1,0 +1,36 @@
+[
+  {
+    "label": "js",
+    "command": [
+      "node",
+      "<USER_HOME>\\e81-seal-corrected-20261018\\current\\js\\seal.js",
+      "<USER_HOME>\\e81-seal-corrected-20261018\\replay\\inputs",
+      "--packings"
+    ],
+    "exit_code": 0,
+    "seconds": 0.2086107000359334
+  },
+  {
+    "label": "cpp_compile",
+    "command": [
+      "C:/msys64/ucrt64/bin/g++.exe",
+      "-std=c++17",
+      "-O2",
+      "<USER_HOME>\\e81-seal-corrected-20261018\\current\\cpp\\seal.cpp",
+      "-o",
+      "<USER_HOME>\\e81-seal-corrected-20261018\\replay\\seal_current.exe"
+    ],
+    "exit_code": 0,
+    "seconds": 3.186405799991917
+  },
+  {
+    "label": "cpp",
+    "command": [
+      "<USER_HOME>\\e81-seal-corrected-20261018\\replay\\seal_current.exe",
+      "<USER_HOME>\\e81-seal-corrected-20261018\\replay\\inputs",
+      "--packings"
+    ],
+    "exit_code": 0,
+    "seconds": 0.2666762999724597
+  }
+]

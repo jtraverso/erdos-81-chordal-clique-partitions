@@ -1,0 +1,14 @@
+[
+  {
+    "language": "en",
+    "reference": "baseline-a1f4589/PAPER_VI\\01_manuscript\\PAPER_VI_v0.6_review_en.tex",
+    "sha256": "5f07153041c706c8a8aceae85788c7831b348c469ce17ab3d805e46157fd434c",
+    "layout": "Exact inspected current Paper VI v0.6 preamble from series IV; title hierarchy, Latin Modern, geometry, AMS, Babel, breakable hyperlinks retained."
+  },
+  {
+    "language": "es",
+    "reference": "baseline-a1f4589/PAPER_VI\\01_manuscript\\PAPER_VI_v0.6_review_es.tex",
+    "sha256": "282d94fbb20b0f74149b345b9f2d853eb5481e12ed913b5a5c00f8efcad9be4a",
+    "layout": "Exact inspected current Paper VI v0.6 preamble from series IV; title hierarchy, Latin Modern, geometry, AMS, Babel, breakable hyperlinks retained."
+  }
+]

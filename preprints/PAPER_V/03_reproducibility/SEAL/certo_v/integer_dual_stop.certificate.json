@@ -1,0 +1,26 @@
+{
+  "schema": 5,
+  "kind": "unsat_core",
+  "solver_free": false,
+  "note_key": "cert.note.unsat_core",
+  "note_args": {},
+  "note": "Verifying requires re-solving, but only the core (far smaller).",
+  "provenance": {
+    "certo_version": "0.34.0",
+    "created": "2026-10-18T19:47:59+00:00",
+    "spec_path": "integer_dual_stop.py",
+    "spec_sha256": "d26cf03a25699dd2362905e938676c4b172b172e257a21fbf2c4e5d2873f8127"
+  },
+  "payload": {
+    "core_smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun nu () Int)\n(declare-fun R () Int)\n(declare-fun U () Real)\n(assert\n (<= R nu))\n(assert\n (let ((?x9 (to_real nu)))\n (<= ?x9 U)))\n(assert\n (< U (to_real (+ R 1))))\n(assert\n (let (($x15 (= nu R)))\n(not $x15)))\n(check-sat)\n",
+    "names": [
+      "feasible",
+      "dual",
+      "stop",
+      "__goal__"
+    ],
+    "dropped": [],
+    "vacuous": false,
+    "clash": []
+  }
+}

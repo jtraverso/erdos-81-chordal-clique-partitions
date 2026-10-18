@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "kind": "unsat_core",
+  "degree": "with_solver",
+  "timed_out": false,
+  "partial": [],
+  "assumed": [],
+  "solver_free": false,
+  "method": "",
+  "checks": [
+    {
+      "check": "the core really is unsatisfiable",
+      "ok": true,
+      "detail": "unsat"
+    },
+    {
+      "check": "one name per formula of the core, each once",
+      "ok": true,
+      "detail": "5 name(s) for 5 hypothesis formula(s)"
+    },
+    {
+      "check": "it is about the obligation in composed_realization_errors.py",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "warnings": [],
+  "detail": "core of 5 formulas (includes the negated claim)",
+  "explained": [
+    {
+      "role": "used",
+      "name": "dual"
+    },
+    {
+      "role": "used",
+      "name": "first"
+    },
+    {
+      "role": "used",
+      "name": "second"
+    },
+    {
+      "role": "used",
+      "name": "feasible"
+    }
+  ],
+  "card": {
+    "kind": "unsat_core",
+    "evidence": "universal",
+    "conclusion": "core of 5 formulas (includes the negated claim)",
+    "scope": [],
+    "hypotheses_used": [
+      "dual",
+      "first",
+      "second",
+      "feasible"
+    ],
+    "cited": {},
+    "pending": [],
+    "role": null,
+    "link": null,
+    "declared": false,
+    "degree": "with_solver",
+    "provenance": {
+      "digest": "5584515f1b005eae",
+      "schema": 5,
+      "schema_known": 5,
+      "produced_by": "0.34.0",
+      "verified_by": "0.34.0",
+      "spec_path": "composed_realization_errors.py",
+      "spec_sha256": "67d4eeaf4902473d930b0948976e640e392a56058ad99382dce724204bd519f4",
+      "python": "3.12.10",
+      "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+    },
+    "exact": true,
+    "external": []
+  }
+}
+
+STDERR

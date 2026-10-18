@@ -1,0 +1,6 @@
+{
+  "url": "https://arxiv.org/html/2005.02529v1",
+  "sha256": "37f9a27a627cd38b6e34fa476dca622398b40aeb4cdfc2f4b1399cad00dd9e70",
+  "location": "Section 3.2.1, definitions (3.4)–(3.5), Theorem 3.4",
+  "mapping": "r=4: integral v_4 equals maximum physical gain, fractional nu_4 equals W*. Gains binomial(i,2)-1 are 2 and 5. The uniform o(n^2) statement yields Input3.1. IV implementation is not claimed stronger."
+}

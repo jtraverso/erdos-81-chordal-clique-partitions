@@ -1,0 +1,290 @@
+{
+  "scope": "Read-only content and static-link review; no browser, builds or PDF visual review.",
+  "files": [
+    {
+      "path": "PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.md",
+      "sha256": "b94189f78c5291af48625cb2aa9bdbd8b5e48199acb9ba06e476246b2f6183c2",
+      "lines": 1396
+    },
+    {
+      "path": "PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.md",
+      "sha256": "bbc913b78670f9425dfd01f30db32d7dc8988945cb3e4feee2ca74ef3f235a86",
+      "lines": 978
+    },
+    {
+      "path": "PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+      "sha256": "b75f46f4c2e08ba887b24d9d3b1d61b6d52408a6473804bea299df090b376994",
+      "lines": 222
+    },
+    {
+      "path": "PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+      "sha256": "de385000ad75e429daf716d77b3bc23acb7d1901c4e12493f2f9035f43d8b1f3",
+      "lines": 222
+    },
+    {
+      "path": "PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.md",
+      "sha256": "86305a1141f80ee47ff9875015c62e61c0b0919e8aabcfc91c1db3c5f98f83b4",
+      "lines": 1249
+    },
+    {
+      "path": "PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_es.md",
+      "sha256": "8f5e023ef9b14be0844d2b6435319c1df06715b5e34cad639be44d379db097f1",
+      "lines": 740
+    },
+    {
+      "path": "PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_en.md",
+      "sha256": "42602f0b230d9a27690005577db4f3461085e3a0cd884851421149ff51013103",
+      "lines": 171
+    },
+    {
+      "path": "PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_es.md",
+      "sha256": "eb3412de434639f207f5a8156d3714ea5a81304b8f16967a9d933f121c061c13",
+      "lines": 140
+    },
+    {
+      "path": "public-repo/README.md",
+      "sha256": "b12a0400530c19b4462af700c6edc34eb2594390ce71b8f4489c5b34e758976e",
+      "lines": 117
+    },
+    {
+      "path": "public-repo/index.html",
+      "sha256": "7699d74568d6275b525a76bb0ab979fb46430dfd2807cd3aba091f734dc6815b",
+      "lines": 17
+    },
+    {
+      "path": "public-repo/preprints/README.md",
+      "sha256": "e07e1ea40ad0268604e8b57938e177ca21ae09ba7d60fc6170fb41e331e70106",
+      "lines": 31
+    },
+    {
+      "path": "public-repo/series_notes/README.md",
+      "sha256": "ddbc8fefb291e0938b4dfc03663a26f2020bca4516a5d8e81f95eb7c04c10762",
+      "lines": 18
+    },
+    {
+      "path": "public-repo/preprints/PAPER_V/README.md",
+      "sha256": "750f51a185d3404cc8747898243b3de31db4912186fb116ac2c9ee2c5a4a7bf6",
+      "lines": 34
+    },
+    {
+      "path": "public-repo/preprints/PAPER_V/index.html",
+      "sha256": "875f1a493dd53260cff982344a2d55f0947eb0bf6b3972725ec9d243bf8c2766",
+      "lines": 2
+    },
+    {
+      "path": "public-repo/preprints/PAPER_VI/README.md",
+      "sha256": "8c348cb1210e0240def144edb30a75bf47f658a9be0238a9ebb3bdf26e2b94b0",
+      "lines": 34
+    },
+    {
+      "path": "public-repo/preprints/PAPER_VI/index.html",
+      "sha256": "69cd78dbc837b53a7dfbe9daaf343735a686f9d586ec294daf0aa04038113dc7",
+      "lines": 2
+    },
+    {
+      "path": "public-repo/series_notes/NOTE_I_ERDOS81_TRANSFER/README.md",
+      "sha256": "3a206492590972bdb6fa8bf8b4d9bcfddf06afed623cf8c3b4db78cfe6e0efad",
+      "lines": 25
+    },
+    {
+      "path": "public-repo/series_notes/NOTE_I_ERDOS81_TRANSFER/index.html",
+      "sha256": "38b5df55ece5240018fcc4f5d9122067727f26cbb8b61df21ac7d44e4794b8a1",
+      "lines": 2
+    },
+    {
+      "path": "public-repo/series_notes/NOTE_II_CHORDAL_STABILITY/README.md",
+      "sha256": "953dc9617be62bda37127037d621f4bcbf5c587580640ae26f3bb257f5106f69",
+      "lines": 25
+    },
+    {
+      "path": "public-repo/series_notes/NOTE_II_CHORDAL_STABILITY/index.html",
+      "sha256": "248b123aecb9782d3653ec769ff38930927e0d1fdc34f3fc611dce27ce320476",
+      "lines": 2
+    }
+  ],
+  "parity": {
+    "PAPER_V": {
+      "Math": {
+        "en_count": 701,
+        "es_count": 701,
+        "en_only": [],
+        "es_only": [],
+        "equal_multiset": true
+      },
+      "Code": {
+        "en_count": 0,
+        "es_count": 0,
+        "en_only": [],
+        "es_only": [],
+        "equal_multiset": true
+      },
+      "CodeBlock": {
+        "en_count": 0,
+        "es_count": 0,
+        "en_only": [],
+        "es_only": [],
+        "equal_multiset": true
+      }
+    },
+    "PAPER_VI": {
+      "Math": {
+        "en_count": 679,
+        "es_count": 679,
+        "en_only": [
+          "\n\\operatorname{cp}(F\\vee I_q)=q|V(F)|-e(F)\n\\quad\\text{if }q\\ge\\chi'(F),\n"
+        ],
+        "es_only": [
+          "\n\\operatorname{cp}(F\\vee I_q)=q|V(F)|-e(F)\n\\quad\\text{si }q\\ge\\chi'(F),\n"
+        ],
+        "equal_multiset": false,
+        "accepted_text_translation": {
+          "en": "\\text{if }",
+          "es": "\\text{si }",
+          "mathematical_symbols_unchanged": true
+        },
+        "equal_after_natural_language_translation": true
+      },
+      "Code": {
+        "en_count": 0,
+        "es_count": 0,
+        "en_only": [],
+        "es_only": [],
+        "equal_multiset": true
+      },
+      "CodeBlock": {
+        "en_count": 0,
+        "es_count": 0,
+        "en_only": [],
+        "es_only": [],
+        "equal_multiset": true
+      }
+    }
+  },
+  "local_links": [
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "target": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "exists": false
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "target": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "exists": false
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "target": "05_formalization/",
+      "exists": false
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "target": "04_integrity/",
+      "exists": false
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "target": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "exists": false
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "target": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "exists": false
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "target": "04_integrity/",
+      "exists": false
+    },
+    {
+      "source": "PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.md",
+      "target": "figures/fig1_splitting_en.png",
+      "exists": true,
+      "kind": "figure"
+    },
+    {
+      "source": "PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.md",
+      "target": "figures/fig2_copy_en.png",
+      "exists": true,
+      "kind": "figure"
+    },
+    {
+      "source": "PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.md",
+      "target": "figures/fig3_clon2_oct_en.png",
+      "exists": true,
+      "kind": "figure"
+    },
+    {
+      "source": "PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.md",
+      "target": "figures_es/fig1_splitting_es.svg",
+      "exists": true,
+      "kind": "figure"
+    },
+    {
+      "source": "PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.md",
+      "target": "figures_es/fig2_copy_es.svg",
+      "exists": true,
+      "kind": "figure"
+    },
+    {
+      "source": "PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_es.md",
+      "target": "figures_es/fig3_clon2_oct_es.svg",
+      "exists": true,
+      "kind": "figure"
+    }
+  ],
+  "markers": [
+    {
+      "source": "preprints/README.md",
+      "classification": "legitimate exclusion statement, not draft labeling",
+      "text": "Unrelated working drafts are excluded."
+    }
+  ],
+  "status": "PASS_CONTENT_WITH_INTEGRATION_CHECK_PENDING",
+  "resolved_findings": [
+    {
+      "id": "WEB-NOTE-II-01",
+      "severity": "minor",
+      "issue": "Web level 2 omitted sufficiently large n and nonnegative deficit.",
+      "resolution": "EN and ES now explicitly define d=M(n)-cp(G), require sufficiently large n and 0≤d≤n/2000.",
+      "status": "CLOSED"
+    }
+  ],
+  "integration_pending": [
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "target": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "exists": false
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "target": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "exists": false
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "target": "05_formalization/",
+      "exists": false
+    },
+    {
+      "source": "preprints/PAPER_V/README.md",
+      "target": "04_integrity/",
+      "exists": false
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "target": "05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "exists": false
+    },
+    {
+      "source": "preprints/PAPER_V/index.html",
+      "target": "05_formalization/FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "exists": false
+    },
+    {
+      "source": "preprints/PAPER_VI/README.md",
+      "target": "04_integrity/",
+      "exists": false
+    }
+  ]
+}

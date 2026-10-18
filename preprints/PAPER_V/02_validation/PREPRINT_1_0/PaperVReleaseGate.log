@@ -1,0 +1,1144 @@
+@PaperV.splitting : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (H : SimpleGraph V) [DecidableRel H.Adj],
+  ∃ S₁ S₂,
+    Disjoint S₁ S₂ ∧ PaperV.Feasible H S₁ ∧ PaperV.Feasible H S₂ ∧ Fintype.card V - PaperV.oct H ≤ S₁.card + S₂.card
+'PaperV.splitting' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.splitting_half : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (H : SimpleGraph V) [DecidableRel H.Adj],
+  ∃ S, PaperV.Feasible H S ∧ (Fintype.card V - PaperV.oct H + 1) / 2 ≤ S.card
+'PaperV.splitting_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.SplittingQ.splitting_q : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (H : SimpleGraph V)
+  [DecidableRel H.Adj] (q : ℕ),
+  1 ≤ q →
+    ∃ S,
+      (∀ (i : Fin q), PaperV.Feasible H (S i)) ∧
+        (∀ (i j : Fin q), i ≠ j → Disjoint (S i) (S j)) ∧ Fintype.card V - PaperV.Dq H q ≤ ∑ i, (S i).card
+'PaperV.SplittingQ.splitting_q' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.SplittingQ.splitting_ceil : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (H : SimpleGraph V)
+  [DecidableRel H.Adj] (q : ℕ),
+  1 ≤ q → ∃ S, PaperV.Feasible H S ∧ (Fintype.card V - PaperV.Dq H q + (q - 1)) / q ≤ S.card
+'PaperV.SplittingQ.splitting_ceil' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.transfer_q : ∀ (C : PaperV.ConflictSystem) (X : C.O → ℕ) (q : ℕ),
+  1 ≤ q → PaperV.IsQMultiset C X q → PaperV.multSize C X ≤ q * PaperV.nu C + PaperV.Dq (PaperV.Hgraph C X) q
+'PaperV.transfer_q' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.transfer_half : ∀ (C : PaperV.ConflictSystem) (X : C.O → ℕ),
+  PaperV.IsQMultiset C X 2 → PaperV.multSize C X ≤ 2 * PaperV.nu C + PaperV.oct (PaperV.Hgraph C X)
+'PaperV.transfer_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.transfer_q_weighted : ∀ (C : PaperV.ConflictSystem) (w X : C.O → ℕ) (q : ℕ),
+  1 ≤ q → PaperV.wMultSize C w X ≤ q * PaperV.wNu C w + PaperV.wDq C w X q
+'PaperV.transfer_q_weighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.parity_localization : ∀ {V : Type u_1} [Fintype V] [inst : DecidableEq V] (H : SimpleGraph V)
+  [DecidableRel H.Adj] (A : Finset V), PaperV.oct H ≤ PaperV.tau (PaperV.internalGraph H A)
+'PaperV.parity_localization' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.cover_defect_lower : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (H : SimpleGraph V)
+  [DecidableRel H.Adj], ∃ S, PaperV.Feasible H S ∧ Fintype.card V - 2 * S.card ≤ PaperV.oct H
+'PaperV.cover_defect_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.rigidity_at_equality : ∀ {V : Type u_1} [Fintype V] [DecidableEq V] (H : SimpleGraph V) [DecidableRel H.Adj]
+  {ν q : ℕ},
+  (∀ (S : Finset V), PaperV.Feasible H S → S.card ≤ ν) →
+    ∀ (S : Fin q → Finset V),
+      (∀ (i : Fin q), PaperV.Feasible H (S i)) → ∑ i, (S i).card = q * ν → ∀ (i : Fin q), (S i).card = ν
+'PaperV.rigidity_at_equality' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.multSize_witnessMultiset : ∀ (C : PaperV.ConflictSystem) {ι : Type u_1} [DecidableEq ι] (Cov : Finset ι)
+  (wit : ι → C.O), Set.InjOn wit ↑Cov → PaperV.multSize C (PaperV.witnessMultiset C Cov wit) = Cov.card
+'PaperV.multSize_witnessMultiset' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.witness_feasible_compat : ∀ (C : PaperV.ConflictSystem) {ι : Type u_1} [DecidableEq ι] (Cov : Finset ι)
+  (wit : ι → C.O) (S : Finset (PaperV.Copies C (PaperV.witnessMultiset C Cov wit))),
+  PaperV.Feasible (PaperV.Hgraph C (PaperV.witnessMultiset C Cov wit)) S →
+    ∃ T, PaperV.CSFeasible C T ∧ T ⊆ Finset.image wit Cov ∧ T.card = S.card ∧ S.card ≤ PaperV.nu C
+'PaperV.witness_feasible_compat' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.cover_witness_defect : ∀ (C : PaperV.ConflictSystem) {ι : Type u_1} [DecidableEq ι] (Cov : Finset ι)
+  (wit : ι → C.O),
+  Set.InjOn wit ↑Cov →
+    ∀ {q : ℕ}, 1 ≤ q → Cov.card ≤ q * PaperV.nu C + PaperV.Dq (PaperV.Hgraph C (PaperV.witnessMultiset C Cov wit)) q
+'PaperV.cover_witness_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.conflict_rigidity : ∀ (C : PaperV.ConflictSystem) (X : C.O → ℕ) {ν q : ℕ},
+  (∀ (S : Finset (PaperV.Copies C X)), PaperV.Feasible (PaperV.Hgraph C X) S → S.card ≤ ν) →
+    ∀ (S : Fin q → Finset (PaperV.Copies C X)),
+      (∀ (i : Fin q), PaperV.Feasible (PaperV.Hgraph C X) (S i)) →
+        ∑ i, (S i).card = q * ν → ∀ (i : Fin q), (S i).card = ν
+'PaperV.conflict_rigidity' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.triangle_cover_defect : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] {E : Finset (Finset V)} {wit : Finset V → Finset V}
+  (pw : PaperV.PrivateWitnessCover G E wit),
+  E.card ≤ 2 * PaperV.nu3 G + PaperV.oct (PaperV.Hgraph (PaperV.triCS G) (PaperV.triWitnessMultiset G pw))
+'PaperV.triangle_cover_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Dq_antitone : ∀ {V : Type u_1} [Fintype V] [DecidableEq V] (H : SimpleGraph V) [DecidableRel H.Adj] {q q' : ℕ},
+  1 ≤ q → q ≤ q' → PaperV.Dq H q' ≤ PaperV.Dq H q
+'PaperV.Dq_antitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Dq_le_oct : ∀ {V : Type u_1} [Fintype V] [DecidableEq V] (H : SimpleGraph V) [DecidableRel H.Adj] {q : ℕ},
+  2 ≤ q → PaperV.Dq H q ≤ PaperV.oct H
+'PaperV.Dq_le_oct' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Dq_mono_left : ∀ {V : Type u_1} [Fintype V] [DecidableEq V] (H H' : SimpleGraph V) [DecidableRel H.Adj]
+  [DecidableRel H'.Adj] {q : ℕ}, 1 ≤ q → H ≤ H' → PaperV.Dq H q ≤ PaperV.Dq H' q
+'PaperV.Dq_mono_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Dq_eq_zero_iff_chromatic : ∀ {V : Type u_1} [Fintype V] [DecidableEq V] (H : SimpleGraph V) [DecidableRel H.Adj]
+  {q : ℕ}, 1 ≤ q → (PaperV.Dq H q = 0 ↔ H.chromaticNumber ≤ ↑q)
+'PaperV.Dq_eq_zero_iff_chromatic' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.oct_eq_zero_iff : ∀ {V : Type u_1} [Fintype V] [DecidableEq V] (H : SimpleGraph V) [DecidableRel H.Adj],
+  PaperV.oct H = 0 ↔ H.Colorable 2
+'PaperV.oct_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Dq_pos_iff_lt_chromatic : ∀ {V : Type u_1} [Fintype V] [DecidableEq V] (H : SimpleGraph V) [DecidableRel H.Adj]
+  {q : ℕ}, 1 ≤ q → (0 < PaperV.Dq H q ↔ ↑q < H.chromaticNumber)
+'PaperV.Dq_pos_iff_lt_chromatic' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Dq_ge_card_sub : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (H : SimpleGraph V) [DecidableRel H.Adj]
+  {ν q : ℕ}, 1 ≤ q → (∀ (S : Finset V), PaperV.Feasible H S → S.card ≤ ν) → Fintype.card V - q * ν ≤ PaperV.Dq H q
+'PaperV.Dq_ge_card_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.defect_tight_all_max : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (H : SimpleGraph V)
+  [DecidableRel H.Adj] {ν q : ℕ},
+  1 ≤ q →
+    (∀ (S : Finset V), PaperV.Feasible H S → S.card ≤ ν) →
+      q * ν ≤ Fintype.card V →
+        PaperV.Dq H q = Fintype.card V - q * ν →
+          ∃ S,
+            (∀ (i : Fin q), PaperV.Feasible H (S i)) ∧
+              (∀ (i j : Fin q), i ≠ j → Disjoint (S i) (S j)) ∧ ∀ (i : Fin q), (S i).card = ν
+'PaperV.defect_tight_all_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Dq_sum : ∀ {V : Type u_1} {W : Type u_2} [Fintype V] [DecidableEq V] [Fintype W] [DecidableEq W]
+  (G : SimpleGraph V) (H : SimpleGraph W) {q : ℕ}, 1 ≤ q → PaperV.Dq (G ⊕g H) q = PaperV.Dq G q + PaperV.Dq H q
+'PaperV.Dq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.oct_sum : ∀ {V : Type u_1} {W : Type u_2} [Fintype V] [DecidableEq V] [Fintype W] [DecidableEq W]
+  (G : SimpleGraph V) (H : SimpleGraph W), PaperV.oct (G ⊕g H) = PaperV.oct G + PaperV.oct H
+'PaperV.oct_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Dq_top : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (q : ℕ), PaperV.Dq ⊤ q = Fintype.card V - q
+'PaperV.Dq_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.oct_top : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V], PaperV.oct ⊤ = Fintype.card V - 2
+'PaperV.oct_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.oct_cycleGraph_even : ∀ (n : ℕ), PaperV.oct (SimpleGraph.cycleGraph (2 * n + 2)) = 0
+'PaperV.oct_cycleGraph_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.oct_cycleGraph_odd : ∀ (n : ℕ), PaperV.oct (SimpleGraph.cycleGraph (2 * n + 3)) = 1
+'PaperV.oct_cycleGraph_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.conflict_defect_lower : ∀ {C : PaperV.ConflictSystem} (X : C.O → ℕ) {q : ℕ},
+  1 ≤ q → PaperV.multSize C X - q * PaperV.nu C ≤ PaperV.Dq (PaperV.Hgraph C X) q
+'PaperV.conflict_defect_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.conflict_oct_eq_zero_iff : ∀ {C : PaperV.ConflictSystem} (X : C.O → ℕ),
+  PaperV.oct (PaperV.Hgraph C X) = 0 ↔ ∀ (v : PaperV.Copies C X) (c : (PaperV.Hgraph C X).Walk v v), Even c.length
+'PaperV.conflict_oct_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.lineGraph_matching_defect : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj],
+  ∃ S, PaperV.Feasible G.lineGraph S ∧ Fintype.card ↑G.edgeSet - 2 * S.card ≤ PaperV.oct G.lineGraph
+'PaperV.lineGraph_matching_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.lineGraph_matching_defect_q : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] {q : ℕ},
+  1 ≤ q →
+    ∃ S, PaperV.Feasible G.lineGraph S ∧ (Fintype.card ↑G.edgeSet - PaperV.Dq G.lineGraph q + (q - 1)) / q ≤ S.card
+'PaperV.lineGraph_matching_defect_q' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.multiLineGraph_matching_defect : ∀ {B : Type u_1} {W : Type u_2} [inst : Fintype W] [DecidableEq W]
+  (ends : W → Sym2 B),
+  ∃ S,
+    PaperV.Feasible (PaperV.multiLineGraph ends) S ∧
+      Fintype.card W - 2 * S.card ≤ PaperV.oct (PaperV.multiLineGraph ends)
+'PaperV.multiLineGraph_matching_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.multiLineGraph_matching_defect_q : ∀ {B : Type u_1} {W : Type u_2} [inst : Fintype W] [DecidableEq W]
+  (ends : W → Sym2 B) {q : ℕ},
+  1 ≤ q →
+    ∃ S,
+      PaperV.Feasible (PaperV.multiLineGraph ends) S ∧
+        (Fintype.card W - PaperV.Dq (PaperV.multiLineGraph ends) q + (q - 1)) / q ≤ S.card
+'PaperV.multiLineGraph_matching_defect_q' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.maxDegree_le_edgeChromaticNumber : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] [Nonempty V], ↑G.maxDegree ≤ PaperV.edgeChromaticNumber G
+'PaperV.maxDegree_le_edgeChromaticNumber' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.edgeChromaticNumber_le_maxDegree_add_one : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj], PaperV.edgeChromaticNumber G ≤ ↑G.maxDegree + 1
+'PaperV.edgeChromaticNumber_le_maxDegree_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.edgeChromaticNumber_bounds : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] [Nonempty V]
+  (G : SimpleGraph V) [inst_3 : DecidableRel G.Adj],
+  ↑G.maxDegree ≤ PaperV.edgeChromaticNumber G ∧ PaperV.edgeChromaticNumber G ≤ ↑G.maxDegree + 1
+'PaperV.edgeChromaticNumber_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.edgeChromaticNumber_eq_maxDegree_or : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] [Nonempty V]
+  (G : SimpleGraph V) [inst_3 : DecidableRel G.Adj],
+  PaperV.edgeChromaticNumber G = ↑G.maxDegree ∨ PaperV.edgeChromaticNumber G = ↑G.maxDegree + 1
+'PaperV.edgeChromaticNumber_eq_maxDegree_or' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Dq_lineGraph_eq_zero_iff : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] [DecidableRel G.lineGraph.Adj] [Nonempty V] {q : ℕ},
+  1 ≤ q → (PaperV.Dq G.lineGraph q = 0 ↔ G.maxDegree + 1 ≤ q ∨ q = G.maxDegree ∧ PaperV.IsClassOne G)
+'PaperV.Dq_lineGraph_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Dq_lineGraph_pos_iff : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] [DecidableRel G.lineGraph.Adj] [Nonempty V] {q : ℕ},
+  1 ≤ q → (0 < PaperV.Dq G.lineGraph q ↔ q < G.maxDegree ∨ q = G.maxDegree ∧ PaperV.IsClassTwo G)
+'PaperV.Dq_lineGraph_pos_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.TerminalPair.p4_133_existence : ∀ {ι : Type u_1} {B : Type u_2} [Fintype ι] [DecidableEq ι] [inst : Fintype B]
+  [inst_1 : DecidableEq B] (emap : ι → Fin 2 → Sym2 B) (Pall : Finset ι),
+  Set.InjOn (fun p => emap p.1 p.2) {p | p.1 ∈ Pall} →
+    (∀ P ∈ Pall, ∀ (i : Fin 2), ¬(emap P i).IsDiag) →
+      ∀ (a m : ℕ),
+        1 ≤ a →
+          a ≤ m →
+            ∀ (X : Finset B),
+              (∀ P ∈ Pall, ∀ (i : Fin 2), ∃ w ∈ X, w ∈ emap P i) →
+                (PaperV.TerminalPair.termGraph emap Pall).maxDegree ≤ m →
+                  ∃ S' ⊆ Pall,
+                    (PaperV.TerminalPair.termGraph emap S').lineGraph.Colorable a ∧
+                      a * Pall.card / m ≤ S'.card + 4 + 10 * X.card
+'PaperV.TerminalPair.p4_133_existence' depends on axioms: [propext, Classical.choice, Quot.sound]
+@beck_fiala : ∀ {m N t : ℕ},
+  1 ≤ t →
+    ∀ (A : Fin m → Fin N → ℤ),
+      (∀ (j : Fin m) (i : Fin N), A j i = 0 ∨ A j i = 1) →
+        (∀ (i : Fin N), {j | A j i = 1}.card ≤ t) →
+          ∀ (x : Fin N → ℚ),
+            (∀ (i : Fin N), 0 ≤ x i ∧ x i ≤ 1) →
+              ∃ y, (∀ (i : Fin N), y i = 0 ∨ y i = 1) ∧ ∀ (j : Fin m), |∑ i, ↑(A j i) * (↑(y i) - x i)| < ↑t
+'beck_fiala' depends on axioms: [propext, Classical.choice, Quot.sound]
+beck_fiala_zero_counterexample : ¬∀ (m N t : ℕ) (A : Fin m → Fin N → ℤ),
+    (∀ (j : Fin m) (i : Fin N), A j i = 0 ∨ A j i = 1) →
+      (∀ (i : Fin N), {j | A j i = 1}.card ≤ t) →
+        ∀ (x : Fin N → ℚ),
+          (∀ (i : Fin N), 0 ≤ x i ∧ x i ≤ 1) →
+            ∃ y, (∀ (i : Fin N), y i = 0 ∨ y i = 1) ∧ ∀ (j : Fin m), |∑ i, ↑(A j i) * (↑(y i) - x i)| < ↑t
+'beck_fiala_zero_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Brooks.brooks_cubic : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj], G.maxDegree ≤ 3 → G.CliqueFree 4 → G.Colorable 3
+'PaperV.Brooks.brooks_cubic' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.oct_le_third_of_cubic : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (H : SimpleGraph V)
+  [inst_2 : DecidableRel H.Adj], H.maxDegree ≤ 3 → H.CliqueFree 4 → PaperV.oct H ≤ Fintype.card V / 3
+'PaperV.oct_le_third_of_cubic' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.copy_integral_struct : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (v u : V),
+  ¬G.Adj u v →
+    ∃ T₂,
+      PaperV.multSize (PaperV.triCS G) T₂ = PaperV.nu3 (PaperV.copyGraph G v u) + PaperV.nu3 (PaperV.copyGraph G u v) ∧
+        PaperV.nu3 (PaperV.copyGraph G v u) + PaperV.nu3 (PaperV.copyGraph G u v) ≤
+            2 * PaperV.nu3 G + PaperV.oct (PaperV.Hgraph (PaperV.triCS G) T₂) ∧
+          (PaperV.Hgraph (PaperV.triCS G) T₂).maxDegree ≤ 3 ∧ (PaperV.Hgraph (PaperV.triCS G) T₂).CliqueFree 4
+'PaperV.copy_integral_struct' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.copy_fractional : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (v u : V),
+  ¬G.Adj u v → PaperV.nu3star (PaperV.copyGraph G v u) + PaperV.nu3star (PaperV.copyGraph G u v) ≤ 2 * PaperV.nu3star G
+'PaperV.copy_fractional' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.copy_integral : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (v u : V),
+  ¬G.Adj u v →
+    ∃ T₂,
+      PaperV.multSize (PaperV.triCS G) T₂ = PaperV.nu3 (PaperV.copyGraph G v u) + PaperV.nu3 (PaperV.copyGraph G u v) ∧
+        PaperV.nu3 (PaperV.copyGraph G v u) + PaperV.nu3 (PaperV.copyGraph G u v) ≤
+          2 * PaperV.nu3 G + PaperV.oct (PaperV.Hgraph (PaperV.triCS G) T₂)
+'PaperV.copy_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.tight_oct : PaperV.oct PaperV.Htight = 2
+'PaperV.tight_oct' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.copy_triple_bound : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (v u : V),
+  ¬G.Adj u v → PaperV.nu3 (PaperV.copyGraph G v u) + PaperV.nu3 (PaperV.copyGraph G u v) ≤ 3 * PaperV.nu3 G
+'PaperV.copy_triple_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.k4_of_three_triangles : ∀ {V : Type u_1} [inst : DecidableEq V] (G : SimpleGraph V)
+  [inst_1 : DecidableRel G.Adj] [inst_2 : Fintype V] {t₁ t₂ t₃ : Finset V},
+  t₁ ∈ G.cliqueFinset 3 →
+    t₂ ∈ G.cliqueFinset 3 →
+      t₃ ∈ G.cliqueFinset 3 →
+        2 ≤ (t₁ ∩ t₂).card →
+          2 ≤ (t₁ ∩ t₃).card →
+            2 ≤ (t₂ ∩ t₃).card → t₁ ≠ t₂ → t₁ ≠ t₃ → t₂ ≠ t₃ → (t₁ ∩ t₂ ∩ t₃).card < 2 → t₁ ∪ t₂ ∈ G.cliqueFinset 4
+'PaperV.k4_of_three_triangles' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.card_le_four_of_pairwise_share : ∀ {V : Type u_1} [inst : DecidableEq V] (T : Finset (Finset V)),
+  (∀ t ∈ T, t.card = 3) →
+    (∀ t ∈ T, ∀ s ∈ T, t ≠ s → 2 ≤ (t ∩ s).card) →
+      (∀ t ∈ T, ∀ s ∈ T, ∀ u ∈ T, t ≠ s → t ≠ u → s ≠ u → (t ∩ s ∩ u).card < 2) → T.card ≤ 4
+'PaperV.card_le_four_of_pairwise_share' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.PureProfile.prop43_nu : ∀ (m s : ℕ), PaperV.PureProfile.nu m s = min (m * (s / 2)) (s.choose 2)
+'PaperV.PureProfile.prop43_nu' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.PureProfile.prop43_muMat : ∀ (m s : ℕ), PaperV.PureProfile.muMat m s = ↑(min (m * (s / 2)) (s.choose 2))
+'PaperV.PureProfile.prop43_muMat' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.PureProfile.hostClique_gap_zero : ∀ (m s : ℕ), PaperV.PureProfile.muMat m s = ↑(PaperV.PureProfile.nu m s)
+'PaperV.PureProfile.hostClique_gap_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.PureProfile.hostClique_gap_le_third : ∀ (m s : ℕ) (x : PaperV.PureProfile.Obj m s → ℝ),
+  PaperV.PureProfile.MasterFeasible m s x →
+    PaperV.PureProfile.IsHalfIntegral m s x →
+      ∑ o, x o = PaperV.PureProfile.muMat m s →
+        PaperV.PureProfile.muMat m s - ↑(PaperV.PureProfile.nu m s) ≤ PaperV.PureProfile.muMat m s / 3
+'PaperV.PureProfile.hostClique_gap_le_third' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.PureProfile.gap_third_tight : PaperV.PureProfile.muMatDeg 1 3 - ↑(PaperV.PureProfile.nu 1 3) =
+    PaperV.PureProfile.muMatDeg 1 3 / 3 ∧
+  ↑(PaperV.PureProfile.nu 1 3) < PaperV.PureProfile.muMatDeg 1 3
+'PaperV.PureProfile.gap_third_tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.oct_le_min_tau_third : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (H : SimpleGraph V)
+  [inst_2 : DecidableRel H.Adj],
+  H.maxDegree ≤ 3 →
+    H.CliqueFree 4 → ∀ (A : Finset V), PaperV.oct H ≤ min (PaperV.tau (PaperV.internalGraph H A)) (Fintype.card V / 3)
+'PaperV.oct_le_min_tau_third' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.apost_certificate : ∀ {C : PaperV.ConflictSystem} {U : ℚ},
+  (∀ (S : Finset C.O), PaperV.CSFeasible C S → ↑S.card ≤ U) →
+    ∀ {R : Finset C.O},
+      PaperV.CSFeasible C R → R.card ≤ PaperV.nu C ∧ ↑(PaperV.nu C) ≤ ⌊U⌋ ∧ (⌊U⌋ = ↑R.card → R.card = PaperV.nu C)
+'PaperV.apost_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.BK.bk_nu : PaperV.BK.nu = 9
+'PaperV.BK.bk_nu' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.clon2_oct : PaperV.oct PaperV.Hclon = 4
+'PaperV.clon2_oct' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.StarT2.star_t2_nu : PaperV.StarT2.nu = 6
+'PaperV.StarT2.star_t2_nu' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.feasible_run : ∀ {J : Type u_1} {W : Type u_2} [inst : DecidableEq J] [inst_1 : DecidableEq W]
+  {R R' : Finset (PaperV.Assign J W)},
+  PaperV.SealFeasible R → Relation.ReflTransGen PaperV.LegalStep R R' → PaperV.SealFeasible R'
+'PaperV.feasible_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.card_le_cov : ∀ {J : Type u_1} {W : Type u_2} [DecidableEq J] [inst : DecidableEq W]
+  {R : Finset (PaperV.Assign J W)},
+  PaperV.SealFeasible R → ∀ (cov : Finset (Finset W)), (∀ x ∈ R, x.ends ∈ cov) → R.card ≤ cov.card
+'PaperV.card_le_cov' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.accepted_repairs_le_cov : ∀ {J : Type u_1} {W : Type u_2} [DecidableEq J] [inst : DecidableEq W]
+  (cov : Finset (Finset W)) (R : ℕ → Finset (PaperV.Assign J W)) (k : ℕ),
+  (∀ i < k, PaperV.AcceptedRepair cov (R i) (R (i + 1))) → k ≤ cov.card
+'PaperV.accepted_repairs_le_cov' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.accepted_repairs_le_audit : ∀ {J : Type u_1} {W : Type u_2} [DecidableEq J] [inst : DecidableEq W]
+  (cov : Finset (Finset W)) (R : ℕ → Finset (PaperV.Assign J W)) (k : ℕ),
+  PaperV.SealFeasible (R 0) →
+    (∀ x ∈ R 0, x.ends ∈ cov) → (∀ i < k, PaperV.AcceptedRepair cov (R i) (R (i + 1))) → (R 0).card + k ≤ cov.card
+'PaperV.accepted_repairs_le_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.UnitBoundary.unitBoundary_completion_optimal : ∀ {α : Type u_1} {R : Type u_2} [inst : DecidableEq α]
+  [inst_1 : DecidableEq R] {res : α → Finset R} {Q D : Finset α} {SR : Finset R},
+  PaperV.UnitBoundary.Config res Q D SR →
+    ∀ (reps : PaperV.UnitBoundary.Reps res Q SR),
+      PaperV.UnitBoundary.packOpt res (Q ∪ D) =
+        (PaperV.UnitBoundary.Z res Q SR).card + (PaperV.UnitBoundary.B res Q SR).card +
+          PaperV.UnitBoundary.nuAvoid res D (PaperV.UnitBoundary.B res Q SR)
+'PaperV.UnitBoundary.unitBoundary_completion_optimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.UnitBoundary.endpoint_repacking_card_bound : ∀ {α : Type u_1} {R : Type u_2} [inst : DecidableEq α]
+  [inst_1 : DecidableEq R] {res : α → Finset R} {D : Finset α} {SR : Finset R} {Q₀ Q₁ : Finset α},
+  PaperV.UnitBoundary.Config res Q₀ D SR →
+    PaperV.UnitBoundary.Config res Q₁ D SR →
+      ∀ (reps₀ : PaperV.UnitBoundary.Reps res Q₀ SR) (reps₁ : PaperV.UnitBoundary.Reps res Q₁ SR) {C₀ : Finset α},
+        C₀ ⊆ D →
+          PaperV.UnitBoundary.ResFeasible res C₀ →
+            (∀ d ∈ C₀, Disjoint (res d) (PaperV.UnitBoundary.B res Q₀ SR)) →
+              PaperV.UnitBoundary.ResFeasible res
+                  (PaperV.UnitBoundary.normPack reps₁
+                    (PaperV.UnitBoundary.keptCentral res C₀ (PaperV.UnitBoundary.B res Q₁ SR))) ∧
+                PaperV.UnitBoundary.normPack reps₁
+                      (PaperV.UnitBoundary.keptCentral res C₀ (PaperV.UnitBoundary.B res Q₁ SR)) ⊆
+                    Q₁ ∪ D ∧
+                  (∃ h ≤ (PaperV.UnitBoundary.B res Q₁ SR \ PaperV.UnitBoundary.B res Q₀ SR).card,
+                      (PaperV.UnitBoundary.normPack reps₁
+                              (PaperV.UnitBoundary.keptCentral res C₀ (PaperV.UnitBoundary.B res Q₁ SR))).card +
+                          h =
+                        (PaperV.UnitBoundary.Z res Q₁ SR).card + (PaperV.UnitBoundary.B res Q₁ SR).card + C₀.card) ∧
+                    (PaperV.UnitBoundary.normPack reps₀ C₀).card + (PaperV.UnitBoundary.Z res Q₁ SR).card ≤
+                      (PaperV.UnitBoundary.normPack reps₁
+                              (PaperV.UnitBoundary.keptCentral res C₀ (PaperV.UnitBoundary.B res Q₁ SR))).card +
+                          (PaperV.UnitBoundary.Z res Q₀ SR).card +
+                        (PaperV.UnitBoundary.B res Q₀ SR \ PaperV.UnitBoundary.B res Q₁ SR).card
+'PaperV.UnitBoundary.endpoint_repacking_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.UnitBoundary.endpoint_repacking_nonloss : ∀ {α : Type u_1} {R : Type u_2} [inst : DecidableEq α]
+  [inst_1 : DecidableEq R] {res : α → Finset R} {D : Finset α} {SR : Finset R} {Q₀ Q₁ : Finset α},
+  PaperV.UnitBoundary.Config res Q₀ D SR →
+    PaperV.UnitBoundary.Config res Q₁ D SR →
+      ∀ (reps₀ : PaperV.UnitBoundary.Reps res Q₀ SR) (reps₁ : PaperV.UnitBoundary.Reps res Q₁ SR) {C₀ : Finset α},
+        C₀ ⊆ D →
+          PaperV.UnitBoundary.ResFeasible res C₀ →
+            (∀ d ∈ C₀, Disjoint (res d) (PaperV.UnitBoundary.B res Q₀ SR)) →
+              PaperV.UnitBoundary.B res Q₀ SR ⊆ PaperV.UnitBoundary.B res Q₁ SR →
+                (PaperV.UnitBoundary.Z res Q₀ SR).card ≤ (PaperV.UnitBoundary.Z res Q₁ SR).card →
+                  (PaperV.UnitBoundary.normPack reps₀ C₀).card ≤
+                    (PaperV.UnitBoundary.normPack reps₁
+                        (PaperV.UnitBoundary.keptCentral res C₀ (PaperV.UnitBoundary.B res Q₁ SR))).card
+'PaperV.UnitBoundary.endpoint_repacking_nonloss' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.UnitBoundary.nu_resCS : ∀ {α : Type u_1} {R : Type u_2} [inst : Fintype α] [inst_1 : DecidableEq α]
+  [inst_2 : DecidableEq R] (res : α → Finset R),
+  PaperV.nu (PaperV.UnitBoundary.resCS res) = PaperV.UnitBoundary.packOpt res Finset.univ
+'PaperV.UnitBoundary.nu_resCS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.UnitBoundary.w1_lemmaA_check' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.UnitBoundary.w2_weights_fail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.UnitBoundary.w3_normPack_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.UnitBoundary.w4_tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Steiner.quadratic_defect : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] {L : Finset (Finset V)},
+  PaperV.Steiner.IsSteinerK4 L →
+    PaperV.IsQMultiset (PaperV.Steiner.triTop V) (PaperV.Steiner.steinerX L) 2 ∧
+      (∀ e ∈ Finset.powersetCard 2 Finset.univ, PaperV.Steiner.edgeLoad (PaperV.Steiner.steinerX L) e ≤ 2) ∧
+        3 * PaperV.multSize (PaperV.Steiner.triTop V) (PaperV.Steiner.steinerX L) = 2 * (Fintype.card V).choose 2 ∧
+          3 * PaperV.oct (PaperV.Steiner.HX L) = (Fintype.card V).choose 2
+'PaperV.Steiner.quadratic_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Steiner.oct_steinerX : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] {L : Finset (Finset V)},
+  PaperV.Steiner.IsSteinerK4 L → PaperV.oct (PaperV.Steiner.HX L) = 2 * L.card
+'PaperV.Steiner.oct_steinerX' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Steiner.load_two_bound : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (Y : (PaperV.Steiner.triTop V).O → ℕ),
+  (∀ e ∈ Finset.powersetCard 2 Finset.univ, PaperV.Steiner.edgeLoad Y e ≤ 2) →
+    3 * PaperV.multSize (PaperV.Steiner.triTop V) Y ≤ 2 * Finset.univ.card.choose 2
+'PaperV.Steiner.load_two_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Steiner.affine_isSteinerK4 : ∀ {F : Type u_1} [inst : Field F] [inst_1 : Fintype F] [inst_2 : DecidableEq F]
+  {d : ℕ}, Fintype.card F = 4 → PaperV.Steiner.IsSteinerK4 (PaperV.Steiner.affineLines F d)
+'PaperV.Steiner.affine_isSteinerK4' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.Steiner.exists_quadratic_defect : ∀ (d : ℕ),
+  ∃ V x x_1 L,
+    Fintype.card V = 4 ^ d ∧
+      PaperV.Steiner.IsSteinerK4 L ∧
+        PaperV.IsQMultiset (PaperV.Steiner.triTop V) (PaperV.Steiner.steinerX L) 2 ∧
+          (∀ e ∈ Finset.powersetCard 2 Finset.univ, PaperV.Steiner.edgeLoad (PaperV.Steiner.steinerX L) e ≤ 2) ∧
+            3 * PaperV.multSize (PaperV.Steiner.triTop V) (PaperV.Steiner.steinerX L) = 2 * (4 ^ d).choose 2 ∧
+              3 * PaperV.oct (PaperV.Steiner.HX L) = (4 ^ d).choose 2
+'PaperV.Steiner.exists_quadratic_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Steiner.steinerX_le_one : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] {L : Finset (Finset V)}
+  (t : (PaperV.Steiner.triTop V).O), PaperV.Steiner.steinerX L t ≤ 1
+'PaperV.Steiner.steinerX_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Steiner.load_steinerX : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] {L : Finset (Finset V)},
+  PaperV.Steiner.IsSteinerK4 L →
+    ∀ (e : Finset V), e.card = 2 → PaperV.Steiner.edgeLoad (PaperV.Steiner.steinerX L) e = 2
+'PaperV.Steiner.load_steinerX' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Steiner.steinerX_optimal : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] {L : Finset (Finset V)},
+  PaperV.Steiner.IsSteinerK4 L →
+    3 * PaperV.multSize (PaperV.Steiner.triTop V) (PaperV.Steiner.steinerX L) = 2 * Finset.univ.card.choose 2
+'PaperV.Steiner.steinerX_optimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Steiner.frac_packing_bound : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] {K : Type u_2}
+  [inst_2 : Field K] [inst_3 : LinearOrder K] [IsStrictOrderedRing K] (x : (PaperV.Steiner.triTop V).O → K),
+  (∀ e ∈ Finset.powersetCard 2 Finset.univ, PaperV.Steiner.fracLoad x e ≤ 1) →
+    3 * ∑ t, x t ≤ ↑(Finset.univ.card.choose 2)
+'PaperV.Steiner.frac_packing_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Steiner.steinerX_half_optimal : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] {K : Type u_2}
+  [inst_2 : Field K] [inst_3 : LinearOrder K] [IsStrictOrderedRing K] {L : Finset (Finset V)},
+  PaperV.Steiner.IsSteinerK4 L → 3 * ∑ t, ↑(PaperV.Steiner.steinerX L t) / 2 = ↑(Finset.univ.card.choose 2)
+'PaperV.Steiner.steinerX_half_optimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Steiner.half_steinerX_ge_frac : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] {K : Type u_2}
+  [inst_2 : Field K] [inst_3 : LinearOrder K] [IsStrictOrderedRing K] {L : Finset (Finset V)},
+  PaperV.Steiner.IsSteinerK4 L →
+    ∀ (x : (PaperV.Steiner.triTop V).O → K),
+      (∀ e ∈ Finset.powersetCard 2 Finset.univ, PaperV.Steiner.fracLoad x e ≤ 1) →
+        ∑ t, x t ≤ ∑ t, ↑(PaperV.Steiner.steinerX L t) / 2
+'PaperV.Steiner.half_steinerX_ge_frac' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.Steiner.exists_quadratic_defect_frac : ∀ (d : ℕ),
+  ∃ V x x_1 L,
+    Fintype.card V = 4 ^ d ∧
+      PaperV.Steiner.IsSteinerK4 L ∧
+        (∀ (t : (PaperV.Steiner.triTop V).O), PaperV.Steiner.steinerX L t ≤ 1) ∧
+          (∀ e ∈ Finset.powersetCard 2 Finset.univ,
+              PaperV.Steiner.fracLoad (fun t => ↑(PaperV.Steiner.steinerX L t) / 2) e = 1) ∧
+            (∀ (x_2 : (PaperV.Steiner.triTop V).O → ℝ),
+                (∀ e ∈ Finset.powersetCard 2 Finset.univ, PaperV.Steiner.fracLoad x_2 e ≤ 1) →
+                  ∑ t, x_2 t ≤ ∑ t, ↑(PaperV.Steiner.steinerX L t) / 2) ∧
+              3 * ∑ t, ↑(PaperV.Steiner.steinerX L t) / 2 = ↑((4 ^ d).choose 2) ∧
+                3 * PaperV.oct (PaperV.Steiner.HX L) = (4 ^ d).choose 2
+'PaperV.Steiner.exists_quadratic_defect_frac' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Dq_one_eq : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (H : SimpleGraph V) [DecidableRel H.Adj],
+  PaperV.Dq H 1 = Fintype.card V - PaperV.indepNum H
+'PaperV.Dq_one_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Dq_one_lineGraph : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj], PaperV.Dq G.lineGraph 1 = Fintype.card ↑G.edgeSet - PaperV.indepNum G.lineGraph
+'PaperV.Dq_one_lineGraph' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.profile_zero_set_not_values : (SimpleGraph.pathGraph 4).maxDegree = 2 ∧
+  (SimpleGraph.cycleGraph 4).maxDegree = 2 ∧
+    PaperV.Dq (SimpleGraph.pathGraph 3) 2 = 0 ∧
+      PaperV.Dq (SimpleGraph.cycleGraph 4) 2 = 0 ∧
+        PaperV.Dq (SimpleGraph.pathGraph 3) 1 = 1 ∧ PaperV.Dq (SimpleGraph.cycleGraph 4) 1 = 2
+'PaperV.profile_zero_set_not_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.FiniteLP.gap_identity : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : Fintype E] {K : Type u_3}
+  [inst_2 : Field K] [inst_3 : LinearOrder K] [IsStrictOrderedRing K] {A : I → E → K} {g : I → K}
+  (p : PaperV.FiniteLP.PrimalFeasible A) (d : PaperV.FiniteLP.DualFeasible A g),
+  PaperV.FiniteLP.dualValue d - PaperV.FiniteLP.primalValue g p =
+    ∑ e, d.price e * (1 - ∑ i, A i e * p.weight i) + ∑ i, p.weight i * (∑ e, A i e * d.price e - g i)
+'PaperV.FiniteLP.gap_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.FiniteLP.weak_duality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.FiniteLP.equal_value_of_complementarity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.FiniteLP.complementarity_of_equal_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.FiniteLP.optimal_of_equal' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.FiniteLP.discarded_value_le : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [Fintype E] {K : Type u_3}
+  [inst_2 : Field K] [inst_3 : LinearOrder K] [IsStrictOrderedRing K] {A : I → E → K} {g : I → K}
+  (p : PaperV.FiniteLP.PrimalFeasible A) (D : Finset I) (B : Finset E) (M : K),
+  (∀ (i : I) (e : E), 0 ≤ A i e) →
+    0 ≤ M → (∀ i ∈ D, g i ≤ M) → (∀ i ∈ D, 1 ≤ ∑ e ∈ B, A i e) → ∑ i ∈ D, g i * p.weight i ≤ M * ↑B.card
+'PaperV.FiniteLP.discarded_value_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.transfer_q_weighted_cert : ∀ (C : PaperV.ConflictSystem) (w X : C.O → ℕ) (q : ℕ),
+  1 ≤ q →
+    ∀ (Z : Finset (PaperV.Copies C X)),
+      PaperV.IsDefectSet (PaperV.Hgraph C X) q Z →
+        PaperV.wMultSize C w X ≤ q * PaperV.wNu C w + ∑ c ∈ Z, PaperV.copyWeight C w c
+'PaperV.transfer_q_weighted_cert' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.cleanup_transfer_cert : ∀ (C : PaperV.ConflictSystem) (w X : C.O → ℕ) (Dset : Finset C.O) (q : ℕ),
+  1 ≤ q →
+    ∀ (Z : Finset (PaperV.Copies C (PaperV.restrictOut C X Dset))),
+      PaperV.IsDefectSet (PaperV.Hgraph C (PaperV.restrictOut C X Dset)) q Z →
+        PaperV.wMultSize C w X ≤ q * PaperV.wNu C w + ∑ c ∈ Z, PaperV.copyWeight C w c + ∑ o ∈ Dset, w o * X o
+'PaperV.cleanup_transfer_cert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.discarded_scaled_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.UnitBoundary.ResFeasible_biUnion_of_owner : ∀ {α : Type u_1} {R : Type u_2} {Cl : Type u_3}
+  [inst : DecidableEq α] [DecidableEq R] [inst_2 : Fintype Cl] [DecidableEq Cl] {res : α → Finset R} {P : Cl → Finset α}
+  {owner : R → Cl},
+  PaperV.UnitBoundary.Owned res P owner →
+    (∀ (c : Cl), PaperV.UnitBoundary.ResFeasible res (P c)) →
+      PaperV.UnitBoundary.ResFeasible res (Finset.univ.biUnion P)
+'PaperV.UnitBoundary.ResFeasible_biUnion_of_owner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.UnitBoundary.wsum_biUnion_of_owner' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.UnitBoundary.Weighted.weighted_optimum_eq : ∀ {α : Type u_1} {R : Type u_2} [inst : DecidableEq α]
+  [inst_1 : DecidableEq R] {res : α → Finset R} {Q D : Finset α} {SR : Finset R} {w : α → ℕ},
+  PaperV.UnitBoundary.Config res Q D SR →
+    ∀ (wr : PaperV.UnitBoundary.Weighted.WReps res Q SR w),
+      ↑(PaperV.UnitBoundary.Weighted.wOpt res w (Q ∪ D)) =
+        ↑(PaperV.UnitBoundary.Weighted.wt w (PaperV.UnitBoundary.Z res Q SR)) +
+            ↑(∑ b ∈ SR, PaperV.UnitBoundary.Weighted.aW res Q SR w b) +
+          PaperV.UnitBoundary.Weighted.centralOpt res Q D SR w
+'PaperV.UnitBoundary.Weighted.weighted_optimum_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.UnitBoundary.Weighted.weighted_transport : ∀ {α : Type u_1} {R : Type u_2} [inst : DecidableEq α]
+  [inst_1 : DecidableEq R] {res : α → Finset R} {D : Finset α} {SR : Finset R} {w : α → ℕ} {Q₀ Q₁ : Finset α},
+  PaperV.UnitBoundary.Config res Q₀ D SR →
+    PaperV.UnitBoundary.Config res Q₁ D SR →
+      ∀ (wr₁ : PaperV.UnitBoundary.Weighted.WReps res Q₁ SR w) {P₀ : Finset α},
+        P₀ ⊆ Q₀ ∪ D →
+          PaperV.UnitBoundary.ResFeasible res P₀ →
+            PaperV.UnitBoundary.ResFeasible res (PaperV.UnitBoundary.Weighted.completion wr₁ (P₀ ∩ D)) ∧
+              PaperV.UnitBoundary.Weighted.completion wr₁ (P₀ ∩ D) ⊆ Q₁ ∪ D ∧
+                ↑(PaperV.UnitBoundary.Weighted.wt w P₀) +
+                    ↑(PaperV.UnitBoundary.Weighted.wt w (PaperV.UnitBoundary.Z res Q₁ SR)) ≤
+                  ↑(PaperV.UnitBoundary.Weighted.wt w (PaperV.UnitBoundary.Weighted.completion wr₁ (P₀ ∩ D))) +
+                      ↑(PaperV.UnitBoundary.Weighted.wt w (PaperV.UnitBoundary.Z res Q₀ SR)) +
+                    ∑ b ∈ SR,
+                      PaperV.UnitBoundary.Weighted.posPart
+                        (↑(PaperV.UnitBoundary.Weighted.aW res Q₀ SR w b) -
+                          ↑(PaperV.UnitBoundary.Weighted.aW res Q₁ SR w b))
+'PaperV.UnitBoundary.Weighted.weighted_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.UnitBoundary.Weighted.w2_weighted_check' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.mixed_copy_integral : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (v u : V) (huv : ¬G.Adj u v) (gainOf : ℕ → ℕ)
+  (P' : Finset (PaperV.mixedCS (PaperV.copyGraph G v u)).O) (P'' : Finset (PaperV.mixedCS (PaperV.copyGraph G u v)).O),
+  PaperV.packGain (PaperV.copyGraph G v u) gainOf P' + PaperV.packGain (PaperV.copyGraph G u v) gainOf P'' ≤
+    2 * PaperV.wNu (PaperV.mixedCS G) (PaperV.mixedWeight G gainOf) +
+      PaperV.wDq (PaperV.mixedCS G) (PaperV.mixedWeight G gainOf) (PaperV.imageMultiset G v u huv ⋯ P' P'') 2
+'PaperV.mixed_copy_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.mixed_copy_integral_opt : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (v u : V),
+  ¬G.Adj u v →
+    ∀ (gainOf : ℕ → ℕ),
+      ∃ X,
+        PaperV.wMultSize (PaperV.mixedCS G) (PaperV.mixedWeight G gainOf) X =
+            PaperV.wNu (PaperV.mixedCS (PaperV.copyGraph G v u)) (PaperV.mixedWeight (PaperV.copyGraph G v u) gainOf) +
+              PaperV.wNu (PaperV.mixedCS (PaperV.copyGraph G u v))
+                (PaperV.mixedWeight (PaperV.copyGraph G u v) gainOf) ∧
+          PaperV.wNu (PaperV.mixedCS (PaperV.copyGraph G v u)) (PaperV.mixedWeight (PaperV.copyGraph G v u) gainOf) +
+              PaperV.wNu (PaperV.mixedCS (PaperV.copyGraph G u v))
+                (PaperV.mixedWeight (PaperV.copyGraph G u v) gainOf) ≤
+            2 * PaperV.wNu (PaperV.mixedCS G) (PaperV.mixedWeight G gainOf) +
+              PaperV.wDq (PaperV.mixedCS G) (PaperV.mixedWeight G gainOf) X 2
+'PaperV.mixed_copy_integral_opt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.copyMap_mem_cliqueFinset' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.realizable_class_transfer : ∀ {C : PaperV.ConflictSystem} {P : PaperV.ConflictSystem} {w : C.O → ℕ}
+  {wP : P.O → ℕ} {X : C.O → ℕ} {q : ℕ},
+  1 ≤ q →
+    ∀ (cert : PaperV.RealCert C P w wP X q), ∃ i, PaperV.wMultSize C w X ≤ q * ∑ o ∈ (cert.real i).out, wP o + cert.cost
+'PaperV.realizable_class_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.realizable_transfer_cert : ∀ {C : PaperV.ConflictSystem} {P : PaperV.ConflictSystem} {w : C.O → ℕ}
+  {wP : P.O → ℕ} {X : C.O → ℕ} {q : ℕ},
+  1 ≤ q → ∀ (cert : PaperV.RealCert C P w wP X q), PaperV.wMultSize C w X ≤ q * PaperV.wNu P wP + cert.cost
+'PaperV.realizable_transfer_cert' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.realizable_transfer_exact : ∀ {C : PaperV.ConflictSystem} {P : PaperV.ConflictSystem} {w : C.O → ℕ}
+  {wP : P.O → ℕ} {X : C.O → ℕ} {q : ℕ},
+  1 ≤ q →
+    ∀ (cert : PaperV.RealCert C P w wP X q),
+      cert.Exact → PaperV.wMultSize C w X ≤ q * PaperV.wNu P wP + ∑ c ∈ cert.Z, PaperV.copyWeight C w c
+'PaperV.realizable_transfer_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.realizability_defect_transfer : ∀ {C : PaperV.ConflictSystem} {P : PaperV.ConflictSystem} {w : C.O → ℕ}
+  {wP : P.O → ℕ} {X : C.O → ℕ} {q : ℕ},
+  1 ≤ q →
+    ∀ (R : PaperV.RealizerClass C P w wP X),
+      (∃ cert, PaperV.RealCert.Admissible R cert) → PaperV.wMultSize C w X ≤ q * PaperV.wNu P wP + PaperV.wRDq R q
+'PaperV.realizability_defect_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.wRDq_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.wRDq_le_wDq : ∀ {C : PaperV.ConflictSystem} {w X : C.O → ℕ} {q : ℕ},
+  1 ≤ q → ∀ (R : PaperV.RealizerClass C C w w X), PaperV.ContainsIdentity C w X R → PaperV.wRDq R q ≤ PaperV.wDq C w X q
+'PaperV.wRDq_le_wDq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.wRDq_identity_eq_wDq : ∀ {C : PaperV.ConflictSystem} {w X : C.O → ℕ} {q : ℕ},
+  1 ≤ q → PaperV.wRDq (PaperV.IdentityClass C w X) q = PaperV.wDq C w X q
+'PaperV.wRDq_identity_eq_wDq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.realizability_transfer_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.realizability_transfer_of_containsIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.resFeasible_of_properOn : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [inst : DecidableEq E]
+  [inst_1 : DecidableEq V] [inst_2 : DecidableEq H] {ends : E → Finset V} {L : E → Finset H} {T : Finset E} {c : E → H},
+  PaperV.Host.ProperOn ends L T c →
+    PaperV.UnitBoundary.ResFeasible (PaperV.Host.triRes ends) (Finset.image (fun e => (e, c e)) T)
+'PaperV.Host.resFeasible_of_properOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.Host.nu_hostCS_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.host_transfer : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [inst : Fintype E] [inst_1 : DecidableEq E]
+  [Fintype V] [inst_3 : DecidableEq V] [inst_4 : Fintype H] [inst_5 : DecidableEq H] (ends : E → Finset V)
+  (L : E → Finset H) (w : E → ℕ) {X : E → ℕ} {q : ℕ},
+  1 ≤ q →
+    ∀ (Z : Finset (PaperV.Copies (PaperV.Host.baseCS ends) X))
+      (part : PaperV.Copies (PaperV.Host.baseCS ends) X → Fin q),
+      (∀ (i : Fin q),
+          Set.InjOn (PaperV.objOf (PaperV.Host.baseCS ends)) ↑(PaperV.classOf (PaperV.Host.baseCS ends) Z part i)) →
+        ∀ (c : Fin q → E → H),
+          (∀ (i : Fin q),
+              PaperV.Host.ProperOn ends L
+                (Finset.image (PaperV.objOf (PaperV.Host.baseCS ends))
+                  (PaperV.classOf (PaperV.Host.baseCS ends) Z part i))
+                (c i)) →
+            PaperV.wMultSize (PaperV.Host.baseCS ends) w X ≤
+              q * PaperV.wNu (PaperV.Host.hostCS H ends) (PaperV.Host.triWeight w) +
+                ∑ c ∈ Z, PaperV.copyWeight (PaperV.Host.baseCS ends) w c
+'PaperV.Host.host_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.Strictness.Dq_one_krGraph : ∀ (r : ℕ), PaperV.Dq (PaperV.Strictness.krGraph r) 1 = r * r - r
+'PaperV.Strictness.Dq_one_krGraph' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.Strictness.strict_separation : ∀ (r : ℕ) [NeZero r],
+  PaperV.wDq (PaperV.Host.baseCS (PaperV.Strictness.krEnds r)) (PaperV.Strictness.one r) (PaperV.Strictness.one r) 1 =
+      r * r - r ∧
+    PaperV.wRDq
+        (PaperV.Host.HostClass (PaperV.Strictness.krEnds r) (PaperV.Strictness.fullList r) (PaperV.Strictness.one r)
+          (PaperV.Strictness.one r))
+        1 =
+      0
+'PaperV.Strictness.strict_separation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.Strictness.strict_separation_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.Strictness.nu_hostCS_kr : ∀ (r : ℕ) [NeZero r],
+  PaperV.nu (PaperV.Host.hostCS (Fin r) (PaperV.Strictness.krEnds r)) = r * r
+'PaperV.Strictness.nu_hostCS_kr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.subsetRealizer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.ClassRealizer.union_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.wRDq_ge : ∀ {C : PaperV.ConflictSystem} {P : PaperV.ConflictSystem} {w : C.O → ℕ} {wP : P.O → ℕ} {X : C.O → ℕ}
+  {q : ℕ},
+  1 ≤ q →
+    ∀ (R : PaperV.RealizerClass C P w wP X),
+      (∃ cert, PaperV.RealCert.Admissible R cert) → PaperV.wMultSize C w X - q * PaperV.wNu P wP ≤ PaperV.wRDq R q
+'PaperV.wRDq_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.wRDq_eq_of_cost : ∀ {C : PaperV.ConflictSystem} {P : PaperV.ConflictSystem} {w : C.O → ℕ} {wP : P.O → ℕ}
+  {X : C.O → ℕ} {q : ℕ},
+  1 ≤ q →
+    ∀ (R : PaperV.RealizerClass C P w wP X) (cert : PaperV.RealCert C P w wP X q),
+      PaperV.RealCert.Admissible R cert →
+        cert.cost + q * PaperV.wNu P wP = PaperV.wMultSize C w X → PaperV.wRDq R q = cert.cost
+'PaperV.wRDq_eq_of_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.wNuQ_scale : ∀ (C : PaperV.ConflictSystem) (w : C.O → ℕ) (d : ℕ),
+  0 < d → PaperV.wNuQ C (PaperV.scaleW C w d) = ↑(PaperV.wNu C w) / ↑d
+'PaperV.wNuQ_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.realizable_transfer_rational : ∀ {C : PaperV.ConflictSystem} {P : PaperV.ConflictSystem} {w : C.O → ℕ}
+  {wP : P.O → ℕ} {X : C.O → ℕ} {q : ℕ},
+  1 ≤ q →
+    ∀ (cert : PaperV.RealCert C P w wP X q) (d : ℕ),
+      0 < d → PaperV.wMultSizeQ C (PaperV.scaleW C w d) X ≤ ↑q * PaperV.wNuQ P (PaperV.scaleW P wP d) + ↑cert.cost / ↑d
+'PaperV.realizable_transfer_rational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.transfer_q_weighted_rational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.exists_scaleW' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.lp_value_eq : ∀ {C : PaperV.ConflictSystem} {K : Type u_1} [inst : Field K] [inst_1 : LinearOrder K]
+  [IsStrictOrderedRing K] {q : ℕ},
+  0 < q →
+    ∀ {x : C.O → K} {X : C.O → ℕ},
+      PaperV.IsQIntegral q x X → ∀ (w : C.O → ℕ), ∑ o, ↑(w o) * x o = ↑(PaperV.wMultSize C w X) / ↑q
+'PaperV.lp_value_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.isQMultiset_of_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.lp_transfer : ∀ {C : PaperV.ConflictSystem} {K : Type u_1} [inst : Field K] [inst_1 : LinearOrder K]
+  [IsStrictOrderedRing K] {q : ℕ},
+  1 ≤ q →
+    ∀ {x : C.O → K} {X : C.O → ℕ},
+      PaperV.IsQIntegral q x X → ∀ (w : C.O → ℕ), ∑ o, ↑(w o) * x o ≤ ↑(PaperV.wNu C w) + ↑(PaperV.wDq C w X q) / ↑q
+'PaperV.lp_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.lp_realizable_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.lp_realizability_defect_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Galvin.kernel_coloring : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (A : V → V → Prop)
+  [inst_2 : DecidableRel A],
+  (∀ (v : V), ¬A v v) →
+    (∀ (S : Finset V), ∃ K, PaperV.Galvin.IsKernelOn A S K) →
+      ∀ (L : V → Finset ℕ),
+        (∀ (v : V), {u | A v u}.card + 1 ≤ (L v).card) → ∃ φ, (∀ (v : V), φ v ∈ L v) ∧ ∀ (u v : V), A u v → φ u ≠ φ v
+'PaperV.Galvin.kernel_coloring' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Galvin.gale_shapley : ∀ {U : Type u_1} {R : Type u_2} [Fintype U] [Fintype R] [DecidableEq U] [DecidableEq R]
+  (B : Finset (U × R)) (pu : U → R → ℕ) (pr : R → U → ℕ),
+  (∀ (u : U) (r r' : R), (u, r) ∈ B → (u, r') ∈ B → pu u r = pu u r' → r = r') →
+    (∀ (r : R) (u u' : U), (u, r) ∈ B → (u', r) ∈ B → pr r u = pr r u' → u = u') →
+      ∃ M, PaperV.Galvin.IsStableMatching B pu pr M
+'PaperV.Galvin.gale_shapley' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Galvin.konig_edge_coloring : ∀ {U : Type u_1} {R : Type u_2} [Fintype U] [Fintype R] [inst : DecidableEq U]
+  [inst_1 : DecidableEq R] (B : Finset (U × R)) (Δ : ℕ),
+  (∀ (u : U), {e ∈ B | e.1 = u}.card ≤ Δ) →
+    (∀ (r : R), {e ∈ B | e.2 = r}.card ≤ Δ) →
+      ∃ φ, (∀ e ∈ B, φ e < Δ) ∧ ∀ e ∈ B, ∀ f ∈ B, e ≠ f → e.1 = f.1 ∨ e.2 = f.2 → φ e ≠ φ f
+'PaperV.Galvin.konig_edge_coloring' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Galvin.galvin_max_degree : ∀ {U : Type u_1} {R : Type u_2} [Fintype U] [Fintype R] [inst : DecidableEq U]
+  [inst_1 : DecidableEq R] (B : Finset (U × R)) (Δ : ℕ),
+  (∀ (u : U), {e ∈ B | e.1 = u}.card ≤ Δ) →
+    (∀ (r : R), {e ∈ B | e.2 = r}.card ≤ Δ) →
+      ∀ (L : U × R → Finset ℕ),
+        (∀ e ∈ B, Δ ≤ (L e).card) →
+          ∃ φ, (∀ e ∈ B, φ e ∈ L e) ∧ ∀ e ∈ B, ∀ f ∈ B, e ≠ f → e.1 = f.1 ∨ e.2 = f.2 → φ e ≠ φ f
+'PaperV.Galvin.galvin_max_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.galvin_host_assignment : ∀ {U : Type u_1} {R : Type u_2} {H : Type u_3} [Fintype U] [inst : DecidableEq U]
+  [Fintype R] [inst_2 : DecidableEq R] [Fintype H] [DecidableEq H] [Nonempty H] (B : Finset (U × R)) (Δ : ℕ),
+  (∀ (u : U), {e ∈ B | e.1 = u}.card ≤ Δ) →
+    (∀ (r : R), {e ∈ B | e.2 = r}.card ≤ Δ) →
+      ∀ (L : U × R → Finset H), (∀ e ∈ B, Δ ≤ (L e).card) → ∃ c, PaperV.Host.ProperOn PaperV.Host.bipEnds L B c
+'PaperV.Host.galvin_host_assignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.galvin_full_packing : ∀ {U : Type u_1} {R : Type u_2} {H : Type u_3} [inst : Fintype U]
+  [inst_1 : DecidableEq U] [inst_2 : Fintype R] [inst_3 : DecidableEq R] [inst_4 : Fintype H] [inst_5 : DecidableEq H]
+  [Nonempty H] (B : Finset (U × R)) (Δ : ℕ),
+  (∀ (u : U), {e ∈ B | e.1 = u}.card ≤ Δ) →
+    (∀ (r : R), {e ∈ B | e.2 = r}.card ≤ Δ) →
+      ∀ (L : U × R → Finset H),
+        (∀ e ∈ B, Δ ≤ (L e).card) →
+          ∃ c,
+            (∀ e ∈ B, c e ∈ L e) ∧
+              PaperV.UnitBoundary.ResFeasible (PaperV.Host.triRes PaperV.Host.bipEnds)
+                  (Finset.image (fun e => (e, c e)) B) ∧
+                B.card ≤ PaperV.nu (PaperV.Host.hostCS H PaperV.Host.bipEnds)
+'PaperV.Host.galvin_full_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.weighted_host_selection : ∀ {U : Type u_1} {R : Type u_2} {H : Type u_3} [Fintype U] [inst : DecidableEq U]
+  [Fintype R] [inst_2 : DecidableEq R] [Fintype H] [DecidableEq H] [Nonempty H] (B : Finset (U × R)) (w : U × R → ℕ)
+  (d : ℕ),
+  1 ≤ d →
+    ∀ (φ : U × R → ℕ),
+      (∀ e ∈ B, φ e < d) →
+        (∀ e ∈ B, ∀ f ∈ B, e ≠ f → e.1 = f.1 ∨ e.2 = f.2 → φ e ≠ φ f) →
+          ∀ (L : U × R → Finset H),
+            (∀ e ∈ B, (L e).Nonempty) →
+              ∃ M ⊆ B,
+                (∀ e ∈ M, ∀ f ∈ M, e ≠ f → e.1 ≠ f.1 ∧ e.2 ≠ f.2) ∧
+                  ∑ e ∈ B, w e ≤ d * ∑ e ∈ M, w e ∧ ∃ c, PaperV.Host.ProperOn PaperV.Host.bipEnds L M c
+'PaperV.Host.weighted_host_selection' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.weighted_host_selection_nu : ∀ {U : Type u_1} {R : Type u_2} {H : Type u_3} [inst : Fintype U]
+  [inst_1 : DecidableEq U] [inst_2 : Fintype R] [inst_3 : DecidableEq R] [inst_4 : Fintype H] [inst_5 : DecidableEq H]
+  [Nonempty H] (B : Finset (U × R)) (w : U × R → ℕ) (d : ℕ),
+  1 ≤ d →
+    ∀ (φ : U × R → ℕ),
+      (∀ e ∈ B, φ e < d) →
+        (∀ e ∈ B, ∀ f ∈ B, e ≠ f → e.1 = f.1 ∨ e.2 = f.2 → φ e ≠ φ f) →
+          ∀ (L : U × R → Finset H),
+            (∀ e ∈ B, (L e).Nonempty) →
+              ∑ e ∈ B, w e ≤ d * PaperV.wNu (PaperV.Host.hostCS H PaperV.Host.bipEnds) (PaperV.Host.triWeight w)
+'PaperV.Host.weighted_host_selection_nu' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.konig_weighted_host_selection : ∀ {U : Type u_1} {R : Type u_2} {H : Type u_3} [inst : Fintype U]
+  [inst_1 : DecidableEq U] [inst_2 : Fintype R] [inst_3 : DecidableEq R] [inst_4 : Fintype H] [inst_5 : DecidableEq H]
+  [Nonempty H] (B : Finset (U × R)) (w : U × R → ℕ) (Δ : ℕ),
+  1 ≤ Δ →
+    (∀ (u : U), {e ∈ B | e.1 = u}.card ≤ Δ) →
+      (∀ (r : R), {e ∈ B | e.2 = r}.card ≤ Δ) →
+        ∀ (L : U × R → Finset H),
+          (∀ e ∈ B, (L e).Nonempty) →
+            ∑ e ∈ B, w e ≤ Δ * PaperV.wNu (PaperV.Host.hostCS H PaperV.Host.bipEnds) (PaperV.Host.triWeight w)
+'PaperV.Host.konig_weighted_host_selection' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.galvin_heavy_single_host : ∀ {U : Type u_1} {R : Type u_2} {H : Type u_3} [Fintype U]
+  [inst : DecidableEq U] [Fintype R] [inst_2 : DecidableEq R] [inst_3 : Fintype H] [inst_4 : DecidableEq H] [Nonempty H]
+  (B : Finset (U × R)) (w : U × R → ℕ) (L : U × R → Finset H) (c : U × R → H),
+  PaperV.Host.ProperOn PaperV.Host.bipEnds L B c →
+    ∃ h,
+      ∑ e ∈ B, w e ≤ Fintype.card H * ∑ e ∈ B with c e = h, w e ∧
+        PaperV.UnitBoundary.ResFeasible (PaperV.Host.triRes PaperV.Host.bipEnds)
+          (Finset.image (fun e => (e, c e)) ({e ∈ B | c e = h}))
+'PaperV.Host.galvin_heavy_single_host' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.Host.instDecidableProperOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.Host.galvinRealizer_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.galvin_lifted_transfer : ∀ {U : Type u_1} {R : Type u_2} {H : Type u_3} [inst : Fintype U]
+  [inst_1 : DecidableEq U] [inst_2 : Fintype R] [inst_3 : DecidableEq R] [inst_4 : Fintype H] [inst_5 : DecidableEq H]
+  [Nonempty H] (L : U × R → Finset H) (w : U × R → ℕ) {X : U × R → ℕ} {q : ℕ},
+  1 ≤ q →
+    ∀ (Z : Finset (PaperV.Copies (PaperV.Host.baseCS PaperV.Host.bipEnds) X))
+      (part : PaperV.Copies (PaperV.Host.baseCS PaperV.Host.bipEnds) X → Fin q),
+      (∀ (i : Fin q),
+          Set.InjOn (PaperV.objOf (PaperV.Host.baseCS PaperV.Host.bipEnds))
+            ↑(PaperV.classOf (PaperV.Host.baseCS PaperV.Host.bipEnds) Z part i)) →
+        ∀ (Δ : Fin q → ℕ),
+          (∀ (i : Fin q),
+              PaperV.Host.GalvinHyp L
+                (PaperV.Host.baseSet (PaperV.classOf (PaperV.Host.baseCS PaperV.Host.bipEnds) Z part i)) (Δ i)) →
+            PaperV.wMultSize (PaperV.Host.baseCS PaperV.Host.bipEnds) w X ≤
+              q * PaperV.wNu (PaperV.Host.hostCS H PaperV.Host.bipEnds) (PaperV.Host.triWeight w) +
+                ∑ c ∈ Z, PaperV.copyWeight (PaperV.Host.baseCS PaperV.Host.bipEnds) w c
+'PaperV.Host.galvin_lifted_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.wRDq_host_le_of_galvin : ∀ {U : Type u_1} {R : Type u_2} {H : Type u_3} [inst : Fintype U]
+  [inst_1 : DecidableEq U] [inst_2 : Fintype R] [inst_3 : DecidableEq R] [inst_4 : Fintype H] [inst_5 : DecidableEq H]
+  [Nonempty H] (L : U × R → Finset H) (w : U × R → ℕ) {X : U × R → ℕ} {q : ℕ}
+  (Z : Finset (PaperV.Copies (PaperV.Host.baseCS PaperV.Host.bipEnds) X))
+  (part : PaperV.Copies (PaperV.Host.baseCS PaperV.Host.bipEnds) X → Fin q),
+  (∀ (i : Fin q),
+      Set.InjOn (PaperV.objOf (PaperV.Host.baseCS PaperV.Host.bipEnds))
+        ↑(PaperV.classOf (PaperV.Host.baseCS PaperV.Host.bipEnds) Z part i)) →
+    ∀ (Δ : Fin q → ℕ),
+      (∀ (i : Fin q),
+          PaperV.Host.GalvinHyp L
+            (PaperV.Host.baseSet (PaperV.classOf (PaperV.Host.baseCS PaperV.Host.bipEnds) Z part i)) (Δ i)) →
+        PaperV.wRDq (PaperV.Host.HostClass PaperV.Host.bipEnds L w X) q ≤
+          ∑ c ∈ Z, PaperV.copyWeight (PaperV.Host.baseCS PaperV.Host.bipEnds) w c
+'PaperV.Host.wRDq_host_le_of_galvin' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.RationalFarkas.farkas : ∀ {J : Type u_1} {N : Type u_2} [inst : Fintype J] [inst_1 : Fintype N] (M : J → N → ℚ)
+  (b : J → ℚ), (∃ x, PaperV.RationalFarkas.Sat M b x) ∨ ∃ y, PaperV.RationalFarkas.Cert M b y
+'PaperV.RationalFarkas.farkas' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.RationalFarkas.not_sat_of_cert' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.FiniteLP.exists_equal_primal_dual : ∀ {Item : Type u_1} {Resource : Type u_2} [inst : Fintype Item]
+  [inst_1 : Fintype Resource] [DecidableEq Item] [DecidableEq Resource] (incidence : Item → Resource → ℚ)
+  (gain : Item → ℚ),
+  (∀ (i : Item) (e : Resource), 0 ≤ incidence i e) →
+    (∀ (i : Item), ∃ e, 1 ≤ incidence i e) → ∃ p d, PaperV.FiniteLP.primalValue gain p = PaperV.FiniteLP.dualValue d
+'PaperV.FiniteLP.exists_equal_primal_dual' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Mixed.mixed_copy_fractional : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (v u : V),
+  ¬G.Adj u v →
+    ∀ (gain : ℕ → ℕ),
+      PaperV.Mixed.Wstar (PaperV.copyGraph G v u) gain + PaperV.Mixed.Wstar (PaperV.copyGraph G u v) gain ≤
+        2 * PaperV.Mixed.Wstar G gain
+'PaperV.Mixed.mixed_copy_fractional' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Galvin.stable_matching_multi : ∀ {U : Type u_1} {R : Type u_2} {E : Type u_3} [Fintype E] [DecidableEq U]
+  [DecidableEq R] [DecidableEq E] (left : E → U) (right : E → R) (pu pr : E → ℕ),
+  (∀ (e f : E), left e = left f → pu e = pu f → e = f) →
+    (∀ (e f : E), right e = right f → pr e = pr f → e = f) →
+      ∀ (S : Finset E),
+        ∃ M ⊆ S,
+          PaperV.Galvin.IsMatchingOn left right M ∧
+            ∀ g ∈ S, g ∉ M → (∃ f ∈ M, left f = left g ∧ pu g < pu f) ∨ ∃ f ∈ M, right f = right g ∧ pr g < pr f
+'PaperV.Galvin.stable_matching_multi' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Galvin.konig_multigraph : ∀ {U : Type u_1} {R : Type u_2} {E : Type u_3} [Fintype U] [Fintype R] [Fintype E]
+  [inst : DecidableEq U] [inst_1 : DecidableEq R] [DecidableEq E] (left : E → U) (right : E → R) (S : Finset E) (Δ : ℕ),
+  (∀ (u : U), PaperV.Galvin.degLOn left S u ≤ Δ) →
+    (∀ (r : R), PaperV.Galvin.degROn right S r ≤ Δ) →
+      ∃ φ, (∀ e ∈ S, φ e < Δ) ∧ ∀ e ∈ S, ∀ f ∈ S, e ≠ f → left e = left f ∨ right e = right f → φ e ≠ φ f
+'PaperV.Galvin.konig_multigraph' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Galvin.ranks_exist : ∀ {U : Type u_1} {R : Type u_2} {E : Type u_3} [Fintype U] [inst : DecidableEq U]
+  [inst_1 : DecidableEq R] [DecidableEq E] (left : E → U) (right : E → R) (c : E → ℕ) (S : Finset E) (aL : U → ℕ)
+  (aR : R → ℕ),
+  (∀ e ∈ S, aR (right e) ≤ aL (left e) + c e) →
+    (∀ e ∈ S,
+        aR (right e) + PaperV.Galvin.degROn right S (right e) ≤
+          aL (left e) + PaperV.Galvin.degLOn left S (left e) + c e) →
+      ∃ pL pR,
+        (∀ e ∈ S, aL (left e) ≤ pL e ∧ pL e < aL (left e) + PaperV.Galvin.degLOn left S (left e)) ∧
+          (∀ e ∈ S, aR (right e) ≤ pR e ∧ pR e < aR (right e) + PaperV.Galvin.degROn right S (right e)) ∧
+            (∀ e ∈ S, ∀ f ∈ S, left e = left f → pL e = pL f → e = f) ∧
+              (∀ e ∈ S, ∀ f ∈ S, right e = right f → pR e = pR f → e = f) ∧ ∀ e ∈ S, pR e ≤ pL e + c e
+'PaperV.Galvin.ranks_exist' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Galvin.galvin_engine : ∀ {U : Type u_1} {R : Type u_2} {E : Type u_3} [inst : Fintype E]
+  [inst_1 : DecidableEq U] [inst_2 : DecidableEq R] [DecidableEq E] (left : E → U) (right : E → R) (ru rv : E → ℕ),
+  (∀ (e f : E), left e = left f → ru e = ru f → e = f) →
+    (∀ (e f : E), right e = right f → rv e = rv f → e = f) →
+      ∀ (L : E → Finset ℕ),
+        (∀ (e : E), {f | left e = left f ∧ ru e < ru f ∨ right e = right f ∧ rv f < rv e}.card < (L e).card) →
+          ∃ φ, (∀ (e : E), φ e ∈ L e) ∧ ∀ (e f : E), e ≠ f → left e = left f ∨ right e = right f → φ e ≠ φ f
+'PaperV.Galvin.galvin_engine' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Galvin.galvin_multigraph_max_degree : ∀ {U : Type u_1} {R : Type u_2} {E : Type u_3} [Fintype U] [Fintype R]
+  [inst : Fintype E] [inst_1 : DecidableEq U] [inst_2 : DecidableEq R] [DecidableEq E] (left : E → U) (right : E → R)
+  (Δ : ℕ),
+  (∀ (u : U), PaperV.Galvin.degL left u ≤ Δ) →
+    (∀ (r : R), PaperV.Galvin.degR right r ≤ Δ) →
+      ∀ (L : E → Finset ℕ),
+        (∀ (e : E), Δ ≤ (L e).card) →
+          ∃ φ, (∀ (e : E), φ e ∈ L e) ∧ ∀ (e f : E), e ≠ f → left e = left f ∨ right e = right f → φ e ≠ φ f
+'PaperV.Galvin.galvin_multigraph_max_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Galvin.galvin_bkw_local : ∀ {U : Type u_1} {R : Type u_2} {E : Type u_3} [Fintype U] [Fintype R]
+  [inst : Fintype E] [inst_1 : DecidableEq U] [inst_2 : DecidableEq R] [DecidableEq E] (left : E → U) (right : E → R)
+  (L : E → Finset ℕ),
+  (∀ (e : E), max (PaperV.Galvin.degL left (left e)) (PaperV.Galvin.degR right (right e)) ≤ (L e).card) →
+    ∃ φ, (∀ (e : E), φ e ∈ L e) ∧ ∀ (e f : E), e ≠ f → left e = left f ∨ right e = right f → φ e ≠ φ f
+'PaperV.Galvin.galvin_bkw_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.bkw_host_assignment : ∀ {U : Type u_1} {R : Type u_2} {H : Type u_3} [Fintype U] [inst : DecidableEq U]
+  [Fintype R] [inst_2 : DecidableEq R] [Fintype H] [DecidableEq H] [Nonempty H] (B : Finset (U × R))
+  (L : U × R → Finset H),
+  (∀ e ∈ B, max (PaperV.Host.degB₁ B e.1) (PaperV.Host.degB₂ B e.2) ≤ (L e).card) →
+    ∃ c, PaperV.Host.ProperOn PaperV.Host.bipEnds L B c
+'PaperV.Host.bkw_host_assignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PaperV.Host.bkw_full_packing' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.galvin_local_lifted_transfer : ∀ {U : Type u_1} {R : Type u_2} {H : Type u_3} [inst : Fintype U]
+  [inst_1 : DecidableEq U] [inst_2 : Fintype R] [inst_3 : DecidableEq R] [inst_4 : Fintype H] [inst_5 : DecidableEq H]
+  [Nonempty H] (L : U × R → Finset H) (w : U × R → ℕ) {X : U × R → ℕ} {q : ℕ},
+  1 ≤ q →
+    ∀ (Z : Finset (PaperV.Copies (PaperV.Host.baseCS PaperV.Host.bipEnds) X))
+      (part : PaperV.Copies (PaperV.Host.baseCS PaperV.Host.bipEnds) X → Fin q),
+      (∀ (i : Fin q),
+          Set.InjOn (PaperV.objOf (PaperV.Host.baseCS PaperV.Host.bipEnds))
+            ↑(PaperV.classOf (PaperV.Host.baseCS PaperV.Host.bipEnds) Z part i)) →
+        (∀ (i : Fin q),
+            PaperV.Host.LocalListHyp L
+              (PaperV.Host.baseSet (PaperV.classOf (PaperV.Host.baseCS PaperV.Host.bipEnds) Z part i))) →
+          PaperV.wMultSize (PaperV.Host.baseCS PaperV.Host.bipEnds) w X ≤
+            q * PaperV.wNu (PaperV.Host.hostCS H PaperV.Host.bipEnds) (PaperV.Host.triWeight w) +
+              ∑ c ∈ Z, PaperV.copyWeight (PaperV.Host.baseCS PaperV.Host.bipEnds) w c
+'PaperV.Host.galvin_local_lifted_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.PairedFactors.exists_paired_completion : ∀ {O : Type u_1} {E : Type u_2} [inst : Fintype O]
+  [inst_1 : DecidableEq O] [inst_2 : Fintype E] [DecidableEq E] (k q s : ℕ),
+  1 ≤ k →
+    2 ≤ q →
+      s ≤ k →
+        2 * k - s ≤ q →
+          Fintype.card O = q →
+            ∀ (factor : E → Fin k) (L : E → Finset O) (β : E → ℚ),
+              (∀ (e : E), 0 ≤ β e) →
+                ∃ S ι ι',
+                  S.card = s ∧
+                    Function.Injective ι ∧
+                      Set.InjOn ι' ↑Sᶜ ∧
+                        (∀ f ∉ S, ∀ (g : Fin k), ι' f ≠ ι g) ∧
+                          ∑ e with (PaperV.PairedFactors.Uncovered factor L S ι ι') e, β e ≤
+                            ↑s / (↑k * ↑q) * ∑ e, β e * ↑(PaperV.PairedFactors.bad q L e) +
+                              (↑k - ↑s) / (↑k * ↑q * (↑q - 1)) *
+                                ∑ e, β e * ↑(PaperV.PairedFactors.bad q L e) * (↑(PaperV.PairedFactors.bad q L e) - 1)
+'PaperV.PairedFactors.exists_paired_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Konig.lineGraph_colorable_maxDegree_of_bipartite : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj], G.Colorable 2 → G.lineGraph.Colorable G.maxDegree
+'PaperV.Konig.lineGraph_colorable_maxDegree_of_bipartite' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Konig.Dq_lineGraph_maxDegree_eq_zero : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] [DecidableRel G.lineGraph.Adj],
+  G.Colorable 2 → 1 ≤ G.maxDegree → PaperV.Dq G.lineGraph G.maxDegree = 0
+'PaperV.Konig.Dq_lineGraph_maxDegree_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Konig.isClassOne_of_bipartite : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] [DecidableRel G.lineGraph.Adj] [Nonempty V],
+  G.Colorable 2 → 1 ≤ G.maxDegree → PaperV.IsClassOne G
+'PaperV.Konig.isClassOne_of_bipartite' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Konig.Dq_lineGraph_eq_zero_iff_of_bipartite : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] [DecidableRel G.lineGraph.Adj] [Nonempty V],
+  G.Colorable 2 → 1 ≤ G.maxDegree → ∀ {q : ℕ}, 1 ≤ q → (PaperV.Dq G.lineGraph q = 0 ↔ G.maxDegree ≤ q)
+'PaperV.Konig.Dq_lineGraph_eq_zero_iff_of_bipartite' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.StarExample.intermediate_defect : PaperV.wDq (PaperV.Host.baseCS PaperV.Host.bipEnds) PaperV.StarExample.one
+      PaperV.StarExample.one 1 =
+    2 ∧
+  PaperV.wRDq
+      (PaperV.Host.HostClass PaperV.Host.bipEnds PaperV.StarExample.fullList PaperV.StarExample.one
+        PaperV.StarExample.one)
+      1 =
+    1
+'PaperV.StarExample.intermediate_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.TerminalPair.p4_133_existence_sharp : ∀ {ι : Type u_1} {B : Type u_2} [Fintype ι] [DecidableEq ι]
+  [inst : Fintype B] [inst_1 : DecidableEq B] (emap : ι → Fin 2 → Sym2 B) (Pall : Finset ι),
+  Set.InjOn (fun p => emap p.1 p.2) {p | p.1 ∈ Pall} →
+    (∀ P ∈ Pall, ∀ (i : Fin 2), ¬(emap P i).IsDiag) →
+      ∀ (a m : ℕ),
+        1 ≤ a →
+          a ≤ m →
+            ∀ (X : Finset B),
+              (∀ P ∈ Pall, ∀ (i : Fin 2), ∃ w ∈ X, w ∈ emap P i) →
+                (PaperV.TerminalPair.termGraph emap Pall).maxDegree ≤ m →
+                  ∃ S' ⊆ Pall,
+                    (PaperV.TerminalPair.termGraph emap S').lineGraph.Colorable a ∧
+                      a * Pall.card < m * (S'.card + 5 + 10 * X.card)
+'PaperV.TerminalPair.p4_133_existence_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.FracCopy.copy_fractional_generic : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  {P₁ P₂ PG : Finset V → Prop} [inst_2 : DecidablePred P₁] [inst_3 : DecidablePred P₂] [inst_4 : DecidablePred PG]
+  (v u : V) (wt : Finset V → ℝ),
+  (∀ (t : Finset V), 0 ≤ wt t) →
+    (∀ (t : Finset V), P₁ t → PG (PaperV.copyMap v u t)) →
+      (∀ (t : Finset V), P₂ t → PG (PaperV.copyMap u v t)) →
+        (∀ (t : Finset V), P₁ t → wt (PaperV.copyMap v u t) = wt t) →
+          (∀ (t : Finset V), P₂ t → wt (PaperV.copyMap u v t) = wt t) →
+            (∀ (t : Finset V), PG t → 2 ≤ t.card) →
+              PaperV.FracCopy.Wstar P₁ wt + PaperV.FracCopy.Wstar P₂ wt ≤ 2 * PaperV.FracCopy.Wstar PG wt
+'PaperV.FracCopy.copy_fractional_generic' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.SealBridge.sealFeasible_of_properOn : ∀ {J : Type u_1} {W : Type u_2} [inst : DecidableEq J]
+  [inst_1 : DecidableEq W] (L : W × W → Finset J) (T : Finset (W × W)),
+  PaperV.SealBridge.PairsOnce T →
+    ∀ (c : W × W → J),
+      PaperV.Host.ProperOn PaperV.SealBridge.pairEnds L T c → PaperV.SealFeasible (PaperV.SealBridge.sealOf T c)
+'PaperV.SealBridge.sealFeasible_of_properOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.SealBridge.seal_galvin_regime : ∀ {J : Type u_1} [DecidableEq J] {U : Type u_2} {R : Type u_3} [Fintype U]
+  [inst : DecidableEq U] [Fintype R] [inst_2 : DecidableEq R] [Fintype J] [Nonempty J] (B : Finset (U × R)) (Δ : ℕ),
+  (∀ (u : U), {e ∈ B | e.1 = u}.card ≤ Δ) →
+    (∀ (r : R), {e ∈ B | e.2 = r}.card ≤ Δ) →
+      ∀ (L : U × R → Finset J),
+        (∀ e ∈ B, Δ ≤ (L e).card) →
+          ∃ Rp, PaperV.SealFeasible Rp ∧ Rp.card = B.card ∧ ∀ e ∈ B, ∃ x ∈ Rp, x.ends = PaperV.Host.bipEnds e
+'PaperV.SealBridge.seal_galvin_regime' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.SealBridge.seal_bkw_regime : ∀ {J : Type u_1} [DecidableEq J] {U : Type u_2} {R : Type u_3} [Fintype U]
+  [inst : DecidableEq U] [Fintype R] [inst_2 : DecidableEq R] [Fintype J] [Nonempty J] (B : Finset (U × R))
+  (L : U × R → Finset J),
+  (∀ e ∈ B, max (PaperV.Host.degB₁ B e.1) (PaperV.Host.degB₂ B e.2) ≤ (L e).card) →
+    ∃ Rp, PaperV.SealFeasible Rp ∧ Rp.card = B.card ∧ ∀ e ∈ B, ∃ x ∈ Rp, x.ends = PaperV.Host.bipEnds e
+'PaperV.SealBridge.seal_bkw_regime' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.SealBridge.seal_konig_guarantee : ∀ {J : Type u_1} [DecidableEq J] {U : Type u_2} {R : Type u_3} [Fintype U]
+  [inst : DecidableEq U] [Fintype R] [inst_2 : DecidableEq R] [Fintype J] [Nonempty J] (B : Finset (U × R)) (d : ℕ),
+  1 ≤ d →
+    (∀ (u : U), {e ∈ B | e.1 = u}.card ≤ d) →
+      (∀ (r : R), {e ∈ B | e.2 = r}.card ≤ d) →
+        ∀ (L : U × R → Finset J), (∀ e ∈ B, (L e).Nonempty) → ∃ Rp, PaperV.SealFeasible Rp ∧ B.card ≤ d * Rp.card
+'PaperV.SealBridge.seal_konig_guarantee' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.PureProfile.muMatDeg_le_min : ∀ (m s : ℕ), PaperV.PureProfile.muMatDeg m s ≤ min (↑m * ↑s / 2) ↑(s.choose 2)
+'PaperV.PureProfile.muMatDeg_le_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.PureProfile.nu_ge_frac_muMatDeg : ∀ (m s : ℕ),
+  1 ≤ s → (↑s - 1) / ↑s * PaperV.PureProfile.muMatDeg m s ≤ ↑(PaperV.PureProfile.nu m s)
+'PaperV.PureProfile.nu_ge_frac_muMatDeg' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.PureProfile.nu_ge_two_thirds_muMatDeg : ∀ (m s : ℕ),
+  3 ≤ s → 2 / 3 * PaperV.PureProfile.muMatDeg m s ≤ ↑(PaperV.PureProfile.nu m s)
+'PaperV.PureProfile.nu_ge_two_thirds_muMatDeg' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.PureProfile.nu_ge_muMatDeg_two : ∀ (m : ℕ), PaperV.PureProfile.muMatDeg m 2 ≤ ↑(PaperV.PureProfile.nu m 2)
+'PaperV.PureProfile.nu_ge_muMatDeg_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.nu_hostCSOn_le : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [inst : DecidableEq E]
+  [inst_1 : DecidableEq V] [inst_2 : Fintype H] [inst_3 : DecidableEq H] (ends : E → Finset V) (B : Finset E),
+  PaperV.nu (PaperV.Host.hostCSOn H ends B) ≤ B.card
+'PaperV.Host.nu_hostCSOn_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.nu_hostCSOn_eq_of_properOn : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [Fintype E]
+  [inst : DecidableEq E] [Fintype V] [inst_2 : DecidableEq V] [inst_3 : Fintype H] [inst_4 : DecidableEq H]
+  {ends : E → Finset V} {L : E → Finset H} {B : Finset E} {c : E → H},
+  PaperV.Host.ProperOn ends L B c → PaperV.nu (PaperV.Host.hostCSOn H ends B) = B.card
+'PaperV.Host.nu_hostCSOn_eq_of_properOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.galvin_host_completion_exact : ∀ {U : Type u_1} {R : Type u_2} {H : Type u_3} [Fintype U]
+  [inst : DecidableEq U] [Fintype R] [inst_2 : DecidableEq R] [inst_3 : Fintype H] [inst_4 : DecidableEq H] [Nonempty H]
+  (B : Finset (U × R)) (Δ : ℕ),
+  (∀ (u : U), {e ∈ B | e.1 = u}.card ≤ Δ) →
+    (∀ (r : R), {e ∈ B | e.2 = r}.card ≤ Δ) →
+      ∀ (L : U × R → Finset H),
+        (∀ e ∈ B, Δ ≤ (L e).card) → PaperV.nu (PaperV.Host.hostCSOn H PaperV.Host.bipEnds B) = B.card
+'PaperV.Host.galvin_host_completion_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.bkw_host_completion_exact : ∀ {U : Type u_1} {R : Type u_2} {H : Type u_3} [Fintype U]
+  [inst : DecidableEq U] [Fintype R] [inst_2 : DecidableEq R] [inst_3 : Fintype H] [inst_4 : DecidableEq H] [Nonempty H]
+  (B : Finset (U × R)) (L : U × R → Finset H),
+  (∀ e ∈ B, max (PaperV.Host.degB₁ B e.1) (PaperV.Host.degB₂ B e.2) ≤ (L e).card) →
+    PaperV.nu (PaperV.Host.hostCSOn H PaperV.Host.bipEnds B) = B.card
+'PaperV.Host.bkw_host_completion_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.nu_hostCS_eq_card_of_properOn_univ : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [inst : Fintype E]
+  [inst_1 : DecidableEq E] [Fintype V] [inst_3 : DecidableEq V] [inst_4 : Fintype H] [inst_5 : DecidableEq H]
+  {ends : E → Finset V} {L : E → Finset H} {c : E → H},
+  PaperV.Host.ProperOn ends L Finset.univ c → PaperV.nu (PaperV.Host.hostCS H ends) = Fintype.card E
+'PaperV.Host.nu_hostCS_eq_card_of_properOn_univ' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.ConflictSystem : Type (u_1 + 1)
+'PaperV.ConflictSystem' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.CSFeasible : (C : PaperV.ConflictSystem) → Finset C.O → Prop
+'PaperV.CSFeasible' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.nu : PaperV.ConflictSystem → ℕ
+'PaperV.nu' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.Copies : (C : PaperV.ConflictSystem) → (C.O → ℕ) → Type u_1
+'PaperV.Copies' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.Hgraph : (C : PaperV.ConflictSystem) → (X : C.O → ℕ) → SimpleGraph (PaperV.Copies C X)
+'PaperV.Hgraph' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.IsQMultiset : (C : PaperV.ConflictSystem) → (C.O → ℕ) → ℕ → Prop
+'PaperV.IsQMultiset' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Dq : {V : Type u_1} → SimpleGraph V → ℕ → ℕ
+'PaperV.Dq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.oct : {V : Type u_1} → SimpleGraph V → ℕ
+'PaperV.oct' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.wDq : (C : PaperV.ConflictSystem) → (C.O → ℕ) → (C.O → ℕ) → ℕ → ℕ
+'PaperV.wDq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.UnitBoundary.resCS : {α : Type u_1} →
+  {R : Type u_2} → [Fintype α] → [DecidableEq α] → [DecidableEq R] → (α → Finset R) → PaperV.ConflictSystem
+'PaperV.UnitBoundary.resCS' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.UnitBoundary.packOpt : {α : Type u_1} → {R : Type u_2} → (α → Finset R) → Finset α → ℕ
+'PaperV.UnitBoundary.packOpt' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.UnitBoundary.csFeasible_resCS_iff : ∀ {α : Type u_1} {R : Type u_2} [inst : Fintype α] [inst_1 : DecidableEq α]
+  [inst_2 : DecidableEq R] (res : α → Finset R) (S : Finset α),
+  PaperV.CSFeasible (PaperV.UnitBoundary.resCS res) S ↔ PaperV.UnitBoundary.ResFeasible res S
+'PaperV.UnitBoundary.csFeasible_resCS_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.ClassRealizer : (C : PaperV.ConflictSystem) →
+  (P : PaperV.ConflictSystem) → (C.O → ℕ) → (P.O → ℕ) → {X : C.O → ℕ} → Finset (PaperV.Copies C X) → Type u_2
+'PaperV.ClassRealizer' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.RealCert : (C : PaperV.ConflictSystem) →
+  (P : PaperV.ConflictSystem) → (C.O → ℕ) → (P.O → ℕ) → (C.O → ℕ) → ℕ → Type (max u_1 u_2)
+'PaperV.RealCert' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.wRDq : {C : PaperV.ConflictSystem} →
+  {P : PaperV.ConflictSystem} → {w : C.O → ℕ} → {wP : P.O → ℕ} → {X : C.O → ℕ} → PaperV.RealizerClass C P w wP X → ℕ → ℕ
+'PaperV.wRDq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.hostCS : {E : Type u_1} →
+  {V : Type u_2} →
+    (H : Type u_3) →
+      [Fintype E] →
+        [DecidableEq E] → [DecidableEq V] → [Fintype H] → [DecidableEq H] → (E → Finset V) → PaperV.ConflictSystem
+'PaperV.Host.hostCS' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.hostCSOn : {E : Type u_1} →
+  {V : Type u_2} →
+    (H : Type u_3) →
+      [DecidableEq E] →
+        [DecidableEq V] → [Fintype H] → [DecidableEq H] → (E → Finset V) → Finset E → PaperV.ConflictSystem
+'PaperV.Host.hostCSOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.mixedCS : {V : Type u_1} →
+  [Fintype V] → [DecidableEq V] → (G : SimpleGraph V) → [DecidableRel G.Adj] → PaperV.ConflictSystem
+'PaperV.mixedCS' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.nu_ge_ceil : ∀ (C : PaperV.ConflictSystem) (X : C.O → ℕ) (q : ℕ),
+  1 ≤ q → PaperV.IsQMultiset C X q → (PaperV.multSize C X - PaperV.Dq (PaperV.Hgraph C X) q + (q - 1)) / q ≤ PaperV.nu C
+'PaperV.nu_ge_ceil' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.transfer_q_weighted_one : ∀ (C : PaperV.ConflictSystem) (X : C.O → ℕ) (q : ℕ),
+  1 ≤ q → PaperV.multSize C X ≤ (q * PaperV.wNu C fun x => 1) + PaperV.Dq (PaperV.Hgraph C X) q
+'PaperV.transfer_q_weighted_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.wNu_one : ∀ (C : PaperV.ConflictSystem), (PaperV.wNu C fun x => 1) = PaperV.nu C
+'PaperV.wNu_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.wDq_one : ∀ (C : PaperV.ConflictSystem) (X : C.O → ℕ) (q : ℕ),
+  PaperV.wDq C (fun x => 1) X q = PaperV.Dq (PaperV.Hgraph C X) q
+'PaperV.wDq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.IsClassOne : {V : Type u_1} → [Fintype V] → (G : SimpleGraph V) → [DecidableRel G.Adj] → Prop
+'PaperV.IsClassOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.IsClassTwo : {V : Type u_1} → [Fintype V] → (G : SimpleGraph V) → [DecidableRel G.Adj] → Prop
+'PaperV.IsClassTwo' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.TerminalPair.p4_133_existence_coarse : ∀ {ι : Type u_1} {B : Type u_2} [Fintype ι] [DecidableEq ι]
+  [inst : Fintype B] [inst_1 : DecidableEq B] (emap : ι → Fin 2 → Sym2 B) (Pall : Finset ι),
+  Set.InjOn (fun p => emap p.1 p.2) {p | p.1 ∈ Pall} →
+    (∀ P ∈ Pall, ∀ (i : Fin 2), ¬(emap P i).IsDiag) →
+      ∀ (a m : ℕ),
+        1 ≤ a →
+          a ≤ m →
+            ∀ (X : Finset B),
+              (∀ P ∈ Pall, ∀ (i : Fin 2), ∃ w ∈ X, w ∈ emap P i) →
+                (PaperV.TerminalPair.termGraph emap Pall).maxDegree ≤ m →
+                  ∃ S' ⊆ Pall,
+                    (PaperV.TerminalPair.termGraph emap S').lineGraph.Colorable a ∧
+                      a * Pall.card ≤ m * S'.card + m * (4 + 17 * X.card)
+'PaperV.TerminalPair.p4_133_existence_coarse' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.copy_triple_bound_of : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (v u : V) (T₂ : (PaperV.triCS G).O → ℕ),
+  PaperV.multSize (PaperV.triCS G) T₂ = PaperV.nu3 (PaperV.copyGraph G v u) + PaperV.nu3 (PaperV.copyGraph G u v) →
+    PaperV.nu3 (PaperV.copyGraph G v u) + PaperV.nu3 (PaperV.copyGraph G u v) ≤
+        2 * PaperV.nu3 G + PaperV.oct (PaperV.Hgraph (PaperV.triCS G) T₂) →
+      (PaperV.Hgraph (PaperV.triCS G) T₂).maxDegree ≤ 3 →
+        (PaperV.Hgraph (PaperV.triCS G) T₂).CliqueFree 4 →
+          PaperV.nu3 (PaperV.copyGraph G v u) + PaperV.nu3 (PaperV.copyGraph G u v) ≤ 3 * PaperV.nu3 G
+'PaperV.copy_triple_bound_of' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.triCS_clique_card_le_four : ∀ {V : Type u_1} [inst : DecidableEq V] (G : SimpleGraph V)
+  [inst_1 : DecidableRel G.Adj] [inst_2 : Fintype V] (T : Finset (PaperV.triCS G).O),
+  (∀ t ∈ T, ∀ s ∈ T, t ≠ s → (PaperV.triCS G).K t s) →
+    (∀ t ∈ T, ∀ s ∈ T, ∀ u ∈ T, t ≠ s → t ≠ u → s ≠ u → (↑t ∩ ↑s ∩ ↑u).card < 2) → T.card ≤ 4
+'PaperV.triCS_clique_card_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Mixed.wNu_le_Wstar : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (gain : ℕ → ℕ),
+  ↑(PaperV.wNu (PaperV.mixedCS G) (PaperV.mixedWeight G gain)) ≤ PaperV.Mixed.Wstar G gain
+'PaperV.Mixed.wNu_le_Wstar' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Mixed.RoundingGap : {V : Type u_1} →
+  [Fintype V] → [DecidableEq V] → (G : SimpleGraph V) → [DecidableRel G.Adj] → (ℕ → ℕ) → ℝ → Prop
+'PaperV.Mixed.RoundingGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Mixed.mixed_copy_integral_of_roundingGap : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] (v u : V),
+  ¬G.Adj u v →
+    ∀ (gain : ℕ → ℕ) (B : ℝ),
+      PaperV.Mixed.RoundingGap G gain B →
+        ↑(PaperV.wNu (PaperV.mixedCS (PaperV.copyGraph G v u)) (PaperV.mixedWeight (PaperV.copyGraph G v u) gain)) +
+            ↑(PaperV.wNu (PaperV.mixedCS (PaperV.copyGraph G u v)) (PaperV.mixedWeight (PaperV.copyGraph G u v) gain)) ≤
+          2 * ↑(PaperV.wNu (PaperV.mixedCS G) (PaperV.mixedWeight G gain)) + 2 * B
+'PaperV.Mixed.mixed_copy_integral_of_roundingGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Mixed.mixed_copy_integral_of_integral_lp : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] (v u : V),
+  ¬G.Adj u v →
+    ∀ (gain : ℕ → ℕ),
+      PaperV.Mixed.RoundingGap G gain 0 →
+        ↑(PaperV.wNu (PaperV.mixedCS (PaperV.copyGraph G v u)) (PaperV.mixedWeight (PaperV.copyGraph G v u) gain)) +
+            ↑(PaperV.wNu (PaperV.mixedCS (PaperV.copyGraph G u v)) (PaperV.mixedWeight (PaperV.copyGraph G u v) gain)) ≤
+          2 * ↑(PaperV.wNu (PaperV.mixedCS G) (PaperV.mixedWeight G gain))
+'PaperV.Mixed.mixed_copy_integral_of_integral_lp' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.PureProfile.nu_le_muMatDeg : ∀ (m s : ℕ), ↑(PaperV.PureProfile.nu m s) ≤ PaperV.PureProfile.muMatDeg m s
+'PaperV.PureProfile.nu_le_muMatDeg' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.PureProfile.nu_eq_muMatDeg_of_even : ∀ (m s : ℕ),
+  Even s → ↑(PaperV.PureProfile.nu m s) = PaperV.PureProfile.muMatDeg m s
+'PaperV.PureProfile.nu_eq_muMatDeg_of_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.PureProfile.muMatDeg_eq_min : ∀ (m s : ℕ),
+  2 ≤ s → 1 ≤ m → PaperV.PureProfile.muMatDeg m s = min (↑m * ↑s / 2) ↑(s.choose 2)
+'PaperV.PureProfile.muMatDeg_eq_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperV.PureProfile.nu_eq_frac_muMatDeg_of_odd : ∀ (m s : ℕ),
+  Odd s → 3 ≤ s → 1 ≤ m → m ≤ s - 1 → ↑(PaperV.PureProfile.nu m s) = (↑s - 1) / ↑s * PaperV.PureProfile.muMatDeg m s
+'PaperV.PureProfile.nu_eq_frac_muMatDeg_of_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.triangleImageMultiset : {V : Type u_1} →
+  [inst : Fintype V] →
+    [inst_1 : DecidableEq V] →
+      (G : SimpleGraph V) →
+        [inst_2 : DecidableRel G.Adj] →
+          (v u : V) →
+            Finset (PaperV.triCS (PaperV.copyGraph G v u)).O →
+              Finset (PaperV.triCS (PaperV.copyGraph G u v)).O → (PaperV.triCS G).O → ℕ
+'PaperV.triangleImageMultiset' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.triangleImageMultiset_size : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (v u : V),
+  ¬G.Adj u v →
+    ∀ (P' : Finset (PaperV.triCS (PaperV.copyGraph G v u)).O) (P'' : Finset (PaperV.triCS (PaperV.copyGraph G u v)).O),
+      PaperV.multSize (PaperV.triCS G) (PaperV.triangleImageMultiset G v u P' P'') = P'.card + P''.card
+'PaperV.triangleImageMultiset_size' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.triangleImageMultiset_isQMultiset : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] (v u : V),
+  ¬G.Adj u v →
+    ∀ (P' : Finset (PaperV.triCS (PaperV.copyGraph G v u)).O) (P'' : Finset (PaperV.triCS (PaperV.copyGraph G u v)).O),
+      PaperV.CSFeasible (PaperV.triCS (PaperV.copyGraph G v u)) P' →
+        PaperV.CSFeasible (PaperV.triCS (PaperV.copyGraph G u v)) P'' →
+          PaperV.IsQMultiset (PaperV.triCS G) (PaperV.triangleImageMultiset G v u P' P'') 2
+'PaperV.triangleImageMultiset_isQMultiset' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.copy_integral_for_packings : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (v u : V),
+  ¬G.Adj u v →
+    ∀ (P' : Finset (PaperV.triCS (PaperV.copyGraph G v u)).O) (P'' : Finset (PaperV.triCS (PaperV.copyGraph G u v)).O),
+      PaperV.CSFeasible (PaperV.triCS (PaperV.copyGraph G v u)) P' →
+        PaperV.CSFeasible (PaperV.triCS (PaperV.copyGraph G u v)) P'' →
+          P'.card + P''.card ≤
+            2 * PaperV.nu3 G + PaperV.oct (PaperV.Hgraph (PaperV.triCS G) (PaperV.triangleImageMultiset G v u P' P''))
+'PaperV.copy_integral_for_packings' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.copy_integral_for_optimal_packings : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] (v u : V),
+  ¬G.Adj u v →
+    ∀ (P' : Finset (PaperV.triCS (PaperV.copyGraph G v u)).O) (P'' : Finset (PaperV.triCS (PaperV.copyGraph G u v)).O),
+      PaperV.CSFeasible (PaperV.triCS (PaperV.copyGraph G v u)) P' →
+        PaperV.CSFeasible (PaperV.triCS (PaperV.copyGraph G u v)) P'' →
+          P'.card = PaperV.nu3 (PaperV.copyGraph G v u) →
+            P''.card = PaperV.nu3 (PaperV.copyGraph G u v) →
+              PaperV.nu3 (PaperV.copyGraph G v u) + PaperV.nu3 (PaperV.copyGraph G u v) ≤
+                2 * PaperV.nu3 G +
+                  PaperV.oct (PaperV.Hgraph (PaperV.triCS G) (PaperV.triangleImageMultiset G v u P' P''))
+'PaperV.copy_integral_for_optimal_packings' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.mixed_copy_integral : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (v u : V) (huv : ¬G.Adj u v) (gainOf : ℕ → ℕ)
+  (P' : Finset (PaperV.mixedCS (PaperV.copyGraph G v u)).O) (P'' : Finset (PaperV.mixedCS (PaperV.copyGraph G u v)).O),
+  PaperV.packGain (PaperV.copyGraph G v u) gainOf P' + PaperV.packGain (PaperV.copyGraph G u v) gainOf P'' ≤
+    2 * PaperV.wNu (PaperV.mixedCS G) (PaperV.mixedWeight G gainOf) +
+      PaperV.wDq (PaperV.mixedCS G) (PaperV.mixedWeight G gainOf) (PaperV.imageMultiset G v u huv ⋯ P' P'') 2
+'PaperV.mixed_copy_integral' depends on axioms: [propext, Classical.choice, Quot.sound]

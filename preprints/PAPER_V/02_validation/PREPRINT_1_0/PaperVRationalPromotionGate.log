@@ -1,0 +1,18 @@
+@PaperV.MixedPromotion.promote_rational : ∀ {V : Type u_1} [Fintype V] [inst : DecidableEq V] {y : Finset V → ℝ},
+  PaperV.MixedPromotion.RationalMass y →
+    ∀ (Q : Finset V) {α : ℝ}, (∃ a, α = ↑a) → PaperV.MixedPromotion.RationalMass (PaperV.MixedPromotion.promote y Q α)
+'PaperV.MixedPromotion.promote_rational' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.MixedPromotion.exists_normalized_rational : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (G : SimpleGraph V) {y : Finset V → ℝ},
+  PaperV.MixedPromotion.Feasible G y →
+    PaperV.MixedPromotion.RationalMass y →
+      ∀ (π : V → V → ℝ),
+        ∃ k z,
+          k ≤ (PaperV.MixedPromotion.triangleSupport y).card ∧
+            PaperV.MixedPromotion.PromotionChain G k y z ∧
+              PaperV.MixedPromotion.Feasible G z ∧
+                PaperV.MixedPromotion.RationalMass z ∧
+                  (∀ (a b : V), a ≠ b → PaperV.MixedPromotion.load z a b = PaperV.MixedPromotion.load y a b) ∧
+                    PaperV.MixedPromotion.pricedValue π y ≤ PaperV.MixedPromotion.pricedValue π z ∧
+                      PaperV.MixedPromotion.Normalized G z
+'PaperV.MixedPromotion.exists_normalized_rational' depends on axioms: [propext, Classical.choice, Quot.sound]

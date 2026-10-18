@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "artifact": "AUDIT2_DISPOSITIONS.json",
+      "original_staging_sha256": "ef442e842240e30546c43c387de0b231ba8ed06ee47c63005d6f7cb94f5ad3d5",
+      "public_sha256": "ef442e842240e30546c43c387de0b231ba8ed06ee47c63005d6f7cb94f5ad3d5",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "AUDIT2_DISPOSITIONS.md",
+      "original_staging_sha256": "7a4071ca5f13b11b4d9f48163ea62ae3e9ff87d4811dcae23d26cad98f215d12",
+      "public_sha256": "7a4071ca5f13b11b4d9f48163ea62ae3e9ff87d4811dcae23d26cad98f215d12",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "BIBLIOGRAPHIC_COMPARISON.md",
+      "original_staging_sha256": "2a902f51c1549b0cf97b81a8633fefce654e058a87a08321e12cf63816d3d263",
+      "public_sha256": "2a902f51c1549b0cf97b81a8633fefce654e058a87a08321e12cf63816d3d263",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "IV_SCOPE_EVIDENCE.json",
+      "original_staging_sha256": "dc4817cf22ef99e1218c9b7ec93a011f1420961f11d346a0b43470aba42bea28",
+      "public_sha256": "dc4817cf22ef99e1218c9b7ec93a011f1420961f11d346a0b43470aba42bea28",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "DEPENDENCY_PROOF_EVIDENCE.json",
+      "original_staging_sha256": "46d9c4c8f724b81692297b097bdaf9853b718c303b8662df39d592047b2e66fa",
+      "public_sha256": "46d9c4c8f724b81692297b097bdaf9853b718c303b8662df39d592047b2e66fa",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "COMPLETE_THEOREM_MAP.json",
+      "original_staging_sha256": "43e9217219416db88189d1ece8a4aa2837c90ac838fb42b17d92a16f47a3ffa3",
+      "public_sha256": "43e9217219416db88189d1ece8a4aa2837c90ac838fb42b17d92a16f47a3ffa3",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "LICENSE_SOURCE_DIFF.json",
+      "original_staging_sha256": "e6ead0110a7823fa46ccae38502650d9166cb9890cc0dc0d423d6e709f2c9404",
+      "public_sha256": "e9f202caca781f32425bb53d25c3cf3f2dd4cc38dd58ff649fa7e991f7d5c841",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "MATHEMATICAL_SEMANTIC_DIFF.json",
+      "original_staging_sha256": "831ddaa23f67f24777f8b13afad98e88a8eeed2b3ebc341ec82df08467b98cd2",
+      "public_sha256": "831ddaa23f67f24777f8b13afad98e88a8eeed2b3ebc341ec82df08467b98cd2",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "EDITORIAL_OPERATIONS.json",
+      "original_staging_sha256": "ee29ee2a1d9796c145447645f7c92c27ebb01fb1d193a0ca14f1f5bc6fc8ab8b",
+      "public_sha256": "ee29ee2a1d9796c145447645f7c92c27ebb01fb1d193a0ca14f1f5bc6fc8ab8b",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "COMPILATION_PREPRINT_1_0.json",
+      "original_staging_sha256": "f66f2da40763775811e1608ff605e477d278b9b0e3df9764c2297ecc75b7bb3a",
+      "public_sha256": "6b12f56b31448dc89a2d3686fbeb9a21520f99630a58686cd1034ee42552f5c5",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "TYPESETTING_PROFILE_PREPRINT_1_0.json",
+      "original_staging_sha256": "cc0718bc8f92a383353807bb06eed1641c9dfd8cada7690b30a681e38197587c",
+      "public_sha256": "d723436823bd2ffa693833cc4bf79e1cea4c54d4d25b9669c87bfe5c7b0bacf9",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "BILINGUAL_PARITY.json",
+      "original_staging_sha256": "fafca7e8ac4ee9b02324b6b46b58fdb946e6f880a80b2f456ba3b663b3e1af38",
+      "public_sha256": "fafca7e8ac4ee9b02324b6b46b58fdb946e6f880a80b2f456ba3b663b3e1af38",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "INPUT_SNAPSHOT.json",
+      "original_staging_sha256": "26ec76709993be32397c8483b2f48446a816110358ac79a4efd478b08749914b",
+      "public_sha256": "26ec76709993be32397c8483b2f48446a816110358ac79a4efd478b08749914b",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "FINAL_VISUAL_QA.json",
+      "original_staging_sha256": "5b531ceb6179918bf3f3c97eacb3582541c8a4019148c05f05c0dd53a100f8ba",
+      "public_sha256": "5b531ceb6179918bf3f3c97eacb3582541c8a4019148c05f05c0dd53a100f8ba",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "RENDER_INDEX.json",
+      "original_staging_sha256": "60378e54e36179fa6eed678c48929ad11713187c91d4bfa1f96af293ca95eb16",
+      "public_sha256": "60378e54e36179fa6eed678c48929ad11713187c91d4bfa1f96af293ca95eb16",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    },
+    {
+      "artifact": "PDF_REPRODUCTION.md",
+      "original_staging_sha256": "f9b360f9971cb56fa1ca18ac76e0bccaa817500db33b38e8ea346827a90c13c4",
+      "public_sha256": "f9b360f9971cb56fa1ca18ac76e0bccaa817500db33b38e8ea346827a90c13c4",
+      "normalization": "Machine-specific paths replaced by source-root/baseline labels or command names; mathematical and result fields unchanged."
+    }
+  ]
+}

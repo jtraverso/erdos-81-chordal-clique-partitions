@@ -1,0 +1,103 @@
+@PaperV.ResourceCertificate.System.disjoint_of_cross_resources : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I]
+  [inst_1 : Fintype E] [DecidableEq I] [inst_3 : DecidableEq E] (R : PaperV.ResourceCertificate.System I E)
+  {P Q : Finset I}, (∀ a ∈ P, ∀ b ∈ Q, Disjoint (R.resources a) (R.resources b)) → Disjoint P Q
+'PaperV.ResourceCertificate.System.disjoint_of_cross_resources' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@PaperV.ResourceCertificate.System.packing_union : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I]
+  [inst_1 : Fintype E] [inst_2 : DecidableEq I] [inst_3 : DecidableEq E] (R : PaperV.ResourceCertificate.System I E)
+  {P Q : Finset I},
+  R.Packing P → R.Packing Q → (∀ a ∈ P, ∀ b ∈ Q, Disjoint (R.resources a) (R.resources b)) → R.Packing (P ∪ Q)
+'PaperV.ResourceCertificate.System.packing_union' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.ResourceCertificate.System.packing_biUnion : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I]
+  [inst_1 : Fintype E] [inst_2 : DecidableEq I] [inst_3 : DecidableEq E] (R : PaperV.ResourceCertificate.System I E)
+  {J : Type u_3} [DecidableEq J] (js : Finset J) (out : J → Finset I),
+  (∀ j ∈ js, R.Packing (out j)) →
+    (∀ i ∈ js, ∀ j ∈ js, i ≠ j → ∀ a ∈ out i, ∀ b ∈ out j, Disjoint (R.resources a) (R.resources b)) →
+      R.Packing (js.biUnion out)
+'PaperV.ResourceCertificate.System.packing_biUnion' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.ResourceCertificate.System.compatible_realization_union : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I]
+  [inst_1 : Fintype E] [inst_2 : DecidableEq I] [inst_3 : DecidableEq E] (R : PaperV.ResourceCertificate.System I E)
+  {J : Type u_3} [DecidableEq J] (js : Finset J) (out : J → Finset I) (w : I → ℚ) (mass loss : J → ℚ),
+  (∀ j ∈ js, R.Packing (out j)) →
+    (∀ i ∈ js, ∀ j ∈ js, i ≠ j → ∀ a ∈ out i, ∀ b ∈ out j, Disjoint (R.resources a) (R.resources b)) →
+      (∀ j ∈ js, mass j ≤ R.gain w (out j) + loss j) →
+        R.Packing (js.biUnion out) ∧ ∑ j ∈ js, mass j ≤ R.gain w (js.biUnion out) + ∑ j ∈ js, loss j
+'PaperV.ResourceCertificate.System.compatible_realization_union' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@PaperV.ResourceCertificate.portfolio_selection : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I]
+  [inst_1 : Fintype E] [DecidableEq I] [inst_3 : DecidableEq E] {R : PaperV.ResourceCertificate.System I E}
+  {J : Type u_3} [Fintype J] [Nonempty J] {w : I → ℚ} {X : I → ℕ} {q : ℕ},
+  0 < q →
+    ∀ (cert : J → PaperV.ResourceCertificate.Realization R w X q),
+      ∃ j,
+        (∀ (k : J), (cert j).cost ≤ (cert k).cost) ∧
+          ∃ i, R.Packing ((cert j).out i) ∧ R.mass w X / ↑q - (cert j).cost / ↑q ≤ R.gain w ((cert j).out i)
+'PaperV.ResourceCertificate.portfolio_selection' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.greedy_host_assignment : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [inst : Fintype E] [DecidableEq E]
+  [Fintype V] [inst_3 : DecidableEq V] [Fintype H] [DecidableEq H] (ends : E → Finset V) (L : E → Finset H),
+  (∀ (e : E), ∃ u v, u ≠ v ∧ ends e = {u, v}) →
+    (∀ (e : E) (u v : V),
+        ends e = {u, v} → PaperV.GreedyLists.degree ends u + PaperV.GreedyLists.degree ends v - 1 ≤ (L e).card) →
+      ∃ c, PaperV.Host.ProperOn ends L Finset.univ c
+'PaperV.Host.greedy_host_assignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.assigned_weight : ∀ {E : Type u_1} {H : Type u_2} [Fintype E] [inst : DecidableEq E] [Fintype H]
+  [inst_2 : DecidableEq H] (T : Finset E) (c : E → H) (β : E → ℚ),
+  ∑ t ∈ Finset.image (fun e => (e, c e)) T, β t.1 = ∑ e ∈ T, β e
+'PaperV.Host.assigned_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.compatible_background_union : ∀ {E : Type u_1} {H : Type u_2} [Fintype E] [inst : DecidableEq E]
+  [Fintype H] [inst_2 : DecidableEq H] {A : Type u_3} {R : Type u_4} [inst_3 : DecidableEq A] [DecidableEq R]
+  (resA : A → Finset R) (resB : E × H → Finset R) (P₀ : Finset A) (P₁ : Finset (E × H)),
+  PaperV.UnitBoundary.ResFeasible resA P₀ →
+    PaperV.UnitBoundary.ResFeasible resB P₁ →
+      (∀ a ∈ P₀, ∀ b ∈ P₁, Disjoint (resA a) (resB b)) →
+        PaperV.UnitBoundary.ResFeasible (Sum.elim resA resB) (Finset.image Sum.inl P₀ ∪ Finset.image Sum.inr P₁)
+'PaperV.Host.compatible_background_union' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.proper_assignment_avoids_background : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [Fintype E]
+  [inst : DecidableEq E] [Fintype V] [inst_2 : DecidableEq V] [Fintype H] [inst_4 : DecidableEq H] {A : Type u_4}
+  [inst_5 : DecidableEq A] (ends : E → Finset V) (L : E → Finset H) (T : Finset E) (c : E → H),
+  PaperV.Host.ProperOn ends L T c →
+    ∀ (res₀ : A → Finset (E ⊕ H × V)) (P₀ : Finset A),
+      PaperV.UnitBoundary.ResFeasible res₀ P₀ →
+        (∀ a ∈ P₀, ∀ e ∈ T, ∀ h ∈ L e, Disjoint (res₀ a) (PaperV.Host.triRes ends (e, h))) →
+          PaperV.UnitBoundary.ResFeasible (Sum.elim res₀ (PaperV.Host.triRes ends))
+            (Finset.image Sum.inl P₀ ∪ Finset.image Sum.inr (Finset.image (fun e => (e, c e)) T))
+'PaperV.Host.proper_assignment_avoids_background' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.paired_factor_assignment : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [inst : Fintype E]
+  [DecidableEq E] [Fintype V] [DecidableEq V] [Fintype H] [inst_5 : DecidableEq H] {k : ℕ} (ends : E → Finset V)
+  (factor : E → Fin k) (L : E → Finset H),
+  (∀ (e f : E), e ≠ f → factor e = factor f → Disjoint (ends e) (ends f)) →
+    ∀ (S : Finset (Fin k)) (ι ι' : Fin k → H),
+      Function.Injective ι →
+        Set.InjOn ι' ↑Sᶜ →
+          (∀ f ∉ S, ∀ (g : Fin k), ι' f ≠ ι g) →
+            ∃ c, PaperV.Host.ProperOn ends L {e | ¬PaperV.PairedFactors.Uncovered factor L S ι ι' e} c
+'PaperV.Host.paired_factor_assignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.exists_paired_host_completion : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [inst : Fintype E]
+  [DecidableEq E] [Fintype V] [DecidableEq V] [inst_4 : Fintype H] [inst_5 : DecidableEq H] (k q s : ℕ),
+  1 ≤ k →
+    2 ≤ q →
+      s ≤ k →
+        2 * k - s ≤ q →
+          Fintype.card H = q →
+            ∀ (ends : E → Finset V) (factor : E → Fin k) (L : E → Finset H) (β : E → ℚ),
+              (∀ (e : E), 0 ≤ β e) →
+                (∀ (e f : E), e ≠ f → factor e = factor f → Disjoint (ends e) (ends f)) →
+                  ∃ S ι ι' c,
+                    S.card = s ∧
+                      Function.Injective ι ∧
+                        Set.InjOn ι' ↑Sᶜ ∧
+                          (∀ f ∉ S, ∀ (g : Fin k), ι' f ≠ ι g) ∧
+                            PaperV.Host.ProperOn ends L {e | ¬PaperV.PairedFactors.Uncovered factor L S ι ι' e} c ∧
+                              ∑ e with (PaperV.PairedFactors.Uncovered factor L S ι ι') e, β e ≤
+                                ↑s / (↑k * ↑q) * ∑ e, β e * ↑(PaperV.PairedFactors.bad q L e) +
+                                  (↑k - ↑s) / (↑k * ↑q * (↑q - 1)) *
+                                    ∑ e,
+                                      β e * ↑(PaperV.PairedFactors.bad q L e) * (↑(PaperV.PairedFactors.bad q L e) - 1)
+'PaperV.Host.exists_paired_host_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperV.Host.empty_factor_completion : ∀ {E : Type u_1} {V : Type u_2} {H : Type u_3} [inst : Fintype E]
+  [inst_1 : DecidableEq E] [Fintype V] [DecidableEq V] [Fintype H] [inst_5 : DecidableEq H] (ends : E → Finset V)
+  (L : E → Finset H) (factor : E → Fin 0),
+  ∃ c, PaperV.Host.ProperOn ends L Finset.univ c ∧ Finset.image (fun e => (e, c e)) Finset.univ = ∅
+'PaperV.Host.empty_factor_completion' depends on axioms: [propext, Classical.choice, Quot.sound]

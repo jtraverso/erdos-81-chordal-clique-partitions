@@ -1,0 +1,37 @@
+{
+  "p": 63,
+  "q": 125,
+  "h": 1,
+  "changed_liftings": 1,
+  "protected_lifting": [
+    3,
+    4,
+    5,
+    65,
+    66
+  ],
+  "safe_terminal_triangles_retained": 1938,
+  "old_lost": 24,
+  "symmetric_difference": 48,
+  "terminal_difference": 6,
+  "path_steps": 2,
+  "path_bound": 1949,
+  "step_bound": 884,
+  "scope": "A physical three-state example in the bounded-load all-K5 class, not a universal path algorithm.",
+  "status": "PASS",
+  "certificate_sha256": "8e9f8e81708d15c8d82f9c4935a97b9217efce9dc65ce04c928f8edc0ce4ce93",
+  "negative_controls": [
+    {
+      "name": "understated_symmetric_difference",
+      "actual": 48,
+      "invalid_bound": 47,
+      "rejected": true
+    },
+    {
+      "name": "understated_lifting_load",
+      "actual": 1,
+      "invalid_bound": 0,
+      "rejected": true
+    }
+  ]
+}

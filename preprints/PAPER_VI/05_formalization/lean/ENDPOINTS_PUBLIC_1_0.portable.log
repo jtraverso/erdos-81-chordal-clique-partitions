@@ -1,0 +1,378 @@
+@PaperVI.Research.ExSetup.theoremE1 : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] {G : SimpleGraph V}
+  [inst_2 : DecidableRel G.Adj] {P R A B : Finset V} {z : V},
+  PaperVI.Research.ExSetup G P R A B z →
+    P.card + 2 ≤ R.card →
+      ↑(PaperVI.cp G) =
+          ↑(PaperVI.sCount G P) - ↑(PaperVI.uCount G P) - 2 * ↑(PaperVI.mCount G P) +
+            PaperVI.Research.Dval A.card B.card ∧
+        PaperVI.cp G = PaperVI.cpLe 4 G ∧
+          ∃ T,
+            (∀ x ∈ B, T x ⊆ A ∧ (T x).card ≤ 2) ∧
+              (∀ x ∈ B, ∀ y ∈ B, x ≠ y → Disjoint (T x) (T y)) ∧
+                ∃ Bs,
+                  PaperVI.IsCliquePartition G Bs ∧
+                    Bs.card = PaperVI.cp G ∧
+                      (∀ Q ∈ Bs, Q.card ≤ 4) ∧
+                        (∀ x ∈ B, insert z (insert x (T x)) ∈ Bs) ∧
+                          ∀ Q ∈ Bs,
+                            (∃ x ∈ B, Q = insert z (insert x (T x))) ∨
+                              PaperVI.extSize P Q = 1 ∧ (PaperVI.coreSize P Q = 1 ∨ PaperVI.coreSize P Q = 2)
+'PaperVI.Research.ExSetup.theoremE1' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.ExSetup.theoremE1_frac : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  {G : SimpleGraph V} [DecidableRel G.Adj] {P R A B : Finset V} {z : V},
+  PaperVI.Research.ExSetup G P R A B z →
+    P.card + 2 ≤ R.card →
+      (∀ (x : Finset V → ℝ), PaperVI.IsFracPartition G x → ↑(PaperVI.cp G) ≤ PaperVI.fracValue x) ∧
+        ∃ x, PaperVI.IsFracPartition G x ∧ PaperVI.fracValue x = ↑(PaperVI.cp G)
+'PaperVI.Research.ExSetup.theoremE1_frac' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.ExSetup.theoremE2 : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] {G : SimpleGraph V}
+  [inst_2 : DecidableRel G.Adj] {P R A B : Finset V} {z : V},
+  PaperVI.Research.ExSetup G P R A B z →
+    P.card + 2 ≤ R.card →
+      IsGreatest {k | ∃ Ts, PaperVI.IsTrianglePacking G Ts ∧ Ts.card = k} (PaperVI.uCount G P + min A.card B.card) ∧
+        IsGreatest {v | ∃ w, PaperVI.IsFracTrianglePacking G w ∧ PaperVI.fracValue w = v}
+          (↑(PaperVI.uCount G P) + min ↑A.card ↑B.card)
+'PaperVI.Research.ExSetup.theoremE2' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.ExSetup.theoremE3 : ∀ {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [DecidableRel G.Adj] {P R A B : Finset V} {z : V},
+  PaperVI.Research.ExSetup G P R A B z →
+    P.card + 2 ≤ R.card → ↑(PaperVI.cpLe 3 G) - ↑(PaperVI.cp G) = min (↑B.card) (max 0 (↑A.card - ↑B.card))
+'PaperVI.Research.ExSetup.theoremE3' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.ExSetup.partial_star_obstruction : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  {G : SimpleGraph V} [inst_2 : DecidableRel G.Adj] {P R A B : Finset V} {z : V},
+  PaperVI.Research.ExSetup G P R A B z →
+    1 ≤ P.card →
+      P.card + 2 ≤ R.card →
+        A = P →
+          B.card = P.card / 2 + 1 →
+            PaperVI.IsChordal G ∧
+              PaperVI.editDegree G P = B.card ∧
+                ↑(PaperVI.cp G) =
+                    ↑(PaperVI.sCount G P) - ↑(PaperVI.uCount G P) - 2 * ↑(PaperVI.mCount G P) +
+                      (2 * ↑B.card - ↑P.card) ∧
+                  ↑(PaperVI.sCount G P) - ↑(PaperVI.uCount G P) - 2 * ↑(PaperVI.mCount G P) < ↑(PaperVI.cp G)
+'PaperVI.Research.ExSetup.partial_star_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.ExSetup.theoremE4 : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] {G : SimpleGraph V}
+  [inst_2 : DecidableRel G.Adj] {P R A B : Finset V} {z : V},
+  PaperVI.Research.ExSetup G P R A B z →
+    19 ≤ P.card →
+      R.card = 2 * P.card - 1 →
+        IsGreatest (Set.range (PaperVI.Research.PhiQ G)) (PaperVI.Research.PhiQ G P + max 0 (3 * ↑B.card - 2 * ↑A.card))
+'PaperVI.Research.ExSetup.theoremE4' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.ExSetup.cleanup_counterexample : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  {G : SimpleGraph V} [inst_2 : DecidableRel G.Adj] {P R A B : Finset V} {z : V},
+  PaperVI.Research.ExSetup G P R A B z →
+    19 ≤ P.card →
+      R.card = 2 * P.card - 1 →
+        A = P →
+          3 * B.card = 2 * P.card →
+            PaperVI.IsChordal G ∧
+              (∀ (v w : V), v ≠ z → (PaperVI.editGraph G P).Adj v w → w = z) ∧
+                PaperVI.editDegree G P = B.card ∧
+                  IsGreatest (Set.range (PaperVI.Research.PhiQ G)) (PaperVI.Research.PhiQ G P) ∧
+                    3 * (↑(PaperVI.cp G) - PaperVI.Research.PhiQ G P) = ↑P.card
+'PaperVI.Research.ExSetup.cleanup_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.exModel_linear_gap : ∀ {t : ℕ},
+  7 ≤ t →
+    PaperVI.IsChordal (PaperVI.Research.exModel (3 * t) (6 * t - 1) (3 * t) (2 * t)) ∧
+      IsGreatest (Set.range (PaperVI.Research.PhiQ (PaperVI.Research.exModel (3 * t) (6 * t - 1) (3 * t) (2 * t))))
+          (PaperVI.Research.PhiQ (PaperVI.Research.exModel (3 * t) (6 * t - 1) (3 * t) (2 * t))
+            (PaperVI.Research.exP (3 * t) (6 * t - 1))) ∧
+        ↑(PaperVI.cp (PaperVI.Research.exModel (3 * t) (6 * t - 1) (3 * t) (2 * t))) -
+            PaperVI.Research.PhiQ (PaperVI.Research.exModel (3 * t) (6 * t - 1) (3 * t) (2 * t))
+              (PaperVI.Research.exP (3 * t) (6 * t - 1)) =
+          ↑t
+'PaperVI.Research.exModel_linear_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.PhiQ_le_cp : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (Q : Finset V), PaperVI.Research.PhiQ G Q ≤ ↑(PaperVI.cp G)
+'PaperVI.Research.PhiQ_le_cp' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.cp_eq_max_PhiQ : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  2 ≤ Fintype.card V →
+    P.card = (Fintype.card V + 1) / 3 →
+      18 * PaperVI.editDegree G P + 1 ≤ P.card →
+        IsGreatest (Set.range (PaperVI.Research.PhiQ G)) ↑(PaperVI.cp G) ∧ ↑(PaperVI.cp G) = PaperVI.Research.PhiQ G P
+'PaperVI.Research.cp_eq_max_PhiQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.core_eq_highDegree : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  3 ≤ Fintype.card V →
+    P.card = (Fintype.card V + 1) / 3 →
+      18 * PaperVI.editDegree G P + 1 ≤ P.card → P = {v | Fintype.card V < 2 * G.degree v}
+'PaperVI.Research.core_eq_highDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.cp_eq_PhiQ_highDegree : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  3 ≤ Fintype.card V →
+    P.card = (Fintype.card V + 1) / 3 →
+      18 * PaperVI.editDegree G P + 1 ≤ P.card →
+        ↑(PaperVI.cp G) = PaperVI.Research.PhiQ G {v | Fintype.card V < 2 * G.degree v}
+'PaperVI.Research.cp_eq_PhiQ_highDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.extend_lift : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V) {σ : Sym2 V → ℕ} {c r need : ℕ},
+  (∀ e ∈ PaperVI.extEdges G P, σ e ≤ c) →
+    (∀ e ∈ PaperVI.extEdges G P,
+        σ e * (PaperVI.editDegree G P + (c - 1) * r + 1) ≤ need + (PaperVI.editDegree G P + (c - 1) * r)) →
+      (∀ (k bx by_ dx dy sat nD : ℕ),
+          P.card ≤ k + bx + by_ + c * dx + c * dy + sat →
+            bx + dx + 1 ≤ PaperVI.editDegree G P →
+              by_ + dy + 1 ≤ PaperVI.editDegree G P →
+                r * sat ≤ c * nD →
+                  nD + 1 ≤ PaperVI.mCount G P → 2 * PaperVI.mCount G P ≤ Pᶜ.card * PaperVI.editDegree G P → need ≤ k) →
+        ∀ {D₀ : Finset (Sym2 V)} {T₀ : Sym2 V → Finset V},
+          PaperVI.LiftInv G P σ r D₀ T₀ →
+            D₀ ⊆ PaperVI.extEdges G P → ∃ T, PaperVI.LiftInv G P σ r (PaperVI.extEdges G P) T ∧ ∀ e ∈ D₀, T e = T₀ e
+'PaperVI.Research.extend_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.theoremB_extending : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  P.card = (Fintype.card V + 1) / 3 →
+    63 * PaperVI.editDegree G P ≤ P.card →
+      ∀ (σ : Sym2 V → ℕ),
+        (∀ e ∈ PaperVI.extEdges G P, σ e = 4 ∨ σ e = 5) →
+          ∀ {D₀ : Finset (Sym2 V)} {T₀ : Sym2 V → Finset V},
+            PaperVI.LiftInv G P (fun e => σ e - 2) (7 * PaperVI.editDegree G P) D₀ T₀ →
+              D₀ ⊆ PaperVI.extEdges G P →
+                ∃ Bs,
+                  PaperVI.IsCliquePartition G Bs ∧
+                    Bs.card = PaperVI.cp G ∧
+                      ↑(PaperVI.cp G) = ↑(PaperVI.sCount G P) - ↑(PaperVI.uCount G P) - 2 * ↑(PaperVI.mCount G P) ∧
+                        (∀ e ∈ D₀, T₀ e ∪ e.toFinset ∈ Bs) ∧
+                          ∀ e ∈ PaperVI.extEdges G P,
+                            ∃ B ∈ Bs, (∀ v ∈ e, v ∈ B) ∧ B.card = σ e ∧ PaperVI.extSize P B = 2
+'PaperVI.Research.theoremB_extending' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.theoremB_recourse : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  P.card = (Fintype.card V + 1) / 3 →
+    63 * PaperVI.editDegree G P ≤ P.card →
+      ∀ (σ : Sym2 V → ℕ),
+        (∀ e ∈ PaperVI.extEdges G P, σ e = 4 ∨ σ e = 5) →
+          ∀ {T : Sym2 V → Finset V},
+            PaperVI.LiftInv G P (fun e => σ e - 2) (7 * PaperVI.editDegree G P) (PaperVI.extEdges G P) T →
+              ∀ {e₀ : Sym2 V},
+                e₀ ∈ PaperVI.extEdges G P →
+                  ∀ {N : Finset V},
+                    PaperVI.Research.LegalNewBlock G P e₀ N →
+                      N.card = 2 ∨ N.card = 3 →
+                        ∃ T',
+                          PaperVI.LiftInv G P (Function.update (fun e => σ e - 2) e₀ N.card)
+                              (7 * PaperVI.editDegree G P) (PaperVI.extEdges G P) T' ∧
+                            T' e₀ = N ∧ {e ∈ PaperVI.extEdges G P | T' e ≠ T e}.card ≤ 13
+'PaperVI.Research.theoremB_recourse' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.prescribed_count : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  P.card = (Fintype.card V + 1) / 3 →
+    63 * PaperVI.editDegree G P ≤ P.card →
+      16 ≤ P.card →
+        ∀ (σ : Sym2 V → ℕ),
+          (∀ e ∈ PaperVI.extEdges G P, σ e = 4 ∨ σ e = 5) →
+            P.card ^ (P.card * P.card / 64) ≤ Nat.card { Bs // PaperVI.Research.RealizesPrescription G P σ Bs }
+'PaperVI.Research.prescribed_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.total_count : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  P.card = (Fintype.card V + 1) / 3 →
+    63 * PaperVI.editDegree G P ≤ P.card →
+      16 ≤ P.card →
+        2 ^ PaperVI.mCount G P * P.card ^ (P.card * P.card / 64) ≤
+          Nat.card { Bs // PaperVI.IsCliquePartition G Bs ∧ Bs.card = PaperVI.cp G }
+'PaperVI.Research.total_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.theoremN : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  P.card = (Fintype.card V + 1) / 3 →
+    63 * PaperVI.editDegree G P ≤ P.card →
+      16 ≤ P.card →
+        2 ^ PaperVI.mCount G P * P.card ^ (P.card * P.card / 64) ≤
+            Nat.card { Bs // PaperVI.IsCliquePartition G Bs ∧ Bs.card = PaperVI.cp G } ∧
+          Nat.card { Bs // PaperVI.IsCliquePartition G Bs ∧ Bs.card = PaperVI.cp G } ≤
+            (Fintype.card V + 1) ^ (5 * G.edgeFinset.card)
+'PaperVI.Research.theoremN' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.frac_dual_bound : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] {x : Finset V → ℝ},
+  PaperVI.IsFracPartition G x →
+    ∀ (w : Sym2 V → ℤ),
+      (∀ (Q : Finset V), x Q ≠ 0 → PaperVI.Research.setWeight G w Q ≤ 1) →
+        ↑(∑ e ∈ G.edgeFinset, w e) ≤ PaperVI.fracValue x
+'PaperVI.Research.frac_dual_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Vizing.lineGraph_colorable : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj], G.lineGraph.Colorable (G.maxDegree + 1)
+'Vizing.lineGraph_colorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+PaperVI.Research.second_split_baseline : ∀ (k : ℕ),
+  ↑(k + 1) * (2 * ↑k) - ↑((k + 1).choose 2) = ↑(PaperVI.Mval (3 * k + 1))
+'PaperVI.Research.second_split_baseline' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVI.Research.second_core_formula : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V) (k : ℕ),
+  Fintype.card V = 3 * k + 1 →
+    P.card = k + 1 →
+      18 * PaperVI.editDegree G P + 2 ≤ P.card →
+        ↑(PaperVI.cp G) =
+          ↑(PaperVI.Mval (Fintype.card V)) + PaperVI.Cdef G P - PaperVI.Adef G P - 2 * ↑(PaperVI.mCount G P)
+'PaperVI.Research.second_core_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVIRecourse.exists_greedy_coloring_extending : ∀ {V : Type u_1} [inst : DecidableEq V] (P R : Finset V)
+  (J : V → V → Prop) [inst_1 : DecidableRel J],
+  (∀ (a b : V), J a b → J b a) →
+    ∀ (U : V → V → Prop) [inst_2 : DecidableRel U] (c : ℕ),
+      (∀ a ∈ P, (Finset.filter (U a) R).card + (Finset.filter (J a) P).card ≤ c) →
+        2 * c ≤ R.card + 1 →
+          ∀ {D₀ : Finset (Sym2 V)} {g₀ : Sym2 V → V},
+            D₀ ⊆ PaperVIRecourse.requestEdges P J →
+              PaperVIRecourse.PartialColoring P R J U D₀ g₀ →
+                ∃ g, PaperVIRecourse.PartialColoring P R J U (PaperVIRecourse.requestEdges P J) g ∧ ∀ e ∈ D₀, g e = g₀ e
+'PaperVIRecourse.exists_greedy_coloring_extending' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVIRecourse.used_add_resid_eq : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  (∀ a ∈ P, ∀ (v : V), a ≠ v → G.Adj a v) →
+    ∀ {T : Sym2 V → Finset V} {r : ℕ},
+      PaperVI.LiftInv G P (fun x => 3) r (PaperVI.extEdges G P) T →
+        ∀ {a : V},
+          a ∈ P →
+            (Finset.filter (PaperVI.usedPair G P T a) Pᶜ).card + (Finset.filter (PaperVI.residPair G P T a) P).card =
+              P.card - 1
+'PaperVIRecourse.used_add_resid_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVIRecourse.exists_optimal_partition_extending_prefix : ∀ {V : Type u_1} [inst : Fintype V]
+  [inst_1 : DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  (∀ a ∈ P, ∀ (v : V), a ≠ v → G.Adj a v) →
+    2 * P.card ≤ Pᶜ.card + 1 →
+      ∀ {r : ℕ} {T : Sym2 V → Finset V},
+        PaperVI.LiftInv G P (fun x => 3) r (PaperVI.extEdges G P) T →
+          ∀ {D₀ : Finset (Sym2 V)} {g₀ : Sym2 V → V},
+            D₀ ⊆ PaperVIRecourse.requestEdges P (PaperVI.residPair G P T) →
+              PaperVIRecourse.PartialColoring P Pᶜ (PaperVI.residPair G P T) (PaperVI.usedPair G P T) D₀ g₀ →
+                ∃ g Bs,
+                  PaperVI.IsCliquePartition G Bs ∧
+                    Bs.card = PaperVI.cp G ∧
+                      (Bs = PaperVI.allBlocks G P T fun a b => g s(a, b)) ∧
+                        (∀ e ∈ D₀, g e = g₀ e) ∧
+                          (∀ e ∈ PaperVI.extEdges G P, T e ∪ e.toFinset ∈ Bs) ∧
+                            (∀ a ∈ P,
+                                ∀ b ∈ P, a ≠ b → PaperVI.residPair G P T a b → s(a, b) ∈ D₀ → {a, b, g₀ s(a, b)} ∈ Bs) ∧
+                              PaperVIRecourse.PartialColoring P Pᶜ (PaperVI.residPair G P T) (PaperVI.usedPair G P T)
+                                  (PaperVIRecourse.requestEdges P (PaperVI.residPair G P T)) g ∧
+                                ↑(PaperVI.cp G) =
+                                  ↑(PaperVI.sCount G P) - ↑(PaperVI.uCount G P) - 2 * ↑(PaperVI.mCount G P)
+'PaperVIRecourse.exists_optimal_partition_extending_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVIRecourse.exists_optimal_partition_retaining_physical_triangles : ∀ {V : Type u_1} [inst : Fintype V]
+  [inst_1 : DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  (∀ a ∈ P, ∀ (v : V), a ≠ v → G.Adj a v) →
+    2 * P.card ≤ Pᶜ.card + 1 →
+      ∀ {r : ℕ} {T : Sym2 V → Finset V},
+        PaperVI.LiftInv G P (fun x => 3) r (PaperVI.extEdges G P) T →
+          ∀ {Bs₀ A : Finset (Finset V)},
+            PaperVI.IsCliquePartition G Bs₀ →
+              A ⊆ Bs₀ →
+                (∀ B ∈ A, PaperVI.coreSize P B = 2 ∧ PaperVI.extSize P B = 1) →
+                  (∀ B ∈ A,
+                      ∀ e ∈ PaperVI.extEdges G P,
+                        Disjoint (PaperVI.innerEdges G B) (PaperVI.innerEdges G (T e ∪ e.toFinset))) →
+                    ∃ Bs,
+                      PaperVI.IsCliquePartition G Bs ∧
+                        Bs.card = PaperVI.cp G ∧ A ⊆ Bs ∧ ∀ e ∈ PaperVI.extEdges G P, T e ∪ e.toFinset ∈ Bs
+'PaperVIRecourse.exists_optimal_partition_retaining_physical_triangles' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@PaperVIRecourse.exists_full_allK5_recourse : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  (∀ a ∈ P, ∀ (v : V), a ≠ v → G.Adj a v) →
+    2 * P.card ≤ Pᶜ.card + 1 →
+      ∀ {r₀ r₁ : ℕ} {T₀ T₁ : Sym2 V → Finset V},
+        PaperVI.LiftInv G P (fun x => 3) r₀ (PaperVI.extEdges G P) T₀ →
+          PaperVI.LiftInv G P (fun x => 3) r₁ (PaperVI.extEdges G P) T₁ →
+            ∀ {Bs₀ : Finset (Finset V)},
+              PaperVI.IsCliquePartition G Bs₀ →
+                Bs₀.card = PaperVI.cp G →
+                  (∀ e ∈ PaperVI.extEdges G P, T₀ e ∪ e.toFinset ∈ Bs₀) →
+                    ∃ Bs₁,
+                      PaperVI.IsCliquePartition G Bs₁ ∧
+                        Bs₁.card = PaperVI.cp G ∧
+                          (∀ e ∈ PaperVI.extEdges G P, T₁ e ∪ e.toFinset ∈ Bs₁) ∧
+                            (Bs₀ \ Bs₁).card ≤ 34 * (PaperVIRecourse.changedAssignments G P T₀ T₁).card ∧
+                              (symmDiff Bs₀ Bs₁).card ≤ 68 * (PaperVIRecourse.changedAssignments G P T₀ T₁).card ∧
+                                PaperVIRecourse.retainedTriangles G P T₀ T₁ Bs₀ ⊆ Bs₁
+'PaperVIRecourse.exists_full_allK5_recourse' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVIRecourse.protected_allK5_step : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  Pᶜ.card ≤ 2 * P.card + 1 →
+    63 * PaperVI.editDegree G P ≤ P.card →
+      ∀ {T Tstar : Sym2 V → Finset V},
+        PaperVI.LiftInv G P (fun x => 3) (7 * PaperVI.editDegree G P) (PaperVI.extEdges G P) T →
+          PaperVI.LiftInv G P (fun x => 3) (7 * PaperVI.editDegree G P) (PaperVI.extEdges G P) Tstar →
+            ∀ {Q : Finset (Sym2 V)},
+              Q ⊆ PaperVI.extEdges G P →
+                (∀ e ∈ Q, T e = Tstar e) →
+                  ∀ {e0 : Sym2 V},
+                    e0 ∈ PaperVI.extEdges G P →
+                      e0 ∉ Q →
+                        ∃ T',
+                          PaperVI.LiftInv G P (fun x => 3) (7 * PaperVI.editDegree G P) (PaperVI.extEdges G P) T' ∧
+                            T' e0 = Tstar e0 ∧
+                              (∀ e ∈ Q, T' e = Tstar e) ∧ (PaperVIRecourse.changedAssignments G P T T').card ≤ 13
+'PaperVIRecourse.protected_allK5_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVIRecourse.lift_alignment : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  (∀ a ∈ P, ∀ (v : V), a ≠ v → G.Adj a v) →
+    2 * P.card ≤ Pᶜ.card + 1 →
+      Pᶜ.card ≤ 2 * P.card + 1 →
+        63 * PaperVI.editDegree G P ≤ P.card →
+          ∀ {Tstar : Sym2 V → Finset V},
+            PaperVI.LiftInv G P (fun x => 3) (7 * PaperVI.editDegree G P) (PaperVI.extEdges G P) Tstar →
+              ∀ {T : Sym2 V → Finset V},
+                PaperVI.LiftInv G P (fun x => 3) (7 * PaperVI.editDegree G P) (PaperVI.extEdges G P) T →
+                  ∀ {Bs₀ : Finset (Finset V)},
+                    PaperVI.IsCliquePartition G Bs₀ →
+                      Bs₀.card = PaperVI.cp G →
+                        (∀ e ∈ PaperVI.extEdges G P, T e ∪ e.toFinset ∈ Bs₀) →
+                          ∃ n BsEnd,
+                            n ≤ (PaperVIRecourse.changedAssignments G P T Tstar).card ∧
+                              PaperVIRecourse.BlockPath
+                                  (PaperVIRecourse.BoundedAllK5Opt G P (7 * PaperVI.editDegree G P)) 884 n Bs₀ BsEnd ∧
+                                PaperVI.IsCliquePartition G BsEnd ∧
+                                  BsEnd.card = PaperVI.cp G ∧ ∀ e ∈ PaperVI.extEdges G P, Tstar e ∪ e.toFinset ∈ BsEnd
+'PaperVIRecourse.lift_alignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVIRecourse.exists_terminal_step : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  (∀ a ∈ P, ∀ (v : V), a ≠ v → G.Adj a v) →
+    2 * P.card ≤ Pᶜ.card + 1 →
+      ∀ {r : ℕ} {T : Sym2 V → Finset V},
+        PaperVI.LiftInv G P (fun x => 3) r (PaperVI.extEdges G P) T →
+          ∀ {Bs₀ BsTarget : Finset (Finset V)},
+            PaperVI.IsCliquePartition G Bs₀ →
+              Bs₀.card = PaperVI.cp G →
+                (∀ e ∈ PaperVI.extEdges G P, T e ∪ e.toFinset ∈ Bs₀) →
+                  PaperVI.IsCliquePartition G BsTarget →
+                    (∀ e ∈ PaperVI.extEdges G P, T e ∪ e.toFinset ∈ BsTarget) →
+                      ∀ {Q : Finset V},
+                        Q ∈ PaperVIRecourse.terminalBlocks P BsTarget →
+                          ∃ Bs₁,
+                            PaperVI.IsCliquePartition G Bs₁ ∧
+                              Bs₁.card = PaperVI.cp G ∧
+                                (∀ e ∈ PaperVI.extEdges G P, T e ∪ e.toFinset ∈ Bs₁) ∧
+                                  Q ∈ Bs₁ ∧
+                                    (∀ B ∈ PaperVIRecourse.terminalBlocks P Bs₀,
+                                        B ∈ PaperVIRecourse.terminalBlocks P BsTarget → B ∈ Bs₁) ∧
+                                      (symmDiff Bs₀ Bs₁).card ≤ 18
+'PaperVIRecourse.exists_terminal_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVIRecourse.terminal_alignment : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  (∀ a ∈ P, ∀ (v : V), a ≠ v → G.Adj a v) →
+    2 * P.card ≤ Pᶜ.card + 1 →
+      ∀ {r : ℕ} {T : Sym2 V → Finset V},
+        PaperVI.LiftInv G P (fun x => 3) r (PaperVI.extEdges G P) T →
+          ∀ {Bs₀ BsTarget : Finset (Finset V)},
+            PaperVI.IsCliquePartition G Bs₀ →
+              Bs₀.card = PaperVI.cp G →
+                (∀ e ∈ PaperVI.extEdges G P, T e ∪ e.toFinset ∈ Bs₀) →
+                  PaperVI.IsCliquePartition G BsTarget →
+                    BsTarget.card = PaperVI.cp G →
+                      (∀ e ∈ PaperVI.extEdges G P, T e ∪ e.toFinset ∈ BsTarget) →
+                        ∃ n ≤ (PaperVIRecourse.terminalBlocks P BsTarget).card,
+                          PaperVIRecourse.BlockPath (PaperVIRecourse.BoundedAllK5Opt G P r) 18 n Bs₀ BsTarget
+'PaperVIRecourse.terminal_alignment' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PaperVIRecourse.restricted_allK5_connectivity : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] (P : Finset V),
+  (∀ a ∈ P, ∀ (v : V), a ≠ v → G.Adj a v) →
+    2 * P.card ≤ Pᶜ.card + 1 →
+      Pᶜ.card ≤ 2 * P.card + 1 →
+        63 * PaperVI.editDegree G P ≤ P.card →
+          ∀ {Bs₀ BsTarget : Finset (Finset V)},
+            PaperVIRecourse.BoundedAllK5Opt G P (7 * PaperVI.editDegree G P) Bs₀ →
+              PaperVIRecourse.BoundedAllK5Opt G P (7 * PaperVI.editDegree G P) BsTarget →
+                ∃ n ≤ P.card.choose 2 - 2 * PaperVI.mCount G P,
+                  PaperVIRecourse.BlockPath (PaperVIRecourse.BoundedAllK5Opt G P (7 * PaperVI.editDegree G P)) 884 n Bs₀
+                    BsTarget
+'PaperVIRecourse.restricted_allK5_connectivity' depends on axioms: [propext, Classical.choice, Quot.sound]

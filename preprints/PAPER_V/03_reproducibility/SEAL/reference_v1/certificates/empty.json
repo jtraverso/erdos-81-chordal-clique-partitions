@@ -1,0 +1,15 @@
+{
+  "name": "empty",
+  "implementation": "SEAL_REFERENCE_v1",
+  "hosts": [],
+  "mode": "selector_N1_N2_dual",
+  "packing": [],
+  "dual": [],
+  "lower": 0,
+  "upper": "0",
+  "certified_optimal": true,
+  "accepted_repairs": {
+    "N1": 0,
+    "N2": 0
+  }
+}

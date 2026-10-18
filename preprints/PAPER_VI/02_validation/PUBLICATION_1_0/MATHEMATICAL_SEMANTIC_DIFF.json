@@ -1,0 +1,35 @@
+{
+  "protected_math": [
+    {
+      "language": "en",
+      "display_equations": 67,
+      "display_equations_byte_identical_in_order": true,
+      "baseline_inline_math": 606,
+      "current_inline_math": 612,
+      "baseline_inline_subsequence_preserved": true,
+      "new_inline_math": [
+        "p\\ge3",
+        "N\\subseteq P"
+      ]
+    },
+    {
+      "language": "es",
+      "display_equations": 67,
+      "display_equations_byte_identical_in_order": true,
+      "baseline_inline_math": 606,
+      "current_inline_math": 612,
+      "baseline_inline_subsequence_preserved": true,
+      "new_inline_math": [
+        "p\\ge3",
+        "N\\subseteq P"
+      ]
+    }
+  ],
+  "authorized_changes": [
+    "Repeat the existing exceptional size hypothesis q≥p+3 in Section8.3; balanced example requires p≥3",
+    "Define legalcore set using existing LegalNewBlock; it imposes no compatibility with oldlifting",
+    "Narrow bibliographiccomparison without changing own conclusions"
+  ],
+  "proof_change": false,
+  "theorem_extension": false
+}

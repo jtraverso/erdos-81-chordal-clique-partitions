@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "scope": "Eight completed Tectonic pass transcripts; PDFs, source files and execution results are unchanged.",
+  "transformation": "Replace the absolute project-directory prefix with <PROJECT>; preserve all other transcript bytes.",
+  "originals": "Original transcript bytes are retained privately and are not part of this public release.",
+  "files": [
+    {
+      "path": "02_validation/PREPRINT_1_0/PAPER_V_preprint_v1.0_en_pass1.log",
+      "original_sha256": "94f030e033b5c1310d75b49df110949a882e2ce71d5d24dded592edb6a5ebad9",
+      "portable_sha256": "57c554d1b2bbb7263dea8e8b7342b350cc60c0a7e8e9c9468d7ffad8cedd483e"
+    },
+    {
+      "path": "02_validation/PREPRINT_1_0/PAPER_V_preprint_v1.0_en_pass2.log",
+      "original_sha256": "94f030e033b5c1310d75b49df110949a882e2ce71d5d24dded592edb6a5ebad9",
+      "portable_sha256": "57c554d1b2bbb7263dea8e8b7342b350cc60c0a7e8e9c9468d7ffad8cedd483e"
+    },
+    {
+      "path": "02_validation/PREPRINT_1_0/PAPER_V_preprint_v1.0_es_pass1.log",
+      "original_sha256": "5abccd8a11a8213bdb051c9adec021d3692776d9d08a4c62dadef8615e050379",
+      "portable_sha256": "1143e8d658233c8be4223be4070e66ac444cdcca08c937dd65efbf6571babc6d"
+    },
+    {
+      "path": "02_validation/PREPRINT_1_0/PAPER_V_preprint_v1.0_es_pass2.log",
+      "original_sha256": "649876a2a6fd71b7d73364c3eacce09944ea72ee92e9a7b428db7751f8c13aa7",
+      "portable_sha256": "d2fa5b80c3195cf783097c95230f3b2158a4a2745d1fb21a661095100b20c85d"
+    },
+    {
+      "path": "02_validation/PREPRINT_1_0/FORMALIZATION_COMPANION_v1.0_en_pass1.log",
+      "original_sha256": "87294f196090b5bb1d60fc150145ef69c1acc05b1f2789f9124cfa5aefecd4fe",
+      "portable_sha256": "94e716ebc4a3ea8d06c2fa74f77ddcc3a10ef2abce8c3a434ef86d3688ac3549"
+    },
+    {
+      "path": "02_validation/PREPRINT_1_0/FORMALIZATION_COMPANION_v1.0_en_pass2.log",
+      "original_sha256": "fd01527b8b16768751e22c61074fdea25f4746f08b6f8350b601d8ac1534ad16",
+      "portable_sha256": "9b9aefa77694dfda996409097ea988ed732086865832f0e913b0a36d43101afc"
+    },
+    {
+      "path": "02_validation/PREPRINT_1_0/FORMALIZATION_COMPANION_v1.0_es_pass1.log",
+      "original_sha256": "3ea6f490f27feded49a34fff1eeb9ffa1922c1fa37bf5549881432a488edf4e6",
+      "portable_sha256": "d9d781821163e480e3e35948d3664513fb8a4bdceb97b6c09f620da399a8f7ab"
+    },
+    {
+      "path": "02_validation/PREPRINT_1_0/FORMALIZATION_COMPANION_v1.0_es_pass2.log",
+      "original_sha256": "0528e77a2ff64148cfb472f39c052692fdac3ab86066830727cff8cb1a5bb352",
+      "portable_sha256": "998e94de81c5d5d83181d85f79437dc20b80b2b9ef1550b4567abc1e273e1626"
+    }
+  ]
+}

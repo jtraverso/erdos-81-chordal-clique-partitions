@@ -1,0 +1,76 @@
+{
+  "ok": true,
+  "kind": "unsat_core",
+  "degree": "with_solver",
+  "timed_out": false,
+  "partial": [],
+  "assumed": [],
+  "solver_free": false,
+  "method": "",
+  "checks": [
+    {
+      "check": "the core really is unsatisfiable",
+      "ok": true,
+      "detail": "unsat"
+    },
+    {
+      "check": "one name per formula of the core, each once",
+      "ok": true,
+      "detail": "4 name(s) for 4 hypothesis formula(s)"
+    },
+    {
+      "check": "it is about the obligation in integer_dual_stop.py",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "warnings": [],
+  "detail": "core of 4 formulas (includes the negated claim)",
+  "explained": [
+    {
+      "role": "used",
+      "name": "feasible"
+    },
+    {
+      "role": "used",
+      "name": "dual"
+    },
+    {
+      "role": "used",
+      "name": "stop"
+    }
+  ],
+  "card": {
+    "kind": "unsat_core",
+    "evidence": "universal",
+    "conclusion": "core of 4 formulas (includes the negated claim)",
+    "scope": [],
+    "hypotheses_used": [
+      "feasible",
+      "dual",
+      "stop"
+    ],
+    "cited": {},
+    "pending": [],
+    "role": null,
+    "link": null,
+    "declared": false,
+    "degree": "with_solver",
+    "provenance": {
+      "digest": "4929c6e23aba0889",
+      "schema": 5,
+      "schema_known": 5,
+      "produced_by": "0.34.0",
+      "verified_by": "0.34.0",
+      "spec_path": "integer_dual_stop.py",
+      "spec_sha256": "d26cf03a25699dd2362905e938676c4b172b172e257a21fbf2c4e5d2873f8127",
+      "python": "3.12.10",
+      "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+    },
+    "exact": true,
+    "external": []
+  }
+}
+
+STDERR

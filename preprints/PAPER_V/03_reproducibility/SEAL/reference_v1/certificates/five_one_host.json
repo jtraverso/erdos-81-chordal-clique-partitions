@@ -1,0 +1,47 @@
+{
+  "name": "five_one_host",
+  "implementation": "SEAL_REFERENCE_v1",
+  "hosts": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  ],
+  "mode": "selector_N1_N2_dual",
+  "packing": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      2,
+      3
+    ]
+  ],
+  "dual": [
+    {
+      "kind": "odd",
+      "host": 0,
+      "vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "value": "1"
+    }
+  ],
+  "lower": 2,
+  "upper": "2",
+  "certified_optimal": true,
+  "accepted_repairs": {
+    "N1": 0,
+    "N2": 0
+  }
+}

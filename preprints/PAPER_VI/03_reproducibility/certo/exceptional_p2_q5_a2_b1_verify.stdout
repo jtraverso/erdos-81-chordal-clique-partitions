@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "kind": "exact_cover",
+  "degree": "complete",
+  "timed_out": false,
+  "partial": [],
+  "assumed": [],
+  "solver_free": true,
+  "method": "verify.cover.method",
+  "checks": [
+    {
+      "check": "every element of the universe is covered",
+      "ok": true,
+      "detail": "0 missed: -"
+    },
+    {
+      "check": "no part covers anything outside the universe",
+      "ok": true,
+      "detail": "0 foreign elements"
+    },
+    {
+      "check": "and covered exactly once",
+      "ok": true,
+      "detail": "0 covered more than once: -"
+    },
+    {
+      "check": "the declared number of parts is the number of parts",
+      "ok": true,
+      "detail": "7 counted, 7 declared"
+    },
+    {
+      "check": "every part really is a clique of the graph",
+      "ok": true,
+      "detail": "0 parts are not"
+    }
+  ],
+  "warnings": [
+    "this says the cover is VALID and how large it is. It does not say it is the smallest: for that, pair it with an exact dual from `opt` on the same universe."
+  ],
+  "detail": "7 parts covering 12 elements exactly once each",
+  "card": {
+    "kind": "exact_cover",
+    "evidence": "feasible",
+    "conclusion": "7 parts covering 12 elements exactly once each",
+    "scope": [
+      "a cover you HAVE -- not shown to be minimum"
+    ],
+    "hypotheses_used": [],
+    "cited": {},
+    "pending": [],
+    "role": null,
+    "link": null,
+    "declared": false,
+    "degree": "complete",
+    "provenance": {
+      "digest": "23877e86386aa89e",
+      "schema": 5,
+      "schema_known": 5,
+      "produced_by": "0.34.0",
+      "verified_by": "0.34.0",
+      "spec_path": "C:\\e81-repro-100\\PAPER_VI\\certo\\exceptional_p2_q5_a2_b1.py",
+      "spec_sha256": "818be318ee85ac0bff5eba0073302564506b5641526d488a42e0e93d69cbd16c",
+      "python": "3.12.10",
+      "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+    },
+    "exact": true,
+    "external": []
+  },
+  "obligation": "f6925c10aaa5e1cb112fee878f08939fab4d2b8e578265e7809a18584c3da132"
+}

@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scope": "Editorial and legal revision only; no theorem strengthening or proof replacement.",
+  "documents": [
+    {
+      "role": "main",
+      "language": "en",
+      "baseline_sha256": "ed2dd8626c38ba54945f2a606123152394d7f63307bb017897601ec611887824",
+      "final_sha256": "5bc47e473946f3946014c4b5d578a44029e6ca53c55bed60554934aab063867b",
+      "display_math_count": 21,
+      "display_math_byte_identical": true,
+      "review": "Hypotheses, conclusions, constants, negations and dependency scope preserved; editorial references, licensing and Preprint 1.0 metadata updated."
+    },
+    {
+      "role": "main",
+      "language": "es",
+      "baseline_sha256": "7d479a373fffc00cbbfd9a43fe154994c65ae0c78a4ffe5397c019b75b4c93d3",
+      "final_sha256": "b65bad59e13ece51571814c92dd22e3868415cd2e70db0bc1b7a7691def6169e",
+      "display_math_count": 21,
+      "display_math_byte_identical": true,
+      "review": "Hypotheses, conclusions, constants, negations and dependency scope preserved; editorial references, licensing and Preprint 1.0 metadata updated."
+    },
+    {
+      "role": "companion",
+      "language": "en",
+      "baseline_sha256": "a7452ffa2be3612ecc647a01bfa56ce87ac52d713215c65545001edd83f2de2f",
+      "final_sha256": "320bce1490dfc87c3eba2c5a5ca262d3d8dc0d44c8c6e68032ec2fba460ba05c",
+      "display_math_count": 0,
+      "display_math_byte_identical": true,
+      "review": "Hypotheses, conclusions, constants, negations and dependency scope preserved; editorial references, licensing and Preprint 1.0 metadata updated."
+    },
+    {
+      "role": "companion",
+      "language": "es",
+      "baseline_sha256": "fa80d4972c0f41134f9cf03d08463049b361f951dd911e4edfaf32440b0b752a",
+      "final_sha256": "accf344b6849eca5f1199a6d03ac7e7c42501ef0c1c545032b726167ec2a70cd",
+      "display_math_count": 0,
+      "display_math_byte_identical": true,
+      "review": "Hypotheses, conclusions, constants, negations and dependency scope preserved; editorial references, licensing and Preprint 1.0 metadata updated."
+    }
+  ]
+}

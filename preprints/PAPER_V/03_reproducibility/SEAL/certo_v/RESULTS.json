@@ -1,0 +1,828 @@
+{
+  "status": "PASS_SCOPED",
+  "certo_version": "0.34.0",
+  "records": [
+    {
+      "name": "two_error_transfer",
+      "spec_sha256": "43f281e8e1f4ed09c893efe2550d832fa3cde4fd77bc3c2f2d11622ef93bcbf5",
+      "prove": {
+        "command": "prove",
+        "status": "unsat",
+        "verdict": "proved",
+        "engine": "z3:5.1.0",
+        "elapsed_ms": 38.45,
+        "detail": "proved using 3 of 3 hypotheses",
+        "meta": {
+          "hypotheses_used": [
+            "dual_upper",
+            "realization_lower",
+            "feasible_gain"
+          ],
+          "hypotheses_dropped": [],
+          "vacuous": false,
+          "clash": null
+        },
+        "certificate": {
+          "kind": "unsat_core",
+          "digest": "acf0adcc6146be87",
+          "solver_free": false,
+          "bytes": 903,
+          "summarised": true
+        },
+        "scope": [],
+        "evidence": "universal"
+      },
+      "verify": {
+        "ok": true,
+        "kind": "unsat_core",
+        "degree": "with_solver",
+        "timed_out": false,
+        "partial": [],
+        "assumed": [],
+        "solver_free": false,
+        "method": "",
+        "checks": [
+          {
+            "check": "the core really is unsatisfiable",
+            "ok": true,
+            "detail": "unsat"
+          },
+          {
+            "check": "one name per formula of the core, each once",
+            "ok": true,
+            "detail": "4 name(s) for 4 hypothesis formula(s)"
+          },
+          {
+            "check": "it is about the obligation in two_error_transfer.py",
+            "ok": true,
+            "detail": ""
+          }
+        ],
+        "warnings": [],
+        "detail": "core of 4 formulas (includes the negated claim)",
+        "explained": [
+          {
+            "role": "used",
+            "name": "dual_upper"
+          },
+          {
+            "role": "used",
+            "name": "realization_lower"
+          },
+          {
+            "role": "used",
+            "name": "feasible_gain"
+          }
+        ],
+        "card": {
+          "kind": "unsat_core",
+          "evidence": "universal",
+          "conclusion": "core of 4 formulas (includes the negated claim)",
+          "scope": [],
+          "hypotheses_used": [
+            "dual_upper",
+            "realization_lower",
+            "feasible_gain"
+          ],
+          "cited": {},
+          "pending": [],
+          "role": null,
+          "link": null,
+          "declared": false,
+          "degree": "with_solver",
+          "provenance": {
+            "digest": "acf0adcc6146be87",
+            "schema": 5,
+            "schema_known": 5,
+            "produced_by": "0.34.0",
+            "verified_by": "0.34.0",
+            "spec_path": "two_error_transfer.py",
+            "spec_sha256": "43f281e8e1f4ed09c893efe2550d832fa3cde4fd77bc3c2f2d11622ef93bcbf5",
+            "python": "3.12.10",
+            "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+            "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+          },
+          "exact": true,
+          "external": []
+        }
+      },
+      "exit_prove": 0,
+      "exit_verify": 0,
+      "certificate_sha256": "68d9d8ad038d83d77d627fa819511537c5f296a00be111e0ad72eeaa4e0cd269"
+    },
+    {
+      "name": "integer_dual_stop",
+      "spec_sha256": "d26cf03a25699dd2362905e938676c4b172b172e257a21fbf2c4e5d2873f8127",
+      "prove": {
+        "command": "prove",
+        "status": "unsat",
+        "verdict": "proved",
+        "engine": "z3:5.1.0",
+        "elapsed_ms": 4.33,
+        "detail": "proved using 3 of 3 hypotheses",
+        "meta": {
+          "hypotheses_used": [
+            "feasible",
+            "dual",
+            "stop"
+          ],
+          "hypotheses_dropped": [],
+          "vacuous": false,
+          "clash": null
+        },
+        "certificate": {
+          "kind": "unsat_core",
+          "digest": "4929c6e23aba0889",
+          "solver_free": false,
+          "bytes": 827,
+          "summarised": true
+        },
+        "scope": [],
+        "evidence": "universal"
+      },
+      "verify": {
+        "ok": true,
+        "kind": "unsat_core",
+        "degree": "with_solver",
+        "timed_out": false,
+        "partial": [],
+        "assumed": [],
+        "solver_free": false,
+        "method": "",
+        "checks": [
+          {
+            "check": "the core really is unsatisfiable",
+            "ok": true,
+            "detail": "unsat"
+          },
+          {
+            "check": "one name per formula of the core, each once",
+            "ok": true,
+            "detail": "4 name(s) for 4 hypothesis formula(s)"
+          },
+          {
+            "check": "it is about the obligation in integer_dual_stop.py",
+            "ok": true,
+            "detail": ""
+          }
+        ],
+        "warnings": [],
+        "detail": "core of 4 formulas (includes the negated claim)",
+        "explained": [
+          {
+            "role": "used",
+            "name": "feasible"
+          },
+          {
+            "role": "used",
+            "name": "dual"
+          },
+          {
+            "role": "used",
+            "name": "stop"
+          }
+        ],
+        "card": {
+          "kind": "unsat_core",
+          "evidence": "universal",
+          "conclusion": "core of 4 formulas (includes the negated claim)",
+          "scope": [],
+          "hypotheses_used": [
+            "feasible",
+            "dual",
+            "stop"
+          ],
+          "cited": {},
+          "pending": [],
+          "role": null,
+          "link": null,
+          "declared": false,
+          "degree": "with_solver",
+          "provenance": {
+            "digest": "4929c6e23aba0889",
+            "schema": 5,
+            "schema_known": 5,
+            "produced_by": "0.34.0",
+            "verified_by": "0.34.0",
+            "spec_path": "integer_dual_stop.py",
+            "spec_sha256": "d26cf03a25699dd2362905e938676c4b172b172e257a21fbf2c4e5d2873f8127",
+            "python": "3.12.10",
+            "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+            "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+          },
+          "exact": true,
+          "external": []
+        }
+      },
+      "exit_prove": 0,
+      "exit_verify": 0,
+      "certificate_sha256": "a11d7bfdf8065d325eda4aa8bebdbdf1ef5f3e1ea1771f817e258313a58eab19"
+    },
+    {
+      "name": "composed_realization_errors",
+      "spec_sha256": "67d4eeaf4902473d930b0948976e640e392a56058ad99382dce724204bd519f4",
+      "prove": {
+        "command": "prove",
+        "status": "unsat",
+        "verdict": "proved",
+        "engine": "z3:5.1.0",
+        "elapsed_ms": 3.92,
+        "detail": "proved using 4 of 4 hypotheses",
+        "meta": {
+          "hypotheses_used": [
+            "dual",
+            "first",
+            "second",
+            "feasible"
+          ],
+          "hypotheses_dropped": [],
+          "vacuous": false,
+          "clash": null
+        },
+        "certificate": {
+          "kind": "unsat_core",
+          "digest": "5584515f1b005eae",
+          "solver_free": false,
+          "bytes": 982,
+          "summarised": true
+        },
+        "scope": [],
+        "evidence": "universal"
+      },
+      "verify": {
+        "ok": true,
+        "kind": "unsat_core",
+        "degree": "with_solver",
+        "timed_out": false,
+        "partial": [],
+        "assumed": [],
+        "solver_free": false,
+        "method": "",
+        "checks": [
+          {
+            "check": "the core really is unsatisfiable",
+            "ok": true,
+            "detail": "unsat"
+          },
+          {
+            "check": "one name per formula of the core, each once",
+            "ok": true,
+            "detail": "5 name(s) for 5 hypothesis formula(s)"
+          },
+          {
+            "check": "it is about the obligation in composed_realization_errors.py",
+            "ok": true,
+            "detail": ""
+          }
+        ],
+        "warnings": [],
+        "detail": "core of 5 formulas (includes the negated claim)",
+        "explained": [
+          {
+            "role": "used",
+            "name": "dual"
+          },
+          {
+            "role": "used",
+            "name": "first"
+          },
+          {
+            "role": "used",
+            "name": "second"
+          },
+          {
+            "role": "used",
+            "name": "feasible"
+          }
+        ],
+        "card": {
+          "kind": "unsat_core",
+          "evidence": "universal",
+          "conclusion": "core of 5 formulas (includes the negated claim)",
+          "scope": [],
+          "hypotheses_used": [
+            "dual",
+            "first",
+            "second",
+            "feasible"
+          ],
+          "cited": {},
+          "pending": [],
+          "role": null,
+          "link": null,
+          "declared": false,
+          "degree": "with_solver",
+          "provenance": {
+            "digest": "5584515f1b005eae",
+            "schema": 5,
+            "schema_known": 5,
+            "produced_by": "0.34.0",
+            "verified_by": "0.34.0",
+            "spec_path": "composed_realization_errors.py",
+            "spec_sha256": "67d4eeaf4902473d930b0948976e640e392a56058ad99382dce724204bd519f4",
+            "python": "3.12.10",
+            "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+            "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+          },
+          "exact": true,
+          "external": []
+        }
+      },
+      "exit_prove": 0,
+      "exit_verify": 0,
+      "certificate_sha256": "f158515ec448fed1cc13d27eb827166bdea913c6701e05da1bbe7d5934370fff"
+    },
+    {
+      "name": "improving_repairs_budget",
+      "spec_sha256": "671c0bf99246f825d62009dfd386aa3a4f43aeb8cebf4aca1a89ea7c2ff3f8eb",
+      "prove": {
+        "command": "prove",
+        "status": "unsat",
+        "verdict": "proved",
+        "engine": "z3:5.1.0",
+        "elapsed_ms": 4.93,
+        "detail": "proved using 2 of 3 hypotheses",
+        "meta": {
+          "hypotheses_used": [
+            "improvement",
+            "capacity"
+          ],
+          "hypotheses_dropped": [
+            "start"
+          ],
+          "vacuous": false,
+          "clash": null,
+          "self_check_ms": 3.32,
+          "self_check": "ok"
+        },
+        "certificate": {
+          "kind": "unsat_core",
+          "digest": "5fc45c792c6595d3",
+          "solver_free": true,
+          "bytes": 1235,
+          "summarised": true
+        },
+        "scope": [],
+        "evidence": "universal"
+      },
+      "verify": {
+        "ok": true,
+        "kind": "unsat_core",
+        "degree": "complete",
+        "timed_out": false,
+        "partial": [],
+        "assumed": [],
+        "solver_free": true,
+        "method": "verify.core.by_farkas",
+        "checks": [
+          {
+            "check": "the rows are the core they claim to be",
+            "ok": true,
+            "detail": ""
+          },
+          {
+            "check": "every multiplier is non-negative",
+            "ok": true,
+            "detail": ""
+          },
+          {
+            "check": "the combination closes: sum of lambda_i * row_i is a contradiction",
+            "ok": true,
+            "detail": "constant 0, and < 0 is false"
+          },
+          {
+            "check": "it is about the obligation in improving_repairs_budget.py",
+            "ok": true,
+            "detail": ""
+          }
+        ],
+        "warnings": [],
+        "detail": "3 rows carry a non-zero multiplier: improvement, capacity",
+        "explained": [
+          {
+            "role": "used",
+            "name": "improvement"
+          },
+          {
+            "role": "used",
+            "name": "capacity"
+          },
+          {
+            "role": "unused",
+            "name": "start"
+          },
+          {
+            "role": "term",
+            "name": "improvement",
+            "times": "1",
+            "row": "-final + initial + steps <= 0"
+          },
+          {
+            "role": "term",
+            "name": "capacity",
+            "times": "1",
+            "row": "-cover + final <= 0"
+          },
+          {
+            "role": "term",
+            "name": "__goal__",
+            "times": "1",
+            "row": "cover - initial - steps < 0"
+          },
+          {
+            "role": "sum",
+            "row": "0 < 0",
+            "constant": "0"
+          }
+        ],
+        "card": {
+          "kind": "unsat_core",
+          "evidence": "universal",
+          "conclusion": "3 rows carry a non-zero multiplier: improvement, capacity",
+          "scope": [],
+          "hypotheses_used": [
+            "improvement",
+            "capacity"
+          ],
+          "cited": {},
+          "pending": [],
+          "role": null,
+          "link": null,
+          "declared": false,
+          "degree": "complete",
+          "provenance": {
+            "digest": "5fc45c792c6595d3",
+            "schema": 5,
+            "schema_known": 5,
+            "produced_by": "0.34.0",
+            "verified_by": "0.34.0",
+            "spec_path": "improving_repairs_budget.py",
+            "spec_sha256": "671c0bf99246f825d62009dfd386aa3a4f43aeb8cebf4aca1a89ea7c2ff3f8eb",
+            "python": "3.12.10",
+            "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+            "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+          },
+          "exact": true,
+          "external": []
+        }
+      },
+      "exit_prove": 0,
+      "exit_verify": 0,
+      "certificate_sha256": "dc35a9e467d47820a8ebf4782bc8c87244bcdca85bed2856125423f0871c41a2"
+    },
+    {
+      "name": "gap_residual_and_resource_defect",
+      "spec_sha256": "552064d1b7d78a28edb14fa6b4104aaa7b52d8dbdeb5d48df82ae1089579e9b6",
+      "prove": {
+        "command": "prove",
+        "status": "unsat",
+        "verdict": "proved",
+        "engine": "z3:5.1.0",
+        "elapsed_ms": 3.26,
+        "detail": "proved using 2 of 3 hypotheses",
+        "meta": {
+          "hypotheses_used": [
+            "resource_excess",
+            "relaxation"
+          ],
+          "hypotheses_dropped": [
+            "feasible_pairs"
+          ],
+          "vacuous": false,
+          "clash": null
+        },
+        "certificate": {
+          "kind": "unsat_core",
+          "digest": "78ce6688fe3f0d79",
+          "solver_free": false,
+          "bytes": 923,
+          "summarised": true
+        },
+        "scope": [],
+        "evidence": "universal"
+      },
+      "verify": {
+        "ok": true,
+        "kind": "unsat_core",
+        "degree": "with_solver",
+        "timed_out": false,
+        "partial": [],
+        "assumed": [],
+        "solver_free": false,
+        "method": "",
+        "checks": [
+          {
+            "check": "the core really is unsatisfiable",
+            "ok": true,
+            "detail": "unsat"
+          },
+          {
+            "check": "one name per formula of the core, each once",
+            "ok": true,
+            "detail": "3 name(s) for 3 hypothesis formula(s)"
+          },
+          {
+            "check": "it is about the obligation in gap_residual_and_resource_defect.py",
+            "ok": true,
+            "detail": ""
+          }
+        ],
+        "warnings": [],
+        "detail": "core of 3 formulas (includes the negated claim)",
+        "explained": [
+          {
+            "role": "used",
+            "name": "resource_excess"
+          },
+          {
+            "role": "used",
+            "name": "relaxation"
+          },
+          {
+            "role": "unused",
+            "name": "feasible_pairs"
+          }
+        ],
+        "card": {
+          "kind": "unsat_core",
+          "evidence": "universal",
+          "conclusion": "core of 3 formulas (includes the negated claim)",
+          "scope": [],
+          "hypotheses_used": [
+            "resource_excess",
+            "relaxation"
+          ],
+          "cited": {},
+          "pending": [],
+          "role": null,
+          "link": null,
+          "declared": false,
+          "degree": "with_solver",
+          "provenance": {
+            "digest": "78ce6688fe3f0d79",
+            "schema": 5,
+            "schema_known": 5,
+            "produced_by": "0.34.0",
+            "verified_by": "0.34.0",
+            "spec_path": "gap_residual_and_resource_defect.py",
+            "spec_sha256": "552064d1b7d78a28edb14fa6b4104aaa7b52d8dbdeb5d48df82ae1089579e9b6",
+            "python": "3.12.10",
+            "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+            "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+          },
+          "exact": true,
+          "external": []
+        }
+      },
+      "exit_prove": 0,
+      "exit_verify": 0,
+      "certificate_sha256": "44b62a6e9ffa02cdf29fcdc3dee4e4d41e40009f5bdda843ecc9a588bf58140e"
+    },
+    {
+      "name": "residual_does_not_bound_relaxation_gap",
+      "spec_sha256": "d8c633132f53a015e44689565320013b1ba8d257d3b0a845e8fbc14d1b773ef0",
+      "prove": {
+        "command": "prove",
+        "status": "sat",
+        "verdict": "refuted",
+        "engine": "z3:5.1.0",
+        "elapsed_ms": 4.12,
+        "detail": "REFUTED: there is a counterexample that satisfies the hypotheses and violates the claim",
+        "meta": {
+          "counterexample": {
+            "cover": "0",
+            "nu": "0",
+            "relax": "1/2"
+          },
+          "hints": [
+            "the counterexample is not integral (relax = 1/2). If these quantities are integers, declare them with z3.Int / z3.Ints: over the reals the claim is weaker than meant, and a counterexample like this one can be spurious"
+          ],
+          "self_check_ms": 2.67,
+          "self_check": "ok"
+        },
+        "certificate": {
+          "kind": "model",
+          "digest": "2debd38eff72ab73",
+          "solver_free": true,
+          "bytes": 802,
+          "summarised": true
+        },
+        "scope": [],
+        "evidence": "counterexample",
+        "explained": [
+          {
+            "formula": "nu == cover",
+            "lhs": "0",
+            "op": "==",
+            "rhs": "0",
+            "holds": true,
+            "slack": "0",
+            "active": true
+          },
+          {
+            "formula": "relax >= nu",
+            "lhs": "1/2",
+            "op": ">=",
+            "rhs": "0",
+            "holds": true,
+            "slack": "1/2",
+            "active": false
+          },
+          {
+            "formula": "nu >= 0",
+            "lhs": "0",
+            "op": ">=",
+            "rhs": "0",
+            "holds": true,
+            "slack": "0",
+            "active": true
+          },
+          {
+            "formula": "relax == nu",
+            "lhs": "1/2",
+            "op": "==",
+            "rhs": "0",
+            "holds": true,
+            "fails": true,
+            "by": "1/2"
+          }
+        ]
+      },
+      "verify": {
+        "ok": true,
+        "kind": "model",
+        "degree": "complete",
+        "timed_out": false,
+        "partial": [],
+        "assumed": [],
+        "solver_free": true,
+        "method": "",
+        "checks": [
+          {
+            "check": "the assignment satisfies the formula",
+            "ok": true,
+            "detail": "True"
+          },
+          {
+            "check": "it is about the obligation in residual_does_not_bound_relaxation_gap.py",
+            "ok": true,
+            "detail": ""
+          }
+        ],
+        "warnings": [],
+        "detail": "",
+        "explained": [
+          {
+            "formula": "nu == cover",
+            "lhs": "0",
+            "op": "==",
+            "rhs": "0",
+            "holds": true,
+            "slack": "0",
+            "active": true
+          },
+          {
+            "formula": "relax >= nu",
+            "lhs": "1/2",
+            "op": ">=",
+            "rhs": "0",
+            "holds": true,
+            "slack": "1/2",
+            "active": false
+          },
+          {
+            "formula": "nu >= 0",
+            "lhs": "0",
+            "op": ">=",
+            "rhs": "0",
+            "holds": true,
+            "slack": "0",
+            "active": true
+          },
+          {
+            "formula": "relax == nu",
+            "lhs": "1/2",
+            "op": "==",
+            "rhs": "0",
+            "holds": true,
+            "fails": true,
+            "by": "1/2"
+          }
+        ],
+        "card": {
+          "kind": "model",
+          "evidence": "counterexample",
+          "conclusion": "",
+          "scope": [],
+          "hypotheses_used": [],
+          "cited": {},
+          "pending": [],
+          "role": null,
+          "link": null,
+          "declared": false,
+          "degree": "complete",
+          "provenance": {
+            "digest": "2debd38eff72ab73",
+            "schema": 5,
+            "schema_known": 5,
+            "produced_by": "0.34.0",
+            "verified_by": "0.34.0",
+            "spec_path": "residual_does_not_bound_relaxation_gap.py",
+            "spec_sha256": "d8c633132f53a015e44689565320013b1ba8d257d3b0a845e8fbc14d1b773ef0",
+            "python": "3.12.10",
+            "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+            "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+          },
+          "exact": true,
+          "external": []
+        }
+      },
+      "exit_prove": 0,
+      "exit_verify": 0,
+      "certificate_sha256": "5723f9130b42e4bd9210601e333eab8c92ce7e2a36767f4af51a96ec94e2ed52"
+    }
+  ],
+  "wrong_obligation_rejected": {
+    "command": "verify",
+    "status": "error",
+    "verdict": "error",
+    "error": "refused",
+    "message": "REFUSED: wrong_obligation.py is NOT the file this certificate was made from. It names two_error_transfer.py, sha256 43f281e8e1f4ed09...; the file you gave has 2311ecae61daafd9.... The certificate may still be perfectly valid -- it is just not about this file.",
+    "exit": 1
+  },
+  "changed_target_rejected_without_source_hash_check": {
+    "ok": false,
+    "kind": "unsat_core",
+    "degree": "invalid",
+    "timed_out": false,
+    "partial": [],
+    "assumed": [],
+    "solver_free": false,
+    "method": "",
+    "checks": [
+      {
+        "check": "the core really is unsatisfiable",
+        "ok": true,
+        "detail": "unsat"
+      },
+      {
+        "check": "one name per formula of the core, each once",
+        "ok": true,
+        "detail": "4 name(s) for 4 hypothesis formula(s)"
+      },
+      {
+        "check": "it is about the obligation in wrong_obligation.py",
+        "ok": false,
+        "detail": "the CLAIM differs: the certificate proves another statement than the spec's"
+      }
+    ],
+    "warnings": [],
+    "detail": "valid on its own terms, and NOT about the obligation in wrong_obligation.py",
+    "explained": [
+      {
+        "role": "used",
+        "name": "dual_upper"
+      },
+      {
+        "role": "used",
+        "name": "realization_lower"
+      },
+      {
+        "role": "used",
+        "name": "feasible_gain"
+      }
+    ],
+    "card": {
+      "kind": "unsat_core",
+      "evidence": "universal",
+      "conclusion": "valid on its own terms, and NOT about the obligation in wrong_obligation.py",
+      "scope": [],
+      "hypotheses_used": [
+        "dual_upper",
+        "realization_lower",
+        "feasible_gain"
+      ],
+      "cited": {},
+      "pending": [],
+      "role": null,
+      "link": null,
+      "declared": false,
+      "degree": "invalid",
+      "provenance": {
+        "digest": "acf0adcc6146be87",
+        "schema": 5,
+        "schema_known": 5,
+        "produced_by": "0.34.0",
+        "verified_by": "0.34.0",
+        "spec_path": "two_error_transfer.py",
+        "spec_sha256": "43f281e8e1f4ed09c893efe2550d832fa3cde4fd77bc3c2f2d11622ef93bcbf5",
+        "python": "3.12.10",
+        "interpreter": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "package": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\certo"
+      },
+      "exact": false,
+      "external": []
+    }
+  },
+  "scope": "SMT scalar implications and one explicit counterexample; no proof of a combinatorial existence theorem. Solver-dependent certificates are labelled in each record."
+}

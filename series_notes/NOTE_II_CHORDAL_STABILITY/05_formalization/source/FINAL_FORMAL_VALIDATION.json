@@ -1,0 +1,74 @@
+{
+  "status": "PASS_FINAL_PUBLIC_SOURCE_VALIDATION",
+  "root": "ChordalStabilityNote",
+  "version": "Preprint 1.0",
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "source_manifest_sha256": "8bcdf425cee099e6e157dffa4356bb720e6fcd47ec138a2d4bac10b710587f75",
+  "module_count": 343,
+  "all_enumerated_modules_present": true,
+  "local_declarations": 7393,
+  "visited_dependencies": 10976,
+  "nonstandard_axioms": 0,
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_scope": "Fresh root command with Lake --rehash, complete trace-checked caches for unchanged dependencies, and recompilation of note-specific source comments. Not a clean rebuild of all upstream sources or Mathlib. Endpoint and complete local-project axiom gates rerun on these sources.",
+  "checks": [
+    {
+      "command": [
+        "lake",
+        "--rehash",
+        "build",
+        "ChordalStabilityNote"
+      ],
+      "cwd": "lean435",
+      "started_utc": "2026-10-18T19:45:25.034773+00:00",
+      "finished_utc": "2026-10-18T19:58:42.262535+00:00",
+      "exit_code": 0,
+      "log": "ROOT_BUILD.log",
+      "log_sha256": "3b26c182852fe9926a99d895b2e43307d32de13b4e15a289781b61efbc398b4c"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-s",
+        "32768",
+        "Endpoint435Gate.lean"
+      ],
+      "cwd": "lean435",
+      "started_utc": "2026-10-18T19:58:42.266044+00:00",
+      "finished_utc": "2026-10-18T20:00:08.707137+00:00",
+      "exit_code": 0,
+      "log": "ENDPOINTS.log",
+      "log_sha256": "c116c130f507e1f904fa9601a52490f7f6b0c9aad4761af64a1558203671bdea"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-s",
+        "32768",
+        "FreezeFullAudit.lean"
+      ],
+      "cwd": "lean435",
+      "started_utc": "2026-10-18T20:00:08.709152+00:00",
+      "finished_utc": "2026-10-18T20:01:49.056147+00:00",
+      "exit_code": 0,
+      "log": "FULL_AUDIT.log",
+      "log_sha256": "0056753714662a6ddcb46620cd21c9be6ae0db5fcedb9588410710f6534efed4"
+    }
+  ],
+  "theorem_changes": false,
+  "current_source_changes": "Apache copyright headers in note-specific modules and gates only. Existing proof bodies byte-identical; inherited author-owned cuts are expressly licensed by the directory LICENSE, NOTICE and per-file ownership manifest.",
+  "validated_utc": "2026-10-18T20:02:13.205950+00:00"
+}

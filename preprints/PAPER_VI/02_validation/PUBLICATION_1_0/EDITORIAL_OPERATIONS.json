@@ -1,0 +1,139 @@
+{
+  "operations": [
+    {
+      "reason": "Public version EN",
+      "class": "EDITORIAL",
+      "old": "**Paper VI in the series — v0.6 review draft**",
+      "new": "**Paper VI in the series — Preprint 1.0**"
+    },
+    {
+      "reason": "Public license EN",
+      "class": "EDITORIAL",
+      "old": "**Status:** Private review draft",
+      "new": "**License:** [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).\nCopyright © 2026 Juan Pablo Traverso Gianini."
+    },
+    {
+      "reason": "Restore exceptional-size hypothesis §8.3 EN",
+      "class": "AUTHORIZED_ASSUMPTION_CLARIFICATION",
+      "old": "and \\(b=\\lfloor p/2\\rfloor+1\\), with \\(p\\ge1\\).",
+      "new": "and \\(b=\\lfloor p/2\\rfloor+1\\), with \\(p\\ge1\\) and the standing assumption \\(q\\ge p+3\\) from Section 8.2."
+    },
+    {
+      "reason": "Restrict balanced example §8.3 EN",
+      "class": "AUTHORIZED_ASSUMPTION_CLARIFICATION",
+      "old": "For the choice \\(q=2p\\), the exceptional vertex satisfies",
+      "new": "For the choice \\(q=2p\\), which requires \\(p\\ge3\\) under this standing assumption, the exceptional vertex satisfies"
+    },
+    {
+      "reason": "Define legal core set §9.1 EN",
+      "class": "AUTHORIZED_DEFINITION_CLARIFICATION",
+      "old": "**Proposition 9.1 (extension and exterior recourse).**",
+      "new": "For an exterior edge \\(e=xy\\), a *legal core set* is a subset \\(N\\subseteq P\\) that induces a clique and whose every vertex is adjacent to both \\(x\\) and \\(y\\). Legality here concerns that single proposed block; compatibility with the current lifting is imposed or repaired separately.\n\n**Proposition 9.1 (extension and exterior recourse).**"
+    },
+    {
+      "reason": "Scope Okechukwu comparison EN",
+      "class": "AUTHORIZED_ATTRIBUTION_CLARIFICATION",
+      "old": "Related terminal constructions appear in Okechukwu [Oke26, Lemmas 4.1–4.3].\nIts Lemma 4.2 already gives the triangle value of B in clean-crossing subcases\nwhere its capacity inequality holds; the local window and simultaneous edits\nmust therefore be retained in comparing the results.",
+      "new": "Related terminal constructions appear in Okechukwu [Oke26, Lemmas 4.1–4.3]. Its Lemma 4.2 gives a triangle-partition upper bound under its own coloring, capacity and defect hypotheses. In clean-crossing subcases satisfying those hypotheses, the upper bound matches the elementary lower bound used in B. This comparison does not cover the full simultaneous-edit window of B."
+    },
+    {
+      "reason": "Remove draft-only status EN",
+      "class": "EDITORIAL",
+      "old": "The draft remains subject to the author's final review.",
+      "new": ""
+    },
+    {
+      "reason": "Public Paper V identifier EN",
+      "class": "EDITORIAL",
+      "old": "Paper V, companion working manuscript (2026).",
+      "new": "Paper V, Preprint 1.0 (2026).\n[Public source and manuscript](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V)."
+    },
+    {
+      "reason": "Public companion identifier EN",
+      "class": "EDITORIAL",
+      "old": "distribution, review version 0.6 (2026).",
+      "new": "distribution, Preprint 1.0 (2026).\n[Public source and companion](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI/05_formalization)."
+    },
+    {
+      "reason": "Public version ES",
+      "class": "EDITORIAL",
+      "old": "**Artículo VI de la serie — borrador v0.6 para revisión**",
+      "new": "**Artículo VI de la serie — Preprint 1.0**"
+    },
+    {
+      "reason": "Public license ES",
+      "class": "EDITORIAL",
+      "old": "**Estado:** Borrador para revisión privada",
+      "new": "**Licencia:** [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).\nCopyright © 2026 Juan Pablo Traverso Gianini."
+    },
+    {
+      "reason": "Restore exceptional-size hypothesis §8.3 ES",
+      "class": "AUTHORIZED_ASSUMPTION_CLARIFICATION",
+      "old": "con \\(p\\ge1\\). El grafo es split",
+      "new": "con \\(p\\ge1\\) y la hipótesis vigente \\(q\\ge p+3\\) de la Sección 8.2. El grafo es split"
+    },
+    {
+      "reason": "Restrict balanced example §8.3 ES",
+      "class": "AUTHORIZED_ASSUMPTION_CLARIFICATION",
+      "old": "Para la elección \\(q=2p\\), el vértice excepcional satisface",
+      "new": "Para la elección \\(q=2p\\), que exige \\(p\\ge3\\) bajo esta hipótesis, el vértice excepcional satisface"
+    },
+    {
+      "reason": "Define legal core set §9.1 ES",
+      "class": "AUTHORIZED_DEFINITION_CLARIFICATION",
+      "old": "**Proposición 9.1 (extensión y cambio del levantamiento exterior).**",
+      "new": "Para una arista exterior \\(e=xy\\), un *conjunto legal del núcleo* es un subconjunto \\(N\\subseteq P\\) que induce un clique y cuyos vértices son todos adyacentes tanto a \\(x\\) como a \\(y\\). La legalidad se refiere aquí a ese bloque propuesto; la compatibilidad con el levantamiento actual se impone o se repara por separado.\n\n**Proposición 9.1 (extensión y cambio del levantamiento exterior).**"
+    },
+    {
+      "reason": "Scope Okechukwu comparison ES",
+      "class": "AUTHORIZED_ATTRIBUTION_CLARIFICATION",
+      "old": "En Okechukwu [Oke26, Lemas 4.1–4.3] aparecen construcciones terminales relacionadas.\nSu Lema 4.2 ya da el valor triangular de B en subcasos con enlaces completos\ndonde se cumple su desigualdad de capacidad; por ello, al comparar los resultados\ndeben conservarse la ventana local y las modificaciones simultáneas.",
+      "new": "En Okechukwu [Oke26, Lemas 4.1–4.3] aparecen construcciones terminales relacionadas. Su Lema 4.2 da una cota superior de partición triangular bajo sus propias hipótesis de coloreo, capacidad y defecto. En los subcasos con enlaces completos que cumplen esas hipótesis, la cota superior coincide con la cota inferior elemental usada en B. Esta comparación no cubre toda la ventana de modificaciones simultáneas de B."
+    },
+    {
+      "reason": "Remove draft-only status ES",
+      "class": "EDITORIAL",
+      "old": "El borrador queda sujeto a su revisión final.",
+      "new": ""
+    },
+    {
+      "reason": "Public Paper V identifier ES",
+      "class": "EDITORIAL",
+      "old": "Paper V, companion working manuscript (2026).",
+      "new": "Paper V, Preprint 1.0 (2026).\n[Fuentes y manuscrito públicos](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_V)."
+    },
+    {
+      "reason": "Public companion identifier ES",
+      "class": "EDITORIAL",
+      "old": "distribution, review version 0.6 (2026).",
+      "new": "distribution, Preprint 1.0 (2026).\n[Fuentes y complemento públicos](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_VI/05_formalization)."
+    }
+  ],
+  "scope": "Public Preprint1.0; explicit exceptional hypotheses and local legal-block definition match existing Lean, no theorem extension.",
+  "final_public_prose_operations": [
+    {
+      "language": "en",
+      "old": "Paper IV [IV] establishes the Erdős 81 bound for sufficiently large chordal graphs.",
+      "new": "Paper IV [IV] establishes the chordal bound in Erdős 81, with the sharp integer bound for sufficiently large orders.",
+      "scope": "Attribution and public prose only"
+    },
+    {
+      "language": "en",
+      "old": "The companion states their tested domains and the remaining bibliographic and external-review gates; development history is retained in a separate record.",
+      "new": "The companion states their tested domains, proof dependencies and the scope of verification.",
+      "scope": "Attribution and public prose only"
+    },
+    {
+      "language": "es",
+      "old": "Paper IV [IV] demuestra la cota de Erdős 81 para grafos cordales de orden suficientemente grande.",
+      "new": "Paper IV [IV] demuestra la cota para grafos cordales de Erdős 81, con la cota entera exacta para órdenes suficientemente grandes.",
+      "scope": "Attribution and public prose only"
+    },
+    {
+      "language": "es",
+      "old": "El complemento indica los dominios ensayados y las revisiones bibliográfica y externa pendientes; el historial de desarrollo se conserva en un registro aparte.",
+      "new": "El complemento indica los dominios ensayados, las dependencias de las demostraciones y el alcance de la verificación.",
+      "scope": "Attribution and public prose only"
+    }
+  ]
+}

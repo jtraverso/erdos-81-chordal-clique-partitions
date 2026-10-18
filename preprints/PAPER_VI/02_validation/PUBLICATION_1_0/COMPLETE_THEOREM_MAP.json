@@ -1,0 +1,636 @@
+{
+  "scope": "All principal named results and mathematical conclusion groups, including appendices; proof helpers remain in full source audit.",
+  "entries": [
+    {
+      "manuscript_result": "A: exact local formula",
+      "declarations": [
+        {
+          "declaration": "PaperVI.theoremA",
+          "source_matches": [
+            {
+              "source": "PaperVI/TheoremA.lean",
+              "line": 113
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "B: restriction to triangles",
+      "declarations": [
+        {
+          "declaration": "PaperVI.theoremC",
+          "source_matches": [
+            {
+              "source": "PaperVI/TheoremC.lean",
+              "line": 69
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "C: exterior prescriptions",
+      "declarations": [
+        {
+          "declaration": "PaperVI.theoremB",
+          "source_matches": [
+            {
+              "source": "PaperVI/TheoremB.lean",
+              "line": 192
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Proposition 2.1: general-size window",
+      "declarations": [
+        {
+          "declaration": "PaperVI.cp_window_K4_simple",
+          "source_matches": [
+            {
+              "source": "PaperVIOpt/Parametric.lean",
+              "line": 156
+            }
+          ]
+        },
+        {
+          "declaration": "PaperVI.cp_window_K4",
+          "source_matches": [
+            {
+              "source": "PaperVIOpt/Parametric.lean",
+              "line": 132
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Second complete-split baseline",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.second_split_baseline",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/SecondExtremal.lean",
+              "line": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Perturbations of the second core",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.second_core_formula",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/SecondExtremal.lean",
+              "line": 37
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Intrinsic maximum",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.cp_eq_max_PhiQ",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/Intrinsic.lean",
+              "line": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Degree recognition",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.core_eq_highDegree",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/Intrinsic.lean",
+              "line": 102
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "D: exceptional partition optimum",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.ExSetup.theoremE1",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/ExceptionalTheorem.lean",
+              "line": 196
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "D: fractional equality optimum",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.ExSetup.theoremE1_frac",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/ExceptionalTheorem.lean",
+              "line": 233
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "D: triangle optimum",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.ExSetup.theoremE2",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/ExceptionalTriangles.lean",
+              "line": 186
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "D: restriction gap",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.ExSetup.theoremE3",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/ExceptionalTheorem.lean",
+              "line": 266
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Maximum over all cores in the exceptional family",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.ExSetup.theoremE4",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/ExceptionalIntrinsic.lean",
+              "line": 296
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Concrete linear-gap examples",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.exModel_linear_gap",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/ExceptionalModel.lean",
+              "line": 130
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Retaining a partial physical lifting",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.theoremB_extending",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/PhysicalRecourse.lean",
+              "line": 77
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Exterior recourse",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.theoremB_recourse",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/PhysicalRecourse.lean",
+              "line": 320
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "E: count for one prescription",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.prescribed_count",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/PrescribedCount.lean",
+              "line": 74
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "E: total lower and upper bounds",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.theoremN",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/PrescribedCount.lean",
+              "line": 257
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Lemma 10.1: exact compensation",
+      "declarations": [
+        {
+          "declaration": "PaperVIRecourse.used_add_resid_eq",
+          "source_matches": [
+            {
+              "source": "PaperVIRecourse/Compensation.lean",
+              "line": 24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Lemma 10.1: arbitrary legal prefix",
+      "declarations": [
+        {
+          "declaration": "PaperVIRecourse.exists_optimal_partition_extending_prefix",
+          "source_matches": [
+            {
+              "source": "PaperVIRecourse/JoinPrefix.lean",
+              "line": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Physical compatible-triangle prefix",
+      "declarations": [
+        {
+          "declaration": "PaperVIRecourse.exists_optimal_partition_of_compatible_triangles",
+          "source_matches": [
+            {
+              "source": "PaperVIRecourse/CompatiblePrefix.lean",
+              "line": 36
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Proposition 10.2: full 34k/68k recourse",
+      "declarations": [
+        {
+          "declaration": "PaperVIRecourse.exists_full_allK5_recourse",
+          "source_matches": [
+            {
+              "source": "PaperVIRecourse/PhysicalRecourse.lean",
+              "line": 95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Optimal terminal counts",
+      "declarations": [
+        {
+          "declaration": "PaperVIRecourse.optimal_allK5_counts",
+          "source_matches": [
+            {
+              "source": "PaperVIRecourse/Counts.lean",
+              "line": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Protected lifting repair",
+      "declarations": [
+        {
+          "declaration": "PaperVIRecourse.protected_allK5_step",
+          "source_matches": [
+            {
+              "source": "PaperVIRecourse/LiftAlignment.lean",
+              "line": 24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "First connectivity phase",
+      "declarations": [
+        {
+          "declaration": "PaperVIRecourse.lift_alignment",
+          "source_matches": [
+            {
+              "source": "PaperVIRecourse/LiftAlignment.lean",
+              "line": 57
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Second phase: steps of distance 18",
+      "declarations": [
+        {
+          "declaration": "PaperVIRecourse.terminal_alignment_missing_bound",
+          "source_matches": [
+            {
+              "source": "PaperVIRecourse/TerminalAlignment.lean",
+              "line": 28
+            }
+          ]
+        },
+        {
+          "declaration": "PaperVIRecourse.terminal_alignment",
+          "source_matches": [
+            {
+              "source": "PaperVIRecourse/TerminalAlignment.lean",
+              "line": 91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Theorem 10.3: restricted connectivity",
+      "declarations": [
+        {
+          "declaration": "PaperVIRecourse.restricted_allK5_connectivity",
+          "source_matches": [
+            {
+              "source": "PaperVIRecourse/Connectivity.lean",
+              "line": 26
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Universal bipartition certificate and lower bound",
+      "declarations": [
+        {
+          "declaration": "PaperVI.slack_identity",
+          "source_matches": [
+            {
+              "source": "PaperVI/Counting.lean",
+              "line": 283
+            }
+          ]
+        },
+        {
+          "declaration": "PaperVI.slack_nonneg",
+          "source_matches": [
+            {
+              "source": "PaperVI/Counting.lean",
+              "line": 59
+            }
+          ]
+        },
+        {
+          "declaration": "PaperVI.cp_ge",
+          "source_matches": [
+            {
+              "source": "PaperVI/Counting.lean",
+              "line": 391
+            },
+            {
+              "source": "PaperVIResearch/ExceptionalTheorem.lean",
+              "line": 120
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Triangle packing: integral and real fractional optima",
+      "declarations": [
+        {
+          "declaration": "PaperVI.triangle_packing_eq",
+          "source_matches": [
+            {
+              "source": "PaperVI/TrianglePacking.lean",
+              "line": 121
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Lemma 6.1: rigidity of the chordal core",
+      "declarations": [
+        {
+          "declaration": "PaperVI.core_complete_of_chordal",
+          "source_matches": [
+            {
+              "source": "PaperVI/Rigidity.lean",
+              "line": 52
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Chordal formula and two-sided edit stability",
+      "declarations": [
+        {
+          "declaration": "PaperVI.cp_chordal",
+          "source_matches": [
+            {
+              "source": "PaperVI/Rigidity.lean",
+              "line": 107
+            }
+          ]
+        },
+        {
+          "declaration": "PaperVI.chordal_stability",
+          "source_matches": [
+            {
+              "source": "PaperVI/Rigidity.lean",
+              "line": 221
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Real fractional partition optimum",
+      "declarations": [
+        {
+          "declaration": "PaperVI.fractional_eq_cp",
+          "source_matches": [
+            {
+              "source": "PaperVI/Fractional.lean",
+              "line": 143
+            }
+          ]
+        },
+        {
+          "declaration": "PaperVI.frac_slack_identity",
+          "source_matches": [
+            {
+              "source": "PaperVI/Fractional.lean",
+              "line": 74
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Integral and fractional gain optima",
+      "declarations": [
+        {
+          "declaration": "PaperVI.gain_eq",
+          "source_matches": [
+            {
+              "source": "PaperVI/GainPacking.lean",
+              "line": 136
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Types in every integral and fractional optimum",
+      "declarations": [
+        {
+          "declaration": "PaperVI.optimal_types",
+          "source_matches": [
+            {
+              "source": "PaperVI/Optimal.lean",
+              "line": 71
+            }
+          ]
+        },
+        {
+          "declaration": "PaperVI.frac_optimal_support",
+          "source_matches": [
+            {
+              "source": "PaperVI/Fractional.lean",
+              "line": 164
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Exceptional partial-star obstruction",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Research.ExSetup.partial_star_obstruction",
+          "source_matches": [
+            {
+              "source": "PaperVIResearch/ExceptionalExamples.lean",
+              "line": 251
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Appendix A: elementary complete-join formula at p≥24Δ(H)",
+      "declarations": [
+        {
+          "declaration": "PaperVI.theoremA1",
+          "source_matches": [
+            {
+              "source": "PaperVI/JoinVariant.lean",
+              "line": 538
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Appendix B: localization of inefficient blocks on at most 21t edges",
+      "declarations": [
+        {
+          "declaration": "PaperVI.inefficient_edges_le",
+          "source_matches": [
+            {
+              "source": "PaperVI/Optimal.lean",
+              "line": 82
+            }
+          ]
+        },
+        {
+          "declaration": "PaperVI.choose_two_le_21_slack",
+          "source_matches": [
+            {
+              "source": "PaperVI/Optimal.lean",
+              "line": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Distinct optimal prescriptions",
+      "declarations": [
+        {
+          "declaration": "PaperVI.two_pow_m_optimal",
+          "source_matches": [
+            {
+              "source": "PaperVI/Optimal.lean",
+              "line": 130
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "manuscript_result": "Balanced reference identity and unperturbed split optimum",
+      "declarations": [
+        {
+          "declaration": "PaperVI.Mval_eq",
+          "source_matches": [
+            {
+              "source": "PaperVI/Local.lean",
+              "line": 45
+            }
+          ]
+        },
+        {
+          "declaration": "PaperVI.cp_refGraph_eq_Mval",
+          "source_matches": [
+            {
+              "source": "PaperVI/Examples.lean",
+              "line": 87
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
