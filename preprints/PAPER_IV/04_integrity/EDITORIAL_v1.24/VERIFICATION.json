@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "files": 84,
+  "files": 87,
   "mismatches": [],
   "method": "SHA-256 of released filesystem bytes"
 }

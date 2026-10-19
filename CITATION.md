@@ -14,3 +14,5 @@ See [CITATION.bib](CITATION.bib) for individual bibliography entries. Earlier pu
 The preceding collection, including all four Preprint 1.0 works and their companions, is [10.5281/zenodo.23459196](https://doi.org/10.5281/zenodo.23459196). This DOI identifies the collection; name the individual work when citing it.
 
 Paper IV v1.24 is an editorial revision with an unchanged Lean freeze. See its [changelog](preprints/PAPER_IV/CHANGELOG_v1.24.md) and [current package](preprints/PAPER_IV/README.md).
+
+The [current collection, version 7](https://doi.org/10.5281/zenodo.23476768) contains 26 individual PDFs, including Paper IV v1.24 and its separate English/Spanish formal companion. The 22 PDFs belonging to other works are unchanged.

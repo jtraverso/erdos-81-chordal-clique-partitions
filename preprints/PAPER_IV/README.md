@@ -32,7 +32,7 @@ The [new internal editorial audit](02_validation/01_INTERNAL_AUDITS/run_v1.24_ed
 
 - [Document-only reproduction](03_reproducibility/editorial_v1.24/README.md) and [editorial release manifest](04_integrity/EDITORIAL_v1.24/README.md).
 - [Previous v1.23 edition](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/01_manuscript); [previous changelog](CHANGELOG_v1.23.md). Old files, reports and manifests are retained.
-- [Series concept DOI](https://doi.org/10.5281/zenodo.21273143); [preceding I–IV deposit](https://doi.org/10.5281/zenodo.23089131). Cite the version used: [CITATION.cff](CITATION.cff).
+- [Current deposited collection: Paper IV v1.24](https://doi.org/10.5281/zenodo.23476768); [series concept DOI](https://doi.org/10.5281/zenodo.21273143); [preceding I–IV deposit](https://doi.org/10.5281/zenodo.23089131). Cite the version used: [CITATION.cff](CITATION.cff).
 - Documents follow [CC BY-NC 4.0](LICENSE.md); software and reused resources retain their existing notices and licenses.
 
 [Series overview](../../README.md)

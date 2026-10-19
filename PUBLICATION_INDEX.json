@@ -7,28 +7,35 @@
       "version": "1.3",
       "path": "preprints/PAPER_I",
       "main_stem": "PAPER_I_preprint_v1.3",
-      "collection_doi": "10.5281/zenodo.23089131"
+      "collection_doi": "10.5281/zenodo.23089131",
+      "title": "Affine Profile Reduction for Fractional Triangle Packings in Split Graphs"
     },
     {
       "work": "PAPER_II",
       "version": "1.2",
       "path": "preprints/PAPER_II",
       "main_stem": "PAPER_II_preprint_v1.2",
-      "collection_doi": "10.5281/zenodo.23089131"
+      "collection_doi": "10.5281/zenodo.23089131",
+      "title": "Complete-Split Extremizers for a Fractional Triangle-Cover Functional on Chordal Graphs"
     },
     {
       "work": "PAPER_III",
       "version": "1.5",
       "path": "preprints/PAPER_III",
       "main_stem": "PAPER_III_preprint_v1.5",
-      "collection_doi": "10.5281/zenodo.23089131"
+      "collection_doi": "10.5281/zenodo.23089131",
+      "title": "Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing"
     },
     {
       "work": "PAPER_IV",
       "version": "1.24",
       "path": "preprints/PAPER_IV",
       "main_stem": "PAPER_IV_preprint_v1.24",
-      "collection_doi": "10.5281/zenodo.21273143"
+      "collection_doi": "10.5281/zenodo.23476768",
+      "companion_stem": "FORMALIZATION_COMPANION_v1.24",
+      "formal_source_freeze": "piv-v12-fb459343d234",
+      "formal_source_commit": "ef31294ad67dfe3f44bc47cec4791c836f55e8aa",
+      "title": "Clique partitions with rooted simplicial defect: quantitative stability and sharp eventual bounds"
     },
     {
       "work": "PAPER_V",
@@ -52,7 +59,7 @@
       "work": "NOTE_I",
       "version": "1.0",
       "path": "series_notes/NOTE_I_ERDOS81_TRANSFER",
-      "title": "From realizability certificates to the Erd\u0151s 81 bound",
+      "title": "From realizability certificates to the Erdős 81 bound",
       "main_stem": "ERDOS81_TRANSFER_NOTE_v1.0",
       "companion_stem": "FORMALIZATION_COMPANION_v1.0",
       "collection_doi": "10.5281/zenodo.23458871"
@@ -68,10 +75,13 @@
     }
   ],
   "zenodo": {
-    "collection_doi": "10.5281/zenodo.23459196",
+    "collection_doi": "10.5281/zenodo.23476768",
     "concept_doi": "10.5281/zenodo.21273143",
-    "record_id": 23459196,
-    "files": 24,
-    "total_bytes": 5329765
+    "record_id": 23476768,
+    "collection_version": "7",
+    "files": 26,
+    "total_bytes": 5406112,
+    "previous_record": 23459196,
+    "receipt": "publication/zenodo/v7_23476768/PUBLIC_RECEIPT.json"
   }
 }

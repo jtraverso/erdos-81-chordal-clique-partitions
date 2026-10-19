@@ -31,3 +31,7 @@ Zenodo: retain the individual PDFs, check the exact proposed file names, sizes
 and checksums, and confirm both the published record and the series concept
 DOI after publication. Keep formalization packages and full evidence in the
 linked GitHub release assets. No credentials belong in this repository.
+
+## Collection version 7 — Paper IV v1.24
+
+[Public deposit](https://doi.org/10.5281/zenodo.23476768) · [Verified receipt](v7_23476768/PUBLIC_RECEIPT.json) · [File policy and preservation](v7_23476768/README.md). Exactly 26 PDFs; the preceding record is unchanged.
