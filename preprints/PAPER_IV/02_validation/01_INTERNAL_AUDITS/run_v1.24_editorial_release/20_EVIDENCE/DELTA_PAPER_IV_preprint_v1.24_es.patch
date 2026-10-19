@@ -1,0 +1,57 @@
+--- audited-local/PAPER_IV_v1.24_es.md
++++ publication/PAPER_IV_preprint_v1.24_es.md
+@@ -6,7 +6,7 @@
+ [ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
+ 
+ **Paper IV de la serie**  
+-**Revisión editorial local:** versión 1.24.  
++**Preprint:** versión 1.24.  
+ **Fecha:** 19 de octubre de 2026.
+ 
+ **MSC 2020:** Primario 05C70; secundarios 05C35, 05C72.
+@@ -117,8 +117,8 @@
+ \boxed{
+ e(G)-g(\mathcal P)\le M(n)
+ \quad\Longleftrightarrow\quad
+-W^*(G)-g(\mathcal P)\le\Delta(G).
+-}
++W^*(G)-g(\mathcal P)\le\Delta(G)
++}.
+ \tag{1.3}
+ \]
+ La desigualdad de la derecha tiene una lectura concreta. La cantidad \(W^*(G)-g(\mathcal P)\) mide la ganancia que se pierde al pasar del óptimo fraccional al empaquetamiento construido; \(\Delta(G)\) mide el margen que deja ese óptimo respecto de \(M(n)\). Si la pérdida no supera el margen, la partición completada tiene a lo sumo \(M(n)\) piezas. Llamaremos a esta comparación **presupuesto de pérdida**. La identidad no indica cómo elegir \(\mathcal P\): permite comprobar cualquier construcción de copias disjuntas por aristas.
+@@ -163,8 +163,8 @@
+ \boxed{
+ F_4(G)<\frac{n^2}{6}-\eta_0n^2
+ \quad\text{o}\quad
+-\exists\,\text{testigo estructural cercano de }G.
+-}
++\exists\,\text{testigo estructural cercano de }G
++}.
+ \tag{1.5}
+ \]
+ El testigo incluye un comparador completo-split, una raíz que es clique de \(G\) y un empaquetamiento del grafo original con sus cuentas físicas. Las alternativas son exhaustivas; no se afirma que la existencia del testigo sea incompatible con tener margen cuadrático. No es una condición meramente métrica: conserva los recursos que permiten terminar la partición.
+@@ -2314,7 +2314,7 @@
+ 
+ Certo [13], <https://github.com/jtraverso/certo-math>, y Jacobian [14], <https://github.com/morluto/jacobian>, son las herramientas computacionales usadas para explorar instancias, comprobar identidades y evaluar candidatos. El proyecto de [5] también acredita a Jacobian; su uso aquí se declara por separado de las dependencias lógicas de nuestra prueba formal. Los cálculos se revisaron según su alcance; una búsqueda finita no reemplaza una prueba universal.
+ 
+-El autor conserva la responsabilidad por los argumentos, las citas, el código y la presentación. Ningún sistema de IA figura como autor. El borrador queda sujeto a su revisión final.
++El autor conserva la responsabilidad por los argumentos, las citas, el código y la presentación. Ningún sistema de IA figura como autor.
+ 
+ ## Referencias
+ 
+@@ -2332,7 +2332,7 @@
+ 
+ [7] R. Yuster, «Integer and fractional packing of families of graphs», *Random Structures & Algorithms* **26** (2005), 110–118.
+ 
+-[8] T. F. Bloom, «Erdős Problem #81», *Erdős Problems*. Disponible en <https://www.erdosproblems.com/81>. Referencia de identificación del problema; este borrador no certifica el estado actual de revisión de las propuestas publicadas.
++[8] T. F. Bloom, «Erdős Problem #81», *Erdős Problems*. Disponible en <https://www.erdosproblems.com/81>. Referencia de identificación del problema; este artículo no certifica el estado actual de revisión de las propuestas publicadas.
+ 
+ [9] J. P. Traverso Gianini y colaboradores de la formalización asistida, «Minimum-degree and spread matching theorems», contribución a *lean-pool*, PR #420, 2026. Disponible en <https://github.com/Vilin97/lean-pool/pull/420>; commit de fusión `d1de6d2`, 13 de septiembre de 2026. El historial y los encabezados conservan la atribución de la contribución asistida por Aristotle.
+ 
+@@ -2365,4 +2365,4 @@
+ [23] N. Alon y A. Shapira, *A characterization of the (natural) graph properties testable with one-sided error*, SIAM Journal on Computing **37** (2008), 1703–1727. DOI: <https://doi.org/10.1137/06064888X>. Utilizado por el ensamblaje existencial histórico y las interfaces de clasificación irrestricta identificadas en el complemento formal [24, §3], no como teorema de remoción seleccionado para el Teorema C explícito.
+ 
+ 
+-[24] J. P. Traverso Gianini, *Complemento formal de Paper IV*, versión editorial local 1.24, 19 de octubre de 2026. [PDF](../05_formalization/FORMALIZATION_COMPANION_v1.24_es.pdf).
++[24] J. P. Traverso Gianini, *Complemento formal de Paper IV*, revisión editorial 1.24, 19 de octubre de 2026. [PDF](../05_formalization/FORMALIZATION_COMPANION_v1.24_es.pdf).

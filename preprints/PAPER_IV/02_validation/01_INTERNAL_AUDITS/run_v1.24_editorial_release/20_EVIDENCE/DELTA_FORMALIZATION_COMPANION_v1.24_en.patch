@@ -1,0 +1,51 @@
+--- audited-local/FORMALIZATION_COMPANION_v1.24_en.md
++++ publication/FORMALIZATION_COMPANION_v1.24_en.md
+@@ -2,9 +2,9 @@
+ 
+ **Juan Pablo Traverso Gianini**
+ 
+-**Local editorial review:** version 1.24, October 19, 2026.
+-
+-This document describes the frozen formalization supporting *Clique partitions with rooted simplicial defect: quantitative stability and sharp eventual bounds*. It accompanies the local editorial revision of the manuscript; the mathematical statements and the Lean source freeze are unchanged. Section, equation and theorem numbers refer to the main manuscript unless otherwise specified. References [1–23] retain its bibliography.
++**Preprint:** version 1.24, October 19, 2026.
++
++This document describes the frozen formalization supporting *Clique partitions with rooted simplicial defect: quantitative stability and sharp eventual bounds*. It accompanies the editorial revision of the manuscript; the mathematical statements and the Lean source freeze are unchanged. Section, equation and theorem numbers refer to the main manuscript unless otherwise specified. References [1–23] retain its bibliography.
+ 
+ ## 1. Source identity and verification scope
+ 
+@@ -20,7 +20,7 @@
+ 
+ The source manifest SHA-256 is `fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5`. The source-only archive SHA-256 is `cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6`. These identify the original formal source package, not the new editorial PDFs.
+ 
+-The [frozen package](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/05_formalization) and [recorded build evidence](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/03_reproducibility) are available in the series repository. The series concept DOI is [10.5281/zenodo.21273143](https://doi.org/10.5281/zenodo.21273143). This local revision has not created a new public deposit.
++The [frozen package](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/05_formalization) and [recorded build evidence](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/03_reproducibility) are available in the series repository. The series concept DOI is [10.5281/zenodo.21273143](https://doi.org/10.5281/zenodo.21273143). The preceding manuscript edition and its deposit remain available; the source freeze is the same.
+ 
+ The identified Lean supplement for this version uses Lean and Mathlib v4.28.0. The final declarations do not take rounding, existence of an optimum or the near constructor as arguments: they invoke them as proved theorems in their dependencies. The permitted foundational axioms are distinguished from any additional mathematical hypothesis.
+ 
+@@ -318,7 +318,7 @@
+ 
+ The clique-tree library retains counterexamples to formulations missing the appropriate hypotheses: a leaf alone is not equivalent to a unique simplicial vertex, and separator statements must account for repeated bags and degenerate cases. These results delimit the library's use; they add no assumptions to the main theorem.
+ 
+-The local editorial ledger retains the exact source paragraphs and every replacement. Automated checks compare displayed equations, labels and result headings; hypotheses and proof dependencies are also reviewed in the source-to-manuscript comparison. These checks do not automatically certify semantic equivalence of all prose. The original AI/tools disclosure is reproduced below without changes.
++The editorial ledger retains the exact source paragraphs and every replacement. Automated checks compare displayed equations, labels and result headings; hypotheses and proof dependencies are also reviewed in the source-to-manuscript comparison. These checks do not automatically certify semantic equivalence of all prose. The AI/tools disclosure retains its attribution and responsibility statements; the superseded draft-status sentence has been removed.
+ 
+ ## Use of artificial intelligence and computational tools
+ 
+@@ -326,7 +326,7 @@
+ 
+ Certo [13], <https://github.com/jtraverso/certo-math>, and Jacobian [14], <https://github.com/morluto/jacobian>, were the computational tools used to explore instances, check identities, and assess candidates. Jacobian is also credited by the project behind [5]; its use here is acknowledged separately from the logical dependencies of our formal proof. Computations were reviewed within their stated scope; a finite search does not replace a universal proof.
+ 
+-The author remains responsible for the arguments, citations, code, and presentation. No AI system is listed as an author. The draft remains subject to the author's final review.
++The author remains responsible for the arguments, citations, code, and presentation. No AI system is listed as an author.
+ 
+ ## References
+ 
+@@ -344,7 +344,7 @@
+ 
+ [7] R. Yuster, “Integer and fractional packing of families of graphs,” *Random Structures & Algorithms* **26** (2005), 110–118.
+ 
+-[8] T. F. Bloom, “Erdős Problem #81,” *Erdős Problems*. Available at <https://www.erdosproblems.com/81>. Cited to identify the problem; this draft does not certify the current review status of published proposals.
++[8] T. F. Bloom, “Erdős Problem #81,” *Erdős Problems*. Available at <https://www.erdosproblems.com/81>. Cited to identify the problem; this article does not certify the current review status of published proposals.
+ 
+ [9] J. P. Traverso Gianini and contributors to the assisted formalization, “Minimum-degree and spread matching theorems,” contribution to *lean-pool*, PR #420, 2026. Available at <https://github.com/Vilin97/lean-pool/pull/420>; merge commit `d1de6d2`, 13 September 2026. The history and file headers retain the attribution of the Aristotle-assisted contribution.
+ 

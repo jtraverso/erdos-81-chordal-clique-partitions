@@ -1,93 +1,38 @@
-# Paper IV — preprint v1.23 (editorial revision)
+# Paper IV — quantitative stability and sharp eventual bounds
 
-**Title:** *Clique partitions with rooted simplicial defect: quantitative stability and sharp eventual bounds*  
-**Author:** Juan Pablo Traverso Gianini  
-**Status:** author-approved GitHub release; v1.22 is the audited predecessor  
-**External adversarial audit:** PASS for v1.22-r4, E0–E8, zero open corrective actions; no new external audit of v1.23  
-**Human peer review:** not performed; a separate future milestone
+**Clique partitions with rooted simplicial defect: quantitative stability and sharp eventual bounds**  
+Juan Pablo Traverso Gianini · Preprint v1.24 · 19 October 2026
 
-## Read the paper
+## Read / Leer
 
-- [English PDF](01_manuscript/PAPER_IV_preprint_v1.23_en.pdf)
-- [Spanish PDF](01_manuscript/PAPER_IV_preprint_v1.23_es.pdf)
-- [English Markdown](01_manuscript/PAPER_IV_preprint_v1.23_en.md)
-- [Spanish Markdown](01_manuscript/PAPER_IV_preprint_v1.23_es.md)
-- [English TeX](01_manuscript/PAPER_IV_preprint_v1.23_en.tex)
-- [Spanish TeX](01_manuscript/PAPER_IV_preprint_v1.23_es.tex)
-- [Explanation at four levels, EN/ES](PaperIV_explained_4_levels.html)
+| Document | PDF | TeX | Markdown |
+|---|---|---|---|
+| Article / Artículo — EN | [PDF](01_manuscript/PAPER_IV_preprint_v1.24_en.pdf) | [TEX](01_manuscript/PAPER_IV_preprint_v1.24_en.tex) | [MD](01_manuscript/PAPER_IV_preprint_v1.24_en.md) |
+| Article / Artículo — ES | [PDF](01_manuscript/PAPER_IV_preprint_v1.24_es.pdf) | [TEX](01_manuscript/PAPER_IV_preprint_v1.24_es.tex) | [MD](01_manuscript/PAPER_IV_preprint_v1.24_es.md) |
+| Formal companion / Complemento formal — EN | [PDF](05_formalization/FORMALIZATION_COMPANION_v1.24_en.pdf) | [TEX](05_formalization/FORMALIZATION_COMPANION_v1.24_en.tex) | [MD](05_formalization/FORMALIZATION_COMPANION_v1.24_en.md) |
+| Formal companion / Complemento formal — ES | [PDF](05_formalization/FORMALIZATION_COMPANION_v1.24_es.pdf) | [TEX](05_formalization/FORMALIZATION_COMPANION_v1.24_es.tex) | [MD](05_formalization/FORMALIZATION_COMPANION_v1.24_es.md) |
 
-Version 1.23 relocates administrative history out of the manuscript opening
-and shortens process descriptions; mathematical content and frozen Lean sources
-are unchanged. Its regenerated PDFs are new artifacts, not the six files audited
-as v1.22-r4. See the [changelog](CHANGELOG_v1.23.md) and
-[editorial checks](02_validation/03_EDITORIAL_CHECKS/v1.23/EDITORIAL_REPORT.md).
-The [exact v1.22 publication](02_validation/02_IA_ADVERSARIAL_AUDITS/audit_inputs/published_v1.22/)
-is retained as audit evidence, as is the public tag `paper-IV-v1.22`.
+[Web overview](index.html) · [Explanation at four levels](PaperIV_explained_4_levels.html) · [Changelog v1.23→v1.24](CHANGELOG_v1.24.md)
 
-## Results and scope
+## Contribution and place in the series
 
-The all-orders chordal conclusion is c₄(G) ≤ M(n) + b, for an absolute b,
-where M(n) = floor(n(n+1)/6). The sharp bound and maximum hold for sufficiently
-large n. The paper also gives the fixed-rooted-defect extension, quantitative
-same-root stability for graphs and near-optimal partitions, a uniform
-sublinear-defect statement and explicit tower-type thresholds. The
-manuscript specifies all hypotheses, coefficients, witnesses and limits.
+Near equality in clique partition bounds forces graph structure and constrains all near-optimal partitions through the same retained clique root. The paper proves quantitative stability for fixed rooted simplicial defect and a uniform sublinear-defect statement. For chordal graphs, the order-four partition bound is M(n)+b at every order and M(n) for sufficiently large n, where M(n)=floor(n(n+1)/6). It does not assert b=0 at every order.
 
-The bounds and related stability results of the other preprints are explicitly
-attributed. The proof uses infrastructure of Papers I–III and the cited
-mathematical literature. We do not claim b = 0 for every order, a practical
-global threshold, a universal linear mixed gap or priority for the extremal bound.
+The construction uses the fractional and rounding infrastructure developed in Papers I–III. Papers V–VI and the series notes study realizability, local exact formulas and related stability. Attributions to the other solutions and structural antecedents remain in the manuscript; this editorial revision makes no new mathematical or priority claim.
 
-## Audit evidence
+En español: el artículo estudia la estructura que impone la casi igualdad y conserva una misma raíz para controlar el grafo y sus particiones casi óptimas. La cota cordal es M(n)+b a todo orden y M(n) para órdenes suficientemente grandes. La versión 1.24 cambia la exposición y separa el complemento formal; no altera la matemática.
 
-- [Consolidated final external report — English translation](02_validation/translations/v1.22_r4/FINAL_CONSOLIDATED_AUDIT_REPORT_en.md)
-- [Unchanged Spanish original (MD)](02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.md)
-- [Unchanged Spanish original (PDF)](02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.pdf)
-- [Machine-readable final summary](02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/SUMMARY.json)
-- [Internal audit and continuity](02_validation/README.md)
-- [Publication checks](04_integrity/PUBLICATION_CHECKS.json)
+## Formalization and validation
 
-E4 reuses the verified external build of the unchanged frozen source:
-607 modules, 19 explicit targets, 224 export checks and the separate
-50-module annex. Later cycles revalidated identity; they did not run new
-builds. The audited foundational axioms are propext, Classical.choice and
-Quot.sound, or subsets, with no sorryAx on the checked surfaces. Counts of
-axiom records are not counts of distinct theorems.
+The [source freeze](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/05_formalization) remains `piv-v12-fb459343d234`, Lean/Mathlib 4.28.0: 607 main Lean files and a separate bounded-gap annex. The [historical build evidence](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/03_reproducibility) remains the evidence for kernel checking. **No Lean/Lake rebuild accompanied this editorial release.**
 
-The report discloses its same-family model and continuation of the audit
-session, shared machine/cache, and the limits of its prose review. These
-remain visible despite the PASS. Human peer review is not a pending
-criterion of this completed E0–E8 process.
+The [new internal editorial audit](02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/10_REPORT/FINAL_INTERNAL_AUDIT_REPORT.md) passes within its declared scope, with document hashes, semantic comparisons, source identity checks and rendered-page evidence. It is AI-assisted internal review, not human peer review. The [earlier external audit report](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.md) applies to its original snapshot and is not relabeled as a new audit.
 
-## Package and history
+## Reproduction, history and citation
 
-```text
-01_manuscript/       Current v1.23 only: ES/EN sources, PDFs and figures
-02_validation/      Internal/external reports, evidence and historical audit inputs
-03_reproducibility/ Frozen build evidence and required supplemental log verifier
-04_integrity/       Release manifest, relocation map and verification results
-05_formalization/   Selected immutable Lean source and separate gap annex
-superseded/         The previously public v0.8 draft, unchanged
-```
+- [Document-only reproduction](03_reproducibility/editorial_v1.24/README.md) and [editorial release manifest](04_integrity/EDITORIAL_v1.24/README.md).
+- [Previous v1.23 edition](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/01_manuscript); [previous changelog](CHANGELOG_v1.23.md). Old files, reports and manifests are retained.
+- [Series concept DOI](https://doi.org/10.5281/zenodo.21273143); [preceding I–IV deposit](https://doi.org/10.5281/zenodo.23089131). Cite the version used: [CITATION.cff](CITATION.cff).
+- Documents follow [CC BY-NC 4.0](LICENSE.md); software and reused resources retain their existing notices and licenses.
 
-The [superseded index](superseded/README.md) identifies v0.8 as historical.
-Intermediate versions are not public alternatives: they are retained only
-where required as [audit inputs](02_validation/02_IA_ADVERSARIAL_AUDITS/audit_inputs/README.md).
-Their reports, manifests and ZIPs have not been rewritten. A relocation map
-resolves original paths without changing their contents.
-
-See [reproduction](03_reproducibility/README.md), [formal sources](05_formalization/README.md),
-[trust and provenance](04_integrity/PROVENANCE_AND_TRUST.md), and
-[release checklist](RELEASE_CHECKLIST_v1.23.md).
-
-## Citation and license
-
-The series concept DOI remains https://doi.org/10.5281/zenodo.21273143.
-The DOI supplied by the author for the new version is
-https://doi.org/10.5281/zenodo.23089131. Its public record was not yet
-available at the 1 October 2026 check; this does not assert a completed deposit.
-The published
-v1.22 tag points to `cfcd5cf57cadc8583a218caaa1476911efe6158a`.
-See [CITATION.cff](CITATION.cff). Written materials follow the series'
-CC BY-NC 4.0 license. Upstream software retains its notices and licenses;
-see [LICENSE.md](LICENSE.md).
+[Series overview](../../README.md)

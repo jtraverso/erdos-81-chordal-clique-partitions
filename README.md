@@ -1,32 +1,55 @@
-# Clique partitions and chordal structure — Papers I–VI
+# Clique partitions and chordal structure — Papers I–VI and series notes
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21273143.svg)](https://doi.org/10.5281/zenodo.21273143)
 
-This repository contains Juan Pablo Traverso Gianini's preprint series,
-formal sources and verification evidence concerning
-[Erdős Problem #81](https://www.erdosproblems.com/81).
+Juan Pablo Traverso Gianini's series studies how fractional packing bounds become exact graph decompositions, what prevents their realization, and what near equality reveals about a graph and its partitions. Erdős Problem #81 motivates the first part of the series; the later papers develop questions of realizability, local optimality and stability.
 
-## Papers V–VI and series notes — Preprint 1.0
+La serie estudia cómo transformar cotas fraccionales de empaquetamiento en descomposiciones de grafos, qué obstruye esa realización y qué revela la casi igualdad sobre un grafo y sus particiones. El problema 81 de Erdős motiva la primera parte; los trabajos posteriores desarrollan cuestiones de realizabilidad, optimalidad local y estabilidad.
 
-The series continues with new questions about resource-dominated packing relaxations, realizability, exact local clique partitions and stability. Erdős #81 supplies the context; these new works do not claim another priority result for that bound.
+## The mathematical route / Recorrido matemático
 
-| Work | Publication package |
-|---|---|
-| Paper V | [Colorability and Realizability Defects](preprints/PAPER_V/README.md) |
-| Paper VI | [Optimal Clique Partitions under Local Perturbations](preprints/PAPER_VI/README.md) |
-| Series Note I | [Transfer and the Erdős 81 bound](series_notes/NOTE_I_ERDOS81_TRANSFER/README.md) |
-| Series Note II | [Exact chordal stability](series_notes/NOTE_II_CHORDAL_STABILITY/README.md) |
+| Work | Main question and contribution | Current edition |
+|---|---|---|
+| [I — Fractional profiles](preprints/PAPER_I/README.md) | Reduce mixed neighborhood profiles in split graphs to a fixed finite linear program. | v1.3 |
+| [II — Fractional extremizers](preprints/PAPER_II/README.md) | Identify the exact fractional chordal extremum by admissible copies and complete-split terminal graphs. | v1.2 |
+| [III — Integral split partitions](preprints/PAPER_III/README.md) | Construct clique partitions with sharp quadratic coefficient and linear error for split graphs. | v1.5 |
+| [IV — Quantitative stability](preprints/PAPER_IV/README.md) | Obtain chordal and rooted-defect bounds, and control graphs and near-optimal partitions with a common root. | v1.24, editorial revision |
+| [V — Colorability and realizability](preprints/PAPER_V/README.md) | Separate conflict colouring from realization in resource-dominated packing relaxations. | Preprint 1.0 |
+| [VI — Exact local partitions](preprints/PAPER_VI/README.md) | Determine optimal clique-partition counts under local perturbations, with prescriptions and structural consequences. | Preprint 1.0 |
 
-Each package contains English and Spanish manuscripts in Markdown, LaTeX and PDF, an HTML explanation, a separate formalization companion, Lean sources, licenses and reproducibility evidence. [Publication index](PUBLICATION_INDEX.json).
+The connections are mathematical, not a requirement to read every earlier result first. Papers I–II explain fractional profiles and extremal structure; III–IV add integral constructions and stability. Paper V abstracts transfer mechanisms, while VI gives exact local constructions. Each manuscript states its actual inputs and attribution.
 
-[Internal publication audit and evidence](publication/preprint1.0/INTERNAL_AUDIT_FINAL.md) · [Response to the supplied review](publication/preprint1.0/REVIEW_RESPONSE.md).
+Las conexiones no obligan a leer toda la serie antes de abordar un resultado. I–II estudian perfiles fraccionales y estructura extremal; III–IV añaden construcciones integrales y estabilidad. V formula mecanismos de transferencia y VI ofrece construcciones locales exactas. Cada artículo identifica sus dependencias y atribuciones.
 
-## Explore the series
+## Two connecting notes / Dos notas de conexión
 
-- [Papers I–VI and notes: bilingual explanations at different levels](index.html)
-- [HTML preview of the series](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/index.html)
+- [Note I — From realizability certificates to the Erdős 81 bound](series_notes/NOTE_I_ERDOS81_TRANSFER/README.md) organizes part of the route of IV through V's transfer framework. It retains the inputs and their attribution, without claiming a new priority result for Erdős #81.
+- [Note II — Exact stability for nearly extremal chordal clique partitions](series_notes/NOTE_II_CHORDAL_STABILITY/README.md) combines the structural input of IV with the local formula of VI.
+
+## Read the series / Leer la serie
+
+- [Bilingual HTML guide](index.html) · [Browser preview](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/index.html).
+- Each paper page links its English and Spanish PDF, LaTeX and Markdown. IV–VI and the notes have separate formalization companions; I–III retain their original formalization documentation.
+- [Publication index](PUBLICATION_INDEX.json) · [Citation guide](CITATION.md).
+
+## Formal sources and audit evidence / Fuentes formales y evidencias
+
+The papers have distinct frozen source packages and recorded audit scopes. Paper IV v1.24 changes exposition and document organization; its Lean freeze remains `piv-v12-fb459343d234`. The [editorial changelog](preprints/PAPER_IV/CHANGELOG_v1.24.md), [new internal editorial audit](preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/10_REPORT/FINAL_INTERNAL_AUDIT_REPORT.md) and [unchanged formal sources](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/05_formalization) distinguish the new documents from the existing kernel evidence.
+
+The preprints and documented AI-assisted reviews are not human peer review. Formal checking, written-proof review and bibliographic comparison have different scopes. Each package records those limits; a successful compilation does not establish historical priority.
+
+Los preprints y sus revisiones asistidas por IA no equivalen a revisión humana por pares. La comprobación formal, la revisión de pruebas escritas y la comparación bibliográfica tienen alcances distintos, documentados por cada trabajo.
+
+## Editions, citation and licenses / Ediciones, citas y licencias
+
+The [series concept DOI](https://doi.org/10.5281/zenodo.21273143) follows the collection. The preceding [24-PDF collection](https://doi.org/10.5281/zenodo.23459196) and the [I–IV snapshot](https://doi.org/10.5281/zenodo.23089131) remain available. Historical manuscripts, source freezes and their audit evidence are retained; identify the paper and version when citing a result. See [CITATION.bib](CITATION.bib) and [CITATION.cff](CITATION.cff).
+
+Zenodo contains individual PDFs; GitHub carries source and evidence packages. [Deposit procedure and receipts](publication/zenodo/README.md). The [publication index](PUBLICATION_INDEX.json) identifies the deposited collection.
+
+Documents are CC BY-NC 4.0. Software retains its applicable licenses, including the author-owned Apache-2.0 releases of V–VI and the notes and the [specific Paper III source-code grant](LEAN_SOURCE_APACHE_2_0_GRANT.md). See [LICENSE.md](LICENSE.md).
 
 ## arXiv endorsement
+
 
 I am preparing to submit this preprint series to arXiv (math.CO) and, as a first-time submitter, I
 need an endorsement. If you are an arXiv author eligible to endorse in math.CO, have looked at
@@ -39,83 +62,3 @@ envío, necesito un endorsement. Si eres autor de arXiv habilitado para dar endo
 revisaste estos trabajos y te parece que aportan y son adecuados para la categoría, puedes dármelo
 en https://arxiv.org/auth/endorse?x=N8V4R6 (código `N8V4R6`). El endorsement solo confirma que el trabajo es adecuado para el área;
 no es una revisión ni una aprobación de sus resultados. ¡Gracias!
-
-## Paper IV — v1.23 editorial revision
-
-**Clique partitions with rooted simplicial defect: quantitative stability and
-sharp eventual bounds.** Version 1.23 moves administrative history out of the
-manuscript and adds a bilingual explainer. Mathematical content and the Lean
-freeze are unchanged from the published v1.22, whose consolidated external
-review is **PASS, E0–E8, zero open corrective actions**. The v1.23 documentary
-checks are separate. This release is authorized for GitHub publication;
-its published Zenodo snapshot is 10.5281/zenodo.23089131.
-
-- [English PDF](preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_en.pdf)
-- [Spanish PDF](preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.23_es.pdf)
-- [Paper IV explained at four levels](preprints/PAPER_IV/PaperIV_explained_4_levels.html)
-- [Editorial changelog](preprints/PAPER_IV/CHANGELOG_v1.23.md)
-- [Paper IV: scope, package and limits](preprints/PAPER_IV/README.md)
-- [Consolidated external PASS](preprints/PAPER_IV/02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.md)
-- [English translation of the consolidated report](preprints/PAPER_IV/02_validation/translations/v1.22_r4/FINAL_CONSOLIDATED_AUDIT_REPORT_en.md)
-- [Frozen Lean sources](preprints/PAPER_IV/05_formalization/README.md)
-- [Superseded public draft v0.8](preprints/PAPER_IV/superseded/README.md)
-- [Publication integrity checks](preprints/PAPER_IV/04_integrity/PUBLICATION_CHECKS.json)
-
-The paper proves the all-orders chordal bound c₄(G) ≤ floor(n(n+1)/6) + b
-for an absolute constant, and the sharp eventual maximum. It also treats
-rooted simplicial defect, quantitative same-root stability of graphs and
-partitions, and explicit (impractical) thresholds. See the manuscript for exact
-hypotheses and attribution. Neither universal b = 0 nor priority for the
-extremal bound is claimed.
-
-## Papers I–III
-
-| Paper | Current preprint | Scope |
-| --- | --- | --- |
-| [I](preprints/PAPER_I/README.md) | v1.3 — Affine Profile Reduction for Fractional Triangle Packings in Split Graphs | Finite fractional triangle-packing bound for split graphs |
-| [II](preprints/PAPER_II/README.md) | v1.2 — Complete-Split Extremizers for a Fractional Triangle-Cover Functional on Chordal Graphs | Exact fractional-cover extremum on chordal graphs |
-| [III](preprints/PAPER_III/README.md) | v1.5 — Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing | Integral split-graph bound with sharp quadratic coefficient 1/6 |
-
-Their released packages and historical audits are unchanged. Each paper has
-its own English and Spanish manuscripts, source freeze and verification
-evidence. Earlier verdicts do not substitute for Paper IV's audit.
-
-## Formal verification and limits
-
-Paper IV uses source identity `piv-v12-fb459343d234`: 607 Lean modules and
-615 source/configuration entries. The verified external build checked 607
-modules, 19 targets and 224 publication exports, plus a separate 50-module
-annex. Later editorial reviews inherited that evidence by checked identity;
-they did not rerun the kernel. Audited axiom footprints use only propext,
-Classical.choice and Quot.sound, or subsets.
-
-Lean, Mathlib and their pinned dependencies remain third-party software.
-These preprints are not human peer-reviewed. The external AI report discloses
-the same model family, continuation of its audit session and shared
-machine/cache. The mandatory supplemental log verifier remains part of
-reproduction. No claim of bibliographic originality follows from a cone check.
-
-## Citation, integrity and licenses
-
-Use [CITATION.md](CITATION.md), [CITATION.bib](CITATION.bib) or
-[CITATION.cff](CITATION.cff). The series concept DOI remains
-[10.5281/zenodo.21273143](https://doi.org/10.5281/zenodo.21273143).
-The existing [Papers I–III deposit](https://doi.org/10.5281/zenodo.22064657)
-does not include Paper IV. The published v1.22 is tagged `paper-IV-v1.22`,
-commit `cfcd5cf57cadc8583a218caaa1476911efe6158a`.
-The published collection [10.5281/zenodo.23459196](https://doi.org/10.5281/zenodo.23459196) contains 24 PDFs: the eight retained English and Spanish manuscripts of Papers I–IV, plus the sixteen manuscripts and formalization companions of V, VI and Notes I–II. The preceding I–IV snapshot remains [10.5281/zenodo.23089131](https://doi.org/10.5281/zenodo.23089131); the series concept DOI remains unchanged.
-
-The root `manifest_sha256.txt` covers the prepared repository except itself
-and Git metadata. Paper IV has its own manifest and verification procedure.
-Earlier Paper IV manuscripts required by the audit, including published
-v1.22, are retained as audit backups rather than alternative current editions;
-the public v0.8 draft is preserved as superseded.
-
-Documents follow CC BY-NC 4.0; see [LICENSE.md](LICENSE.md). Author-owned software in the new V–VI and notes release is Apache-2.0; package notices distinguish inherited third-party material. Existing upstream
-software licenses remain applicable; packaging does not relicense Mathlib
-or separately licensed Lean Pool/Mathlib contributions.
-The original Paper III `Ax2` Lean sources are also available under Apache-2.0
-through the author's [specific source-code grant](LEAN_SOURCE_APACHE_2_0_GRANT.md);
-this exception does not change the license of the papers or audit artifacts.
-
-Zenodo provides the individual PDFs (24 files, 5.33 MB total); the full source and evidence packages are GitHub release assets. [Deposit verification and publication procedure](publication/zenodo/README.md).

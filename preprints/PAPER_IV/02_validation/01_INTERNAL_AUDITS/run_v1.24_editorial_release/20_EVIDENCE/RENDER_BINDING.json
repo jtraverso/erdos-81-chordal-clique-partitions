@@ -1,0 +1,34 @@
+[
+  {
+    "pdf": "01_manuscript/PAPER_IV_preprint_v1.24_en.pdf",
+    "sha256": "ed4962209b1d923c7e6c04da86722ae7140686c65346eeeccbe98043880bdafe",
+    "pages": 61,
+    "renderer": "Poppler pdftoppm,105dpi",
+    "page_clipping_flags": [],
+    "visual_review": "PASS: all pages inspected in contact sheets; selected changed/dense pages also inspected individually."
+  },
+  {
+    "pdf": "01_manuscript/PAPER_IV_preprint_v1.24_es.pdf",
+    "sha256": "ffe7c013d231c8213fd5d36b2fc65ee39c19bd4d1c097707f34fad6fc669f0bb",
+    "pages": 63,
+    "renderer": "Poppler pdftoppm,105dpi",
+    "page_clipping_flags": [],
+    "visual_review": "PASS: all pages inspected in contact sheets; selected changed/dense pages also inspected individually."
+  },
+  {
+    "pdf": "05_formalization/FORMALIZATION_COMPANION_v1.24_en.pdf",
+    "sha256": "26f832db28b7abebd0d9020adbacbbfdcc2411d6ca843afe898b649009efbb1f",
+    "pages": 13,
+    "renderer": "Poppler pdftoppm,105dpi",
+    "page_clipping_flags": [],
+    "visual_review": "PASS: all pages inspected in contact sheets; selected changed/dense pages also inspected individually."
+  },
+  {
+    "pdf": "05_formalization/FORMALIZATION_COMPANION_v1.24_es.pdf",
+    "sha256": "80a1874594a03b7359d882bc289d6916521011497c6f84ecf0e198ace5f7647f",
+    "pages": 13,
+    "renderer": "Poppler pdftoppm,105dpi",
+    "page_clipping_flags": [],
+    "visual_review": "PASS: all pages inspected in contact sheets; selected changed/dense pages also inspected individually."
+  }
+]

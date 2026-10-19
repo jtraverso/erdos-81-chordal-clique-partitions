@@ -1,0 +1,1030 @@
+\documentclass[english,11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\newfontfamily\LeanSymbols{seguisym.ttf}[Path=typeset_runtime/]
+\newlength{\LeanCharWidth}
+\usepackage{amsmath,amssymb}
+\usepackage[english]{babel}
+\usepackage{microtype,parskip}
+\usepackage{graphicx,float,caption}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref,bookmark}
+\usepackage{etoolbox,needspace}
+\setcounter{secnumdepth}{-\maxdimen}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}\small}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{4\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\providecommand{\pandocbounded}[1]{#1}
+\hypersetup{pdftitle={Formal companion to Paper IV},pdfauthor={Juan Pablo Traverso Gianini},pdflang={en-US},colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\title{Formal companion to Paper IV}
+\author{Juan Pablo Traverso Gianini\\\small Independent researcher, Santiago, Chile\\\small \href{mailto:jtraverso@gmail.com}{jtraverso@gmail.com}\\\small ORCID: 0009-0003-6068-4096}
+\date{}
+\begin{document}
+\raggedbottom
+\maketitle
+\textbf{Preprint · version 1.24}\\
+October 19, 2026
+
+This document describes the frozen formalization supporting \emph{Clique
+partitions with rooted simplicial defect: quantitative stability and
+sharp eventual bounds}. It accompanies the editorial revision of the
+manuscript; the mathematical statements and the Lean source freeze are
+unchanged. Section, equation and theorem numbers refer to the main
+manuscript unless otherwise specified. References {[}1--23{]} retain its
+bibliography.
+
+\subsection{1. Source identity and verification
+scope}\label{source-identity-and-verification-scope}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Item & Frozen value \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Lean and Mathlib & v4.28.0 \\
+Source cut & \nolinkurl{piv-v12-fb459343d234} \\
+Main source modules & 607 \\
+Source/configuration/documentation manifest entries & 615 \\
+Selected audit targets & 19 \\
+Literal exports through \texttt{import\ PaperIV} & 224 \\
+Recorded axiom outputs & 461; not a count of distinct theorems \\
+\end{longtable}
+}
+
+The source manifest SHA-256 is
+\nolinkurl{fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5}.
+The source-only archive SHA-256 is
+\nolinkurl{cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6}.
+These identify the original formal source package, not the new editorial
+PDFs.
+
+The
+\href{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/05_formalization}{frozen
+package} and
+\href{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/03_reproducibility}{recorded
+build evidence} are available in the series repository. The series
+concept DOI is
+\href{https://doi.org/10.5281/zenodo.21273143}{10.5281/zenodo.21273143}.
+The preceding manuscript edition and its deposit remain available; the
+source freeze is the same.
+
+The identified Lean supplement for this version uses Lean and Mathlib
+v4.28.0. The final declarations do not take rounding, existence of an
+optimum or the near constructor as arguments: they invoke them as proved
+theorems in their dependencies. The permitted foundational axioms are
+distinguished from any additional mathematical hypothesis.
+
+The recorded reconstruction covers all 607 modules: 421 objects built in
+the first segment were verified and reused after a restart, and the
+resumed segment compiled 186 modules. All 19 selected targets were
+freshly executed with exit code zero. Their 461 axiom outputs use only
+\nolinkurl{propext}, \nolinkurl{Classical.choice} and \nolinkurl{Quot.sound}, or
+subsets. The records distinguish source identity, compilation, export
+availability and transitive axiom checks. None of these counts is a
+claim that every manuscript sentence is a separately exported theorem.
+
+The consolidated external report for v1.22-r4 records PASS for E0--E8
+within its documented scope. That report and the build logs remain
+evidence for the identified frozen source. They are not a fresh external
+review of v1.24. The present editorial review checks relocation,
+statement preservation and document rendering; no Lean build or new
+mathematical verification is claimed.
+
+\subsection{2. Mathematical statements and exported
+declarations}\label{mathematical-statements-and-exported-declarations}
+
+The common prefix \nolinkurl{PaperIV} is omitted where indicated. The
+following map preserves the original theorem labels; moving it out of
+the main manuscript has not changed the formal interface.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Result
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Lean declaration
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Theorem A, additive form &
+\nolinkurl{Erdos81AllOrders.erdos81_all_orders_additive} \\
+Theorem B, upper bound &
+\nolinkurl{Erdos81Unconditional.erdos81_cliquePartition} \\
+Theorem B, maximum & \nolinkurl{PaperTheorems.erdos81_max_eq} \\
+Theorem 3.1 & \nolinkurl{RC01Final.rc01_uniformRoundingTarget} \\
+Corollary 3.5 &
+\nolinkurl{FarRegimeAllGraphs.farRegime_cliquePartition_allGraphs} \\
+Dichotomy (1.5) &
+\nolinkurl{HybridDichotomy.chordal_far_or_nearStructure} \\
+Theorem 5.0, strengthened window &
+\nolinkurl{NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp} \\
+Theorem 5.0, previous interface &
+\nolinkurl{NearH1LocalConstructor.exists_near_partition_paid_by_root} \\
+Corollary 5.4, size and density &
+\nolinkurl{NearCriticalDichotomy.chordal_far_or_criticalRoot},
+\nolinkurl{chordal_far_or_edge_density} \\
+Optimal quadratic coefficient &
+\nolinkurl{SharpConstantOptimality.erdos81_quadratic_constant_optimal},
+\nolinkurl{erdos81_quadratic_constant_isLeast} \\
+Theorem 6.1, strengthened form &
+\nolinkurl{IntegralStability.chordal_linear_stability_sixteen} \\
+Theorem 6.1, earlier interface &
+\nolinkurl{IntegralStability.chordal_linear_stability} \\
+Corollary 6.1a, piece count &
+\nolinkurl{RootPartitionStability.chordal_partition_stability} \\
+Corollary 6.1a, joint real piece and edge bounds &
+\nolinkurl{SublinearResearch.chordal_joint_stability_real} in
+\nolinkurl{PublicationStability} \\
+Identity (6.7b) &
+\nolinkurl{RootPartitionStability.sum_rootPieceDefect_eq} \\
+Corollary 6.2 &
+\nolinkurl{ExtremalClassification.chordal_extremal_classification} \\
+Proposition D.3 & \nolinkurl{SplitMixedGap.mixed_gap_zero} together with
+the bounded construction in \nolinkurl{SplitCompleteSharpValue} \\
+\end{longtable}
+}
+
+For the extension table below, the prefix is
+\nolinkurl{PaperIV.SublinearResearch}, except for the named E32 entry.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Statement
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Declaration
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Real same-root chordal bounds, including edge mass &
+\nolinkurl{chordal_joint_stability_real} \\
+Theorem \(C^\prime\) and (6.12)--(6.13) &
+\nolinkurl{fixed_defect_joint_stability_real} \\
+Explicit parameters and classification &
+\nolinkurl{FixedExplicit.fixed_defect_stability_explicit} \\
+Optimal-size edit bound (6.17) &
+\nolinkurl{fixed_defect_exact_extremal_edit_real} \\
+Unrestricted equality classification &
+\nolinkurl{E32.cp_classification_of_theoremCPrimeC}, with the proved
+classification above and the historical induced-removal assembly
+{[}23{]} (see companion §3) \\
+Finite bound (6.22) &
+\nolinkurl{certified_shifted_fractional_bound_all_orders} \\
+Finite bound (6.23) &
+\nolinkurl{certified_refined_fractional_bound_all_orders} \\
+Uniform integral versions & \nolinkurl{uniform_shifted_partition_bound};
+\nolinkurl{uniform_refined_partition_bound} \\
+Arbitrary-order sequence approximation &
+\nolinkurl{sequence_arbitrary_orders_partition_bound} \\
+One-root sequence stability &
+\nolinkurl{sequence_arbitrary_orders_stability} \\
+\end{longtable}
+}
+
+The finite same-root interfaces take real deficits. The sequence
+interface records rational error and excess parameters. That difference
+is retained when comparing the manuscript with elaborated types.
+
+\textbf{Literal definitions.} The following excerpts reproduce
+definitions and theorem headers, omitting proofs but not hypotheses. The
+first excerpt is in the namespace \nolinkurl{SimpleGraph}; the next three
+are in \nolinkurl{PaperIV.FarRounding}, with finite \(V\), decidable
+equality and decidable adjacency for \(G\). The last definition is in
+\nolinkurl{PaperIV}. The source locations are
+\nolinkurl{PaperIV/ChordalStructure.lean} (chordality),
+\nolinkurl{PaperIV/FarRounding.lean} (pairs and partitions), and
+\nolinkurl{PaperIV/TargetEnvelope.lean} (target size), within the frozen
+package linked in §1 of this companion.
+
+\begin{quote}\fontsize{8.5}{10.2}\selectfont\ttfamily\raggedright\setlength{\parskip}{0pt}\settowidth{\LeanCharWidth}{0}
+\noindent def\hspace*{\dimexpr 1\LeanCharWidth\relax}IsChordal\hspace*{\dimexpr 1\LeanCharWidth\relax}(G\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}SimpleGraph\hspace*{\dimexpr 1\LeanCharWidth\relax}V)\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}Prop\hspace*{\dimexpr 1\LeanCharWidth\relax}:=\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ⦃}v\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}V{\LeanSymbols ⦄}\hspace*{\dimexpr 1\LeanCharWidth\relax}(c\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}G.Walk\hspace*{\dimexpr 1\LeanCharWidth\relax}v\hspace*{\dimexpr 1\LeanCharWidth\relax}v),\hspace*{\dimexpr 1\LeanCharWidth\relax}c.IsCycle\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\hspace*{\dimexpr 1\LeanCharWidth\relax}4\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≤}\hspace*{\dimexpr 1\LeanCharWidth\relax}c.length\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\par
+\noindent \hspace*{\dimexpr 4\LeanCharWidth\relax}{\LeanSymbols ∃}\hspace*{\dimexpr 1\LeanCharWidth\relax}x\hspace*{\dimexpr 1\LeanCharWidth\relax}y\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}V,\hspace*{\dimexpr 1\LeanCharWidth\relax}x\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}c.support\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∧}\hspace*{\dimexpr 1\LeanCharWidth\relax}y\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}c.support\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∧}\hspace*{\dimexpr 1\LeanCharWidth\relax}G.Adj\hspace*{\dimexpr 1\LeanCharWidth\relax}x\hspace*{\dimexpr 1\LeanCharWidth\relax}y\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∧}\hspace*{\dimexpr 1\LeanCharWidth\relax}s(x,\hspace*{\dimexpr 1\LeanCharWidth\relax}y)\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∉}\hspace*{\dimexpr 1\LeanCharWidth\relax}c.edges\par
+\end{quote}
+
+\begin{quote}\fontsize{8.5}{10.2}\selectfont\ttfamily\raggedright\setlength{\parskip}{0pt}\settowidth{\LeanCharWidth}{0}
+\noindent def\hspace*{\dimexpr 1\LeanCharWidth\relax}pairs\hspace*{\dimexpr 1\LeanCharWidth\relax}(K\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}Finset\hspace*{\dimexpr 1\LeanCharWidth\relax}V)\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}Finset\hspace*{\dimexpr 1\LeanCharWidth\relax}(Sym2\hspace*{\dimexpr 1\LeanCharWidth\relax}V)\hspace*{\dimexpr 1\LeanCharWidth\relax}:=\hspace*{\dimexpr 1\LeanCharWidth\relax}K.sym2.filter\hspace*{\dimexpr 1\LeanCharWidth\relax}fun\hspace*{\dimexpr 1\LeanCharWidth\relax}e\hspace*{\dimexpr 1\LeanCharWidth\relax}=>\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ¬}\hspace*{\dimexpr 1\LeanCharWidth\relax}e.IsDiag\par
+\noindent \strut\par
+\noindent structure\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition\hspace*{\dimexpr 1\LeanCharWidth\relax}where\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}pieces\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}Finset\hspace*{\dimexpr 1\LeanCharWidth\relax}(Finset\hspace*{\dimexpr 1\LeanCharWidth\relax}V)\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}isClique\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}K\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}pieces,\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}a\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}K,\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}b\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}K,\hspace*{\dimexpr 1\LeanCharWidth\relax}a\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≠}\hspace*{\dimexpr 1\LeanCharWidth\relax}b\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\hspace*{\dimexpr 1\LeanCharWidth\relax}G.Adj\hspace*{\dimexpr 1\LeanCharWidth\relax}a\hspace*{\dimexpr 1\LeanCharWidth\relax}b\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}two\_le\_card\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}K\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}pieces,\hspace*{\dimexpr 1\LeanCharWidth\relax}2\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≤}\hspace*{\dimexpr 1\LeanCharWidth\relax}K.card\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}edgeDisjoint\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}K\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}pieces,\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}L\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}pieces,\hspace*{\dimexpr 1\LeanCharWidth\relax}K\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≠}\hspace*{\dimexpr 1\LeanCharWidth\relax}L\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\hspace*{\dimexpr 1\LeanCharWidth\relax}Disjoint\hspace*{\dimexpr 1\LeanCharWidth\relax}(pairs\hspace*{\dimexpr 1\LeanCharWidth\relax}K)\hspace*{\dimexpr 1\LeanCharWidth\relax}(pairs\hspace*{\dimexpr 1\LeanCharWidth\relax}L)\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}covers\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}pieces.biUnion\hspace*{\dimexpr 1\LeanCharWidth\relax}pairs\hspace*{\dimexpr 1\LeanCharWidth\relax}=\hspace*{\dimexpr 1\LeanCharWidth\relax}G.edgeFinset\par
+\noindent \strut\par
+\noindent def\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition.size\hspace*{\dimexpr 1\LeanCharWidth\relax}(Q\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition\hspace*{\dimexpr 1\LeanCharWidth\relax}G)\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ}\hspace*{\dimexpr 1\LeanCharWidth\relax}:=\hspace*{\dimexpr 1\LeanCharWidth\relax}Q.pieces.card\par
+\noindent \strut\par
+\noindent def\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition.OrderAtMost\hspace*{\dimexpr 1\LeanCharWidth\relax}(Q\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition\hspace*{\dimexpr 1\LeanCharWidth\relax}G)\hspace*{\dimexpr 1\LeanCharWidth\relax}(r\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ})\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}Prop\hspace*{\dimexpr 1\LeanCharWidth\relax}:=\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}K\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}Q.pieces,\hspace*{\dimexpr 1\LeanCharWidth\relax}K.card\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≤}\hspace*{\dimexpr 1\LeanCharWidth\relax}r\par
+\end{quote}
+
+\begin{quote}\fontsize{8.5}{10.2}\selectfont\ttfamily\raggedright\setlength{\parskip}{0pt}\settowidth{\LeanCharWidth}{0}
+\noindent def\hspace*{\dimexpr 1\LeanCharWidth\relax}targetSize\hspace*{\dimexpr 1\LeanCharWidth\relax}(n\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ})\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ}\hspace*{\dimexpr 1\LeanCharWidth\relax}:=\hspace*{\dimexpr 1\LeanCharWidth\relax}n\hspace*{\dimexpr 1\LeanCharWidth\relax}*\hspace*{\dimexpr 1\LeanCharWidth\relax}(n\hspace*{\dimexpr 1\LeanCharWidth\relax}+\hspace*{\dimexpr 1\LeanCharWidth\relax}1)\hspace*{\dimexpr 1\LeanCharWidth\relax}/\hspace*{\dimexpr 1\LeanCharWidth\relax}6\par
+\end{quote}
+
+Natural-number division implements the floor in \(M(n)\). The expository
+symbol \(c_4\) denotes the minimum over these partitions with
+\texttt{OrderAtMost\ 4}; the exported statement does not assume a
+minimum function, but directly supplies a witness partition. Chordality
+in \nolinkurl{FarRounding} is a literal alias of the preceding cycle-based
+definition.
+
+\textbf{Exported theorems.} In \nolinkurl{PaperIV.Erdos81AllOrders} and
+\nolinkurl{PaperIV.Erdos81Unconditional}, respectively, the exact headers
+are:
+
+\begin{quote}\fontsize{8.5}{10.2}\selectfont\ttfamily\raggedright\setlength{\parskip}{0pt}\settowidth{\LeanCharWidth}{0}
+\noindent theorem\hspace*{\dimexpr 1\LeanCharWidth\relax}erdos81\_all\_orders\_additive\hspace*{\dimexpr 1\LeanCharWidth\relax}:\par
+\noindent \hspace*{\dimexpr 4\LeanCharWidth\relax}{\LeanSymbols ∃}\hspace*{\dimexpr 1\LeanCharWidth\relax}b\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ},\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}(n\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ})\hspace*{\dimexpr 1\LeanCharWidth\relax}(G\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}SimpleGraph\hspace*{\dimexpr 1\LeanCharWidth\relax}(Fin\hspace*{\dimexpr 1\LeanCharWidth\relax}n))\hspace*{\dimexpr 1\LeanCharWidth\relax}[DecidableRel\hspace*{\dimexpr 1\LeanCharWidth\relax}G.Adj],\par
+\noindent \hspace*{\dimexpr 6\LeanCharWidth\relax}PaperIV.FarRounding.IsChordal\hspace*{\dimexpr 1\LeanCharWidth\relax}G\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\par
+\noindent \hspace*{\dimexpr 8\LeanCharWidth\relax}{\LeanSymbols ∃}\hspace*{\dimexpr 1\LeanCharWidth\relax}Q\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition\hspace*{\dimexpr 1\LeanCharWidth\relax}G,\hspace*{\dimexpr 1\LeanCharWidth\relax}Q.OrderAtMost\hspace*{\dimexpr 1\LeanCharWidth\relax}4\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∧}\hspace*{\dimexpr 1\LeanCharWidth\relax}Q.size\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≤}\hspace*{\dimexpr 1\LeanCharWidth\relax}PaperIV.targetSize\hspace*{\dimexpr 1\LeanCharWidth\relax}n\hspace*{\dimexpr 1\LeanCharWidth\relax}+\hspace*{\dimexpr 1\LeanCharWidth\relax}b\par
+\end{quote}
+
+\begin{quote}\fontsize{8.5}{10.2}\selectfont\ttfamily\raggedright\setlength{\parskip}{0pt}\settowidth{\LeanCharWidth}{0}
+\noindent theorem\hspace*{\dimexpr 1\LeanCharWidth\relax}erdos81\_cliquePartition\hspace*{\dimexpr 1\LeanCharWidth\relax}:\par
+\noindent \hspace*{\dimexpr 4\LeanCharWidth\relax}{\LeanSymbols ∃}\hspace*{\dimexpr 1\LeanCharWidth\relax}N\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ},\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}n\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ},\hspace*{\dimexpr 1\LeanCharWidth\relax}N\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≤}\hspace*{\dimexpr 1\LeanCharWidth\relax}n\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}(G\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}SimpleGraph\hspace*{\dimexpr 1\LeanCharWidth\relax}(Fin\hspace*{\dimexpr 1\LeanCharWidth\relax}n))\hspace*{\dimexpr 1\LeanCharWidth\relax}[DecidableRel\hspace*{\dimexpr 1\LeanCharWidth\relax}G.Adj],\par
+\noindent \hspace*{\dimexpr 6\LeanCharWidth\relax}PaperIV.FarRounding.IsChordal\hspace*{\dimexpr 1\LeanCharWidth\relax}G\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\par
+\noindent \hspace*{\dimexpr 8\LeanCharWidth\relax}{\LeanSymbols ∃}\hspace*{\dimexpr 1\LeanCharWidth\relax}Q\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition\hspace*{\dimexpr 1\LeanCharWidth\relax}G,\hspace*{\dimexpr 1\LeanCharWidth\relax}Q.OrderAtMost\hspace*{\dimexpr 1\LeanCharWidth\relax}4\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∧}\hspace*{\dimexpr 1\LeanCharWidth\relax}Q.size\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≤}\hspace*{\dimexpr 1\LeanCharWidth\relax}targetSize\hspace*{\dimexpr 1\LeanCharWidth\relax}n\par
+\end{quote}
+
+These headers allow the quantifier order and exact coverage to be
+checked without inferring them from theorem names. The recorded audit
+contains no \nolinkurl{sorryAx} among the axioms of the examined
+declarations. The supplementary report distinguishes that transitive
+check from the textual search for \nolinkurl{native_decide} in project
+sources and from a complete rebuild of dependencies.
+
+\subsection{3. Dependencies, adapters and
+attribution}\label{dependencies-adapters-and-attribution}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Result in the text
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Reference module
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Inputs and construction} & \\
+Attained rational optimum & \nolinkurl{PaperI.FiniteLPDuality},
+\nolinkurl{CertifiedOptimumExistence} \\
+Uniform mixed rounding, Theorem 3.1 & \nolinkurl{RC01Final},
+\nolinkurl{MixedRoundingAdapter}; \nolinkurl{Nibble.*} infrastructure from
+Paper III \\
+Corollary 3.5, far regime for all graphs &
+\nolinkurl{FarRegimeAllGraphs.farRegime_cliquePartition_allGraphs};
+explicit version in \nolinkurl{E17.ExplicitFarAssembly} \\
+Complete improved cleaning and explicit threshold &
+\nolinkurl{E17.Cleanup}, \nolinkurl{E17.FarBudget},
+\nolinkurl{E17.ExplicitFarRounding}, \nolinkurl{E17.ExplicitFarAssembly};
+constants from \nolinkurl{E18} and \nolinkurl{E19} \\
+Fractional nibble selection, Paper III & \nolinkurl{Nibble.FracNibbleLE},
+\nolinkurl{Nibble.FracNibbleRepaired}; adapters
+\nolinkurl{PaperIIISlackNibbleAdapter}, \nolinkurl{PaperIIINibbleAdapter} \\
+Localization, root and critical window & \nolinkurl{NearH1Localization},
+\nolinkurl{NearRootWindow}, \nolinkurl{RootRegularizationBridge} \\
+Dichotomy and absorbable interface & \nolinkurl{HybridDichotomy},
+\nolinkurl{SeparationAbsorptionRoute} \\
+Accounting and near partition & \nolinkurl{RD09PhysicalLedger},
+\nolinkurl{NearH1FinalAssembly}, \nolinkurl{NearH1LocalConstructor} \\
+\textbf{Extremal conclusions} & \\
+Sharp bound and eventual maximum & \nolinkurl{Erdos81Unconditional},
+\nolinkurl{PaperTheorems} \\
+Bounds for all orders & \nolinkurl{Erdos81AllOrders}; explicit bound in
+\nolinkurl{ExplicitThreshold} \\
+Fixed rooted defect and maximum, Theorem C &
+\nolinkurl{DefectExplicitPublication}; explicit assembly
+\nolinkurl{E34.L11Main}; lower witness \nolinkurl{DefectSharpPublication} \\
+Necessity of order four, Proposition D.2 &
+\nolinkurl{DefectSharpPublication.order_three_insufficient},
+\nolinkurl{E11K10} \\
+General budget and passage to \(\operatorname{cp}\) &
+\nolinkurl{LossBudget}, \nolinkurl{SplitMixedGap} \\
+Graph stability, partition stability and extremal classification &
+\nolinkurl{IntegralStability}, \nolinkurl{RootPartitionStability},
+\nolinkurl{ExtremalClassification} \\
+Complete-split value and cores & \nolinkurl{SplitCompleteSharpValue},
+\nolinkurl{SplitCompleteRigidity} \\
+Partition defect and optimal coefficients &
+\nolinkurl{SplitCompleteDefect}, \nolinkurl{LinearCoefficient},
+\nolinkurl{SharpConstantOptimality} \\
+Edge density in the critical branch & \nolinkurl{NearEdgeDensity},
+\nolinkurl{NearCriticalDichotomy} \\
+Equality of mixed optima, Appendix D.2 & \nolinkurl{SplitMixedGap},
+\nolinkurl{SplitCompleteSharpValue} \\
+\textbf{Complementary tools} & \\
+Budgeted compatible absorption &
+\nolinkurl{SpreadAbsorptionCompatibility} \\
+Balanced reserve, Appendix B.2 & \nolinkurl{BalancedReserve},
+\nolinkurl{Nibble.BeckFiala} from Paper III \\
+Four-host completion, Appendix B.3 & \nolinkurl{FourHostClosure}; Vizing
+and \nolinkurl{MultiHostTriangleLift} \\
+Exact reserve and threshold sensitivity & \nolinkurl{ReserveIdentity},
+\nolinkurl{NearThresholdSensitivity} \\
+Reusable chordal structure & \nolinkurl{CliqueTree} \\
+\end{longtable}
+}
+
+\textbf{Module map.} The prefixes \nolinkurl{PaperI}, \nolinkurl{Nibble} and
+\nolinkurl{MixedRounding} indicate, respectively, the rational development
+associated with Paper I, the nibble infrastructure of Paper III and the
+neutral mixed-model library. The prefixes \nolinkurl{E17}, \nolinkurl{E18},
+\nolinkurl{E19} and \nolinkurl{A4S1} identify the increment modules integrated
+into the project; other unprefixed names belong to \nolinkurl{PaperIV};
+\nolinkurl{MixedRoundingAdapter} adapts that namespace to the
+\nolinkurl{MixedRounding} library. RC01 incorporates and adapts tools from
+Paper III, but its two-quota mixed assembly is the one in Section 3 of
+the present work. The table relates results to sources; the supplement
+retains the exact dependency list.
+
+Chordal structure and Dirac's theorem come from the Paper II
+contribution, ported into \nolinkurl{ChordalStructure}. Szemerédi's
+regularity lemma is reused from Mathlib; the construction and adapters
+for clean profiles and mixed selection belong to Paper IV. This
+provenance is distinct from a file's current location under
+\nolinkurl{PaperIV}.
+
+The configuration declares Mathlib as a third-party package and a
+selection of Paper III \nolinkurl{Nibble} modules as a local dependency of
+the series. \nolinkurl{ConeAudit} traverses the types and proof terms of
+the selected declarations and checks that their transitive dependencies
+contain no names under the root \nolinkurl{Erdos81}, used by {[}5{]}. Our
+modules \nolinkurl{PaperIV.Erdos81Unconditional} and
+\nolinkurl{PaperIV.Erdos81AllOrders} have namespace root \nolinkurl{PaperIV};
+they are not the excluded root Erdos81 used by {[}5{]}. The absence of
+these names is a reproducible audit result, not an inference from the
+import list. Its scope is precise: it certifies that exclusion in the
+examined snapshot; it would not by itself detect relocated and renamed
+code or determine the historical provenance of each argument. Source
+attribution is documented separately. The same namespace check cannot
+yield a verdict on {[}15{]}. The extension uses the signed-star method
+of {[}15, Lemma 3.1{]} and the removal method of {[}22{]}; proving their
+implementations in this supplement does not make those methods new.
+
+The public interface for Theorem C in this revision is
+\nolinkurl{DefectExplicitPublication}: it uses
+\nolinkurl{E34.theoremC_fully_explicit_final} and the unrestricted lower
+witness already proved in \nolinkurl{DefectSharpPublication}. The older
+existential assembly is not the proof selected for Theorem C. Its
+localization uses induced removal of Alon--Shapira {[}23{]}; the
+selected explicit assembly instead uses the polynomial chordal-removal
+development of {[}22{]}. The additional \nolinkurl{FDCheck.ASCheck}
+traverses proof terms and types to test exclusion of the named removal
+results in these selected declarations. This is not exclusion of the
+\nolinkurl{AlonShapira} namespace: shared definitions of chordality, edit
+distance and induced copies remain in use.
+
+There is a specific exception to this dependency comparison. The
+unrestricted equality classification in Corollary 6.3, (6.18), is
+exported through \nolinkurl{E32.cp_classification_of_theoremCPrimeC};
+that declaration and \nolinkurl{E32.ref15Theorem11_of_theoremCPrimeC}
+still use the historical assembly through \nolinkurl{E32.theoremC_at}.
+Their proofs therefore include the induced-removal chain of {[}23{]}.
+All those lemmas are proved in the frozen sources with standard axioms.
+The exclusion check for the explicit Theorem C and the selected
+stability declarations must not be extended to these classification
+wrappers.
+
+\subsubsection{3.1. Resources and the two gain
+conventions}\label{resources-and-the-two-gain-conventions}
+
+The representation refinement in the original proof map is verified in
+\nolinkurl{MixedRoundingAdapter}. The adapter identifies a piece's edges
+and the admissible-copy predicate, transports fractional packing
+capacities, and proves equality of values via \nolinkurl{value_toFarFrac}.
+For an integral packing, \nolinkurl{gain_toFarPacking} preserves gain.
+Thus Theorem 3.1 can be used through this neutral presentation without
+changing budget (1.3). This is not a new proof of rounding.
+
+Two functions named \nolinkurl{gainOf} must be distinguished by their
+domain of use. \nolinkurl{Model.gainOf} is two at cardinality three, five
+at cardinality four, and zero at all other cardinalities.
+\nolinkurl{FarRounding.gainOf} is \(\binom{|K|}{2}\mathbin{\dot-}1\), where
+\(\dot-\) denotes truncated subtraction in the naturals. They agree at
+cardinalities zero through four, but cease to agree from five onwards.
+Mixed items have cardinality three or four, so the transport is
+legitimate. For unrestricted partitions, such as those in Section 6.4,
+one uses edge accounting or \nolinkurl{FarRounding.gainOf}; it is never
+replaced by the bounded gain function from \nolinkurl{Model}. Since
+partition pieces have at least two vertices, truncated subtraction there
+agrees with ordinary subtraction.
+
+\subsubsection{3.2. Construction and retained
+accounts}\label{construction-and-retained-accounts}
+
+The bounded-rank nibble is reused through
+\nolinkurl{PaperIIISlackNibbleAdapter.boundedRankNibbleAt}. The two-quota
+construction is in
+\nolinkurl{MarkedQuotaSlackGate.slackMarkedQuotaNibbleAt_proved}; the
+pairing of triangular supports and its physical realization are in
+\nolinkurl{MarkedQuotaPairing} and \nolinkurl{JointTwoQuotaPhysical}. The
+joint codegree scale corresponds to
+\nolinkurl{RC01CleanedGate.cleanedPacking_joint_codegree_le_of_served_patterns}.
+Profile mass is at most \(t^2\), not one: this is the physical
+normalization of \nolinkurl{RC01PatternMassScale}.
+
+For the mixed path, \nolinkurl{VertexCopyMonotone.two_mul_F4_le_add}
+proves the two-direction inequality. \nolinkurl{VertexCopyGate} selects the
+step and its finite potential;
+\nolinkurl{GatedTerminalSplit.exists_split_terminal_symmetrizationPath}
+supplies the complete sequence. Local accounting is constructed in
+\nolinkurl{NearH1WindowAccounts} before being imported into
+\nolinkurl{NearH1Localization}. This dependency direction matches the
+logical order explained in Lemma 4.2.
+
+Clique extraction and calibration are in \nolinkurl{ChordalCoreMissing} and
+\nolinkurl{NearH1CalibratedRoot}. \nolinkurl{Regularization},
+\nolinkurl{RegularizationBounds} and \nolinkurl{RegularizedRootGoal} prove the
+root properties used by \nolinkurl{RootRegularizationBridge}. Finally,
+\nolinkurl{NearH1PhaseI}, \nolinkurl{RD09FactorCandidateMoments} and
+\nolinkurl{RD09FactorCandidateAverage} produce the two accounts;
+\nolinkurl{NearH1FinalAssembly} combines them using the same first
+assignment and its occupied links. The second phase is not applied to an
+independent copy of the resources.
+
+Theorem 5.0 has a strengthened form,
+\nolinkurl{NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp},
+which adds \(|3|R|-n|\le n/50\) to the physical constructor; the
+previous interface \nolinkurl{exists_near_partition_paid_by_root}
+remains as a corollary. The strengthened reserve in (5.15a) is retained
+for the same witness in
+\nolinkurl{NearStructureWitness.accounts_count_le_improved};
+\nolinkurl{IntegralStability.chordal_linear_stability_sixteen} and
+\nolinkurl{RootPartitionStability.chordal_partition_stability} use it
+without recombining roots or packings. The cyclic selection in phase I
+is in \nolinkurl{RD09PaddedL1Mass}; the final evaluation of phase II, in
+\nolinkurl{H1ImprovedConstants.l10_of_raw_rd09L2}. The comparator
+regimes in (5.1a) are checked in
+\nolinkurl{SplitComparatorResidual.residual_sq_le_of_near_split_universal}.
+Reserve (D.8) is
+\nolinkurl{ReserveIdentity.targetSize_eq_baseline_add_reserve}; the
+improved contraction corresponds to
+\nolinkurl{NearThresholdSensitivity.descent_threshold_maximal_barrier}
+and \nolinkurl{near_threshold_binding}. The critical-geometry results are
+in \nolinkurl{NearRootWindow}, \nolinkurl{NearEdgeDensity} and
+\nolinkurl{NearCriticalDichotomy}.
+
+The extension results have separate public entry points. Theorem C and
+its maximum are
+\nolinkurl{PaperIV.DefectExplicitPublication.rooted_defect_eventual} and
+\nolinkurl{rooted_defect_maximum}; the historical
+\nolinkurl{DefectSharpPublication} namespace retains the lower witness and
+\nolinkurl{order_three_insufficient} for Proposition D.2.
+\nolinkurl{E35.theoremC_tower} and its uniform variants give Corollary
+6.6. The complete account (3.11) is
+\nolinkurl{E17Bridge.improved_far_loss_explicit}. Corollary 3.5 with an
+explicit threshold is
+\nolinkurl{E17Bridge.ExplicitAssembly.farRegime_allGraphs_explicit}.
+Finally, \nolinkurl{PaperIV.ExplicitThreshold.erdos81_sharp_explicit} and
+\nolinkurl{erdos81_all_orders_bounded_additive} give the global result
+with the tower of §6.3. These names identify declarations, not new
+hypotheses.
+
+\subsubsection{3.3. Scope relative to other formal
+developments}\label{scope-relative-to-other-formal-developments}
+
+The formal scope differs from that documented by {[}5{]} at the cited
+commit. Its \nolinkurl{lean/FORMALIZATION_STATUS.md} file declares
+verification conditional on \nolinkurl{ExternalInputs.Inputs}: Vizing,
+Häggkvist--Janssen and a packing transfer that includes certificates of
+rational optimality. These inputs are explicit parameters, not hidden
+axioms. Here the inputs used by our chain, including Vizing, are
+discharged; Häggkvist--Janssen is not used. The comparison concerns what
+each Lean development checks: it does not assert that the mathematical
+proof of {[}5{]} is conditional on conjectures.
+
+Reusable contributions have their own references. Sum-zero triangle
+packing corresponds to Lean Pool PR \#348 {[}12{]},
+\url{https://github.com/Vilin97/lean-pool/pull/348}, merged at commit
+\nolinkurl{540d8e3}. Minimum-degree matchings and their weighted selection
+correspond to PR \#420 {[}9{]},
+\url{https://github.com/Vilin97/lean-pool/pull/420}, merged at
+\nolinkurl{d1de6d2}. The series sources retain the antecedents and
+adaptations of Vizing and Beck--Fiala. Attribution of formalizations is
+distinguished from authorship of the classical theorems.
+
+Lean {[}10{]} and Mathlib {[}11{]} provide the verification environment.
+Code auditing does not replace human review of definitions or of the
+correspondence between a formal statement and its expression in the
+manuscript. Experiments guided the search and detected false assertions;
+they are not premises of universality.
+
+The formal constructor used here invokes neither the results of {[}15{]}
+nor the historical modules of the replaced construction. The list bound
+and first-phase capacity window have the same form as conditions in
+{[}15, Lemma 4.1 and (4.4){]}. Here they are justified by dyadic
+hosting, averaging over cyclic shifts, and balanced absorption. This
+comparison identifies the mechanisms and their shared conditions; it
+claims neither priority for those conditions nor historical independence
+on the basis of the dependency check in §3 of this companion.
+
+\subsection{4. Precision notes for the
+manuscript}\label{precision-notes-for-the-manuscript}
+
+The following distinctions survive the removal of implementation names
+from the exposition. They prevent a mathematical statement from being
+identified with a stronger or differently quantified Lean type.
+
+\begin{itemize}
+\tightlist
+\item
+  The construction in §6.1 uses triangles and edges; the audited public
+  interface supplies a partition of order at most four and an
+  unrestricted lower bound.
+\item
+  The quadratic and linear optimality declarations use rational
+  coefficients. The manuscript explains the passage to real coefficients
+  by rational approximation.
+\item
+  \nolinkurl{recover_clique_from_edit} takes rational \(u\ge0\); the
+  written proof also applies to real \(u\ge0\).
+\item
+  Proposition G.1 uses a rational precision parameter in the Lean
+  declaration and real exponential comparisons.
+\item
+  The width formulation in Appendix G.1 uses clique trees with bags of
+  bounded cardinality; it does not rely on a general Mathlib treewidth
+  definition.
+\item
+  No chordal restriction of the cleanup-to-rounding implication is
+  formalized by Appendix G.2. The universal obstruction is not a lower
+  bound for every chordal rounding method.
+\end{itemize}
+
+\subsubsection{4.1. An existing numerical premise made
+explicit}\label{an-existing-numerical-premise-made-explicit}
+
+The old prose in F.5 referred to \nolinkurl{thm2_ineq} by name. The new
+prose prints its existing conclusion, with \(m=m_{11}(\varepsilon,K)\),
+\(B=B_{11}(\varepsilon,K)\) and \(\delta_{11}\) as in (F.11). The source
+is \nolinkurl{E34/L11Params.lean}, lines 289--292. Its assumptions are
+\(0<\varepsilon<1\) and \(1\le K\); the preceding paragraph of F.5
+supplies the stronger \(\varepsilon<1/2\) and \(K\ge1\). This is an
+expansion of a cited premise, not a new estimate or proof.
+
+\subsubsection{4.2. Source map for relocated inline
+references}\label{source-map-for-relocated-inline-references}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Manuscript location
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Formal declarations or modules
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1.1. The common condition: a loss budget &
+\nolinkurl{LossBudget.budget_iff} \\
+1.2. Structural dichotomy and resolution mechanisms &
+\nolinkurl{NearStructureWitness} \\
+5.3. The three accounts that pay for the construction &
+\nolinkurl{isSpokeCompatible_surviving_canonicalBad},
+\nolinkurl{RD09SpokeCompatibility.card_union_phases} \\
+6.2. The eventual maximum &
+\nolinkurl{SplitCompleteRigidity.optimal_cores} \\
+6.2. The eventual maximum &
+\nolinkurl{PaperTheorems.splitGraph_isChordal} \\
+6.3. All orders and optimality of the linear term &
+\nolinkurl{SharpConstantOptimality.erdos81_quadratic_constant_optimal},
+\nolinkurl{erdos81_quadratic_constant_isLeast} \\
+6.3. All orders and optimality of the linear term &
+\nolinkurl{LinearCoefficient.linear_coefficient_optimal} \\
+6.3. All orders and optimality of the linear term &
+\nolinkurl{LossBudget.erdos81_cp_form_all_orders},
+\nolinkurl{erdos81_cp_form} \\
+6.6. Fixed-defect stability on one root & \nolinkurl{NormalizedDeficit},
+\nolinkurl{ResidualExcess}, \nolinkurl{NormalizedCliqueCore},
+\nolinkurl{RootPartition}, \nolinkurl{NormalizedStability} \\
+6.7. Uniform bounds and sublinear defect &
+\nolinkurl{E35.Fexp_le_tower} \\
+B.1. Budgeted compatible absorption &
+\nolinkurl{SpreadAbsorptionCompatibility.exists_budgeted_compatible_spread_absorber} \\
+B.2. Balanced reserves &
+\nolinkurl{BalancedReserve.exists_balanced_reserve} \\
+B.3. Completion with four hosts &
+\nolinkurl{FourHostClosure.exists_fourHost_packing} \\
+C.2. What is discarded and why the threshold is uniform &
+\nolinkurl{RC01CleanFiber}, \nolinkurl{RC01DeviationCleanup} \\
+C.3. An explicit schedule and its propagation &
+\nolinkurl{SzemerediRegularity.initialBound} \\
+C.3. An explicit schedule and its propagation &
+\nolinkurl{E18.NibbleSchedule}, \nolinkurl{NibbleOracle},
+\nolinkurl{NibbleChain} \\
+C.3. An explicit schedule and its propagation &
+\nolinkurl{E19.ScheduleBounds}, \nolinkurl{E19.ChainBounds},
+\nolinkurl{E19.GateBounds} \\
+C.3. An explicit schedule and its propagation & \nolinkurl{E18.Numeric},
+\nolinkurl{E19.Main} \\
+C.3. An explicit schedule and its propagation &
+\nolinkurl{E35.NfarE_le_tower_poly} \\
+D.1. The complete graph at every order &
+\nolinkurl{ThreeRegime.CompleteStateAllOrders} \\
+D.1. The complete graph at every order & \nolinkurl{HalvingFrames} \\
+D.1. The complete graph at every order & \nolinkurl{exists_packing},
+\nolinkurl{complete_state_closes} \\
+D.2. Equality of mixed optima in complete-split graphs &
+\nolinkurl{SplitMixedGap.mixed_gap_zero},
+\nolinkurl{SplitCompleteSharpValue} \\
+E.1. Constructor and accounting & \nolinkurl{IndepAllBounds},
+\nolinkurl{IndepAllParams} \\
+E.1. Constructor and accounting & \nolinkurl{IndepAllPeel},
+\nolinkurl{IndepAllObstr} \\
+E.1. Constructor and accounting & \nolinkurl{IndepAllBudget} \\
+E.1. Constructor and accounting & \nolinkurl{IndepAllMain},
+\nolinkurl{ConstructorBudget} \\
+E.2. From the terminal to the eventual theorem &
+\nolinkurl{E34.theoremC_fully_explicit_final} \\
+E.4. Retained accounts for same-root stability &
+\nolinkurl{StrictParams} \\
+E.4. Retained accounts for same-root stability &
+\nolinkurl{StrictBudget} \\
+E.4. Retained accounts for same-root stability &
+\nolinkurl{ResidualExcess} \\
+E.4. Retained accounts for same-root stability &
+\nolinkurl{AllInput.no_core_pairs} \\
+E.4. Retained accounts for same-root stability &
+\nolinkurl{CoreCliqueAlternative} \\
+E.4. Retained accounts for same-root stability &
+\nolinkurl{TemplateDistance}, \nolinkurl{RootPartition},
+\nolinkurl{CliqueShiftArithmetic} \\
+F.1. Explicit fixed-defect parameters & \nolinkurl{ExplicitFixedStability},
+\nolinkurl{E33.Assembly}, \nolinkurl{E33.LocExplicit}, \nolinkurl{E34.L11Main} \\
+F.1. Explicit fixed-defect parameters &
+\nolinkurl{fixed_defect_stability_explicit} \\
+F.2. Fractional star accounting and small orders &
+\nolinkurl{RefinedFractionalBound}, \nolinkurl{UniformFractionalBound},
+\nolinkurl{SmallOrderFractional} \\
+F.3. Uniform localization through a chordal edit &
+\nolinkurl{SublinearEdit} \\
+F.3. Uniform localization through a chordal edit &
+\nolinkurl{exists_clique_additive_defect},
+\nolinkurl{recover_clique_from_edit} \\
+F.3. Uniform localization through a chordal edit &
+\nolinkurl{SublinearStabilityTransfer} \\
+F.5. Auxiliary lemmas and adaptations of chordal removal &
+\nolinkurl{E34.indCopies_cycle_le} \\
+F.5. Auxiliary lemmas and adaptations of chordal removal &
+\nolinkurl{E34.coBipartite_edit_le} \\
+F.5. Auxiliary lemmas and adaptations of chordal removal &
+\nolinkurl{E34.exists_large_clique} \\
+F.5. Auxiliary lemmas and adaptations of chordal removal &
+\nolinkurl{E34.lemma3} \\
+F.5. Auxiliary lemmas and adaptations of chordal removal &
+\nolinkurl{E34.transfer} \\
+F.5. Auxiliary lemmas and adaptations of chordal removal &
+\nolinkurl{E34.lemma11_V} \\
+F.5. Auxiliary lemmas and adaptations of chordal removal &
+\nolinkurl{properOn_of_pinned} \\
+F.5. Auxiliary lemmas and adaptations of chordal removal &
+\nolinkurl{thm2_ineq} \\
+F.5. Auxiliary lemmas and adaptations of chordal removal &
+\nolinkurl{claim5_count}, \nolinkurl{block_ineq} \\
+F.5. Auxiliary lemmas and adaptations of chordal removal &
+\nolinkurl{l11_caseA}, \nolinkurl{l11_caseB1}, \nolinkurl{l11_caseB2},
+\nolinkurl{E34.L11Main} \\
+F.5. Auxiliary lemmas and adaptations of chordal removal &
+\nolinkurl{E35.theoremC_tower}, \nolinkurl{theoremC_tower_uniform},
+\nolinkurl{theoremC_tower_uniform_sMax},
+\nolinkurl{NfarE_le_tower_poly},
+\nolinkurl{PaperIV.DefectExplicitPublication}, \nolinkurl{FDCheck.ASCheck},
+\nolinkurl{PaperIV.OptimalTemplateObstruction.shifted_template_witness},
+\nolinkurl{shifted_template_sqrt_witness},
+\nolinkurl{no_linear_optimal_template_bound},
+\nolinkurl{optimal_family_nonempty} \\
+G.1. The all-order bound and packing gaps & \nolinkurl{BoundedCliqueGap} \\
+G.1. The all-order bound and packing gaps &
+\nolinkurl{BoundedCliqueGap.chordal_gap_linear_cliqueFree} \\
+G.1. The all-order bound and packing gaps &
+\nolinkurl{exists_cliqueTree_width_le_iff_cliqueFree} \\
+G.2. A quantitative obstruction to codegree cleanup &
+\nolinkurl{CleanupAtWith} \\
+G.2. A quantitative obstruction to codegree cleanup &
+\nolinkurl{threshold_gt_exp}, \nolinkurl{threshold_gt_exp_seventy_two},
+\nolinkurl{FarExploration.CleanupRigidVerdict} \\
+G.2. A quantitative obstruction to codegree cleanup &
+\nolinkurl{threshold_superpolynomial} \\
+G.2. A quantitative obstruction to codegree cleanup &
+\nolinkurl{CodegreeCleanupAt}, \nolinkurl{UniformRoundingTarget} \\
+\end{longtable}
+}
+
+\subsection{5. Reproduction and separate
+annex}\label{reproduction-and-separate-annex}
+
+Run the following from the extracted, unchanged source archive with the
+toolchain pinned by \nolinkurl{lean-toolchain} and dependencies pinned by
+\nolinkurl{lake-manifest.json}. The command is documented for reproduction;
+it was not executed for this editorial revision.
+
+\begin{verbatim}
+python tools/audit_publication.py
+\end{verbatim}
+
+It reads the 19 targets in \nolinkurl{FREEZE_SCOPE.json}, runs them
+serially and keeps individual logs. Reimporting a compiled audit module
+is not equivalent to rerunning its commands. The recorded run is under
+\nolinkurl{03_reproducibility/full_rebuild_v12_20260929_resume/}, with
+provenance links to the first segment. \nolinkurl{ReleaseExportCheck} uses
+only \texttt{import\ PaperIV}; the named audits inspect their own lists
+of types and proof terms.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+Target \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\nolinkurl{PaperIV} \\
+\nolinkurl{PaperIV.Audit} \\
+\nolinkurl{PaperIV.ConeAudit} \\
+\nolinkurl{PaperIV.PublicationIncrementAudit} \\
+\nolinkurl{A4S1.IndepAllAudit} \\
+\nolinkurl{ThreeRegime.AxiomCheck} \\
+\nolinkurl{FarExploration.AxiomCheck} \\
+\nolinkurl{PaperIV.CliqueTreeAudit} \\
+\nolinkurl{E17.ImprovedFarRoundingAudit} \\
+\nolinkurl{E17.ExplicitFarAudit} \\
+\nolinkurl{PaperIV.ExplicitThresholdAudit} \\
+\nolinkurl{ReleaseExportCheck} \\
+\nolinkurl{PaperIVEditorial.ConstructorBudgetAudit} \\
+\nolinkurl{ResearchAudit} \\
+\nolinkurl{FDCheck.FinalAudit} \\
+\nolinkurl{E35.Audit} \\
+\nolinkurl{FDCheck.ASCheck} \\
+\nolinkurl{E34.Audit} \\
+\nolinkurl{PaperIV.OptimalTemplateObstructionAudit} \\
+\end{longtable}
+}
+
+The literal source manifest is
+\nolinkurl{03_reproducibility/build_piv-v12-fb459343d234/SOURCE_MANIFEST.json}.
+The export log records 224 literal \nolinkurl{#check} commands. The
+constructor audit covers \nolinkurl{PaperIV.Editorial.ConstructorBudget},
+which keeps both conclusions for one partition. The old extraction
+workspaces and superseded source cuts remain historical records in the
+series repository; they are not extra modules of the freeze described
+here.
+
+\nolinkurl{BoundedCliqueGap} is a separate source annex supporting Appendix
+G.1; it is not an input to the main extremal proof. Its source archive
+SHA-256 is
+\nolinkurl{2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d}.
+Its 38 source modules and 50-module build closure belong to its distinct
+recorded build, not to the count of 607 above.
+
+\subsection{6. Written-proof review and
+limits}\label{written-proof-review-and-limits}
+
+\textbf{Scope of the written proof.} The table below records seven
+derivations examined in the consolidated external review. Its
+assessment, ACCEPTABLE\_SUMMARY for each row, retains the stated
+expository limit concerning the cited second-moment estimates in C.2. A
+successful build checks formal derivations, not completeness of
+exposition; the written-proof assessment remains distinct from
+compilation and from human peer review. The audit history and detailed
+assessments are retained with the supplementary evidence.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Location
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Derivation to review, including the expanded accounts
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+§5.1, (5.4) and (5.7) & Regularization mass, degree, palette and width
+estimates \\
+C.2, (3.8) and (3.10) & Discard counts and retention under the partition
+conventions \\
+Lemma 3.2 and C.1--C.2 & Fibre lower bounds from regular pairs and their
+normalization \\
+C.3, Table C.1 & Numerical domination of the nibble constants and tower
+iterations \\
+E.1 & Normalization bounds preceding the terminal construction \\
+E.1, (E.2b) and (E.2d) & Terminal estimates and the three-case budget \\
+D.1 & Bose/Skolem frame constructions underlying the residue table \\
+\end{longtable}
+}
+
+Experimental checks of small orders are not used as premises. Their
+documentation, including completeness and certification requirements,
+belongs to the separate research record.
+
+The clique-tree library retains counterexamples to formulations missing
+the appropriate hypotheses: a leaf alone is not equivalent to a unique
+simplicial vertex, and separator statements must account for repeated
+bags and degenerate cases. These results delimit the library's use; they
+add no assumptions to the main theorem.
+
+The editorial ledger retains the exact source paragraphs and every
+replacement. Automated checks compare displayed equations, labels and
+result headings; hypotheses and proof dependencies are also reviewed in
+the source-to-manuscript comparison. These checks do not automatically
+certify semantic equivalence of all prose. The AI/tools disclosure
+retains its attribution and responsibility statements; the superseded
+draft-status sentence has been removed.
+
+\subsection{Use of artificial intelligence and computational
+tools}\label{use-of-artificial-intelligence-and-computational-tools}
+
+Claude, by Anthropic, and ChatGPT/Codex, by OpenAI, were used to explore
+and check arguments and to prepare the manuscript. Aristotle, by
+Harmonic, contributed to exploring approaches, searching for
+counterexamples, developing proofs, and formalizing and reviewing them
+in Lean; its role was not limited to translating finished proofs.
+
+Certo {[}13{]}, \url{https://github.com/jtraverso/certo-math}, and
+Jacobian {[}14{]}, \url{https://github.com/morluto/jacobian}, were the
+computational tools used to explore instances, check identities, and
+assess candidates. Jacobian is also credited by the project behind
+{[}5{]}; its use here is acknowledged separately from the logical
+dependencies of our formal proof. Computations were reviewed within
+their stated scope; a finite search does not replace a universal proof.
+
+The author remains responsible for the arguments, citations, code, and
+presentation. No AI system is listed as an author.
+
+\subsection{References}\label{references}
+
+{[}1{]} P. Erdős, E. T. Ordman, and Y. Zalcstein, ``Clique partitions of
+chordal graphs,'' \emph{Combinatorics, Probability and Computing}
+\textbf{2} (1993), 409--415.
+
+{[}2{]} J. P. Traverso Gianini, \emph{Affine Profile Reduction for
+Fractional Triangle Packings in Split Graphs}, Paper I, preprint v1.3,
+22 August 2026. Spanish and English editions in the joint v3 deposit, 23
+August 2026. Version DOI consulted:
+\url{https://doi.org/10.5281/zenodo.22064657}; concept DOI:
+\url{https://doi.org/10.5281/zenodo.21273143}. Supplementary material:
+\url{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_I}.
+
+{[}3{]} J. P. Traverso Gianini, \emph{Complete-Split Extremizers for a
+Fractional Triangle-Cover Functional on Chordal Graphs}, Paper II,
+preprint v1.2, 22 August 2026. Spanish and English editions in the joint
+v3 deposit, 23 August 2026. Version DOI consulted:
+\url{https://doi.org/10.5281/zenodo.22064657}; concept DOI:
+\url{https://doi.org/10.5281/zenodo.21273143}. Supplementary material:
+\url{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_II}.
+
+{[}4{]} J. P. Traverso Gianini, \emph{Linear-Error Clique Partitions of
+Split Graphs via Structured Triangle Packing}, Paper III, preprint v1.5,
+23 August 2026. Spanish and English editions in the joint v3 deposit of
+that date. Version DOI consulted:
+\url{https://doi.org/10.5281/zenodo.22064657}; concept DOI:
+\url{https://doi.org/10.5281/zenodo.21273143}. Supplementary material:
+\url{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_III}.
+
+{[}5{]} Anonymous, \emph{Clique partitions of chordal graphs with linear
+error}, preprint, 8 September 2026. Version consulted on 20 September
+2026, commit \nolinkurl{cbde8a0a0563372b23b1b39a44180d2c0fb02f44}.
+Manuscript:
+\url{https://github.com/N0zoM1z0/erdos-81/blob/cbde8a0a0563372b23b1b39a44180d2c0fb02f44/manuscript/main.pdf}.
+The attribution printed in the document is retained. The README at that
+same commit credits Morluto for the mathematical proof, N0zoM1z0 for the
+manuscript and Lean implementation, and Jacobian at Preference Labs as
+part of the project:
+\url{https://github.com/N0zoM1z0/erdos-81/blob/cbde8a0a0563372b23b1b39a44180d2c0fb02f44/README.md}.
+These repository credits are distinguished from the signature printed on
+the manuscript.
+
+{[}6{]} P. E. Haxell and V. Rödl, ``Integer and fractional packings in
+dense graphs,'' \emph{Combinatorica} \textbf{21} (2001), 13--38.
+
+{[}7{]} R. Yuster, ``Integer and fractional packing of families of
+graphs,'' \emph{Random Structures \& Algorithms} \textbf{26} (2005),
+110--118.
+
+{[}8{]} T. F. Bloom, ``Erdős Problem \#81,'' \emph{Erdős Problems}.
+Available at \url{https://www.erdosproblems.com/81}. Cited to identify
+the problem; this article does not certify the current review status of
+published proposals.
+
+{[}9{]} J. P. Traverso Gianini and contributors to the assisted
+formalization, ``Minimum-degree and spread matching theorems,''
+contribution to \emph{lean-pool}, PR \#420, 2026. Available at
+\url{https://github.com/Vilin97/lean-pool/pull/420}; merge commit
+\nolinkurl{d1de6d2}, 13 September 2026. The history and file headers retain
+the attribution of the Aristotle-assisted contribution.
+
+{[}10{]} L. de Moura and S. Ullrich, ``The Lean 4 Theorem Prover and
+Programming Language,'' in \emph{Automated Deduction -- CADE 28}, LNCS
+\textbf{12699}, Springer, 2021, 625--635.
+
+{[}11{]} The mathlib Community, ``The Lean Mathematical Library,'' in
+\emph{CPP 2020}, ACM, 2020, 367--381.
+
+{[}12{]} J. P. Traverso Gianini, ``Sum-zero triangle packing
+formalization,'' Paper III contribution to \emph{lean-pool}, PR \#348,
+2026. Available at \url{https://github.com/Vilin97/lean-pool/pull/348};
+merge commit \nolinkurl{540d8e3}, 25 August 2026. See the formalization and
+assistance credits in the sources.
+
+{[}13{]} J. P. Traverso Gianini, \emph{Certo: herramientas
+computacionales con certificados verificables}. Available at
+\url{https://github.com/jtraverso/certo-math}. The version used in the
+experiments must be fixed together with its certificates in the
+supplement.
+
+{[}14{]} Morluto and contributors, \emph{Jacobian: herramientas
+matemáticas componibles}. Available at
+\url{https://github.com/morluto/jacobian}. Component attribution and
+versions are retained in the repository.
+
+{[}15{]} O. Okechukwu, \emph{Clique partitions and bounded simplicial
+defect}, arXiv:2609.20871v1, 15 September 2026. Available at
+\url{https://arxiv.org/abs/2609.20871v1}. Accessed 27 September 2026.
+
+{[}16{]} C. Henderson, H. Koerts, E. Roberge, S. Spirkl, and R. Whitman,
+\emph{Clique Partitions of Split Graphs}, project announced as in
+preparation on R. Whitman's research page:
+\url{https://sites.google.com/view/rebeccawhitman/research}. Accessed 27
+September 2026; the page consulted links no manuscript against which to
+compare its results.
+
+{[}17{]} F. A. Behrend, ``On Sets of Integers Which Contain No Three
+Terms in Arithmetical Progression,'' \emph{Proceedings of the National
+Academy of Sciences} \textbf{32} (1946), 331--332.
+\url{https://doi.org/10.1073/pnas.32.12.331}. The constant used in
+Appendix G.2 corresponds to \nolinkurl{Behrend.roth_lower_bound} in
+Mathlib v4.28.0.
+
+{[}18{]} I. Z. Ruzsa and E. Szemerédi, ``Triple systems with no six
+points carrying three triangles,'' \emph{Combinatorics}, vol.~II,
+Colloquia Mathematica Societatis János Bolyai \textbf{18},
+North-Holland, 1978, 939--945. Author's bibliographic record:
+\url{https://www.renyi.hu/~szemered/pub.html}.
+
+{[}19{]} R. C. Bose, ``On the construction of balanced incomplete block
+designs,'' \emph{Annals of Eugenics} \textbf{9} (1939), 353--399.
+\url{https://doi.org/10.1111/j.1469-1809.1939.tb02219.x}.
+
+{[}20{]} T. Skolem, ``Some Remarks on the Triple Systems of Steiner,''
+\emph{Mathematica Scandinavica} \textbf{6} (1958), 273--280.
+\url{https://tidsskrift.dk/math/article/view/10551}.
+
+{[}21{]} R. Cipollini, partial proof announcement for Erdős Problem
+\#81, 10 August 2026. Author's summary:
+\url{https://www.erdosproblems.com/forum/thread/81/proof-claims\#proof-claim-201};
+linked manuscript: \url{https://www.overleaf.com/read/thjptfhgnmxc}.
+Cited for the announced subquadratic-error bound, not as an
+independently audited input.
+
+{[}22{]} R. de Joannis de Verclos, \emph{Chordal graphs are easily
+testable}, arXiv:1902.06135v1, 16 February 2019. Available at
+\url{https://arxiv.org/abs/1902.06135v1}. The removal argument
+underlying Appendix F.3 is attributed to this work; its implementation
+and adaptations are documented in Appendix F.5.
+
+{[}23{]} N. Alon and A. Shapira, \emph{A characterization of the
+(natural) graph properties testable with one-sided error}, SIAM Journal
+on Computing \textbf{37} (2008), 1703--1727. DOI:
+\url{https://doi.org/10.1137/06064888X}. Used by the historical
+existential assembly and by the unrestricted-classification wrappers
+identified in §3 of this companion, not as the removal theorem selected
+for the explicit public Theorem C.
+
+\end{document}

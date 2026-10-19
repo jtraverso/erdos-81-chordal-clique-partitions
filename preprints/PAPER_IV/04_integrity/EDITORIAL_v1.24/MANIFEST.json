@@ -1,0 +1,428 @@
+{
+  "edition": "Paper IV v1.24; documentary revision and series navigation",
+  "baseline_commit": "ef31294ad67dfe3f44bc47cec4791c836f55e8aa",
+  "scope": "New and changed documentary files; frozen mathematical artifacts unchanged",
+  "no_Lean_Lake_build": true,
+  "files": [
+    {
+      "path": "CITATION.bib",
+      "sha256": "1023d483bf8572bbfba4e4a0b0dd62851f42c364814893cf8f3a059fc501daaa",
+      "bytes": 3009
+    },
+    {
+      "path": "CITATION.cff",
+      "sha256": "08a772897cb0f87341005b512b39b54894c827a8274d372f2745e7c4f5582ddf",
+      "bytes": 870
+    },
+    {
+      "path": "CITATION.md",
+      "sha256": "5f717a197d47e66a031bbe2c810db73001b04f454d56e51c9d28b19cfbaf1eff",
+      "bytes": 1644
+    },
+    {
+      "path": "PUBLICATION_INDEX.json",
+      "sha256": "70aafddecb7eb5f2fc2f302c98e9a81f35194398f8f018c40cb6c23eff7c2ec2",
+      "bytes": 2532
+    },
+    {
+      "path": "README.md",
+      "sha256": "57bf094d12fe5abee8d0747f2c4ffbc05d0566a0aee1e365f478e13a8d472580",
+      "bytes": 7062
+    },
+    {
+      "path": "index.html",
+      "sha256": "ed5873106b6efa74459ad3c41d3197164ada7fff7176072896fa448a11f29fd8",
+      "bytes": 6325
+    },
+    {
+      "path": "preprints/PAPER_I/README.md",
+      "sha256": "8435a18f36d22224d68b1a85264b012de8cdf278039403ced7c73917cb108f5b",
+      "bytes": 4053
+    },
+    {
+      "path": "preprints/PAPER_II/README.md",
+      "sha256": "4bf8fe7496fc34c77409ae4580018a39d380301334e067db8d2db9b3f0d0f63e",
+      "bytes": 4124
+    },
+    {
+      "path": "preprints/PAPER_III/README.md",
+      "sha256": "69ced1cc1f89d4d8df5244ed7c21e1a9c3fdeb4f584b658a18f02810253ff5dd",
+      "bytes": 4481
+    },
+    {
+      "path": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.24_en.md",
+      "sha256": "c654644a9f30b5d88035e19dd77b32ae807ebeb884c816432bd8f706852fb9ca",
+      "bytes": 192534
+    },
+    {
+      "path": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.24_en.pdf",
+      "sha256": "ed4962209b1d923c7e6c04da86722ae7140686c65346eeeccbe98043880bdafe",
+      "bytes": 450900
+    },
+    {
+      "path": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.24_en.tex",
+      "sha256": "6c1a64a5dcc4b0f268ad9bd530cd5a4dbba3d4011b78fe16c2973a501d747b69",
+      "bytes": 206805
+    },
+    {
+      "path": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.24_es.md",
+      "sha256": "fbaa3fc4466a73606ebf1f95cac63628ae89443fc40a94c49292fa7f1f403090",
+      "bytes": 204925
+    },
+    {
+      "path": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.24_es.pdf",
+      "sha256": "ffe7c013d231c8213fd5d36b2fc65ee39c19bd4d1c097707f34fad6fc669f0bb",
+      "bytes": 457226
+    },
+    {
+      "path": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.24_es.tex",
+      "sha256": "9c319b559cb445523d9f4055bb07e995a9c692ff770284b88044e41f79be0dd6",
+      "bytes": 219802
+    },
+    {
+      "path": "preprints/PAPER_IV/01_manuscript/README.md",
+      "sha256": "c09d010d70abb4557ef34dc5047e10a8ec0c9a7473e05fbf18d38813e0f7a350",
+      "bytes": 644
+    },
+    {
+      "path": "preprints/PAPER_IV/01_manuscript/figures/proof_map_v124.pdf",
+      "sha256": "a23711b8f4482a37a53ec4e7f48002417e9cfae452f560bbe9bec57239751053",
+      "bytes": 27997
+    },
+    {
+      "path": "preprints/PAPER_IV/01_manuscript/figures/proof_map_v124.png",
+      "sha256": "0a65a00bd4bf48ad96087500a6f514c87045b057bfa397565f03f6293ffd724e",
+      "bytes": 83813
+    },
+    {
+      "path": "preprints/PAPER_IV/01_manuscript/figures_en/proof_map_v124.pdf",
+      "sha256": "fc9bd3af6f40cd85b11baf0c47f9284df1b1921a3e7b76c820073f49ec45c66e",
+      "bytes": 27220
+    },
+    {
+      "path": "preprints/PAPER_IV/01_manuscript/figures_en/proof_map_v124.png",
+      "sha256": "c12d25b5edece70053a3ad37c60bdeaeaa7a20212cd8c2307384d7f964da4717",
+      "bytes": 80344
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/00_CONTROL/AUDIT_PLAN.md",
+      "sha256": "2012e36eeaa02e49a9bbbe92ac0ac03b8c075950ed680bddbbb06d4ca549064f",
+      "bytes": 1641
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/00_CONTROL/audit_release.py",
+      "sha256": "9043b1ca838d3cd4b3eb89045e2e9556fc54d0292a4e98d08a7f983e84163b1b",
+      "bytes": 7928
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/10_REPORT/FINAL_INTERNAL_AUDIT_REPORT.md",
+      "sha256": "d02d50e0edf7f356140f9212f8a503672bbe7ce4e436733c8ac695883c8f70a0",
+      "bytes": 5964
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/AUTOMATED_CHECKS.json",
+      "sha256": "1b1929151953c110a5b307dc589f5b1c78ef42036554612c619a56b986535e8a",
+      "bytes": 4964
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/CORRECTIVE_ACTIONS.json",
+      "sha256": "fd1f765d528d0c92098a86b144f452d54c87e5ce8365da7240a34d704ae63d77",
+      "bytes": 876
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/DELTA_FORMALIZATION_COMPANION_v1.24_en.patch",
+      "sha256": "c81a4ef38ba56b8a75bae401948863448178cd54bd1336cbf5c1f994184c4652",
+      "bytes": 6060
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/DELTA_FORMALIZATION_COMPANION_v1.24_es.patch",
+      "sha256": "5deb5fdfe304fd87d10d1f89e5df466889e941779ddb38d33c344607790fdb56",
+      "bytes": 6555
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/DELTA_PAPER_IV_preprint_v1.24_en.patch",
+      "sha256": "d949343b8ef3b0ce3b4ab5d19cd5d6afaa046bdb8bbda7c35367c91476fd50e5",
+      "bytes": 4257
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/DELTA_PAPER_IV_preprint_v1.24_es.patch",
+      "sha256": "a6581406162da06c553f96bb756b822930acfccdf67b787fd86a164cc59a73f1",
+      "bytes": 4425
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/DIFF_V123_TO_V124_en.patch",
+      "sha256": "95b49165125ef4f7258b7cbe68a0e8e1a9def230930cbd825b805309a925cc51",
+      "bytes": 133056
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/DIFF_V123_TO_V124_es.patch",
+      "sha256": "e14d95266c60355a053d983a32ad6cda38780e86174473a7842826f58fb1d3cc",
+      "bytes": 143642
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/EDITORIAL_OPERATIONS_LOCAL_STAGE.json",
+      "sha256": "00040cbd960cdeb15e60225084548def67fafceeaeffe5674e4ce68383eb885b",
+      "bytes": 375033
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/EXISTING_PREMISE_EXPANSION.md",
+      "sha256": "900a9cfe89e54bc4b874cf7e5c40e732f7772a116a94ae01ea42b9bfa32999ce",
+      "bytes": 658
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/FROZEN_IDENTITY.json",
+      "sha256": "52fa2094a187e35edd2cbe02524d4d8fb9a061268e2ea898a43a4433612c3fa1",
+      "bytes": 94823
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/NAVIGATION_CHECKS.json",
+      "sha256": "d5481111bc326b15441d439361951e73940276615e7abaa68bb5cd399403e50c",
+      "bytes": 264
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/RELEASE_DELTA.json",
+      "sha256": "66d7a4aca1519a754dc27ea29edc767b5ba2c4082515f73bf8828d78fe0fa00a",
+      "bytes": 8043
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/RENDER_BINDING.json",
+      "sha256": "a742160db89f7367ebe56547e551e14e3a3f6dcca8d639e7fc70e1488ea2d8ab",
+      "bytes": 1523
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/FORMALIZATION_COMPANION_v1.24_en/contact_01.png",
+      "sha256": "f227877636bbb39ffa5eb83f4dd54830923d4612753db56daecd648d72782aa7",
+      "bytes": 1103818
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/FORMALIZATION_COMPANION_v1.24_en/contact_02.png",
+      "sha256": "b885d98c3af6cb734e99f62ba150e296054bb4e19b9e8e2ce3dac90bc4a6a3b9",
+      "bytes": 63374
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/FORMALIZATION_COMPANION_v1.24_en/page-01.png",
+      "sha256": "a43e4b1dcaa719e538aad7ca24b81b86e76a3e718ac637084f51418184bd7959",
+      "bytes": 206440
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/FORMALIZATION_COMPANION_v1.24_en/page-03.png",
+      "sha256": "7c49904d91fc907f591e6a5919783d8d2e02ab5487816d8bbe34286a1353dba2",
+      "bytes": 239524
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/FORMALIZATION_COMPANION_v1.24_es/contact_01.png",
+      "sha256": "d073015734ed2984968f49f0a9ecf162facce8b16b9bfe3bc2640bfdb306606b",
+      "bytes": 1106318
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/FORMALIZATION_COMPANION_v1.24_es/contact_02.png",
+      "sha256": "65a7594d0328b8a1393a2117883edfc5199e90284826fa3e5095cb6711ce8400",
+      "bytes": 106325
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/FORMALIZATION_COMPANION_v1.24_es/page-10.png",
+      "sha256": "6cf955838853607966e53ac28e9af4dc59f27a6229f635d6ac59e8b87e86d7b6",
+      "bytes": 221611
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_en/contact_01.png",
+      "sha256": "9382a351222f71de11f738552890d942be8b00061768b7dc2405672b27cfd6b7",
+      "bytes": 1030997
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_en/contact_02.png",
+      "sha256": "baf1e99432d348b98e22c53afbfe02d07775a3fd26de29c391e3bee0f82de031",
+      "bytes": 1008494
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_en/contact_03.png",
+      "sha256": "eba8eb55edc94cd81fda6aae0d0583b82ac8e7105db1395a285238355e0ded6a",
+      "bytes": 969797
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_en/contact_04.png",
+      "sha256": "e5a48f854af2e18e1d684b0dab79d716ce6fad0ac8fb18aa1c1ae5eae05e4fe2",
+      "bytes": 1019848
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_en/contact_05.png",
+      "sha256": "c040f663d5792e3279b8c392b606a2e03fcd35285531072e2cfac373be5707ed",
+      "bytes": 1110616
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_en/contact_06.png",
+      "sha256": "90908fbb4d1617d5c3d155a0b8135845f8bbf28c20ccbf3fdcb9c61db20e2117",
+      "bytes": 95906
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_en/page-04.png",
+      "sha256": "d308c626f7b1dd50200a678018d99e27d58859c229f45949c7810f0cddcebdef",
+      "bytes": 251033
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_en/page-05.png",
+      "sha256": "aabf4babadaa928824165e382caefa4094fc68a61176e4553f4add428ca555ec",
+      "bytes": 242409
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_en/page-56.png",
+      "sha256": "2a1eccb87012a2d22b028c4f34c6eeb285447b9d9d387ffdcc0bbf493823e2fa",
+      "bytes": 234739
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_es/contact_01.png",
+      "sha256": "c63ed7fdf9a5e426e188346e81e8a3bb25a266e405e36f58e33a86a4ffe5d191",
+      "bytes": 1045983
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_es/contact_02.png",
+      "sha256": "283af1a9c2445269986fcd14377cad2e03aae06ba0e2a2c9b135890c0cab86c4",
+      "bytes": 1014595
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_es/contact_03.png",
+      "sha256": "29909270411a4ce4a203e3c31bf4a370463d1d70573a1193234c656a6c2fda36",
+      "bytes": 986957
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_es/contact_04.png",
+      "sha256": "09870c786011a99bcae95583c03eff2ffb93ad9272f834bd8bd4f27a17a34c06",
+      "bytes": 1059258
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_es/contact_05.png",
+      "sha256": "3fbad7fd8048559bce3aa4e82deac15840ea814003260afa64a6fecf836831ca",
+      "bytes": 1058125
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_es/contact_06.png",
+      "sha256": "281cc155489378c0ab380b6da8488763bd187916c10f38157563115a7a99331a",
+      "bytes": 308082
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_es/page-06.png",
+      "sha256": "0a0c707b5e2ec2236f4de85d39a3e378be7cd18d48bd7dedd5344fc83f696f76",
+      "bytes": 211199
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/20_EVIDENCE/visual/PAPER_IV_preprint_v1.24_es/page-58.png",
+      "sha256": "193cd32dcb1273b4d7b72253a81b0cda8b43fe04a6b1d643ce2ff1c0c9dfdada",
+      "bytes": 239223
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/30_LOGS/FORMALIZATION_COMPANION_v1.24_en.log",
+      "sha256": "aff80ec9dd54f29aca43f1f854f5db8bffab626ff4fc8786ec4b07b27b7470bc",
+      "bytes": 27337
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/30_LOGS/FORMALIZATION_COMPANION_v1.24_en_compile.txt",
+      "sha256": "6c32d27bfc2b7f30d2a780023e280661106ce993f5db3c0f347800b474596722",
+      "bytes": 428
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/30_LOGS/FORMALIZATION_COMPANION_v1.24_es.log",
+      "sha256": "643779e75b4c47a276d117637bcbca8724b114c263dcba586a7a6f937b5ba70d",
+      "bytes": 27258
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/30_LOGS/FORMALIZATION_COMPANION_v1.24_es_compile.txt",
+      "sha256": "cb761d45877bda82aeff0627d3d6320b73bb970e849567b711272e994ce50a26",
+      "bytes": 425
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/30_LOGS/PAPER_IV_preprint_v1.24_en.log",
+      "sha256": "d8fa64c6067c98efdcd99b0b29651b6a3ebefb4851faf4b9411ed6ff46fa9788",
+      "bytes": 27035
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/30_LOGS/PAPER_IV_preprint_v1.24_en_compile.txt",
+      "sha256": "b5fa59c25136a455e8dcfab5dd3f1ec3f2ee4f41c3ba027ff1094a4e924dafac",
+      "bytes": 404
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/30_LOGS/PAPER_IV_preprint_v1.24_es.log",
+      "sha256": "ab0039e0b3ec6a3a6997219668d50b346b69b397fd57edde23d739a8895a98e5",
+      "bytes": 27211
+    },
+    {
+      "path": "preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/30_LOGS/PAPER_IV_preprint_v1.24_es_compile.txt",
+      "sha256": "328e01a56b90a5c760d602ce64030ecf1be8fdf195cdbd2c23cdca6060f4913d",
+      "bytes": 721
+    },
+    {
+      "path": "preprints/PAPER_IV/03_reproducibility/editorial_v1.24/README.md",
+      "sha256": "f199ddd04a7e03d988c4185c65403d19335f73fcaeabc81ed69b42af1b7d9c6e",
+      "bytes": 1193
+    },
+    {
+      "path": "preprints/PAPER_IV/03_reproducibility/editorial_v1.24/compile_documents.py",
+      "sha256": "7650b1e113b1b965c7dff9ddab041a021b52f08b88889ab20b70666c375634d9",
+      "bytes": 456
+    },
+    {
+      "path": "preprints/PAPER_IV/04_integrity/EDITORIAL_v1.24/README.md",
+      "sha256": "bca6be413cf4508ab60034bf5bd74c21265582f0f9cd4cbe0a9be02b6526a27d",
+      "bytes": 944
+    },
+    {
+      "path": "preprints/PAPER_IV/04_integrity/EDITORIAL_v1.24/verify_editorial.py",
+      "sha256": "67f2dcc86393a274fa52520a767c2360ba35346d297340043d8bcaf0cd6346a8",
+      "bytes": 542
+    },
+    {
+      "path": "preprints/PAPER_IV/05_formalization/FORMALIZATION_COMPANION_v1.24_en.md",
+      "sha256": "e59d0af869ee5c67cbe13c54ed478546fa63ae435cc67f11ee9659278880f060",
+      "bytes": 41170
+    },
+    {
+      "path": "preprints/PAPER_IV/05_formalization/FORMALIZATION_COMPANION_v1.24_en.pdf",
+      "sha256": "26f832db28b7abebd0d9020adbacbbfdcc2411d6ca843afe898b649009efbb1f",
+      "bytes": 99275
+    },
+    {
+      "path": "preprints/PAPER_IV/05_formalization/FORMALIZATION_COMPANION_v1.24_en.tex",
+      "sha256": "05287884a90a6b3d65c95dc6c4f2a6c69d9ec60fa928cfe831aff0b1d9923557",
+      "bytes": 61343
+    },
+    {
+      "path": "preprints/PAPER_IV/05_formalization/FORMALIZATION_COMPANION_v1.24_es.md",
+      "sha256": "8220784a511cc3d931b6dfaff991a7f7d3b9651e6bf20aaa4b5c79403f4c03f7",
+      "bytes": 43841
+    },
+    {
+      "path": "preprints/PAPER_IV/05_formalization/FORMALIZATION_COMPANION_v1.24_es.pdf",
+      "sha256": "80a1874594a03b7359d882bc289d6916521011497c6f84ecf0e198ace5f7647f",
+      "bytes": 98828
+    },
+    {
+      "path": "preprints/PAPER_IV/05_formalization/FORMALIZATION_COMPANION_v1.24_es.tex",
+      "sha256": "5b5cbf9e13efeb1b7e2813751cc8ae288998d00b6f3906f0103d23794fcd3077",
+      "bytes": 64471
+    },
+    {
+      "path": "preprints/PAPER_IV/05_formalization/typeset_runtime/seguisym.ttf",
+      "sha256": "a4a35dcc62cd30e1a6c97b695ecef83e59d2b149e3af834f6a49f11851d56b37",
+      "bytes": 2514056
+    },
+    {
+      "path": "preprints/PAPER_IV/CHANGELOG_v1.24.md",
+      "sha256": "0c5a4bb7c0a3d93004f37f15b6cfdc9e14a09e15fa6b5f6bc04ac7906b49679c",
+      "bytes": 3644
+    },
+    {
+      "path": "preprints/PAPER_IV/CITATION.cff",
+      "sha256": "c294bc0839d4c23cc03db1aa736d1c163d19cf4646c48b2ca5984ca0937a2f55",
+      "bytes": 553
+    },
+    {
+      "path": "preprints/PAPER_IV/README.md",
+      "sha256": "acda176ea8db48f332266dc1cccabff95b5318e3f2c9dbe628454ae5903e53a9",
+      "bytes": 4564
+    },
+    {
+      "path": "preprints/PAPER_IV/index.html",
+      "sha256": "1c12185f4d57055bb1d7ccd89b4d7da4044cd8c8e874349cb532dd6b29b6b191",
+      "bytes": 2724
+    }
+  ]
+}

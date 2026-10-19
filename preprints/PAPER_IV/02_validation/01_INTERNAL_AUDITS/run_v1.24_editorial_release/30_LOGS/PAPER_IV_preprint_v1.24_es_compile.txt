@@ -1,0 +1,11 @@
+note: Running TeX ...
+note: Rerunning TeX because "PAPER_IV_preprint_v1.24_es.aux" changed ...
+note: Running xdvipdfmx ...
+note: Writing `PAPER_IV_preprint_v1.24_es.log` (26.5732421875 KiB)
+note: Writing `PAPER_IV_preprint_v1.24_es.pdf` (446.509765625 KiB)
+note: Writing `PAPER_IV_preprint_v1.24_es.aux` (21.7314453125 KiB)
+
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: PAPER_IV_preprint_v1.24_es.tex:2928: Underfull \hbox (badness 1127) in paragraph at lines 2925--2928
+warning: PAPER_IV_preprint_v1.24_es.tex:2928: Underfull \hbox (badness 1127) in paragraph at lines 2925--2928
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

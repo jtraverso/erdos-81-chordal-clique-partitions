@@ -11,4 +11,6 @@ Papers I v1.3, II v1.2, III v1.5 and IV v1.23 are deposited at [10.5281/zenodo.2
 
 See [CITATION.bib](CITATION.bib) for individual bibliography entries. Earlier public versions and their audit evidence remain unchanged.
 
-The current collection, including all four Preprint 1.0 works and their companions, is [10.5281/zenodo.23459196](https://doi.org/10.5281/zenodo.23459196). This DOI identifies the collection; name the individual work when citing it.
+The preceding collection, including all four Preprint 1.0 works and their companions, is [10.5281/zenodo.23459196](https://doi.org/10.5281/zenodo.23459196). This DOI identifies the collection; name the individual work when citing it.
+
+Paper IV v1.24 is an editorial revision with an unchanged Lean freeze. See its [changelog](preprints/PAPER_IV/CHANGELOG_v1.24.md) and [current package](preprints/PAPER_IV/README.md).

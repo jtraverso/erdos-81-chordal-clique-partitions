@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "scope": "Editorial invariants and historical freeze identity; no fresh kernel execution, bibliography search or independent proof audit. Visual judgment is recorded separately.",
+  "semantic": [
+    {
+      "language": "en",
+      "baseline_sha256": "5830ad32dfaf5325a953687576b940eb0d935254f254c1be9789d083693d3337",
+      "checks": {
+        "237_displays_preserved": true,
+        "238_displays_after": true,
+        "existing_F5_premise_only": true,
+        "original_display_order": true,
+        "labels_unchanged": true,
+        "33_named_headings_unchanged": true,
+        "literal_Lean_excerpts_preserved": true,
+        "main_has_no_Lean_code_fences": true
+      }
+    },
+    {
+      "language": "es",
+      "baseline_sha256": "43603a163dfebf2214f14b55d8a81f8c3c6b6b2517e1889abf232b164a7ce94f",
+      "checks": {
+        "237_displays_preserved": true,
+        "238_displays_after": true,
+        "existing_F5_premise_only": true,
+        "original_display_order": true,
+        "labels_unchanged": true,
+        "33_named_headings_unchanged": true,
+        "literal_Lean_excerpts_preserved": true,
+        "main_has_no_Lean_code_fences": true
+      }
+    }
+  ],
+  "documents": [
+    {
+      "file": "01_manuscript/PAPER_IV_preprint_v1.24_en.md",
+      "md_sha256": "c654644a9f30b5d88035e19dd77b32ae807ebeb884c816432bd8f706852fb9ca",
+      "tex_sha256": "6c1a64a5dcc4b0f268ad9bd530cd5a4dbba3d4011b78fe16c2973a501d747b69",
+      "pdf_sha256": "ed4962209b1d923c7e6c04da86722ae7140686c65346eeeccbe98043880bdafe",
+      "pages": 61,
+      "checks": {
+        "render_hash": true,
+        "no_clipping_flags": true,
+        "compiled_final_tex": true,
+        "compiler_names_pdf": true,
+        "no_missing_citations": true,
+        "no_duplicate_packages": true,
+        "no_local_review_status": true,
+        "no_private_paths": true,
+        "no_escaped_space_url_macro": true
+      },
+      "typesetting_errors": []
+    },
+    {
+      "file": "05_formalization/FORMALIZATION_COMPANION_v1.24_en.md",
+      "md_sha256": "e59d0af869ee5c67cbe13c54ed478546fa63ae435cc67f11ee9659278880f060",
+      "tex_sha256": "05287884a90a6b3d65c95dc6c4f2a6c69d9ec60fa928cfe831aff0b1d9923557",
+      "pdf_sha256": "26f832db28b7abebd0d9020adbacbbfdcc2411d6ca843afe898b649009efbb1f",
+      "pages": 13,
+      "checks": {
+        "render_hash": true,
+        "no_clipping_flags": true,
+        "compiled_final_tex": true,
+        "compiler_names_pdf": true,
+        "no_missing_citations": true,
+        "no_duplicate_packages": true,
+        "no_local_review_status": true,
+        "no_private_paths": true,
+        "no_escaped_space_url_macro": true
+      },
+      "typesetting_errors": []
+    },
+    {
+      "file": "01_manuscript/PAPER_IV_preprint_v1.24_es.md",
+      "md_sha256": "fbaa3fc4466a73606ebf1f95cac63628ae89443fc40a94c49292fa7f1f403090",
+      "tex_sha256": "9c319b559cb445523d9f4055bb07e995a9c692ff770284b88044e41f79be0dd6",
+      "pdf_sha256": "ffe7c013d231c8213fd5d36b2fc65ee39c19bd4d1c097707f34fad6fc669f0bb",
+      "pages": 63,
+      "checks": {
+        "render_hash": true,
+        "no_clipping_flags": true,
+        "compiled_final_tex": true,
+        "compiler_names_pdf": true,
+        "no_missing_citations": true,
+        "no_duplicate_packages": true,
+        "no_local_review_status": true,
+        "no_private_paths": true,
+        "no_escaped_space_url_macro": true
+      },
+      "typesetting_errors": []
+    },
+    {
+      "file": "05_formalization/FORMALIZATION_COMPANION_v1.24_es.md",
+      "md_sha256": "8220784a511cc3d931b6dfaff991a7f7d3b9651e6bf20aaa4b5c79403f4c03f7",
+      "tex_sha256": "5b5cbf9e13efeb1b7e2813751cc8ae288998d00b6f3906f0103d23794fcd3077",
+      "pdf_sha256": "80a1874594a03b7359d882bc289d6916521011497c6f84ecf0e198ace5f7647f",
+      "pages": 13,
+      "checks": {
+        "render_hash": true,
+        "no_clipping_flags": true,
+        "compiled_final_tex": true,
+        "compiler_names_pdf": true,
+        "no_missing_citations": true,
+        "no_duplicate_packages": true,
+        "no_local_review_status": true,
+        "no_private_paths": true,
+        "no_escaped_space_url_macro": true
+      },
+      "typesetting_errors": []
+    }
+  ],
+  "bilingual": [
+    {
+      "document": "01_manuscript",
+      "en_fragments": 2213,
+      "es_fragments": 2213,
+      "math_multiset_identical": true,
+      "ordered_identical": false,
+      "note": "The single translated inline z occurrence has different prose order; mathematical multisets agree."
+    },
+    {
+      "document": "05_formalization",
+      "en_fragments": 18,
+      "es_fragments": 18,
+      "math_multiset_identical": true,
+      "ordered_identical": true,
+      "note": "The single translated inline z occurrence has different prose order; mathematical multisets agree."
+    }
+  ],
+  "issues": []
+}

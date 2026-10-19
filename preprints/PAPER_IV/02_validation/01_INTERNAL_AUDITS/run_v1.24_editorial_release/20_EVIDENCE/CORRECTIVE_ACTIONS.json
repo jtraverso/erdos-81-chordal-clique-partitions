@@ -1,0 +1,25 @@
+{
+  "actions": [
+    {
+      "id": "PUB-01",
+      "finding": "Windows default text decoder altered non-ASCII characters in navigation/citation metadata during assembly",
+      "affected": [
+        "CITATION.bib",
+        "CITATION.cff",
+        "CITATION.md",
+        "PUBLICATION_INDEX.json"
+      ],
+      "repair": "Restore baseline bytes and reapply scoped transformations with explicit UTF-8",
+      "status": "CLOSED",
+      "mathematics_or_Lean_affected": false
+    },
+    {
+      "id": "PUB-02",
+      "finding": "Verifier resolved the Windows junction to a path longer than 260 characters and reported inaccessible files as mismatches",
+      "repair": "Use extended Windows path syntax for filesystem verification; rerun on all 84 entries",
+      "status": "CLOSED",
+      "artifact_bytes_affected": false
+    }
+  ],
+  "open_actions": 0
+}

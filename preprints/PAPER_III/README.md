@@ -1,97 +1,47 @@
-# Paper III — Official preprint release v1.5
+# Paper III — Preprint v1.5
 
-**Title:** *Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing*  
-**Author:** Juan Pablo Traverso Gianini  
-**Release date:** 2026-08-23  
-**Status:** official author preprint; externally AI-audited; not human peer-reviewed  
-**Novelty boundary:** corpus-bounded review; no specialist priority determination
+**Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing**  
+Juan Pablo Traverso Gianini · 23 August 2026
 
-Paper III v1.5 is the first formal public preprint release of Paper III. It
-resolves the split-graph case of Erdős Problem #81 at the conjectured sharp
-quadratic scale `n²/6 + O(n)`. It does not resolve the full chordal-graph
-problem.
+| Language | Manuscript | Typesetting source | Semantic source | Formal sources |
+|---|---|---|---|---|
+| EN | [PDF](01_manuscript/PAPER_III_preprint_v1.5_en.pdf) | [TeX](01_manuscript/PAPER_III_preprint_v1.5_en.tex) | [Markdown](01_manuscript/PAPER_III_preprint_v1.5.md) | [Lean and evidence](05_formalization/) |
+| ES | [PDF](01_manuscript/PAPER_III_preprint_v1.5_es.pdf) | [TeX](01_manuscript/PAPER_III_preprint_v1.5_es.tex) | [Markdown](01_manuscript/PAPER_III_preprint_v1.5_es.md) | [Lean and evidence](05_formalization/) |
 
-## Read the paper
+For split graphs, the paper constructs edge-disjoint triangles with `|E(G)| − 2ν₃(G) ≤ n²/6 + Cn`, for an absolute constant C. Completing uncovered edges gives a clique partition at the same scale. The quadratic coefficient 1/6 is sharp; the least linear coefficient is not determined.
 
-- [English PDF](01_manuscript/PAPER_III_preprint_v1.5_en.pdf)
-- [Spanish PDF](01_manuscript/PAPER_III_preprint_v1.5_es.pdf)
-- [English Markdown](01_manuscript/PAPER_III_preprint_v1.5.md)
-- [Spanish Markdown](01_manuscript/PAPER_III_preprint_v1.5_es.md)
-- [Bilingual plain-language explainer](PaperIII_explained_4_levels.html)
+Para grafos split, el artículo construye triángulos disjuntos por aristas con `|E(G)| − 2ν₃(G) ≤ n²/6 + Cn`, para una constante absoluta C. Completar las aristas restantes produce una partición en cliques a la misma escala. El coeficiente cuadrático 1/6 es óptimo; no se determina el menor coeficiente lineal.
 
-## Audit continuity from v1.4 to v1.5
+## Place in the series / Lugar en la serie
 
-The mathematical manuscript and Lean freeze were audited as the unpublished
-`preprint_draft_v1.4` target. That exact package is preserved at
-[`superseded/unpublished_audited_draft_v1.4/`](superseded/unpublished_audited_draft_v1.4/).
+The proof treats the bulk and extremal corridors separately, combining fractional margin with explicit constructions. Its nibble infrastructure is reused in Paper IV. The split-graph result alone does not imply the full chordal result.
 
-The v1.4 mathematical, computational and Lean conclusions remain applicable to
-v1.5 because the theorem core, definitions, constants, proof architecture,
-formulas, citations, Lean source tree and frozen ZIP are unchanged. In
-particular:
+The manuscripts retain their original publication context. References in them to the full chordal problem as open describe that earlier stage; [Paper IV](../PAPER_IV/README.md) contains the subsequent bound and structural results. The manuscript and Lean versions of this paper have not changed in the present navigation update.
 
-- [the complete v1.4 internal audit](02_validation/01_INTERNAL_AUDITS/run_2026-08-22_v1.4/10_REPORT/INTERNAL_AUDIT_FINAL_REPORT.md)
-  closed with `PASS` after 144/144 checks;
-- [the v1.4 external residual audit](02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-22_v1.4_residual/30_REPORT/FINAL_AUDIT_REPORT.md)
-  independently rederived the analytic core and completed an uninterrupted
-  clean-room Lean reproduction;
-- [the final v1.4 external challenger report](02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-23_v1.4_challenger/30_REPORT/FINAL_AUDIT_REPORT.md)
-  closed with `PASS`, with no blocker, major finding or open minor finding;
-- [the separate clean author reproduction](03_reproducibility/author_build_evidence/run_2026-08-23_clean_PASS/README.md)
-  is retained as corroborating build evidence.
+Los manuscritos conservan su contexto de publicación original. Las menciones al problema cordal completo como abierto corresponden a esa etapa; [Paper IV](../PAPER_IV/README.md) contiene la cota posterior y los resultados estructurales. Esta actualización del README no modifica el manuscrito ni sus fuentes Lean.
 
-The v1.5 delta is deliberately narrow: release-status promotion; explicit
-`simple` in Theorem 2.2; three one-line Appendix D justifications already
-checked by the external challenger; removal of a duplicated rendered author
-block; correction of the PDF author metadata; and synchronized English/Spanish
-format regeneration. These changes are documented in
-[`CHANGELOG_v1.5.md`](CHANGELOG_v1.5.md) and covered by the v1.5 internal
-[residual audit](02_validation/01_INTERNAL_AUDITS/run_2026-08-23_v1.5_internal_residual/10_REPORT/FINAL_INTERNAL_RESIDUAL_AUDIT_REPORT.md),
-which closed with `PASS` after 79/79 checks, including the added stale-evidence
-shadowing controls from `EXT-V15-M01`. The independent v1.5 residual audit
-verified all gates but initially preserved one non-mathematical minor finding;
-the subsequent [external closure report](02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-23_v1.5_residual_closure/30_REPORT/FINAL_CLOSURE_REPORT.md)
-closed that finding after 10/10 checks and issued the consolidated verdict
-`PASS`. No earlier audit report has been rewritten. The audited release is now
-ready for the public repository commit and tag.
+## Reading and verification / Lectura y verificación
 
-## Formalization
+- [Bilingual explanation at four levels](PaperIII_explained_4_levels.html).
+- [Recorded final external AI-audit report](02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-23_v1.5_residual_closure/30_REPORT/FINAL_CLOSURE_REPORT.md).
+- [Formal source package and its recorded evidence](05_formalization/).
+- [Reproduction records](03_reproducibility/) · [Integrity manifests](04_integrity/).
+- [Previous README, including the full release and audit history](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_III/README.md).
+- [Papers I–III deposited edition](https://doi.org/10.5281/zenodo.22064657) · [Series concept DOI](https://doi.org/10.5281/zenodo.21273143).
 
-The release carries the immutable source-only freeze
-[`05_formalization/lean_v1.4_freeze/`](05_formalization/lean_v1.4_freeze/).
-Its archive is `PAPER_III_lean_v1.4_freeze.zip`, SHA-256
-`79ee24c38fd776bc2585a0c3c996e30817f0829fc5064463bdbde0fa2d3d7104`.
+The recorded AI-assisted audits are distinct from human peer review. Their scope, build targets and axiom checks are documented in the linked evidence. This README update does not perform a new Lean build or assert a new determination of historical priority.
 
-The external clean-room run compiled the public root in 8,455 jobs, the query
-roots in 8,444 jobs, and all eight axiom-query files. The designated theorem
-surfaces have foundational footprint
-`[propext, Classical.choice, Quot.sound]`, with no project mathematical axiom
-and no `sorryAx` on the public theorem path.
+Las auditorías asistidas por IA se distinguen de la revisión humana por pares. Su alcance, compilaciones y comprobaciones de axiomas figuran en las evidencias enlazadas. Esta actualización no ejecuta Lean ni formula una nueva reclamación de prioridad.
 
-## Package
+## Package / Estructura
 
-```text
-01_manuscript/       Markdown, LaTeX, PDF, figures and artifact hashes
-02_validation/       Internal and independent external adversarial audits
-03_reproducibility/  Manuscript builds, rendered QA and Lean build evidence
-04_integrity/        Release manifests, provenance and semantic-diff records
-05_formalization/    Immutable Lean v1.4 frozen source and archive
-figures/             Images used by the GitHub-rendered explainer
-superseded/          Unpublished historical and audited precursor packages
-```
+`01_manuscript/`: published English and Spanish manuscripts, figures and hashes.  
+`02_validation/`: internal and external AI-audit reports.  
+`03_reproducibility/`: reproduction instructions and recorded builds.  
+`04_integrity/`: original release manifests and provenance.  
+`05_formalization/`: unchanged frozen Lean sources and verification evidence.  
+`superseded/`: historical packages, with their original status retained.
 
-## Historical status
+Documents: CC BY-NC 4.0. Existing source and dependency licenses remain applicable; see the [series license](../../LICENSE.md). This navigation revision does not relicense any material.
 
-Paper III had no preceding formal public release. The earlier repository-local
-v1.0 package is retained at
-[`superseded/unpublished_local_preprint_v1.0/`](superseded/unpublished_local_preprint_v1.0/)
-as historical material; it is not represented as a prior official release.
-
-The manuscript and audits do not constitute human peer review. Negative
-literature-search conclusions are limited to the sources actually examined.
-
-## License
-
-The manuscript and explanatory materials are released under CC BY-NC 4.0.
-The Lean development depends on Mathlib and retains applicable upstream license
-notices.
+The author-owned `Ax2` sources also have the [specific Apache-2.0 source-code grant](../../LEAN_SOURCE_APACHE_2_0_GRANT.md). The frozen source archive remains SHA-256 `79ee24c38fd776bc2585a0c3c996e30817f0829fc5064463bdbde0fa2d3d7104`.

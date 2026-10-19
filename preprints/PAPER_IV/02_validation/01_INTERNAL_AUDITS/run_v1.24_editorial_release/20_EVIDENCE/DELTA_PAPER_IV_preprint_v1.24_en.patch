@@ -1,0 +1,57 @@
+--- audited-local/PAPER_IV_v1.24_en.md
++++ publication/PAPER_IV_preprint_v1.24_en.md
+@@ -6,7 +6,7 @@
+ [ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
+ 
+ **Paper IV in the series**  
+-**Local editorial review:** version 1.24.  
++**Preprint:** version 1.24.  
+ **Date:** October 19, 2026.
+ 
+ **MSC 2020:** Primary 05C70; secondary 05C35, 05C72.
+@@ -117,8 +117,8 @@
+ \boxed{
+ e(G)-g(\mathcal P)\le M(n)
+ \quad\Longleftrightarrow\quad
+-W^*(G)-g(\mathcal P)\le\Delta(G).
+-}
++W^*(G)-g(\mathcal P)\le\Delta(G)
++}.
+ \tag{1.3}
+ \]
+ The inequality on the right has a direct interpretation. The quantity \(W^*(G)-g(\mathcal P)\) measures the gain lost in passing from the fractional optimum to the constructed packing; \(\Delta(G)\) measures the margin left by that optimum relative to \(M(n)\). If the loss does not exceed the margin, the completed partition has at most \(M(n)\) pieces. We call this comparison the **loss budget**. The identity does not specify how to choose \(\mathcal P\): it can be used to check any construction of edge-disjoint copies.
+@@ -163,8 +163,8 @@
+ \boxed{
+ F_4(G)<\frac{n^2}{6}-\eta_0n^2
+ \quad\text{or}\quad
+-\exists\,\text{near-structure witness for }G.
+-}
++\exists\,\text{near-structure witness for }G
++}.
+ \tag{1.5}
+ \]
+ The witness includes a complete-split comparator, a root that is a clique of \(G\), and a packing of the original graph with its physical accounting. The alternatives are exhaustive; the existence of the witness is not asserted to be incompatible with a quadratic margin. This is not merely a metric condition: it retains the resources needed to complete the partition.
+@@ -2314,7 +2314,7 @@
+ 
+ Certo [13], <https://github.com/jtraverso/certo-math>, and Jacobian [14], <https://github.com/morluto/jacobian>, were the computational tools used to explore instances, check identities, and assess candidates. Jacobian is also credited by the project behind [5]; its use here is acknowledged separately from the logical dependencies of our formal proof. Computations were reviewed within their stated scope; a finite search does not replace a universal proof.
+ 
+-The author remains responsible for the arguments, citations, code, and presentation. No AI system is listed as an author. The draft remains subject to the author's final review.
++The author remains responsible for the arguments, citations, code, and presentation. No AI system is listed as an author.
+ 
+ ## References
+ 
+@@ -2332,7 +2332,7 @@
+ 
+ [7] R. Yuster, “Integer and fractional packing of families of graphs,” *Random Structures & Algorithms* **26** (2005), 110–118.
+ 
+-[8] T. F. Bloom, “Erdős Problem #81,” *Erdős Problems*. Available at <https://www.erdosproblems.com/81>. Cited to identify the problem; this draft does not certify the current review status of published proposals.
++[8] T. F. Bloom, “Erdős Problem #81,” *Erdős Problems*. Available at <https://www.erdosproblems.com/81>. Cited to identify the problem; this article does not certify the current review status of published proposals.
+ 
+ [9] J. P. Traverso Gianini and contributors to the assisted formalization, “Minimum-degree and spread matching theorems,” contribution to *lean-pool*, PR #420, 2026. Available at <https://github.com/Vilin97/lean-pool/pull/420>; merge commit `d1de6d2`, 13 September 2026. The history and file headers retain the attribution of the Aristotle-assisted contribution.
+ 
+@@ -2365,4 +2365,4 @@
+ [23] N. Alon and A. Shapira, *A characterization of the (natural) graph properties testable with one-sided error*, SIAM Journal on Computing **37** (2008), 1703–1727. DOI: <https://doi.org/10.1137/06064888X>. Used by the historical existential assembly and unrestricted-classification wrappers identified in the formal companion [24, §3], not as the removal theorem selected for the explicit Theorem C.
+ 
+ 
+-[24] J. P. Traverso Gianini, *Formal companion to Paper IV*, local editorial version 1.24, October 19, 2026. [PDF](../05_formalization/FORMALIZATION_COMPANION_v1.24_en.pdf).
++[24] J. P. Traverso Gianini, *Formal companion to Paper IV*, editorial revision 1.24, October 19, 2026. [PDF](../05_formalization/FORMALIZATION_COMPANION_v1.24_en.pdf).

@@ -1,0 +1,51 @@
+--- audited-local/FORMALIZATION_COMPANION_v1.24_es.md
++++ publication/FORMALIZATION_COMPANION_v1.24_es.md
+@@ -2,9 +2,9 @@
+ 
+ **Juan Pablo Traverso Gianini**
+ 
+-**Revisión editorial local:** versión 1.24, 19 de octubre de 2026.
+-
+-Este documento describe la formalización congelada que respalda *Particiones de cliques con defecto simplicial enraizado: estabilidad cuantitativa y cotas agudas para órdenes grandes*. Acompaña la revisión editorial local del manuscrito; los enunciados matemáticos y el congelado Lean permanecen intactos. Los números de secciones, ecuaciones y teoremas se refieren al manuscrito principal, salvo indicación contraria. Las referencias [1–23] conservan su bibliografía.
++**Preprint:** versión 1.24, 19 de octubre de 2026.
++
++Este documento describe la formalización congelada que respalda *Particiones de cliques con defecto simplicial enraizado: estabilidad cuantitativa y cotas agudas para órdenes grandes*. Acompaña la revisión editorial del manuscrito; los enunciados matemáticos y el congelado Lean permanecen intactos. Los números de secciones, ecuaciones y teoremas se refieren al manuscrito principal, salvo indicación contraria. Las referencias [1–23] conservan su bibliografía.
+ 
+ ## 1. Identidad de fuentes y alcance de la verificación
+ 
+@@ -20,7 +20,7 @@
+ 
+ El SHA-256 del manifiesto de fuentes es `fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5`. El SHA-256 del archivo de sólo fuentes es `cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6`. Identifican el paquete formal original, no los nuevos PDF editoriales.
+ 
+-El [paquete congelado](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/05_formalization) y la [evidencia de compilación registrada](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/03_reproducibility) están disponibles en el repositorio de la serie. El DOI de concepto de la serie es [10.5281/zenodo.21273143](https://doi.org/10.5281/zenodo.21273143). Esta revisión local no ha creado un nuevo depósito público.
++El [paquete congelado](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/05_formalization) y la [evidencia de compilación registrada](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/03_reproducibility) están disponibles en el repositorio de la serie. El DOI de concepto de la serie es [10.5281/zenodo.21273143](https://doi.org/10.5281/zenodo.21273143). La edición anterior del manuscrito y su depósito siguen disponibles; el congelado de fuentes es el mismo.
+ 
+ El suplemento Lean identificado de esta versión usa Lean y Mathlib v4.28.0. Las declaraciones finales no reciben como argumentos el redondeo, la existencia del óptimo ni el constructor cercano: los invocan como teoremas demostrados en sus dependencias. Los axiomas fundacionales permitidos se distinguen de cualquier hipótesis matemática adicional.
+ 
+@@ -318,7 +318,7 @@
+ 
+ La biblioteca de árboles de cliques conserva contraejemplos a formulaciones sin las hipótesis adecuadas: una hoja no equivale por sí sola a un único vértice simplicial, y las afirmaciones sobre separadores deben tratar las bolsas repetidas y los casos degenerados. Estos resultados delimitan el uso de esa biblioteca; no añaden supuestos al teorema principal.
+ 
+-El registro editorial local conserva los párrafos fuente exactos y cada sustitución. Las comprobaciones automáticas comparan ecuaciones mostradas, etiquetas y encabezados de resultados; las hipótesis y dependencias de prueba se revisan además en el cotejo entre fuente y manuscrito. Esas comprobaciones no certifican automáticamente la equivalencia semántica de toda la prosa. La declaración original de IA y herramientas se reproduce a continuación sin cambios.
++El registro editorial conserva los párrafos fuente exactos y cada sustitución. Las comprobaciones automáticas comparan ecuaciones mostradas, etiquetas y encabezados de resultados; las hipótesis y dependencias de prueba se revisan además en el cotejo entre fuente y manuscrito. Esas comprobaciones no certifican automáticamente la equivalencia semántica de toda la prosa. La declaración de IA y herramientas conserva sus atribuciones y responsabilidades; se ha retirado la frase de estado del borrador anterior.
+ 
+ ## Uso de inteligencia artificial y herramientas computacionales
+ 
+@@ -326,7 +326,7 @@
+ 
+ Certo [13], <https://github.com/jtraverso/certo-math>, y Jacobian [14], <https://github.com/morluto/jacobian>, son las herramientas computacionales usadas para explorar instancias, comprobar identidades y evaluar candidatos. El proyecto de [5] también acredita a Jacobian; su uso aquí se declara por separado de las dependencias lógicas de nuestra prueba formal. Los cálculos se revisaron según su alcance; una búsqueda finita no reemplaza una prueba universal.
+ 
+-El autor conserva la responsabilidad por los argumentos, las citas, el código y la presentación. Ningún sistema de IA figura como autor. El borrador queda sujeto a su revisión final.
++El autor conserva la responsabilidad por los argumentos, las citas, el código y la presentación. Ningún sistema de IA figura como autor.
+ 
+ ## Referencias
+ 
+@@ -344,7 +344,7 @@
+ 
+ [7] R. Yuster, «Integer and fractional packing of families of graphs», *Random Structures & Algorithms* **26** (2005), 110–118.
+ 
+-[8] T. F. Bloom, «Erdős Problem #81», *Erdős Problems*. Disponible en <https://www.erdosproblems.com/81>. Referencia de identificación del problema; este borrador no certifica el estado actual de revisión de las propuestas publicadas.
++[8] T. F. Bloom, «Erdős Problem #81», *Erdős Problems*. Disponible en <https://www.erdosproblems.com/81>. Referencia de identificación del problema; este artículo no certifica el estado actual de revisión de las propuestas publicadas.
+ 
+ [9] J. P. Traverso Gianini y colaboradores de la formalización asistida, «Minimum-degree and spread matching theorems», contribución a *lean-pool*, PR #420, 2026. Disponible en <https://github.com/Vilin97/lean-pool/pull/420>; commit de fusión `d1de6d2`, 13 de septiembre de 2026. El historial y los encabezados conservan la atribución de la contribución asistida por Aristotle.
+ 

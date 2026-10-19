@@ -1,0 +1,1006 @@
+--- v1.23/en
++++ v1.24/en
+@@ -6,8 +6,8 @@
+ [ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
+ 
+ **Paper IV in the series**  
+-**Preprint:** version 1.23.  
+-**Date:** October 1, 2026.
++**Preprint:** version 1.24.  
++**Date:** October 19, 2026.
+ 
+ **MSC 2020:** Primary 05C70; secondary 05C35, 05C72.
+ 
+@@ -20,11 +20,11 @@
+ M(n)=\left\lfloor\frac{n(n+1)}6\right\rfloor,\qquad
+ Q_s(n)=M(n+s)-\binom{s+1}{2}.
+ \]
+-Our construction attains the eventual upper bound \(Q_s(n)\) using pieces of order at most four and recovers the unrestricted extremal family of Okechukwu [15, Theorem 1.1]. For chordal graphs it gives a formal proof of \(c_4(G)\le M(n)+b\) at every order, and hence of the bound asked in Erdős Problem 81. The all-orders additive bound for unrestricted clique partitions is also obtained in [5] and [15, Corollary 1.2]. No priority for the extremal value is claimed.
+-
+-For sublinear rooted defect, we obtain an order-four approximation and stability along arbitrary sequences of orders tending to infinity, again with one root controlling all near-optimal partitions. The proof combines mixed rounding from the infrastructure of Papers I–III, retained constructor accounts, and explicitly attributed localization and removal arguments. The statements are formalized in Lean 4 with only its standard foundational axioms. Thresholds are explicit but impractical; neither optimality of the stability constants nor \(b=0\) for all chordal graphs is asserted.
+-
+-**Keywords:** chordal graph; clique partition; mixed packing; fractional rounding; complete-split graph; mathematical formalization.
++Our construction attains the eventual upper bound \(Q_s(n)\) using pieces of order at most four and recovers the unrestricted extremal family of Okechukwu [15, Theorem 1.1]. For chordal graphs it gives a proof of \(c_4(G)\le M(n)+b\) at every order, and hence of the bound asked in Erdős Problem 81. The all-orders additive bound for unrestricted clique partitions is also obtained in [5] and [15, Corollary 1.2]. No priority for the extremal value is claimed.
++
++For sublinear rooted defect, we obtain an order-four approximation and stability along arbitrary sequences of orders tending to infinity, again with one root controlling all near-optimal partitions. The proof combines mixed rounding from the infrastructure of Papers I–III, retained constructor accounts, and explicitly attributed localization and removal arguments. Thresholds are explicit but impractical; neither optimality of the stability constants nor \(b=0\) for all chordal graphs is asserted.
++
++**Keywords:** chordal graph; clique partition; mixed packing; fractional rounding; complete-split graph.
+ 
+ ## 1. Introduction
+ 
+@@ -34,13 +34,13 @@
+ 
+ The three preceding papers in the series separate aspects of this difficulty. Paper I [2] studies neighborhood profiles relative to a split presentation and reduces the residual problem to a fixed polytope. Paper II [3] determines the exact maximum of the fractional triangle deficit over all chordal graphs by vertex copying. Paper III [4] constructs partitions with linear error for split graphs, distinguishing the regimes in which the fractional margin suffices from those requiring a more precise construction. Its formal development also supplies the nibble and rounding infrastructure reused in Section 3 and Appendix B.
+ 
+-This work is part of that series: its inputs are stated where they are applied.
+-
+-The main structural result retains information that a partition-count bound alone discards. In the chordal case, Theorem 6.1 gives the edit bound \(16\delta\); the same root controls \(\tau+48\delta\) noncanonical pieces and at most \(10\tau+480\delta\) edges in them. Section 6.6 extends the same-root conclusion to every fixed rooted defect, with explicit constants and thresholds, and separates approximation by a defect template from approximation by a template of optimal size. Section 6.7 treats sublinear defect uniformly, rather than substituting a growing parameter into a fixed-defect theorem. All these statements are linked to kernel-checked proofs. The explicit threshold for mixed rounding also supplies the all-order additive constant in §6.3.
++The central question here is structural: what does near equality force in the graph, and how much of that structure must every near-optimal partition respect? The same clique root will answer both questions.
++
++The main structural result retains information that a partition-count bound alone discards. In the chordal case, Theorem 6.1 gives the edit bound \(16\delta\); the same root controls \(\tau+48\delta\) noncanonical pieces and at most \(10\tau+480\delta\) edges in them. Section 6.6 extends the same-root conclusion to every fixed rooted defect, with explicit constants and thresholds, and separates approximation by a defect template from approximation by a template of optimal size. Section 6.7 treats sublinear defect uniformly, rather than substituting a growing parameter into a fixed-defect theorem. The explicit threshold for mixed rounding also supplies the all-order additive constant in §6.3.
+ 
+ The public preprint [5] also establishes the eventual maximum for chordal graphs, which implies an all-orders additive bound. Okechukwu [15, Theorem 1.1] proves the eventual maximum for every fixed rooted simplicial defect, together with an all-orders additive bound for unrestricted clique partitions and an equality classification; its chordal case is [15, Corollary 1.2]. No priority is claimed for these statements. Theorem C proves the upper bound with pieces of order at most four, and Theorem C′ recovers the equality classification. Together with Corollary 6.3, it gives a quantitative form of the qualitative edit stability in [15, Corollary 5.5]. Theorem 6.5 recovers the structural conclusion of [15, Theorem 1.3] and adds simultaneous control of near-optimal partitions.
+ 
+-The formal chains for the chordal results and Theorems C and C′ do not invoke the results of [5,15] as inputs. This is not a claim of independence for every method in the enlarged paper: Proposition 6.4, and consequently the approximation in Theorem 6.5, follows the signed-star argument of [15, Lemma 3.1], with attribution and a complete implementation. The chordal-edit step follows de Joannis de Verclos [22]. Section 8 compares the statements and mechanisms.
++Proposition 6.4, and consequently the approximation in Theorem 6.5, follows the signed-star argument of [15, Lemma 3.1]. The chordal-edit step follows de Joannis de Verclos [22]. Section 8 specifies the comparisons with [5,15] and the scope of these attributions.
+ 
+ Cipollini [21] announced the partial bound \(n^2/6+o(n^2)\) for chordal graphs. That announcement identifies the remaining gap between subquadratic and linear error; it is an antecedent, not an input to our proof.
+ 
+@@ -117,8 +117,8 @@
+ \boxed{
+ e(G)-g(\mathcal P)\le M(n)
+ \quad\Longleftrightarrow\quad
+-W^*(G)-g(\mathcal P)\le\Delta(G).
+-}
++W^*(G)-g(\mathcal P)\le\Delta(G)
++}.
+ \tag{1.3}
+ \]
+ The inequality on the right has a direct interpretation. The quantity \(W^*(G)-g(\mathcal P)\) measures the gain lost in passing from the fractional optimum to the constructed packing; \(\Delta(G)\) measures the margin left by that optimum relative to \(M(n)\). If the loss does not exceed the margin, the completed partition has at most \(M(n)\) pieces. We call this comparison the **loss budget**. The identity does not specify how to choose \(\mathcal P\): it can be used to check any construction of edge-disjoint copies.
+@@ -133,7 +133,7 @@
+ |Q|\le T\quad\Longleftrightarrow\quad e(G)\le g(Q)+T.
+ \tag{1.3a}
+ \]
+-No bound on the order of the pieces has been used. In particular, \(K_2\) pieces have zero gain and may be retained in the sum or added when completing a packing. This is the identity formalized in `LossBudget.budget_iff`; for large pieces one uses the ordinary gain, not the capped function of the mixed model.
++No bound on the order of the pieces has been used. In particular, \(K_2\) pieces have zero gain and may be retained in the sum or added when completing a packing. For large pieces one uses the ordinary gain, not the capped function of the mixed model.
+ 
+ To compare families, fix a set \(S\subseteq\{3,\ldots,n\}\) of allowed orders. Let \(W_S^*(G)\) denote the maximum fractional gain with these pieces, \(F_S(G)=e(G)-W_S^*(G)\) the fractional cost, and \(\Delta_S(G)=M(n)-F_S(G)\) its margin. Capacities remain one per edge. Extending a packing by zero shows that, if \(S\subseteq S'\), then \(W_S^*\le W_{S'}^*\) and \(\Delta_S\le\Delta_{S'}\). For \(4\le L\le n\), this gives
+ \[
+@@ -163,27 +163,27 @@
+ \boxed{
+ F_4(G)<\frac{n^2}{6}-\eta_0n^2
+ \quad\text{or}\quad
+-\exists\,\text{near-structure witness for }G.
+-}
++\exists\,\text{near-structure witness for }G
++}.
+ \tag{1.5}
+ \]
+-The witness includes a complete-split comparator, a root that is a clique of \(G\), and a packing of the original graph with its physical accounting. The alternatives are exhaustive; the existence of the witness is not asserted to be incompatible with a quadratic margin. This is not merely a metric condition: it retains the resources needed to complete the partition. Appendix A identifies the formal declaration of the dichotomy.
++The witness includes a complete-split comparator, a root that is a clique of \(G\), and a packing of the original graph with its physical accounting. The alternatives are exhaustive; the existence of the witness is not asserted to be incompatible with a quadratic margin. This is not merely a metric condition: it retains the resources needed to complete the partition.
+ 
+ In the first branch, mixed rounding produces a loss smaller than the available margin in (1.3). In the second, the constructor's accounting verifies the target directly. The packing, its feasibility and the accounting inequality suffice for the conclusion. The near witness also retains the structure that produces them.
+ 
+ Figure 1 follows only our proof. To connect the diagram to the text, we call the far case **branch L**: Theorem 3.1 performs rounding and Corollary 3.5 pays for its loss. **Branch C** is the critical case: Proposition 4.3 locates the comparator, Section 5 constructs in \(G\), and Lemma 5.3 pays for the losses. Both branches end in Theorem B; Section 6.3 extends its conclusion to every order and proves Theorem A. The letters L and C denote the two cases of a single proof.
+ 
+-The near witness is retained because its root and accounts yield more than an upper bound. The **hybrid form** records `NearStructureWitness`—root, comparator and accounting—and leads to the graph and partition stability results of Section 6.5. The **model bridge** has a different role: it preserves resources and gains when changing the formal representation of pieces, as documented in Section 7.2. Neither refinement is a third proof of Theorem B.
+-
+-![Proof map. Branch L is developed in Theorem 3.1 and Corollary 3.5; branch C, in Proposition 4.3 and Lemma 5.3. Solid lines form the proof of Theorems A and B. Dashed lines indicate refinements not needed for those bounds: the model bridge of Section 7.2 and the retained witness of Section 5.4.](figures_en/fig1_proof_map.png)
++The root and the accounts in the critical branch are retained after the partition has been constructed. They lead to the graph and partition stability results of Section 6.5: the root is chosen from the graph and serves all near-optimal partitions simultaneously.
++
++![Proof map. The two branches construct a partition of the original graph. Retaining the root and its accounts in the critical branch also gives the stability results.](figures_en/proof_map_v124.pdf)
+ 
+ ### 1.3. Organization and use of chordality
+ 
+ **Remark 1.1.** The rounding branch applies to arbitrary graphs. The critical branch uses chordality at three distinct points: the existence and preservation of the copy steps in §4.1; clique extraction and the absence of induced squares in §5.1; and the perfect elimination ordering that orients exterior edges in §5.3. The elimination ordering also certifies that the examples attaining the bound are chordal. None of these properties follows solely from the numerical budget inequalities.
+ 
+-Section 2 fixes the model. Section 3 states the rounding result and explains its use; Appendix C develops its technical proof. Sections 4 and 5 establish localization and the critical construction. Section 6 assembles the chordal proof and derives stability, classification and exact values. Sections 6.6 and 6.7 then extend stability to fixed and sublinear rooted defect; Appendix F records their parameters, proof interfaces and additional provenance. Section 7 summarizes the formal scope; Appendix A gives the declarations and their correspondence. Section 8 compares the mechanisms with [5,15]. Appendix B collects complementary tools. Appendix D also records the comparator identities, and Appendix G treats the bounded-clique triangle gap and the separate limitation of the cleanup contract.
+-
+-Under the current numbering of the series, the general transfer engine is reserved for Paper V. References to that engine as “Paper IV” in earlier versions of [2–4] belong to the former plan, not to an additional dependency of the present result.
++Section 2 fixes the model. Section 3 states the rounding result and explains its use; Appendix C develops its technical proof. Sections 4 and 5 establish localization and the critical construction. Section 6 assembles the chordal proof and derives stability, classification and exact values. Sections 6.6 and 6.7 then extend stability to fixed and sublinear rooted defect; Appendix F records their parameters, proof interfaces and additional provenance. Section 7 points to the separate formal companion; Appendix A records the scope of the conclusions. Section 8 compares the mechanisms with [5,15]. Appendix B collects complementary tools. Appendix D also records the comparator identities, and Appendix G treats the bounded-clique triangle gap and the separate limitation of the cleanup contract.
++
++The general transfer framework is developed in Paper V. It is not an additional input to the proof given here.
+ 
+ ## 2. Mixed gain, duality and partitions
+ 
+@@ -214,6 +214,8 @@
+ \]
+ **Proof.** The pieces of \(\mathcal P\) cover \(\sum_K\binom{|K|}{2}\) edges, since they do not overlap. There remain \(e(G)-\sum_K\binom{|K|}{2}\) individual edges. Adding the initial \(|\mathcal P|\) pieces gives (2.1). Coverage is exact by construction.
+ 
++The mixed gain is two for a triangle and five for a clique of order four; extending that function by zero to other orders is only a convention for the mixed model. An unrestricted partition instead uses \(\binom{|K|}{2}-1\) for every piece. The two conventions agree on the mixed pieces but differ from order five onwards. Since every partition piece has at least two vertices, subtraction in this expression is ordinary subtraction. This distinction is needed when applying the accounting identity to unrestricted partitions in §6.4.
++
+ ### 2.2. The fractional optimum and its certificate
+ 
+ A fractional packing assigns a weight \(x_K\ge0\) to each actual copy \(K\), with
+@@ -227,7 +229,7 @@
+ \sum_{e\in E(Q)}y_e\ge5.
+ \tag{2.3}
+ \]
+-The zero vector is primal feasible. Every primal coordinate is bounded by one, since every copy contains an edge. Finite duality supplies primal and dual optima of equal value. The formal model uses rational data and constructs both optima: the value \(w\) is not an assumption without a witness. Paper I [2, Appendix B] provides the antecedent of packing–covering duality; the rational development used here proves its version by Fourier–Motzkin elimination.
++The zero vector is primal feasible. Every primal coordinate is bounded by one, since every copy contains an edge. Finite duality supplies primal and dual optima of equal value. The model uses rational data and constructs both optima: the value \(w\) is not an assumption without a witness. Paper I [2, Appendix B] provides the antecedent of packing–covering duality; the rational development used here proves its version by Fourier–Motzkin elimination.
+ 
+ Summing capacities in (2.2) also gives
+ \[
+@@ -304,12 +306,12 @@
+ 
+ We begin branch C of Figure 1. Proposition 4.3 locates a complete-split comparator. Section 5 converts this information into a partition of the original graph.
+ 
+-As in the formal development, fix
++Fix
+ \[
+ \varepsilon_0=10^{-12},\qquad \eta_0=10^{-16}.
+ \tag{4.1}
+ \]
+-During the development of our near constructor, its threshold was reduced from \(10^{32}\) to \(4\cdot10^{12}\). This compares versions of that constructor, not the global thresholds of different papers. It applies to localization and the near constructor, not to the entire proof: the rounding in Section 3 may impose a larger threshold. This improvement does not yield a global threshold of \(4\cdot10^{12}\).
++The order threshold \(4\cdot10^{12}\) used below applies to localization and the near construction. The rounding in Section 3 may require a larger order; this is not a global threshold.
+ 
+ ### 4.1. Distance to a fixed family
+ 
+@@ -547,7 +549,7 @@
+ \]
+ Rearranging gives the first account. In particular, we do not separately estimate the costs of two constructions that might compete for the same edges.
+ 
+-Compatibility is checked explicitly. If a first-phase triangle uses an exterior edge \(uv\) and a host \(z\in R\), it consumes the links \(zu,zv\). The second phase cannot assign \(u\) or \(v\) to a base containing \(z\). This is the third exclusion condition in `canonicalBad`; the other two require adjacency to both endpoints of the base. The lemma `isSpokeCompatible_surviving_canonicalBad` proves that surviving assignments do not reuse these links. Finally, `RD09SpokeCompatibility.card_union_phases` gives the exact sum of the triangle counts in the two phases.
++Compatibility is checked explicitly. If a first-phase triangle uses an exterior edge \(uv\) and a host \(z\in R\), it consumes the links \(zu,zv\). The second phase cannot assign \(u\) or \(v\) to a base containing \(z\). Together with adjacency to both endpoints of the base, this exclusion ensures that surviving assignments do not reuse links consumed in the first phase. The two triangle families are therefore edge-disjoint, and their cardinalities add.
+ 
+ We prove the other two estimates next. The first counts exterior edges that survive host assignment. The second counts internal bases that may be left without a host after that choice. The order matters: second-phase lists exclude the links actually used by the first phase.
+ 
+@@ -571,7 +573,7 @@
+ 40c\le73p,\qquad 40(w-1)\le3p.
+ \tag{5.7}
+ \]
+-Substitution into (5.6) gives \(f\ge40m/73-3A/40\). Multiplication by \(2920\) gives exactly \(1600m\le2920f+219A\), the first estimate in Table 2. Appendix A.2 identifies the selection and averaging declarations.
++Substitution into (5.6) gives \(f\ge40m/73-3A/40\). Multiplication by \(2920\) gives exactly \(1600m\le2920f+219A\), the first estimate in Table 2.
+ 
+ **Second phase: one or two candidates per factor.** Factor \(K_p\) into matchings and, if needed, add an empty class to work with \(p\) factors. Since \(q\ge p\), we can give each factor one candidate. Let \(s=\max\{2p-q,0\}\). Choose \(s\) factors with a single candidate and give two to each remaining factor. The \(2p-s\) available positions are assigned injectively to exterior vertices: no candidate belongs to two factors.
+ 
+@@ -650,7 +652,7 @@
+ \end{aligned}
+ \tag{5.14}
+ \]
+-These are direct rational comparisons. We obtain \(\ell\le11A/100+29f/1000\). Since \(A,f\ge0\), this implies \(\ell\le7A/40+f/25\), which, multiplied by \(200\), is the second estimate in Table 2. Thus both contributions, from missing links and from occupied links, have been used on a single physical assignment. Appendix A.2 identifies the moment, averaging and calibration lemmas.
++These are direct rational comparisons. We obtain \(\ell\le11A/100+29f/1000\). Since \(A,f\ge0\), this implies \(\ell\le7A/40+f/25\), which, multiplied by \(200\), is the second estimate in Table 2. Thus both contributions, from missing links and from occupied links, have been used on a single physical assignment.
+ 
+ ### Lemma 5.3
+ 
+@@ -750,7 +752,6 @@
+ \operatorname{cp}(S)=c_3(S)=c_4(S)=kh-\binom k2.
+ \tag{6.2}
+ \]
+-The audited public statement is expressed as a partition of order at most four and an unrestricted lower bound; the construction described uses triangles and edges.
+ 
+ ### 6.2. The eventual maximum
+ 
+@@ -768,9 +769,9 @@
+ \end{cases}
+ \tag{6.4}
+ \]
+-Within the complete-split family with \(2\le k\le n-k\), the optimal size is unique except in the second row, where there are two consecutive sizes. This is the core classification in `SplitCompleteRigidity.optimal_cores`; by itself, it does not classify all extremal chordal graphs.
+-
+-For \(n\ge6\), the choice \(k=\lceil n/3\rceil\) always belongs to (6.4) and satisfies \(2\le k\le h=n-k\). The graph \(K_k\vee I_h\) is chordal: first eliminate the hosts, whose later neighbors lie in the complete core, and then the core. This is a perfect elimination ordering, formalized in `PaperTheorems.splitGraph_isChordal`. By (6.2), this chordal graph attains \(M(n)\). Together with the upper bound, this yields the maximum in Theorem B.
++Within the complete-split family with \(2\le k\le n-k\), the optimal size is unique except in the second row, where there are two consecutive sizes. This classifies the optimal cores within that family; it does not yet classify all extremal chordal graphs.
++
++For \(n\ge6\), the choice \(k=\lceil n/3\rceil\) always belongs to (6.4) and satisfies \(2\le k\le h=n-k\). The graph \(K_k\vee I_h\) is chordal: first eliminate the hosts, whose later neighbors lie in the complete core, and then the core. This is a perfect elimination ordering. By (6.2), this chordal graph attains \(M(n)\). Together with the upper bound, this yields the maximum in Theorem B.
+ 
+ ### 6.3. All orders and optimality of the linear term
+ 
+@@ -797,7 +798,7 @@
+ \frac{n^2+n}{6}-1\le M(n)\le cn^2+Cn.
+ \tag{6.5a}
+ \]
+-If \(c<1/6\), the difference \((1/6-c)n^2\) exceeds \(|C|n+1\) for large \(n\), contradicting (6.5a). The declaration `SharpConstantOptimality.erdos81_quadratic_constant_optimal` formalizes this necessity for \(c,C\in\mathbb Q\), and `erdos81_quadratic_constant_isLeast` combines it with Theorem A. The mathematical statement for real coefficients follows by choosing rationals between \(c\) and \(1/6\), and above \(C\). This differs from optimality of the *linear* coefficient below; neither claim settles whether \(b=0\).
++If \(c<1/6\), the difference \((1/6-c)n^2\) exceeds \(|C|n+1\) for large \(n\), contradicting (6.5a). The mathematical statement for real coefficients follows by choosing rationals between \(c\) and \(1/6\), and above \(C\). This differs from optimality of the *linear* coefficient below; neither claim settles whether \(b=0\).
+ 
+ With the quadratic term fixed at \(n^2/6\), the coefficient \(1/6\) of the linear term is also optimal. Given \(c<1/6\) and a constant \(B_0\), for every sufficiently large order the complete-split witness satisfies
+ \[
+@@ -806,9 +807,9 @@
+ >\frac{n^2}{6}+cn+B_0.
+ \tag{6.5}
+ \]
+-The last inequality holds once \((1/6-c)n>B_0+1\). The formalization `LinearCoefficient.linear_coefficient_optimal` gives this conclusion for rational parameters; the assertion for real parameters follows by choosing a rational between \(c\) and \(1/6\) and another larger than \(B_0\). This distinguishes optimality of the asymptotic term from the additive constant needed for small orders.
+-
+-The order restriction also clarifies the scope of Theorem A: forgetting \(Q.\mathrm{OrderAtMost}\ 4\) immediately gives the \(\operatorname{cp}(G)\le M(n)+b\) form of the original problem. `LossBudget.erdos81_cp_form_all_orders` and `erdos81_cp_form` record this step for the two bounds. The reverse implication is not valid for arbitrary bounds: for \(n\ge2\), \(\operatorname{cp}(K_n)=1\), whereas a piece of order at most four covers at most six edges, so \(c_4(K_n)\ge\binom n2/6\). This comparison of parameters does not establish a logical separation between the two universal statements with the particular target \(M(n)\).
++The last inequality holds once \((1/6-c)n>B_0+1\). The passage from rational to real parameters also follows by choosing a rational between \(c\) and \(1/6\) and another larger than \(B_0\). This distinguishes optimality of the asymptotic term from the additive constant needed for small orders.
++
++The order restriction also clarifies the scope of Theorem A: dropping the restriction on piece order immediately gives the \(\operatorname{cp}(G)\le M(n)+b\) form of the original problem. The reverse implication is not valid for arbitrary bounds: for \(n\ge2\), \(\operatorname{cp}(K_n)=1\), whereas a piece of order at most four covers at most six edges, so \(c_4(K_n)\ge\binom n2/6\). This comparison of parameters does not establish a logical separation between the two universal statements with the particular target \(M(n)\).
+ 
+ ### 6.4. The excess of a complete-split partition
+ 
+@@ -953,7 +954,7 @@
+ \end{gathered}
+ \tag{6.14}
+ \]
+-Here \(D,H\) in the last line are the final root classes, not necessarily the intermediate host class. Appendix E.4 derives all five accounts: reducing the first-phase palette retains a positive multiple of \(m\), the strict exceptional-vertex budget pays \(nt_W\), and an actual clique is extracted from \(S\) before the final template is formed. In particular, the two charges \(rn\) have different origins: reducing the clique size in the interior count, and moving the remaining vertices to the host class. The graph-theoretic producers are `NormalizedDeficit`, `ResidualExcess`, `NormalizedCliqueCore`, and `RootPartition`; `NormalizedStability` combines them.
++Here \(D,H\) in the last line are the final root classes, not necessarily the intermediate host class. Appendix E.4 derives all five accounts: reducing the first-phase palette retains a positive multiple of \(m\), the strict exceptional-vertex budget pays \(nt_W\), and an actual clique is extracted from \(S\) before the final template is formed. In particular, the two charges \(rn\) have different origins: reducing the clique size in the interior count, and moving the remaining vertices to the host class.
+ 
+ Substituting the middle bounds into the last gives
+ \[
+@@ -1076,7 +1077,7 @@
+ \[
+ c_4(G_j)\ge n_j^2/6-\delta_j,\qquad \delta_j=o(n_j^2).
+ \]
+-The deficit sequence may be taken rational, as in the formal statement. There are cliques \(R_j\) of the original graphs and nonnegative errors \(e_j=o(n_j^2)\) such that
++The deficit sequence may be taken rational. There are cliques \(R_j\) of the original graphs and nonnegative errors \(e_j=o(n_j^2)\) such that
+ \[
+ |R_j|=n_j/3+o(n_j),\qquad
+ d_E(G_j,S_{R_j})=o(n_j^2),
+@@ -1117,88 +1118,15 @@
+ s_{\max}(n)=\max\{S\in\mathbb N:S\le n,\ T(P(S))\le n\}.
+ \tag{6.29}
+ \]
+-Then the exact bound holds simultaneously for all \(s\le s_{\max}(n)\). The lower restriction on \(n\) is essential to this formulation: below it, the formal inverse returns zero even though its defining predicate may have no solution.
+-
+-**Proof.** `E35.Fexp_le_tower` proves \(F_s\le T(P(s))\) for the explicit threshold in Appendix E.2. Its numerical account combines the uniform far bound (C.4), the chordal-edit threshold and the finite assembly costs. Apply Theorem C at \(F_s\). Both \(P\) and \(T\) are nondecreasing, so the same threshold for \(S\) covers all \(s\le S\). Finally, the defining predicate for \(s_{\max}\) holds because the set contains zero. \(\square\)
++Then the exact bound holds simultaneously for all \(s\le s_{\max}(n)\). The lower restriction on \(n\) is essential to this formulation: below it, the defining predicate may have no solution, so returning zero by convention would not imply the bound.
++
++**Proof.** The threshold comparison gives \(F_s\le T(P(s))\) for the explicit threshold in Appendix E.2. Its numerical account combines the uniform far bound (C.4), the chordal-edit threshold and the finite assembly costs. Apply Theorem C at \(F_s\). Both \(P\) and \(T\) are nondecreasing, so the same threshold for \(S\) covers all \(s\le S\). Finally, the defining predicate for \(s_{\max}\) holds because the set contains zero. \(\square\)
+ 
+ This is a uniform exact band, not an exact bound for every sublinear defect sequence. Its height is polynomial in \(s\), but the threshold itself is a tower. No assertion of numerical practicality is intended. It bounds the threshold for Theorem C, not automatically the stability threshold \(N_s^{\rm stab}\) in (F.1).
+ 
+-## 7. Formalization, code and reproducibility
+-
+-The identified Lean supplement for this version uses Lean and Mathlib v4.28.0. The final declarations do not take rounding, existence of an optimum or the near constructor as arguments: they invoke them as proved theorems in their dependencies. The permitted foundational axioms are distinguished from any additional mathematical hypothesis.
+-
+-The formal scope differs from that documented by [5] at the cited commit. Its `lean/FORMALIZATION_STATUS.md` file declares verification conditional on `ExternalInputs.Inputs`: Vizing, Häggkvist–Janssen and a packing transfer that includes certificates of rational optimality. These inputs are explicit parameters, not hidden axioms. Here the inputs used by our chain, including Vizing, are discharged; Häggkvist–Janssen is not used. The comparison concerns what each Lean development checks: it does not assert that the mathematical proof of [5] is conditional on conjectures.
+-
+-Formal identifiers are printed in monospaced type. A continuation arrow at a line break is a typesetting marker, not part of the identifier; the Markdown and Lean sources retain the literal spelling.
+-
+-The configuration declares Mathlib as a third-party package and a selection of Paper III `Nibble` modules as a local dependency of the series. `ConeAudit` traverses the types and proof terms of the selected declarations and checks that their transitive dependencies contain no names under the root `Erdos81`, used by [5]. Our modules `PaperIV.Erdos81Unconditional` and `PaperIV.Erdos81AllOrders` have namespace root `PaperIV`; they are not the excluded root Erdos81 used by [5]. The absence of these names is a reproducible audit result, not an inference from the import list. Its scope is precise: it certifies that exclusion in the examined snapshot; it would not by itself detect relocated and renamed code or determine the historical provenance of each argument. Source attribution is documented separately. The same namespace check cannot yield a verdict on [15]. The extension uses the signed-star method of [15, Lemma 3.1] and the removal method of [22]; proving their implementations in this supplement does not make those methods new.
+-
+-The public interface for Theorem C in this revision is `DefectExplicitPublication`: it uses `E34.theoremC_fully_explicit_final` and the unrestricted lower witness already proved in `DefectSharpPublication`. The older existential assembly is not the proof selected for Theorem C. Its localization uses induced removal of Alon–Shapira [23]; the selected explicit assembly instead uses the polynomial chordal-removal development of [22]. The additional `FDCheck.ASCheck` traverses proof terms and types to test exclusion of the named removal results in these selected declarations. This is not exclusion of the `AlonShapira` namespace: shared definitions of chordality, edit distance and induced copies remain in use.
+-
+-There is a specific exception to this dependency comparison. The unrestricted equality classification in Corollary 6.3, (6.18), is exported through `E32.cp_classification_of_theoremCPrimeC`; that declaration and `E32.ref15Theorem11_of_theoremCPrimeC` still use the historical assembly through `E32.theoremC_at`. Their proofs therefore include the induced-removal chain of [23]. All those lemmas are proved in the frozen sources with standard axioms. The exclusion check for the explicit Theorem C and the selected stability declarations must not be extended to these classification wrappers.
+-
+-The single execution entry point is `python tools/audit_publication.py`. It reads the 19 targets in `FREEZE_SCOPE.json`, executes them serially and retains their individual logs; unchanged dependencies reuse the pinned cache. This deliberately reruns the audit targets, since importing an already compiled audit module would not rerun all its commands. `PublicationIncrementAudit` retains the historical checks; `ResearchAudit` and `FDCheck.FinalAudit` cover the extension interfaces; `E34.Audit` covers removal; `E35.Audit` covers the new threshold bounds; `OptimalTemplateObstructionAudit` checks the six declarations supporting Proposition 6.3a. `ReleaseExportCheck` checks the public exports through `PaperIV` alone. The constructor interface `PaperIV.Editorial.ConstructorBudget` retains one partition in both conclusions of Appendix E. The run identities and literal target list specify which checks were executed; the historical internal audit does not replace a new source-to-manuscript review of version 1.2.
+-
+-| Result in the text | Reference module |
+-|:--|:--|
+-| **Inputs and construction** | |
+-| Attained rational optimum | `PaperI.FiniteLPDuality`, `CertifiedOptimumExistence` |
+-| Uniform mixed rounding, Theorem 3.1 | `RC01Final`, `MixedRoundingAdapter`; `Nibble.*` infrastructure from Paper III |
+-| Corollary 3.5, far regime for all graphs | `FarRegimeAllGraphs.farRegime_cliquePartition_allGraphs`; explicit version in `E17.ExplicitFarAssembly` |
+-| Complete improved cleaning and explicit threshold | `E17.Cleanup`, `E17.FarBudget`, `E17.ExplicitFarRounding`, `E17.ExplicitFarAssembly`; constants from `E18` and `E19` |
+-| Fractional nibble selection, Paper III | `Nibble.FracNibbleLE`, `Nibble.FracNibbleRepaired`; adapters `PaperIIISlackNibbleAdapter`, `PaperIIINibbleAdapter` |
+-| Localization, root and critical window | `NearH1Localization`, `NearRootWindow`, `RootRegularizationBridge` |
+-| Dichotomy and absorbable interface | `HybridDichotomy`, `SeparationAbsorptionRoute` |
+-| Accounting and near partition | `RD09PhysicalLedger`, `NearH1FinalAssembly`, `NearH1LocalConstructor` |
+-| **Extremal conclusions** | |
+-| Sharp bound and eventual maximum | `Erdos81Unconditional`, `PaperTheorems` |
+-| Bounds for all orders | `Erdos81AllOrders`; explicit bound in `ExplicitThreshold` |
+-| Fixed rooted defect and maximum, Theorem C | `DefectExplicitPublication`; explicit assembly `E34.L11Main`; lower witness `DefectSharpPublication` |
+-| Necessity of order four, Proposition D.2 | `DefectSharpPublication.order_three_insufficient`, `E11K10` |
+-| General budget and passage to \(\operatorname{cp}\) | `LossBudget`, `SplitMixedGap` |
+-| Graph stability, partition stability and extremal classification | `IntegralStability`, `RootPartitionStability`, `ExtremalClassification` |
+-| Complete-split value and cores | `SplitCompleteSharpValue`, `SplitCompleteRigidity` |
+-| Partition defect and optimal coefficients | `SplitCompleteDefect`, `LinearCoefficient`, `SharpConstantOptimality` |
+-| Edge density in the critical branch | `NearEdgeDensity`, `NearCriticalDichotomy` |
+-| Equality of mixed optima, Appendix D.2 | `SplitMixedGap`, `SplitCompleteSharpValue` |
+-| **Complementary tools** | |
+-| Budgeted compatible absorption | `SpreadAbsorptionCompatibility` |
+-| Balanced reserve, Appendix B.2 | `BalancedReserve`, `Nibble.BeckFiala` from Paper III |
+-| Four-host completion, Appendix B.3 | `FourHostClosure`; Vizing and `MultiHostTriangleLift` |
+-| Exact reserve and threshold sensitivity | `ReserveIdentity`, `NearThresholdSensitivity` |
+-| Reusable chordal structure | `CliqueTree` |
+-
+-**Table 3.** The prefixes `PaperI`, `Nibble` and `MixedRounding` indicate, respectively, the rational development associated with Paper I, the nibble infrastructure of Paper III and the neutral mixed-model library. The prefixes `E17`, `E18`, `E19` and `A4S1` identify the increment modules integrated into the project; other unprefixed names belong to `PaperIV`; `MixedRoundingAdapter` adapts that namespace to the `MixedRounding` library. RC01 incorporates and adapts tools from Paper III, but its two-quota mixed assembly is the one in Section 3 of the present work. The table relates results to sources; the supplement retains the exact dependency list.
+-
+-Chordal structure and Dirac's theorem come from the Paper II contribution, ported into `ChordalStructure`. Szemerédi's regularity lemma is reused from Mathlib; the construction and adapters for clean profiles and mixed selection belong to Paper IV. This provenance is distinct from a file's current location under `PaperIV`.
+-
+-Local checks on September 27 include the aggregate, the general audit of 81 declarations and the specific audit of nine results covering the B7 link and its propagation. The latter inspects types and proof terms, requires the construction to use both improved cleaning accounts and permits only `propext`, `Classical.choice` and `Quot.sound`. The counts are not disjoint and must not be added. Reusing a proved nibble theorem is not the same as introducing an unproved hypothesis.
+-
+-The export check contains 224 literal `#check` commands through `import PaperIV` alone. All passed in the new cut. This establishes access to that list, not that every declaration in the supplement belongs to the canonical interface. `ResearchAudit` traverses types and proof terms for 75 selected extension declarations; the six-declaration `OptimalTemplateObstructionAudit` and the other targets provide their own scoped checks. BoundedCliqueGap remains a separate annex, not a premise of the main theorem.
+-
+-The source cut `piv-v12-fb459343d234` contains 607 Lean modules and 615 source/configuration/documentation entries. Complete serial reconstruction compiled all 607 modules across two verified segments. After a machine restart, 421 freshly built objects from the first segment were verified and reused; the resumed segment compiled 186 modules. No pre-existing project objects were used, and none failed, was blocked or was omitted. All 19 selected targets were freshly executed with exit code zero in the resumed segment. The output contains 461 axiom records, each restricted to `propext`, `Classical.choice`, `Quot.sound` or a subset; these records are not a count of distinct theorems. Sources remained unchanged, and reused objects were checked against their source, dependency and build records. The manifest SHA-256 is `fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5`; the source-only archive SHA-256 is `cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6`. Logs, combined provenance and final validation are retained in `03_reproducibility/full_rebuild_v12_20260929_resume/`, with links to the preserved first segment. These records establish the local build and source identity. The completed internal and external audits are separate stages, described below.
+-
+-The earlier cut `piv-stability-fe9bb18343da` and the separate integration runs are preserved under their original identities. The new cut supersedes their role as the selected source identity; it does not rewrite their evidence. The four E35L modules and `FDCheck.TowerAudit` were removed from the new tree because E35 supersedes their estimates and none belongs to the selected dependency closure. All remaining local Lean modules lie in the closure of the 19 selected targets. That closure includes historical definitions and comparison checks; it is not claimed to be the smallest possible proof library.
+-
+-**Verification evidence.** The frozen sources and the recorded external build support the formal claims above. The consolidated report for v1.22-r4 records PASS for gates E0–E8. The repository retains that report, its scope limitations and the complete audit history. Version 1.23 changes only editorial presentation; it uses the same Lean source cut and does not claim a new build or a new external audit. Human peer review remains a separate assessment.
+-
+-### 7.1. Repositories and contributions
+-
+-The series repository, available at <https://github.com/jtraverso/erdos-81-chordal-clique-partitions>, provides the bilingual manuscripts, frozen formal sources and verification evidence for Papers I–IV. The audited v1.22 package is preserved under the tag `paper-IV-v1.22` and in the audit backup directory. This editorial revision uses the same source cut identified above. The series concept DOI is <https://doi.org/10.5281/zenodo.21273143>; the repository README and changelog record version-specific publication and audit information.
+-
+-Reusable contributions have their own references. Sum-zero triangle packing corresponds to Lean Pool PR #348 [12], <https://github.com/Vilin97/lean-pool/pull/348>, merged at commit `540d8e3`. Minimum-degree matchings and their weighted selection correspond to PR #420 [9], <https://github.com/Vilin97/lean-pool/pull/420>, merged at `d1de6d2`. The series sources retain the antecedents and adaptations of Vizing and Beck–Fiala. Attribution of formalizations is distinguished from authorship of the classical theorems.
+-
+-Four further components are being prepared for reuse beyond this proof: matching factorizations of complete graphs, equitable edge recolouring on the same palette, perfect-elimination orders ending in a prescribed clique, and balanced selection of an edge reserve. The `contrib/Extraction` directory separates them from the packing model of Paper IV. The last two retain, respectively, the proofs of Dirac's theorem from Paper II and Beck–Fiala rounding from Paper III as explicitly attributed support. These are extractions of formalizations, not claims of novelty for those results. Independent validation and review of the interfaces for Mathlib remain pending; they are not presented as accepted contributions or as part of the frozen snapshot.
+-
+-The clique-tree library is being prepared separately in `contrib/CliqueTreeExtraction`. It brings together the bag representation, intersection properties, separators, and counting identities, with chordality support from Paper II. It retains the hypotheses that distinguish connected trees, repeated bags, and empty cases, together with counterexamples to formulations that omit them. This extraction likewise awaits independent compilation and auditing before being declared validated.
+-
+-Lean [10] and Mathlib [11] provide the verification environment. Code auditing does not replace human review of definitions or of the correspondence between a formal statement and its expression in the manuscript. Experiments guided the search and detected false assertions; they are not premises of universality.
+-
+-### 7.2. Model bridge and gain convention
+-
+-The representation refinement in Figure 1 is verified in `MixedRoundingAdapter`. The adapter identifies a piece's edges and the admissible-copy predicate, transports fractional packing capacities, and proves equality of values via `value_toFarFrac`. For an integral packing, `gain_toFarPacking` preserves gain. Thus Theorem 3.1 can be used through this neutral presentation without changing budget (1.3). This is not a new proof of rounding.
+-
+-Two functions named `gainOf` must be distinguished by their domain of use. `Model.gainOf` is two at cardinality three, five at cardinality four, and zero at all other cardinalities. `FarRounding.gainOf` is \(\binom{|K|}{2}\mathbin{\dot-}1\), where \(\dot-\) denotes truncated subtraction in the naturals. They agree at cardinalities zero through four, but cease to agree from five onwards. Mixed items have cardinality three or four, so the transport is legitimate. For unrestricted partitions, such as those in Section 6.4, one uses edge accounting or `FarRounding.gainOf`; it is never replaced by the bounded gain function from `Model`. Since partition pieces have at least two vertices, truncated subtraction there agrees with ordinary subtraction.
++## 7. Formalization and reproducibility
++
++The formal companion [24] records the statement correspondence, dependency scope and reproducibility evidence for the unchanged Lean/Mathlib v4.28.0 source freeze `piv-v12-fb459343d234`. The recorded checks of the selected declarations use only the standard foundational axioms. The companion distinguishes the main proof library from the separate bounded-clique-gap annex, and formal verification from mathematical and editorial review. The present revision changes exposition only.
+ 
+ ## 8. Comparison of mechanisms and scope
+ 
+@@ -1212,7 +1140,7 @@
+ | Okechukwu [15] | \(K_3,\ldots,K_L\) in the approximation used for localization | \(q_L\) in Lemma 3.4; \(\operatorname{cp}\) in Theorem 1.1 | \(\Delta_{\{3,\ldots,L\}}\) for the auxiliary model |
+ | This work | \(K_3,K_4\) | \(c_4\) | \(\Delta_{\{3,4\}}\) |
+ 
+-**Table 4.** Instances of the general budget. \(q_L\) is the notation in [15] for the minimum with pieces of order at most \(L\). Margins are compared on the same graph; (1.3b) gives a weak inequality, not a universal strict separation.
++**Table 3.** Instances of the general budget. \(q_L\) is the notation in [15] for the minimum with pieces of order at most \(L\). Margins are compared on the same graph; (1.3b) gives a weak inequality, not a universal strict separation.
+ 
+ All three conclusions can be expressed through (1.3a), each in its own family. Agreement of that accounting identity is not an equivalence of mechanisms, nor does it allow a partition with large pieces to be replaced by one of order at most four. With respect to this restriction, [5] and our conclusion agree; comparison with [15] must keep its larger family visible.
+ 
+@@ -1238,7 +1166,7 @@
+ | Structural accounting | Local stability, §5 | Retained witness and Theorem 6.1 |
+ | Extremal conclusion | Eventual bound, §9 | Theorem B and Corollary 6.2 |
+ 
+-**Table 5.** Comparison of steps and source locations. This is not a table of bibliographic priority, nor does it assert that the antecedents of each step belong exclusively to one development.
++**Table 4.** Comparison of steps and source locations. This is not a table of bibliographic priority, nor does it assert that the antecedents of each step belong exclusively to one development.
+ 
+ The relation to the series is documented in preprint [5] itself. Its introduction cites the fractional bound of Paper II and the split result of Paper III; its Section 6 credits Paper II for the copy scheme, class selection and split terminal, and develops the mixed adaptation. This provenance does not imply that every step of [5] is a formal consequence of the series, just as sharing these antecedents does not identify our two critical mechanisms.
+ 
+@@ -1252,11 +1180,11 @@
+ | Transfer | Haxell–Rödl, joint templates, Lemma 3.4 | Two-quota mixed selection, §3 and Appendix C |
+ | Critical construction | List coloring and exceptions, §§4–5 | Regularized root and candidates, §5 |
+ 
+-**Table 6.** Comparison with the chordal proof in §§3–5; [15] is not identified with [5]. The fixed-defect and sublinear extensions in §§6.6–6.7 also use the localization and removal developments specified in Appendix F. The table is not a claim that all parts of the enlarged paper use descent by copies.
++**Table 5.** Comparison with the chordal proof in §§3–5; [15] is not identified with [5]. The fixed-defect and sublinear extensions in §§6.6–6.7 also use the localization and removal developments specified in Appendix F. The table is not a claim that all parts of the enlarged paper use descent by copies.
+ 
+ The cutoff in [15] needs care. Theorem 3.3 chooses \(L\) as a function of the localization accuracy, and the stability argument used by Proposition 5.4 and Theorem 1.1 applies that cutoff through Lemma 3.4. It does not set \(L=4\). The explicit choice \(L=4\) following the proof of [15, Theorem 1.3] proves its separate approximation (1.5), not the exact bound in Theorem 1.1. Thus our fixed order-four conclusion strengthens the stated exact upper bound; this is not a claim that every possible adaptation of the method in [15] needs larger cliques.
+ 
+-For the auxiliary model in Table 4, [15, Lemma 3.4] gives \(q_L(G)\le q_L^*(G)+\zeta n^2\). Its exact fractional partition is equivalent to the gain model of §1.1, so \(q_L^*=F_{\{3,\ldots,L\}}\). Algebraically, this estimate meets the partition budget if \(\zeta n^2\le M(n)-q_L^*(G)\). This conditional calculation is not a description of the final construction in [15, Theorem 1.1]: that proof uses Lemma 3.4 through structural localization, then a minimum-counterexample argument and the triangle constructions of [15, §§4–5]. The auxiliary cutoff \(L\) should not be read as the order of pieces in that final construction.
++For the auxiliary model in Table 3, [15, Lemma 3.4] gives \(q_L(G)\le q_L^*(G)+\zeta n^2\). Its exact fractional partition is equivalent to the gain model of §1.1, so \(q_L^*=F_{\{3,\ldots,L\}}\). Algebraically, this estimate meets the partition budget if \(\zeta n^2\le M(n)-q_L^*(G)\). This conditional calculation is not a description of the final construction in [15, Theorem 1.1]: that proof uses Lemma 3.4 through structural localization, then a minimum-counterexample argument and the triangle constructions of [15, §§4–5]. The auxiliary cutoff \(L\) should not be read as the order of pieces in that final construction.
+ 
+ Theorem C′ gives linear edit stability towards a defect template whose core size is not prescribed to be optimal. The optimal-family comparison relevant to [15, Corollary 5.5] is instead (6.17), which retains its square-root term. For fixed \(s\) and \(\delta=\alpha n^2\), the normalized bound is \(A_s\alpha+\sqrt{(1+4A_s)\alpha}\), tending to zero with \(\alpha\). This gives an explicit upper bound towards the quantitative question in [15, §7], under the weaker near-extremality hypothesis on \(c_4\): the corresponding lower bound on \(\operatorname{cp}\) implies it, since \(\operatorname{cp}\le c_4\). Proposition 6.3a gives a matching square-root scale along an explicit family, for each fixed \(s\). It does not establish optimal constants or optimal dependence on \(s\).
+ 
+@@ -1264,125 +1192,15 @@
+ 
+ The term \(n/6+1/24\) in the proof of [15, Theorem 3.3] also occurs in our calibration: in both cases \((2n+1)^2/24=n^2/6+n/6+1/24\). It comes from the continuous quadratic envelope; by itself it is not the floor error in \(M(n)\). The integer profile in Appendix D.3 also retains that floor. The optimal cores in [15, Corollary 1.2], described by the integers nearest to \((2n+1)/6\), agree with (6.4), including the tie when \(n\equiv1\pmod3\).
+ 
+-Preprint [5] has a public Lean development. Our audit concerns our own snapshot and the exclusion described in §7; it is not a claim of exclusive formalization. Nor does the additive form for all orders by itself distinguish the results: an eventual bound \(c_4\le M\), such as the one obtained by the construction in [5], implies \(c_4\le M+b\) by absorbing the remaining finite range, exactly as in §6.3.
++The additive form for all orders does not by itself distinguish the results: an eventual bound \(c_4\le M\), such as the one obtained by the construction in [5], implies \(c_4\le M+b\) by absorbing the remaining finite range, exactly as in §6.3.
+ 
+ Quantitative defect control also occurs in [5]: its strict root-regularization lemma bounds the constructed cost by \(B_n(p)-m/9-A/2\). We therefore do not present the existence of a linear defect estimate, or the constant \(16\), as an improvement over that local estimate. The conclusions emphasized here are the stated fixed-defect extension, simultaneous control of unrestricted partitions on one root, and the verified quantitative interfaces.
+ 
+ We also record the project *Clique Partitions of Split Graphs* by Henderson, Koerts, Roberge, Spirkl and Whitman, announced as in preparation [16]. When consulted on 27 September 2026, the page linked no manuscript; accordingly, no results are attributed to it and no overlap is asserted.
+ 
+-## Appendix A. Formal correspondence and reproduction
+-
+-### A.1. Statements and checks
+-
+-The common prefix `PaperIV` is omitted from the following table. The legacy declarations are checked by `Audit.lean` and their associated targets; the new stability and sublinear interfaces have separate entries below. Source identity is fixed by `03_reproducibility/build_piv-v12-fb459343d234/SOURCE_MANIFEST.json`. The target logs record elaborated types and axiom checks. Historical claim maps do not certify the new sections; the version 1.2 review map accompanies these manuscripts.
+-
+-| Result | Lean declaration |
+-|:--|:--|
+-| Theorem A, additive form | `Erdos81AllOrders.erdos81_all_orders_additive` |
+-| Theorem B, upper bound | `Erdos81Unconditional.erdos81_cliquePartition` |
+-| Theorem B, maximum | `PaperTheorems.erdos81_max_eq` |
+-| Theorem 3.1 | `RC01Final.rc01_uniformRoundingTarget` |
+-| Corollary 3.5 | `FarRegimeAllGraphs.farRegime_cliquePartition_allGraphs` |
+-| Dichotomy (1.5) | `HybridDichotomy.chordal_far_or_nearStructure` |
+-| Theorem 5.0, strengthened window | `NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp` |
+-| Theorem 5.0, previous interface | `NearH1LocalConstructor.exists_near_partition_paid_by_root` |
+-| Corollary 5.4, size and density | `NearCriticalDichotomy.chordal_far_or_criticalRoot`, `chordal_far_or_edge_density` |
+-| Optimal quadratic coefficient | `SharpConstantOptimality.erdos81_quadratic_constant_optimal`, `erdos81_quadratic_constant_isLeast` |
+-| Theorem 6.1, strengthened form | `IntegralStability.chordal_linear_stability_sixteen` |
+-| Theorem 6.1, earlier interface | `IntegralStability.chordal_linear_stability` |
+-| Corollary 6.1a, piece count | `RootPartitionStability.chordal_partition_stability` |
+-| Corollary 6.1a, joint real piece and edge bounds | `SublinearResearch.chordal_joint_stability_real` in `PublicationStability` |
+-| Identity (6.7b) | `RootPartitionStability.sum_rootPieceDefect_eq` |
+-| Corollary 6.2 | `ExtremalClassification.chordal_extremal_classification` |
+-| Proposition D.3 | `SplitMixedGap.mixed_gap_zero` together with the bounded construction in `SplitCompleteSharpValue` |
+-
+-**Table 7.** Principal declarations. The module table in Section 7 locates the implementation; this table identifies the statement being audited.
+-
+-The single audit command described in §7 executes all 19 targets, including the root, the individual audit targets and the export check. Lean and dependency revisions are recorded in lean-toolchain and lake-manifest.json. Compilation, public export, axiom inspection and semantic correspondence are distinct checks. The source freeze is unchanged. The consolidated external report and its evidence distinguish individual semantic comparisons from statements covered by the proof-component ledger and compiled declarations.
+-
+-**Literal definitions.** The following excerpts reproduce definitions and theorem headers, omitting proofs but not hypotheses. The first excerpt is in the namespace `SimpleGraph`; the next three are in `PaperIV.FarRounding`, with finite \(V\), decidable equality and decidable adjacency for \(G\). The last definition is in `PaperIV`. Namespace names are retained in the supplementary excerpt file.
+-
+-```lean
+-def IsChordal (G : SimpleGraph V) : Prop :=
+-  ∀ ⦃v : V⦄ (c : G.Walk v v), c.IsCycle → 4 ≤ c.length →
+-    ∃ x y : V, x ∈ c.support ∧ y ∈ c.support ∧ G.Adj x y ∧ s(x, y) ∉ c.edges
+-```
+-
+-```lean
+-def pairs (K : Finset V) : Finset (Sym2 V) := K.sym2.filter fun e => ¬ e.IsDiag
+-
+-structure CliquePartition where
+-  pieces : Finset (Finset V)
+-  isClique : ∀ K ∈ pieces, ∀ a ∈ K, ∀ b ∈ K, a ≠ b → G.Adj a b
+-  two_le_card : ∀ K ∈ pieces, 2 ≤ K.card
+-  edgeDisjoint : ∀ K ∈ pieces, ∀ L ∈ pieces, K ≠ L → Disjoint (pairs K) (pairs L)
+-  covers : pieces.biUnion pairs = G.edgeFinset
+-
+-def CliquePartition.size (Q : CliquePartition G) : ℕ := Q.pieces.card
+-
+-def CliquePartition.OrderAtMost (Q : CliquePartition G) (r : ℕ) : Prop :=
+-  ∀ K ∈ Q.pieces, K.card ≤ r
+-```
+-
+-```lean
+-def targetSize (n : ℕ) : ℕ := n * (n + 1) / 6
+-```
+-
+-Natural-number division implements the floor in \(M(n)\). The expository symbol \(c_4\) denotes the minimum over these partitions with `OrderAtMost 4`; the exported statement does not assume a minimum function, but directly supplies a witness partition. Chordality in `FarRounding` is a literal alias of the preceding cycle-based definition.
+-
+-**Exported theorems.** In `PaperIV.Erdos81AllOrders` and `PaperIV.Erdos81Unconditional`, respectively, the exact headers are:
+-
+-```lean
+-theorem erdos81_all_orders_additive :
+-    ∃ b : ℕ, ∀ (n : ℕ) (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+-      PaperIV.FarRounding.IsChordal G →
+-        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ PaperIV.targetSize n + b
+-```
+-
+-```lean
+-theorem erdos81_cliquePartition :
+-    ∃ N : ℕ, ∀ n : ℕ, N ≤ n → ∀ (G : SimpleGraph (Fin n)) [DecidableRel G.Adj],
+-      PaperIV.FarRounding.IsChordal G →
+-        ∃ Q : CliquePartition G, Q.OrderAtMost 4 ∧ Q.size ≤ targetSize n
+-```
+-
+-These headers allow the quantifier order and exact coverage to be checked without inferring them from theorem names. The attached audit contains no `sorryAx` among the axioms of the examined declarations. The supplementary report distinguishes that transitive check from the textual search for `native_decide` in project sources and from a complete rebuild of dependencies.
+-
+-### A.2. Intermediate proof contracts
+-
+-**Scope of the written proof.** The table below records seven derivations examined in the consolidated external review. Its assessment, ACCEPTABLE_SUMMARY for each row, retains the stated expository limit concerning the cited second-moment estimates in C.2. A successful build checks formal derivations, not completeness of exposition; the written-proof assessment remains distinct from compilation and from human peer review. The audit history and detailed assessments are retained with the supplementary evidence.
+-
+-| Location | Derivation to review, including the expanded accounts |
+-|:--|:--|
+-| §5.1, (5.4) and (5.7) | Regularization mass, degree, palette and width estimates |
+-| C.2, (3.8) and (3.10) | Discard counts and retention under the partition conventions |
+-| Lemma 3.2 and C.1–C.2 | Fibre lower bounds from regular pairs and their normalization |
+-| C.3, Table C.1 | Numerical domination of the nibble constants and tower iterations |
+-| E.1 | Normalization bounds preceding the terminal construction |
+-| E.1, (E.2b) and (E.2d) | Terminal estimates and the three-case budget |
+-| D.1 | Bose/Skolem frame constructions underlying the residue table |
+-
+-The nibble imported from Paper III and the classical design constructions retain their stated references. The following source map locates the formal implementations; it does not replace those derivations with theorem names.
+-
+-The bounded-rank nibble is reused through `PaperIIISlackNibbleAdapter.boundedRankNibbleAt`. The two-quota construction is in `MarkedQuotaSlackGate.slackMarkedQuotaNibbleAt_proved`; the pairing of triangular supports and its physical realization are in `MarkedQuotaPairing` and `JointTwoQuotaPhysical`. The joint codegree scale corresponds to `RC01CleanedGate.cleanedPacking_joint_codegree_le_of_served_patterns`. Profile mass is at most \(t^2\), not one: this is the physical normalization of `RC01PatternMassScale`.
+-
+-For the mixed path, `VertexCopyMonotone.two_mul_F4_le_add` proves the two-direction inequality. `VertexCopyGate` selects the step and its finite potential; `GatedTerminalSplit.exists_split_terminal_symmetrizationPath` supplies the complete sequence. Local accounting is constructed in `NearH1WindowAccounts` before being imported into `NearH1Localization`. This dependency direction matches the logical order explained in Lemma 4.2.
+-
+-Clique extraction and calibration are in `ChordalCoreMissing` and `NearH1CalibratedRoot`. `Regularization`, `RegularizationBounds` and `RegularizedRootGoal` prove the root properties used by `RootRegularizationBridge`. Finally, `NearH1PhaseI`, `RD09FactorCandidateMoments` and `RD09FactorCandidateAverage` produce the two accounts; `NearH1FinalAssembly` combines them using the same first assignment and its occupied links. The second phase is not applied to an independent copy of the resources.
+-
+-Theorem 5.0 has a strengthened form, `NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp`, which adds \(|3|R|-n|\le n/50\) to the physical constructor; the previous interface `exists_near_partition_paid_by_root` remains as a corollary. The strengthened reserve in (5.15a) is retained for the same witness in `NearStructureWitness.accounts_count_le_improved`; `IntegralStability.chordal_linear_stability_sixteen` and `RootPartitionStability.chordal_partition_stability` use it without recombining roots or packings. The cyclic selection in phase I is in `RD09PaddedL1Mass`; the final evaluation of phase II, in `H1ImprovedConstants.l10_of_raw_rd09L2`. The comparator regimes in (5.1a) are checked in `SplitComparatorResidual.residual_sq_le_of_near_split_universal`. Reserve (D.8) is `ReserveIdentity.targetSize_eq_baseline_add_reserve`; the improved contraction corresponds to `NearThresholdSensitivity.descent_threshold_maximal_barrier` and `near_threshold_binding`. The critical-geometry results are in `NearRootWindow`, `NearEdgeDensity` and `NearCriticalDichotomy`.
+-
+-The additions in this revision have separate public entry points. Theorem C and its maximum are `PaperIV.DefectExplicitPublication.rooted_defect_eventual` and `rooted_defect_maximum`; the historical `DefectSharpPublication` namespace retains the lower witness and `order_three_insufficient` for Proposition D.2. `E35.theoremC_tower` and its uniform variants give Corollary 6.6. The complete account (3.11) is `E17Bridge.improved_far_loss_explicit`. Corollary 3.5 with an explicit threshold is `E17Bridge.ExplicitAssembly.farRegime_allGraphs_explicit`. Finally, `PaperIV.ExplicitThreshold.erdos81_sharp_explicit` and `erdos81_all_orders_bounded_additive` give the global result with the tower of §6.3. These names identify declarations, not new hypotheses.
+-
+-The B7 link is audited through `E17.ExplicitFarAudit`. It reuses the numerical constants from `E18` and `E19`, but constructs the packing through the improved cleaning: the audit requires both of its accounts in the dependency cone and excludes the old final existence theorems. This audit target passed in the combined local run for the identified source cut; the author's internal audit reviewed its log and hypotheses, subject to the limitations recorded in the report.
+-
+-### A.3. Limits of the result
++## Appendix A. Scope of the conclusions
+ 
+ No fractional-to-integral gap \(O(n)\) is proved for every chordal graph. Nor is every proof asserted to require copies, regularization or a particular constructor. The eventual bound does not settle whether \(b=0\) in Theorem A: that equality would retain, not eliminate, the \(n/6\) term contained in \(M(n)\).
+-
+-Experimental checks of small orders are not used as premises. Their documentation, including completeness and certification requirements, belongs to the separate research record.
+-
+-The clique-tree library retains counterexamples to formulations missing the appropriate hypotheses: a leaf alone is not equivalent to a unique simplicial vertex, and separator statements must account for repeated bags and degenerate cases. These results delimit the library's use; they add no assumptions to the main theorem.
+ 
+ ## Appendix B. Complementary construction tools
+ 
+@@ -1416,7 +1234,7 @@
+ \[
+ \sum_{u\in U}\sum_{v\in U}b(u,v)\le(t+1)B_{\rm abs},
+ \]
+-there is a matching whose physical union with \(\mathcal P\) is a single packing, increases the gain by exactly \(|U|\), and has oriented cost at most \(B_{\rm abs}\). First choose the witness in (B.2); then apply compatibility to that witness, since it holds for any matching under the stated free-resource condition. This order avoids combining two different existential choices. The declaration is `SpreadAbsorptionCompatibility.exists_budgeted_compatible_spread_absorber`. It requires \(U\) to be nonempty and even, as well as the degree condition, adjacency of \(z\) and the free resources already specified.
++there is a matching whose physical union with \(\mathcal P\) is a single packing, increases the gain by exactly \(|U|\), and has oriented cost at most \(B_{\rm abs}\). First choose the witness in (B.2); then apply compatibility to that witness, since it holds for any matching under the stated free-resource condition. This order avoids combining two different existential choices. The construction requires \(U\) to be nonempty and even, as well as the degree condition, adjacency of \(z\) and the free resources already specified.
+ 
+ This mechanism does not automatically supply \(U\), \(z\) and the free resources in every chordal graph. It provides another physical construction when those data are already available; that interface should not be confused with a second universal proof.
+ 
+@@ -1427,7 +1245,7 @@
+ |d_R(v)-\theta d_F(v)|\le2\qquad(v\in V(F)).
+ \tag{B.4}
+ \]
+-This is the Beck–Fiala specialization in `BalancedReserve.exists_balanced_reserve`. To see it, write each edge as its two-element endpoint set and assign it weight \(\theta\). The incidence matrix has two ones per column. The Beck–Fiala rounding used in the infrastructure of Paper III selects integral columns and changes each row sum by at most two. The fractional row sums are \(\theta d_F(v)\); the integral ones are \(d_R(v)\). The formal adapter verifies that passing from edges to endpoint sets is injective and preserves these degrees exactly.
++This is a specialization of Beck–Fiala. To see it, write each edge as its two-element endpoint set and assign it weight \(\theta\). The incidence matrix has two ones per column. The Beck–Fiala rounding used in the infrastructure of Paper III selects integral columns and changes each row sum by at most two. The fractional row sums are \(\theta d_F(v)\); the integral ones are \(d_R(v)\). Passing from edges to their two-element endpoint sets is injective and preserves these degrees.
+ 
+ The result controls the distribution of a reserve, but does not guarantee that a subsequent packing avoids it. It is an auxiliary tool, not another proof of the main theorem.
+ 
+@@ -1435,7 +1253,7 @@
+ 
+ Let \(H\) be a subgraph of \(G\) with maximum degree at most three. Suppose four distinct vertices \(z_0,z_1,z_2,z_3\) are given, none an endpoint of an edge of \(H\), each adjacent in \(G\) to all these endpoints. There is a packing of \(|E(H)|\) triangles covering all bases of \(H\) with gain \(2|E(H)|\).
+ 
+-Vizing colors the edges of \(H\) with four colors. Each class is a matching; assign to class \(i\) the host \(z_i\). Bases are disjoint between classes, hosts are distinct and lie outside the bases, and each host link is used once within its class. The triangles are therefore edge-disjoint and their gain is counted exactly. This is the content of `FourHostClosure.exists_fourHost_packing`.
++Vizing colors the edges of \(H\) with four colors. Each class is a matching; assign to class \(i\) the host \(z_i\). Bases are disjoint between classes, hosts are distinct and lie outside the bases, and each host link is used once within its class. The triangles are therefore edge-disjoint and their gain is counted exactly.
+ 
+ The existence of the four hosts is an explicit hypothesis. Adding these triangles to a prior packing also requires their bases and links to be free; the result guarantees neither that freedom nor an automatic application to every chordal residue.
+ 
+@@ -1456,7 +1274,7 @@
+ |\mathcal M|\ge(1-\beta)\sum_{H\in\mathcal H}z_H-\beta|U|-C.
+ \tag{3.3}
+ \]
+-The constants are fixed before \(U,\mathcal H,z\). No near-unit load or exceptional set is required. This is the slack form of the nibble from Paper III, not a new result of the present work. Appendix A identifies its declaration and the adapter, which only translates the matching predicate.
++The constants are fixed before \(U,\mathcal H,z\). No near-unit load or exceptional set is required. This is the slack form of the nibble from Paper III, not a new result of the present work.
+ 
+ ### Lemma 3.3. Simultaneous selection of total and marked mass
+ 
+@@ -1561,7 +1379,7 @@
+ \]
+ The bound on the number of regularity classes is then fixed, and finally a single \(N_\xi\) absorbs all remaining terms. The parameter \(\xi\) is not replaced by \(1/n\).
+ 
+-Appendix A identifies the declarations corresponding to these steps. The probabilistic proof of the nibble input is reused from Paper III [4]; Lemmas 3.3–3.4 explain the adaptation that turns its matching into the mixed packing of (3.1).
++The probabilistic proof of the nibble input is reused from Paper III [4]; Lemmas 3.3–3.4 explain the adaptation that turns its matching into the mixed packing of (3.1).
+ 
+ ### C.2. What is discarded and why the threshold is uniform
+ 
+@@ -1596,7 +1414,7 @@
+ 
+ Thus the improvement in (3.10) is part of a complete loss bound, not merely an isolated saving on copies. The numerical schedule in C.3 remains conservative: reducing this coefficient does not by itself reduce the tower stated there.
+ 
+-We must still explain why physical rounding can be carried out simultaneously. The relevant codegree is the mass of copies containing **two given physical edges**, summed over all profiles and both types. Even if each profile behaves well separately, the same pair of resources could occur in several profiles. The formal estimate is therefore made before forgetting the marks. In the proof's notation, with
++We must still explain why physical rounding can be carried out simultaneously. The relevant codegree is the mass of copies containing **two given physical edges**, summed over all profiles and both types. Even if each profile behaves well separately, the same pair of resources could occur in several profiles. The estimate is therefore made before forgetting the marks. In the proof's notation, with
+ \[
+ a_3=d^3-3\delta>0,\qquad a_4=d^6-6\delta>0,
+ \]
+@@ -1618,7 +1436,7 @@
+ 
+ Fix an active profile \(H\), let \(\mathcal F_H\) be its raw fibre, and write \(V_H=|\mathcal F_H|\). For a pair \(q\) of its classes, let \(E_q\) be the actual edges in that pair and put \(d_q=\max\{1,|E_q|\}\). If \(c_{H,q}(e)\) counts the raw copies through \(e\in E_q\), its reference value is \(A_{H,q}=V_H/d_q\). This reference depends on the pair. Delete every copy using an edge for which \(|c_{H,q}(e)-A_{H,q}|>uA_{H,q}\), for any of the three or six pairs in the profile.
+ 
+-An edge deleted in this test has no surviving copies through it. Every other edge has at most \((1+u)A_{H,q}\). Since a surviving copy receives weight \(\psi_H/((1+u)V_H)\), this profile contributes at most \(\psi_H/d_q\) to the edge's load. The transferred capacity constraint is \(\sum_{H\text{ serving }q}\psi_H\le d_q\); here the sum includes every active profile containing both classes of \(q\), not one selected pair per profile. Summing the contributions therefore gives a total load at most one. The denominator is legitimate because an active fibre has positive volume. This is the feasibility argument in `RC01CleanFiber`, after the bilateral test in `RC01DeviationCleanup`.
++An edge deleted in this test has no surviving copies through it. Every other edge has at most \((1+u)A_{H,q}\). Since a surviving copy receives weight \(\psi_H/((1+u)V_H)\), this profile contributes at most \(\psi_H/d_q\) to the edge's load. The transferred capacity constraint is \(\sum_{H\text{ serving }q}\psi_H\le d_q\); here the sum includes every active profile containing both classes of \(q\), not one selected pair per profile. Summing the contributions therefore gives a total load at most one. The denominator is legitimate because an active fibre has positive volume.
+ 
+ It remains to check that this deletion is affordable. For one pair, the rooted second-moment estimates bound the number \(B_q\) of bad roots by \(B_qu^2a_3^2\le11\delta t^2\) for triangles and \(B_qu^2a_4^2\le23\delta t^2\) for four-cliques. A root supports at most \(t\) raw triangles or \(t^2\) raw four-cliques. Summing over the three or six pairs bounds the numbers of deleted copies by \(33\delta t^3/(u^2a_3^2)\) and \(138\delta t^4/(u^2a_4^2)\), respectively. Multiple counting only enlarges these upper bounds. Comparing with the fibre lower bounds shows that the deleted fraction is at most \(v\) if \(33\delta\le vu^2a_3^3\) and \(138\delta\le vu^2a_4^3\).
+ 
+@@ -1651,7 +1469,7 @@
+ B(\varepsilon,k_0)=t_{H(\varepsilon)}16^{t_{H(\varepsilon)}}.
+ \end{gathered}
+ \]
+-These are `SzemerediRegularity.initialBound`, `stepBound` and `bound` in the pinned Mathlib dependency. In (C.1) we take \(\varepsilon=\delta/8\) and \(B=B(\delta/8,k_0)\). The marked selector, at accuracy \(z\), supplies explicit constants \(\gamma_*>0,C_*\ge0,D_*\ge0\). Write
++In (C.1) we take \(\varepsilon=\delta/8\) and \(B=B(\delta/8,k_0)\). The marked selector, at accuracy \(z\), supplies explicit constants \(\gamma_*>0,C_*\ge0,D_*\ge0\). Write
+ \[
+ \gamma=\frac1{\lceil1/\gamma_*\rceil},\qquad C=\lceil C_*\rceil,\qquad
+ a_3=a^3-3\delta,\quad a_4=a^6-6\delta.
+@@ -1712,7 +1530,7 @@
+ \gamma_R(r-1,\beta)=\min\{1/D_S(r,\beta),\mu_T/4,1\}.
+ \end{gathered}
+ \]
+-These are the definitions in `E18.NibbleSchedule`, `NibbleOracle` and `NibbleChain`; the latter two use \(\min\{\beta,1/2\}\) for a general positive accuracy, which equals \(\beta\) in the range just stated. The rank increases from six to seven when the selector is converted to the nibble input. Substituting \(r=7\) and \(\beta=\beta_0\) gives the inequalities recorded below. They are bounds proved for this schedule, not decimal approximations or free choices of the selector constants.
++For general positive accuracy, the selector construction uses \(\min\{\beta,1/2\}\); this equals \(\beta\) in the range just stated. The rank increases from six to seven when the selector is converted to the nibble input. Substituting \(r=7\) and \(\beta=\beta_0\) gives the inequalities recorded below. They are bounds proved for this schedule, not decimal approximations or free choices of the selector constants.
+ 
+ | Step | Verified bounds |
+ |:--|:--|
+@@ -1721,13 +1539,13 @@
+ | Selector | \(D_S(7,\beta_0)\le2^U,\quad \gamma_R(6,\beta_0)\ge2^{-U}\) |
+ | Three final integers | \(G_1\le2^{U+2},\quad G_2\le2^{U+3},\quad G_3\le2^{U+67}\) |
+ 
+-**Table C.1.** Numerical absorption of the selector. Here \(U=2^{59516}+191432\); the stages correspond to `E19.ScheduleBounds`, `E19.ChainBounds` and `E19.GateBounds`.
++**Table C.1.** Numerical absorption of the selector. Here \(U=2^{59516}+191432\).
+ 
+ Here is the numerical chain behind the table. Since \(\beta_0\ge2^{-66}\), we have \(L_T\le66\log2\le46\) and \(M_T\le5153\). The inequality \(8\cdot5153+1\le59480\log2\) gives \(\gamma_T\ge2^{-59485}\). Put \(a_0=59485\) and \(Y=2^{a_0+31}\); these are numerical auxiliaries, not graph parameters. Then \(\epsilon_T=(24/7)\gamma_T\ge2^{-a_0}\) and \(T_T\le5153\,2^{a_0}+1\le2^{a_0+13}\). Moreover, \(2G_T\le2^{4a_0+5}\) and \(4a_0+5\le2^{18}\), so \((2G_T)^{T_T}\le2^Y\) and \(\eta_T\ge2^{-(Y+69)}\).
+ 
+ For the retained scale, write \(x=6\gamma_T/7\le1/2\). The inequalities \(1-x\ge(1+2x)^{-1}\) and \(\gamma_TT_T\le M_T+\gamma_T\le5153+1/8\) give \(2xT_T\le(12/7)(5153+1/8)\le12748\log2\). Consequently \(q_T^{T_T}\ge2^{-12748}\) and \(\ell_T\ge2^{-12749}\). Substitution in the definitions gives \(D_{0,T}\le2^{a_0+146}\) and \(c_{0,T}\ge2^{-(Y+3a_0+220)}\). Let \(Z=3a_0+220+12749=191424\). Each of the four entries defining \(\mu_T\) is at least \(2^{-(Y+Z)}\). Also \(d_{0,T}\le2^{a_0+146+12749}\). The ceiling terms in \(D_S\) are therefore bounded by \(256\,2^{Y+Z}=2^U\), where \(U=Y+191432\); the extra unit in \(D_S\) is included in this bound. Both \(1/D_S\) and \(\mu_T/4\) are at least \(2^{-U}\), which proves the selector row.
+ 
+-Finally, substituting this lower bound into the three selector quantities gives the last row. For its largest entry, the intermediate denominator is at most \(10\,2^U+28\); hence its ceiling is at most \(2\cdot10^{17}\cdot392\,2^U\le2^{U+67}\). Since \(U+67\le2^{59517}\), the four rows imply \(G_i\le2^{\,2^{59517}}\). We now give the remaining comparison, following `E18.Numeric` and `E19.Main`.
++Finally, substituting this lower bound into the three selector quantities gives the last row. For its largest entry, the intermediate denominator is at most \(10\,2^U+28\); hence its ceiling is at most \(2\cdot10^{17}\cdot392\,2^U\le2^{U+67}\). Since \(U+67\le2^{59517}\), the four rows imply \(G_i\le2^{\,2^{59517}}\). We now give the remaining comparison.
+ 
+ **The regularity iterate at the chosen accuracy.** At \(\eta_0=10^{-16}\), put \(\varepsilon=\delta/8\). The exact inequality \(100/\varepsilon^5\le4^{4000}\) implies that the floor in \(I(\varepsilon,k_0)\) is at most \(4000\). Since \(k_0=3\cdot10^{19}+1\), the maximum defining \(I\) is therefore \(k_0\). Also,
+ \[
+@@ -1778,13 +1596,13 @@
+ \qquad c_{\rm poly}=4\cdot17664^5\cdot9000^{105}+3006.
+ \tag{C.4}
+ \]
+-This is `E35.NfarE_le_tower_poly`. It bounds the selector, regularity and cleanup parameters before the graph is chosen; \(\eta\) is not allowed to depend on the input graph after the threshold has been fixed. The specialized numerical bound in §6.3 remains valid. Formula (C.4) is the additional comparison needed for the growing-defect exact band in Corollary 6.6.
++It bounds the selector, regularity and cleanup parameters before the graph is chosen; \(\eta\) is not allowed to depend on the input graph after the threshold has been fixed. The specialized numerical bound in §6.3 remains valid. Formula (C.4) is the additional comparison needed for the growing-defect exact band in Corollary 6.6.
+ 
+ ## Appendix D. Complete graphs and comparator identities
+ 
+ ### D.1. The complete graph at every order
+ 
+-The target without an additive term can be verified on an infinite family without using the eventual threshold. This supplement is formalized in `ThreeRegime.CompleteStateAllOrders`; it is not used in the proof of Theorems A and B.
++The target without an additive term can be verified on an infinite family without using the eventual threshold. This construction is not used in the proof of Theorems A and B.
+ 
+ **Proposition D.1.** For every integer \(n\ge0\), there is a partition of \(K_n\) into pieces of order at most four with at most \(M(n)\) pieces.
+ 
+@@ -1802,7 +1620,7 @@
+ \]
+ Since \(|Q|\) is an integer, this gives the floor \(M(n)\).
+ 
+-The construction uses two block frameworks on \((\mathbb Z/M\mathbb Z\times\mathbb Z/3\mathbb Z)\sqcup\{\infty\}\). For odd \(M\) it uses the Bose framework [19]; for even \(M\), the Skolem framework [20]. The module `HalvingFrames` assigns a unique owner to each covered edge and proves that its blocks are triangles or \(K_4\). In the odd framework, triangle columns can be replaced by \(K_4\) columns containing \(\infty\). The six residue classes are assembled as follows; the names refer to the implemented constructions, not to a new attribution of the classical designs.
++The construction uses two block frameworks on \((\mathbb Z/M\mathbb Z\times\mathbb Z/3\mathbb Z)\sqcup\{\infty\}\). For odd \(M\) it uses the Bose framework [19]; for even \(M\), the Skolem framework [20]. Each covered edge belongs to a unique block, and the blocks are triangles or \(K_4\). In the odd framework, triangle columns can be replaced by \(K_4\) columns containing \(\infty\). The six residue classes are assembled as follows; the names refer to the implemented constructions, not to a new attribution of the classical designs.
+ 
+ | Order \(n\) | Blocks used | Final step |
+ |:--|:--|:--|
+@@ -1813,7 +1631,7 @@
+ | \(3M+1\), \(M\) odd | Bose construction with \(M\) columns of \(K_4\) | Covers \(K_n\) |
+ | \(3M+2\), \(M\) odd | Construction from the preceding row | Add one vertex; complete its edges as \(K_2\) |
+ 
+-**Table 8.** Constructions for the complete case. In the last row the added vertex does not participate in the packing; it is not an isolated vertex of the complete graph.
++**Table 6.** Constructions for the complete case. In the last row the added vertex does not participate in the packing; it is not an isolated vertex of the complete graph.
+ 
+ Let us check the gain required by the assembly. For disjoint mixed blocks, if \(E_{\rm covered}\) is their covered edge set and \(b_4\) their number of \(K_4\), the contributions two and five give
+ \[
+@@ -1825,7 +1643,7 @@
+ 3g(\mathcal P)=(3M+1)3M+3M=(3M+2)3M=n(n-2).
+ \tag{D.4}
+ \]
+-The six rows exhaust the residue classes modulo six for \(n\ge2\). The theorem `exists_packing` combines these counts, and `complete_state_closes` applies completion (D.2).
++The six rows exhaust the residue classes modulo six for \(n\ge2\). Combining these counts and applying completion (D.2) proves the claim.
+ 
+ This proves \(b=0\) for complete graphs, not for all small chordal graphs. In one congruence class, pieces of order four are necessary.
+ 
+@@ -1860,7 +1678,7 @@
+ \end{aligned}
+ \tag{D.7}
+ \]
+-The last inequality uses capacity one on each core edge. The construction in Section 6.1 contains one triangle per internal base and attains this gain. Since every integral packing defines a fractional one, both equalities in (D.6) follow. The formal result is `SplitMixedGap.mixed_gap_zero`, together with the bounded construction in `SplitCompleteSharpValue`.
++The last inequality uses capacity one on each core edge. The construction in Section 6.1 contains one triangle per internal base and attains this gain. Since every integral packing defines a fractional one, both equalities in (D.6) follow.
+ 
+ The conclusion is an equality of optimal values in this family under \(2\le k\le h\). It does not assert that every vertex of the fractional polytope is integral, nor does it extend zero gap to arbitrary split graphs.
+ 
+@@ -1875,7 +1693,7 @@
+ M(n)=B_n(k)+M(d_{n,k}).
+ \tag{D.8}
+ \]
+-Indeed, in both branches \(d_{n,k}(d_{n,k}+1)=(n-3k)(n-3k+1)\). Substituting into (6.3), dividing by six and taking floors, the integer \(B_n(k)\) comes outside the floor, yielding (D.8). The hypothesis on \(\binom k2\) makes \(B_n(k)\) nonnegative, as represented by the formal declaration over natural numbers.
++Indeed, in both branches \(d_{n,k}(d_{n,k}+1)=(n-3k)(n-3k+1)\). Substituting into (6.3), dividing by six and taking floors, the integer \(B_n(k)\) comes outside the floor, yielding (D.8). The hypothesis on \(\binom k2\) makes \(B_n(k)\) nonnegative.
+ 
+ This form identifies the available margin without replacing \(M\) by its rational envelope. In particular, the reserve is zero exactly when \(d_{n,k}\le1\), recovering the optimal cores in (6.4). It does not by itself supply a partition of an arbitrary chordal graph: it quantifies the profile budget against which the construction is compared.
+ 
+@@ -1952,7 +1770,7 @@
+ 
+ For a light vertex, minimum degree and the bound on its exterior degree imply at most \(\rho/10^4+2\lambda/10^{41}<\rho/200\) missing neighbors in \(A_0\). The definition gives the same \(\rho/200\) bound for \(Y_r\). Adding \(Y_c\) and the \(2t_W\) reserved spokes therefore gives \(\sigma\le\rho/200+12\rho/10^{27}\). On the other side, every vertex of \(S\) misses at most \(\rho/40\) light neighbors; adding \(Y_r\) and the reserves gives \(\tau\le\rho/40+12\rho/10^{27}\). These are the row and column bounds used again in E.4.
+ 
+-Finally, let \(D\) count all missing links between \(S\) and \(H\). Splitting them between \(A_0\!:\!\mathcal L\), \(A_0\!:\!Y_r\) and \(Y_c\!:\!H\) gives \(D\le\lambda^2/10^{41}+|Y_r|\rho/200+|Y_c|(\rho/40+|Y_r|)\le(\rho/10^{13})^2\). Taking \(L=\lfloor\sqrt D\rfloor+1\) yields \(D<L^2\) and \(L\le\rho/10^{13}+1\). These estimates, proved in `IndepAllBounds` and `IndepAllParams`, precede the execution of the constructor. In particular, the reserves are not adjusted retrospectively to the piece count.
++Finally, let \(D\) count all missing links between \(S\) and \(H\). Splitting them between \(A_0\!:\!\mathcal L\), \(A_0\!:\!Y_r\) and \(Y_c\!:\!H\) gives \(D\le\lambda^2/10^{41}+|Y_r|\rho/200+|Y_c|(\rho/40+|Y_r|)\le(\rho/10^{13})^2\). Taking \(L=\lfloor\sqrt D\rfloor+1\) yields \(D<L^2\) and \(L\le\rho/10^{13}+1\). These estimates precede the execution of the constructor. In particular, the reserves are not adjusted retrospectively to the piece count.
+ 
+ Let \(\nu\) be the maximum number of disjoint nonedge pairs within \(S\). The rooted-defect condition, together with the normalized common-neighbor bounds, implies \(\nu\le s\); the argument is given in E.4 below. This is a property of the normalized core, not of every vertex subset in a graph of rooted defect at most \(s\). The extremal matching bound applied to the complement of \(G[S]\) gives
+ \[
+@@ -1996,8 +1814,7 @@
+ e(\mathcal L,X')\le(s-\nu)|\mathcal L|
+  +2(\omega+s)x+x\left(\frac{2\nu\rho}{40}+\frac{x\lambda}{10^{10}}\right).
+ \]
+-To obtain the error \(n/9\) in (E.2d), use \(\nu\le s<h\), \(x\le2h\), \(h^2\rho=n\), \(h^2\lambda=\rho\) and \(h^2\le\rho/10^{50}\). The error just displayed is at most \(n/10+4n/10^4+4\rho/10^{10}+4\rho/10^{50}\le n/9\). This is the elimination estimate in `IndepAllPeel` and its numerical specialization in `IndepAllObstr`. Applying it to \(2s+2\) large exceptions also gives \(j\le2s+1\).
+-
++To obtain the error \(n/9\) in (E.2d), use \(\nu\le s<h\), \(x\le2h\), \(h^2\rho=n\), \(h^2\lambda=\rho\) and \(h^2\le\rho/10^{50}\). The error just displayed is at most \(n/10+4n/10^4+4\rho/10^{10}+4\rho/10^{50}\le n/9\). Applying it to \(2s+2\) large exceptions also gives \(j\le2s+1\).
+ 
+ The budget proof now has three cases.
+ 
+@@ -2026,7 +1843,7 @@
+    \(n=\rho(s+1)^2\) and \(\rho\ge10^{50}(s+1)^2\).
+    Together with the bound on \(M_S\), this again proves (E.2b).
+ 
+-These three cases constitute the joint inequality in `IndepAllBudget`. They do not assert that absorption, without the rooted-defect condition, always has a favorable balance.
++Combining these three cases gives the joint inequality. They do not assert that absorption, without the rooted-defect condition, always has a favorable balance.
+ 
+ Finally, put \(z=\lceil(c+b+s)/3\rceil\). The integer comparator's parabola and the sum of its increments give, when \(c+b\ge s+2\),
+ \[
+@@ -2038,9 +1855,9 @@
+ \]
+ Inserting the first inequality into (E.2c) gives
+ \(|Q|\le Q_s(c+b)+t_W z\); the second yields \(|Q|\le Q_s(n)\).
+-`IndepAllMain` combines the construction with this arithmetic step. The additional `ConstructorBudget` interface retains both (E.2c) and the target bound for one partition.
+-
+-The formal constructor used here invokes neither the results of [15] nor the historical modules of the replaced construction. The list bound and first-phase capacity window have the same form as conditions in [15, Lemma 4.1 and (4.4)]. Here they are justified by dyadic hosting, averaging over cyclic shifts, and balanced absorption. This comparison identifies the mechanisms and their shared conditions; it claims neither priority for those conditions nor historical independence on the basis of the dependency check in §7.
++The construction and this arithmetic step give both (E.2c) and the target bound for the same partition.
++
++The list bound and first-phase capacity window have the same form as conditions in [15, Lemma 4.1 and (4.4)]. Here they are justified by dyadic hosting, averaging over cyclic shifts, and balanced absorption. This comparison identifies the mechanisms and their shared conditions; it claims neither priority for those conditions nor historical independence.
+ 
+ ### E.2. From the terminal to the eventual theorem
+ 
+@@ -2048,7 +1865,7 @@
+ 
+ For each \(s\), the terminal result supplies \(\epsilon_s>0\) and a threshold beyond which every graph in the class with \(\delta(G)\ge(1/3-\epsilon_s)n\) admits a partition of cost \(Q_s(n)\). If there is a quadratic fractional margin, Corollary 3.5 applies to the graph, and \(M(n)\le Q_s(n)\) in the range considered. Otherwise, fixed-defect localization gives the normalized data of E.1. The local threshold \(\lceil10^{50}(s+1)^8\rceil\) for that terminal is not the global \(N_s\), which includes localization and rounding.
+ 
+-The proof selected here is `E34.theoremC_fully_explicit_final`, with \(N_s=F_s=\mathrm{Fexp}(\mathrm{NeditE},s)\). Its chordal-edit step is formalized from [22], with the adaptations recorded in Appendix F.5. An earlier existential assembly used the induced removal lemma of Alon–Shapira [23]. It is not the proof selected for the public Theorem C. It remains in use in the formal unrestricted-classification wrappers described in §7 and Table 9. Corollary 6.6 bounds \(F_s\) by an explicit tower.
++The resulting threshold is \(N_s=F_s=\mathrm{Fexp}(\mathrm{NeditE},s)\). Its chordal-edit step follows [22], with the adaptations in Appendix F.5. Corollary 6.6 bounds \(F_s\) by an explicit tower.
+ 
+ Here is why a minimum-degree terminal suffices. For sufficiently large \(n\),
+ \[
+@@ -2107,7 +1924,7 @@
+ 
+ Since \(\kappa\ge n/2\) and \(\rho\le n\), the edge bound gives \(q\le4\rho/10^{31}+1\). The same displayed estimates give
+ \(3\lceil c/2\rceil+2\tau+4q\le b+2\).
+-Thus all the capacity and list conditions in (E.1) still hold with this smaller palette. These are the inequalities established in `StrictParams`; no new coloring assumption is introduced.
++Thus all the capacity and list conditions in (E.1) still hold with this smaller palette. No new coloring assumption is introduced.
+ 
+ The cyclic averaging step now retains \(t_I\) hosted exterior bases with
+ \(\kappa t_I\ge m(c-2\sigma)\). Hence its integer saving \(z=2t_I-m\) satisfies
+@@ -2157,7 +1974,7 @@
+ nt_W\le800(s+1)^2R_*.
+ \tag{E.10}
+ \]
+-This is the strict budget in `StrictBudget`, not an extra hypothesis on the constructor.
++This proves the strict budget from the constructor's estimates.
+ 
+ **The remaining core excess is also paid.** The normalization bounds imply
+ \(2(L+t_W)\le(c+b+s)/3\). Since the minimum subtracted in \(g_w\) is nonnegative, \(g_w\le\deg(w)\le n\). Consequently,
+@@ -2165,20 +1982,20 @@
+ E=R_*+\sum_{w\in W}g_w\le R_*+nt_W.
+ \tag{E.11}
+ \]
+-This is the account in `ResidualExcess`. It uses the bound on the same \(L\) supplied by the constructor.
++This account uses the bound on the same \(L\) supplied by the constructor.
+ 
+ **An actual clique, with a paid displacement.** First justify the missing-pair restriction on \(S\). Suppose \(s+1\) disjoint nonedge pairs have endpoints \(B\subseteq S\), and let \(U\subseteq\mathcal L\) be their common light neighbors. The normalized missing-link estimates and \(|B|=2(s+1)\) give
+ \[
+ |U|\ge\rho/10^4+s+2.
+ \]
+-Every clique in \(\mathcal L\) has at most \(\rho/10^4+1\) vertices, by the light exterior-degree bound. In the induced graph on \(B\cup U\), each vertex of \(B\) therefore has more than \(s\) neighbors outside any clique of its neighborhood. Each vertex of \(U\) has the same property: its neighborhood contains \(B\), and a clique can contain at most one endpoint of each missing pair. No vertex of this induced graph satisfies the rooted-defect condition with empty root, a contradiction. This is the argument in `AllInput.no_core_pairs`; the common-neighbor estimates are essential.
++Every clique in \(\mathcal L\) has at most \(\rho/10^4+1\) vertices, by the light exterior-degree bound. In the induced graph on \(B\cup U\), each vertex of \(B\) therefore has more than \(s\) neighbors outside any clique of its neighborhood. Each vertex of \(U\) has the same property: its neighborhood contains \(B\), and a clique can contain at most one endpoint of each missing pair. No vertex of this induced graph satisfies the rooted-defect condition with empty root, a contradiction. The common-neighbor estimates are essential to this contradiction.
+ 
+ For completeness, the finite core alternative used next is as follows. If \(c\ge20(s+1)^2\) and the complement of \(G[S]\) has no matching of size \(s+1\), then either \(S\) contains a clique of size \(c-s\), or
+ \[
+ c-s\le2\left(e(G[S])-\binom{c-s}{2}\right)=2E.
+ \tag{E.12}
+ \]
+-One proves this by induction on \(s\). For \(s=0\), \(S\) is a clique. If some vertex has at least \(2s+1\) nonneighbors in \(S\), deleting it leaves no missing matching of size \(s\): such a matching would occupy only \(2s\) vertices, leaving a nonneighbor to extend it. Apply induction with \(s-1\); the target core size remains \(c-s\), and any lower bound on the edges of the smaller set also holds in \(S\). Otherwise the missing-edge graph has maximum degree at most \(2s\). Repeatedly deleting the two endpoints of a missing edge removes at most \(4s+1\) missing edges per step and stops after at most \(s\) steps. Thus it has at most \((4s+1)s\) edges. Substitution in \(E=e(G[S])-\binom{c-s}{2}\), using \(c\ge20(s+1)^2\), gives (E.12). This is `CoreCliqueAlternative`.
++One proves this by induction on \(s\). For \(s=0\), \(S\) is a clique. If some vertex has at least \(2s+1\) nonneighbors in \(S\), deleting it leaves no missing matching of size \(s\): such a matching would occupy only \(2s\) vertices, leaving a nonneighbor to extend it. Apply induction with \(s-1\); the target core size remains \(c-s\), and any lower bound on the edges of the smaller set also holds in \(S\). Otherwise the missing-edge graph has maximum degree at most \(2s\). Repeatedly deleting the two endpoints of a missing edge removes at most \(4s+1\) missing edges per step and stops after at most \(s\) steps. Thus it has at most \((4s+1)s\) edges. Substitution in \(E=e(G[S])-\binom{c-s}{2}\), using \(c\ge20(s+1)^2\), gives (E.12).
+ 
+ In the first case, choose the clique \(C\) of size \(c-s\) and put \(r=0\). In the second case, the endpoints of a maximum missing matching meet every missing edge. Their complement is a clique of size at least \(c-2s\); trim it to that size and put \(r=s\). Then \(|C|+s+r=c\). Since \(c\ge2s\), (E.12) gives \(c\le4E\), and hence \(rc\le4sE\). Normalization also gives \(n\le4c\), so in both cases
+ \[
+@@ -2202,7 +2019,7 @@
+ d_E(G,T(C,D,J))\le a+m+E+2rn+2nt_W.
+ \tag{E.14}
+ \]
+-One \(rn\) pays the reduced clique size in the interior count; the other pays the change of host class. Likewise, \(W\) is first isolated and then placed in the host class. These are upper bounds on two successive edits, not a claim that all charged pairs are distinct. `TemplateDistance`, `RootPartition` and `CliqueShiftArithmetic` formalize these comparisons.
++One \(rn\) pays the reduced clique size in the interior count; the other pays the change of host class. Likewise, \(W\) is first isolated and then placed in the host class. These are upper bounds on two successive edits, not a claim that all charged pairs are distinct.
+ 
+ **Combining the accounts.** Equations (E.11), (E.13) and (E.14) imply
+ \[
+@@ -2222,7 +2039,7 @@
+ 
+ ### F.1. Explicit fixed-defect parameters
+ 
+-The functions used here are those of the frozen module `ExplicitFixedStability`. They replace the existential choice of a terminal or a localization threshold; neither is an unproved input. Write \(\eta_s=\mathrm{etaNF}(s)>0\), \(L_s=\mathrm{NLoc}(\mathrm{NeditE},s,\epsilon_s)\), and \(F_s=\mathrm{Fexp}(\mathrm{NeditE},s)\) for the explicit functions in `E33.Assembly` and `E33.LocExplicit`, with the chordal-edit threshold NeditE supplied by `E34.L11Main`. The removal argument formalized in E34 follows de Joannis de Verclos [22]; formal verification does not change its mathematical attribution. The function \(N_{\rm far}\) is the explicit rounding threshold of E18, not an additional existential parameter.
++The explicit terminal and localization thresholds used below are those constructed in Appendix E.2. Write \(\eta_s=\mathrm{etaNF}(s)>0\), \(L_s=\mathrm{NLoc}(\mathrm{NeditE},s,\epsilon_s)\), and \(F_s=\mathrm{Fexp}(\mathrm{NeditE},s)\). Here NeditE is the chordal-edit threshold from the removal argument following de Joannis de Verclos [22], with the adaptations described in F.5. The function \(N_{\rm far}\) is the explicit rounding threshold in Appendix C.3. Each function is fixed before the graph is chosen.
+ 
+ With \(\epsilon_s,A_s\) as in (6.11), the actual stability parameters are
+ \[
+@@ -2236,7 +2053,7 @@
+ \end{aligned}
+ \tag{F.1}
+ \]
+-These are definitions of named, proved threshold functions, not numerically useful bounds. The local term \(10^{50}(s+1)^8\) is only one summand; it must not be reported as the global threshold. The proof of `fixed_defect_stability_explicit` calls the proved removal, localization, far-rounding and retained-terminal results. Thus (F.1) contains no assumed realizer or localization theorem.
++These are definitions of named, proved threshold functions, not numerically useful bounds. The local term \(10^{50}(s+1)^8\) is only one summand; it must not be reported as the global threshold. The proof combines the removal, localization, far-rounding and retained-terminal results. Thus (F.1) contains no assumed realizer or localization theorem.
+ 
+ For clarity, the deletion invariant used in §6.6 is
+ \[
+@@ -2274,16 +2091,16 @@
+ F_4(G)\le\frac{c(5n-4c-1)}{12}+s(n-c).
+ \tag{F.4}
+ \]
+-The rational comparisons in `RefinedFractionalBound` and `UniformFractionalBound` establish the two bands in Proposition 6.4. For \(n<8\), `SmallOrderFractional` checks the remaining integer parameter ranges against this same envelope inside Lean. The empty graph and the cases not requiring a \(K_4\) constraint use the first row or the edge-count bound. No enumeration of small graphs, floating-point optimum, or external solver certificate is needed for these orders.
++The rational comparisons establish the two bands in Proposition 6.4. For \(n<8\), the remaining integer parameter ranges are checked against this same envelope. The empty graph and the cases not requiring a \(K_4\) constraint use the first row or the edge-count bound. No enumeration of small graphs, floating-point optimum, or external solver certificate is needed for these orders.
+ 
+ ### F.3. Uniform localization through a chordal edit
+ 
+-The structural part of Theorem 6.5 does not use only (F.2). It also needs to turn small rooted defect into a small chordal edit. For each accuracy \(\xi>0\), E34 gives an explicit sample size \(m=m(\xi)\). The wrapper `SublinearEdit` uses
++The structural part of Theorem 6.5 does not use only (F.2). It also needs to turn small rooted defect into a small chordal edit. For each accuracy \(\xi>0\), the removal construction gives an explicit sample size \(m=m(\xi)\). Set
+ \[
+ \theta(\xi)=\frac1{16m^{m+1}+1},\qquad N(\xi)=\max\{m,1\}.
+ \tag{F.5}
+ \]
+-For \(n\ge N(\xi)\) and \(s\le\theta(\xi)n\), a graph of rooted defect at most \(s\) is within \(\xi n^2\) edge edits of a chordal graph. The underlying removal proof is the one formalized from [22].
++For \(n\ge N(\xi)\) and \(s\le\theta(\xi)n\), a graph of rooted defect at most \(s\) is within \(\xi n^2\) edge edits of a chordal graph. The underlying removal proof follows [22], with the adaptations specified in F.5.
+ 
+ The next lemma recovers a clique in the original graph. For a vertex set \(D\), let \(\operatorname{ordNE}(G,D)\) count ordered pairs of distinct, nonadjacent vertices of \(D\), and write \(x_+=\max\{x,0\}\).
+ 
+@@ -2319,7 +2136,7 @@
+ Apply (F.5a); taking nonnegative square roots gives
+ \((|A|-|R|-s)_+\le u\), which is the required estimate.
+ 
+-The formal interfaces are `exists_clique_additive_defect` and `recover_clique_from_edit`. The latter takes \(u\) rational and explicitly assumes \(u\ge0\); the displayed proof also applies to real \(u\). When \(s=0\), (F.5a) reduces to the chordal clique-extraction estimate (F.9). The loss in \(s\) is additive, rather than a factor multiplying the square-root term.
++The displayed proof applies to real \(u\ge0\). When \(s=0\), (F.5a) reduces to the chordal clique-extraction estimate (F.9). The loss in \(s\) is additive, rather than a factor multiplying the square-root term.
+ 
+ Now let \(H\) be the chordal graph obtained above and put \(t=d_E(G,H)\). Repairing bounded-order partitions transfers the integral lower bound with deficit at most \(\delta+4t\). Apply Theorem 6.1 in \(H\). Its clique need not be a clique of \(G\); Corollary F.3b removes at most \(s+u\) vertices for any \(u\ge0\) with \(2t\le u^2\), producing a clique \(R\) in \(G\) itself. Counting changed edges and incidences yields
+ \[
+@@ -2329,30 +2146,13 @@
+ \end{aligned}
+ \tag{F.6}
+ \]
+-These are the inequalities in `SublinearStabilityTransfer`. Here \(\delta\) is measured relative to \(M(n)\). To start from the hypothesis at \(n^2/6\) in Theorem 6.5, increasing its deficit by \(n/6\) suffices and preserves an \(o(n^2)\) error. Choose \(\xi\), the defect ratio and the near-extremality margin sufficiently small before \(n\) and \(G\); then \(u\) can be chosen as a small multiple of \(n\). Formula (F.6) proves uniform edit and baseline control. The comparator parabola turns the latter into a size window, at a squared accuracy scale. Minimizing (6.27) then gives the one-root sequence statement. This order of choices prevents both a hidden fixed-\(s\) threshold and a root depending on the requested partition.
+-
+-### F.4. New public interfaces and limits of this revision
+-
+-In the following table the prefix is `PaperIV.SublinearResearch`, except for the explicitly named E32 entry. All listed files belong to the new source freeze identified in §7. `ResearchAudit` checks these interfaces; `FDCheck.FinalAudit` and `E34.Audit` check the fixed-defect assembly and removal development separately. E35, the public Theorem C adapter and the square-root obstruction are included in the same cut, with their specific checks listed below.
+-
+-| Statement | Declaration |
+-|:--|:--|
+-| Real same-root chordal bounds, including edge mass | `chordal_joint_stability_real` |
+-| Theorem C′ and (6.12)–(6.13) | `fixed_defect_joint_stability_real` |
+-| Explicit parameters and classification | `FixedExplicit.fixed_defect_stability_explicit` |
+-| Optimal-size edit bound (6.17) | `fixed_defect_exact_extremal_edit_real` |
+-| Unrestricted equality classification | `E32.cp_classification_of_theoremCPrimeC`, with the proved classification above and the historical induced-removal assembly [23] (see §7) |
+-| Finite bound (6.22) | `certified_shifted_fractional_bound_all_orders` |
+-| Finite bound (6.23) | `certified_refined_fractional_bound_all_orders` |
+-| Uniform integral versions | `uniform_shifted_partition_bound`; `uniform_refined_partition_bound` |
+-| Arbitrary-order sequence approximation | `sequence_arbitrary_orders_partition_bound` |
+-| One-root sequence stability | `sequence_arbitrary_orders_stability` |
+-
+-**Table 9.** Correspondence for the extension. The same-root finite interfaces take real deficits; the sequence interface records rational error and excess parameters. The latter is not silently described as a different elaborated Lean type.
++Here \(\delta\) is measured relative to \(M(n)\). To start from the hypothesis at \(n^2/6\) in Theorem 6.5, increasing its deficit by \(n/6\) suffices and preserves an \(o(n^2)\) error. Choose \(\xi\), the defect ratio and the near-extremality margin sufficiently small before \(n\) and \(G\); then \(u\) can be chosen as a small multiple of \(n\). Formula (F.6) proves uniform edit and baseline control. The comparator parabola turns the latter into a size window, at a squared accuracy scale. Minimizing (6.27) then gives the one-root sequence statement. This order of choices prevents both a hidden fixed-\(s\) threshold and a root depending on the requested partition.
++
++### F.4. Sharpness of the local coefficient
+ 
+ The factor ten in the local inequality \(\binom{a+b}{2}\le10d(a,b)\), for positive defect, is sharp: the profile \((a,b)=(3,2)\) has ten edges and defect one. This does not prove optimality of \(480\), \(A_s\), or the global thresholds.
+ 
+-Appendix E.4 derives the retained terminal accounts used in §6.6, F.3 proves clique recovery, and F.5 explains the three-case assembly of the adapted pinned-sample bound. The consolidated external report records the corresponding checks and their scope limitations. These checks compare the written accounts with the frozen formal development; they do not turn local compilation into a substitute for mathematical review.
++Appendix E.4 derives the retained terminal accounts used in §6.6, F.3 proves clique recovery, and F.5 explains the three-case assembly of the adapted pinned-sample bound.
+ 
+ ### F.5. Auxiliary lemmas and adaptations of chordal removal
+ 
+@@ -2363,43 +2163,43 @@
+ \operatorname{indCopies}(C_k,G)\le2ks\,n^{k-1}.
+ \tag{F.7}
+ \]
+-Here indCopies counts labelled induced embeddings of the \(k\)-cycle, not unlabelled cycle vertex sets. This convention matters in using (F.7) in the sample union bound. The result is `E34.indCopies_cycle_le`. It supplies the cycle-count input directly from rooted defect.
++Here indCopies counts labelled induced embeddings of the \(k\)-cycle, not unlabelled cycle vertex sets. This convention matters in using (F.7) in the sample union bound. It supplies the cycle-count input directly from rooted defect.
+ 
+ **Co-bipartite edit bound.** If the vertex set is the union of two cliques and \(\operatorname{rsd}(G)\le s\), then there is a chordal \(H\) on the same vertices with
+ \[
+ d_E(G,H)\le2\sqrt{s}\,n\sqrt n+n.
+ \tag{F.8}
+ \]
+-The formal proof, `E34.coBipartite_edit_le`, orders one clique, bounds the inversions in the other clique's adjacency rows, and replaces each row by a threshold row. The resulting nested cross-neighborhoods give a chordal graph. The estimate concerns edit distance, not a clique partition of the original graph.
++The proof orders one clique, bounds the inversions in the other clique's adjacency rows, and replaces each row by a threshold row. The resulting nested cross-neighborhoods give a chordal graph. The estimate concerns edit distance, not a clique partition of the original graph.
+ 
+ **Clique extraction by elimination.** If \(G[D]\) is chordal, \(d=|D|\), and \(M\) is the number of unordered nonedges in \(D\), then \(D\) contains a clique \(C\) satisfying
+ \[
+ (d-|C|)^2\le2M,\qquad |C|\ge d-\sqrt{2M}.
+ \tag{F.9}
+ \]
+-The proof in `E34.exists_large_clique` is an induction by simplicial elimination. The formal right-hand side uses ordered nonedges, hence the factor two. This replaces the use of [22, Lemma 4] inside the near-simplicial repair; it is not presented as a new version of the full theorem cited there.
++The proof is an induction by simplicial elimination. Counting ordered nonedges instead gives twice the unordered count, which explains the factor two. This replaces the use of [22, Lemma 4] inside the near-simplicial repair; it is not presented as a new version of the full theorem cited there.
+ 
+ **Near-simplicial repair.** Partition \(V(G)=X\sqcup Y\), assume \(G[Y]\) is chordal, and let \(p_G(x)\) count unordered nonedges within \(N_G(x)\). If \(\varepsilon\ge0\) and \(p_G(x)\le\varepsilon n^2\) for every \(x\in X\), then there is a chordal \(H\) with
+ \[
+ d_E(G,H)\le8\sqrt{\varepsilon}\,n^2,\qquad H[Y]=G[Y].
+ \tag{F.10}
+ \]
+-This is `E34.lemma3`. Compared with [22, Lemma 3], the constant is eight rather than six, while the condition \(n\ge1/\varepsilon\) is not required. Neither version is described as uniformly stronger: the hypotheses and constants differ.
++Compared with [22, Lemma 3], the constant is eight rather than six, while the condition \(n\ge1/\varepsilon\) is not required. Neither version is described as uniformly stronger: the hypotheses and constants differ.
+ 
+ The rest of the implementation changes the representation and the numerical schedule as follows.
+ 
+ | Step of [22] | Implementation used here |
+ |:--|:--|
+-| Sampling | Samples are sequences with replacement. `E34.transfer` passes from sequence counts to vertex subsets for the upward-closed property at issue. |
++| Sampling | Samples are sequences with replacement. Passage is made from sequence counts to vertex subsets for the upward-closed property at issue. |
+ | Pinned representations | The definition allows a path-preserving map from the prescribed tree into another rooted tree. The counting proof handles this enlarged class of representations; its sample bound also changes. |
+ | Tree model | Finite parent maps and node sets replace topological trees. The parameter \(K\) counts nodes, not leaves. Sections are indexed by nodes, so the corresponding Claim 1 is not imported. |
+ | Set-coloring count | Affected vertices are counted explicitly. Small and degenerate parameter cases are separated instead of importing the published logarithmic bounds verbatim. |
+ | Pinned sample bound | The chosen size is \(m_{11}(\varepsilon,K)=\lceil2^{58}(K+1)^{15}/\varepsilon^{12}\rceil\). |
+ | Final union bound | Use \(q=\lceil102400/\varepsilon^2\rceil^2\) sampled pairs and \(\lceil\log_2(4\,n_{\rm codes})\rceil\) independent blocks, with \(n_{\rm codes}\) the explicitly counted family of gate data. |
+ 
+-**Table 10.** Adaptations of [22] relevant to the explicit threshold. The larger parameter bounds do not improve its sample-size exponent. The proof remains an implementation of its removal strategy, with these finite replacements and parameter choices.
+-
+-**Assembly of the adapted pinned-sample bound.** We give the three cases used in `E34.lemma11_V`, since changing the representation and the sampling convention requires checking the counting argument, not merely citing the published lemma. Fix a rooted tree \(\Gamma\) with \(K\) nodes and a prescribed pin \(x_v\in V(\Gamma)\) for every vertex of \(G\). A sample is *pinned* if its induced graph admits a representation by subtrees of another rooted tree \(T\), together with a path-preserving map \(\iota:\Gamma\to T\), such that the subtree for \(v\) contains \(\iota(x_v)\). This is the enlarged notion in Table 10.
++**Table 7.** Adaptations of [22] relevant to the explicit threshold. The larger parameter bounds do not improve its sample-size exponent. The proof remains an implementation of its removal strategy, with these finite replacements and parameter choices.
++
++**Assembly of the adapted pinned-sample bound.** We give the three cases of the assembly, since changing the representation and the sampling convention requires checking the counting argument, not merely citing the published lemma. Fix a rooted tree \(\Gamma\) with \(K\) nodes and a prescribed pin \(x_v\in V(\Gamma)\) for every vertex of \(G\). A sample is *pinned* if its induced graph admits a representation by subtrees of another rooted tree \(T\), together with a path-preserving map \(\iota:\Gamma\to T\), such that the subtree for \(v\) contains \(\iota(x_v)\). This is the enlarged notion in Table 7.
+ 
+ Assume \(G\) is \(\varepsilon\)-far from chordal: every chordal graph on its vertex set has edit distance greater than \(\varepsilon n^2\). Comparison with the empty graph forces \(n\ge1\) and \(\varepsilon<1/2\); the pin map then forces \(K\ge1\). For \(\varepsilon>0\), choose
+ \[
+@@ -2415,16 +2215,19 @@
+ \]
+ We must show that at most half of the \(n^m\) ordered samples of length \(m\), with replacement, are pinned.
+ 
+-An admissible set-coloring assigns to \(v\) a subtree \(\psi(v)\) of \(\Gamma\) containing \(x_v\). For an edge \(uv\), compatibility requires the path from \(x_u\) to \(x_v\) to lie in \(\psi(u)\cup\psi(v)\); for a nonedge it requires \(\psi(u)\cap\psi(v)=\varnothing\). Let \(\operatorname{conf}(\psi)\) count ordered incompatible pairs of distinct vertices. A pinned sample induces a compatible set-coloring on its vertex set (`properOn_of_pinned`).
+-
+-*Case A: every admissible coloring has at least \(\delta_{11}n^2\) conflicts.* Apply the adapted set-coloring counting theorem with sample size \(m\) and \(B\) rounds. The numerical conditions are \(8K/\delta_{11}<B+1\) and the inequality `thm2_ineq` for the parameters (F.11). It follows that at most half of all samples admit a compatible set-coloring. Pinned samples form a subset, so the same bound holds for them.
+-
+-*Case B1: some admissible \(\psi\) has fewer than \(\delta_{11}n^2\) conflicts, but one section is far from every chain model.* Sections are indexed by the \(K\) nodes of \(\Gamma\); each section has two vertex classes and a rank model for their cross-adjacencies. In this case one section has more than \(\eta n^2\) mismatches for every rank assignment. The section-counting lemma `claim5_count` bounds the number of length-\(y\) samples inducing a chordal graph by
++An admissible set-coloring assigns to \(v\) a subtree \(\psi(v)\) of \(\Gamma\) containing \(x_v\). For an edge \(uv\), compatibility requires the path from \(x_u\) to \(x_v\) to lie in \(\psi(u)\cup\psi(v)\); for a nonedge it requires \(\psi(u)\cap\psi(v)=\varnothing\). Let \(\operatorname{conf}(\psi)\) count ordered incompatible pairs of distinct vertices. A pinned sample induces a compatible set-coloring on its vertex set.
++
++*Case A: every admissible coloring has at least \(\delta_{11}n^2\) conflicts.* Apply the adapted set-coloring counting theorem with sample size \(m\) and \(B\) rounds. The numerical conditions are \(8K/\delta_{11}<B+1\) and, for the parameters (F.11),
++\[
++2(1-\delta_{11}/4)^m\left(1+\frac{m2^K}{1-\delta_{11}/4}\right)^B\le1.
++\] It follows that at most half of all samples admit a compatible set-coloring. Pinned samples form a subset, so the same bound holds for them.
++
++*Case B1: some admissible \(\psi\) has fewer than \(\delta_{11}n^2\) conflicts, but one section is far from every chain model.* Sections are indexed by the \(K\) nodes of \(\Gamma\); each section has two vertex classes and a rank model for their cross-adjacencies. In this case one section has more than \(\eta n^2\) mismatches for every rank assignment. The section-counting lemma bounds the number of length-\(y\) samples inducing a chordal graph by
+ \[
+ (y+1)(1-\eta)^{y-1}n^y+
+ y^2\operatorname{conf}(\psi)n^{y-2}.
+ \]
+-The parameter estimate `block_ineq` gives \((y+1)(1-\eta)^{y-1}\le1/4\). The second summand is at most \(n^y/4\), since \(y^2\delta_{11}=1/4\). Thus at most half of the length-\(y\) samples are chordal. We have \(y\le m\); every pinned length-\(m\) sample induces a chordal graph, and its prefix of length \(y\) does too. Each prefix has \(n^{m-y}\) extensions. Hence at most \(n^m/2\) full samples are pinned. This argument uses sequences throughout and does not assume their entries are distinct.
++The parameter estimate gives \((y+1)(1-\eta)^{y-1}\le1/4\). The second summand is at most \(n^y/4\), since \(y^2\delta_{11}=1/4\). Thus at most half of the length-\(y\) samples are chordal. We have \(y\le m\); every pinned length-\(m\) sample induces a chordal graph, and its prefix of length \(y\) does too. Each prefix has \(n^{m-y}\) extensions. Hence at most \(n^m/2\) full samples are pinned. This argument uses sequences throughout and does not assume their entries are distinct.
+ 
+ *Case B2: every section has a rank assignment with at most \(\eta n^2\) mismatches.* Normalize each rank by replacing it with the number of vertices of strictly smaller rank. This preserves all strict rank comparisons, and therefore all section mismatches, while bounding every rank by \(n\). Subdivide the prescribed tree using this common bound and glue the section models. The resulting graph \(F\) is an intersection graph of subtrees, hence chordal. Write \(\operatorname{mis}_c\) for the number of mismatches in section \(c\). The gluing estimate charges every changed edge either to a conflict or to one of these mismatches:
+ \[
+@@ -2438,9 +2241,7 @@
+ \]
+ Here \(\delta_{11}\le\varepsilon/2\), by (F.11). This contradicts the assumed distance from chordality, so Case B2 cannot occur.
+ 
+-The alternatives are exhaustive: either every coloring has many conflicts, or one has few, and its sections either include a distant one or all have close rank models. The formal proofs are `l11_caseA`, `l11_caseB1` and `l11_caseB2` in `E34.L11Main`. The set-coloring theorem, the section-counting lemma and the subtree-gluing lemma retain their roles from the removal strategy of [22]; the argument above identifies how their adapted versions fit together. It does not assert that the original published Lemma 11 has the modified statement or constants.
+-
+-The new source freeze includes the four finite lemmas above and `E35.theoremC_tower`, `theoremC_tower_uniform`, `theoremC_tower_uniform_sMax` and `NfarE_le_tower_poly` for (6.28)–(6.29) and (C.4). The public adapter is `PaperIV.DefectExplicitPublication`; `FDCheck.ASCheck` checks the selected removal dependencies. Proposition 6.3a is supported by `PaperIV.OptimalTemplateObstruction.shifted_template_witness`, `shifted_template_sqrt_witness` and `no_linear_optimal_template_bound`; `optimal_family_nonempty` verifies that the comparison is not vacuous. Their fresh audit results and source identity are described in §7.
++The alternatives are exhaustive: either every coloring has many conflicts, or one has few, and its sections either include a distant one or all have close rank models. The set-coloring theorem, the section-counting lemma and the subtree-gluing lemma retain their roles from the removal strategy of [22]; the argument above identifies how their adapted versions fit together. It does not assert that the original published Lemma 11 has the modified statement or constants.
+ 
+ ## Appendix G. Packing gaps and limits of cleanup
+ 
+@@ -2450,29 +2251,29 @@
+ 
+ The proof neither requires nor establishes a universal linear bound for the mixed gap \(W^*(G)-W(G)\), where \(W(G)\) is the optimal integral mixed gain. It compares the loss of the construction with the margin available in each instance. The general growth rate of this gap is studied separately; it is not a hypothesis of this paper.
+ 
+-There is a complementary result for the **triangle gap** with bounded clique number. Let \(d\ge0\) be an integer and \(G\) a chordal graph with no clique of order \(d+2\). The `BoundedCliqueGap` library, included as a separate source annex and checked against a distinct recorded build, proves that every fractional triangle packing \(x\) satisfies
++There is a complementary result for the **triangle gap** with bounded clique number. Let \(d\ge0\) be an integer and \(G\) a chordal graph with no clique of order \(d+2\). Every fractional triangle packing \(x\) satisfies
+ \[
+ \sum_T x_T\le \nu_3(G)+\left(10+\frac d2\right)n.
+ \tag{G.1}
+ \]
+ Here \(\nu_3(G)\) counts edge-disjoint triangles; the fractional objective also counts triangles, without the gain factor two. Taking the optimum gives \(\nu_3^*(G)-\nu_3(G)\le(10+d/2)n\). For fixed \(d\), the loss is linear; this does not give a uniform constant when the clique number grows.
+ 
+-The formal statement is `BoundedCliqueGap.chordal_gap_linear_cliqueFree`. Its proof uses a subtree representation and separates the mass of local pieces from mass crossing the joins. Each triangle of the latter kind uses two joining edges; summing their capacities pays for its mass with half the count of those edges. The bound \(d\) controls that count and contributes the term \(dn/2\) in addition to the local loss \(10n\).
+-
+-The same library expresses the hypothesis through a clique tree whose bags have at most \(d+1\) vertices. For chordal graphs, `exists_cliqueTree_width_le_iff_cliqueFree` proves equivalence with the exclusion of \(K_{d+2}\). This is the treewidth form available in this development; we do not assert that Mathlib supplies a general definition of *treewidth* used here. Result (G.1) does not bound the **mixed** gap for \(K_3/K_4\) or replace the rounding in Section 3.
++The proof uses a subtree representation and separates the mass of local pieces from mass crossing the joins. Each triangle of the latter kind uses two joining edges; summing their capacities pays for its mass with half the count of those edges. The bound \(d\) controls that count and contributes the term \(dn/2\) in addition to the local loss \(10n\).
++
++The hypothesis can equivalently be expressed through a clique tree whose bags have at most \(d+1\) vertices: for chordal graphs this is equivalent to excluding \(K_{d+2}\). Result (G.1) does not bound the **mixed** gap for \(K_3/K_4\) or replace the rounding in Section 3.
+ 
+ ### G.2. A quantitative obstruction to codegree cleanup
+ 
+-The threshold in Theorem 3.1 comes from the regularity construction in Appendix C. A formal complement, separate from that proof, bounds what can be achieved through another cleanup interface. The two objects must be distinguished: proving that a cleanup suffices for rounding does not prove that every rounding method must perform it.
+-
+-Fix \(\varepsilon>0\), \(\gamma\le1/2\) and a constant \(C_0\). Consider the following contract, called `CleanupAtWith` in the supplement. For every graph \(G\) of order \(n\ge N_0\) and every fractional mixed packing \(x\) whose triangular mass is at least \(\varepsilon n^2/30-1\), it requires another packing \(y\) on the same graph with triangular mass at least \(C_0\), gain loss at most \(\varepsilon n^2/4\) and weighted codegree at most \(\gamma\). This codegree is the sum of the weights of copies simultaneously containing two distinct edges of the graph.
++The threshold in Theorem 3.1 comes from the regularity construction in Appendix C. A complementary argument, separate from that proof, bounds what can be achieved through another cleanup interface. The two objects must be distinguished: proving that a cleanup suffices for rounding does not prove that every rounding method must perform it.
++
++Fix \(\varepsilon>0\), \(\gamma\le1/2\) and a constant \(C_0\). Consider the following contract. For every graph \(G\) of order \(n\ge N_0\) and every fractional mixed packing \(x\) whose triangular mass is at least \(\varepsilon n^2/30-1\), it requires another packing \(y\) on the same graph with triangular mass at least \(C_0\), gain loss at most \(\varepsilon n^2/4\) and weighted codegree at most \(\gamma\). This codegree is the sum of the weights of copies simultaneously containing two distinct edges of the graph.
+ 
+ **Proposition G.1 (limitation of this contract).** If \(N_0\) satisfies the preceding contract, \(t\ge4\) and \(7\varepsilon\le e^{-t}\), then
+ \[
+ N_0>\exp(t^2/16).
+ \tag{G.2}
+ \]
+-In particular, if \(\varepsilon\le1/(7e^{34})\), then \(N_0>e^{72}\). The precision parameter is rational in the Lean declaration; exponential comparisons are made over the reals.
++In particular, if \(\varepsilon\le1/(7e^{34})\), then \(N_0>e^{72}\).
+ 
+ **Proof.** Call a graph rigid if each of its edges belongs to exactly one triangle and it has no \(K_4\) copies. If it has \(T\) triangles, assigning weight one to each gives gain \(2T\). Two edges of the same triangle can receive joint weight only through that copy. Thus every \(y\) with codegree at most \(\gamma\) assigns it weight at most \(\gamma\), and its gain is at most \(2\gamma T\). The forced loss is at least \(2(1-\gamma)T\). For an order satisfying the mass hypothesis, the contract imposes
+ \[
+@@ -2481,13 +2282,13 @@
+ \]
+ Thus a uniform cleanup of this kind quantitatively controls the density of rigid systems, a problem of \((6,3)\) type.
+ 
+-The tripartite construction of Ruzsa–Szemerédi [18], applied to a set \(A\subseteq\{0,\ldots,M-1\}\) with no three-term arithmetic progressions, gives a rigid graph of order \(6M+3\) with at least \((2M+1)|A|\) triangles. The version of Behrend's bound [17] used in Mathlib guarantees \(|A|\ge M\exp(-4\sqrt{\log M})\). If \(7\varepsilon\le\exp(-4\sqrt{\log M})\) and \(M\ge1\), this count satisfies the mass hypothesis and contradicts (G.3): the order \(6M+3\) must be smaller than \(N_0\).
+-
+-Now take \(M=\lfloor\exp(t^2/16)\rfloor\). Then \(M\ge1\), \(\log M\le t^2/16\) and \(4\sqrt{\log M}\le t\). The preceding paragraph applies. Since \(\exp(t^2/16)<M+1\le6M+3\), (G.2) follows. For \(t=34\), \(t^2/16=72.25>72\), giving the final assertion. The declarations `threshold_gt_exp` and `threshold_gt_exp_seventy_two` in `FarExploration.CleanupRigidVerdict` formalize these calculations using Mathlib's Behrend bound.
+-
+-For \(t=\log(1/(7\varepsilon))\), (G.2) grows faster than every fixed power of \(1/\varepsilon\); `threshold_superpolynomial` also gives this formulation. This rules out a polynomial threshold for **this contract**, not for every proof of Erdős 81. It does not show that regularity is the only possible method, that a tower is necessary, or that \(e^{72}\) is a lower bound on the threshold in Theorem 3.1. The complement proves cleanup \(\Rightarrow\) rounding; transferring its barrier to another rounding method would require the reverse implication or a quantitative adapter.
+-
+-**What changes under chordality.** Both `CodegreeCleanupAt` and `UniformRoundingTarget` quantify over all graphs, whereas the far-branch assembly uses them on the original chordal graph. The rigid family above does not give the same obstruction in that class. Indeed, let \(G\) be chordal, with no \(K_4\), and \(n\ge2\). In a perfect elimination ordering each vertex has at most two later neighbors; otherwise it and three such neighbors would form a \(K_4\). Counting each edge at its earlier endpoint, the first \(n-2\) vertices contribute at most two each, the penultimate at most one, and the last none. Hence
++The tripartite construction of Ruzsa–Szemerédi [18], applied to a set \(A\subseteq\{0,\ldots,M-1\}\) with no three-term arithmetic progressions, gives a rigid graph of order \(6M+3\) with at least \((2M+1)|A|\) triangles. The version of Behrend's bound [17] used here guarantees \(|A|\ge M\exp(-4\sqrt{\log M})\). If \(7\varepsilon\le\exp(-4\sqrt{\log M})\) and \(M\ge1\), this count satisfies the mass hypothesis and contradicts (G.3): the order \(6M+3\) must be smaller than \(N_0\).
++
++Now take \(M=\lfloor\exp(t^2/16)\rfloor\). Then \(M\ge1\), \(\log M\le t^2/16\) and \(4\sqrt{\log M}\le t\). The preceding paragraph applies. Since \(\exp(t^2/16)<M+1\le6M+3\), (G.2) follows. For \(t=34\), \(t^2/16=72.25>72\), giving the final assertion.
++
++For \(t=\log(1/(7\varepsilon))\), (G.2) grows faster than every fixed power of \(1/\varepsilon\). This rules out a polynomial threshold for **this contract**, not for every proof of Erdős 81. It does not show that regularity is the only possible method, that a tower is necessary, or that \(e^{72}\) is a lower bound on the threshold in Theorem 3.1. The complement proves cleanup \(\Rightarrow\) rounding; transferring its barrier to another rounding method would require the reverse implication or a quantitative adapter.
++
++**What changes under chordality.** Both the cleanup and the rounding statements quantify over all graphs, whereas the far-branch assembly uses them on the original chordal graph. The rigid family above does not give the same obstruction in that class. Indeed, let \(G\) be chordal, with no \(K_4\), and \(n\ge2\). In a perfect elimination ordering each vertex has at most two later neighbors; otherwise it and three such neighbors would form a \(K_4\). Counting each edge at its earlier endpoint, the first \(n-2\) vertices contribute at most two each, the penultimate at most one, and the last none. Hence
+ \[
+ e(G)\le2(n-2)+1=2n-3.
+ \tag{G.4}
+@@ -2501,7 +2302,7 @@
+ \]
+ Cancellation of the constant terms explains the final threshold. Above it, no rigid chordal graph satisfies the mass hypothesis. In particular, the dense instances used to obtain the superpolynomial barrier cannot be chordal. The same is not asserted of every small or degenerate instance of the tripartite construction.
+ 
+-This count delimits the obstruction; it proves neither a chordal cleanup nor an upper bound \(O(1/\varepsilon)\) on its threshold. Nor is a chordal restriction of the cleanup-to-rounding implication formalized here. Studying that weaker contract is a question distinct both from the universal barrier and from the bounded-clique triangle gap of Appendix G.1.
++This count delimits the obstruction; it proves neither a chordal cleanup nor an upper bound \(O(1/\varepsilon)\) on its threshold. Studying that weaker contract is a question distinct both from the universal barrier and from the bounded-clique triangle gap of Appendix G.1.
+ 
+ ## Acknowledgments
+ 
+@@ -2513,7 +2314,7 @@
+ 
+ Certo [13], <https://github.com/jtraverso/certo-math>, and Jacobian [14], <https://github.com/morluto/jacobian>, were the computational tools used to explore instances, check identities, and assess candidates. Jacobian is also credited by the project behind [5]; its use here is acknowledged separately from the logical dependencies of our formal proof. Computations were reviewed within their stated scope; a finite search does not replace a universal proof.
+ 
+-The author remains responsible for the arguments, citations, code, and presentation. No AI system is listed as an author. The draft remains subject to the author's final review.
++The author remains responsible for the arguments, citations, code, and presentation. No AI system is listed as an author.
+ 
+ ## References
+ 
+@@ -2531,7 +2332,7 @@
+ 
+ [7] R. Yuster, “Integer and fractional packing of families of graphs,” *Random Structures & Algorithms* **26** (2005), 110–118.
+ 
+-[8] T. F. Bloom, “Erdős Problem #81,” *Erdős Problems*. Available at <https://www.erdosproblems.com/81>. Cited to identify the problem; this draft does not certify the current review status of published proposals.
++[8] T. F. Bloom, “Erdős Problem #81,” *Erdős Problems*. Available at <https://www.erdosproblems.com/81>. Cited to identify the problem; this article does not certify the current review status of published proposals.
+ 
+ [9] J. P. Traverso Gianini and contributors to the assisted formalization, “Minimum-degree and spread matching theorems,” contribution to *lean-pool*, PR #420, 2026. Available at <https://github.com/Vilin97/lean-pool/pull/420>; merge commit `d1de6d2`, 13 September 2026. The history and file headers retain the attribution of the Aristotle-assisted contribution.
+ 
+@@ -2561,4 +2362,7 @@
+ 
+ [22] R. de Joannis de Verclos, *Chordal graphs are easily testable*, arXiv:1902.06135v1, 16 February 2019. Available at <https://arxiv.org/abs/1902.06135v1>. The removal argument underlying Appendix F.3 is attributed to this work; its implementation and adaptations are documented in Appendix F.5.
+ 
+-[23] N. Alon and A. Shapira, *A characterization of the (natural) graph properties testable with one-sided error*, SIAM Journal on Computing **37** (2008), 1703–1727. DOI: <https://doi.org/10.1137/06064888X>. Used by the historical existential assembly discussed in Appendix E.2 and by the unrestricted-classification wrappers identified in §7 and Table 9, not as the removal theorem selected for the explicit public Theorem C.
++[23] N. Alon and A. Shapira, *A characterization of the (natural) graph properties testable with one-sided error*, SIAM Journal on Computing **37** (2008), 1703–1727. DOI: <https://doi.org/10.1137/06064888X>. Used by the historical existential assembly and unrestricted-classification wrappers identified in the formal companion [24, §3], not as the removal theorem selected for the explicit Theorem C.
++
++
++[24] J. P. Traverso Gianini, *Formal companion to Paper IV*, editorial revision 1.24, October 19, 2026. [PDF](../05_formalization/FORMALIZATION_COMPANION_v1.24_en.pdf).

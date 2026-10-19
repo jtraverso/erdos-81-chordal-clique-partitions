@@ -1,0 +1,1072 @@
+\documentclass[spanish,11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\newfontfamily\LeanSymbols{seguisym.ttf}[Path=typeset_runtime/]
+\newlength{\LeanCharWidth}
+\usepackage{amsmath,amssymb}
+\usepackage[spanish,es-noshorthands,es-tabla]{babel}
+\usepackage{microtype,parskip}
+\usepackage{graphicx,float,caption}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref,bookmark}
+\usepackage{etoolbox,needspace}
+\setcounter{secnumdepth}{-\maxdimen}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}\small}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{4\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\providecommand{\pandocbounded}[1]{#1}
+\hypersetup{pdftitle={Complemento formal de Paper IV},pdfauthor={Juan Pablo Traverso Gianini},pdflang={es-ES},colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\title{Complemento formal de Paper IV}
+\author{Juan Pablo Traverso Gianini\\\small Investigador independiente, Santiago, Chile\\\small \href{mailto:jtraverso@gmail.com}{jtraverso@gmail.com}\\\small ORCID: 0009-0003-6068-4096}
+\date{}
+\begin{document}
+\raggedbottom
+\maketitle
+\textbf{Preprint · versión 1.24}\\
+19 de octubre de 2026
+
+Este documento describe la formalización congelada que respalda
+\emph{Particiones de cliques con defecto simplicial enraizado:
+estabilidad cuantitativa y cotas agudas para órdenes grandes}. Acompaña
+la revisión editorial del manuscrito; los enunciados matemáticos y el
+congelado Lean permanecen intactos. Los números de secciones, ecuaciones
+y teoremas se refieren al manuscrito principal, salvo indicación
+contraria. Las referencias {[}1--23{]} conservan su bibliografía.
+
+\subsection{1. Identidad de fuentes y alcance de la
+verificación}\label{identidad-de-fuentes-y-alcance-de-la-verificaciuxf3n}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Elemento
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Valor congelado
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Lean y Mathlib & v4.28.0 \\
+Corte de fuentes & \nolinkurl{piv-v12-fb459343d234} \\
+Módulos de fuentes principales & 607 \\
+Entradas de fuentes/configuración/documentación & 615 \\
+Objetivos de auditoría seleccionados & 19 \\
+Exportaciones literales mediante \texttt{import\ PaperIV} & 224 \\
+Salidas de axiomas registradas & 461; no es una cuenta de teoremas
+distintos \\
+\end{longtable}
+}
+
+El SHA-256 del manifiesto de fuentes es
+\nolinkurl{fb459343d234f968d7d32eff1491ea8a09aa2e135b313a80623012e7449042f5}.
+El SHA-256 del archivo de sólo fuentes es
+\nolinkurl{cb2741454380736ffe01b59933057b5079fa9f865d5bbdd3f67534bf808a62e6}.
+Identifican el paquete formal original, no los nuevos PDF editoriales.
+
+El
+\href{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/05_formalization}{paquete
+congelado} y la
+\href{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/03_reproducibility}{evidencia
+de compilación registrada} están disponibles en el repositorio de la
+serie. El DOI de concepto de la serie es
+\href{https://doi.org/10.5281/zenodo.21273143}{10.5281/zenodo.21273143}.
+La edición anterior del manuscrito y su depósito siguen disponibles; el
+congelado de fuentes es el mismo.
+
+El suplemento Lean identificado de esta versión usa Lean y Mathlib
+v4.28.0. Las declaraciones finales no reciben como argumentos el
+redondeo, la existencia del óptimo ni el constructor cercano: los
+invocan como teoremas demostrados en sus dependencias. Los axiomas
+fundacionales permitidos se distinguen de cualquier hipótesis matemática
+adicional.
+
+La reconstrucción registrada cubre los 607 módulos: se verificaron y
+reutilizaron 421 objetos compilados en el primer segmento tras un
+reinicio, y el segmento reanudado compiló 186 módulos. Los 19 objetivos
+seleccionados se ejecutaron de nuevo con código de salida cero. Sus 461
+salidas de axiomas usan sólo \nolinkurl{propext}, \nolinkurl{Classical.choice}
+y \nolinkurl{Quot.sound}, o subconjuntos. Los registros distinguen
+identidad fuente, compilación, disponibilidad de exportaciones y
+comprobación transitiva de axiomas. Ninguna cuenta afirma que cada frase
+del manuscrito sea un teorema exportado por separado.
+
+El informe externo consolidado de v1.22-r4 registra PASS para E0--E8
+dentro de su alcance documentado. Ese informe y los registros de
+compilación siguen siendo evidencia del congelado identificado. No
+constituyen una revisión externa nueva de v1.24. La revisión editorial
+presente comprueba traslados, conservación de enunciados y renderizado
+documental; no se afirma una compilación Lean ni una verificación
+matemática nueva.
+
+\subsection{2. Enunciados matemáticos y declaraciones
+exportadas}\label{enunciados-matemuxe1ticos-y-declaraciones-exportadas}
+
+Se omite el prefijo común \nolinkurl{PaperIV} donde se indica. El mapa
+siguiente conserva las etiquetas originales de los teoremas; trasladarlo
+fuera del manuscrito principal no modifica la interfaz formal.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Resultado
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Declaración Lean
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Teorema A, forma aditiva &
+\nolinkurl{Erdos81AllOrders.erdos81_all_orders_additive} \\
+Teorema B, cota superior &
+\nolinkurl{Erdos81Unconditional.erdos81_cliquePartition} \\
+Teorema B, máximo & \nolinkurl{PaperTheorems.erdos81_max_eq} \\
+Teorema 3.1 & \nolinkurl{RC01Final.rc01_uniformRoundingTarget} \\
+Corolario 3.5 &
+\nolinkurl{FarRegimeAllGraphs.farRegime_cliquePartition_allGraphs} \\
+Dicotomía (1.5) &
+\nolinkurl{HybridDichotomy.chordal_far_or_nearStructure} \\
+Teorema 5.0, ventana reforzada &
+\nolinkurl{NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp} \\
+Teorema 5.0, interfaz anterior &
+\nolinkurl{NearH1LocalConstructor.exists_near_partition_paid_by_root} \\
+Corolario 5.4, tamaño y densidad &
+\nolinkurl{NearCriticalDichotomy.chordal_far_or_criticalRoot},
+\nolinkurl{chordal_far_or_edge_density} \\
+Coeficiente cuadrático óptimo &
+\nolinkurl{SharpConstantOptimality.erdos81_quadratic_constant_optimal},
+\nolinkurl{erdos81_quadratic_constant_isLeast} \\
+Teorema 6.1, forma reforzada &
+\nolinkurl{IntegralStability.chordal_linear_stability_sixteen} \\
+Teorema 6.1, interfaz anterior &
+\nolinkurl{IntegralStability.chordal_linear_stability} \\
+Corolario 6.1a, número de piezas &
+\nolinkurl{RootPartitionStability.chordal_partition_stability} \\
+Corolario 6.1a, cotas reales conjuntas de piezas y aristas &
+\nolinkurl{SublinearResearch.chordal_joint_stability_real} en
+\nolinkurl{PublicationStability} \\
+Identidad (6.7b) &
+\nolinkurl{RootPartitionStability.sum_rootPieceDefect_eq} \\
+Corolario 6.2 &
+\nolinkurl{ExtremalClassification.chordal_extremal_classification} \\
+Proposición D.3 & \nolinkurl{SplitMixedGap.mixed_gap_zero} junto con la
+construcción acotada de \nolinkurl{SplitCompleteSharpValue} \\
+\end{longtable}
+}
+
+En la tabla de extensiones siguiente, el prefijo es
+\nolinkurl{PaperIV.SublinearResearch}, salvo la entrada E32 indicada.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Enunciado
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Declaración
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Cotas cordales reales con una misma raíz, incluida la masa de aristas &
+\nolinkurl{chordal_joint_stability_real} \\
+Teorema \(C^\prime\) y (6.12)--(6.13) &
+\nolinkurl{fixed_defect_joint_stability_real} \\
+Parámetros explícitos y clasificación &
+\nolinkurl{FixedExplicit.fixed_defect_stability_explicit} \\
+Cota de edición hacia tamaño óptimo (6.17) &
+\nolinkurl{fixed_defect_exact_extremal_edit_real} \\
+Clasificación irrestricta de la igualdad &
+\nolinkurl{E32.cp_classification_of_theoremCPrimeC}, con la
+clasificación demostrada arriba y el ensamblaje histórico de remoción
+inducida {[}23{]} (véase §3 de este complemento) \\
+Cota finita (6.22) &
+\nolinkurl{certified_shifted_fractional_bound_all_orders} \\
+Cota finita (6.23) &
+\nolinkurl{certified_refined_fractional_bound_all_orders} \\
+Versiones integrales uniformes &
+\nolinkurl{uniform_shifted_partition_bound};
+\nolinkurl{uniform_refined_partition_bound} \\
+Aproximación secuencial con órdenes arbitrarios &
+\nolinkurl{sequence_arbitrary_orders_partition_bound} \\
+Estabilidad secuencial con una raíz &
+\nolinkurl{sequence_arbitrary_orders_stability} \\
+\end{longtable}
+}
+
+Las interfaces finitas con una misma raíz toman déficits reales. La
+interfaz secuencial registra parámetros racionales de error y exceso.
+Esta diferencia se conserva al comparar el manuscrito con los tipos
+elaborados.
+
+\textbf{Definiciones literales.} Los fragmentos siguientes reproducen
+las definiciones y las cabeceras de los teoremas, omitiendo sus
+demostraciones, no sus hipótesis. En el primer fragmento el espacio es
+\nolinkurl{SimpleGraph}; en los tres siguientes es
+\nolinkurl{PaperIV.FarRounding}, con \(V\) finito, igualdad decidible y
+adyacencia decidible para \(G\). La última definición está en
+\nolinkurl{PaperIV}. Las fuentes son \nolinkurl{PaperIV/ChordalStructure.lean}
+(cordalidad), \nolinkurl{PaperIV/FarRounding.lean} (pares y particiones) y
+\nolinkurl{PaperIV/TargetEnvelope.lean} (tamaño objetivo), dentro del
+paquete congelado enlazado en §1 de este complemento.
+
+\begin{quote}\fontsize{8.5}{10.2}\selectfont\ttfamily\raggedright\setlength{\parskip}{0pt}\settowidth{\LeanCharWidth}{0}
+\noindent def\hspace*{\dimexpr 1\LeanCharWidth\relax}IsChordal\hspace*{\dimexpr 1\LeanCharWidth\relax}(G\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}SimpleGraph\hspace*{\dimexpr 1\LeanCharWidth\relax}V)\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}Prop\hspace*{\dimexpr 1\LeanCharWidth\relax}:=\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ⦃}v\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}V{\LeanSymbols ⦄}\hspace*{\dimexpr 1\LeanCharWidth\relax}(c\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}G.Walk\hspace*{\dimexpr 1\LeanCharWidth\relax}v\hspace*{\dimexpr 1\LeanCharWidth\relax}v),\hspace*{\dimexpr 1\LeanCharWidth\relax}c.IsCycle\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\hspace*{\dimexpr 1\LeanCharWidth\relax}4\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≤}\hspace*{\dimexpr 1\LeanCharWidth\relax}c.length\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\par
+\noindent \hspace*{\dimexpr 4\LeanCharWidth\relax}{\LeanSymbols ∃}\hspace*{\dimexpr 1\LeanCharWidth\relax}x\hspace*{\dimexpr 1\LeanCharWidth\relax}y\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}V,\hspace*{\dimexpr 1\LeanCharWidth\relax}x\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}c.support\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∧}\hspace*{\dimexpr 1\LeanCharWidth\relax}y\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}c.support\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∧}\hspace*{\dimexpr 1\LeanCharWidth\relax}G.Adj\hspace*{\dimexpr 1\LeanCharWidth\relax}x\hspace*{\dimexpr 1\LeanCharWidth\relax}y\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∧}\hspace*{\dimexpr 1\LeanCharWidth\relax}s(x,\hspace*{\dimexpr 1\LeanCharWidth\relax}y)\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∉}\hspace*{\dimexpr 1\LeanCharWidth\relax}c.edges\par
+\end{quote}
+
+\begin{quote}\fontsize{8.5}{10.2}\selectfont\ttfamily\raggedright\setlength{\parskip}{0pt}\settowidth{\LeanCharWidth}{0}
+\noindent def\hspace*{\dimexpr 1\LeanCharWidth\relax}pairs\hspace*{\dimexpr 1\LeanCharWidth\relax}(K\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}Finset\hspace*{\dimexpr 1\LeanCharWidth\relax}V)\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}Finset\hspace*{\dimexpr 1\LeanCharWidth\relax}(Sym2\hspace*{\dimexpr 1\LeanCharWidth\relax}V)\hspace*{\dimexpr 1\LeanCharWidth\relax}:=\hspace*{\dimexpr 1\LeanCharWidth\relax}K.sym2.filter\hspace*{\dimexpr 1\LeanCharWidth\relax}fun\hspace*{\dimexpr 1\LeanCharWidth\relax}e\hspace*{\dimexpr 1\LeanCharWidth\relax}=>\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ¬}\hspace*{\dimexpr 1\LeanCharWidth\relax}e.IsDiag\par
+\noindent \strut\par
+\noindent structure\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition\hspace*{\dimexpr 1\LeanCharWidth\relax}where\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}pieces\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}Finset\hspace*{\dimexpr 1\LeanCharWidth\relax}(Finset\hspace*{\dimexpr 1\LeanCharWidth\relax}V)\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}isClique\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}K\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}pieces,\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}a\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}K,\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}b\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}K,\hspace*{\dimexpr 1\LeanCharWidth\relax}a\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≠}\hspace*{\dimexpr 1\LeanCharWidth\relax}b\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\hspace*{\dimexpr 1\LeanCharWidth\relax}G.Adj\hspace*{\dimexpr 1\LeanCharWidth\relax}a\hspace*{\dimexpr 1\LeanCharWidth\relax}b\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}two\_le\_card\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}K\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}pieces,\hspace*{\dimexpr 1\LeanCharWidth\relax}2\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≤}\hspace*{\dimexpr 1\LeanCharWidth\relax}K.card\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}edgeDisjoint\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}K\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}pieces,\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}L\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}pieces,\hspace*{\dimexpr 1\LeanCharWidth\relax}K\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≠}\hspace*{\dimexpr 1\LeanCharWidth\relax}L\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\hspace*{\dimexpr 1\LeanCharWidth\relax}Disjoint\hspace*{\dimexpr 1\LeanCharWidth\relax}(pairs\hspace*{\dimexpr 1\LeanCharWidth\relax}K)\hspace*{\dimexpr 1\LeanCharWidth\relax}(pairs\hspace*{\dimexpr 1\LeanCharWidth\relax}L)\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}covers\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}pieces.biUnion\hspace*{\dimexpr 1\LeanCharWidth\relax}pairs\hspace*{\dimexpr 1\LeanCharWidth\relax}=\hspace*{\dimexpr 1\LeanCharWidth\relax}G.edgeFinset\par
+\noindent \strut\par
+\noindent def\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition.size\hspace*{\dimexpr 1\LeanCharWidth\relax}(Q\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition\hspace*{\dimexpr 1\LeanCharWidth\relax}G)\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ}\hspace*{\dimexpr 1\LeanCharWidth\relax}:=\hspace*{\dimexpr 1\LeanCharWidth\relax}Q.pieces.card\par
+\noindent \strut\par
+\noindent def\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition.OrderAtMost\hspace*{\dimexpr 1\LeanCharWidth\relax}(Q\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition\hspace*{\dimexpr 1\LeanCharWidth\relax}G)\hspace*{\dimexpr 1\LeanCharWidth\relax}(r\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ})\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}Prop\hspace*{\dimexpr 1\LeanCharWidth\relax}:=\par
+\noindent \hspace*{\dimexpr 2\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}K\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∈}\hspace*{\dimexpr 1\LeanCharWidth\relax}Q.pieces,\hspace*{\dimexpr 1\LeanCharWidth\relax}K.card\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≤}\hspace*{\dimexpr 1\LeanCharWidth\relax}r\par
+\end{quote}
+
+\begin{quote}\fontsize{8.5}{10.2}\selectfont\ttfamily\raggedright\setlength{\parskip}{0pt}\settowidth{\LeanCharWidth}{0}
+\noindent def\hspace*{\dimexpr 1\LeanCharWidth\relax}targetSize\hspace*{\dimexpr 1\LeanCharWidth\relax}(n\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ})\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ}\hspace*{\dimexpr 1\LeanCharWidth\relax}:=\hspace*{\dimexpr 1\LeanCharWidth\relax}n\hspace*{\dimexpr 1\LeanCharWidth\relax}*\hspace*{\dimexpr 1\LeanCharWidth\relax}(n\hspace*{\dimexpr 1\LeanCharWidth\relax}+\hspace*{\dimexpr 1\LeanCharWidth\relax}1)\hspace*{\dimexpr 1\LeanCharWidth\relax}/\hspace*{\dimexpr 1\LeanCharWidth\relax}6\par
+\end{quote}
+
+La división de naturales implementa el piso de \(M(n)\). El símbolo
+expositivo \(c_4\) designa el mínimo sobre esas particiones con
+\texttt{OrderAtMost\ 4}; el enunciado exportado no presupone una función
+mínimo, sino que entrega directamente una partición testigo. La
+cordalidad de \nolinkurl{FarRounding} es un alias literal de la definición
+por ciclos anterior.
+
+\textbf{Teoremas exportados.} En \nolinkurl{PaperIV.Erdos81AllOrders} y
+\nolinkurl{PaperIV.Erdos81Unconditional}, respectivamente, las cabeceras
+exactas son:
+
+\begin{quote}\fontsize{8.5}{10.2}\selectfont\ttfamily\raggedright\setlength{\parskip}{0pt}\settowidth{\LeanCharWidth}{0}
+\noindent theorem\hspace*{\dimexpr 1\LeanCharWidth\relax}erdos81\_all\_orders\_additive\hspace*{\dimexpr 1\LeanCharWidth\relax}:\par
+\noindent \hspace*{\dimexpr 4\LeanCharWidth\relax}{\LeanSymbols ∃}\hspace*{\dimexpr 1\LeanCharWidth\relax}b\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ},\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}(n\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ})\hspace*{\dimexpr 1\LeanCharWidth\relax}(G\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}SimpleGraph\hspace*{\dimexpr 1\LeanCharWidth\relax}(Fin\hspace*{\dimexpr 1\LeanCharWidth\relax}n))\hspace*{\dimexpr 1\LeanCharWidth\relax}[DecidableRel\hspace*{\dimexpr 1\LeanCharWidth\relax}G.Adj],\par
+\noindent \hspace*{\dimexpr 6\LeanCharWidth\relax}PaperIV.FarRounding.IsChordal\hspace*{\dimexpr 1\LeanCharWidth\relax}G\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\par
+\noindent \hspace*{\dimexpr 8\LeanCharWidth\relax}{\LeanSymbols ∃}\hspace*{\dimexpr 1\LeanCharWidth\relax}Q\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition\hspace*{\dimexpr 1\LeanCharWidth\relax}G,\hspace*{\dimexpr 1\LeanCharWidth\relax}Q.OrderAtMost\hspace*{\dimexpr 1\LeanCharWidth\relax}4\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∧}\hspace*{\dimexpr 1\LeanCharWidth\relax}Q.size\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≤}\hspace*{\dimexpr 1\LeanCharWidth\relax}PaperIV.targetSize\hspace*{\dimexpr 1\LeanCharWidth\relax}n\hspace*{\dimexpr 1\LeanCharWidth\relax}+\hspace*{\dimexpr 1\LeanCharWidth\relax}b\par
+\end{quote}
+
+\begin{quote}\fontsize{8.5}{10.2}\selectfont\ttfamily\raggedright\setlength{\parskip}{0pt}\settowidth{\LeanCharWidth}{0}
+\noindent theorem\hspace*{\dimexpr 1\LeanCharWidth\relax}erdos81\_cliquePartition\hspace*{\dimexpr 1\LeanCharWidth\relax}:\par
+\noindent \hspace*{\dimexpr 4\LeanCharWidth\relax}{\LeanSymbols ∃}\hspace*{\dimexpr 1\LeanCharWidth\relax}N\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ},\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}n\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ℕ},\hspace*{\dimexpr 1\LeanCharWidth\relax}N\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≤}\hspace*{\dimexpr 1\LeanCharWidth\relax}n\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∀}\hspace*{\dimexpr 1\LeanCharWidth\relax}(G\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}SimpleGraph\hspace*{\dimexpr 1\LeanCharWidth\relax}(Fin\hspace*{\dimexpr 1\LeanCharWidth\relax}n))\hspace*{\dimexpr 1\LeanCharWidth\relax}[DecidableRel\hspace*{\dimexpr 1\LeanCharWidth\relax}G.Adj],\par
+\noindent \hspace*{\dimexpr 6\LeanCharWidth\relax}PaperIV.FarRounding.IsChordal\hspace*{\dimexpr 1\LeanCharWidth\relax}G\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols →}\par
+\noindent \hspace*{\dimexpr 8\LeanCharWidth\relax}{\LeanSymbols ∃}\hspace*{\dimexpr 1\LeanCharWidth\relax}Q\hspace*{\dimexpr 1\LeanCharWidth\relax}:\hspace*{\dimexpr 1\LeanCharWidth\relax}CliquePartition\hspace*{\dimexpr 1\LeanCharWidth\relax}G,\hspace*{\dimexpr 1\LeanCharWidth\relax}Q.OrderAtMost\hspace*{\dimexpr 1\LeanCharWidth\relax}4\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ∧}\hspace*{\dimexpr 1\LeanCharWidth\relax}Q.size\hspace*{\dimexpr 1\LeanCharWidth\relax}{\LeanSymbols ≤}\hspace*{\dimexpr 1\LeanCharWidth\relax}targetSize\hspace*{\dimexpr 1\LeanCharWidth\relax}n\par
+\end{quote}
+
+Estas cabeceras permiten comprobar el orden de cuantificadores y la
+cobertura exacta sin inferirlos del nombre del teorema. La auditoría
+adjunta no contiene \nolinkurl{sorryAx} entre los axiomas de las
+declaraciones examinadas. El informe complementario distingue esa
+comprobación transitiva de la búsqueda textual de
+\nolinkurl{native_decide} en las fuentes del proyecto y de una
+reconstrucción completa de las dependencias.
+
+\subsection{3. Dependencias, adaptadores y
+atribución}\label{dependencias-adaptadores-y-atribuciuxf3n}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Resultado en el texto
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Módulo de referencia
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Entradas y construcción} & \\
+Óptimo racional alcanzado & \nolinkurl{PaperI.FiniteLPDuality},
+\nolinkurl{CertifiedOptimumExistence} \\
+Redondeo mixto uniforme, Teorema 3.1 & \nolinkurl{RC01Final},
+\nolinkurl{MixedRoundingAdapter}; infraestructura \nolinkurl{Nibble.*} de
+Paper III \\
+Corolario 3.5, régimen lejano para todos los grafos &
+\nolinkurl{FarRegimeAllGraphs.farRegime_cliquePartition_allGraphs};
+versión explícita en \nolinkurl{E17.ExplicitFarAssembly} \\
+Limpieza mejorada completa y umbral explícito & \nolinkurl{E17.Cleanup},
+\nolinkurl{E17.FarBudget}, \nolinkurl{E17.ExplicitFarRounding},
+\nolinkurl{E17.ExplicitFarAssembly}; constantes de \nolinkurl{E18} y
+\nolinkurl{E19} \\
+Selección fraccional por nibble, Paper III &
+\nolinkurl{Nibble.FracNibbleLE}, \nolinkurl{Nibble.FracNibbleRepaired};
+adaptadores \nolinkurl{PaperIIISlackNibbleAdapter},
+\nolinkurl{PaperIIINibbleAdapter} \\
+Localización, raíz y ventana crítica & \nolinkurl{NearH1Localization},
+\nolinkurl{NearRootWindow}, \nolinkurl{RootRegularizationBridge} \\
+Dicotomía e interfaz absorbible & \nolinkurl{HybridDichotomy},
+\nolinkurl{SeparationAbsorptionRoute} \\
+Contabilidad y partición cercana & \nolinkurl{RD09PhysicalLedger},
+\nolinkurl{NearH1FinalAssembly}, \nolinkurl{NearH1LocalConstructor} \\
+\textbf{Conclusiones extremales} & \\
+Cota aguda y máximo eventual & \nolinkurl{Erdos81Unconditional},
+\nolinkurl{PaperTheorems} \\
+Cotas para todos los órdenes & \nolinkurl{Erdos81AllOrders}; cota explícita
+en \nolinkurl{ExplicitThreshold} \\
+Defecto enraizado fijo y máximo, Teorema C &
+\nolinkurl{DefectExplicitPublication}; ensamblaje explícito
+\nolinkurl{E34.L11Main}; testigo inferior
+\nolinkurl{DefectSharpPublication} \\
+Necesidad del orden cuatro, Proposición D.2 &
+\nolinkurl{DefectSharpPublication.order_three_insufficient},
+\nolinkurl{E11K10} \\
+Presupuesto general y paso a \(\operatorname{cp}\) &
+\nolinkurl{LossBudget}, \nolinkurl{SplitMixedGap} \\
+Estabilidad del grafo, estabilidad de particiones y clasificación
+extremal & \nolinkurl{IntegralStability}, \nolinkurl{RootPartitionStability},
+\nolinkurl{ExtremalClassification} \\
+Valor completo-split y núcleos & \nolinkurl{SplitCompleteSharpValue},
+\nolinkurl{SplitCompleteRigidity} \\
+Defecto de partición y coeficientes óptimos &
+\nolinkurl{SplitCompleteDefect}, \nolinkurl{LinearCoefficient},
+\nolinkurl{SharpConstantOptimality} \\
+Densidad de aristas en la rama crítica & \nolinkurl{NearEdgeDensity},
+\nolinkurl{NearCriticalDichotomy} \\
+Igualdad de óptimos mixtos, Apéndice D.2 & \nolinkurl{SplitMixedGap},
+\nolinkurl{SplitCompleteSharpValue} \\
+\textbf{Herramientas complementarias} & \\
+Absorción compatible con presupuesto &
+\nolinkurl{SpreadAbsorptionCompatibility} \\
+Reserva equilibrada, Apéndice B.2 & \nolinkurl{BalancedReserve},
+\nolinkurl{Nibble.BeckFiala} de Paper III \\
+Completación con cuatro anfitriones, Apéndice B.3 &
+\nolinkurl{FourHostClosure}; Vizing y \nolinkurl{MultiHostTriangleLift} \\
+Reserva exacta y sensibilidad del umbral & \nolinkurl{ReserveIdentity},
+\nolinkurl{NearThresholdSensitivity} \\
+Estructura cordal reutilizable & \nolinkurl{CliqueTree} \\
+\end{longtable}
+}
+
+\textbf{Mapa de módulos.} Los prefijos \nolinkurl{PaperI}, \nolinkurl{Nibble}
+y \nolinkurl{MixedRounding} señalan, respectivamente, el desarrollo
+racional vinculado a Paper I, la infraestructura de nibble de Paper III
+y la biblioteca neutral del modelo mixto. Los prefijos \nolinkurl{E17},
+\nolinkurl{E18}, \nolinkurl{E19} y \nolinkurl{A4S1} identifican los módulos de
+los incrementos integrados en el proyecto; los demás nombres sin prefijo
+pertenecen a \nolinkurl{PaperIV}; \nolinkurl{MixedRoundingAdapter} es un
+adaptador de ese espacio hacia la biblioteca \nolinkurl{MixedRounding}.
+RC01 incorpora y adapta herramientas de Paper III, pero su ensamblaje
+mixto de dos cuotas es el de la Sección 3 de esta investigación. La
+tabla relaciona resultados y fuentes; el suplemento conserva la lista
+exacta de dependencias.
+
+La estructura cordal y Dirac proceden de la contribución de Paper II,
+portada en \nolinkurl{ChordalStructure}. El lema de regularidad de
+Szemerédi se reutiliza de Mathlib; la construcción y los adaptadores de
+perfiles limpios y de selección mixta pertenecen a Paper IV. Esta
+procedencia se distingue de la ubicación actual de un archivo bajo
+\nolinkurl{PaperIV}.
+
+La configuración declara Mathlib como paquete de terceros y una
+selección de módulos \nolinkurl{Nibble} de Paper III como dependencia local
+de la serie. \nolinkurl{ConeAudit} recorre los tipos y términos de prueba
+de las declaraciones seleccionadas y comprueba que sus dependencias
+transitivas no contengan nombres bajo la raíz \nolinkurl{Erdos81},
+utilizada por {[}5{]}. Nuestros módulos
+\nolinkurl{PaperIV.Erdos81Unconditional} y
+\nolinkurl{PaperIV.Erdos81AllOrders} tienen raíz de espacio de nombres
+\nolinkurl{PaperIV}; no son la raíz excluida Erdos81 que usa {[}5{]}. La
+ausencia de estos nombres es un resultado de auditoría reproducible, no
+una inferencia de la lista de importaciones. Su alcance es preciso:
+certifica esa exclusión en el corte examinado; por sí sola no detectaría
+código trasladado y renombrado ni determinaría la procedencia histórica
+de cada argumento. La atribución de fuentes se documenta por separado.
+El mismo control de espacios de nombres no permite emitir un veredicto
+sobre {[}15{]}. La extensión utiliza el método de estrella con signos de
+{[}15, Lema 3.1{]} y el método de remoción de {[}22{]}; demostrar sus
+implementaciones en este suplemento no convierte esos métodos en nuevos.
+
+La interfaz pública del Teorema C en esta revisión es
+\nolinkurl{DefectExplicitPublication}: utiliza
+\nolinkurl{E34.theoremC_fully_explicit_final} y el testigo inferior
+irrestricto ya demostrado en \nolinkurl{DefectSharpPublication}. El
+ensamblaje existencial anterior no es la prueba seleccionada para el
+Teorema C. Su localización utiliza remoción inducida de Alon--Shapira
+{[}23{]}; el ensamblaje explícito seleccionado utiliza, en cambio, el
+desarrollo de remoción cordal polinómica de {[}22{]}. El control
+adicional \nolinkurl{FDCheck.ASCheck} recorre términos de prueba y tipos
+para comprobar la exclusión de los resultados de remoción identificados
+en estas declaraciones seleccionadas. Esto no excluye el espacio de
+nombres \nolinkurl{AlonShapira}: se siguen usando definiciones compartidas
+de cordalidad, distancia de edición y copias inducidas.
+
+Hay una excepción concreta a esta comparación de dependencias. La
+clasificación irrestricta de la igualdad del Corolario 6.3, (6.18), se
+exporta mediante \nolinkurl{E32.cp_classification_of_theoremCPrimeC};
+esa declaración y \nolinkurl{E32.ref15Theorem11_of_theoremCPrimeC}
+todavía utilizan el ensamblaje histórico a través de
+\nolinkurl{E32.theoremC_at}. Sus pruebas incluyen, por tanto, la cadena de
+remoción inducida de {[}23{]}. Todos esos lemas están demostrados en las
+fuentes congeladas con axiomas estándar. El control de exclusión para el
+Teorema C explícito y las declaraciones de estabilidad seleccionadas no
+debe extenderse a estas interfaces de clasificación.
+
+\subsubsection{3.1. Recursos y las dos convenciones de
+ganancia}\label{recursos-y-las-dos-convenciones-de-ganancia}
+
+El refinamiento de representación del mapa original de prueba se
+verifica en \nolinkurl{MixedRoundingAdapter}. El adaptador identifica las
+aristas de una pieza y el predicado de copia admisible, transporta las
+capacidades de un empaquetamiento fraccional y prueba la igualdad de
+valores mediante \nolinkurl{value_toFarFrac}. Para un empaquetamiento
+entero, \nolinkurl{gain_toFarPacking} conserva la ganancia. Por tanto, el
+Teorema 3.1 puede utilizarse a través de esta presentación neutral sin
+cambiar el presupuesto (1.3). Esto no constituye una nueva demostración
+del redondeo.
+
+Hay dos funciones llamadas \nolinkurl{gainOf} cuyo dominio de uso debe
+distinguirse. \nolinkurl{Model.gainOf} vale dos en cardinal tres, cinco en
+cardinal cuatro y cero en los demás cardinales.
+\nolinkurl{FarRounding.gainOf} vale \(\binom{|K|}{2}\mathbin{\dot-}1\),
+donde \(\dot-\) es la resta truncada en los naturales. Coinciden en
+cardinales de cero a cuatro, pero desde cinco dejan de coincidir. En los
+ítems mixtos, que tienen cardinal tres o cuatro, el transporte es
+legítimo. Para particiones irrestrictas, como las de la Sección 6.4, se
+usa la cuenta de aristas o \nolinkurl{FarRounding.gainOf}; nunca se
+sustituye por la función de ganancia acotada de \nolinkurl{Model}. Puesto
+que las piezas de una partición tienen al menos dos vértices, allí la
+resta truncada coincide con la resta ordinaria.
+
+\subsubsection{3.2. Construcción y cuentas
+conservadas}\label{construcciuxf3n-y-cuentas-conservadas}
+
+El nibble de rango acotado se reutiliza mediante
+\nolinkurl{PaperIIISlackNibbleAdapter.boundedRankNibbleAt}. La construcción
+de las dos cuotas está en
+\nolinkurl{MarkedQuotaSlackGate.slackMarkedQuotaNibbleAt_proved}; el
+emparejamiento de soportes triangulares y su realización física están en
+\nolinkurl{MarkedQuotaPairing} y \nolinkurl{JointTwoQuotaPhysical}. La escala
+conjunta de codegrado corresponde a
+\nolinkurl{RC01CleanedGate.cleanedPacking_joint_codegree_le_of_served_patterns}.
+Los perfiles tienen masa a lo sumo \(t^2\), no uno: es la normalización
+física de \nolinkurl{RC01PatternMassScale}.
+
+Para el camino mixto, \nolinkurl{VertexCopyMonotone.two_mul_F4_le_add}
+prueba la desigualdad de las dos direcciones. \nolinkurl{VertexCopyGate}
+selecciona el paso y su potencial finito;
+\nolinkurl{GatedTerminalSplit.exists_split_terminal_symmetrizationPath}
+entrega la sucesión completa. La cuenta local se construye en
+\nolinkurl{NearH1WindowAccounts}, antes de importarla en
+\nolinkurl{NearH1Localization}. Esta dirección de dependencias corresponde
+al orden lógico explicado en el Lema 4.2.
+
+La extracción de la clique y la calibración están en
+\nolinkurl{ChordalCoreMissing} y \nolinkurl{NearH1CalibratedRoot}.
+\nolinkurl{Regularization}, \nolinkurl{RegularizationBounds} y
+\nolinkurl{RegularizedRootGoal} prueban las propiedades de la raíz que
+utiliza \nolinkurl{RootRegularizationBridge}. Finalmente,
+\nolinkurl{NearH1PhaseI}, \nolinkurl{RD09FactorCandidateMoments} y
+\nolinkurl{RD09FactorCandidateAverage} producen las dos cuentas;
+\nolinkurl{NearH1FinalAssembly} las une usando la misma primera asignación
+y sus enlaces ocupados. No se aplica la segunda fase a una copia
+independiente de los recursos.
+
+El Teorema 5.0 tiene una forma reforzada,
+\nolinkurl{NearH1LocalConstructor.exists_near_partition_paid_by_root_sharp},
+que añade \(|3|R|-n|\le n/50\) al constructor físico; la interfaz
+anterior \nolinkurl{exists_near_partition_paid_by_root} se conserva
+como corolario. La reserva reforzada de (5.15a) se conserva para ese
+mismo testigo en
+\nolinkurl{NearStructureWitness.accounts_count_le_improved};
+\nolinkurl{IntegralStability.chordal_linear_stability_sixteen} y
+\nolinkurl{RootPartitionStability.chordal_partition_stability} la
+utilizan sin recombinar raíces ni empaquetamientos. La selección cíclica
+de la fase I está en \nolinkurl{RD09PaddedL1Mass}; la última evaluación de
+la fase II, en \nolinkurl{H1ImprovedConstants.l10_of_raw_rd09L2}. Los
+regímenes del comparador de (5.1a) se comprueban en
+\nolinkurl{SplitComparatorResidual.residual_sq_le_of_near_split_universal}.
+La reserva (D.8) es
+\nolinkurl{ReserveIdentity.targetSize_eq_baseline_add_reserve}; la
+contracción mejorada corresponde a
+\nolinkurl{NearThresholdSensitivity.descent_threshold_maximal_barrier} y
+\nolinkurl{near_threshold_binding}. Los resultados de geometría crítica
+están en \nolinkurl{NearRootWindow}, \nolinkurl{NearEdgeDensity} y
+\nolinkurl{NearCriticalDichotomy}.
+
+Los resultados de extensión tienen puntos de entrada públicos separados.
+El Teorema C y su máximo son
+\nolinkurl{PaperIV.DefectExplicitPublication.rooted_defect_eventual} y
+\nolinkurl{rooted_defect_maximum}; el espacio de nombres histórico
+\nolinkurl{DefectSharpPublication} conserva el testigo inferior y
+\nolinkurl{order_three_insufficient} para la Proposición D.2.
+\nolinkurl{E35.theoremC_tower} y sus variantes uniformes dan el Corolario
+6.6. La cuenta completa (3.11) es
+\nolinkurl{E17Bridge.improved_far_loss_explicit}. El Corolario 3.5 con
+umbral explícito es
+\nolinkurl{E17Bridge.ExplicitAssembly.farRegime_allGraphs_explicit}.
+Finalmente, \nolinkurl{PaperIV.ExplicitThreshold.erdos81_sharp_explicit}
+y \nolinkurl{erdos81_all_orders_bounded_additive} dan el resultado
+global con la torre de §6.3. Estos nombres identifican declaraciones, no
+nuevas hipótesis.
+
+\subsubsection{3.3. Alcance respecto de otros desarrollos
+formales}\label{alcance-respecto-de-otros-desarrollos-formales}
+
+El alcance formal difiere del documentado por {[}5{]} en el commit
+citado. Su archivo \nolinkurl{lean/FORMALIZATION_STATUS.md} declara una
+verificación condicionada a \nolinkurl{ExternalInputs.Inputs}: Vizing,
+Häggkvist--Janssen y una transferencia de empaquetamiento que incluye
+certificados de optimalidad racional. Esas entradas son parámetros
+explícitos, no axiomas ocultos. Aquí se descargan las entradas empleadas
+por nuestra cadena, incluido Vizing; no se utiliza Häggkvist--Janssen.
+La comparación concierne a lo comprobado por cada desarrollo Lean: no
+afirma que la demostración matemática de {[}5{]} quede condicionada a
+conjeturas.
+
+Las contribuciones reutilizables tienen referencias propias. El
+empaquetamiento de triángulos suma-cero corresponde al PR \#348 de Lean
+Pool {[}12{]}, \url{https://github.com/Vilin97/lean-pool/pull/348},
+fusionado en el commit \nolinkurl{540d8e3}. Los emparejamientos por grado
+mínimo y su selección ponderada corresponden al PR \#420 {[}9{]},
+\url{https://github.com/Vilin97/lean-pool/pull/420}, fusionado en
+\nolinkurl{d1de6d2}. Las fuentes de la serie conservan los antecedentes y
+adaptaciones de Vizing y Beck--Fiala. La atribución de las
+formalizaciones se distingue de la autoría de los teoremas clásicos.
+
+Lean {[}10{]} y Mathlib {[}11{]} proporcionan el entorno de
+comprobación. La auditoría del código no reemplaza la revisión humana de
+las definiciones ni la correspondencia entre un enunciado formal y su
+expresión en el manuscrito. Los experimentos orientaron la búsqueda y
+detectaron afirmaciones falsas; no se usan como premisas de
+universalidad.
+
+El constructor formal utilizado no invoca los resultados de {[}15{]} ni
+los módulos históricos de la construcción sustituida. La cota de listas
+y la ventana de capacidad de la primera fase coinciden en forma con
+condiciones de {[}15, Lema 4.1 y (4.4){]}. Aquí se justifican mediante
+hospedaje diádico, promedio de desplazamientos cíclicos y absorción
+equilibrada. Esta comparación identifica los mecanismos y sus
+coincidencias; no reclama prioridad para esas condiciones ni deduce
+independencia histórica del control de dependencias de §3 de este
+complemento.
+
+\subsection{4. Precisiones para la correspondencia con el
+manuscrito}\label{precisiones-para-la-correspondencia-con-el-manuscrito}
+
+Las distinciones siguientes se conservan al retirar los nombres de
+implementación de la exposición. Evitan identificar un enunciado
+matemático con un tipo Lean más fuerte o con otros cuantificadores.
+
+\begin{itemize}
+\tightlist
+\item
+  La construcción de §6.1 usa triángulos y aristas; la interfaz pública
+  auditada proporciona una partición de orden a lo sumo cuatro y una
+  cota inferior irrestricta.
+\item
+  Las declaraciones de optimalidad cuadrática y lineal usan coeficientes
+  racionales. El manuscrito explica el paso a coeficientes reales por
+  aproximación racional.
+\item
+  \nolinkurl{recover_clique_from_edit} toma \(u\ge0\) racional; la
+  prueba escrita también vale para \(u\ge0\) real.
+\item
+  La Proposición G.1 usa precisión racional en la declaración Lean y
+  comparaciones exponenciales reales.
+\item
+  La formulación de anchura del Apéndice G.1 usa árboles de cliques con
+  cardinalidad acotada de las bolsas; no se apoya en una definición
+  general de treewidth de Mathlib.
+\item
+  El Apéndice G.2 no formaliza una restricción cordal de la implicación
+  limpieza--redondeo. La obstrucción universal no es una cota inferior
+  para todo método de redondeo cordal.
+\end{itemize}
+
+\subsubsection{4.1. Una premisa numérica existente escrita
+explícitamente}\label{una-premisa-numuxe9rica-existente-escrita-expluxedcitamente}
+
+La prosa anterior de F.5 remitía a \nolinkurl{thm2_ineq} por nombre. La
+nueva prosa imprime su conclusión existente, con
+\(m=m_{11}(\varepsilon,K)\), \(B=B_{11}(\varepsilon,K)\) y
+\(\delta_{11}\) como en (F.11). La fuente es
+\nolinkurl{E34/L11Params.lean}, líneas 289--292. Sus hipótesis son
+\(0<\varepsilon<1\) y \(1\le K\); el párrafo anterior de F.5 proporciona
+las más fuertes \(\varepsilon<1/2\) y \(K\ge1\). Se desarrolla una
+premisa citada, no una estimación ni prueba nueva.
+
+\subsubsection{4.2. Mapa de referencias a código
+trasladadas}\label{mapa-de-referencias-a-cuxf3digo-trasladadas}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Lugar del manuscrito
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Declaraciones o módulos formales
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1.1. La condición común: presupuesto de pérdida &
+\nolinkurl{LossBudget.budget_iff} \\
+1.2. Dicotomía estructural y mecanismos de resolución &
+\nolinkurl{NearStructureWitness} \\
+5.3. Las tres cuentas que pagan la construcción &
+\nolinkurl{isSpokeCompatible_surviving_canonicalBad},
+\nolinkurl{RD09SpokeCompatibility.card_union_phases} \\
+6.2. El máximo eventual &
+\nolinkurl{SplitCompleteRigidity.optimal_cores} \\
+6.2. El máximo eventual &
+\nolinkurl{PaperTheorems.splitGraph_isChordal} \\
+6.3. Todos los órdenes y optimalidad del término lineal &
+\nolinkurl{SharpConstantOptimality.erdos81_quadratic_constant_optimal},
+\nolinkurl{erdos81_quadratic_constant_isLeast} \\
+6.3. Todos los órdenes y optimalidad del término lineal &
+\nolinkurl{LinearCoefficient.linear_coefficient_optimal} \\
+6.3. Todos los órdenes y optimalidad del término lineal &
+\nolinkurl{LossBudget.erdos81_cp_form_all_orders},
+\nolinkurl{erdos81_cp_form} \\
+6.6. Estabilidad para defecto fijo sobre una misma raíz &
+\nolinkurl{NormalizedDeficit}, \nolinkurl{ResidualExcess},
+\nolinkurl{NormalizedCliqueCore}, \nolinkurl{RootPartition},
+\nolinkurl{NormalizedStability} \\
+6.7. Cotas uniformes y defecto sublineal &
+\nolinkurl{E35.Fexp_le_tower} \\
+B.1. Absorción compatible con presupuesto &
+\nolinkurl{SpreadAbsorptionCompatibility.exists_budgeted_compatible_spread_absorber} \\
+B.2. Reservas equilibradas &
+\nolinkurl{BalancedReserve.exists_balanced_reserve} \\
+B.3. Remate con cuatro anfitriones &
+\nolinkurl{FourHostClosure.exists_fourHost_packing} \\
+C.2. Qué se descarta y por qué el umbral es uniforme &
+\nolinkurl{RC01CleanFiber}, \nolinkurl{RC01DeviationCleanup} \\
+C.3. Un calendario explícito y su propagación &
+\nolinkurl{SzemerediRegularity.initialBound} \\
+C.3. Un calendario explícito y su propagación &
+\nolinkurl{E18.NibbleSchedule}, \nolinkurl{NibbleOracle},
+\nolinkurl{NibbleChain} \\
+C.3. Un calendario explícito y su propagación &
+\nolinkurl{E19.ScheduleBounds}, \nolinkurl{E19.ChainBounds},
+\nolinkurl{E19.GateBounds} \\
+C.3. Un calendario explícito y su propagación & \nolinkurl{E18.Numeric},
+\nolinkurl{E19.Main} \\
+C.3. Un calendario explícito y su propagación &
+\nolinkurl{E35.NfarE_le_tower_poly} \\
+D.1. El grafo completo a todo orden &
+\nolinkurl{ThreeRegime.CompleteStateAllOrders} \\
+D.1. El grafo completo a todo orden & \nolinkurl{HalvingFrames} \\
+D.1. El grafo completo a todo orden & \nolinkurl{exists_packing},
+\nolinkurl{complete_state_closes} \\
+D.2. Igualdad de óptimos mixtos en grafos completo-split &
+\nolinkurl{SplitMixedGap.mixed_gap_zero},
+\nolinkurl{SplitCompleteSharpValue} \\
+E.1. Constructor y cuentas & \nolinkurl{IndepAllBounds},
+\nolinkurl{IndepAllParams} \\
+E.1. Constructor y cuentas & \nolinkurl{IndepAllPeel},
+\nolinkurl{IndepAllObstr} \\
+E.1. Constructor y cuentas & \nolinkurl{IndepAllBudget} \\
+E.1. Constructor y cuentas & \nolinkurl{IndepAllMain},
+\nolinkurl{ConstructorBudget} \\
+E.2. Del terminal al teorema eventual &
+\nolinkurl{E34.theoremC_fully_explicit_final} \\
+E.4. Cuentas conservadas para la estabilidad con una misma raíz &
+\nolinkurl{StrictParams} \\
+E.4. Cuentas conservadas para la estabilidad con una misma raíz &
+\nolinkurl{StrictBudget} \\
+E.4. Cuentas conservadas para la estabilidad con una misma raíz &
+\nolinkurl{ResidualExcess} \\
+E.4. Cuentas conservadas para la estabilidad con una misma raíz &
+\nolinkurl{AllInput.no_core_pairs} \\
+E.4. Cuentas conservadas para la estabilidad con una misma raíz &
+\nolinkurl{CoreCliqueAlternative} \\
+E.4. Cuentas conservadas para la estabilidad con una misma raíz &
+\nolinkurl{TemplateDistance}, \nolinkurl{RootPartition},
+\nolinkurl{CliqueShiftArithmetic} \\
+F.1. Parámetros explícitos para defecto fijo &
+\nolinkurl{ExplicitFixedStability}, \nolinkurl{E33.Assembly},
+\nolinkurl{E33.LocExplicit}, \nolinkurl{E34.L11Main} \\
+F.1. Parámetros explícitos para defecto fijo &
+\nolinkurl{fixed_defect_stability_explicit} \\
+F.2. Contabilidad fraccional por estrellas y órdenes pequeños &
+\nolinkurl{RefinedFractionalBound}, \nolinkurl{UniformFractionalBound},
+\nolinkurl{SmallOrderFractional} \\
+F.3. Localización uniforme mediante edición hacia un cordal &
+\nolinkurl{SublinearEdit} \\
+F.3. Localización uniforme mediante edición hacia un cordal &
+\nolinkurl{exists_clique_additive_defect},
+\nolinkurl{recover_clique_from_edit} \\
+F.3. Localización uniforme mediante edición hacia un cordal &
+\nolinkurl{SublinearStabilityTransfer} \\
+F.5. Lemas auxiliares y adaptaciones de remoción cordal &
+\nolinkurl{E34.indCopies_cycle_le} \\
+F.5. Lemas auxiliares y adaptaciones de remoción cordal &
+\nolinkurl{E34.coBipartite_edit_le} \\
+F.5. Lemas auxiliares y adaptaciones de remoción cordal &
+\nolinkurl{E34.exists_large_clique} \\
+F.5. Lemas auxiliares y adaptaciones de remoción cordal &
+\nolinkurl{E34.lemma3} \\
+F.5. Lemas auxiliares y adaptaciones de remoción cordal &
+\nolinkurl{E34.transfer} \\
+F.5. Lemas auxiliares y adaptaciones de remoción cordal &
+\nolinkurl{E34.lemma11_V} \\
+F.5. Lemas auxiliares y adaptaciones de remoción cordal &
+\nolinkurl{properOn_of_pinned} \\
+F.5. Lemas auxiliares y adaptaciones de remoción cordal &
+\nolinkurl{thm2_ineq} \\
+F.5. Lemas auxiliares y adaptaciones de remoción cordal &
+\nolinkurl{claim5_count}, \nolinkurl{block_ineq} \\
+F.5. Lemas auxiliares y adaptaciones de remoción cordal &
+\nolinkurl{l11_caseA}, \nolinkurl{l11_caseB1}, \nolinkurl{l11_caseB2},
+\nolinkurl{E34.L11Main} \\
+F.5. Lemas auxiliares y adaptaciones de remoción cordal &
+\nolinkurl{E35.theoremC_tower}, \nolinkurl{theoremC_tower_uniform},
+\nolinkurl{theoremC_tower_uniform_sMax},
+\nolinkurl{NfarE_le_tower_poly},
+\nolinkurl{PaperIV.DefectExplicitPublication}, \nolinkurl{FDCheck.ASCheck},
+\nolinkurl{PaperIV.OptimalTemplateObstruction.shifted_template_witness},
+\nolinkurl{shifted_template_sqrt_witness},
+\nolinkurl{no_linear_optimal_template_bound},
+\nolinkurl{optimal_family_nonempty} \\
+G.1. La cota para todos los órdenes y las brechas de empaquetamiento &
+\nolinkurl{BoundedCliqueGap} \\
+G.1. La cota para todos los órdenes y las brechas de empaquetamiento &
+\nolinkurl{BoundedCliqueGap.chordal_gap_linear_cliqueFree} \\
+G.1. La cota para todos los órdenes y las brechas de empaquetamiento &
+\nolinkurl{exists_cliqueTree_width_le_iff_cliqueFree} \\
+G.2. Una obstrucción cuantitativa a la limpieza de codegrado &
+\nolinkurl{CleanupAtWith} \\
+G.2. Una obstrucción cuantitativa a la limpieza de codegrado &
+\nolinkurl{threshold_gt_exp}, \nolinkurl{threshold_gt_exp_seventy_two},
+\nolinkurl{FarExploration.CleanupRigidVerdict} \\
+G.2. Una obstrucción cuantitativa a la limpieza de codegrado &
+\nolinkurl{threshold_superpolynomial} \\
+G.2. Una obstrucción cuantitativa a la limpieza de codegrado &
+\nolinkurl{CodegreeCleanupAt}, \nolinkurl{UniformRoundingTarget} \\
+\end{longtable}
+}
+
+\subsection{5. Reproducción y anexo
+separado}\label{reproducciuxf3n-y-anexo-separado}
+
+Ejecute lo siguiente desde el archivo de fuentes extraído, sin
+modificar, con la versión fijada en \nolinkurl{lean-toolchain} y las
+dependencias fijadas en \nolinkurl{lake-manifest.json}. El comando se
+documenta para reproducibilidad; no se ejecutó para esta revisión
+editorial.
+
+\begin{verbatim}
+python tools/audit_publication.py
+\end{verbatim}
+
+Lee los 19 objetivos de \nolinkurl{FREEZE_SCOPE.json}, los ejecuta en
+serie y conserva registros individuales. Reimportar un módulo de
+auditoría compilado no equivale a ejecutar de nuevo sus comandos. La
+ejecución registrada está en
+\nolinkurl{03_reproducibility/full_rebuild_v12_20260929_resume/}, con
+enlaces de procedencia al primer segmento. \nolinkurl{ReleaseExportCheck}
+usa sólo \texttt{import\ PaperIV}; las auditorías nombradas inspeccionan
+sus propias listas de tipos y términos de prueba.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}l@{}}
+\toprule\noalign{}
+Objetivo \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\nolinkurl{PaperIV} \\
+\nolinkurl{PaperIV.Audit} \\
+\nolinkurl{PaperIV.ConeAudit} \\
+\nolinkurl{PaperIV.PublicationIncrementAudit} \\
+\nolinkurl{A4S1.IndepAllAudit} \\
+\nolinkurl{ThreeRegime.AxiomCheck} \\
+\nolinkurl{FarExploration.AxiomCheck} \\
+\nolinkurl{PaperIV.CliqueTreeAudit} \\
+\nolinkurl{E17.ImprovedFarRoundingAudit} \\
+\nolinkurl{E17.ExplicitFarAudit} \\
+\nolinkurl{PaperIV.ExplicitThresholdAudit} \\
+\nolinkurl{ReleaseExportCheck} \\
+\nolinkurl{PaperIVEditorial.ConstructorBudgetAudit} \\
+\nolinkurl{ResearchAudit} \\
+\nolinkurl{FDCheck.FinalAudit} \\
+\nolinkurl{E35.Audit} \\
+\nolinkurl{FDCheck.ASCheck} \\
+\nolinkurl{E34.Audit} \\
+\nolinkurl{PaperIV.OptimalTemplateObstructionAudit} \\
+\end{longtable}
+}
+
+El manifiesto literal de fuentes es
+\nolinkurl{03_reproducibility/build_piv-v12-fb459343d234/SOURCE_MANIFEST.json}.
+El registro de exportación contiene 224 comandos \nolinkurl{#check}
+literales. La auditoría del constructor cubre
+\nolinkurl{PaperIV.Editorial.ConstructorBudget}, que conserva ambas
+conclusiones para una misma partición. Los espacios de extracción
+antiguos y los cortes de fuentes reemplazados permanecen como registros
+históricos en el repositorio de la serie; no son módulos adicionales del
+congelado descrito aquí.
+
+\nolinkurl{BoundedCliqueGap} es un anexo de fuentes separado que respalda
+el Apéndice G.1; no es una entrada de la prueba extremal principal. El
+SHA-256 de su archivo de fuentes es
+\nolinkurl{2847a422865e06880d457ea806aae5b9f749d22359eff325349c09c01cb4837d}.
+Sus 38 módulos fuente y su clausura de compilación de 50 módulos
+pertenecen a su compilación registrada distinta, no a la cuenta de 607
+anterior.
+
+\subsection{6. Revisión de la prueba escrita y
+límites}\label{revisiuxf3n-de-la-prueba-escrita-y-luxedmites}
+
+\textbf{Alcance de la prueba escrita.} La tabla siguiente registra siete
+derivaciones examinadas en la revisión externa consolidada. Su
+evaluación, ACCEPTABLE\_SUMMARY para cada fila, conserva el límite
+expositivo declarado sobre las estimaciones de segundo momento citadas
+en C.2. Un build satisfactorio verifica derivaciones formales, no la
+integridad de su exposición; la evaluación de la prueba escrita sigue
+siendo distinta de la compilación y de la revisión humana por pares. El
+historial de auditoría y las evaluaciones detalladas se conservan con la
+evidencia complementaria.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Ubicación
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Derivación por revisar, incluidas las cuentas desarrolladas
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+§5.1, (5.4) y (5.7) & Estimaciones de masa, grado, paleta y anchura tras
+regularizar \\
+C.2, (3.8) y (3.10) & Conteos de descarte y retención con las
+convenciones de partición \\
+Lema 3.2 y C.1--C.2 & Cotas inferiores de fibras desde pares regulares y
+su normalización \\
+C.3, Tabla C.1 & Dominación numérica de las constantes del nibble e
+iteraciones de la torre \\
+E.1 & Cotas de normalización previas al constructor terminal \\
+E.1, (E.2b) y (E.2d) & Estimaciones terminales y presupuesto de tres
+casos \\
+D.1 & Construcciones de marcos Bose/Skolem que sustentan la tabla de
+residuos \\
+\end{longtable}
+}
+
+Las comprobaciones experimentales de órdenes pequeños no se usan como
+premisas. Su documentación, incluidos los requisitos de completitud y
+certificación, pertenece al registro de investigación separado.
+
+La biblioteca de árboles de cliques conserva contraejemplos a
+formulaciones sin las hipótesis adecuadas: una hoja no equivale por sí
+sola a un único vértice simplicial, y las afirmaciones sobre separadores
+deben tratar las bolsas repetidas y los casos degenerados. Estos
+resultados delimitan el uso de esa biblioteca; no añaden supuestos al
+teorema principal.
+
+El registro editorial conserva los párrafos fuente exactos y cada
+sustitución. Las comprobaciones automáticas comparan ecuaciones
+mostradas, etiquetas y encabezados de resultados; las hipótesis y
+dependencias de prueba se revisan además en el cotejo entre fuente y
+manuscrito. Esas comprobaciones no certifican automáticamente la
+equivalencia semántica de toda la prosa. La declaración de IA y
+herramientas conserva sus atribuciones y responsabilidades; se ha
+retirado la frase de estado del borrador anterior.
+
+\subsection{Uso de inteligencia artificial y herramientas
+computacionales}\label{uso-de-inteligencia-artificial-y-herramientas-computacionales}
+
+Se utilizaron Claude, de Anthropic, y ChatGPT/Codex, de OpenAI, para
+explorar argumentos, comprobarlos y preparar el manuscrito. Aristotle,
+de Harmonic, participó en la exploración de caminos, la búsqueda de
+contraejemplos, la elaboración de pruebas y su formalización y revisión
+en Lean; no sólo tradujo pruebas terminadas.
+
+Certo {[}13{]}, \url{https://github.com/jtraverso/certo-math}, y
+Jacobian {[}14{]}, \url{https://github.com/morluto/jacobian}, son las
+herramientas computacionales usadas para explorar instancias, comprobar
+identidades y evaluar candidatos. El proyecto de {[}5{]} también
+acredita a Jacobian; su uso aquí se declara por separado de las
+dependencias lógicas de nuestra prueba formal. Los cálculos se revisaron
+según su alcance; una búsqueda finita no reemplaza una prueba universal.
+
+El autor conserva la responsabilidad por los argumentos, las citas, el
+código y la presentación. Ningún sistema de IA figura como autor.
+
+\subsection{Referencias}\label{referencias}
+
+{[}1{]} P. Erdős, E. T. Ordman y Y. Zalcstein, «Clique partitions of
+chordal graphs», \emph{Combinatorics, Probability and Computing}
+\textbf{2} (1993), 409--415.
+
+{[}2{]} J. P. Traverso Gianini, \emph{Reducción afín de perfiles para
+empaquetamientos fraccionales de triángulos en grafos split}, Paper I,
+preprint v1.3, 22 de agosto de 2026. Ediciones española e inglesa en el
+depósito conjunto v3, 23 de agosto de 2026. DOI de la versión
+consultada: \url{https://doi.org/10.5281/zenodo.22064657}; DOI de
+concepto: \url{https://doi.org/10.5281/zenodo.21273143}. Material
+complementario:
+\url{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_I}.
+
+{[}3{]} J. P. Traverso Gianini, \emph{Extremizadores complete-split para
+un funcional fraccional de cobertura de triángulos en grafos cordales},
+Paper II, preprint v1.2, 22 de agosto de 2026. Ediciones española e
+inglesa en el depósito conjunto v3, 23 de agosto de 2026. DOI de la
+versión consultada: \url{https://doi.org/10.5281/zenodo.22064657}; DOI
+de concepto: \url{https://doi.org/10.5281/zenodo.21273143}. Material
+complementario:
+\url{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_II}.
+
+{[}4{]} J. P. Traverso Gianini, \emph{Particiones de cliques con error
+lineal en grafos split mediante empaquetamiento estructurado de
+triángulos}, Paper III, preprint v1.5, 23 de agosto de 2026. Ediciones
+española e inglesa en el depósito conjunto v3 de esa fecha. DOI de la
+versión consultada: \url{https://doi.org/10.5281/zenodo.22064657}; DOI
+de concepto: \url{https://doi.org/10.5281/zenodo.21273143}. Material
+complementario:
+\url{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/main/preprints/PAPER_III}.
+
+{[}5{]} Anonymous, \emph{Clique partitions of chordal graphs with linear
+error}, preprint, 8 de septiembre de 2026. Versión consultada el 20 de
+septiembre de 2026, commit
+\nolinkurl{cbde8a0a0563372b23b1b39a44180d2c0fb02f44}. Manuscrito:
+\url{https://github.com/N0zoM1z0/erdos-81/blob/cbde8a0a0563372b23b1b39a44180d2c0fb02f44/manuscript/main.pdf}.
+Se conserva la firma que figura en el documento. El README de ese mismo
+commit acredita a Morluto por la prueba matemática, a N0zoM1z0 por el
+manuscrito y la implementación Lean, y a Jacobian de Preference Labs
+como parte del proyecto:
+\url{https://github.com/N0zoM1z0/erdos-81/blob/cbde8a0a0563372b23b1b39a44180d2c0fb02f44/README.md}.
+Estos créditos del repositorio se distinguen de la firma impresa en el
+manuscrito.
+
+{[}6{]} P. E. Haxell y V. Rödl, «Integer and fractional packings in
+dense graphs», \emph{Combinatorica} \textbf{21} (2001), 13--38.
+
+{[}7{]} R. Yuster, «Integer and fractional packing of families of
+graphs», \emph{Random Structures \& Algorithms} \textbf{26} (2005),
+110--118.
+
+{[}8{]} T. F. Bloom, «Erdős Problem \#81», \emph{Erdős Problems}.
+Disponible en \url{https://www.erdosproblems.com/81}. Referencia de
+identificación del problema; este artículo no certifica el estado actual
+de revisión de las propuestas publicadas.
+
+{[}9{]} J. P. Traverso Gianini y colaboradores de la formalización
+asistida, «Minimum-degree and spread matching theorems», contribución a
+\emph{lean-pool}, PR \#420, 2026. Disponible en
+\url{https://github.com/Vilin97/lean-pool/pull/420}; commit de fusión
+\nolinkurl{d1de6d2}, 13 de septiembre de 2026. El historial y los
+encabezados conservan la atribución de la contribución asistida por
+Aristotle.
+
+{[}10{]} L. de Moura y S. Ullrich, «The Lean 4 Theorem Prover and
+Programming Language», en \emph{Automated Deduction -- CADE 28}, LNCS
+\textbf{12699}, Springer, 2021, 625--635.
+
+{[}11{]} The mathlib Community, «The Lean Mathematical Library», en
+\emph{CPP 2020}, ACM, 2020, 367--381.
+
+{[}12{]} J. P. Traverso Gianini, «Sum-zero triangle packing
+formalization», contribución de Paper III a \emph{lean-pool}, PR \#348,
+2026. Disponible en \url{https://github.com/Vilin97/lean-pool/pull/348};
+commit de fusión \nolinkurl{540d8e3}, 25 de agosto de 2026. Véanse los
+créditos de formalización y de asistencia en las fuentes.
+
+{[}13{]} J. P. Traverso Gianini, \emph{Certo: herramientas
+computacionales con certificados verificables}. Disponible en
+\url{https://github.com/jtraverso/certo-math}. La versión utilizada en
+los experimentos debe fijarse junto con sus certificados en el
+suplemento.
+
+{[}14{]} Morluto y colaboradores, \emph{Jacobian: herramientas
+matemáticas componibles}. Disponible en
+\url{https://github.com/morluto/jacobian}. La atribución y las versiones
+de los componentes se conservan en el repositorio.
+
+{[}15{]} O. Okechukwu, \emph{Clique partitions and bounded simplicial
+defect}, arXiv:2609.20871v1, 15 de septiembre de 2026. Disponible en
+\url{https://arxiv.org/abs/2609.20871v1}. Consulta del 27 de septiembre
+de 2026.
+
+{[}16{]} C. Henderson, H. Koerts, E. Roberge, S. Spirkl y R. Whitman,
+\emph{Clique Partitions of Split Graphs}, proyecto anunciado en
+preparación en la página de investigación de R. Whitman:
+\url{https://sites.google.com/view/rebeccawhitman/research}. Consulta
+del 27 de septiembre de 2026; la página consultada no enlaza un
+manuscrito que permita comparar sus resultados.
+
+{[}17{]} F. A. Behrend, «On Sets of Integers Which Contain No Three
+Terms in Arithmetical Progression», \emph{Proceedings of the National
+Academy of Sciences} \textbf{32} (1946), 331--332.
+\url{https://doi.org/10.1073/pnas.32.12.331}. La constante usada en
+Apéndice G.2 corresponde a \nolinkurl{Behrend.roth_lower_bound} de
+Mathlib v4.28.0.
+
+{[}18{]} I. Z. Ruzsa y E. Szemerédi, «Triple systems with no six points
+carrying three triangles», \emph{Combinatorics}, vol.~II, Colloquia
+Mathematica Societatis János Bolyai \textbf{18}, North-Holland, 1978,
+939--945. Registro bibliográfico del autor:
+\url{https://www.renyi.hu/~szemered/pub.html}.
+
+{[}19{]} R. C. Bose, «On the construction of balanced incomplete block
+designs», \emph{Annals of Eugenics} \textbf{9} (1939), 353--399.
+\url{https://doi.org/10.1111/j.1469-1809.1939.tb02219.x}.
+
+{[}20{]} T. Skolem, «Some Remarks on the Triple Systems of Steiner»,
+\emph{Mathematica Scandinavica} \textbf{6} (1958), 273--280.
+\url{https://tidsskrift.dk/math/article/view/10551}.
+
+{[}21{]} R. Cipollini, anuncio de prueba parcial para el problema 81 de
+Erdős, 10 de agosto de 2026. Resumen del autor:
+\url{https://www.erdosproblems.com/forum/thread/81/proof-claims\#proof-claim-201};
+manuscrito enlazado: \url{https://www.overleaf.com/read/thjptfhgnmxc}.
+Se cita por la cota anunciada con error subcuadrático, no como una
+entrada auditada independientemente.
+
+{[}22{]} R. de Joannis de Verclos, \emph{Chordal graphs are easily
+testable}, arXiv:1902.06135v1, 16 de febrero de 2019. Disponible en
+\url{https://arxiv.org/abs/1902.06135v1}. El argumento de remoción que
+sostiene el Apéndice F.3 se atribuye a este trabajo; su implementación y
+adaptaciones se documentan en el Apéndice F.5.
+
+{[}23{]} N. Alon y A. Shapira, \emph{A characterization of the (natural)
+graph properties testable with one-sided error}, SIAM Journal on
+Computing \textbf{37} (2008), 1703--1727. DOI:
+\url{https://doi.org/10.1137/06064888X}. Utilizado por el ensamblaje
+existencial histórico y por las interfaces de clasificación irrestricta
+identificadas en §3 de este complemento, no como el teorema de remoción
+seleccionado para el Teorema C público explícito.
+
+\end{document}
