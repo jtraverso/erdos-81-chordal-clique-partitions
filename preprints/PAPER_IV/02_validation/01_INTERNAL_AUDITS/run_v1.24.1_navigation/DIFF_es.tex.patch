@@ -1,0 +1,19 @@
+--- PAPER_IV_preprint_v1.24_es.tex
++++ PAPER_IV_preprint_v1.24.1_es.tex
+@@ -34,7 +34,7 @@
+ \raggedbottom
+ \maketitle
+ \vspace{-1.5\baselineskip}
+-\textbf{Preprint · versión 1.24}\\
++\textbf{Preprint · versión 1.24.1}\\
+ 19 de octubre de 2026
+ 
+ \textbf{MSC 2020:} 05C70; 05C35, 05C72.
+@@ -4364,6 +4364,6 @@
+ 
+ {[}24{]} J. P. Traverso Gianini, \emph{Complemento formal de Paper IV},
+ revisión editorial 1.24, 19 de octubre de 2026.
+-\href{../05_formalization/FORMALIZATION_COMPANION_v1.24_es.pdf}{PDF}.
++\href{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/30eb8869561dc743e7f802f9c922ee1df08f42cc/preprints/PAPER_IV/05_formalization/FORMALIZATION_COMPANION_v1.24_es.pdf}{PDF}.
+ 
+ \end{document}

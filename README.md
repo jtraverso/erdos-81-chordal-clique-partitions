@@ -13,7 +13,7 @@ La serie estudia cómo transformar cotas fraccionales de empaquetamiento en desc
 | [I — Fractional profiles](preprints/PAPER_I/README.md) | Reduce mixed neighborhood profiles in split graphs to a fixed finite linear program. | v1.4, editorial revision |
 | [II — Fractional extremizers](preprints/PAPER_II/README.md) | Identify the exact fractional chordal extremum by admissible copies and complete-split terminal graphs. | v1.3, editorial revision |
 | [III — Integral split partitions](preprints/PAPER_III/README.md) | Construct clique partitions with sharp quadratic coefficient and linear error for split graphs. | v1.6, editorial revision |
-| [IV — Quantitative stability](preprints/PAPER_IV/README.md) | Obtain chordal and rooted-defect bounds, and control graphs and near-optimal partitions with a common root. | v1.24, editorial revision |
+| [IV — Quantitative stability](preprints/PAPER_IV/README.md) | Obtain chordal and rooted-defect bounds, and control graphs and near-optimal partitions with a common root. | v1.24.1, navigation correction |
 | [V — Colorability and realizability](preprints/PAPER_V/README.md) | Separate conflict colouring from realization in resource-dominated packing relaxations. | Preprint 1.0 |
 | [VI — Exact local partitions](preprints/PAPER_VI/README.md) | Determine optimal clique-partition counts under local perturbations, with prescriptions and structural consequences. | Preprint 1.0 |
 
@@ -36,7 +36,7 @@ Las conexiones no obligan a leer toda la serie antes de abordar un resultado. I�
 
 Papers I v1.4, II v1.3 and III v1.6 are editorial revisions released together. Their individual changelogs, formal companions and internal editorial audits are linked from each paper page. No Lean/Lake rebuild was performed.
 
-The papers have distinct frozen source packages and recorded audit scopes. Paper IV v1.24 changes exposition and document organization; its Lean freeze remains `piv-v12-fb459343d234`. The [editorial changelog](preprints/PAPER_IV/CHANGELOG_v1.24.md), [new internal editorial audit](preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/10_REPORT/FINAL_INTERNAL_AUDIT_REPORT.md) and [unchanged formal sources](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/05_formalization) distinguish the new documents from the existing kernel evidence.
+The papers have distinct frozen source packages and recorded audit scopes. Paper IV v1.24 reorganized exposition and document organization; its Lean freeze remains `piv-v12-fb459343d234`. The [editorial changelog](preprints/PAPER_IV/CHANGELOG_v1.24.md), [new internal editorial audit](preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/10_REPORT/FINAL_INTERNAL_AUDIT_REPORT.md) and [unchanged formal sources](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/05_formalization) distinguish the new documents from the existing kernel evidence.
 
 The preprints and documented AI-assisted reviews are not human peer review. Formal checking, written-proof review and bibliographic comparison have different scopes. Each package records those limits; a successful compilation does not establish historical priority.
 

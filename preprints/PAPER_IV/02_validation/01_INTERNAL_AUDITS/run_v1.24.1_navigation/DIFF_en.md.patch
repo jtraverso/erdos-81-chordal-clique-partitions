@@ -1,0 +1,17 @@
+--- PAPER_IV_preprint_v1.24_en.md
++++ PAPER_IV_preprint_v1.24.1_en.md
+@@ -6,7 +6,7 @@
+ [ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
+ 
+ **Paper IV in the series**  
+-**Preprint:** version 1.24.  
++**Preprint:** version 1.24.1.  
+ **Date:** October 19, 2026.
+ 
+ **MSC 2020:** Primary 05C70; secondary 05C35, 05C72.
+@@ -2365,4 +2365,4 @@
+ [23] N. Alon and A. Shapira, *A characterization of the (natural) graph properties testable with one-sided error*, SIAM Journal on Computing **37** (2008), 1703–1727. DOI: <https://doi.org/10.1137/06064888X>. Used by the historical existential assembly and unrestricted-classification wrappers identified in the formal companion [24, §3], not as the removal theorem selected for the explicit Theorem C.
+ 
+ 
+-[24] J. P. Traverso Gianini, *Formal companion to Paper IV*, editorial revision 1.24, October 19, 2026. [PDF](../05_formalization/FORMALIZATION_COMPANION_v1.24_en.pdf).
++[24] J. P. Traverso Gianini, *Formal companion to Paper IV*, editorial revision 1.24, October 19, 2026. [PDF](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/30eb8869561dc743e7f802f9c922ee1df08f42cc/preprints/PAPER_IV/05_formalization/FORMALIZATION_COMPANION_v1.24_en.pdf).

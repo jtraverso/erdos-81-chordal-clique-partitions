@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "baseline": "30eb8869561dc743e7f802f9c922ee1df08f42cc",
+  "source_inverse_checks": [
+    {
+      "file": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.24.1_en.md",
+      "only_version_and_URL_changed": true
+    },
+    {
+      "file": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.24.1_en.tex",
+      "only_version_and_URL_changed": true
+    },
+    {
+      "file": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.24.1_es.md",
+      "only_version_and_URL_changed": true
+    },
+    {
+      "file": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.24.1_es.tex",
+      "only_version_and_URL_changed": true
+    }
+  ],
+  "relative_links_checked": 97,
+  "broken_links": [],
+  "private_paths": [],
+  "protected_changes": [],
+  "no_Lean_Lake_build": true,
+  "scope": "Changed documents and distribution metadata; historical freeze unchanged."
+}

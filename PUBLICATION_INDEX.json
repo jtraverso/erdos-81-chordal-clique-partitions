@@ -37,14 +37,15 @@
     },
     {
       "work": "PAPER_IV",
-      "version": "1.24",
+      "version": "1.24.1",
       "path": "preprints/PAPER_IV",
-      "main_stem": "PAPER_IV_preprint_v1.24",
-      "collection_doi": "10.5281/zenodo.23476768",
+      "main_stem": "PAPER_IV_preprint_v1.24.1",
+      "collection_doi": "10.5281/zenodo.21273143",
       "companion_stem": "FORMALIZATION_COMPANION_v1.24",
       "formal_source_freeze": "piv-v12-fb459343d234",
       "formal_source_commit": "ef31294ad67dfe3f44bc47cec4791c836f55e8aa",
-      "title": "Clique partitions with rooted simplicial defect: quantitative stability and sharp eventual bounds"
+      "title": "Clique partitions with rooted simplicial defect: quantitative stability and sharp eventual bounds",
+      "companion_version": "1.24"
     },
     {
       "work": "PAPER_V",

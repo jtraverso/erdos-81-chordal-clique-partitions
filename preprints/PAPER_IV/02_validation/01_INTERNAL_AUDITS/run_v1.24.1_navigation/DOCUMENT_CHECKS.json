@@ -1,0 +1,664 @@
+[
+  {
+    "language": "en",
+    "pages": 61,
+    "render_comparison": [
+      {
+        "page": 1,
+        "same_render_as_v1_24": false,
+        "new_render_sha256": "491a45593512eda51f02bf34d01e9c308c3ae5231366418f124e11e16ff1db02"
+      },
+      {
+        "page": 2,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "35b3e7d2712776a3f56aefc59f6b010ebb04dd34b0cbf148488dedf2e658bf50"
+      },
+      {
+        "page": 3,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "c9703676b0c0a5ea1ad3acd020c25545e166b6a5124ab19e8defaf2a1fee4f8e"
+      },
+      {
+        "page": 4,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "f395afff1927e7b3603c7b2b29b9d0e217c74119033501ea806541c942d8f9e6"
+      },
+      {
+        "page": 5,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "1374719fd6a631c4babff1210d3d154862948d7888d51e157253882d77f4929d"
+      },
+      {
+        "page": 6,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "110c5500d478c8d5a74e9b8d7475d33802f5ce6ae295a6f892561fd1b63fafd3"
+      },
+      {
+        "page": 7,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "378511b92f893039148e579fef007c885a046a461e65533243445c6bfc512690"
+      },
+      {
+        "page": 8,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "30ef5c24ed97be187493234b9bd6fa28182e119250125f04cf82249384c927ad"
+      },
+      {
+        "page": 9,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "f4f4a4b682c6395306ff304c015117d1984849c5c6ed113bfa4abadfe60092f2"
+      },
+      {
+        "page": 10,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "7659b839c7df4f9620abf34bba87c822f59df4f76ddc64c2c1a7defb774960e4"
+      },
+      {
+        "page": 11,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "bd913d76fda7e9a9be245b15e0010679ea0d9fc1c3cf89bce8968441639281b6"
+      },
+      {
+        "page": 12,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "a8c5c8e9f7b82c0b8c650160119c52115eb42bd959e7b683d06f8f8b6013e4cd"
+      },
+      {
+        "page": 13,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "cb7ed9cc0edd0988aba53982df8711356ebfd639e3ede7428ba4f5b5e75b9c39"
+      },
+      {
+        "page": 14,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "bd0104494a2565700375ee0aa4fd2c86414446b1a45a0d194887f6418256707c"
+      },
+      {
+        "page": 15,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "2f6d0a84a89a05e0f2a70708e8c01ca44647135e45e11b91844f7b2bebc9ef17"
+      },
+      {
+        "page": 16,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "7614051350d54bdaf4e7817154ddcd37644fe4cc253b6e1a82449a28c3af4989"
+      },
+      {
+        "page": 17,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "fdf240533518b4d78c5f8628eb5e94748c2a9642eb6455705b8a3895a24767a4"
+      },
+      {
+        "page": 18,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "4b043740d8987ff3e25b3af3c6a2732de1e10013267c548f04588b354512c26e"
+      },
+      {
+        "page": 19,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "ca174c60d0c32871e18892426519b92a574adef20617702ad3890520c34daefb"
+      },
+      {
+        "page": 20,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "adcfb73ca2657168b0ce290afdc522803d78d4bedbefd822b90f923eb82ba366"
+      },
+      {
+        "page": 21,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "7f74c2e61db40dd16424210ba638de2a2442a7466742f120287eacac3944ebcb"
+      },
+      {
+        "page": 22,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "e77d2d6d60ab052e5a7ea6fb01eff2be34ad1e48d83ea664e825b31e9dfd0bb6"
+      },
+      {
+        "page": 23,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "51c5da75e8ef0a54ddd29a4fb7d6e7f701698510c4ffb12bc1cdc8b296f2ac71"
+      },
+      {
+        "page": 24,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "796e0293384108d0befc762b5715e764369e570af7913deeebc9571db0790dc3"
+      },
+      {
+        "page": 25,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "37d5fd0140393ebb47065bea0d871dca28df49a14d2785a2854372ce041ecb3b"
+      },
+      {
+        "page": 26,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "63abd59ef89728bb77f63e7c06817bc417ca416e611d15f9f8e55a36ce3f7d89"
+      },
+      {
+        "page": 27,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "c7d6571e61e23bae73c754d75311bb3f12c8fca4cd118af1369d8e93aa30c158"
+      },
+      {
+        "page": 28,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "47787647a0126bddef50bafeed02ec9b22c5319e032c1f7726fa476a197bfa4e"
+      },
+      {
+        "page": 29,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "a0cfd70b08330b2140389748f2c1190196ab5008852b0739e19d6d02146cb104"
+      },
+      {
+        "page": 30,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "2cbc1ca54a0eb5f0b9ccbea37cede4139cb9e53bda15834f3c5429b6ecf226e8"
+      },
+      {
+        "page": 31,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "d8763b694c315731671adfef812dcc2ae200cb8822af375f5dd5d18c210e5182"
+      },
+      {
+        "page": 32,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "3dc0359c01a06acbcada6cd5d68ae1263c7abe884ef344206fe866a42b6bd3f7"
+      },
+      {
+        "page": 33,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "8e883a2ac61212cd2d49451fba424374b27ca4be21f16b68d36d59c714846e3e"
+      },
+      {
+        "page": 34,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "853e819251360efc8ba870cefb0756ca91f67b46498727682f2fccdc43c730a2"
+      },
+      {
+        "page": 35,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "cb00a5d1f8f2ab2466f431bf02dac10c6fa7721e54a2a64ca6b860e68ad99eff"
+      },
+      {
+        "page": 36,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "23bc9dcd979f566e94ed54e995d96d39747e841202dcf9c7c4bda38834e1366a"
+      },
+      {
+        "page": 37,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "81212bd8a9ac7e310b0f469a97a4ee6e93434ce2047d65a212774a6225ab1f68"
+      },
+      {
+        "page": 38,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "c13e65128b74c51a066414002f5c63a93d74cc0e1b1b9f44756c55ff0c7a2303"
+      },
+      {
+        "page": 39,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "12fa8abc040877bd793d78adbc1ccfce353331d01f1c33d94a9b3bd753aabb6d"
+      },
+      {
+        "page": 40,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "9e9ddd92fb8c07d258a3a1c3385171e1174b194bec2980aec795cda22cacc878"
+      },
+      {
+        "page": 41,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "ef12dfb20f1b3fa7a33658800ac7abd6bb4658acc1d0c0729e800829a10c7837"
+      },
+      {
+        "page": 42,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "724a443d15cfeb76cc446821b1805aa72474711ae4026885b507b1953367a879"
+      },
+      {
+        "page": 43,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "78635a0bb3ed8a2bd932a32345e7a6e5d24a7265474bc366db5dafe8f4ee9125"
+      },
+      {
+        "page": 44,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "c605be425a0e594d5a9839d263d5d7d3a819aee071122e8199b1ede851d072c5"
+      },
+      {
+        "page": 45,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "1310fb658a5e99d29e623d536ed197419cb480648a90314a97e1277d78ca5ebb"
+      },
+      {
+        "page": 46,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "475f5967be7552afd97c96a5aa2968c347b23eadf99d6b430cb9fa0687d0a2d9"
+      },
+      {
+        "page": 47,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "da24741d2e5a9c15f8e0bad2bc9b3b81e82fd91af54950cf14d13cbb466e7aff"
+      },
+      {
+        "page": 48,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "8c0175c2e4d5d42903f94b69824d0ad679e8ba1352ed63dc07bf1549bf8c2d7d"
+      },
+      {
+        "page": 49,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "07affe71225839ba152649a4e704b57ffa2b34be460a9a8aba72360ade4ad043"
+      },
+      {
+        "page": 50,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "9ee7317c517f96e31d3487d5ba8df121ab60d82cc644a698de1c9aa591dd9029"
+      },
+      {
+        "page": 51,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "c13df61abbab3283b9ca5e782a0beb9107695432116d6039b289d57a44bf9f8b"
+      },
+      {
+        "page": 52,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "f4dedd5174527c98a3c52ae7216979407908665714569dedbb62b3cd6b832c8e"
+      },
+      {
+        "page": 53,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "a6d3b91dfecda5e0774d40082f0e8edba82296eee8a9d9a06767cc0ccf8a761b"
+      },
+      {
+        "page": 54,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "f18c2b9d28e1550aeec9ab05caafff3914535038762b3bb7afecf3eb481a372c"
+      },
+      {
+        "page": 55,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "d01367db8651b59e5d37be4b020d7a15488da4363acf26c6b3783e6c3271763e"
+      },
+      {
+        "page": 56,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "f33829577cd8ae8220dd00e26d8ada0230de8190ca0cda82106fefe85750b755"
+      },
+      {
+        "page": 57,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "763abb82c21943853ad4b38c73fd4a0644255b6de95a903447b4121c3dffbaa9"
+      },
+      {
+        "page": 58,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "67ded67db1b7a69df116ea85281e376961ac523eb4c463d07da6351d2b7aa70e"
+      },
+      {
+        "page": 59,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "39fc08dd2dc8a79f0c4a4e532332752f004f0bfb4856c2e75ccdaddd069b58e3"
+      },
+      {
+        "page": 60,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "584d6f790b57ad9421daa9e7809d2ea06f70e33d313209d6f75713c2309b19a2"
+      },
+      {
+        "page": 61,
+        "same_render_as_v1_24": false,
+        "new_render_sha256": "fd25e37a5b24435e14f6c3d8219adeead52b1179dd48ed63392d04d797f4b73e"
+      }
+    ],
+    "changed_pages": [
+      1,
+      61
+    ],
+    "PDF_text_unchanged_except_version": true,
+    "portable_companion_link": {
+      "page": 61,
+      "uri": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/30eb8869561dc743e7f802f9c922ee1df08f42cc/preprints/PAPER_IV/05_formalization/FORMALIZATION_COMPANION_v1.24_en.pdf",
+      "file": null,
+      "kind": 2
+    },
+    "pdf_sha256": "8607587130a0172c8990d14144c5893512d0a87a7fe6bf167823daa63005e441",
+    "tex_sha256": "f061b6598bc1f748d27e41b1701569b58d6845ee6f33b239a3eedddfb7cb095c",
+    "md_sha256": "2b770010185dfab93d05e63bb0ee342008fe85a6555e6a1f165cf9a8f49337f1",
+    "compiler_log_sha256": "01802c49e9b34245f5d11e2c15f4931b31aed13cbdb548618331051c6a301a18"
+  },
+  {
+    "language": "es",
+    "pages": 63,
+    "render_comparison": [
+      {
+        "page": 1,
+        "same_render_as_v1_24": false,
+        "new_render_sha256": "16d7595b6eb89c1a66047555019f420e609b30008c602e8b19f429dae88d6a35"
+      },
+      {
+        "page": 2,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "37a12b25f38559ce37f42c08275c619ad851dd0849c77cbed41766098b66a78f"
+      },
+      {
+        "page": 3,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "b41166ce8eb82ba8896f77a537e6876e3557b3a281bc25c574d51ee31c26de42"
+      },
+      {
+        "page": 4,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "3d080d18d885711d3097a03d7e53ba8dcb59579323b1c96238a8e0ecc09b279b"
+      },
+      {
+        "page": 5,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "1873fd11d059bf34caa8719d1406298305739110c44d60f4307b5f85b0ea0699"
+      },
+      {
+        "page": 6,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "3035faf3c3f6f277a6bdca5205db7227ebacc901a5b16da91e5ff43be0d899c6"
+      },
+      {
+        "page": 7,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "d24dc8058aeeb741a620331bc52701fbf36bc258546fb847d0ac8fe3770dc22f"
+      },
+      {
+        "page": 8,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "a8e634bd3117e5acdce128ef794d67fce62b74a96b403f62658c513dc16ebcde"
+      },
+      {
+        "page": 9,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "04c6d95f2a92a0ff93ac60ec336f031e83d61ec44493ab13861151b8d79e0397"
+      },
+      {
+        "page": 10,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "6a42e71f9dd1d0cdde9cc473e91009c3185743d367d9560ac8830b06e43be389"
+      },
+      {
+        "page": 11,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "a0e995cc09cbd48bbd8f8c5d7ff58ac1864b739e230596d916b51a40020df358"
+      },
+      {
+        "page": 12,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "f7acddd6ca78a5f4d8b1d991b3fdd6fa80189651292ba8c4cdfcb484dee92423"
+      },
+      {
+        "page": 13,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "c1d0842a4d03b0d4298dae797b25cb81b0a663c799b1c04e2368b8c8ee70f332"
+      },
+      {
+        "page": 14,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "ea9626c275f50df7dc58a6aea234b01def3f6317bdc574923d9b150e3e4b67dd"
+      },
+      {
+        "page": 15,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "8a6d48bcc7c430914e31157588d36384508f2e970b15798e2f532ab4f11542f2"
+      },
+      {
+        "page": 16,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "7e9b6d8065cace48127018ae6e9c216d2402ee11d8a9b9bde4a94bc746424591"
+      },
+      {
+        "page": 17,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "c2db676df6eb0305751eab51c40111139f728e8c190f9a93a0ba966ff23c55c5"
+      },
+      {
+        "page": 18,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "ff82e423530b443f1b3fa29923b98ccae1b935616222c5fa260adc3bf556652c"
+      },
+      {
+        "page": 19,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "62dbcc54df78acf966cebc772f0416e54683b7e543dc33a48cc91a0074561554"
+      },
+      {
+        "page": 20,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "df6c5a0f45b356842fc410b5b2d81a4ab6cf19d4f094cec53ac10175b583e547"
+      },
+      {
+        "page": 21,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "c2c23950a87b6bcbdd7bf02bbe2c14a8907036b6861578371fba07547e6b120f"
+      },
+      {
+        "page": 22,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "582b62266c2143752c190b72c66b66aaa0042b5e7a948d1a7eb743947e29e7f8"
+      },
+      {
+        "page": 23,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "30a58eeb4917a4b59e40b90b31bc1c794f0979e4e1ba844faec86b8ada7b9029"
+      },
+      {
+        "page": 24,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "7c9ecff55b1dcb8d2ed28c72dca445b26417ed0b9909dbc0266461065c661a86"
+      },
+      {
+        "page": 25,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "2f15d56a7b18687be2c7bf87d4aab172dce2df08688697e15fab452c1c612013"
+      },
+      {
+        "page": 26,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "994d04f50fc04233c4ee7afcda521cbf58f34b60cc28d93393e6d0bddf454776"
+      },
+      {
+        "page": 27,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "0c40ca250078f4a2ac3792f0b640bcc6816b40e06147ec4f3a5ee22c45731d18"
+      },
+      {
+        "page": 28,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "16510b0418652fb12a18c919ca1f4c677483f3141986536b1ac04c329c4eda4a"
+      },
+      {
+        "page": 29,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "466aa67c2179d7afb3ce700b124ae9f6885b92eed55cd6b6cdb10064fceefd36"
+      },
+      {
+        "page": 30,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "70f840d134086541ef8a808b1619335a8ab79dee86820841f9e14cf9ecc05ac3"
+      },
+      {
+        "page": 31,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "a87dbb1c848283f517a4273bbb9073b0743ca18c88cbf0928bdfc180717fb213"
+      },
+      {
+        "page": 32,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "a1e2739bc84926b1fddf434b489206636631ae6ab693409bdf31c5b26cfb50dc"
+      },
+      {
+        "page": 33,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "6f954b3a19470031f76093d4a0a40603b69522fbc3c952a142f2b2369502eed0"
+      },
+      {
+        "page": 34,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "64d2bffbecc4ab85935e65cc1cf42440b2797e4f9303b973ff1875c6159c1368"
+      },
+      {
+        "page": 35,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "92e4fd08c27e432378f2ae4aaceaf62b587bd9ec05db99e35db07f58f80d401a"
+      },
+      {
+        "page": 36,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "54905b961be151f95c0c99ad5760696789a7f9f590b505ecba6738fde86fab8c"
+      },
+      {
+        "page": 37,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "28ccefaef638d8f83ed453fad9789b4c483fbf7bc5b0f4c9f83c1f899153373b"
+      },
+      {
+        "page": 38,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "8fc474018be22ddaf556aef0b742edc47ddd8c0b38cfa7c98a35a21660c0070d"
+      },
+      {
+        "page": 39,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "9979c04507e2857270cbd4ada0d34991863d552c4f41b6f006881cdf51648da9"
+      },
+      {
+        "page": 40,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "7f885abfc1bc599012621fce4fd2aa6947413623f33f2e291a3a2d40314a5310"
+      },
+      {
+        "page": 41,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "cfb82f688f52cf484e925377557c357b48042d9228dbe65c1351fe4a64c736eb"
+      },
+      {
+        "page": 42,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "92437b0998ba302cbb95f915acaad7c19e6451329fba244c38998311bd91fcef"
+      },
+      {
+        "page": 43,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "372573146c20e48987ad830830377d146372ebcdf52efd71ff6e414a0d085489"
+      },
+      {
+        "page": 44,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "635ab41b85a25b2019e266585932f06c7b378e05a41ab82a70fda8c6e6c782e2"
+      },
+      {
+        "page": 45,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "61dae64beb547d95105c2b092f15fe6b816cb3105929bab5b6d943f145fb42ec"
+      },
+      {
+        "page": 46,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "fca9791b2d6c4c52cdf87891de45ac52c54b4d45fb5e884c0e92dad8e7f3720f"
+      },
+      {
+        "page": 47,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "f475c07e40b2dd0e1e233a71bf8d308c66e316bbe5e5b91753c8b912dc851bbe"
+      },
+      {
+        "page": 48,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "72783af9acb7a041570670aacbbc7db32c3c85338df794ccb45c35d6f38dd8e5"
+      },
+      {
+        "page": 49,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "321467288023831bb993e00ee55abcc5f745875b2efa32fabdceb0f0658da8ad"
+      },
+      {
+        "page": 50,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "48de3f3434296a94d113ec580c820d190aee8e36d0a0fa93a63d16af1c836773"
+      },
+      {
+        "page": 51,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "1a3b13a52ae6f4005a8a7f5b2336f85d25547b3cc4a9f1b42e37b2967c47caec"
+      },
+      {
+        "page": 52,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "69c34f13e00e2c80bae8309121b6bfdefbe78601d75302a692894acba2c64683"
+      },
+      {
+        "page": 53,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "d0af37a1a929eb25ab1c19e496b021e0da4c393f33bbf66dbf96702d659fed4a"
+      },
+      {
+        "page": 54,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "502483b484d93cc7b51cc738b63eecb85fe583962b4ab3e72f538f631fc6d4b6"
+      },
+      {
+        "page": 55,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "bd0e37739a7b88c6a53969d086e8735031cef514c2ce21e9a5afc0da29e4e6b3"
+      },
+      {
+        "page": 56,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "60ade1d2096591ed191bfe7010de2792d4ab05ecac7c63592519c1daa83f27a7"
+      },
+      {
+        "page": 57,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "68855b6a47d1fcb156f06332359eeb0fefedadc23e432eebb6e622031f51b4dd"
+      },
+      {
+        "page": 58,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "5bc563d7b4150bb0dd1d3f88938b152ad1a50f71d2d6355919f4f39e9a6cd3bd"
+      },
+      {
+        "page": 59,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "0e42351266a8c5543cca2757f9c61e058045df7f055534694159972cdf3f8eda"
+      },
+      {
+        "page": 60,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "710ff8660ae153b95c804b0b33ec2d3ee9409e9a1c60d8c1ece412a79abe6e8f"
+      },
+      {
+        "page": 61,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "e0117f2ce126d13d37d70ce1698b6a5783e87121795a6e69c86a347d582fbce0"
+      },
+      {
+        "page": 62,
+        "same_render_as_v1_24": true,
+        "new_render_sha256": "84746064f4ccb0fe9b17819805dcc18793df15102e3583c3b6a52dd053187dc3"
+      },
+      {
+        "page": 63,
+        "same_render_as_v1_24": false,
+        "new_render_sha256": "605dc680af59f4d9d8983246284bb509b40a0392154317c72aa3a14b5321656a"
+      }
+    ],
+    "changed_pages": [
+      1,
+      63
+    ],
+    "PDF_text_unchanged_except_version": true,
+    "portable_companion_link": {
+      "page": 63,
+      "uri": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/30eb8869561dc743e7f802f9c922ee1df08f42cc/preprints/PAPER_IV/05_formalization/FORMALIZATION_COMPANION_v1.24_es.pdf",
+      "file": null,
+      "kind": 2
+    },
+    "pdf_sha256": "1a0c2cfa35bbef5a6462b6b742fa4393d534b35a50b5b9583c069bae26b6d3d3",
+    "tex_sha256": "cfec2231c2d11750c5681d37c5f41c54ce57beff08469323f329c011ae13e9d5",
+    "md_sha256": "8ff38faea57acc014b6cdf8c28a06f732e0d5583eca02501e18c7c7607d19e85",
+    "compiler_log_sha256": "eb0d8a8c1c1094782fd026e0e3f3bb497e7f7c4b09af601345d06b6cb34a6c9d"
+  }
+]
