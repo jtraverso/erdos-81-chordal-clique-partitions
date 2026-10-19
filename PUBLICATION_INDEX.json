@@ -1,30 +1,39 @@
 {
   "author": "Juan Pablo Traverso Gianini",
-  "edition": "Series with Paper IV editorial revision v1.24",
+  "edition": "Series with coordinated editorial revisions of Papers I–III",
   "works": [
     {
       "work": "PAPER_I",
-      "version": "1.3",
+      "version": "1.4",
       "path": "preprints/PAPER_I",
-      "main_stem": "PAPER_I_preprint_v1.3",
-      "collection_doi": "10.5281/zenodo.23089131",
-      "title": "Affine Profile Reduction for Fractional Triangle Packings in Split Graphs"
+      "main_stem": "PAPER_I_preprint_v1.4",
+      "collection_doi": "10.5281/zenodo.21273143",
+      "title": "Affine Profile Reduction for Fractional Triangle Packings in Split Graphs",
+      "companion_stem": "FORMALIZATION_COMPANION_v1.4",
+      "formal_source_commit": "eb335845bfa23375d5040ea31fc4f4b366346287",
+      "formal_source_freeze": "lean_v1.2_freeze"
     },
     {
       "work": "PAPER_II",
-      "version": "1.2",
+      "version": "1.3",
       "path": "preprints/PAPER_II",
-      "main_stem": "PAPER_II_preprint_v1.2",
-      "collection_doi": "10.5281/zenodo.23089131",
-      "title": "Complete-Split Extremizers for a Fractional Triangle-Cover Functional on Chordal Graphs"
+      "main_stem": "PAPER_II_preprint_v1.3",
+      "collection_doi": "10.5281/zenodo.21273143",
+      "title": "Complete-Split Extremizers for a Fractional Triangle-Cover Functional on Chordal Graphs",
+      "companion_stem": "FORMALIZATION_COMPANION_v1.3",
+      "formal_source_commit": "eb335845bfa23375d5040ea31fc4f4b366346287",
+      "formal_source_freeze": "lean_v1.2_freeze"
     },
     {
       "work": "PAPER_III",
-      "version": "1.5",
+      "version": "1.6",
       "path": "preprints/PAPER_III",
-      "main_stem": "PAPER_III_preprint_v1.5",
-      "collection_doi": "10.5281/zenodo.23089131",
-      "title": "Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing"
+      "main_stem": "PAPER_III_preprint_v1.6",
+      "collection_doi": "10.5281/zenodo.21273143",
+      "title": "Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing",
+      "companion_stem": "FORMALIZATION_COMPANION_v1.6",
+      "formal_source_commit": "eb335845bfa23375d5040ea31fc4f4b366346287",
+      "formal_source_freeze": "lean_v1.4_freeze"
     },
     {
       "work": "PAPER_IV",

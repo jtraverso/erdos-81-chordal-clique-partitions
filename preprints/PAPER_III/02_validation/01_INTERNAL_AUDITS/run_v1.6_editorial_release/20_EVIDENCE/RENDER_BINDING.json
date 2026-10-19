@@ -1,0 +1,65 @@
+[
+  {
+    "file": "01_manuscript\\PAPER_III_preprint_v1.6_en.pdf",
+    "pdf_sha256": "4922415e2d6c04a09eb5808b7d556d6b2ce4353e126f32f43dfd74a0558762d0",
+    "pages": 42,
+    "rendered_pages": 42,
+    "bounds_flags": [],
+    "visual_review": "PASS: all pages via contact sheets; selected dense and changed pages at readable resolution",
+    "reviewer": "OpenAI Codex; internal AI-assisted editorial review",
+    "contact_sheets": [
+      "contact-01.png",
+      "contact-02.png",
+      "contact-03.png",
+      "contact-04.png",
+      "contact-05.png",
+      "contact-06.png",
+      "contact-07.png"
+    ]
+  },
+  {
+    "file": "01_manuscript\\PAPER_III_preprint_v1.6_es.pdf",
+    "pdf_sha256": "3cde6723477ae255ec797979080cc17af202766bfe62ef6828ffb050d56123c6",
+    "pages": 43,
+    "rendered_pages": 43,
+    "bounds_flags": [],
+    "visual_review": "PASS: all pages via contact sheets; selected dense and changed pages at readable resolution",
+    "reviewer": "OpenAI Codex; internal AI-assisted editorial review",
+    "contact_sheets": [
+      "contact-01.png",
+      "contact-02.png",
+      "contact-03.png",
+      "contact-04.png",
+      "contact-05.png",
+      "contact-06.png",
+      "contact-07.png",
+      "contact-08.png"
+    ]
+  },
+  {
+    "file": "05_formalization\\FORMALIZATION_COMPANION_v1.6_en.pdf",
+    "pdf_sha256": "605d4c844214df361d5f5af5c0c609d176d58c5a014b5bdf6f8271b7c22e9383",
+    "pages": 8,
+    "rendered_pages": 8,
+    "bounds_flags": [],
+    "visual_review": "PASS: all pages via contact sheets; selected dense and changed pages at readable resolution",
+    "reviewer": "OpenAI Codex; internal AI-assisted editorial review",
+    "contact_sheets": [
+      "contact-01.png",
+      "contact-02.png"
+    ]
+  },
+  {
+    "file": "05_formalization\\FORMALIZATION_COMPANION_v1.6_es.pdf",
+    "pdf_sha256": "58595ce793da680de6e742f69a37f512e8f7910be8bd427509385c33a2ca3aa0",
+    "pages": 8,
+    "rendered_pages": 8,
+    "bounds_flags": [],
+    "visual_review": "PASS: all pages via contact sheets; selected dense and changed pages at readable resolution",
+    "reviewer": "OpenAI Codex; internal AI-assisted editorial review",
+    "contact_sheets": [
+      "contact-01.png",
+      "contact-02.png"
+    ]
+  }
+]

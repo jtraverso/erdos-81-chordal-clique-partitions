@@ -1,0 +1,149 @@
+# Paper II: formalización y reproducibilidad
+
+**Juan Pablo Traverso Gianini**
+
+Complemento de la edición editorial 1.3 · 19 October 2026
+
+Este documento acompaña al artículo matemático. Conserva las declaraciones formales, las precisiones de alcance y la evidencia computacional que antes figuraban en el artículo. El congelado de fuentes y su verificación registrada no cambian. No se ejecutó Lean/Lake para esta edición. Los números históricos de secciones y tablas que siguen remiten al artículo anterior; se conservan como localizadores y no se renumeran como resultados nuevos de verificación. Las referencias originales [1], [2], etc. figuran al final.
+
+[Frozen sources and historical evidence / Fuentes congeladas y evidencias históricas](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_II/05_formalization) · [Previous article / Artículo anterior](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_II/01_manuscript)
+
+### Corolario 1.2\(^{\prime}\) (asintótica afinada)
+
+**Estado de la formalización.** El freeze Paper II Lean v1.2 entregado usa Lean 4 / Mathlib v4.28.0 [5,6]. Su build principal registrado completó 8.061 jobs, y el suplemento explícito de extremizadores y defectos de copia completó 8.032 jobs. La declaración principal se llama `PaperII.theorem_1_2`; corresponde al Teorema 1.1 de este manuscrito e incluye el enunciado de existencia del maximizante que lo acompaña. El mismo freeze incluye el argmax complete-split, los conjuntos de nivel, los defectos de copia y `PaperII.AsymptoticCorollaries`. Su gate de axiomas a nivel de teorema no registra axiomas matemáticos propios del proyecto. El desarrollo formal deriva la estructura cordal usada en la demostración a partir del predicado estándar `IsChordal`; no se añade ningún axioma sobre árboles de cliques ni sobre estructura cordal. La Sección 8 registra el perímetro exacto del freeze.
+
+## 8. Reproducibilidad, verificación formal y alcance
+
+La demostración del artículo es analítica. Durante el desarrollo se usaron experimentos computacionales para buscar contraejemplos y detectar errores de transcripción, pero ningún cálculo se usa como premisa de la demostración.
+
+El ledger de cálculos acompañante registra la demostración con un nivel de granularidad menor. Enumera las definiciones, la construcción de cobertura copiada de Lema 3.1, las dos identidades de cancelación, la elevación por convexidad discreta a clases de clones, el argumento de progreso de clones, el requisito de simplicialidad en la reducción cordal, la caracterización terminal complete-split, el programa de dos variables sobre \(S_{p,q}\), el caso degenerado \(S_{2,0}\), las fórmulas para \(\Phi_\tau(S_{p,q})\) y la maximización entera final. El teorema, la cota exacta y el ensamblaje han recibido una auditoría adversarial interna. Esto registra el proceso de validación del autor y no es una afirmación de revisión externa por pares.
+
+### Verificación formal en Lean
+
+El snapshot consolidado en `PAPER_II/05_formalization/lean_v1.2_freeze` usa Lean 4 / Mathlib v4.28.0 [5,6]. El build principal registrado completó 8.061 jobs sin errores; un suplemento explícito que cubre `PaperII.Extremizer` y `PaperII.CopyDefect` completó 8.032 jobs sin errores. La declaración principal correspondiente es
+
+\[
+\texttt{PaperII.theorem\_1\_2}
+\]
+
+en el repositorio [7]. El teorema formal incluye ambos lados del resultado: la cota superior sobre todos los grafos cordales de \(n\) vértices y la existencia de un grafo complete-split que alcanza el valor.
+
+La formalización usa el predicado cordal estándar `IsChordal`. En el desarrollo, este predicado dice que todo ciclo de longitud al menos cuatro tiene una cuerda. El funcional de déficit se formaliza como
+
+\[
+\texttt{phiTau G = (|E(G)| : ℝ) - 2 · tau3star G},
+\]
+
+donde `tau3star` es el número fraccional de cobertura de triángulos del PL finito de coberturas. La familia complete-split se formaliza como `completeSplit p q`, y el valor extremo es el entero \(\lfloor(2n+1)^2/24\rfloor\).
+
+No se añade ningún axioma estructural cordal. La formalización deriva de `IsChordal` la propiedad hereditaria para subgrafos inducidos, la preservación al añadir un vértice con vecindario clique y la existencia de vértices simpliciales. La demostración escrita de Lema 5.1 usa árboles de cliques como infraestructura estándar de libro de texto; la demostración Lean usa un argumento de caracterización terminal sin árboles de cliques. Por tanto, la demostración formal no supone un axioma de árbol de cliques ni de intersección consecutiva.
+
+El desarrollo comprobado cubre la desigualdad de cobertura copiada, la convexidad discreta de clases de clones, el progreso de las clases de clones, la copia que preserva la cordalidad, la caracterización terminal complete-split, el promedio por órbitas sobre \(S_{p,q}\), el programa lineal terminal y la maximización entera exacta. El log del freeze registra 49 advertencias del linter, principalmente variables de sección y argumentos `simp` no utilizados; ninguna afecta la elaboración por el kernel. El informe de axiomas registrado es
+
+```text
+#print axioms PaperII.theorem_1_2
+[propext, Classical.choice, Quot.sound]
+```
+
+Estos son los axiomas clásicos estándar de Lean. El informe no contiene `sorryAx` ni axiomas propios del proyecto. El archivo de fuentes congelado es `PAPER_II_lean_v1.2_freeze.zip`, con SHA-256 `ee2d05cc40d943ca92f8f7bf3e5dd83c2692518ddea5e2ca4f7686ccb1ac3895`. Los logs principal y suplementario se almacenan como `gate_logs/BUILD_LOG.txt` y `gate_logs/BUILD_SUPPLEMENT_EXTREMIZER_COPYDEFECT.txt` dentro de `lean_v1.2_freeze`. Los módulos de contribución sobre grafos cordales entregados en el mismo archivo son candidatos para su incorporación upstream a Mathlib y no constituyen supuestos adicionales de la demostración de este artículo. El archivo congelado superó una reproducción independiente en clean room; la auditoría externa registró un build exitoso de 8.063 jobs y las 16 superficies de axiomas esperadas.
+
+**Tabla 4. Perímetro de la formalización congelada (Lean v1.2).** El freeze entregado contiene el teorema principal y las declaraciones del manuscrito que se enumeran a continuación; la reproducción independiente en clean room obtuvo PASS.
+
+| Nodo | Enunciado | Huella axiomática |
+|---|---|---|
+| `PaperII.theorem_1_2` | \(\max_{\text{cordal},\,|V|=n}\Phi_\tau=\lfloor(2n+1)^2/24\rfloor\), alcanzado por un grafo complete-split | `propext`, `Classical.choice`, `Quot.sound` |
+| `Fsat_argmax_unique`, `Fsat_argmax_tie` | unicidad del entero maximizante \(p\) dentro de la familia complete-split y empate entre dos valores cuando \(n\equiv1\pmod3\) | `propext`, `Classical.choice`, `Quot.sound` |
+| `level_set_iff` (Cor. 7.2) | equivalencia exacta para los conjuntos de nivel desde el máximo continuo | `propext`, `Classical.choice`, `Quot.sound` |
+| `copyDefect_nonneg`, `copyGamma_ge_half_copyDefect` | defecto de copia \(\Delta_{\Phi_\tau}\ge0\) y \(\Gamma_{\Phi_\tau}\ge\Delta_{\Phi_\tau}/2\) | `propext`, `Classical.choice`, `Quot.sound` |
+
+**Tabla 5. Superficie aritmética incluida en el freeze Lean v1.2.** Estas declaraciones son consecuencias del valor extremal congelado y están incluidas en el archivo entregado.
+
+| Nodo | Enunciado | Huella axiomática |
+|---|---|---|
+| `phiTau_max_sandwich` (Cor. 1.2\(^{\prime}\)) | para todo \(n\in\mathbb Z\), \(4n^2+4n-23<24\lfloor(2n+1)^2/24\rfloor\le4n^2+4n+1\) | `propext`, `Classical.choice`, `Quot.sound` |
+| `odd_sq_emod_24`, `phiTau_max_closed` (Cor. 7.3) | \((2n+1)^2\equiv1\) o \(9\pmod{24}\), y la fórmula resultante por clases de residuos para el extremo | `propext`, `Classical.choice`, `Quot.sound` |
+| `phiTau_max_le_paperI_bound` | \(\lfloor(2n+1)^2/24\rfloor\le n^2/6+n/2\) para \(n\ge1\) (comparación con Paper I) | `propext`, `Quot.sound` |
+
+Las cuatro declaraciones de la Tabla 5 se reúnen en `PaperII/AsymptoticCorollaries.lean`, que compila con el mismo toolchain (Lean 4 / Mathlib v4.28.0) y usa únicamente los axiomas clásicos estándar de Lean, sin `sorryAx` ni axiomas propios del proyecto. Los informes `#print axioms` de cada declaración están archivados en `PaperII/AxiomCheckCorollaries.lean`. El módulo no añade hipótesis ni modifica el desarrollo principal congelado; cada declaración se deriva del valor cerrado mediante `ring`, una partición finita por residuos y `omega`.
+
+### Verificación computacional independiente
+
+Además de la demostración analítica y del desarrollo Lean, scripts suplementarios recalcularon las afirmaciones principales desde primeros principios. Estos scripts evaluaron \(\tau_3^*\) mediante programación lineal exacta, comprobaron por separado el PL dual de empaquetamiento fraccional como prueba de consistencia, realizaron la optimización entera con aritmética racional exacta y usaron enumeración exhaustiva cuando fue posible. El informe de auditoría suministrado no registra discrepancias.
+
+Las comprobaciones reportadas incluyen:
+
+- la desigualdad de copia de vértices y sus dos identidades de cancelación sobre todos los grafos no isomorfos de hasta \(7\) vértices y todos los pares no adyacentes;
+- convexidad discreta, progreso de clases de clones sin divisiones y preservación de la cordalidad, incluida una prueba sobre \(C_4\) que muestra por qué es necesaria la hipótesis de simplicialidad;
+- la caracterización terminal sobre todos los grafos cordales de hasta \(7\) vértices;
+- las fórmulas complete-split de Proposición 6.2 y Corolario 6.3 comparadas con el PL completo en el rango ensayado;
+- la identidad \(\max_{p+q=n}\Phi_\tau(S_{p,q})=\lfloor(2n+1)^2/24\rfloor\) para \(1\le n\le2000\);
+- el máximo global sobre grafos cordales, exhaustivamente para \(n\le7\), con pruebas aleatorias adicionales para \(8\le n\le12\).
+
+Los scripts de auditoría, los informes y los manifests SHA-256 acompañan al preprint. Corroboran la demostración y ayudan a hacer reproducible el release; no sustituyen la demostración.
+
+### Alcance
+
+El resultado probado aquí es el extremo finito exacto del funcional fraccional \(\Phi_\tau\). No es un teorema de partición en cliques y no usa empaquetamiento integral de triángulos. Dentro del programa Erdős Problem #81, el papel de este artículo es identificar la familia terminal complete-split y el valor fraccional exacto.
+
+---
+
+### Corolario 7.3 (fórmula por clases de residuos)
+
+Así, el valor extremal es uno de estos dos enteros según la clase de \(n\) módulo \(3\). Esto hace explícito el hecho sobre cuadrados impares módulo \(24\) usado en el análisis por casos de la Proposición 7.1. La misma clase residual \(n\equiv1\pmod3\) es precisamente el caso de empate entre dos valores registrado por `Fsat_argmax_tie`. El hecho residual está formalizado como `PaperII.odd_sq_emod_24` y la forma cerrada como `PaperII.phiTau_max_closed` (huella axiomática `propext`, `Classical.choice`, `Quot.sound`).
+
+### Lema 5.1
+
+*La formalización Lean acompañante prueba este lema mediante un argumento equivalente que no usa árboles de cliques — por eliminación simplicial y el hecho de que todo separador minimal de vértices de un grafo cordal es una clique — en lugar de la demostración mediante árboles de cliques dada abajo; véase §8. El enunciado probado es idéntico.*
+
+### Teorema 1.1
+
+donde \(p\) es un entero más próximo a \((2n+1)/6\). Entre los grafos complete-split \(S_{p,n-p}\), el entero maximizante \(p\) es único salvo cuando \(n\equiv1\pmod3\); en ese caso, exactamente dos valores consecutivos de \(p\) alcanzan el máximo. Véanse el análisis por casos en la demostración de la Proposición 7.1 y las declaraciones formalizadas `Fsat_argmax_unique` y `Fsat_argmax_tie`. No se afirma unicidad alguna para extremizadores cordales arbitrarios.
+
+### Corolario 1.2\(^{\prime}\) (asintótica afinada)
+
+Una vez extraído el término lineal explícito \(n/6\), el error restante queda acotado: se tiene \(M(n)=n^2/6+n/6+\theta_n\), con \(\theta_n\in(-1,\,1/24]\). Esto se sigue de inmediato de \(24\,M(n)\le(2n+1)^2<24\,M(n)+24\) y \((2n+1)^2=4n^2+4n+1\). Está formalizado para \(n:\mathbb Z\), sin hipótesis de cota inferior, como `PaperII.phiTau_max_sandwich` (huella axiomática `propext`, `Classical.choice`, `Quot.sound`).
+
+### Observación (coherencia con la cota de Paper I)
+
+donde el lado derecho es la estimación finita \(|E(G)|-2\nu_3^*(G)\le n^2/6+n/2\) de Paper I [4]. Esta comparación es numérica y no una consecuencia de la inclusión de clases, pues la clase cordal es mayor que la clase split. La holgura es \(\bigl(n^2/6+n/2\bigr)-M(n)=n/3+O(1)\). La desigualdad está formalizada como `PaperII.phiTau_max_le_paperI_bound` (huella axiomática `propext`, `Quot.sound`).
+
+### Definición (defecto de copia)
+
+Para \(u,v\) no adyacentes, definamos
+\[
+\begin{aligned}
+\Delta_{\Phi_\tau}(u,v)
+&=\Phi_\tau(G_{v\to u})+\Phi_\tau(G_{u\to v})-2\Phi_\tau(G)\ge0
+\quad(\text{Lema 3.1}),\\
+\Gamma_{\Phi_\tau}(u,v)
+&=\max\{\Phi_\tau(G_{v\to u}),\Phi_\tau(G_{u\to v})\}-\Phi_\tau(G).
+\end{aligned}
+\]
+Entonces \(\Gamma_{\Phi_\tau}\ge\Delta_{\Phi_\tau}/2\), formalizado como `copyDefect_nonneg` y `copyGamma_ge_half_copyDefect`. La cantidad \(\Delta_{\Phi_\tau}\) es el recurso que deberá controlar cualquier enunciado futuro de estabilidad; aquí se registra como una herramienta cuantitativa, no como un teorema de estabilidad.
+
+### Corolario 7.2 (conjuntos de nivel del funcional de cobertura)
+
+Escribamos \(M=2n+1\). Para \(p\) en la rama saturada \(q\ge p-1\) y todo \(\delta\ge0\),
+\[
+\Phi_\tau(S_{p,q})\ \ge\ \frac{M^2}{24}-\delta\qquad\Longleftrightarrow\qquad \Big|p-\frac{M}{6}\Big|\ \le\ \sqrt{\frac{2\delta}{3}},
+\]
+donde \(\delta\) se mide desde el máximo continuo \(M^2/24\). Es una equivalencia exacta, obtenida de la identidad (7.1) por monotonía del cuadrado, y está formalizada como `level_set_iff`. En particular, \(\Phi_\tau\) no es plana en ninguna dirección de \(p\), y sus conjuntos de nivel son intervalos de radio \(\sqrt{2\delta/3}\); dentro de la familia complete-split, esto resuelve la segunda mitad de la pregunta de estabilidad planteada en Paper III, §12.4.
+
+
+## Referencias
+
+[1] P. Erdős, E. T. Ordman, and Y. Zalcstein, “Clique partitions of chordal graphs,” *Combinatorics, Probability and Computing* **2** (1993), no. 4, 409–415.
+
+[2] M. C. Golumbic, *Algorithmic Graph Theory and Perfect Graphs*, second edition, Annals of Discrete Mathematics 57, Elsevier, Amsterdam, 2004.
+
+[3] J. R. S. Blair and B. Peyton, “An introduction to chordal graphs and clique trees,” in *Graph Theory and Sparse Matrix Computation*, IMA Volumes in Mathematics and its Applications 56, Springer, New York, 1993, pp. 1–29.
+
+[4] J. P. Traverso Gianini, “Reducción afín de perfiles para empaquetamientos fraccionales de triángulos en grafos split” (Paper I de la serie), preprint, julio de 2026.
+
+[5] L. de Moura and S. Ullrich, “The Lean 4 Theorem Prover and Programming Language,” in *Automated Deduction – CADE 28*, Lecture Notes in Computer Science **12699**, Springer, 2021, pp. 625–635, https://doi.org/10.1007/978-3-030-79876-5_37.
+
+[6] The mathlib Community, “The Lean Mathematical Library,” in *Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020)*, ACM, 2020, pp. 367–381, https://doi.org/10.1145/3372885.3373824.
+
+[7] J. P. Traverso Gianini, *Erdős #81 Chordal Clique Partitions: Public Preprints and Formalization Artifacts*, public project repository, 2026, https://github.com/jtraverso/erdos-81-chordal-clique-partitions, accessed July 7, 2026.
+
+[8] T. F. Bloom, “Erdős Problem #81,” *Erdős Problems*, https://www.erdosproblems.com/81, accessed July 6, 2026.

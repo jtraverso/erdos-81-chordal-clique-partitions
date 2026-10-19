@@ -1,45 +1,37 @@
-# Paper I — Preprint v1.3
+# Paper I — Preprint v1.4
 
-**Affine Profile Reduction for Fractional Triangle Packings in Split Graphs**  
-Juan Pablo Traverso Gianini · 22 August 2026
+**Affine Profile Reduction for Fractional Triangle Packings in Split Graphs**
 
-| Language | Manuscript | Typesetting source | Semantic source | Formal sources |
-|---|---|---|---|---|
-| EN | [PDF](01_manuscript/PAPER_I_preprint_v1.3_en.pdf) | [TeX](01_manuscript/PAPER_I_preprint_v1.3_en.tex) | [Markdown](01_manuscript/PAPER_I_preprint_v1.3.md) | [Lean and evidence](05_formalization/) |
-| ES | [PDF](01_manuscript/PAPER_I_preprint_v1.3_es.pdf) | [TeX](01_manuscript/PAPER_I_preprint_v1.3_es.tex) | [Markdown](01_manuscript/PAPER_I_preprint_v1.3_es.md) | [Lean and evidence](05_formalization/) |
+Juan Pablo Traverso Gianini · 19 October 2026
 
 The paper reduces a fractional triangle-packing problem on a split graph to pure neighborhood profiles and a three-variable linear program. Its finite consequence is `|E(G)| − 2ν₃*(G) ≤ n²/6 + n/2`.
 
 El artículo reduce un problema de empaquetamiento fraccional de triángulos en un grafo split a perfiles puros de vecindario y un programa lineal de tres variables. Obtiene la cota finita `|E(G)| − 2ν₃*(G) ≤ n²/6 + n/2`.
 
+## Read / Leer
+
+| Language | Document | Typesetting source | Semantic source |
+|---|---|---|---|
+| EN | [Article PDF](01_manuscript/PAPER_I_preprint_v1.4_en.pdf) | [TeX](01_manuscript/PAPER_I_preprint_v1.4_en.tex) | [Markdown](01_manuscript/PAPER_I_preprint_v1.4_en.md) |
+| ES | [Article PDF](01_manuscript/PAPER_I_preprint_v1.4_es.pdf) | [TeX](01_manuscript/PAPER_I_preprint_v1.4_es.tex) | [Markdown](01_manuscript/PAPER_I_preprint_v1.4_es.md) |
+| EN | [Formal companion PDF](05_formalization/FORMALIZATION_COMPANION_v1.4_en.pdf) | [TeX](05_formalization/FORMALIZATION_COMPANION_v1.4_en.tex) | [Markdown](05_formalization/FORMALIZATION_COMPANION_v1.4_en.md) |
+| ES | [Formal companion PDF](05_formalization/FORMALIZATION_COMPANION_v1.4_es.pdf) | [TeX](05_formalization/FORMALIZATION_COMPANION_v1.4_es.tex) | [Markdown](05_formalization/FORMALIZATION_COMPANION_v1.4_es.md) |
+
 ## Place in the series / Lugar en la serie
 
-This is a fractional result. Paper II studies the exact chordal fractional extremum, while Paper III constructs integral split-graph partitions. Their sharper conclusions do not require the numerical bound of Paper I; the affine reduction is a reusable method.
+Papers I–II study fractional profiles and extremizers; III gives an integral split-graph construction; IV establishes chordal bounds and structural stability. V develops the general transfer framework, and VI studies exact local clique partitions. The proof inputs of this paper are unchanged. The numerical estimate is preserved; the affine-profile reduction remains the methodological focus. The finite-duality proof and all orbit boundary cases remain in the article.
 
-The manuscripts retain their original publication context. References in them to the full chordal problem as open describe that earlier stage; [Paper IV](../PAPER_IV/README.md) contains the subsequent bound and structural results. The manuscript and Lean versions of this paper have not changed in the present navigation update.
+La edición actual conserva los resultados y las pruebas, actualiza las relaciones con los artículos posteriores y separa la documentación formal. El artículo matemático y el complemento están disponibles en ambos idiomas.
 
-Los manuscritos conservan su contexto de publicación original. Las menciones al problema cordal completo como abierto corresponden a esa etapa; [Paper IV](../PAPER_IV/README.md) contiene la cota posterior y los resultados estructurales. Esta actualización del README no modifica el manuscrito ni sus fuentes Lean.
+## Verification, history and citation / Verificación e historia
 
-## Reading and verification / Lectura y verificación
+- [Editorial changelog](CHANGELOG_v1.4.md) and [new internal audit with evidence](02_validation/01_INTERNAL_AUDITS/run_v1.4_editorial_release/10_REPORT/FINAL_INTERNAL_AUDIT_REPORT.md).
+- [Unchanged Lean freeze and original verification](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_I/05_formalization): `lean_v1.2_freeze`. **No Lean/Lake rebuild for this editorial edition.**
+- [Previous v1.3 article](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_I/01_manuscript) and [previous package guide](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_I/README.md). Historical evidence keeps its original scope.
+- [Document reproduction](03_reproducibility/editorial_v1.4/README.md) · [Integrity](04_integrity/EDITORIAL_v1.4/README.md) · [HTML guide](index.html).
+- [Historical four-level explanation](PaperI_explained_4_levels.html). Its original publication context is retained; use the current article for updated series references.
+- [Series concept DOI](https://doi.org/10.5281/zenodo.21273143) · [Citation](CITATION.cff).
 
-- [Bilingual explanation at four levels](PaperI_explained_4_levels.html).
-- [Recorded final external AI-audit report](02_validation/02_IA_ADVERSARIAL_AUDITS/run_2026-08-21_v1.3_pkgfix/30_REPORT/FINAL_AUDIT_REPORT.md).
-- [Formal source package and its recorded evidence](05_formalization/).
-- [Reproduction records](03_reproducibility/) · [Integrity manifests](04_integrity/).
-- [Previous README, including the full release and audit history](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_I/README.md).
-- [Papers I–III deposited edition](https://doi.org/10.5281/zenodo.22064657) · [Series concept DOI](https://doi.org/10.5281/zenodo.21273143).
+The new review is an AI-assisted internal editorial audit, not independent human peer review, a new Lean build or a new novelty determination. Documents: CC BY-NC 4.0. Existing code, dependency and repository-level license grants remain applicable; see [the series license](../../LICENSE.md).
 
-The recorded AI-assisted audits are distinct from human peer review. Their scope, build targets and axiom checks are documented in the linked evidence. This README update does not perform a new Lean build or assert a new determination of historical priority.
-
-Las auditorías asistidas por IA se distinguen de la revisión humana por pares. Su alcance, compilaciones y comprobaciones de axiomas figuran en las evidencias enlazadas. Esta actualización no ejecuta Lean ni formula una nueva reclamación de prioridad.
-
-## Package / Estructura
-
-`01_manuscript/`: published English and Spanish manuscripts, figures and hashes.  
-`02_validation/`: internal and external AI-audit reports.  
-`03_reproducibility/`: reproduction instructions and recorded builds.  
-`04_integrity/`: original release manifests and provenance.  
-`05_formalization/`: unchanged frozen Lean sources and verification evidence.  
-`superseded/`: historical packages, with their original status retained.
-
-Documents: CC BY-NC 4.0. Existing source and dependency licenses remain applicable; see the [series license](../../LICENSE.md). This navigation revision does not relicense any material.
+[Series overview](../../README.md)

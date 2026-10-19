@@ -1,0 +1,9 @@
+note: Running TeX ...
+note: Running xdvipdfmx ...
+note: Writing `PAPER_III_preprint_v1.6_en.aux` (31.689453125 KiB)
+note: Writing `PAPER_III_preprint_v1.6_en.pdf` (399.3134765625 KiB)
+note: Writing `PAPER_III_preprint_v1.6_en.log` (26.2978515625 KiB)
+
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: PAPER_III_preprint_v1.6_en.tex:2438: Underfull \hbox (badness 1014) in paragraph at lines 2430--2438
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

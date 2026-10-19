@@ -1,0 +1,316 @@
+\documentclass[english,11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+\newfontfamily\LeanSymbols{seguisym.ttf}[Path=typeset_runtime/]
+\newlength{\LeanCharWidth}
+\usepackage{amsmath,amssymb}
+\usepackage[english]{babel}
+\usepackage{microtype,parskip}
+\usepackage{graphicx,float,caption}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref,bookmark}
+\usepackage{etoolbox,needspace}
+\setcounter{secnumdepth}{-\maxdimen}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\AtBeginEnvironment{longtable}{\Needspace{8\baselineskip}\small}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{4\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\providecommand{\pandocbounded}[1]{#1}
+\hypersetup{pdftitle={Paper I: formalization and reproducibility},pdfauthor={Juan Pablo Traverso Gianini},pdflang={en-US},colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+\title{Paper I: formalization and reproducibility}
+\author{Juan Pablo Traverso Gianini\\\small Independent researcher, Santiago, Chile\\\small \href{mailto:jtraverso@gmail.com}{jtraverso@gmail.com}\\\small ORCID: 0009-0003-6068-4096}
+\date{}
+\begin{document}
+\raggedbottom
+\maketitle
+\textbf{Paper I · Formal companion v1.4}\\
+19 October 2026
+
+This document accompanies the mathematical article. It preserves the
+formal declarations, scope qualifications and computational evidence
+previously included in the article. The source freeze and its recorded
+verification are unchanged. No Lean/Lake build was run for this edition.
+Historical section and table numbers in the records below refer to the
+preceding article; they are retained as locators, not renumbered as new
+verification results. Original references {[}1{]}, {[}2{]}, etc. are
+listed at the end.
+
+\href{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_I/05_formalization}{Frozen
+sources and historical evidence / Fuentes congeladas y evidencias
+históricas} ·
+\href{https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_I/01_manuscript}{Previous
+article / Artículo anterior}
+
+\subsubsection{Theorem 1.1}\label{theorem-1.1}
+
+\textbf{Formalization status.} The Paper I Lean v1.2 freeze uses Lean 4
+/ Mathlib v4.28.0 {[}6,7{]} and records Theorem 1.1 as
+\nolinkurl{paperI_main_sharp}. The declaration \nolinkurl{paperI_main}
+supplies a weaker companion form with additive term \(n\). In these
+recorded names, \nolinkurl{sharp} refers to the quadratic coefficient
+\(1/6\), not to optimality of the additive term. The axiom gate covers
+the main theorem, \nolinkurl{PaperI.assembly_sharp},
+\nolinkurl{PaperI.Split.residual_duality}, the finite packing--covering
+duality of Proposition B.1, and the interface declarations listed in
+Section 10. Their recorded footprint is \nolinkurl{propext},
+\nolinkurl{Classical.choice}, and \nolinkurl{Quot.sound}, with no
+project-level mathematical axiom. Section 10 gives the freeze and
+archive record.
+
+\subsection{10. Reproducibility and proof
+record}\label{reproducibility-and-proof-record}
+
+The proof is analytic. Computational experiments were used during
+development to search for counterexamples and detect transcription
+errors, but no computation is a logical premise of the theorem. For that
+reason, computational regression material is kept outside the paper
+rather than included as a second appendix.
+
+The accompanying calculation ledger records:
+
+\begin{itemize}
+\tightlist
+\item
+  every exact identity;
+\item
+  every inequality direction;
+\item
+  the complete loss accounting;
+\item
+  the branch \(q=0\);
+\item
+  the orbit regimes;
+\item
+  the final conversion to \(n\).
+\end{itemize}
+
+The author reports an internal AI-assisted adversarial audit of the
+theorem statement, quantitative bound, and proof assembly. This is a
+validation record, not a claim of external peer review.
+
+\subsubsection{Formalization status in
+Lean}\label{formalization-status-in-lean}
+
+The snapshot at \nolinkurl{PAPER_I/05_formalization/lean_v1.2_freeze}
+contains the Lean sources and a successful recorded 8,034-job build
+against Lean 4 / Mathlib v4.28.0 {[}6,7{]}. It contains
+\nolinkurl{paperI_main_sharp}, whose statement is
+\text{\(\Phi\le n^2/6+n/2\)}, together with the weaker companion
+declaration \nolinkurl{paperI_main} and the interface results listed
+below. Its axiom gate also queries \nolinkurl{PaperI.assembly_sharp} and
+\nolinkurl{PaperI.Split.residual_duality}. Appendix C records the main
+declaration. The exact archive was subsequently reproduced in an
+external clean room with the same 8,034-job result and the same
+theorem-level axiom footprint.
+
+The frozen axiom report records only Lean's standard foundational
+axioms, \nolinkurl{propext}, \nolinkurl{Classical.choice}, and
+\nolinkurl{Quot.sound}, for the main theorem and the listed declarations;
+it records no project-level mathematical axiom. These are logical
+foundations used throughout Mathlib, not additional mathematical
+assumptions of the paper.
+
+The release artifact also records the finite-dimensional
+packing-covering duality used in Proposition B.1. In Lean it appears as
+\nolinkurl{residual_duality}, an application of the general theorem
+\nolinkurl{covering_packing_duality}. The artifact records that theorem
+as derived from a finite Farkas lemma and Mathlib's closed-cone
+infrastructure, rather than postulated as an external axiom. Schrijver
+{[}4, Chapter 7{]} remains the classical reference for the written
+proof.
+
+The frozen source archive is \nolinkurl{PAPER_I_lean_v1.2_freeze.zip},
+with SHA-256
+\nolinkurl{0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a}.
+It is stored under
+\nolinkurl{PAPER_I/05_formalization/lean_v1.2_freeze} and excludes
+project caches and compiled objects. The freeze build target includes
+several \nolinkurl{Contrib} modules used for possible upstreaming; that
+contribution lane is a byproduct and is not part of the paper's trusted
+mathematical assumptions. The axiom report above controls the logical
+dependency statement. The external clean-room reproduction applies to
+these exact archive bytes; the manuscript revision does not alter the
+formal artifact.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Appendix C. Formalized
+statement}\label{appendix-c.-formalized-statement}
+
+The accompanying formal artifact records the following Lean 4
+declaration for Theorem 1.1:
+
+\begin{quote}
+{\LeanSymbols\fontsize{8}{10}\selectfont
+\noindent \nolinkurl{theorem}\hspace{0.45em}\nolinkurl{paperI_main_sharp}\hspace{0.45em}\nolinkurl{(G}\hspace{0.45em}\nolinkurl{:}\hspace{0.45em}\nolinkurl{Split)}\hspace{0.45em}\nolinkurl{:}\par
+\noindent \hspace{1.8em}\nolinkurl{G.Phi}\hspace{0.45em}\nolinkurl{≤}\hspace{0.45em}\nolinkurl{(G.n}\hspace{0.45em}\nolinkurl{:}\hspace{0.45em}\nolinkurl{ℝ)}\hspace{0.45em}\nolinkurl{^}\hspace{0.45em}\nolinkurl{2}\hspace{0.45em}\nolinkurl{/}\hspace{0.45em}\nolinkurl{6}\hspace{0.45em}\nolinkurl{+}\hspace{0.45em}\nolinkurl{(G.n}\hspace{0.45em}\nolinkurl{:}\hspace{0.45em}\nolinkurl{ℝ)}\hspace{0.45em}\nolinkurl{/}\hspace{0.45em}\nolinkurl{2}\par
+\noindent \par
+\noindent \nolinkurl{--}\hspace{0.45em}\nolinkurl{weaker}\hspace{0.45em}\nolinkurl{companion}\hspace{0.45em}\nolinkurl{form}\hspace{0.45em}\nolinkurl{(larger}\hspace{0.45em}\nolinkurl{additive}\hspace{0.45em}\nolinkurl{term):}\par
+\noindent \nolinkurl{theorem}\hspace{0.45em}\nolinkurl{paperI_main}\hspace{0.45em}\nolinkurl{(G}\hspace{0.45em}\nolinkurl{:}\hspace{0.45em}\nolinkurl{Split)}\hspace{0.45em}\nolinkurl{:}\par
+\noindent \hspace{1.8em}\nolinkurl{G.Phi}\hspace{0.45em}\nolinkurl{≤}\hspace{0.45em}\nolinkurl{(G.n}\hspace{0.45em}\nolinkurl{:}\hspace{0.45em}\nolinkurl{ℝ)}\hspace{0.45em}\nolinkurl{^}\hspace{0.45em}\nolinkurl{2}\hspace{0.45em}\nolinkurl{/}\hspace{0.45em}\nolinkurl{6}\hspace{0.45em}\nolinkurl{+}\hspace{0.45em}\nolinkurl{(G.n}\hspace{0.45em}\nolinkurl{:}\hspace{0.45em}\nolinkurl{ℝ)}\par
+}
+\end{quote}
+
+Here \nolinkurl{Split} packages the data of a split graph used in the
+proof: a clique of size \nolinkurl{p}, an independent vertex type, and the
+neighborhoods of the independent vertices inside the clique. The field
+\nolinkurl{n} is the total number of vertices. The quantity \nolinkurl{Phi} is
+defined as \texttt{\textbar{}E\textbar{}\ −\ 2·nu3star}, where
+\nolinkurl{nu3star} is the supremum of the feasible fractional
+triangle-packing values. Elsewhere in the series this fractional deficit
+is written \(\Phi^*\), while the unstarred \(\Phi\) is reserved for the
+integral deficit \(|E(G)|-2\nu_3(G)\); the Lean identifier is retained
+to match the recorded declaration. With these definitions,
+\nolinkurl{paperI_main_sharp} is precisely
+
+\[
+|E(G)|-2\nu_3^*(G)\le \frac{n^2}{6}+\frac{n}{2},
+\]
+
+the inequality stated in Theorem 1.1 (declaration
+\nolinkurl{paperI_main_sharp}). The companion declaration
+\nolinkurl{paperI_main} records the weaker additive term \(n\).
+
+The supplied build report records zero \nolinkurl{sorry}. The supplied
+axiom report is:
+
+\begin{quote}
+{\LeanSymbols\fontsize{8}{10}\selectfont
+\noindent \nolinkurl{PaperI.Split.paperI_main_sharp}\hspace{0.45em}\nolinkurl{depends}\hspace{0.45em}\nolinkurl{on}\hspace{0.45em}\nolinkurl{axioms:}\hspace{0.45em}\nolinkurl{[propext,}\hspace{0.45em}\nolinkurl{Classical.choice,}\hspace{0.45em}\nolinkurl{Quot.sound]}\par
+\noindent \nolinkurl{PaperI.paperI_main}\hspace{4.05em}\nolinkurl{depends}\hspace{0.45em}\nolinkurl{on}\hspace{0.45em}\nolinkurl{axioms:}\hspace{0.45em}\nolinkurl{[propext,}\hspace{0.45em}\nolinkurl{Classical.choice,}\hspace{0.45em}\nolinkurl{Quot.sound]}\par
+\noindent \nolinkurl{PaperI.assembly_sharp}\hspace{2.7em}\nolinkurl{depends}\hspace{0.45em}\nolinkurl{on}\hspace{0.45em}\nolinkurl{axioms:}\hspace{0.45em}\nolinkurl{[propext,}\hspace{0.45em}\nolinkurl{Classical.choice,}\hspace{0.45em}\nolinkurl{Quot.sound]}\par
+\noindent \nolinkurl{PaperI.Split.residual_duality}\hspace{0.45em}\nolinkurl{depends}\hspace{0.45em}\nolinkurl{on}\hspace{0.45em}\nolinkurl{axioms:}\hspace{0.45em}\nolinkurl{[propext,}\hspace{0.45em}\nolinkurl{Classical.choice,}\hspace{0.45em}\nolinkurl{Quot.sound]}\par
+}
+\end{quote}
+
+These are the three standard foundational axioms of Lean and Mathlib. No
+project-specific axiom is used.
+
+\textbf{Table 2. Frozen formalization perimeter (Lean v1.2 freeze).} The
+frozen Lean 4 / Mathlib v4.28.0 snapshot records the proved core with
+only Lean's standard foundational axioms and no project-level
+mathematical axiom. An external clean-room build and theorem-level axiom
+check reproduced the exact archive.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Node
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Statement
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Axiom footprint
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\nolinkurl{paperI_main_sharp} (Theorem 1.1) &
+\(\lvert E(G)\rvert-2\nu_3^*(G)\le n^2/6+n/2\) & \nolinkurl{propext},
+\nolinkurl{Classical.choice}, \nolinkurl{Quot.sound} \\
+\nolinkurl{paperI_main} (weaker companion bound) &
+\(\lvert E(G)\rvert-2\nu_3^*(G)\le n^2/6+n\) & \nolinkurl{propext},
+\nolinkurl{Classical.choice}, \nolinkurl{Quot.sound} \\
+\nolinkurl{lpVal_concave}, \nolinkurl{lpVal_ge_min} (§5 interface) &
+abstract concavity / pure-profile lower bound & \nolinkurl{propext},
+\nolinkurl{Classical.choice}, \nolinkurl{Quot.sound} \\
+\nolinkurl{lpVal_lipschitz} (§5 interface) & parametric stability of the
+fractional value & \nolinkurl{propext}, \nolinkurl{Classical.choice},
+\nolinkurl{Quot.sound} \\
+\nolinkurl{residual_duality} (Prop. B.1) & finite packing--covering
+duality & \nolinkurl{propext}, \nolinkurl{Classical.choice},
+\nolinkurl{Quot.sound} \\
+\end{longtable}
+}
+
+\subsubsection{Proposition B.1}\label{proposition-b.1}
+
+\textbf{Formalization note.} The v1.2 freeze records Proposition B.1 as
+the Lean declaration \nolinkurl{PaperI.Split.residual_duality}, an
+instance of the general finite strong-duality theorem
+\nolinkurl{covering_packing_duality}. The artifact records the latter as
+proved from a finite Farkas lemma, using the closedness of a finitely
+generated convex cone and the hyperplane-separation theorem for closed
+convex cones. Thus the duality used here is derived inside the formal
+development, not postulated as a project-specific axiom. Schrijver
+remains the classical reference for the written argument. The
+corresponding sources, build log, and axiom report are delivered in
+\nolinkurl{PAPER_I/05_formalization/lean_v1.2_freeze}.
+
+\subsubsection{1. Introduction}\label{introduction}
+
+\textbf{Series notation.} In cross-paper discussion, the fractional
+deficit of Paper I is written \(\Phi^*(G)=|E(G)|-2\nu_3^*(G)\). Paper II
+writes the same quantity as \(\Phi_\tau(G)=|E(G)|-2\tau_3^*(G)\), while
+Paper III reserves the unstarred \(\Phi(G)\) for the integral deficit
+\(|E(G)|-2\nu_3(G)\). The Lean identifier \nolinkurl{Phi} in the Paper I
+artifact is retained for traceability.
+
+\subsubsection{Remark (fixed-polytope
+concavity)}\label{remark-fixed-polytope-concavity}
+
+The reduction just used is an instance of a purely convex-analytic fact,
+stated here in abstract form. Fix a feasible polytope that does not
+depend on the profile and an objective that depends affinely on the
+profile mass \(\mu=(\mu_S)\). Because the optimal value of a linear
+program over a fixed polytope is concave in its objective vector, the
+value at a mixed profile dominates the corresponding convex combination
+of pure-profile values, and hence their minimum: \[
+M_b(\kappa_\mu)\ \ge\ \sum_S \tfrac{\mu_S}{q}\,M_b(\kappa^{S,q})\ \ge\ \min_S M_b(\kappa^{S,q}).
+\] This is recorded in the formal development as \nolinkurl{lpVal_concave}
+and \nolinkurl{lpVal_ge_min}. A companion estimate,
+\nolinkurl{lpVal_lipschitz}, bounds the change in the fractional value
+when the baseline or the profile distribution is perturbed. It is
+intended for robust and near-split variants. Both are stated for a fixed
+feasible polytope with an affinely varying objective; neither requires
+symmetry, which enters only afterwards, on a single pure profile, in
+Section 6.
+
+\subsection{References}\label{references}
+
+{[}1{]} P. Erdős, E. T. Ordman, and Y. Zalcstein, ``Clique partitions of
+chordal graphs,'' \emph{Combinatorics, Probability and Computing}
+\textbf{2} (1993), no. 4, 409--415.
+
+{[}2{]} G.-T. Chen, P. Erdős, and E. T. Ordman, ``Clique partitions of
+split graphs,'' in \emph{Combinatorics, Graph Theory, Algorithms and
+Applications} (Beijing, 1993), World Scientific, 1994, pp.~21--30,
+author-hosted scan:
+\url{https://ordman.net/MathResearch/CEOClique_Parts.pdf}, accessed
+August 21, 2026.
+
+{[}3{]} T. F. Bloom, ``Erdős Problem \#81,'' \emph{Erdős Problems},
+\url{https://www.erdosproblems.com/81}, accessed August 21, 2026.
+
+{[}4{]} A. Schrijver, \emph{Theory of Linear and Integer Programming},
+Wiley-Interscience Series in Discrete Mathematics and Optimization, John
+Wiley \& Sons, Chichester, 1986.
+
+{[}5{]} M. S. Cavers, \emph{Clique Partitions and Coverings of Graphs},
+M.Math. essay, University of Waterloo, 2005.
+
+{[}6{]} L. de Moura and S. Ullrich, ``The Lean 4 Theorem Prover and
+Programming Language,'' in \emph{Automated Deduction -- CADE 28},
+Lecture Notes in Computer Science \textbf{12699}, Springer, 2021,
+pp.~625--635, \url{https://doi.org/10.1007/978-3-030-79876-5_37}.
+
+{[}7{]} The mathlib Community, ``The Lean Mathematical Library,'' in
+\emph{Proceedings of the 9th ACM SIGPLAN International Conference on
+Certified Programs and Proofs (CPP 2020)}, ACM, 2020, pp.~367--381,
+\url{https://doi.org/10.1145/3372885.3373824}.
+
+\end{document}

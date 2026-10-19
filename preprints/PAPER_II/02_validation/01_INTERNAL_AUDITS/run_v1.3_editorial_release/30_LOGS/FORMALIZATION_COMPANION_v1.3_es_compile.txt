@@ -1,0 +1,7 @@
+note: Running TeX ...
+note: Running xdvipdfmx ...
+note: Writing `FORMALIZATION_COMPANION_v1.3_es.pdf` (77.0244140625 KiB)
+note: Writing `FORMALIZATION_COMPANION_v1.3_es.aux` (3.94140625 KiB)
+note: Writing `FORMALIZATION_COMPANION_v1.3_es.log` (26.318359375 KiB)
+
+Fontconfig error: Cannot load default config file: No such file: (null)

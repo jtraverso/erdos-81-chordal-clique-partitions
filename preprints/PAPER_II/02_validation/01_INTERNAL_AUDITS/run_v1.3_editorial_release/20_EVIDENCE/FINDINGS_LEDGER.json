@@ -1,0 +1,32 @@
+[
+  {
+    "id": "E01",
+    "finding": "Series roles of IV and V and obsolete chordal-open framing",
+    "resolution": "Updated context with references; no new proof inputs",
+    "status": "CLOSED"
+  },
+  {
+    "id": "E02",
+    "finding": "Formal records interrupt mathematical exposition",
+    "resolution": "Relocated records with historical locators and scope preserved; mathematical appendices retained",
+    "status": "CLOSED"
+  },
+  {
+    "id": "T01",
+    "finding": "Sentence punctuation inside boxed expressions",
+    "resolution": "Punctuation moved outside boxes; expression and labels compared",
+    "status": "CLOSED"
+  },
+  {
+    "id": "T02",
+    "finding": "Code whitespace, Unicode and long link rendering",
+    "resolution": "Unicode resource reused; code spaces retained explicitly; final logs and rendered pages checked",
+    "status": "CLOSED"
+  },
+  {
+    "id": "T03",
+    "finding": "Figure 3 width attribute rendered literally with duplicated caption",
+    "resolution": "Conversion consumes attribute and uses one caption; final page 19 EN/ES checked",
+    "status": "CLOSED"
+  }
+]

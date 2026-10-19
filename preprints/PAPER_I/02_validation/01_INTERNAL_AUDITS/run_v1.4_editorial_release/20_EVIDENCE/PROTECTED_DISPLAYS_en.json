@@ -1,0 +1,572 @@
+[
+  {
+    "id": "en-display-1",
+    "sha256": "2043d60090bf905a7c7a8d61ca667ca9d55dfea5384648e7f00c8510cee550fb",
+    "content": "\n\\boxed{\n|E(G)|-2\\nu_3^*(G)\\le \\frac{n^2}{6}+\\frac{n}{2},\n}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-2",
+    "sha256": "172a6717824845cc203e7c6c949b30ac02973a6a73322ede979500c5250a0715",
+    "content": "\n\\begin{aligned}\n\\text{explicit packing}\n&\\longrightarrow\n\\text{fixed residual polytope}\\\\\n&\\longrightarrow\n\\text{affine profile reduction}\\\\\n&\\longrightarrow\n\\text{three-orbit optimization}\n\\end{aligned}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-3",
+    "sha256": "120ddc6927ed9ceecc93c1f84692b5f7e11c2634ffaf96b480f711fd7efd0724",
+    "content": "\n|E(G)|-2\\nu_3^*(G)\n\\le\n\\frac{n^2}{6}+\\frac{n}{2}.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-4",
+    "sha256": "63b24caef22e6f02de4c3005ef9105646cc38eef53e767eb0933be3b9e7a0395",
+    "content": "\nV(G)=K\\sqcup I,\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-5",
+    "sha256": "e82c3e5c33d2aa0f7c1da6539c2fdab0daed8185a2a2c0f41ae9ca339a8fa106",
+    "content": "\np:=|K|.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-6",
+    "sha256": "54c02a65ee1874a940d0cdacb729fab9ea358cdf718d3046165ce1ea8dfd9226",
+    "content": "\nd_v:=|N(v)|.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-7",
+    "sha256": "c7a2c11487c264a3388d064147b1ff8acef077062e73789b4eb18d277deef6e6",
+    "content": "\nI_{\\ge2}:=\\{v\\in I:d_v\\ge2\\},\n\\qquad\nI_1:=\\{v\\in I:d_v=1\\},\n\\qquad\nI_0:=\\{v\\in I:d_v=0\\}.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-8",
+    "sha256": "f7915bd94e4aa9d4a11f13adf25f3cf3476fa30489390f1a30ed80501fd9986f",
+    "content": "\nq:=|I_{\\ge2}|,\n\\qquad\nb_1:=|I_1|,\n\\qquad\nb_{\\ge2}:=\\sum_{v\\in I_{\\ge2}}d_v.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-9",
+    "sha256": "2b6ad9ccd2c0076e0cfd5e0bce64d89de1fc19d87dc1c9e93cace0a17849f503",
+    "content": "\n|E(G)|\n=\n\\binom{p}{2}+b_{\\ge2}+b_1.\n\\tag{2.1}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-10",
+    "sha256": "daf9af8121edf74bab4c5ae8ba45ff6045ea74ca6e1de402571f88c438fd5096",
+    "content": "\nn=p+q+b_1+|I_0|.\n\\tag{2.2}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-11",
+    "sha256": "187bdb0f37c951a4cb4831b1ca478ab5047b9da0250f99ca47082f522fd76d94",
+    "content": "\n\\kappa_e\n:=\n\\sum_{\\substack{v\\in I_{\\ge2}\\\\ e\\subseteq N(v)}}\n\\frac{1}{d_v-1}.\n\\tag{3.1}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-12",
+    "sha256": "e33b9b414a9c0cd541e34200ea0a5801e4d402190f2aaa81015fe88bf95df08d",
+    "content": "\n\\sum_{e\\in E(K)}\\kappa_e\n=\n\\frac{b_{\\ge2}}2.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-13",
+    "sha256": "2c2d11b28197cc34bdb671fe63374dc0e49d8ba3ecc540a449f162fb833f3999",
+    "content": "\n\\begin{aligned}\n\\sum_{e\\in E(K)}\\kappa_e\n&=\n\\sum_{v\\in I_{\\ge2}}\n\\frac{\\binom{d_v}{2}}{d_v-1}\\\\\n&=\n\\frac12\n\\sum_{v\\in I_{\\ge2}}d_v\\\\\n&=\n\\frac{b_{\\ge2}}2.\n\\end{aligned}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-14",
+    "sha256": "3c15c78c11eeb86ece512a828ee9b984e6bb01862d858840bcfdae72f42a1e10",
+    "content": "\n\\lambda_e\n:=\n\\begin{cases}\n1,&\\kappa_e=0,\\\\[1mm]\n\\min\\{1,\\kappa_e^{-1}\\},&\\kappa_e>0.\n\\end{cases}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-15",
+    "sha256": "bf9a1485150ec6f17bcc7d6dd46645a3b0eddb238da22fc1c7532fb07aa1d836",
+    "content": "\nw_1(vxy)\n:=\n\\frac{\\lambda_{xy}}{d_v-1}.\n\\tag{4.1}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-16",
+    "sha256": "2f6090e2c1b2fb354bf9dd3e0b70b7343c6d9113480d46c22d40f5c77e68790f",
+    "content": "\n\\lambda_e\\kappa_e\n=\n\\min\\{\\kappa_e,1\\}.\n\\tag{4.2}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-17",
+    "sha256": "50207275b1d50af833ed51a8bd48837513c2728d0dc18c5948b4eba083d53860",
+    "content": "\nH:=\\{e:\\kappa_e\\ge1\\},\n\\qquad\nL:=\\{e:\\kappa_e<1\\}.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-18",
+    "sha256": "bc58dbb0fca599f203327d539e4e5b7be35335f6a286731e049e83d3b12132ea",
+    "content": "\n|w_1|\n=\n|H|+\\sum_{e\\in L}\\kappa_e.\n\\tag{4.3}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-19",
+    "sha256": "a16fff997371afffcfe9e6bd2ea910fff275dbff5a313170fb19785fa7726749",
+    "content": "\nr_e:=\\max\\{1-\\kappa_e,0\\}.\n\\tag{4.4}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-20",
+    "sha256": "858e08a5dde9879942091f2857e8496d32ead3255da8f9e278f22f80d4670dfe",
+    "content": "\ny_e:=1-x_e.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-21",
+    "sha256": "288b1612b7c0725db493c9517b0f4a46a11a49468caed280235f8f781b3de98f",
+    "content": "\n\\sum_{e\\in E(T)}y_e\\le2.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-22",
+    "sha256": "f6b7d2e088707230175c51d80d8806db63670d98a3b073dd93f3cd8e38aa3911",
+    "content": "\nz_e:=1-y_e,\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-23",
+    "sha256": "11a3d7cbee08c3ba7ba46d6889bd56c95982c99c288165ab631b59f93773760c",
+    "content": "\n\\mathcal P_p\n:=\n\\left\\{\nz\\in[0,1]^{E(K)}:\n\\sum_{e\\in E(T)}z_e\\ge1\n\\text{ for every triangle }T\\subseteq K\n\\right\\}.\n\\tag{4.5}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-24",
+    "sha256": "133c10c9951feb95d12d6b767e54a4d09546096d5207543566e16b640cb23ca8",
+    "content": "\nM(\\kappa)\n:=\n\\min_{z\\in\\mathcal P_p}\n\\sum_{e\\in E(K)}(1-\\kappa_e)z_e.\n\\tag{4.6}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-25",
+    "sha256": "1210dd3d10663cf5b1eb3cacc66bd090a026eef21a54d9764140fc91ce910d09",
+    "content": "\nw_{\\mathrm{com}}:=w_1+w_2,\n\\qquad\nV_{\\mathrm{com}}:=|w_{\\mathrm{com}}|.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-26",
+    "sha256": "c8b38bc8dc42e345cd0ac2163ab19e44fffc9991929b5aabec0753f4f5303946",
+    "content": "\n|w_1|\n=\n\\frac{b_{\\ge2}}2+\\sum_{e\\in H}(1-\\kappa_e).\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-27",
+    "sha256": "3e3966cd404fbf444b824a2e652888af0553a3e703ef2e4d64c0825f042a16cf",
+    "content": "\n|w_2|=M(\\kappa)-\\sum_{e\\in H}(1-\\kappa_e).\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-28",
+    "sha256": "210321215a3aaced45a37491e296f52ec667787bc179ffa3888ec709dc95db73",
+    "content": "\n\\boxed{\nV_{\\mathrm{com}}\n=\n\\frac{b_{\\ge2}}2+M(\\kappa).\n}\n\\tag{4.7}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-29",
+    "sha256": "bf4916f59f79eae219afdd9de332f7407b6ad0438dc741980b43acb4c37235f0",
+    "content": "\n\\min\\{\\kappa_e,1\\}\n+\n\\max\\{1-\\kappa_e,0\\}\n=\n1.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-30",
+    "sha256": "b3a5135bbfeca59830e02b87edc0d22603c3e8f0537bbb78e164b4ead2224379",
+    "content": "\nV_{\\mathrm{com}}\\le\\nu_3^*(G).\n\\tag{4.8}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-31",
+    "sha256": "6f759361657581fccba119b5e46f91d6994a1c9ab34b007128c486902773673d",
+    "content": "\n\\boxed{\n|E(G)|-2V_{\\mathrm{com}}\n=\n\\binom{p}{2}-2M(\\kappa)+b_1.\n}\n\\tag{4.9}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-32",
+    "sha256": "846c67bf5739dd80a4a1b7236101283fd6e18b14ba6d60cfb249b72579828f1b",
+    "content": "\na_e^S\n:=\n\\frac{\\mathbf1_{\\{e\\subseteq S\\}}}{|S|-1}.\n\\tag{5.1}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-33",
+    "sha256": "eacfd93bff61c38764713c04567f6f9910758c6cd3236c992a71c4aa60c6b639",
+    "content": "\n\\kappa=\\sum_Sn_Sa^S.\n\\tag{5.2}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-34",
+    "sha256": "c27338be99f4a770f39a3c0fe2cec44fe80f40ab7adbb5c82d066ae43ef238c9",
+    "content": "\n\\lambda_S:=\\frac{n_S}{q},\n\\qquad\n\\kappa^S:=qa^S.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-35",
+    "sha256": "b58523d8da3a0ddbdb34dce3c7c7e5be373fa470da90c2c73e3de0b81d629f6f",
+    "content": "\n\\kappa=\\sum_S\\lambda_S\\kappa^S,\n\\qquad\n\\lambda_S\\ge0,\n\\qquad\n\\sum_S\\lambda_S=1.\n\\tag{5.3}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-36",
+    "sha256": "4d90b47562882d6eb4eb9ea4db609b42bfbf3af98c1b00c6fea88cf2c12e7662",
+    "content": "\nm(c):=\\min_{x\\in P}\\langle c,x\\rangle.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-37",
+    "sha256": "7cb13765b1110b94f82869019e523983e0b9c97fc6a94820b42db3e2d9dea467",
+    "content": "\nm(c)\n\\ge\n\\sum_i\\lambda_i m(c^{(i)})\n\\ge\n\\min_i m(c^{(i)}).\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-38",
+    "sha256": "76c4ad406ceb668df220a9e9e84b2f70ab6386b044c6f8f7a32f05e1f100a52d",
+    "content": "\n\\langle c,x\\rangle\n=\n\\sum_i\\lambda_i\\langle c^{(i)},x\\rangle\n\\ge\n\\sum_i\\lambda_i m(c^{(i)}).\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-39",
+    "sha256": "c64441fa5f12d1b09f5e80a40b335c3cffe837983b385b1eecd2879bf1db2935",
+    "content": "\n\\boxed{\nM(\\kappa)\n\\ge\n\\sum_S\\lambda_SM(\\kappa^S)\n\\ge\n\\min_SM(\\kappa^S).\n}\n\\tag{5.4}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-40",
+    "sha256": "55a9e1ec3cb80bf8633dfb668ae7142585b2074bbf063c48aac555fecbe31838",
+    "content": "\nM_b(\\kappa_\\mu)\\ \\ge\\ \\sum_S \\tfrac{\\mu_S}{q}\\,M_b(\\kappa^{S,q})\\ \\ge\\ \\min_S M_b(\\kappa^{S,q}).\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-41",
+    "sha256": "aaecc6717ff5a6ccdcc8bee7d200792ebf37724350e40f84a8480fa0eda12d26",
+    "content": "\ns:=|S|,\n\\qquad\no:=p-s.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-42",
+    "sha256": "3d70f714f203f15e5cc0e1d1d5647bc40c6828c579099a46f278ef7034228c7d",
+    "content": "\n\\kappa_e^S\n=\n\\begin{cases}\nq/(s-1),&e\\subseteq S,\\\\\n0,&\\text{otherwise}.\n\\end{cases}\n\\tag{6.1}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-43",
+    "sha256": "08d6a898db344251c5781b436d293c5e524bced227d2a9359eea802c17d94be4",
+    "content": "\nSS,\\qquad\nS(K\\setminus S),\\qquad\n(K\\setminus S)(K\\setminus S).\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-44",
+    "sha256": "008d3c1b2f7484f1e67070998db2b7ae2d244698061ff2d6df65ede8aef4f269",
+    "content": "\n\\alpha,\\qquad\\beta,\\qquad\\gamma.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-45",
+    "sha256": "1d4c37fc9c824795344b9faf67ca8833aeb0de7ef87c04d57ce902017f8bb13b",
+    "content": "\nA\\alpha+B\\beta+C\\gamma,\n\\tag{6.2}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-46",
+    "sha256": "7fbec5c9e981edb7552ed3c4e0e46cb70a55b9f6d8bf1682e6ef0a02906d0dca",
+    "content": "\nA:=\\frac{s(s-1-q)}2,\n\\qquad\nB:=so,\n\\qquad\nC:=\\frac{o(o-1)}2.\n\\tag{6.3}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-47",
+    "sha256": "941863b17c1b876ad21648beabe84355224966f6ff114f3d8d63509a9903d757",
+    "content": "\n3\\alpha\\ge1,\n\\qquad\n\\alpha+2\\beta\\ge1,\n\\qquad\n2\\beta+\\gamma\\ge1,\n\\qquad\n3\\gamma\\ge1,\n\\tag{6.4}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-48",
+    "sha256": "597f0b45a1df7b7a76aed68825ece1fe01f29338f5d54eb766f563256b78766b",
+    "content": "\nM(\\kappa^S)\n=\n\\begin{cases}\n\\min\\{U,D\\},&o\\le2,\\\\[1mm]\n\\min\\{U,D,H\\},&o\\ge3,\n\\end{cases}\n\\tag{6.5}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-49",
+    "sha256": "86610930499008a69700d60e62450523b07d6ab688cad77e146243c477083331",
+    "content": "\nU:=\\frac{A+B+C}{3},\n\\qquad\nD:=A+C,\n\\qquad\nH:=A+\\frac{B+C}{3}.\n\\tag{6.6}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-50",
+    "sha256": "5bd59dcfaf3da1e11052949af610fd22a832f8c377cf7c64aaff6dd622a1ec60",
+    "content": "\nR(p,q)\n:=\n\\frac{2p^2-2pq-q^2}{12}.\n\\tag{7.1}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-51",
+    "sha256": "1c77b99a908648d25f09423f6337ce07547b5a88edd068edba0ae77807a945a4",
+    "content": "\n12(U-R)\n=\nq(2o+q)-2p.\n\\tag{7.2}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-52",
+    "sha256": "f90c5606ced67c7436a405dcf366e095ea5b1af2a8b6b59966517e1cb22c8ca5",
+    "content": "\nU-R\\ge-\\frac p6.\n\\tag{7.3}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-53",
+    "sha256": "21cac4cae2fb5464825af71a7bc2334d34f863510f6eefb323235186d774fb73",
+    "content": "\n12(D-R)\n=\n12o^2-6o(2p-q)+(2p-q)^2-6p.\n\\tag{7.4}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-54",
+    "sha256": "59e6a3bbc2d877ea49d5d20b10a2d3162c2fbfc1e5d99084ded03e5a5813c33f",
+    "content": "\n12u^2-6uv+v^2\n=\n12\\left(u-\\frac v4\\right)^2+\\frac{v^2}{4}.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-55",
+    "sha256": "2887bc37046a1d0f91ef7441f396f312fe889e185670712c0e85a163910e9339",
+    "content": "\nD-R\\ge-\\frac p2.\n\\tag{7.5}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-56",
+    "sha256": "9d8db65824fa8633c806cd8b7afd212f4950833e6c8539e865a1c64ca3466790",
+    "content": "\n12(H-R)\n=\n(2s-q)^2+2q(p-s)-2p-4s.\n\\tag{7.6}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-57",
+    "sha256": "6f6f509ff5ab717b1c80a63838c2b53af821f6701f795bfcd35eaa2bddc0f66b",
+    "content": "\nH-R\\ge-\\frac p2.\n\\tag{7.7}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-58",
+    "sha256": "4189fc0d09e30cce2e42e309a45afefef58422c70271953406f7257eac4ca7d3",
+    "content": "\nM(\\kappa^S)\n\\ge\nR(p,q)-\\frac p2\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-59",
+    "sha256": "65c85f6c51516e60f61c659422336dd406b9a2be2131495c43d0a2ff2e5a2db3",
+    "content": "\n\\boxed{\nM(\\kappa)\n\\ge\nR(p,q)-\\frac p2.\n}\n\\tag{7.8}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-60",
+    "sha256": "d9042638ed9c8ced037b3f7c93d9b9722af7d391373ce9286ff2fc847166cce9",
+    "content": "\nM(0)=\\frac{p(p-1)}6.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-61",
+    "sha256": "4264014052ffd809550786730cc5e2a833cec8535b6b94f6ceeaf211d0116f66",
+    "content": "\n|E(G)|-2V_{\\mathrm{com}}\n=\n\\binom p2-2M(\\kappa)+b_1.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-62",
+    "sha256": "1a70d68d04c01548de0cb44522bf3c2e6282d57f159640473058a727d83e5cee",
+    "content": "\n|E(G)|-2V_{\\mathrm{com}}\n\\le\n\\binom p2-2R(p,q)+p+b_1.\n\\tag{8.1}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-63",
+    "sha256": "92f2a01def81a110cd20621e4e285c8a0be1bdc513d320cf72cf0a553167dcf1",
+    "content": "\n\\binom p2-2R(p,q)+p\n=\n\\frac{(p+q)^2}{6}+\\frac p2.\n\\tag{8.2}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-64",
+    "sha256": "71838c9c0ecc931a461ab49e62e3f93c3c5f2bad7e3b567f04d8579bdaa63466",
+    "content": "\n|E(G)|-2V_{\\mathrm{com}}\n\\le\n\\frac{(p+q)^2}{6}+\\frac p2+b_1.\n\\tag{8.3}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-65",
+    "sha256": "81ca4960861bd4225bd99e52d1b73fa11dac40eeca0f86c0ceaf328029be544b",
+    "content": "\n\\frac{n^2}{6}+\\frac n2-\\Big[\\frac{(p+q)^2}{6}+\\frac p2+b_1\\Big]\n=\n\\frac{b_1^2+|I_0|^2+2b_1|I_0|+2(b_1+|I_0|)(p+q)+3|I_0|+3q-3b_1}{6}.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-66",
+    "sha256": "0ff9238883d318cf1dcd337598dcc5a0462eb803c236620b692e8c171688971d",
+    "content": "\n\\frac{b_1(b_1-1)+|I_0|^2+2b_1|I_0|+5|I_0|}{6}\\ge0,\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-67",
+    "sha256": "0f8a6020cae19c0191905fca0e0e8f520958cb4596bfd932baaa19d54cc44b7c",
+    "content": "\n|E(G)|-2V_{\\mathrm{com}}\n\\le\n\\frac{n^2}{6}+\\frac n2.\n\\tag{8.4}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-68",
+    "sha256": "d476e4e73c2597bf907e72be2ec1ab5f872fc2d227ec47d4aa28c7f6cc9957eb",
+    "content": "\n|E(G)|-2\\nu_3^*(G)\n\\le\n|E(G)|-2V_{\\mathrm{com}}\n\\le\n\\frac{n^2}{6}+\\frac n2.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-69",
+    "sha256": "2103ad1d2456367275976c335327a22c81914f4ff457b0b1ced1ee472e8db4a1",
+    "content": "\ns:=|S|,\n\\qquad\no:=p-s,\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-70",
+    "sha256": "8546b03570f3b523be2db975a1b96374ad30e3903e78ab396d4c45da8856c9d0",
+    "content": "\nSS,\\qquad S(K\\setminus S),\\qquad (K\\setminus S)(K\\setminus S).\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-71",
+    "sha256": "262df4506c5f2b42a4152bc184d5ef383780298908911e099012803a394f9846",
+    "content": "\nA\\alpha+B\\beta+C\\gamma,\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-72",
+    "sha256": "2c3203f9210e8aeddf34851c6677eea9f6f7007268aab9cfa539789ce4145a0c",
+    "content": "\nA=\\frac{s(s-1-q)}2,\n\\qquad\nB=so,\n\\qquad\nC=\\frac{o(o-1)}2.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-73",
+    "sha256": "433abd1d93926f2f491503c68bf1e3a771394a39f65e61a54cf096669ceff8fc",
+    "content": "\n3\\alpha\\ge1,\n\\qquad\n\\alpha+2\\beta\\ge1,\n\\qquad\n2\\beta+\\gamma\\ge1,\n\\qquad\n3\\gamma\\ge1.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-74",
+    "sha256": "1120c5bfd4eeb66a0163c0363fc3a0f6b725426fae4cdba942cca99497b11d69",
+    "content": "\n(\\beta,\\gamma)=(0,1)\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-75",
+    "sha256": "749a4d212a206aed31aef99af796e17365613f8ca7bbb652cede72100cdaed4e",
+    "content": "\n(\\beta,\\gamma)=\\left(\\frac13,\\frac13\\right).\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-76",
+    "sha256": "7d8d1aeab8780384339a938f81975fd6d64d910fca566e5ed2dee0235ab54135",
+    "content": "\nD=A+C\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-77",
+    "sha256": "550a41b0e13d851f2d841ef4152db38183a86e7a920f15bdf2eab50f83c17be6",
+    "content": "\nH=A+\\frac{B+C}{3}.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-78",
+    "sha256": "6ad497da657c79d3bace76c1dfaffe0b0dbe0aaf562a16c96354f3da78f18bb1",
+    "content": "\n\\alpha=\\gamma=\\max\\left\\{\\frac13,1-2\\beta\\right\\}.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-79",
+    "sha256": "e2f0624edce0d8c57155f83c5fa7b095ceaeba585a395d1929c98dc2a3295fa6",
+    "content": "\nU=\\frac{A+B+C}{3}.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-80",
+    "sha256": "8ef3fc93fba18bbb3f471d9292df9c93947fe2453f75670929831be3d291d0e0",
+    "content": "\nU+B\\left(\\beta-\\frac13\\right)\\ge U,\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-81",
+    "sha256": "aec99945d6efda7e5128031b8c4cac159ef1a914a7673271c37f20ab334d5581",
+    "content": "\n\\frac{B-2A}{6}.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-82",
+    "sha256": "70412ad8a1ef5126aacef508d9340b00f3986aea41604c311dfe4107b4b0e85a",
+    "content": "\nB-2A\n=\n2o-2(1-q)\n=\n2(o+q-1)\\ge0\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-83",
+    "sha256": "6a9baf8b79efc9d0080c784bd9ded819d1e77ebfdd9081565636de26f886d06c",
+    "content": "\n\\min_{\\alpha\\in[1/3,1]}A\\alpha\n=\n\\min\\left\\{\\frac A3,A\\right\\}\n=\n\\min\\{U,D\\}.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-84",
+    "sha256": "87effd9a96d0aecdcb8c941aba9fbf75cb75852cba6b252dcae80faae2292f87",
+    "content": "\n(\\beta,\\gamma)=\\left(\\frac12,0\\right)\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-85",
+    "sha256": "d30ae2f03dcfce85725d08236110e0dab24d1a5eb68c78890c0cd65822ab446b",
+    "content": "\nA+\\frac B2.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-86",
+    "sha256": "73db1aaa5871bfce8ee42c0239788f01163a7a8339491f2481c6316f50022f87",
+    "content": "\n\\frac B2=s\n\\qquad\\text{and}\\qquad\nC=1,\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-87",
+    "sha256": "99fc25bfd47b36b96ef930ed880738b327110cdbf087df31bc13ac3149853b24",
+    "content": "\nA+\\frac B2\\ge A+C=D.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-88",
+    "sha256": "6767946145c40bc3e20574745d08234ae5b20949ebfa2617385e6d3eb494df1c",
+    "content": "\nM(\\kappa^S)\n=\n\\begin{cases}\n\\min\\{U,D\\},&o\\le2,\\\\[1mm]\n\\min\\{U,D,H\\},&o\\ge3.\n\\end{cases}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-89",
+    "sha256": "cf12d8d57e85471236acd572d5c2644ef9f6ab497c12760e79612d924f898a1e",
+    "content": "\n\\max\\left\\{\n\\sum_{T\\in\\mathcal T}w_T:\nw_T\\ge0,\\ \n\\sum_{T\\ni e}w_T\\le r_e\n\\text{ for every }e\\in E\n\\right\\}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-90",
+    "sha256": "1cdb0eea038fcf7b615ccb6dd85f6e54fc5b7f8d3702ec08c38ff9cef7f10991",
+    "content": "\n\\min\\left\\{\n\\sum_{e\\in E}r_ex_e:\nx_e\\ge0,\\ \n\\sum_{e\\in E(T)}x_e\\ge1\n\\text{ for every }T\\in\\mathcal T\n\\right\\}.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-91",
+    "sha256": "4417b2969ad6fca6ac4e16db4d91e76a77fc6da85b2490e80fcdb5337fc21a96",
+    "content": "\n\\max\\{\\mathbf 1^{\\mathsf T}w:Aw\\le r,\\ w\\ge0\\}\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-92",
+    "sha256": "9491e39f1e8f915ead4a423becd4a90e3232ad1b89bc10473d2238dfe236f17e",
+    "content": "\n\\min\\{r^{\\mathsf T}x:A^{\\mathsf T}x\\ge\\mathbf 1,\\ x\\ge0\\}.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-93",
+    "sha256": "32049a6d55eb90aef6542abe86267d4804ee4f391b580ccba3a413590da7a742",
+    "content": "\n\\mathbf 1^{\\mathsf T}w\n\\le\nx^{\\mathsf T}Aw\n\\le\nx^{\\mathsf T}r.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-94",
+    "sha256": "5c91d1f865b4e0df31307c977fcdd229225ff3f16c98a846c74b719db74d01c8",
+    "content": "\n0\\le w_T\\le\\sum_{T'\\ni e}w_{T'}\\le r_e.\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  },
+  {
+    "id": "en-display-95",
+    "sha256": "0e6f7c53de8550ecab9dd003376e9ece7c52df35b40c17ed9451fa1d14ecf688",
+    "content": "\n|E(G)|-2\\nu_3^*(G)\\le \\frac{n^2}{6}+\\frac{n}{2},\n",
+    "allowed_edit": "relocation or sentence punctuation outside boxes"
+  }
+]

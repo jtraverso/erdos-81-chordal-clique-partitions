@@ -10,9 +10,9 @@ La serie estudia cómo transformar cotas fraccionales de empaquetamiento en desc
 
 | Work | Main question and contribution | Current edition |
 |---|---|---|
-| [I — Fractional profiles](preprints/PAPER_I/README.md) | Reduce mixed neighborhood profiles in split graphs to a fixed finite linear program. | v1.3 |
-| [II — Fractional extremizers](preprints/PAPER_II/README.md) | Identify the exact fractional chordal extremum by admissible copies and complete-split terminal graphs. | v1.2 |
-| [III — Integral split partitions](preprints/PAPER_III/README.md) | Construct clique partitions with sharp quadratic coefficient and linear error for split graphs. | v1.5 |
+| [I — Fractional profiles](preprints/PAPER_I/README.md) | Reduce mixed neighborhood profiles in split graphs to a fixed finite linear program. | v1.4, editorial revision |
+| [II — Fractional extremizers](preprints/PAPER_II/README.md) | Identify the exact fractional chordal extremum by admissible copies and complete-split terminal graphs. | v1.3, editorial revision |
+| [III — Integral split partitions](preprints/PAPER_III/README.md) | Construct clique partitions with sharp quadratic coefficient and linear error for split graphs. | v1.6, editorial revision |
 | [IV — Quantitative stability](preprints/PAPER_IV/README.md) | Obtain chordal and rooted-defect bounds, and control graphs and near-optimal partitions with a common root. | v1.24, editorial revision |
 | [V — Colorability and realizability](preprints/PAPER_V/README.md) | Separate conflict colouring from realization in resource-dominated packing relaxations. | Preprint 1.0 |
 | [VI — Exact local partitions](preprints/PAPER_VI/README.md) | Determine optimal clique-partition counts under local perturbations, with prescriptions and structural consequences. | Preprint 1.0 |
@@ -29,10 +29,12 @@ Las conexiones no obligan a leer toda la serie antes de abordar un resultado. I�
 ## Read the series / Leer la serie
 
 - [Bilingual HTML guide](index.html) · [Browser preview](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/index.html).
-- Each paper page links its English and Spanish PDF, LaTeX and Markdown. IV–VI and the notes have separate formalization companions; I–III retain their original formalization documentation.
+- Each paper page links its English and Spanish PDF, LaTeX and Markdown. All six papers and the two notes have separate formalization companions. Papers I–III now follow the editorial layout of IV; their Lean freezes remain unchanged.
 - [Publication index](PUBLICATION_INDEX.json) · [Citation guide](CITATION.md).
 
 ## Formal sources and audit evidence / Fuentes formales y evidencias
+
+Papers I v1.4, II v1.3 and III v1.6 are editorial revisions released together. Their individual changelogs, formal companions and internal editorial audits are linked from each paper page. No Lean/Lake rebuild was performed.
 
 The papers have distinct frozen source packages and recorded audit scopes. Paper IV v1.24 changes exposition and document organization; its Lean freeze remains `piv-v12-fb459343d234`. The [editorial changelog](preprints/PAPER_IV/CHANGELOG_v1.24.md), [new internal editorial audit](preprints/PAPER_IV/02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/10_REPORT/FINAL_INTERNAL_AUDIT_REPORT.md) and [unchanged formal sources](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/05_formalization) distinguish the new documents from the existing kernel evidence.
 
@@ -42,7 +44,7 @@ Los preprints y sus revisiones asistidas por IA no equivalen a revisión humana 
 
 ## Editions, citation and licenses / Ediciones, citas y licencias
 
-The [current 26-PDF collection](https://doi.org/10.5281/zenodo.23476768) includes Paper IV v1.24 and its formal companion. The [series concept DOI](https://doi.org/10.5281/zenodo.21273143) follows the collection. The preceding [24-PDF collection](https://doi.org/10.5281/zenodo.23459196) and the [I–IV snapshot](https://doi.org/10.5281/zenodo.23089131) remain available. Historical manuscripts, source freezes and their audit evidence are retained; identify the paper and version when citing a result. See [CITATION.bib](CITATION.bib) and [CITATION.cff](CITATION.cff).
+The [preceding 26-PDF collection](https://doi.org/10.5281/zenodo.23476768) includes Paper IV v1.24 and its formal companion. The [series concept DOI](https://doi.org/10.5281/zenodo.21273143) follows the collection. The preceding [24-PDF collection](https://doi.org/10.5281/zenodo.23459196) and the [I–IV snapshot](https://doi.org/10.5281/zenodo.23089131) remain available. Historical manuscripts, source freezes and their audit evidence are retained; identify the paper and version when citing a result. See [CITATION.bib](CITATION.bib) and [CITATION.cff](CITATION.cff).
 
 Zenodo contains individual PDFs; GitHub carries source and evidence packages. [Deposit procedure and receipts](publication/zenodo/README.md). The [publication index](PUBLICATION_INDEX.json) identifies the deposited collection.
 

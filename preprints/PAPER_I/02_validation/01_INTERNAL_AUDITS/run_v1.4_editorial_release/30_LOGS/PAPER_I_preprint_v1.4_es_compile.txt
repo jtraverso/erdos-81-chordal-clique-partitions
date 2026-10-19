@@ -1,0 +1,7 @@
+note: Running TeX ...
+note: Running xdvipdfmx ...
+note: Writing `PAPER_I_preprint_v1.4_es.pdf` (321.05078125 KiB)
+note: Writing `PAPER_I_preprint_v1.4_es.aux` (7.8447265625 KiB)
+note: Writing `PAPER_I_preprint_v1.4_es.log` (26.1513671875 KiB)
+
+Fontconfig error: Cannot load default config file: No such file: (null)

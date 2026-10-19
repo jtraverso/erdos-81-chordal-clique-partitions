@@ -1,0 +1,189 @@
+{
+  "paper": "III",
+  "version": "1.6",
+  "checks": [
+    {
+      "id": "en-displays",
+      "pass": true,
+      "baseline_count": 205,
+      "missing": []
+    },
+    {
+      "id": "en-inline-math",
+      "pass": true,
+      "missing": []
+    },
+    {
+      "id": "en-result-headings",
+      "pass": true,
+      "count": 35
+    },
+    {
+      "id": "en-declaration-traceability",
+      "pass": true,
+      "missing": []
+    },
+    {
+      "id": "PAPER_III_preprint_v1.6_en-compiler",
+      "pass": true,
+      "diagnostics": [],
+      "engine": "Tectonic XeTeX + xdvipdfmx",
+      "pdf_output_confirmed": true
+    },
+    {
+      "id": "FORMALIZATION_COMPANION_v1.6_en-compiler",
+      "pass": true,
+      "diagnostics": [],
+      "engine": "Tectonic XeTeX + xdvipdfmx",
+      "pdf_output_confirmed": true
+    },
+    {
+      "id": "es-displays",
+      "pass": true,
+      "baseline_count": 205,
+      "missing": []
+    },
+    {
+      "id": "es-inline-math",
+      "pass": true,
+      "missing": []
+    },
+    {
+      "id": "es-result-headings",
+      "pass": true,
+      "count": 35
+    },
+    {
+      "id": "es-declaration-traceability",
+      "pass": true,
+      "missing": []
+    },
+    {
+      "id": "PAPER_III_preprint_v1.6_es-compiler",
+      "pass": true,
+      "diagnostics": [],
+      "engine": "Tectonic XeTeX + xdvipdfmx",
+      "pdf_output_confirmed": true
+    },
+    {
+      "id": "FORMALIZATION_COMPANION_v1.6_es-compiler",
+      "pass": true,
+      "diagnostics": [],
+      "engine": "Tectonic XeTeX + xdvipdfmx",
+      "pdf_output_confirmed": true
+    },
+    {
+      "id": "bilingual-result-identifiers",
+      "pass": true,
+      "en": [
+        "1.1",
+        "1.2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "3.1",
+        "4.1",
+        "4.2",
+        "5.1",
+        "5.2",
+        "6.1",
+        "7.1",
+        "10.2",
+        "10.2",
+        "10.4",
+        "10.4",
+        "10.5",
+        "12.1",
+        "12.2",
+        "12.4",
+        "D.1",
+        "D.2",
+        "D.3",
+        "E.1.1",
+        "E.1.2",
+        "E.1.3",
+        "E.2.1",
+        "E.2.2",
+        "E.3.1",
+        "E.3.2",
+        "E.4.1",
+        "E.5.1",
+        "E.5.2",
+        "E.7.1",
+        "E.7.2"
+      ],
+      "es": [
+        "1.1",
+        "1.2",
+        "2.1",
+        "2.2",
+        "2.3",
+        "3.1",
+        "4.1",
+        "4.2",
+        "5.1",
+        "5.2",
+        "6.1",
+        "7.1",
+        "10.2",
+        "10.2",
+        "10.4",
+        "10.4",
+        "10.5",
+        "12.1",
+        "12.2",
+        "12.4",
+        "D.1",
+        "D.2",
+        "D.3",
+        "E.1.1",
+        "E.1.2",
+        "E.1.3",
+        "E.2.1",
+        "E.2.2",
+        "E.3.1",
+        "E.3.2",
+        "E.4.1",
+        "E.5.1",
+        "E.5.2",
+        "E.7.1",
+        "E.7.2"
+      ]
+    },
+    {
+      "id": "bilingual-figures",
+      "pass": true
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "01_manuscript/PAPER_III_preprint_v1.6_en.md",
+      "md_sha256": "0da0866c5c78208cd388faf2a6e988011736f39ede90f28cd5e58086e810f29e",
+      "tex_sha256": "e518831b52b0456cb7f3479957e3e514d69c4e11f432f779ea20ff2f610cd8ef",
+      "pdf_sha256": "4922415e2d6c04a09eb5808b7d556d6b2ce4353e126f32f43dfd74a0558762d0",
+      "log_sha256": "27947be60980d26992e3df2a71051933e69c0107f8ff6fcb3ac16b509d4c3523"
+    },
+    {
+      "file": "05_formalization/FORMALIZATION_COMPANION_v1.6_en.md",
+      "md_sha256": "2cd564b484332b5260e2221e80c76c430e3b133643c91f9bd99ede467434981d",
+      "tex_sha256": "c0946401485b28d601e2fff5ee37c15d2d4d2ec8effa46dfcffd4509efbafec9",
+      "pdf_sha256": "605d4c844214df361d5f5af5c0c609d176d58c5a014b5bdf6f8271b7c22e9383",
+      "log_sha256": "21cc7a8503e07397c021f8dbc07244aacd874d4d49d775c6726e4585190b82e2"
+    },
+    {
+      "file": "01_manuscript/PAPER_III_preprint_v1.6_es.md",
+      "md_sha256": "e1b0fca59f683bee9a1b4b9aa1dad04db35d8c59d11280b0ceeb860e22b8aa91",
+      "tex_sha256": "1753ec298a0d1a7c04ca9ed184b7bf4863ede10a9f869fb2b01302a2a24cc3f8",
+      "pdf_sha256": "3cde6723477ae255ec797979080cc17af202766bfe62ef6828ffb050d56123c6",
+      "log_sha256": "d2608b192e3c2f1c51b484fd7efdd309d32e9aa12a0a3d468aead4ee38cecced"
+    },
+    {
+      "file": "05_formalization/FORMALIZATION_COMPANION_v1.6_es.md",
+      "md_sha256": "4618af8730bb9eccdca24497fbfe02cf0e7c470105b682ea21b0bc219f10000b",
+      "tex_sha256": "225c812b06bdd0962b4d81f3c113e5ab7d23ec48a5d486f4d81469bf24a38e64",
+      "pdf_sha256": "58595ce793da680de6e742f69a37f512e8f7910be8bd427509385c33a2ca3aa0",
+      "log_sha256": "2b7d16ffe3572fd473fcf53e49bf22152d6a98a5c4db047f432d08dbbc4563b3"
+    }
+  ],
+  "status": "PASS"
+}

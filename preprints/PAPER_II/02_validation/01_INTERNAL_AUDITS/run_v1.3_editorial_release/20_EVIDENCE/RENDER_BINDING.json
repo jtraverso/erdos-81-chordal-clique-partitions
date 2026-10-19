@@ -1,0 +1,56 @@
+[
+  {
+    "file": "01_manuscript\\PAPER_II_preprint_v1.3_en.pdf",
+    "pdf_sha256": "6ad90d20708d604356a0ae568a0f5602039e5cda9f75e9315d9a2844f0219e7b",
+    "pages": 21,
+    "rendered_pages": 21,
+    "bounds_flags": [],
+    "visual_review": "PASS: all pages via contact sheets; selected dense and changed pages at readable resolution",
+    "reviewer": "OpenAI Codex; internal AI-assisted editorial review",
+    "contact_sheets": [
+      "contact-01.png",
+      "contact-02.png",
+      "contact-03.png",
+      "contact-04.png"
+    ]
+  },
+  {
+    "file": "01_manuscript\\PAPER_II_preprint_v1.3_es.pdf",
+    "pdf_sha256": "e932314b21e24cfd9fe9bfe3a75e55e432160b87340f73978fcb987304913f0f",
+    "pages": 21,
+    "rendered_pages": 21,
+    "bounds_flags": [],
+    "visual_review": "PASS: all pages via contact sheets; selected dense and changed pages at readable resolution",
+    "reviewer": "OpenAI Codex; internal AI-assisted editorial review",
+    "contact_sheets": [
+      "contact-01.png",
+      "contact-02.png",
+      "contact-03.png",
+      "contact-04.png"
+    ]
+  },
+  {
+    "file": "05_formalization\\FORMALIZATION_COMPANION_v1.3_en.pdf",
+    "pdf_sha256": "b7b829ca1c98e873624cb6f3e8e01cdff1d63cdc8f7c47a01b409bcc814545b1",
+    "pages": 5,
+    "rendered_pages": 5,
+    "bounds_flags": [],
+    "visual_review": "PASS: all pages via contact sheets; selected dense and changed pages at readable resolution",
+    "reviewer": "OpenAI Codex; internal AI-assisted editorial review",
+    "contact_sheets": [
+      "contact-01.png"
+    ]
+  },
+  {
+    "file": "05_formalization\\FORMALIZATION_COMPANION_v1.3_es.pdf",
+    "pdf_sha256": "0e30477adaf60d742fed9e87f677b24406eda0bfc8deeb0eca2d5864c0221e11",
+    "pages": 5,
+    "rendered_pages": 5,
+    "bounds_flags": [],
+    "visual_review": "PASS: all pages via contact sheets; selected dense and changed pages at readable resolution",
+    "reviewer": "OpenAI Codex; internal AI-assisted editorial review",
+    "contact_sheets": [
+      "contact-01.png"
+    ]
+  }
+]

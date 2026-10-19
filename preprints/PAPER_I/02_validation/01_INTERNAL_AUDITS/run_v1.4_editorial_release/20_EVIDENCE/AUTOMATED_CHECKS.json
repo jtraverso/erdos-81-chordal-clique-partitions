@@ -1,0 +1,127 @@
+{
+  "paper": "I",
+  "version": "1.4",
+  "checks": [
+    {
+      "id": "en-displays",
+      "pass": true,
+      "baseline_count": 95,
+      "missing": []
+    },
+    {
+      "id": "en-inline-math",
+      "pass": true,
+      "missing": []
+    },
+    {
+      "id": "en-result-headings",
+      "pass": true,
+      "count": 4
+    },
+    {
+      "id": "en-declaration-traceability",
+      "pass": true,
+      "missing": []
+    },
+    {
+      "id": "PAPER_I_preprint_v1.4_en-compiler",
+      "pass": true,
+      "diagnostics": [],
+      "engine": "Tectonic XeTeX + xdvipdfmx",
+      "pdf_output_confirmed": true
+    },
+    {
+      "id": "FORMALIZATION_COMPANION_v1.4_en-compiler",
+      "pass": true,
+      "diagnostics": [],
+      "engine": "Tectonic XeTeX + xdvipdfmx",
+      "pdf_output_confirmed": true
+    },
+    {
+      "id": "es-displays",
+      "pass": true,
+      "baseline_count": 95,
+      "missing": []
+    },
+    {
+      "id": "es-inline-math",
+      "pass": true,
+      "missing": []
+    },
+    {
+      "id": "es-result-headings",
+      "pass": true,
+      "count": 4
+    },
+    {
+      "id": "es-declaration-traceability",
+      "pass": true,
+      "missing": []
+    },
+    {
+      "id": "PAPER_I_preprint_v1.4_es-compiler",
+      "pass": true,
+      "diagnostics": [],
+      "engine": "Tectonic XeTeX + xdvipdfmx",
+      "pdf_output_confirmed": true
+    },
+    {
+      "id": "FORMALIZATION_COMPANION_v1.4_es-compiler",
+      "pass": true,
+      "diagnostics": [],
+      "engine": "Tectonic XeTeX + xdvipdfmx",
+      "pdf_output_confirmed": true
+    },
+    {
+      "id": "bilingual-result-identifiers",
+      "pass": true,
+      "en": [
+        "1.1",
+        "3.1",
+        "5.1",
+        "B.1"
+      ],
+      "es": [
+        "1.1",
+        "3.1",
+        "5.1",
+        "B.1"
+      ]
+    },
+    {
+      "id": "bilingual-figures",
+      "pass": true
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "01_manuscript/PAPER_I_preprint_v1.4_en.md",
+      "md_sha256": "a47ed0845469a190406542a87c4f3438e1aae11b158c41573fbeb4a4225d8546",
+      "tex_sha256": "53b93ce82728c405c23088cf7a97520a858647dc0cadcacde1821eb242bb9781",
+      "pdf_sha256": "977adb51f9eab890c4ab452b21807048dba5d71d291e9ad3717a73556e853231",
+      "log_sha256": "3781c4fe3207bf6d4195e9cdd42a18630a675071346f5a323f985e382aa3bf69"
+    },
+    {
+      "file": "05_formalization/FORMALIZATION_COMPANION_v1.4_en.md",
+      "md_sha256": "d3e28ab462cc67c90d10774c00002ff54f523bc9f290a589500cec634225fa25",
+      "tex_sha256": "b2d00d5287e7bfb03aeff2b39cb9197c72f8466d72bca335f0f124766da82e58",
+      "pdf_sha256": "aa1691fabf2853af635b7901f482dd8fccc964eca94044f49cec6f24b9fb1ccf",
+      "log_sha256": "900057573b7938403aa6ffe39ad848dc2d92df269638360814a474d0e1cad34e"
+    },
+    {
+      "file": "01_manuscript/PAPER_I_preprint_v1.4_es.md",
+      "md_sha256": "33e04295eed9407be9e3dd434118c6a88bf9f5e8ca44826924ff17db1ebd43a6",
+      "tex_sha256": "8651204aecc38422a4686a9cf737f946e0b61a304b3093b80d40aac04900015f",
+      "pdf_sha256": "a864989970afab7d4d44b26a90738aebfc8e08f76c3d0ad144605a30210ea5a7",
+      "log_sha256": "ac3de0a047c7d1dadf66a371bc0aa89eb3ae6c7c7196fc53ceff8178439c141a"
+    },
+    {
+      "file": "05_formalization/FORMALIZATION_COMPANION_v1.4_es.md",
+      "md_sha256": "800cc983ca9606191628cdc62309e8a5497cc01295b58051fa0b4ffb4f23ce4f",
+      "tex_sha256": "e2210dcde85623ba20d0708952fbc876388bb91e48e628b74a724f5211762ed6",
+      "pdf_sha256": "c2863e392f210e9b879adccd545067eb60878352929bfb896cf2b514f4ec771c",
+      "log_sha256": "59c8c2230706366d23d0a7acf84767e4c0e933f819f9960df585af50c5fb966b"
+    }
+  ],
+  "status": "PASS"
+}

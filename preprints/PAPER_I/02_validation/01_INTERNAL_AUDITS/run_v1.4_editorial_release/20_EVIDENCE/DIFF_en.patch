@@ -1,0 +1,211 @@
+--- published_1.3_en
++++ editorial_1.4_en
+@@ -2,19 +2,12 @@
+ 
+ **Juan Pablo Traverso Gianini**  
+ Independent researcher, Santiago, Chile  
+-[jtraverso@gmail.com](mailto:jtraverso@gmail.com)  
+-[ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
+-
+-**Paper I in the series**  
+-**Preprint:** version 1.3. This manuscript and its accompanying formal artifact form one self-contained public package.  
+-**Release date:** August 22, 2026  
+-**Status:** official author preprint release. The accompanying Paper I Lean v1.2 freeze includes the recorded build evidence and theorem-level axiom queries described in Section 10. The exact archive and manuscript package passed independent external adversarial review. This release is not external human peer review or a specialist priority determination.
+-
+-**Prior-art and novelty status.** The internal literature audit, supplemented by external adversarial review, identified no earlier result with the same finite fractional split-graph bound and affine-profile reduction. The broader chordal clique-partition problem remains open. This is a corpus-bounded negative search, not proof of priority or a substitute for specialist review.
+-
+-**MSC 2020:** Primary 05C70; Secondary 05C35, 05C72.
+-
+----
++[jtraverso@gmail.com](mailto:jtraverso@gmail.com) · [ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
++
++**Paper I · Preprint, version 1.4**  
++19 October 2026
++
++**MSC 2020:** 05C70; 05C35, 05C72.
+ 
+ ## Abstract
+ 
+@@ -26,8 +19,8 @@
+ 
+ \[
+ \boxed{
+-|E(G)|-2\nu_3^*(G)\le \frac{n^2}{6}+\frac{n}{2},
+-}
++|E(G)|-2\nu_3^*(G)\le \frac{n^2}{6}+\frac{n}{2}
++},
+ \]
+ 
+ where \(\nu_3^*(G)\) is the maximum fractional triangle-packing value. The leading constant \(1/6\) is the one appearing in Erdős Problem #81 on clique partitions of chordal graphs; the present result concerns the finite fractional problem for the subclass of split graphs. The proof is finite and analytic. No asymptotic transfer theorem is used. The complete-split family \(K_p\vee\overline{K}_{2p}\) shows that no uniform additive coefficient below \(1/6\) is possible. Later papers in the series obtain sharper bounds on the same quantity by independent arguments and do not depend on the present result. What they reuse is the affine reduction and the resulting three-orbit trichotomy.
+@@ -44,9 +37,9 @@
+ 
+ The main structural point is that the feasible cover polytope does not depend on the independent-set neighborhood profile. Only the objective vector changes. Since the optimum of a minimization problem over a fixed polytope is concave in its objective vector, a mixed neighborhood profile is bounded below by the corresponding convex combination of pure-profile values, and therefore by the smallest of those values. This does not identify a mixed profile with a pure one; it shows that a uniform lower bound may be proved by considering pure profiles. The pure case then has enough symmetry to reduce to three orbit variables.
+ 
+-**Role within the broader program.** This paper is self-contained apart from the standard finite-dimensional strong linear-programming duality theorem cited and applied in Appendix B. Its purpose is to isolate the affine profile-reduction mechanism in the split-graph setting and to give a finite fractional application. Within the series on Erdős Problem #81, this mechanism is the starting point: Paper II determines the exact fractional maximum of the cover functional over chordal graphs; Paper III proves the linear-error split-graph theorem for clique partitions; and Paper IV develops a general transfer-and-rounding interface for resource-dominated packing relaxations. None of those later results is used here.
+-
+-**Series notation.** In cross-paper discussion, the fractional deficit of Paper I is written \(\Phi^*(G)=|E(G)|-2\nu_3^*(G)\). Paper II writes the same quantity as \(\Phi_\tau(G)=|E(G)|-2\tau_3^*(G)\), while Paper III reserves the unstarred \(\Phi(G)\) for the integral deficit \(|E(G)|-2\nu_3(G)\). The Lean identifier `Phi` in the Paper I artifact is retained for traceability.
++**Role within the broader program.** This paper is self-contained apart from the standard finite-dimensional strong linear-programming duality theorem cited and applied in Appendix B. Its purpose is to isolate the affine profile-reduction mechanism in the split-graph setting and to give a finite fractional application. Within the series on Erdős Problem #81, this mechanism is the starting point: Paper II determines the exact fractional maximum of the cover functional over chordal graphs; Paper III proves the linear-error split-graph theorem for clique partitions; Paper IV develops the subsequent chordal bounds and structural stability results [IV]; and Paper V studies colorability and realizability defects through a general transfer framework [V]. None of those later results is used here.
++
++**Series notation.** In cross-paper discussion, the fractional deficit of Paper I is written \(\Phi^*(G)=|E(G)|-2\nu_3^*(G)\). Paper II writes the same quantity as \(\Phi_\tau(G)=|E(G)|-2\tau_3^*(G)\), while Paper III reserves the unstarred \(\Phi(G)\) for the integral deficit \(|E(G)|-2\nu_3(G)\).
+ 
+ The resulting proof has the following shape:
+ 
+@@ -74,7 +67,6 @@
+ \frac{n^2}{6}+\frac{n}{2}.
+ \]
+ 
+-**Formalization status.** The Paper I Lean v1.2 freeze uses Lean 4 / Mathlib v4.28.0 [6,7] and records Theorem 1.1 as `paperI_main_sharp`. The declaration `paperI_main` supplies a weaker companion form with additive term \(n\). In these recorded names, `sharp` refers to the quadratic coefficient \(1/6\), not to optimality of the additive term. The axiom gate covers the main theorem, `PaperI.assembly_sharp`, `PaperI.Split.residual_duality`, the finite packing–covering duality of Proposition B.1, and the interface declarations listed in Section 10. Their recorded footprint is `propext`, `Classical.choice`, and `Quot.sound`, with no project-level mathematical axiom. Section 10 gives the freeze and archive record.
+ 
+ The accompanying calculation ledger records the exact identities, inequality directions, branch structure, and loss accounting used in the proof. The manuscript keeps the routine algebra visible but compact.
+ 
+@@ -320,8 +312,8 @@
+ \boxed{
+ V_{\mathrm{com}}
+ =
+-\frac{b_{\ge2}}2+M(\kappa).
+-}
++\frac{b_{\ge2}}2+M(\kappa)
++}.
+ \tag{4.7}
+ \]
+ 
+@@ -348,8 +340,8 @@
+ \boxed{
+ |E(G)|-2V_{\mathrm{com}}
+ =
+-\binom{p}{2}-2M(\kappa)+b_1.
+-}
++\binom{p}{2}-2M(\kappa)+b_1
++}.
+ \tag{4.9}
+ \]
+ 
+@@ -438,8 +430,8 @@
+ \ge
+ \sum_S\lambda_SM(\kappa^S)
+ \ge
+-\min_SM(\kappa^S).
+-}
++\min_SM(\kappa^S)
++}.
+ \tag{5.4}
+ \]
+ 
+@@ -453,7 +445,7 @@
+ \[
+ M_b(\kappa_\mu)\ \ge\ \sum_S \tfrac{\mu_S}{q}\,M_b(\kappa^{S,q})\ \ge\ \min_S M_b(\kappa^{S,q}).
+ \]
+-This is recorded in the formal development as `lpVal_concave` and `lpVal_ge_min`. A companion estimate, `lpVal_lipschitz`, bounds the change in the fractional value when the baseline or the profile distribution is perturbed. It is intended for robust and near-split variants. Both are stated for a fixed feasible polytope with an affinely varying objective; neither requires symmetry, which enters only afterwards, on a single pure profile, in Section 6.
++A companion stability estimate bounds the change in the fractional value when the baseline or the profile distribution is perturbed. It is intended for robust and near-split variants. Both are stated for a fixed feasible polytope with an affinely varying objective; neither requires symmetry, which enters only afterwards, on a single pure profile, in Section 6.
+ 
+ ## 6. The pure-profile orbit program
+ 
+@@ -648,8 +640,8 @@
+ \boxed{
+ M(\kappa)
+ \ge
+-R(p,q)-\frac p2.
+-}
++R(p,q)-\frac p2
++}.
+ \tag{7.8}
+ \]
+ 
+@@ -757,30 +749,9 @@
+ 
+ ---
+ 
+-## 10. Reproducibility and proof record
+-
+-The proof is analytic. Computational experiments were used during development to search for counterexamples and detect transcription errors, but no computation is a logical premise of the theorem. For that reason, computational regression material is kept outside the paper rather than included as a second appendix.
+-
+-The accompanying calculation ledger records:
+-
+-- every exact identity;
+-- every inequality direction;
+-- the complete loss accounting;
+-- the branch \(q=0\);
+-- the orbit regimes;
+-- the final conversion to \(n\).
+-
+-The author reports an internal AI-assisted adversarial audit of the theorem statement, quantitative bound, and proof assembly. This is a validation record, not a claim of external peer review.
+-
+-### Formalization status in Lean
+-
+-The snapshot at `PAPER_I/05_formalization/lean_v1.2_freeze` contains the Lean sources and a successful recorded 8,034-job build against Lean 4 / Mathlib v4.28.0 [6,7]. It contains `paperI_main_sharp`, whose statement is `Phi ≤ n^2/6 + n/2`, together with the weaker companion declaration `paperI_main` and the interface results listed below. Its axiom gate also queries `PaperI.assembly_sharp` and `PaperI.Split.residual_duality`. Appendix C records the main declaration. The exact archive was subsequently reproduced in an external clean room with the same 8,034-job result and the same theorem-level axiom footprint.
+-
+-The frozen axiom report records only Lean's standard foundational axioms, `propext`, `Classical.choice`, and `Quot.sound`, for the main theorem and the listed declarations; it records no project-level mathematical axiom. These are logical foundations used throughout Mathlib, not additional mathematical assumptions of the paper.
+-
+-The release artifact also records the finite-dimensional packing-covering duality used in Proposition B.1. In Lean it appears as `residual_duality`, an application of the general theorem `covering_packing_duality`. The artifact records that theorem as derived from a finite Farkas lemma and Mathlib's closed-cone infrastructure, rather than postulated as an external axiom. Schrijver [4, Chapter 7] remains the classical reference for the written proof.
+-
+-The frozen source archive is `PAPER_I_lean_v1.2_freeze.zip`, with SHA-256 `0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a`. It is stored under `PAPER_I/05_formalization/lean_v1.2_freeze` and excludes project caches and compiled objects. The freeze build target includes several `Contrib` modules used for possible upstreaming; that contribution lane is a byproduct and is not part of the paper's trusted mathematical assumptions. The axiom report above controls the logical dependency statement. The external clean-room reproduction applies to these exact archive bytes; the manuscript revision does not alter the formal artifact.
++## 10. Formalization and reproducibility
++
++The accompanying [formalization and reproducibility document](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_I/05_formalization/FORMALIZATION_COMPANION_v1.4_en.pdf) identifies the unchanged Lean/Mathlib freeze, its theorem interfaces and the recorded build and axiom evidence. This editorial edition changes neither the mathematical results nor the frozen sources; no Lean/Lake rebuild was performed. Computational checks are supplementary evidence, not premises of the proofs.
+ 
+ ---
+ 
+@@ -1024,52 +995,8 @@
+ 
+ Hence the primal optimum is finite and attained. The dual is feasible, for example with \(x_e=1\) for every \(e\). Finite-dimensional strong linear-programming duality [4, Chapter 7] therefore gives equality of the two attained optimum values. Applying the proposition to the clique triangles and the residual capacities \(r_e\) in (4.4) yields the dual program used in Section 4.
+ 
+-**Formalization note.** The v1.2 freeze records Proposition B.1 as the Lean declaration `PaperI.Split.residual_duality`, an instance of the general finite strong-duality theorem `covering_packing_duality`. The artifact records the latter as proved from a finite Farkas lemma, using the closedness of a finitely generated convex cone and the hyperplane-separation theorem for closed convex cones. Thus the duality used here is derived inside the formal development, not postulated as a project-specific axiom. Schrijver remains the classical reference for the written argument. The corresponding sources, build log, and axiom report are delivered in `PAPER_I/05_formalization/lean_v1.2_freeze`.
+-
+-
+----
+-
+-## Appendix C. Formalized statement
+-
+-The accompanying formal artifact records the following Lean 4 declaration for Theorem 1.1:
+-
+-```lean
+-theorem paperI_main_sharp (G : Split) :
+-    G.Phi ≤ (G.n : ℝ) ^ 2 / 6 + (G.n : ℝ) / 2
+-
+--- weaker companion form (larger additive term):
+-theorem paperI_main (G : Split) :
+-    G.Phi ≤ (G.n : ℝ) ^ 2 / 6 + (G.n : ℝ)
+-```
+-
+-Here `Split` packages the data of a split graph used in the proof: a clique of size `p`, an independent vertex type, and the neighborhoods of the independent vertices inside the clique. The field `n` is the total number of vertices. The quantity `Phi` is defined as `|E| − 2·nu3star`, where `nu3star` is the supremum of the feasible fractional triangle-packing values. Elsewhere in the series this fractional deficit is written \(\Phi^*\), while the unstarred \(\Phi\) is reserved for the integral deficit \(|E(G)|-2\nu_3(G)\); the Lean identifier is retained to match the recorded declaration. With these definitions, `paperI_main_sharp` is precisely
+-
+-\[
+-|E(G)|-2\nu_3^*(G)\le \frac{n^2}{6}+\frac{n}{2},
+-\]
+-
+-the inequality stated in Theorem 1.1 (declaration `paperI_main_sharp`). The companion declaration `paperI_main` records the weaker additive term \(n\).
+-
+-The supplied build report records zero `sorry`. The supplied axiom report is:
+-
+-```text
+-PaperI.Split.paperI_main_sharp depends on axioms: [propext, Classical.choice, Quot.sound]
+-PaperI.paperI_main         depends on axioms: [propext, Classical.choice, Quot.sound]
+-PaperI.assembly_sharp      depends on axioms: [propext, Classical.choice, Quot.sound]
+-PaperI.Split.residual_duality depends on axioms: [propext, Classical.choice, Quot.sound]
+-```
+-
+-These are the three standard foundational axioms of Lean and Mathlib. No project-specific axiom is used.
+-
+-**Table 2. Frozen formalization perimeter (Lean v1.2 freeze).** The frozen Lean 4 / Mathlib v4.28.0 snapshot records the proved core with only Lean's standard foundational axioms and no project-level mathematical axiom. An external clean-room build and theorem-level axiom check reproduced the exact archive.
+-
+-| Node | Statement | Axiom footprint |
+-|---|---|---|
+-| `paperI_main_sharp` (Theorem 1.1) | \(\lvert E(G)\rvert-2\nu_3^*(G)\le n^2/6+n/2\) | `propext`, `Classical.choice`, `Quot.sound` |
+-| `paperI_main` (weaker companion bound) | \(\lvert E(G)\rvert-2\nu_3^*(G)\le n^2/6+n\) | `propext`, `Classical.choice`, `Quot.sound` |
+-| `lpVal_concave`, `lpVal_ge_min` (§5 interface) | abstract concavity / pure-profile lower bound | `propext`, `Classical.choice`, `Quot.sound` |
+-| `lpVal_lipschitz` (§5 interface) | parametric stability of the fractional value | `propext`, `Classical.choice`, `Quot.sound` |
+-| `residual_duality` (Prop. B.1) | finite packing–covering duality | `propext`, `Classical.choice`, `Quot.sound` |
++
++---
+ 
+ 
+ ## Acknowledgements
+@@ -1099,3 +1026,8 @@
+ [6] L. de Moura and S. Ullrich, “The Lean 4 Theorem Prover and Programming Language,” in *Automated Deduction – CADE 28*, Lecture Notes in Computer Science **12699**, Springer, 2021, pp. 625–635, https://doi.org/10.1007/978-3-030-79876-5_37.
+ 
+ [7] The mathlib Community, “The Lean Mathematical Library,” in *Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020)*, ACM, 2020, pp. 367–381, https://doi.org/10.1145/3372885.3373824.
++
++
++[IV] J. P. Traverso Gianini, *Clique partitions with rooted simplicial defect: quantitative stability and sharp eventual bounds*, Paper IV, v1.24 (2026). [Article and formal companion](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_IV).
++
++[V] J. P. Traverso Gianini, *Colorability and Realizability Defects in Resource-Dominated Packing Relaxations*, Paper V (2026). [Article and formal companion](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_V).

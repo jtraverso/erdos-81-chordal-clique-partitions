@@ -1,0 +1,153 @@
+{
+  "paper": "II",
+  "version": "1.3",
+  "checks": [
+    {
+      "id": "en-displays",
+      "pass": true,
+      "baseline_count": 96,
+      "missing": []
+    },
+    {
+      "id": "en-inline-math",
+      "pass": true,
+      "missing": []
+    },
+    {
+      "id": "en-result-headings",
+      "pass": true,
+      "count": 17
+    },
+    {
+      "id": "en-declaration-traceability",
+      "pass": true,
+      "missing": []
+    },
+    {
+      "id": "PAPER_II_preprint_v1.3_en-compiler",
+      "pass": true,
+      "diagnostics": [],
+      "engine": "Tectonic XeTeX + xdvipdfmx",
+      "pdf_output_confirmed": true
+    },
+    {
+      "id": "FORMALIZATION_COMPANION_v1.3_en-compiler",
+      "pass": true,
+      "diagnostics": [],
+      "engine": "Tectonic XeTeX + xdvipdfmx",
+      "pdf_output_confirmed": true
+    },
+    {
+      "id": "es-displays",
+      "pass": true,
+      "baseline_count": 96,
+      "missing": []
+    },
+    {
+      "id": "es-inline-math",
+      "pass": true,
+      "missing": []
+    },
+    {
+      "id": "es-result-headings",
+      "pass": true,
+      "count": 17
+    },
+    {
+      "id": "es-declaration-traceability",
+      "pass": true,
+      "missing": []
+    },
+    {
+      "id": "PAPER_II_preprint_v1.3_es-compiler",
+      "pass": true,
+      "diagnostics": [],
+      "engine": "Tectonic XeTeX + xdvipdfmx",
+      "pdf_output_confirmed": true
+    },
+    {
+      "id": "FORMALIZATION_COMPANION_v1.3_es-compiler",
+      "pass": true,
+      "diagnostics": [],
+      "engine": "Tectonic XeTeX + xdvipdfmx",
+      "pdf_output_confirmed": true
+    },
+    {
+      "id": "bilingual-result-identifiers",
+      "pass": true,
+      "en": [
+        "1.1",
+        "1.2",
+        "1.2",
+        "3.1",
+        "3.2",
+        "4.1",
+        "4.2",
+        "4.3",
+        "5.1",
+        "5.2",
+        "5.3",
+        "6.1",
+        "6.2",
+        "6.3",
+        "7.1",
+        "7.2",
+        "7.3"
+      ],
+      "es": [
+        "1.1",
+        "1.2",
+        "1.2",
+        "3.1",
+        "3.2",
+        "4.1",
+        "4.2",
+        "4.3",
+        "5.1",
+        "5.2",
+        "5.3",
+        "6.1",
+        "6.2",
+        "6.3",
+        "7.1",
+        "7.2",
+        "7.3"
+      ]
+    },
+    {
+      "id": "bilingual-figures",
+      "pass": true
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "01_manuscript/PAPER_II_preprint_v1.3_en.md",
+      "md_sha256": "aedb7e2237aec321de976fecc6040ab8b9532441c6bdd7bb0d92347e9013e0d7",
+      "tex_sha256": "3c5d44faa9be0fa3c2f325399f5ca71aead38c08dc8bae7cbddb90a31227f22a",
+      "pdf_sha256": "6ad90d20708d604356a0ae568a0f5602039e5cda9f75e9315d9a2844f0219e7b",
+      "log_sha256": "7e154661f37341fb43b802869e2134ce559373bad0c681d57e2dce65b6e9b680"
+    },
+    {
+      "file": "05_formalization/FORMALIZATION_COMPANION_v1.3_en.md",
+      "md_sha256": "7ceb0d9c0a7ec4f2b6de9a4e9d7fb6d08538f724f54767b2d84d232a3659a019",
+      "tex_sha256": "44cf850c58f11bae8a16cdad2798bd4b11ab69a3be8c09899cc7ac56332b3b27",
+      "pdf_sha256": "b7b829ca1c98e873624cb6f3e8e01cdff1d63cdc8f7c47a01b409bcc814545b1",
+      "log_sha256": "7b64991c861c45124476f44af3aa829732a7e8e826b6ff9432b6432f286c04e1"
+    },
+    {
+      "file": "01_manuscript/PAPER_II_preprint_v1.3_es.md",
+      "md_sha256": "c867f45af53f89a132c81dd16951c98d4ef9e3bb44a631fd21f1a99d3baa9a3b",
+      "tex_sha256": "8d33d79c0c7bb2846caeab2895d52858d1a54bacf8ce607425313c098cc5c40b",
+      "pdf_sha256": "e932314b21e24cfd9fe9bfe3a75e55e432160b87340f73978fcb987304913f0f",
+      "log_sha256": "1c98f935e1796293a924d458d6ba5e06b7a3ff04ccd2de07e3ad71d9c38427e4"
+    },
+    {
+      "file": "05_formalization/FORMALIZATION_COMPANION_v1.3_es.md",
+      "md_sha256": "e98cd360cc54feefa220de50049391531227cdb7bf5533f279d4fd5068fed9bd",
+      "tex_sha256": "625c59f4ae080feb742af2502b90a1af91d2ccdb3bfc431751dc6eade27172a4",
+      "pdf_sha256": "0e30477adaf60d742fed9e87f677b24406eda0bfc8deeb0eca2d5864c0221e11",
+      "log_sha256": "40905343b200a6f8e2f6c8f3fa0b6d17f7a1547a266b7aa16f9ddfb77fcdbf14"
+    }
+  ],
+  "status": "PASS"
+}

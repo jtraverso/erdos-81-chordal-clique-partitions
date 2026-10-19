@@ -1,0 +1,54 @@
+[
+  {
+    "file": "01_manuscript\\PAPER_I_preprint_v1.4_en.pdf",
+    "pdf_sha256": "977adb51f9eab890c4ab452b21807048dba5d71d291e9ad3717a73556e853231",
+    "pages": 17,
+    "rendered_pages": 17,
+    "bounds_flags": [],
+    "visual_review": "PASS: all pages via contact sheets; selected dense and changed pages at readable resolution",
+    "reviewer": "OpenAI Codex; internal AI-assisted editorial review",
+    "contact_sheets": [
+      "contact-01.png",
+      "contact-02.png",
+      "contact-03.png"
+    ]
+  },
+  {
+    "file": "01_manuscript\\PAPER_I_preprint_v1.4_es.pdf",
+    "pdf_sha256": "a864989970afab7d4d44b26a90738aebfc8e08f76c3d0ad144605a30210ea5a7",
+    "pages": 18,
+    "rendered_pages": 18,
+    "bounds_flags": [],
+    "visual_review": "PASS: all pages via contact sheets; selected dense and changed pages at readable resolution",
+    "reviewer": "OpenAI Codex; internal AI-assisted editorial review",
+    "contact_sheets": [
+      "contact-01.png",
+      "contact-02.png",
+      "contact-03.png"
+    ]
+  },
+  {
+    "file": "05_formalization\\FORMALIZATION_COMPANION_v1.4_en.pdf",
+    "pdf_sha256": "aa1691fabf2853af635b7901f482dd8fccc964eca94044f49cec6f24b9fb1ccf",
+    "pages": 4,
+    "rendered_pages": 4,
+    "bounds_flags": [],
+    "visual_review": "PASS: all pages via contact sheets; selected dense and changed pages at readable resolution",
+    "reviewer": "OpenAI Codex; internal AI-assisted editorial review",
+    "contact_sheets": [
+      "contact-01.png"
+    ]
+  },
+  {
+    "file": "05_formalization\\FORMALIZATION_COMPANION_v1.4_es.pdf",
+    "pdf_sha256": "c2863e392f210e9b879adccd545067eb60878352929bfb896cf2b514f4ec771c",
+    "pages": 4,
+    "rendered_pages": 4,
+    "bounds_flags": [],
+    "visual_review": "PASS: all pages via contact sheets; selected dense and changed pages at readable resolution",
+    "reviewer": "OpenAI Codex; internal AI-assisted editorial review",
+    "contact_sheets": [
+      "contact-01.png"
+    ]
+  }
+]

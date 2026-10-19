@@ -1,12 +1,3 @@
-# Paper II v1.2 manuscript artifacts
+# Paper II manuscripts
 
-- English semantic source: `PAPER_II_preprint_v1.2.md`
-- Spanish semantic source: `PAPER_II_preprint_v1.2_es.md`
-- LaTeX: `PAPER_II_preprint_v1.2_en.tex`, `PAPER_II_preprint_v1.2_es.tex`
-- PDF: `PAPER_II_preprint_v1.2_en.pdf`, `PAPER_II_preprint_v1.2_es.pdf`
-- Figures: `figures/`
-- Release consistency report: `PAPER_II_preprint_v1.2_CONSISTENCY_REPORT.md`
-- SHA-256 sidecar: `PAPER_II_preprint_v1.2_SHA256.txt`
-
-Markdown is the semantic authority. The PDFs were compiled from the delivered
-TeX after the release-status promotion and then rendered for visual QA.
+Current editorial edition: v1.3. [Article and companion, EN/ES](../README.md). [Previous v1.2](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_II/01_manuscript) remains unchanged. [Changelog](../CHANGELOG_v1.3.md).

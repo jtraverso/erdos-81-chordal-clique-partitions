@@ -1,0 +1,210 @@
+--- published_1.3_es
++++ editorial_1.4_es
+@@ -2,19 +2,12 @@
+ 
+ **Juan Pablo Traverso Gianini**  
+ Investigador independiente, Santiago, Chile  
+-[jtraverso@gmail.com](mailto:jtraverso@gmail.com)  
+-[ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
+-
+-**Paper I de la serie**  
+-**Preprint:** versión 1.3. Este manuscrito y su artefacto formal adjunto forman un único paquete público autocontenido.  
+-**Fecha de publicación:** 22 de agosto de 2026  
+-**Estado:** preprint oficial del autor. El freeze adjunto Paper I Lean v1.2 incluye la evidencia de build registrada y las consultas de axiomas por teorema descritas en la Sección 10. El archivo exacto y el paquete del manuscrito superaron una auditoría adversarial externa independiente. Esta publicación no constituye revisión externa humana por pares ni una determinación especializada de prioridad.
+-
+-**Estado del arte previo y la novedad.** La auditoría interna de literatura, complementada por la revisión adversarial externa, no identificó un resultado anterior con la misma cota fraccional finita para grafos split y la misma reducción afín de perfiles. El problema más amplio de particiones en cliques de grafos cordales sigue abierto. Esta es una búsqueda negativa acotada por su corpus, no una demostración de prioridad ni un sustituto de una revisión especializada.
+-
+-**MSC 2020:** Primario 05C70; secundarios 05C35, 05C72.
+-
+----
++[jtraverso@gmail.com](mailto:jtraverso@gmail.com) · [ORCID: 0009-0003-6068-4096](https://orcid.org/0009-0003-6068-4096)
++
++**Paper I · Preprint, versión 1.4**  
++19 de octubre de 2026
++
++**MSC 2020:** 05C70; 05C35, 05C72.
+ 
+ ## Resumen
+ 
+@@ -26,8 +19,8 @@
+ 
+ \[
+ \boxed{
+-|E(G)|-2\nu_3^*(G)\le \frac{n^2}{6}+\frac{n}{2},
+-}
++|E(G)|-2\nu_3^*(G)\le \frac{n^2}{6}+\frac{n}{2}
++},
+ \]
+ 
+ donde \(\nu_3^*(G)\) es el valor máximo de un empaquetamiento fraccional de triángulos. La constante principal \(1/6\) es la que aparece en el Problema #81 de Erdős sobre particiones en cliques de grafos cordales; el presente resultado se ocupa del problema fraccional finito para la subclase de grafos split. La demostración es finita y analítica. No se usa ningún teorema de transferencia asintótica. La familia complete-split \(K_p\vee\overline{K}_{2p}\) muestra que no es posible un coeficiente aditivo uniforme menor que \(1/6\). Artículos posteriores de la serie obtienen cotas más fuertes para la misma cantidad mediante argumentos independientes y no dependen del presente resultado. Lo que reutilizan es la reducción afín y la tricotomía de tres órbitas resultante.
+@@ -44,9 +37,9 @@
+ 
+ El punto estructural principal es que el politopo factible de coberturas no depende del perfil de vecindarios del conjunto independiente. Solo cambia el vector objetivo. Como el óptimo de un problema de minimización sobre un politopo fijo es cóncavo en su vector objetivo, un perfil mixto de vecindarios está acotado inferiormente por la correspondiente combinación convexa de valores de perfiles puros y, por tanto, por el menor de esos valores. Esto no identifica un perfil mixto con uno puro; muestra que una cota inferior uniforme puede probarse considerando perfiles puros. El caso puro tiene entonces suficiente simetría para reducirse a tres variables de órbita.
+ 
+-**Papel dentro del programa más amplio.** Este artículo es autocontenido salvo por el teorema estándar de dualidad fuerte de programación lineal en dimensión finita citado y aplicado en Apéndice B. Su propósito es aislar el mecanismo de reducción afín de perfiles en el contexto split y proporcionar una aplicación fraccional finita. Dentro de la serie sobre Erdős Problem #81, este mecanismo es el punto de partida: Paper II determina el máximo fraccional exacto del funcional de cobertura sobre grafos cordales; Paper III prueba el teorema de error lineal para particiones en cliques de grafos split; y Paper IV desarrolla una interfaz general de transferencia y redondeo para relajaciones de empaquetamiento dominadas por recursos. Ninguno de esos resultados posteriores se usa aquí.
+-
+-**Notación de la serie.** En las comparaciones entre artículos, el déficit fraccional de Paper I se escribe \(\Phi^*(G)=|E(G)|-2\nu_3^*(G)\). Paper II denota la misma cantidad por \(\Phi_\tau(G)=|E(G)|-2\tau_3^*(G)\), mientras que Paper III reserva \(\Phi(G)\), sin estrella, para el déficit integral \(|E(G)|-2\nu_3(G)\). El identificador Lean `Phi` del artefacto de Paper I se conserva por trazabilidad.
++**Papel dentro del programa más amplio.** Este artículo es autocontenido salvo por el teorema estándar de dualidad fuerte de programación lineal en dimensión finita citado y aplicado en Apéndice B. Su propósito es aislar el mecanismo de reducción afín de perfiles en el contexto split y proporcionar una aplicación fraccional finita. Dentro de la serie sobre Erdős Problem #81, este mecanismo es el punto de partida: Paper II determina el máximo fraccional exacto del funcional de cobertura sobre grafos cordales; Paper III prueba el teorema de error lineal para particiones en cliques de grafos split; Paper IV desarrolla las cotas cordales y los resultados de estabilidad estructural posteriores [IV]; y Paper V estudia los defectos de colorabilidad y realizabilidad mediante un marco general de transferencia [V]. Ninguno de esos resultados posteriores se usa aquí.
++
++**Notación de la serie.** En las comparaciones entre artículos, el déficit fraccional de Paper I se escribe \(\Phi^*(G)=|E(G)|-2\nu_3^*(G)\). Paper II denota la misma cantidad por \(\Phi_\tau(G)=|E(G)|-2\tau_3^*(G)\), mientras que Paper III reserva \(\Phi(G)\), sin estrella, para el déficit integral \(|E(G)|-2\nu_3(G)\).
+ 
+ La demostración resultante tiene la forma
+ 
+@@ -74,7 +67,6 @@
+ \frac{n^2}{6}+\frac{n}{2}.
+ \]
+ 
+-**Estado de la formalización.** El freeze Paper I Lean v1.2 usa Lean 4 / Mathlib v4.28.0 [6,7] y registra el Teorema 1.1 como `paperI_main_sharp`. La declaración `paperI_main` proporciona una forma compañera más débil con término aditivo \(n\). En estos nombres registrados, `sharp` se refiere al coeficiente cuadrático \(1/6\), no a la optimalidad del término aditivo. El gate de axiomas cubre el teorema principal, `PaperI.assembly_sharp`, `PaperI.Split.residual_duality`, la dualidad finita empaquetamiento–cobertura de la Proposición B.1 y las declaraciones de interfaz enumeradas en la Sección 10. Su huella registrada es `propext`, `Classical.choice` y `Quot.sound`, sin axiomas matemáticos propios del proyecto. La Sección 10 presenta el registro del freeze y del archivo.
+ 
+ El ledger de cálculos adjunto registra las identidades exactas, las direcciones de las desigualdades, la estructura de ramas y la contabilidad de pérdidas empleadas en la demostración. El manuscrito mantiene visible, pero compacta, el álgebra rutinaria.
+ 
+@@ -320,8 +312,8 @@
+ \boxed{
+ V_{\mathrm{com}}
+ =
+-\frac{b_{\ge2}}2+M(\kappa).
+-}
++\frac{b_{\ge2}}2+M(\kappa)
++}.
+ \tag{4.7}
+ \]
+ 
+@@ -348,8 +340,8 @@
+ \boxed{
+ |E(G)|-2V_{\mathrm{com}}
+ =
+-\binom{p}{2}-2M(\kappa)+b_1.
+-}
++\binom{p}{2}-2M(\kappa)+b_1
++}.
+ \tag{4.9}
+ \]
+ 
+@@ -438,8 +430,8 @@
+ \ge
+ \sum_S\lambda_SM(\kappa^S)
+ \ge
+-\min_SM(\kappa^S).
+-}
++\min_SM(\kappa^S)
++}.
+ \tag{5.4}
+ \]
+ 
+@@ -453,7 +445,7 @@
+ \[
+ M_b(\kappa_\mu)\ \ge\ \sum_S \tfrac{\mu_S}{q}\,M_b(\kappa^{S,q})\ \ge\ \min_S M_b(\kappa^{S,q}).
+ \]
+-Esto se registra en el desarrollo formal como `lpVal_concave` y `lpVal_ge_min`. Una estimación complementaria, `lpVal_lipschitz`, acota la variación del valor fraccional cuando se perturban el baseline o la distribución de perfiles. Está pensada para variantes robustas y casi split. Ambas se formulan para un politopo factible fijo con una función objetivo que varía afínmente; ninguna requiere simetría, que solo interviene después, sobre un único perfil puro, en la Sección 6.
++Una estimación complementaria de estabilidad acota la variación del valor fraccional cuando se perturban el baseline o la distribución de perfiles. Está pensada para variantes robustas y casi split. Ambas se formulan para un politopo factible fijo con una función objetivo que varía afínmente; ninguna requiere simetría, que solo interviene después, sobre un único perfil puro, en la Sección 6.
+ 
+ ## 6. El programa de órbitas del perfil puro
+ 
+@@ -648,8 +640,8 @@
+ \boxed{
+ M(\kappa)
+ \ge
+-R(p,q)-\frac p2.
+-}
++R(p,q)-\frac p2
++}.
+ \tag{7.8}
+ \]
+ 
+@@ -757,30 +749,9 @@
+ 
+ ---
+ 
+-## 10. Reproducibilidad y registro de la demostración
+-
+-La demostración es analítica. Durante el desarrollo se usaron experimentos computacionales para buscar contraejemplos y detectar errores de transcripción, pero ningún cálculo es una premisa lógica del teorema. Por esa razón, el material de regresión computacional se mantiene fuera del artículo, en lugar de incluirse como un segundo apéndice.
+-
+-El ledger de cálculos adjunto registra:
+-
+-- cada identidad exacta;
+-- cada dirección de desigualdad;
+-- la contabilidad completa de pérdidas;
+-- la rama \(q=0\);
+-- los regímenes de órbitas;
+-- la conversión final a \(n\).
+-
+-El autor reporta una auditoría adversarial interna asistida por IA del enunciado del teorema, la cota cuantitativa y el ensamblaje de la demostración. Este es un registro de validación, no una afirmación de revisión externa por pares.
+-
+-### Estado de formalización en Lean
+-
+-El snapshot en `PAPER_I/05_formalization/lean_v1.2_freeze` contiene las fuentes Lean y un build registrado exitoso de 8.034 jobs con Lean 4 / Mathlib v4.28.0 [6,7]. Contiene `paperI_main_sharp`, cuyo enunciado es `Phi ≤ n^2/6 + n/2`, junto con la declaración compañera más débil `paperI_main` y los resultados de interfaz enumerados más abajo. Su gate de axiomas también consulta `PaperI.assembly_sharp` y `PaperI.Split.residual_duality`. El Apéndice C registra la declaración principal. Posteriormente, el archivo exacto se reprodujo en un clean room externo con el mismo resultado de 8.034 jobs y la misma huella axiomática por teorema.
+-
+-El informe de axiomas congelado registra únicamente los axiomas fundacionales estándar de Lean, `propext`, `Classical.choice` y `Quot.sound`, para el teorema principal y las declaraciones enumeradas; no registra ningún axioma matemático propio del proyecto. Se trata de fundamentos lógicos usados en todo Mathlib, no de supuestos matemáticos adicionales del artículo.
+-
+-El artefacto de release también registra la dualidad finito-dimensional empaquetamiento-cobertura usada en Proposición B.1. En Lean aparece como `residual_duality`, una aplicación del teorema general `covering_packing_duality`. El artefacto registra este último teorema como derivado de un lema de Farkas finito y de la infraestructura de conos cerrados de Mathlib, en lugar de postularlo como un axioma externo. Schrijver [4, Capítulo 7] sigue siendo la referencia clásica para la demostración escrita.
+-
+-El archivo de fuentes congelado es `PAPER_I_lean_v1.2_freeze.zip`, con SHA-256 `0181506408644fc1f8872d711de5a98a500f4052aa295bcd6f8c82776694fd3a`. Se almacena bajo `PAPER_I/05_formalization/lean_v1.2_freeze` y excluye los caches del proyecto y los objetos compilados. El target del build congelado incluye varios módulos `Contrib` destinados a un posible upstream; esa vía de contribución es un subproducto y no forma parte de los supuestos matemáticos de confianza del artículo. El informe de axiomas anterior controla la afirmación sobre dependencias lógicas. La reproducción externa en clean room corresponde exactamente a estos bytes del archivo; la revisión del manuscrito no modifica el artefacto formal.
++## 10. Formalización y reproducibilidad
++
++El [documento de formalización y reproducibilidad](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/preprints/PAPER_I/05_formalization/FORMALIZATION_COMPANION_v1.4_es.pdf) identifica el congelado Lean/Mathlib conservado, sus interfaces y las evidencias registradas de compilación y axiomas. Esta edición editorial no modifica los resultados matemáticos ni las fuentes congeladas; no se ejecutó una nueva compilación Lean/Lake. Las comprobaciones computacionales son evidencias complementarias, no premisas de las demostraciones.
+ 
+ ---
+ 
+@@ -1024,51 +995,9 @@
+ 
+ Por tanto, el óptimo primal es finito y se alcanza. El dual es factible, por ejemplo con \(x_e=1\) para toda \(e\). La dualidad fuerte de programación lineal en dimensión finita [4, Capítulo 7] da entonces igualdad entre los dos valores óptimos alcanzados. Aplicar la proposición a los triángulos de la clique y a las capacidades residuales \(r_e\) de (4.4) entrega el programa dual usado en Sección 4.
+ 
+-**Nota de formalización.** El freeze v1.2 registra la Proposición B.1 como la declaración Lean `PaperI.Split.residual_duality`, una instancia del teorema general de dualidad fuerte finita `covering_packing_duality`. El artefacto registra este último como probado a partir de un lema de Farkas finito, usando el carácter cerrado de un cono convexo finitamente generado y el teorema de separación por hiperplanos para conos convexos cerrados. Por tanto, la dualidad usada aquí se deriva dentro del desarrollo formal y no se postula como un axioma específico del proyecto. Schrijver sigue siendo la referencia clásica para el argumento escrito. Las fuentes correspondientes, el log de build y el informe de axiomas se entregan en `PAPER_I/05_formalization/lean_v1.2_freeze`.
+-
+----
+-
+-## Apéndice C. Enunciado formalizado
+-
+-El artefacto formal adjunto registra la siguiente declaración Lean 4 para el Teorema 1.1:
+-
+-```lean
+-theorem paperI_main_sharp (G : Split) :
+-    G.Phi ≤ (G.n : ℝ) ^ 2 / 6 + (G.n : ℝ) / 2
+-
+--- forma compañera más débil (término aditivo mayor):
+-theorem paperI_main (G : Split) :
+-    G.Phi ≤ (G.n : ℝ) ^ 2 / 6 + (G.n : ℝ)
+-```
+-
+-Aquí `Split` empaqueta los datos de un grafo split usados en la demostración: una clique de tamaño `p`, un tipo de vértices independientes y los vecindarios de esos vértices dentro de la clique. El campo `n` es el número total de vértices. La cantidad `Phi` se define como `|E| − 2·nu3star`, donde `nu3star` es el supremo de los valores factibles de empaquetamiento fraccional de triángulos. En otros artículos de la serie este déficit fraccional se escribe \(\Phi^*\), mientras que \(\Phi\), sin estrella, se reserva para el déficit integral \(|E(G)|-2\nu_3(G)\); el identificador Lean se conserva para coincidir con la declaración registrada. Con estas definiciones, `paperI_main_sharp` es exactamente
+-
+-\[
+-|E(G)|-2\nu_3^*(G)\le \frac{n^2}{6}+\frac{n}{2},
+-\]
+-
+-la desigualdad enunciada en el Teorema 1.1 (declaración `paperI_main_sharp`). La declaración compañera `paperI_main` registra el término aditivo más débil \(n\).
+-
+-El informe de build suministrado registra cero `sorry`. El informe de axiomas suministrado es:
+-
+-```text
+-PaperI.Split.paperI_main_sharp depends on axioms: [propext, Classical.choice, Quot.sound]
+-PaperI.paperI_main         depends on axioms: [propext, Classical.choice, Quot.sound]
+-PaperI.assembly_sharp      depends on axioms: [propext, Classical.choice, Quot.sound]
+-PaperI.Split.residual_duality depends on axioms: [propext, Classical.choice, Quot.sound]
+-```
+-
+-Estos son los tres axiomas fundacionales estándar de Lean y Mathlib. No se usa ningún axioma específico del proyecto.
+-
+-**Tabla 2. Perímetro de la formalización congelada (freeze Lean v1.2).** El snapshot congelado de Lean 4 / Mathlib v4.28.0 registra el núcleo demostrado usando únicamente los axiomas fundacionales estándar de Lean y ningún axioma matemático propio del proyecto. Una compilación externa en clean room y una comprobación de axiomas por teorema reprodujeron el archivo exacto.
+-
+-| Nodo | Enunciado | Huella axiomática |
+-|---|---|---|
+-| `paperI_main_sharp` (Teorema 1.1) | \(\lvert E(G)\rvert-2\nu_3^*(G)\le n^2/6+n/2\) | `propext`, `Classical.choice`, `Quot.sound` |
+-| `paperI_main` (cota compañera más débil) | \(\lvert E(G)\rvert-2\nu_3^*(G)\le n^2/6+n\) | `propext`, `Classical.choice`, `Quot.sound` |
+-| `lpVal_concave`, `lpVal_ge_min` (interfaz de §5) | concavidad abstracta / cota inferior por perfiles puros | `propext`, `Classical.choice`, `Quot.sound` |
+-| `lpVal_lipschitz` (interfaz de §5) | estabilidad paramétrica del valor fraccional | `propext`, `Classical.choice`, `Quot.sound` |
+-| `residual_duality` (Prop. B.1) | dualidad finita empaquetamiento–cobertura | `propext`, `Classical.choice`, `Quot.sound` |
++
++---
++
+ 
+ ## Agradecimientos
+ 
+@@ -1098,3 +1027,7 @@
+ 
+ [7] The mathlib Community, “The Lean Mathematical Library,” in *Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020)*, ACM, 2020, pp. 367–381, https://doi.org/10.1145/3372885.3373824.
+ 
++
++[IV] J. P. Traverso Gianini, *Clique partitions with rooted simplicial defect: quantitative stability and sharp eventual bounds*, Paper IV, v1.24 (2026). [Article and formal companion](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_IV).
++
++[V] J. P. Traverso Gianini, *Colorability and Realizability Defects in Resource-Dominated Packing Relaxations*, Paper V (2026). [Article and formal companion](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_V).

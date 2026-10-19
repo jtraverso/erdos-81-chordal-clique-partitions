@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "Please cite the individual preprint used; metadata for each paper is included in its package."
 title: "Clique partitions and chordal structure — Papers I–VI and series notes"
-version: "Paper I v1.3; Paper II v1.2; Paper III v1.5; Paper IV v1.24; Paper V 1.0; Paper VI 1.0; Notes I–II 1.0"
+version: "Paper I v1.4; Paper II v1.3; Paper III v1.6; Paper IV v1.24; Paper V 1.0; Paper VI 1.0; Notes I–II 1.0"
 doi: "10.5281/zenodo.23476768"
 authors:
   - family-names: "Traverso Gianini"

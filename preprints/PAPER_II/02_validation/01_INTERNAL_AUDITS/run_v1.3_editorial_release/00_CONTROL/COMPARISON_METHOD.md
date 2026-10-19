@@ -1,0 +1,1 @@
+The automated comparison implementation is recorded in the coordinated release control directory. Exact baseline texts and protected-expression indices are included in this audit; the SHA-256 and Git-tree verifier is executable without Lean.
