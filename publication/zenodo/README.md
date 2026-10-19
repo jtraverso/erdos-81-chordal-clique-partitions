@@ -1,6 +1,6 @@
 # Zenodo collection: individual PDFs
 
-The current collection is [version 8](https://doi.org/10.5281/zenodo.23478825): 32 individual PDFs. See the [public verification receipt](v8_23478825/PUBLIC_RECEIPT.json) and [preservation details](v8_23478825/README.md).
+The current collection is [version 9](https://doi.org/10.5281/zenodo.23479507): 32 individual PDFs. [Verified receipt](v9_23479507/PUBLIC_RECEIPT.json). The preceding [version 8](https://doi.org/10.5281/zenodo.23478825) is preserved. See the [public verification receipt](v8_23478825/PUBLIC_RECEIPT.json) and [preservation details](v8_23478825/README.md).
 
 ## Historical packaging correction — version 6
 

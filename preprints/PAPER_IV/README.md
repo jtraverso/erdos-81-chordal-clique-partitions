@@ -30,6 +30,8 @@ The [source freeze](https://github.com/jtraverso/erdos-81-chordal-clique-partiti
 
 The [new internal editorial audit](02_validation/01_INTERNAL_AUDITS/run_v1.24_editorial_release/10_REPORT/FINAL_INTERNAL_AUDIT_REPORT.md) passes within its declared scope, with document hashes, semantic comparisons, source identity checks and rendered-page evidence. It is AI-assisted internal review, not human peer review. The [earlier external audit report](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/ef31294ad67dfe3f44bc47cec4791c836f55e8aa/preprints/PAPER_IV/02_validation/02_IA_ADVERSARIAL_AUDITS/run_v1.22_r4/30_REPORT/FINAL_CONSOLIDATED_AUDIT_REPORT.md) applies to its original snapshot and is not relabeled as a new audit.
 
+[Deposited article v1.24.1 and companion v1.24](https://doi.org/10.5281/zenodo.23479507) · [Current coordinated release](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/tag/series-editorial-2026-10-19).
+
 ## Reproduction, history and citation
 
 - [Patch integrity](04_integrity/EDITORIAL_v1.24.1/README.md). Compile the two supplied v1.24.1 TeX files with `tectonic --keep-logs` from `01_manuscript/`; no Lean/Lake command is required.

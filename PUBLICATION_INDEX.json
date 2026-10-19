@@ -40,7 +40,7 @@
       "version": "1.24.1",
       "path": "preprints/PAPER_IV",
       "main_stem": "PAPER_IV_preprint_v1.24.1",
-      "collection_doi": "10.5281/zenodo.21273143",
+      "collection_doi": "10.5281/zenodo.23479507",
       "companion_stem": "FORMALIZATION_COMPANION_v1.24",
       "formal_source_freeze": "piv-v12-fb459343d234",
       "formal_source_commit": "ef31294ad67dfe3f44bc47cec4791c836f55e8aa",
@@ -85,13 +85,18 @@
     }
   ],
   "zenodo": {
-    "collection_doi": "10.5281/zenodo.23478825",
+    "collection_doi": "10.5281/zenodo.23479507",
     "concept_doi": "10.5281/zenodo.21273143",
-    "record_id": 23478825,
-    "collection_version": "8",
+    "record_id": 23479507,
+    "collection_version": "9",
     "files": 32,
-    "total_bytes": 5473489,
-    "previous_record": 23476768,
-    "receipt": "publication/zenodo/v8_23478825/PUBLIC_RECEIPT.json"
+    "total_bytes": 5473498,
+    "previous_record": 23478825,
+    "receipt": "publication/zenodo/v9_23479507/PUBLIC_RECEIPT.json"
+  },
+  "github_release": {
+    "tag": "series-editorial-2026-10-19",
+    "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/tag/series-editorial-2026-10-19",
+    "content_commit": "15a11dccc59caa0b17a04222123db9f1fec947cd"
   }
 }

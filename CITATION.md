@@ -1,6 +1,6 @@
 # Citation
 
-Please identify the individual paper or note and the version used. Each package contains CITATION.cff and CITATION.bib.
+Please identify the individual paper or note and the version used. Use the repository CITATION.bib for individual BibTeX entries and each package CITATION.cff for version-specific metadata.
 
 Papers I v1.3, II v1.2, III v1.5 and IV v1.23 are deposited at [10.5281/zenodo.23089131](https://doi.org/10.5281/zenodo.23089131). The evolving series concept DOI is [10.5281/zenodo.21273143](https://doi.org/10.5281/zenodo.21273143).
 
@@ -17,4 +17,6 @@ Paper IV v1.24 is an editorial revision with an unchanged Lean freeze. See its [
 
 The [preceding collection, version 7](https://doi.org/10.5281/zenodo.23476768) contains 26 individual PDFs, including Paper IV v1.24 and its separate English/Spanish formal companion. The 22 PDFs belonging to other works are unchanged.
 
-The [current collection, version 8](https://doi.org/10.5281/zenodo.23478825) contains 32 individual PDFs, including Paper I v1.4, II v1.3 and III v1.6 and their EN/ES formal companions. These are editorial editions; mathematical content and Lean freezes are unchanged. Identify the individual work and version when citing. [Verified deposit](publication/zenodo/v8_23478825/README.md).
+The [preceding collection, version 8](https://doi.org/10.5281/zenodo.23478825) contains 32 individual PDFs, including Paper I v1.4, II v1.3 and III v1.6 and their EN/ES formal companions. These are editorial editions; mathematical content and Lean freezes are unchanged. Identify the individual work and version when citing. [Verified deposit](publication/zenodo/v8_23478825/README.md).
+
+The [current collection, version 9](https://doi.org/10.5281/zenodo.23479507) contains Paper IV article v1.24.1, with its unchanged companion v1.24. The other 30 PDFs retain their previous versions and bytes. [Navigation-only changelog](preprints/PAPER_IV/CHANGELOG_v1.24.1.md).

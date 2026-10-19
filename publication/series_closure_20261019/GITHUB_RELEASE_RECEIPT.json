@@ -1,0 +1,210 @@
+{
+  "status": "PUBLIC_LATEST_VERIFIED",
+  "tag": "series-editorial-2026-10-19",
+  "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/tag/series-editorial-2026-10-19",
+  "target_commit": "15a11dccc59caa0b17a04222123db9f1fec947cd",
+  "asset_count": 33,
+  "pdf_count": 32,
+  "assets": [
+    {
+      "name": "CHORDAL_STABILITY_NOTE_v1.0_en.pdf",
+      "bytes": 57500,
+      "digest": "sha256:dc04832b7afc04ec8e81f1b351765e7a520dd0d483a67ad74e85e9828e7e2d4d",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/CHORDAL_STABILITY_NOTE_v1.0_en.pdf"
+    },
+    {
+      "name": "CHORDAL_STABILITY_NOTE_v1.0_es.pdf",
+      "bytes": 58202,
+      "digest": "sha256:5925f0aadf9989e3199fdbd35f26bfeb5be74474d000507b48deff3a4db3fdf9",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/CHORDAL_STABILITY_NOTE_v1.0_es.pdf"
+    },
+    {
+      "name": "ERDOS81_TRANSFER_NOTE_v1.0_en.pdf",
+      "bytes": 66028,
+      "digest": "sha256:ee43e6fdc2c9d72c258af20a8e2b064dce015a65288c9dd76773bc0a54b2e919",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/ERDOS81_TRANSFER_NOTE_v1.0_en.pdf"
+    },
+    {
+      "name": "ERDOS81_TRANSFER_NOTE_v1.0_es.pdf",
+      "bytes": 67882,
+      "digest": "sha256:7ced575c385891ab8b4500152a72881ee27f58cfd2007eb86af88a591d135456",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/ERDOS81_TRANSFER_NOTE_v1.0_es.pdf"
+    },
+    {
+      "name": "NOTE_II_FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "bytes": 31732,
+      "digest": "sha256:58dbce77cf9bf305e63360b7bfbbd53e7ad9c27c8337ca78d4d40f56aaa9c592",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/NOTE_II_FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    {
+      "name": "NOTE_II_FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "bytes": 32207,
+      "digest": "sha256:ca68c3c0b993efae5b8c53602becb11d09d54c414bf0a38f5942e69271de48dd",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/NOTE_II_FORMALIZATION_COMPANION_v1.0_es.pdf"
+    },
+    {
+      "name": "NOTE_I_FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "bytes": 51875,
+      "digest": "sha256:585427c3ee7899d9fc9cc6a5d5fc68ccf8bfac8952a7c92d13ce6593a8120775",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/NOTE_I_FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    {
+      "name": "NOTE_I_FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "bytes": 53284,
+      "digest": "sha256:521956bf53a11edc21285d7b0ead9abc02e63d446a3476c66174b2d7caa794df",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/NOTE_I_FORMALIZATION_COMPANION_v1.0_es.pdf"
+    },
+    {
+      "name": "PAPER_III_FORMALIZATION_COMPANION_v1.6_en.pdf",
+      "bytes": 68381,
+      "digest": "sha256:605d4c844214df361d5f5af5c0c609d176d58c5a014b5bdf6f8271b7c22e9383",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_III_FORMALIZATION_COMPANION_v1.6_en.pdf"
+    },
+    {
+      "name": "PAPER_III_FORMALIZATION_COMPANION_v1.6_es.pdf",
+      "bytes": 69833,
+      "digest": "sha256:58595ce793da680de6e742f69a37f512e8f7910be8bd427509385c33a2ca3aa0",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_III_FORMALIZATION_COMPANION_v1.6_es.pdf"
+    },
+    {
+      "name": "PAPER_III_preprint_v1.6_en.pdf",
+      "bytes": 408897,
+      "digest": "sha256:4922415e2d6c04a09eb5808b7d556d6b2ce4353e126f32f43dfd74a0558762d0",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_III_preprint_v1.6_en.pdf"
+    },
+    {
+      "name": "PAPER_III_preprint_v1.6_es.pdf",
+      "bytes": 415417,
+      "digest": "sha256:3cde6723477ae255ec797979080cc17af202766bfe62ef6828ffb050d56123c6",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_III_preprint_v1.6_es.pdf"
+    },
+    {
+      "name": "PAPER_II_FORMALIZATION_COMPANION_v1.3_en.pdf",
+      "bytes": 77565,
+      "digest": "sha256:b7b829ca1c98e873624cb6f3e8e01cdff1d63cdc8f7c47a01b409bcc814545b1",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_II_FORMALIZATION_COMPANION_v1.3_en.pdf"
+    },
+    {
+      "name": "PAPER_II_FORMALIZATION_COMPANION_v1.3_es.pdf",
+      "bytes": 78873,
+      "digest": "sha256:0e30477adaf60d742fed9e87f677b24406eda0bfc8deeb0eca2d5864c0221e11",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_II_FORMALIZATION_COMPANION_v1.3_es.pdf"
+    },
+    {
+      "name": "PAPER_II_preprint_v1.3_en.pdf",
+      "bytes": 393163,
+      "digest": "sha256:6ad90d20708d604356a0ae568a0f5602039e5cda9f75e9315d9a2844f0219e7b",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_II_preprint_v1.3_en.pdf"
+    },
+    {
+      "name": "PAPER_II_preprint_v1.3_es.pdf",
+      "bytes": 421711,
+      "digest": "sha256:e932314b21e24cfd9fe9bfe3a75e55e432160b87340f73978fcb987304913f0f",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_II_preprint_v1.3_es.pdf"
+    },
+    {
+      "name": "PAPER_IV_FORMALIZATION_COMPANION_v1.24_en.pdf",
+      "bytes": 99275,
+      "digest": "sha256:26f832db28b7abebd0d9020adbacbbfdcc2411d6ca843afe898b649009efbb1f",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_IV_FORMALIZATION_COMPANION_v1.24_en.pdf"
+    },
+    {
+      "name": "PAPER_IV_FORMALIZATION_COMPANION_v1.24_es.pdf",
+      "bytes": 98828,
+      "digest": "sha256:80a1874594a03b7359d882bc289d6916521011497c6f84ecf0e198ace5f7647f",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_IV_FORMALIZATION_COMPANION_v1.24_es.pdf"
+    },
+    {
+      "name": "PAPER_IV_preprint_v1.24.1_en.pdf",
+      "bytes": 450904,
+      "digest": "sha256:8607587130a0172c8990d14144c5893512d0a87a7fe6bf167823daa63005e441",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_IV_preprint_v1.24.1_en.pdf"
+    },
+    {
+      "name": "PAPER_IV_preprint_v1.24.1_es.pdf",
+      "bytes": 457231,
+      "digest": "sha256:1a0c2cfa35bbef5a6462b6b742fa4393d534b35a50b5b9583c069bae26b6d3d3",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_IV_preprint_v1.24.1_es.pdf"
+    },
+    {
+      "name": "PAPER_I_FORMALIZATION_COMPANION_v1.4_en.pdf",
+      "bytes": 63798,
+      "digest": "sha256:aa1691fabf2853af635b7901f482dd8fccc964eca94044f49cec6f24b9fb1ccf",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_I_FORMALIZATION_COMPANION_v1.4_en.pdf"
+    },
+    {
+      "name": "PAPER_I_FORMALIZATION_COMPANION_v1.4_es.pdf",
+      "bytes": 64681,
+      "digest": "sha256:c2863e392f210e9b879adccd545067eb60878352929bfb896cf2b514f4ec771c",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_I_FORMALIZATION_COMPANION_v1.4_es.pdf"
+    },
+    {
+      "name": "PAPER_I_preprint_v1.4_en.pdf",
+      "bytes": 298248,
+      "digest": "sha256:977adb51f9eab890c4ab452b21807048dba5d71d291e9ad3717a73556e853231",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_I_preprint_v1.4_en.pdf"
+    },
+    {
+      "name": "PAPER_I_preprint_v1.4_es.pdf",
+      "bytes": 328756,
+      "digest": "sha256:a864989970afab7d4d44b26a90738aebfc8e08f76c3d0ad144605a30210ea5a7",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_I_preprint_v1.4_es.pdf"
+    },
+    {
+      "name": "PAPER_VI_FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "bytes": 42520,
+      "digest": "sha256:55e9828cc157b61e8f130ef7b65ec9261a1eb48fd2e0362337962e7a8b1ae47c",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_VI_FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    {
+      "name": "PAPER_VI_FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "bytes": 43986,
+      "digest": "sha256:9cfa28610a438f9dcb16ab3ed2a191ce49042fb7d4fba7d9d74b95b3ceef7349",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_VI_FORMALIZATION_COMPANION_v1.0_es.pdf"
+    },
+    {
+      "name": "PAPER_VI_preprint_v1.0_en.pdf",
+      "bytes": 145011,
+      "digest": "sha256:b7e40eb47ce17efb22bba680fcf6bef98777a1802308819ff035398f48c3c740",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_VI_preprint_v1.0_en.pdf"
+    },
+    {
+      "name": "PAPER_VI_preprint_v1.0_es.pdf",
+      "bytes": 150436,
+      "digest": "sha256:a8349949005413de5f82bc5f7103ee9e3dfea2deaf8cecadbfc0c8e894379a45",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_VI_preprint_v1.0_es.pdf"
+    },
+    {
+      "name": "PAPER_V_FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "bytes": 49954,
+      "digest": "sha256:139b86a12b73763628ebb1c9066fce34115020643e9703720316ff6dfcdded88",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_V_FORMALIZATION_COMPANION_v1.0_en.pdf"
+    },
+    {
+      "name": "PAPER_V_FORMALIZATION_COMPANION_v1.0_es.pdf",
+      "bytes": 51858,
+      "digest": "sha256:80b4256d3b7b9a3ce42929371149bb40c2baf7f280da8b46e01a07aa05aa7f11",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_V_FORMALIZATION_COMPANION_v1.0_es.pdf"
+    },
+    {
+      "name": "PAPER_V_preprint_v1.0_en.pdf",
+      "bytes": 380461,
+      "digest": "sha256:2a9fce5f7c83750daada99b906c142206b3e6b7c1bf88175d04b30db7d3f7a56",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_V_preprint_v1.0_en.pdf"
+    },
+    {
+      "name": "PAPER_V_preprint_v1.0_es.pdf",
+      "bytes": 395001,
+      "digest": "sha256:edfbedd896e25cfbb6b87c55bc66b733ab2f416526857447724b8c2a20dfad7a",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/PAPER_V_preprint_v1.0_es.pdf"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 3328,
+      "digest": "sha256:9ba4339e8ec371c133f8880b5e7ec9629d9115eaf161021b5723cd54a0c539ec",
+      "url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/releases/download/series-editorial-2026-10-19/SHA256SUMS.txt"
+    }
+  ],
+  "zenodo_record": 23479507,
+  "previous_releases_preserved": true
+}
