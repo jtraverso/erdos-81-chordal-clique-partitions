@@ -28,7 +28,7 @@ La edición actual conserva los resultados y las pruebas, actualiza las relacion
 - [Previous v1.2 article](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_II/01_manuscript) and [previous package guide](https://github.com/jtraverso/erdos-81-chordal-clique-partitions/tree/eb335845bfa23375d5040ea31fc4f4b366346287/preprints/PAPER_II/README.md). Historical evidence keeps its original scope.
 - [Document reproduction](03_reproducibility/editorial_v1.3/README.md) · [Integrity](04_integrity/EDITORIAL_v1.3/README.md) · [HTML guide](index.html).
 - [Historical four-level explanation](PaperII_explained_4_levels.html). Its original publication context is retained; use the current article for updated series references.
-- [Series concept DOI](https://doi.org/10.5281/zenodo.21273143) · [Citation](CITATION.cff).
+- [Deposited editorial edition](https://doi.org/10.5281/zenodo.23478825) · [Series concept DOI](https://doi.org/10.5281/zenodo.21273143) · [Citation](CITATION.cff).
 
 The new review is an AI-assisted internal editorial audit, not independent human peer review, a new Lean build or a new novelty determination. Documents: CC BY-NC 4.0. Existing code, dependency and repository-level license grants remain applicable; see [the series license](../../LICENSE.md).
 

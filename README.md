@@ -44,7 +44,7 @@ Los preprints y sus revisiones asistidas por IA no equivalen a revisión humana 
 
 ## Editions, citation and licenses / Ediciones, citas y licencias
 
-The [preceding 26-PDF collection](https://doi.org/10.5281/zenodo.23476768) includes Paper IV v1.24 and its formal companion. The [series concept DOI](https://doi.org/10.5281/zenodo.21273143) follows the collection. The preceding [24-PDF collection](https://doi.org/10.5281/zenodo.23459196) and the [I–IV snapshot](https://doi.org/10.5281/zenodo.23089131) remain available. Historical manuscripts, source freezes and their audit evidence are retained; identify the paper and version when citing a result. See [CITATION.bib](CITATION.bib) and [CITATION.cff](CITATION.cff).
+The [current 32-PDF collection](https://doi.org/10.5281/zenodo.23478825) contains the revised I–III articles and their separate companions. The [preceding 26-PDF collection](https://doi.org/10.5281/zenodo.23476768) includes Paper IV v1.24 and its formal companion. The [series concept DOI](https://doi.org/10.5281/zenodo.21273143) follows the collection. The preceding [24-PDF collection](https://doi.org/10.5281/zenodo.23459196) and the [I–IV snapshot](https://doi.org/10.5281/zenodo.23089131) remain available. Historical manuscripts, source freezes and their audit evidence are retained; identify the paper and version when citing a result. See [CITATION.bib](CITATION.bib) and [CITATION.cff](CITATION.cff).
 
 Zenodo contains individual PDFs; GitHub carries source and evidence packages. [Deposit procedure and receipts](publication/zenodo/README.md). The [publication index](PUBLICATION_INDEX.json) identifies the deposited collection.
 

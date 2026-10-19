@@ -1,6 +1,10 @@
 # Zenodo collection: individual PDFs
 
-The current collection is [10.5281/zenodo.23459196](https://doi.org/10.5281/zenodo.23459196).
+The current collection is [version 8](https://doi.org/10.5281/zenodo.23478825): 32 individual PDFs. See the [public verification receipt](v8_23478825/PUBLIC_RECEIPT.json) and [preservation details](v8_23478825/README.md).
+
+## Historical packaging correction — version 6
+
+The corrected version 6 is [10.5281/zenodo.23459196](https://doi.org/10.5281/zenodo.23459196).
 It contains 24 individual PDFs, totalling 5,329,765 bytes: eight manuscripts of
 Papers I–IV and sixteen manuscripts and formalization companions of V, VI and
 Notes I–II, in English and Spanish.

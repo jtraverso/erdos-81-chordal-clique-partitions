@@ -15,4 +15,6 @@ The preceding collection, including all four Preprint 1.0 works and their compan
 
 Paper IV v1.24 is an editorial revision with an unchanged Lean freeze. See its [changelog](preprints/PAPER_IV/CHANGELOG_v1.24.md) and [current package](preprints/PAPER_IV/README.md).
 
-The [current collection, version 7](https://doi.org/10.5281/zenodo.23476768) contains 26 individual PDFs, including Paper IV v1.24 and its separate English/Spanish formal companion. The 22 PDFs belonging to other works are unchanged.
+The [preceding collection, version 7](https://doi.org/10.5281/zenodo.23476768) contains 26 individual PDFs, including Paper IV v1.24 and its separate English/Spanish formal companion. The 22 PDFs belonging to other works are unchanged.
+
+The [current collection, version 8](https://doi.org/10.5281/zenodo.23478825) contains 32 individual PDFs, including Paper I v1.4, II v1.3 and III v1.6 and their EN/ES formal companions. These are editorial editions; mathematical content and Lean freezes are unchanged. Identify the individual work and version when citing. [Verified deposit](publication/zenodo/v8_23478825/README.md).

@@ -7,7 +7,7 @@
       "version": "1.4",
       "path": "preprints/PAPER_I",
       "main_stem": "PAPER_I_preprint_v1.4",
-      "collection_doi": "10.5281/zenodo.21273143",
+      "collection_doi": "10.5281/zenodo.23478825",
       "title": "Affine Profile Reduction for Fractional Triangle Packings in Split Graphs",
       "companion_stem": "FORMALIZATION_COMPANION_v1.4",
       "formal_source_commit": "eb335845bfa23375d5040ea31fc4f4b366346287",
@@ -18,7 +18,7 @@
       "version": "1.3",
       "path": "preprints/PAPER_II",
       "main_stem": "PAPER_II_preprint_v1.3",
-      "collection_doi": "10.5281/zenodo.21273143",
+      "collection_doi": "10.5281/zenodo.23478825",
       "title": "Complete-Split Extremizers for a Fractional Triangle-Cover Functional on Chordal Graphs",
       "companion_stem": "FORMALIZATION_COMPANION_v1.3",
       "formal_source_commit": "eb335845bfa23375d5040ea31fc4f4b366346287",
@@ -29,7 +29,7 @@
       "version": "1.6",
       "path": "preprints/PAPER_III",
       "main_stem": "PAPER_III_preprint_v1.6",
-      "collection_doi": "10.5281/zenodo.21273143",
+      "collection_doi": "10.5281/zenodo.23478825",
       "title": "Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing",
       "companion_stem": "FORMALIZATION_COMPANION_v1.6",
       "formal_source_commit": "eb335845bfa23375d5040ea31fc4f4b366346287",
@@ -84,13 +84,13 @@
     }
   ],
   "zenodo": {
-    "collection_doi": "10.5281/zenodo.23476768",
+    "collection_doi": "10.5281/zenodo.23478825",
     "concept_doi": "10.5281/zenodo.21273143",
-    "record_id": 23476768,
-    "collection_version": "7",
-    "files": 26,
-    "total_bytes": 5406112,
-    "previous_record": 23459196,
-    "receipt": "publication/zenodo/v7_23476768/PUBLIC_RECEIPT.json"
+    "record_id": 23478825,
+    "collection_version": "8",
+    "files": 32,
+    "total_bytes": 5473489,
+    "previous_record": 23476768,
+    "receipt": "publication/zenodo/v8_23478825/PUBLIC_RECEIPT.json"
   }
 }
