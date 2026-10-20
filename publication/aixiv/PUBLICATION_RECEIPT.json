@@ -1,0 +1,159 @@
+{
+  "status": "PASS_PUBLIC_ARTIFACT_AND_METADATA_VERIFICATION",
+  "checked_utc": "2026-10-20T21:04:03.670678+00:00",
+  "papers": [
+    {
+      "status": "PASS_PUBLIC_ARTIFACT_AND_METADATA_VERIFICATION",
+      "key": "ERDOS_PAPER_I",
+      "aixiv_id": "2609.03244",
+      "url": "https://aixiv.online/abs/2609.03244",
+      "aixiv_version": 3,
+      "manuscript_version": "1.4",
+      "title": "Affine Profile Reduction for Fractional Triangle Packings in Split Graphs",
+      "authors": [
+        "Juan Pablo Traverso Gianini"
+      ],
+      "license": "CC BY-NC 4.0",
+      "repository": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions",
+      "source_commit": "a66dcecfce5bcd6010ee8ca6cd95ef0c2f2ecc5e",
+      "official_article": "preprints/PAPER_I/01_manuscript/PAPER_I_preprint_v1.4_en.pdf",
+      "doi": "10.5281/zenodo.23479507",
+      "companion_url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/a66dcecfce5bcd6010ee8ca6cd95ef0c2f2ecc5e/preprints/PAPER_I/05_formalization/FORMALIZATION_COMPANION_v1.4_en.pdf",
+      "artifact_hashes": {
+        "pdf": "977adb51f9eab890c4ab452b21807048dba5d71d291e9ad3717a73556e853231",
+        "tex": "53b93ce82728c405c23088cf7a97520a858647dc0cadcacde1821eb242bb9781",
+        "source": "23204c1d31802587bebd834dc80a5ffbfb89eb57f42ed2d6f362f2ae469671d0"
+      },
+      "traces_attached": [],
+      "checked_utc": "2026-10-20T20:50:45.959836+00:00"
+    },
+    {
+      "status": "PASS_PUBLIC_ARTIFACT_AND_METADATA_VERIFICATION",
+      "key": "ERDOS_PAPER_II",
+      "aixiv_id": "2609.03245",
+      "url": "https://aixiv.online/abs/2609.03245",
+      "aixiv_version": 2,
+      "manuscript_version": "1.3",
+      "title": "Complete-Split Extremizers for a Fractional Triangle-Cover Functional on Chordal Graphs",
+      "authors": [
+        "Juan Pablo Traverso Gianini"
+      ],
+      "license": "CC BY-NC 4.0",
+      "repository": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions",
+      "source_commit": "a66dcecfce5bcd6010ee8ca6cd95ef0c2f2ecc5e",
+      "official_article": "preprints/PAPER_II/01_manuscript/PAPER_II_preprint_v1.3_en.pdf",
+      "doi": "10.5281/zenodo.23479507",
+      "companion_url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/a66dcecfce5bcd6010ee8ca6cd95ef0c2f2ecc5e/preprints/PAPER_II/05_formalization/FORMALIZATION_COMPANION_v1.3_en.pdf",
+      "artifact_hashes": {
+        "pdf": "6ad90d20708d604356a0ae568a0f5602039e5cda9f75e9315d9a2844f0219e7b",
+        "tex": "3c5d44faa9be0fa3c2f325399f5ca71aead38c08dc8bae7cbddb90a31227f22a",
+        "source": "4d39e6b90ed628e0764c9fd8191fbf31a67c2fa3e2706b7d225488bfcacb15dd"
+      },
+      "traces_attached": [],
+      "checked_utc": "2026-10-20T20:52:31.936027+00:00"
+    },
+    {
+      "status": "PASS_PUBLIC_ARTIFACT_AND_METADATA_VERIFICATION",
+      "key": "ERDOS_PAPER_III",
+      "aixiv_id": "2609.03246",
+      "url": "https://aixiv.online/abs/2609.03246",
+      "aixiv_version": 2,
+      "manuscript_version": "1.6",
+      "title": "Linear-Error Clique Partitions of Split Graphs via Structured Triangle Packing",
+      "authors": [
+        "Juan Pablo Traverso Gianini"
+      ],
+      "license": "CC BY-NC 4.0",
+      "repository": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions",
+      "source_commit": "a66dcecfce5bcd6010ee8ca6cd95ef0c2f2ecc5e",
+      "official_article": "preprints/PAPER_III/01_manuscript/PAPER_III_preprint_v1.6_en.pdf",
+      "doi": "10.5281/zenodo.23479507",
+      "companion_url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/a66dcecfce5bcd6010ee8ca6cd95ef0c2f2ecc5e/preprints/PAPER_III/05_formalization/FORMALIZATION_COMPANION_v1.6_en.pdf",
+      "artifact_hashes": {
+        "pdf": "4922415e2d6c04a09eb5808b7d556d6b2ce4353e126f32f43dfd74a0558762d0",
+        "tex": "e518831b52b0456cb7f3479957e3e514d69c4e11f432f779ea20ff2f610cd8ef",
+        "source": "f849fe62e3d9927c3a9bd61f160dbce7e6f87fcb33daf8857bee549d674baded"
+      },
+      "traces_attached": [],
+      "checked_utc": "2026-10-20T20:52:34.091149+00:00"
+    },
+    {
+      "status": "PASS_PUBLIC_ARTIFACT_AND_METADATA_VERIFICATION",
+      "key": "ERDOS_PAPER_IV",
+      "aixiv_id": "2610.00071",
+      "url": "https://aixiv.online/abs/2610.00071",
+      "aixiv_version": 3,
+      "manuscript_version": "1.24.1",
+      "title": "Clique partitions with rooted simplicial defect: quantitative stability and sharp eventual bounds",
+      "authors": [
+        "Juan Pablo Traverso Gianini"
+      ],
+      "license": "CC BY-NC 4.0",
+      "repository": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions",
+      "source_commit": "a66dcecfce5bcd6010ee8ca6cd95ef0c2f2ecc5e",
+      "official_article": "preprints/PAPER_IV/01_manuscript/PAPER_IV_preprint_v1.24.1_en.pdf",
+      "doi": "10.5281/zenodo.23479507",
+      "companion_url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/a66dcecfce5bcd6010ee8ca6cd95ef0c2f2ecc5e/preprints/PAPER_IV/05_formalization/FORMALIZATION_COMPANION_v1.24_en.pdf",
+      "artifact_hashes": {
+        "pdf": "8607587130a0172c8990d14144c5893512d0a87a7fe6bf167823daa63005e441",
+        "tex": "f061b6598bc1f748d27e41b1701569b58d6845ee6f33b239a3eedddfb7cb095c",
+        "source": "cc6b5e243da8461d3b5a18dd6cd93381bc892848d18ac06eb958115a0138f2df"
+      },
+      "traces_attached": [],
+      "checked_utc": "2026-10-20T20:52:36.903568+00:00"
+    },
+    {
+      "status": "PASS_PUBLIC_ARTIFACT_AND_METADATA_VERIFICATION",
+      "key": "ERDOS_PAPER_V",
+      "aixiv_id": "2610.02047",
+      "url": "https://aixiv.online/abs/2610.02047",
+      "aixiv_version": 2,
+      "manuscript_version": "1.0",
+      "title": "Colorability and Realizability Defects in Resource-Dominated Packing Relaxations",
+      "authors": [
+        "Juan Pablo Traverso Gianini"
+      ],
+      "license": "CC BY-NC 4.0",
+      "repository": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions",
+      "source_commit": "a66dcecfce5bcd6010ee8ca6cd95ef0c2f2ecc5e",
+      "official_article": "preprints/PAPER_V/01_manuscript/PAPER_V_preprint_v1.0_en.pdf",
+      "doi": "10.5281/zenodo.23479507",
+      "companion_url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/a66dcecfce5bcd6010ee8ca6cd95ef0c2f2ecc5e/preprints/PAPER_V/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "artifact_hashes": {
+        "pdf": "2a9fce5f7c83750daada99b906c142206b3e6b7c1bf88175d04b30db7d3f7a56",
+        "tex": "bb225d1774e55929510175e4d246c1db1e84c052d9cbe991de2b0440aed93a97",
+        "source": "7fe03c8db343b8e836afd5857793e63747fa1de677391f8bcf3716d76306a92f"
+      },
+      "traces_attached": [],
+      "checked_utc": "2026-10-20T20:54:45.358333+00:00"
+    },
+    {
+      "status": "PASS_PUBLIC_ARTIFACT_AND_METADATA_VERIFICATION",
+      "key": "ERDOS_PAPER_VI",
+      "aixiv_id": "2610.02048",
+      "url": "https://aixiv.online/abs/2610.02048",
+      "aixiv_version": 2,
+      "manuscript_version": "1.0",
+      "title": "Optimal Clique Partitions under Local Perturbations",
+      "authors": [
+        "Juan Pablo Traverso Gianini"
+      ],
+      "license": "CC BY-NC 4.0",
+      "repository": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions",
+      "source_commit": "a66dcecfce5bcd6010ee8ca6cd95ef0c2f2ecc5e",
+      "official_article": "preprints/PAPER_VI/01_manuscript/PAPER_VI_preprint_v1.0_en.pdf",
+      "doi": "10.5281/zenodo.23479507",
+      "companion_url": "https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/a66dcecfce5bcd6010ee8ca6cd95ef0c2f2ecc5e/preprints/PAPER_VI/05_formalization/FORMALIZATION_COMPANION_v1.0_en.pdf",
+      "artifact_hashes": {
+        "pdf": "b7e40eb47ce17efb22bba680fcf6bef98777a1802308819ff035398f48c3c740",
+        "tex": "d602858df9a9713bf728a01f6d7ff7c641b4d47d678dcff1c2dcf2afca6b0335",
+        "source": "01675c006df66d21edd00694c76d23f2d4d7771e8d482420ee330de5df31b415"
+      },
+      "traces_attached": [],
+      "checked_utc": "2026-10-20T21:02:00.609853+00:00"
+    }
+  ],
+  "manuscript_changes": false,
+  "lean_changes": false,
+  "scope": "Public aiXiv PDF/source downloads and metadata verified. The aiXiv listing check is a separate platform process; its live state is visible on each record. Previous versions of the four individual Erdos records remain in their histories. Research sessions were not uploaded."
+}
