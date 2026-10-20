@@ -31,6 +31,7 @@ Las conexiones no obligan a leer toda la serie antes de abordar un resultado. I�
 - [Bilingual HTML guide](index.html) · [Browser preview](https://htmlpreview.github.io/?https://github.com/jtraverso/erdos-81-chordal-clique-partitions/blob/main/index.html).
 - Each paper page links its English and Spanish PDF, LaTeX and Markdown. All six papers and the two notes have separate formalization companions. Papers I–III now follow the editorial layout of IV; their Lean freezes remain unchanged.
 - [Publication index](PUBLICATION_INDEX.json) · [Citation guide](CITATION.md).
+- [Current editions on aiXiv / Ediciones actuales en aiXiv](publication/aixiv/README.md).
 
 ## Formal sources and audit evidence / Fuentes formales y evidencias
 
